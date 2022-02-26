@@ -1033,7 +1033,7 @@ void DrawHeaderBox(void)
     u8 *dst;
     bool8 handleFlash = FALSE;
 
-    if (GetFlashLevel() > 1)
+    if (GetFlashLevel() > 0)
         handleFlash = TRUE;
 
     if (headerType == 1)
@@ -1135,7 +1135,7 @@ static void DestroyItemIconSprite(void)
     FreeSpriteOamMatrix(&gSprites[sItemIconSpriteId]);
     DestroySprite(&gSprites[sItemIconSpriteId]);
 
-    if (GetFlashLevel() > 1 && sItemIconSpriteId2 != MAX_SPRITES)
+    if (GetFlashLevel() > 0 && sItemIconSpriteId2 != MAX_SPRITES)
     {
         //FreeSpriteTilesByTag(ITEM_TAG);
         //FreeSpritePaletteByTag(ITEM_TAG);
