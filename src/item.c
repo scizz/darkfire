@@ -959,7 +959,7 @@ u8 ItemId_GetSecondaryId(u16 itemId)
 }
 
 // Item Description Header
-static bool8 GetSetItemObtained(u16 item, u8 caseId)
+bool8 GetSetItemObtained(u16 item, u8 caseId)
 {
     u8 index;
     u8 bit;
