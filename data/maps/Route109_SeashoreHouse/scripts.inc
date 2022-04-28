@@ -52,9 +52,7 @@ Route109_SeashoreHouse_EventScript_BuySodaPop::
 	msgbox Route109_SeashoreHouse_Text_HereYouGo, MSGBOX_DEFAULT
 	removemoney 300
 	updatemoneybox
-	delay 80
 	hidemoneybox
-	delay 20
 	giveitem ITEM_SODA_POP
 	release
 	end
