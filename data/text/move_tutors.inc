@@ -1,8 +1,8 @@
-MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce:
+MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce: @ 82C6E05
 	.string "This move can be learned only\n"
 	.string "once. Is that okay?$"
 
-MoveTutor_Text_SwaggerTeach:
+MoveTutor_Text_SwaggerTeach: @ 82C6E37
 	.string "Heh! My POKéMON totally rules!\n"
 	.string "It's cooler than any POKéMON!\p"
 	.string "I was lipping off with a swagger in\n"
@@ -12,19 +12,19 @@ MoveTutor_Text_SwaggerTeach:
 	.string "If you'd like, I'll teach the move\n"
 	.string "SWAGGER to a POKéMON of yours.$"
 
-MoveTutor_Text_SwaggerDeclined:
+MoveTutor_Text_SwaggerDeclined: @ 82C6F33
 	.string "What, no? Can't you get into\n"
 	.string "the spirit of things?$"
 
-MoveTutor_Text_SwaggerWhichMon:
+MoveTutor_Text_SwaggerWhichMon: @ 82C6F66
 	.string "All right, which POKéMON wants to\n"
 	.string "learn how to SWAGGER?$"
 
-MoveTutor_Text_SwaggerTaught:
+MoveTutor_Text_SwaggerTaught: @ 82C6F9E
 	.string "I'll just praise my POKéMON from now\n"
 	.string "on without the swagger.$"
 
-MoveTutor_Text_RolloutTeach:
+MoveTutor_Text_RolloutTeach: @ 82C6FDB
 	.string "Did you know that you can go from\n"
 	.string "here a long way in that direction\l"
 	.string "without changing direction?\p"
@@ -35,61 +35,61 @@ MoveTutor_Text_RolloutTeach:
 	.string "I can teach one the move ROLLOUT\n"
 	.string "if you'd like.$"
 
-MoveTutor_Text_RolloutDeclined:
+MoveTutor_Text_RolloutDeclined: @ 82C70C4
 	.string "You don't need to be shy about it.\n"
 	.string "Let's roll!$"
 
-MoveTutor_Text_RolloutWhichMon:
+MoveTutor_Text_RolloutWhichMon: @ 82C70F3
 	.string "Ehehe, sure thing! It'd be great if\n"
 	.string "the POKéMON looked like me.$"
 
-MoveTutor_Text_RolloutTaught:
+MoveTutor_Text_RolloutTaught: @ 82C7133
 	.string "Rolling around in the grass makes me\n"
 	.string "happy. Come on, let's roll!$"
 
-MoveTutor_Text_FuryCutterTeach:
-	.string "There's a move that gets stronger\n"
+MoveTutor_Text_FuryCutterTeach: @ 82C7174
+	.string "{COLOR}{BLUE}There's a move that gets stronger\n"
 	.string "when you keep using it in a row.\p"
-	.string "It's a BUG-type move, and it is\n"
+	.string "It's a Bug-type move, and it is\n"
 	.string "wickedly cool.\p"
-	.string "It's called FURY CUTTER.\n"
-	.string "Want me to teach it to a POKéMON?$"
+	.string "It's called Fury Cutter.\n"
+	.string "Want me to teach it to a Pokémon?$"
 
-MoveTutor_Text_FuryCutterDeclined:
-	.string "We're not on the same wavelength.$"
+MoveTutor_Text_FuryCutterDeclined: @ 82C7221
+	.string "{COLOR}{BLUE}We're not on the same wavelength.$"
 
-MoveTutor_Text_FuryCutterWhichMon:
-	.string "Yay!\n"
-	.string "Show me which POKéMON I should teach.$"
+MoveTutor_Text_FuryCutterWhichMon: @ 82C7243
+	.string "{COLOR}{BLUE}Yay!\n"
+	.string "Show me which Pokémon I should teach.$"
 
-MoveTutor_Text_FuryCutterTaught:
-	.string "I get a thrill watching to see if\n"
+MoveTutor_Text_FuryCutterTaught: @ 82C726E
+	.string "{COLOR}{BLUE}I get a thrill watching to see if\n"
 	.string "the move keeps hitting in succession!$"
 
-MoveTutor_MimicTeach:
-	.string "Ah, young one!\p"
+MoveTutor_MimicTeach: @ 82C72B6
+	.string "{COLOR}{BLUE}Ah, young one!\p"
 	.string "I am also a young one, but I mimic\n"
 	.string "the styles and speech of the elderly\l"
 	.string "folks of this town.\p"
 	.string "What do you say, young one?\n"
 	.string "Would you agree to it if I were to\l"
-	.string "offer to teach the move MIMIC?$"
+	.string "offer to teach the move Mimic?$"
 
-MoveTutor_MimicDeclined:
-	.string "Oh, boo! I wanted to teach MIMIC\n"
-	.string "to your POKéMON!$"
+MoveTutor_MimicDeclined: @ 82C737F
+	.string "{COLOR}{BLUE}Oh, boo! I wanted to teach Mimic\n"
+	.string "to your Pokémon!$"
 
-MoveTutor_Text_MimicWhichMon:
-	.string "Fwofwo! And so I shall!\n"
-	.string "Let me see the POKéMON\l"
+MoveTutor_Text_MimicWhichMon: @ 82C73B1
+	.string "{COLOR}{BLUE}Fwofwo! And so I shall!\n"
+	.string "Let me see the Pokémon\l"
 	.string "you wish me to teach.$"
 
-MoveTutor_Text_MimicTaught:
-	.string "MIMIC is a move of great depth.\p"
+MoveTutor_Text_MimicTaught: @ 82C73F6
+	.string "{COLOR}{BLUE}Mimic is a move of great depth.\p"
 	.string "Could you execute it to perfection\n"
 	.string "as well as me…?$"
 
-MoveTutor_Text_MetronomeTeach:
+MoveTutor_Text_MetronomeTeach: @ 82C7449
 	.string "I want all sorts of things!\n"
 	.string "But I used up my allowance…\p"
 	.string "Wouldn't it be nice if there were\n"
@@ -100,22 +100,22 @@ MoveTutor_Text_MetronomeTeach:
 	.string "Money won't appear, but your POKéMON\n"
 	.string "will waggle a finger. Yes?$"
 
-MoveTutor_Text_MetronomeDeclined:
+MoveTutor_Text_MetronomeDeclined: @ 82C7556
 	.string "Okay. I'll be here if you change\n"
 	.string "your mind.$"
 
-MoveTutor_Text_MetronomeWhichMon:
+MoveTutor_Text_MetronomeWhichMon: @ 82C7582
 	.string "Okay! I'll teach it!\n"
 	.string "Which POKéMON should I teach?$"
 
-MoveTutor_Text_MetronomeTaught:
+MoveTutor_Text_MetronomeTaught: @ 82C75B5
 	.string "When a POKéMON waggles its finger\n"
 	.string "like a METRONOME, all sorts of nice\l"
 	.string "things happen.\p"
 	.string "Wouldn't it be nice if we could\n"
 	.string "use it, too?$"
 
-MoveTutor_Text_SleepTalkTeach:
+MoveTutor_Text_SleepTalkTeach: @ 82C7637
 	.string "Humph! My wife relies on HIDDEN\n"
 	.string "POWER to stay awake.\p"
 	.string "She should just take a nap like I do,\n"
@@ -123,21 +123,21 @@ MoveTutor_Text_SleepTalkTeach:
 	.string "I can teach your POKéMON how to\n"
 	.string "SLEEP TALK instead. Interested?$"
 
-MoveTutor_Text_SleepTalkDeclined:
+MoveTutor_Text_SleepTalkDeclined: @ 82C76E2
 	.string "Oh, fine, fine. You want to stay awake\n"
 	.string "with HIDDEN POWER, too…$"
 
-MoveTutor_Text_SleepTalkWhichMon:
+MoveTutor_Text_SleepTalkWhichMon: @ 82C7721
 	.string "Ah, an appreciative child!\n"
 	.string "Which POKéMON should I teach?$"
 
-MoveTutor_Text_SleepTalkTaught:
+MoveTutor_Text_SleepTalkTaught: @ 82C775A
 	.string "I've never once gotten my wife's\n"
 	.string "coin trick right.\p"
 	.string "I would be happy if I got it right\n"
 	.string "even as I SLEEP TALK…$"
 
-MoveTutor_Text_SubstituteTeach:
+MoveTutor_Text_SubstituteTeach: @ 82C77C6
 	.string "When I see the wide world from up\n"
 	.string "here on the roof…\p"
 	.string "I think about how nice it would be\n"
@@ -148,22 +148,22 @@ MoveTutor_Text_SubstituteTeach:
 	.string "I know! Would you be interested in\n"
 	.string "having a POKéMON learn SUBSTITUTE?$"
 
-MoveTutor_Text_SubstituteDeclined:
+MoveTutor_Text_SubstituteDeclined: @ 82C78D1
 	.string "Oh, no?\p"
 	.string "A POKéMON can make a copy of\n"
 	.string "itself using it, you know.$"
 
-MoveTutor_Text_SubstituteWhichMon:
+MoveTutor_Text_SubstituteWhichMon: @ 82C7911
 	.string "Giggle…\n"
 	.string "Which POKéMON do you want me to\l"
 	.string "teach SUBSTITUTE?$"
 
-MoveTutor_Text_SubstituteTaught:
+MoveTutor_Text_SubstituteTaught: @ 82C794B
 	.string "We human beings should enjoy our\n"
 	.string "own lives to the utmost!\p"
 	.string "I hope you'll get that way, too!$"
 
-MoveTutor_Text_DynamicPunchTeach:
+MoveTutor_Text_DynamicPunchTeach: @ 82C79A6
 	.string "I can't do this anymore!\p"
 	.string "It's utterly hopeless!\p"
 	.string "I'm a FIGHTING-type TRAINER,\n"
@@ -176,19 +176,19 @@ MoveTutor_Text_DynamicPunchTeach:
 	.string "Or do you want me to teach your\n"
 	.string "POKéMON DYNAMICPUNCH?$"
 
-MoveTutor_Text_DynamicPunchDeclined:
+MoveTutor_Text_DynamicPunchDeclined: @ 82C7AD4
 	.string "Darn! You're even making fun of me?\n"
 	.string "Punch! Punch! Punch!$"
 
-MoveTutor_Text_DynamicPunchWhichMon:
+MoveTutor_Text_DynamicPunchWhichMon: @ 82C7B0D
 	.string "What? You do? You're a good person!\n"
 	.string "Which POKéMON should I teach?$"
 
-MoveTutor_Text_DynamicPunchTaught:
+MoveTutor_Text_DynamicPunchTaught: @ 82C7B4F
 	.string "I want you to win at the MOSSDEEP GYM\n"
 	.string "using that DYNAMICPUNCH!$"
 
-MoveTutor_Text_DoubleEdgeTeach:
+MoveTutor_Text_DoubleEdgeTeach: @ 82C7B8E
 	.string "Sigh…\p"
 	.string "SOOTOPOLIS's GYM LEADER is really\n"
 	.string "lovably admirable.\p"
@@ -199,19 +199,19 @@ MoveTutor_Text_DoubleEdgeTeach:
 	.string "Please, let me teach your POKéMON\n"
 	.string "the move DOUBLE-EDGE!$"
 
-MoveTutor_Text_DoubleEdgeDeclined:
+MoveTutor_Text_DoubleEdgeDeclined: @ 82C7C7E
 	.string "Oh…\n"
 	.string "Even you rejected me…$"
 
-MoveTutor_Text_DoubleEdgeWhichMon:
+MoveTutor_Text_DoubleEdgeWhichMon: @ 82C7C98
 	.string "Okay, which POKéMON should I teach\n"
 	.string "DOUBLE-EDGE?$"
 
-MoveTutor_Text_DoubleEdgeTaught:
+MoveTutor_Text_DoubleEdgeTaught: @ 82C7CC8
 	.string "I won't live for love anymore!\n"
 	.string "I'll become tough!$"
 
-MoveTutor_Text_ExplosionTeach:
+MoveTutor_Text_ExplosionTeach: @ 82C7CFA
 	.string "I don't intend to be going nowhere\n"
 	.string "fast in the sticks like this forever.\p"
 	.string "You watch me, I'll get out to the city\n"
@@ -221,15 +221,15 @@ MoveTutor_Text_ExplosionTeach:
 	.string "If you overheard that, I'll happily\n"
 	.string "teach EXPLOSION to your POKéMON!$"
 
-MoveTutor_Text_ExplosionDeclined:
+MoveTutor_Text_ExplosionDeclined: @ 82C7E04
 	.string "Gaah! You're turning me down because\n"
 	.string "I live in the country?$"
 
-MoveTutor_Text_ExplosionWhichMon:
+MoveTutor_Text_ExplosionWhichMon: @ 82C7E40
 	.string "Fine! An EXPLOSION it is!\n"
 	.string "Which POKéMON wants to blow up?$"
 
-MoveTutor_Text_ExplosionTaught:
+MoveTutor_Text_ExplosionTaught: @ 82C7E7A
 	.string "For a long time, I've taught POKéMON\n"
 	.string "how to use EXPLOSION, but I've yet\l"
 	.string "to ignite my own EXPLOSION…\p"

@@ -3,10 +3,10 @@
 .set LOCALID_VICTORIA, 3
 .set LOCALID_VICKY, 4
 
-Route111_WinstrateFamilysHouse_MapScripts::
+Route111_WinstrateFamilysHouse_MapScripts:: @ 822A48C
 	.byte 0
 
-Route111_WinstrateFamilysHouse_EventScript_Victor::
+Route111_WinstrateFamilysHouse_EventScript_Victor:: @ 822A48D
 	lock
 	faceplayer
 	setvar VAR_0x8008, LOCALID_VICTOR
@@ -14,24 +14,25 @@ Route111_WinstrateFamilysHouse_EventScript_Victor::
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_Victoria::
+Route111_WinstrateFamilysHouse_EventScript_Victoria:: @ 822A4A2
 	lock
 	faceplayer
 	setvar VAR_0x8008, LOCALID_VICTORIA
 	goto_if_set FLAG_RECEIVED_MACHO_BRACE, Route111_WinstrateFamilysHouse_EventScript_ReceivedMachoBrace
 	msgbox Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace, MSGBOX_DEFAULT
 	giveitem ITEM_MACHO_BRACE
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_MACHO_BRACE
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_ReceivedMachoBrace::
+Route111_WinstrateFamilysHouse_EventScript_ReceivedMachoBrace:: @ 822A4DA
 	msgbox Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles, MSGBOX_DEFAULT
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_Vivi::
+Route111_WinstrateFamilysHouse_EventScript_Vivi:: @ 822A4E8
 	lock
 	faceplayer
 	setvar VAR_0x8008, LOCALID_VIVI
@@ -39,7 +40,7 @@ Route111_WinstrateFamilysHouse_EventScript_Vivi::
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_Vicky::
+Route111_WinstrateFamilysHouse_EventScript_Vicky:: @ 822A4FD
 	lock
 	faceplayer
 	setvar VAR_0x8008, LOCALID_VICKY
@@ -49,19 +50,19 @@ Route111_WinstrateFamilysHouse_EventScript_Vicky::
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_AlreadySpokenTo::
+Route111_WinstrateFamilysHouse_EventScript_AlreadySpokenTo:: @ 822A51E
 	msgbox Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort, MSGBOX_DEFAULT
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection::
+Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection:: @ 822A52C
 	closemessage
 	applymovement VAR_0x8008, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
 	end
 
-Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou:
+Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou: @ 822A539
 	.string "You're the first TRAINER I've seen who\n"
 	.string "deploys POKéMON so masterfully.\p"
 	.string "But, I should tell you--my son is\n"
@@ -69,7 +70,7 @@ Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou:
 	.string "He even took the POKéMON LEAGUE\n"
 	.string "challenge, I'll have you know.$"
 
-Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace:
+Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace: @ 822A5F4
 	.string "We use this MACHO BRACE to more\n"
 	.string "effectively strengthen our POKéMON\l"
 	.string "in training.\p"
@@ -77,18 +78,18 @@ Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace:
 	.string "I don't know if you need it, but we\l"
 	.string "would like you to have our MACHO BRACE.$"
 
-Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles:
+Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles: @ 822A6B4
 	.string "When it comes to POKéMON battles,\n"
 	.string "we tend to be pretty passionate.$"
 
-Route111_WinstrateFamilysHouse_Text_StrongerFamilyMembers:
+Route111_WinstrateFamilysHouse_Text_StrongerFamilyMembers: @ 822A6F7
 	.string "Mommy is stronger than Daddy.\p"
 	.string "I'm stronger than Mommy.\p"
 	.string "And Grandma's stronger than me!\p"
 	.string "But my big brother is even stronger\n"
 	.string "than Grandma.$"
 
-Route111_WinstrateFamilysHouse_Text_GrandsonStrong:
+Route111_WinstrateFamilysHouse_Text_GrandsonStrong: @ 822A780
 	.string "There's no question that you're strong.\p"
 	.string "But if you were to battle my grandson,\n"
 	.string "you'd end up crying in frustration.\p"
@@ -99,7 +100,7 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrong:
 	.string "Knowing my grandson, he could be the\n"
 	.string "CHAMPION already!$"
 
-Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort:
+Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort: @ 822A89B
 	.string "My grandson must be challenging the\n"
 	.string "POKéMON LEAGUE CHAMPION by now.\p"
 	.string "Knowing my grandson, he could be the\n"

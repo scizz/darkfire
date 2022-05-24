@@ -167,7 +167,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/Route101/border.bin",
       "blockdata_filepath": "data/layouts/Route101/map.bin"
     },
@@ -4410,6 +4410,1156 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHANDRA_VILLAGE",
+      "name": "ChandraVillage_Layout",
+      "width": 70,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ChandraVillage/border.bin",
+      "blockdata_filepath": "data/layouts/ChandraVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHANDRA_VILLAGE_PLAYER_HOUSE_1F",
+      "name": "ChandraVillage_PlayerHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ChandraVillage_PlayerHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ChandraVillage_PlayerHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHANDRA_VILLAGE_PLAYER_HOUSE_2F",
+      "name": "ChandraVillage_PlayerHouse_2F_Layout",
+      "width": 10,
+      "height": 41,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ChandraVillage_PlayerHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ChandraVillage_PlayerHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHANDRA_VILLAGE_TYLER_HOUSE_1F",
+      "name": "ChandraVillage_TylerHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ChandraVillage_TylerHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ChandraVillage_TylerHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHANDRA_VILLAGE_TYLER_HOUSE_2F",
+      "name": "ChandraVillage_TylerHouse_2F_Layout",
+      "width": 10,
+      "height": 41,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ChandraVillage_TylerHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ChandraVillage_TylerHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNRISE_TOWN",
+      "name": "SunriseTown_Layout",
+      "width": 64,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/SunriseTown/border.bin",
+      "blockdata_filepath": "data/layouts/SunriseTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY",
+      "name": "UnionCity_Layout",
+      "width": 102,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/UnionCity/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_GREENDALE_VILLAGE",
+      "name": "GreendaleVillage_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/GreendaleVillage/border.bin",
+      "blockdata_filepath": "data/layouts/GreendaleVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_TOWN",
+      "name": "AnheimTown_Layout",
+      "width": 76,
+      "height": 76,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/AnheimTown/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY",
+      "name": "LaveriaCity_Layout",
+      "width": 64,
+      "height": 56,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/LaveriaCity/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIGHWIND_VILLAGE",
+      "name": "HighwindVillage_Layout",
+      "width": 50,
+      "height": 52,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_TrickHousePuzzle",
+      "border_filepath": "data/layouts/HighwindVillage/border.bin",
+      "blockdata_filepath": "data/layouts/HighwindVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY",
+      "name": "NorthstarCity_Layout",
+      "width": 120,
+      "height": 61,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/NorthstarCity/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN",
+      "name": "PinleafTown_Layout",
+      "width": 80,
+      "height": 72,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MossdeepGym",
+      "border_filepath": "data/layouts/PinleafTown/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1",
+      "name": "Route1_Layout",
+      "width": 50,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/Route1/border.bin",
+      "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 44,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 92,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5",
+      "name": "Route5_Layout",
+      "width": 54,
+      "height": 92,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/Route5/border.bin",
+      "blockdata_filepath": "data/layouts/Route5/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE6",
+      "name": "Route6_Layout",
+      "width": 137,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/Route6/border.bin",
+      "blockdata_filepath": "data/layouts/Route6/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 145,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE8",
+      "name": "Route8_Layout",
+      "width": 80,
+      "height": 90,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Route8/border.bin",
+      "blockdata_filepath": "data/layouts/Route8/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9",
+      "name": "Route9_Layout",
+      "width": 66,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Route9/border.bin",
+      "blockdata_filepath": "data/layouts/Route9/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE10",
+      "name": "Route10_Layout",
+      "width": 130,
+      "height": 54,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Route10/border.bin",
+      "blockdata_filepath": "data/layouts/Route10/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE11",
+      "name": "Route11_Layout",
+      "width": 40,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Route11/border.bin",
+      "blockdata_filepath": "data/layouts/Route11/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHANDRA_VILLAGE_LAB",
+      "name": "ChandraVillage_Lab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/ChandraVillage_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/ChandraVillage_Lab/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNRISE_TOWN_HOUSE1",
+      "name": "SunriseTown_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/SunriseTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/SunriseTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNRISE_TOWN_HOUSE2",
+      "name": "SunriseTown_House2_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/SunriseTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/SunriseTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNRISE_TOWN_HOTEL_1F",
+      "name": "SunriseTown_Hotel_1F_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SunriseTown_Hotel_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SunriseTown_Hotel_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNRISE_TOWN_POKEMON_CENTER_1F",
+      "name": "SunriseTown_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/SunriseTown_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SunriseTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNRISE_TOWN_MART",
+      "name": "SunriseTown_Mart_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/SunriseTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/SunriseTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_HOUSE1_1F",
+      "name": "UnionCity_House1_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/UnionCity_House1_1F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_House1_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_HOUSE1_2F",
+      "name": "UnionCity_House1_2F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/UnionCity_House1_2F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_House1_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_HOUSE1_3F",
+      "name": "UnionCity_House1_3F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/UnionCity_House1_3F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_House1_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_HOUSE2",
+      "name": "UnionCity_House2_Layout",
+      "width": 77,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/UnionCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_HOUSE3_1F",
+      "name": "UnionCity_House3_1F_Layout",
+      "width": 14,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/UnionCity_House3_1F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_House3_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_HOUSE3_2F",
+      "name": "UnionCity_House3_2F_Layout",
+      "width": 14,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/UnionCity_House3_2F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_House3_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_GOV_OFFICE_1F",
+      "name": "UnionCity_GovOffice_1F_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/UnionCity_GovOffice_1F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_GovOffice_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_GOV_OFFICE_2F",
+      "name": "UnionCity_GovOffice_2F_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/UnionCity_GovOffice_2F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_GovOffice_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_GOV_OFFICE_3F",
+      "name": "UnionCity_GovOffice_3F_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/UnionCity_GovOffice_3F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_GovOffice_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_ABANDONED_MUSEUM",
+      "name": "UnionCity_AbandonedMuseum_Layout",
+      "width": 38,
+      "height": 40,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontierRankingHall",
+      "border_filepath": "data/layouts/UnionCity_AbandonedMuseum/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_AbandonedMuseum/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_BIKE_SHOP",
+      "name": "UnionCity_BikeShop_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/UnionCity_BikeShop/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_BikeShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_GAME_CORNER",
+      "name": "UnionCity_GameCorner_Layout",
+      "width": 22,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MauvilleGameCorner",
+      "border_filepath": "data/layouts/UnionCity_GameCorner/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_GameCorner/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_POKEMON_CENTER_1F",
+      "name": "UnionCity_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/UnionCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_DEPARTMENT_STORE_1F",
+      "name": "UnionCity_DepartmentStore_1F_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/UnionCity_DepartmentStore_1F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_DepartmentStore_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_DEPARTMENT_STORE_2F",
+      "name": "UnionCity_DepartmentStore_2F_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/UnionCity_DepartmentStore_2F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_DepartmentStore_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_DEPARTMENT_STORE_3F",
+      "name": "UnionCity_DepartmentStore_3F_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/UnionCity_DepartmentStore_3F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_DepartmentStore_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_DEPARTMENT_STORE_4F",
+      "name": "UnionCity_DepartmentStore_4F_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/UnionCity_DepartmentStore_4F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_DepartmentStore_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_DEPARTMENT_STORE_5F",
+      "name": "UnionCity_DepartmentStore_5F_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/UnionCity_DepartmentStore_5F/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_DepartmentStore_5F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_DEPARTMENT_STORE_ELEVATOR",
+      "name": "UnionCity_DepartmentStoreElevator_Layout",
+      "width": 5,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/UnionCity_DepartmentStoreElevator/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_DepartmentStoreElevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_GREENDALE_VILLAGE_HOUSE1",
+      "name": "GreendaleVillage_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/GreendaleVillage_House1/border.bin",
+      "blockdata_filepath": "data/layouts/GreendaleVillage_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_GREENDALE_VILLAGE_ROSE_HOUSE",
+      "name": "GreendaleVillage_RoseHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/GreendaleVillage_RoseHouse/border.bin",
+      "blockdata_filepath": "data/layouts/GreendaleVillage_RoseHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_GREENDALE_VILLAGE_TRAINER_SCHOOL",
+      "name": "GreendaleVillage_TrainerSchool_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/GreendaleVillage_TrainerSchool/border.bin",
+      "blockdata_filepath": "data/layouts/GreendaleVillage_TrainerSchool/map.bin"
+    },
+    {
+      "id": "LAYOUT_GREENDALE_VILLAGE_POKEMON_CENTER_1F",
+      "name": "GreendaleVillage_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/GreendaleVillage_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/GreendaleVillage_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GREENDALE_VILLAGE_MART",
+      "name": "GreendaleVillage_Mart_Layout",
+      "width": 12,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/GreendaleVillage_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/GreendaleVillage_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_TOWN_HOUSE1",
+      "name": "AnheimTown_House1_Layout",
+      "width": 13,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/AnheimTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_TOWN_HOUSE2",
+      "name": "AnheimTown_House2_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/AnheimTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_TOWN_POKEMON_CENTER_1F",
+      "name": "AnheimTown_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/AnheimTown_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_TOWN_MART",
+      "name": "AnheimTown_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/AnheimTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_HOUSE1",
+      "name": "LaveriaCity_House1_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/LaveriaCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_HOUSE2",
+      "name": "LaveriaCity_House2_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/LaveriaCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_POKEMON_CENTER_1F",
+      "name": "LaveriaCity_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/LaveriaCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_MART",
+      "name": "LaveriaCity_Mart_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/LaveriaCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIGHWIND_VILLAGE_HOUSE1",
+      "name": "HighwindVillage_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/HighwindVillage_House1/border.bin",
+      "blockdata_filepath": "data/layouts/HighwindVillage_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIGHWIND_VILLAGE_HOUSE2",
+      "name": "HighwindVillage_House2_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/HighwindVillage_House2/border.bin",
+      "blockdata_filepath": "data/layouts/HighwindVillage_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIGHWIND_VILLAGE_RANGERS_LODGE",
+      "name": "HighwindVillage_RangersLodge_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/HighwindVillage_RangersLodge/border.bin",
+      "blockdata_filepath": "data/layouts/HighwindVillage_RangersLodge/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIGHWIND_VILLAGE_POKEMON_CENTER_1F",
+      "name": "HighwindVillage_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/HighwindVillage_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/HighwindVillage_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIGHWIND_VILLAGE_MART",
+      "name": "HighwindVillage_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/HighwindVillage_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/HighwindVillage_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_HOUSE1",
+      "name": "NorthstarCity_House1_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/NorthstarCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_HOUSE2",
+      "name": "NorthstarCity_House2_Layout",
+      "width": 14,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/NorthstarCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_HOUSE3",
+      "name": "NorthstarCity_House3_Layout",
+      "width": 14,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/NorthstarCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_APARTMENTS",
+      "name": "NorthstarCity_Apartments_Layout",
+      "width": 129,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/NorthstarCity_Apartments/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Apartments/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_TRAINER_SCHOOL",
+      "name": "NorthstarCity_TrainerSchool_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/NorthstarCity_TrainerSchool/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_TrainerSchool/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_STORAGE_FACILITY",
+      "name": "NorthstarCity_StorageFacility_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/NorthstarCity_StorageFacility/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_StorageFacility/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_SHIPPING_CENTER",
+      "name": "NorthstarCity_ShippingCenter_Layout",
+      "width": 38,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/NorthstarCity_ShippingCenter/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_ShippingCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_TOURNAMENT_1F",
+      "name": "NorthstarCity_Tournament_1F_Layout",
+      "width": 18,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NorthstarCity_Tournament_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Tournament_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_TOURNAMENT_2F",
+      "name": "NorthstarCity_Tournament_2F_Layout",
+      "width": 18,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NorthstarCity_Tournament_2F/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Tournament_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_TOURNAMENT_3F",
+      "name": "NorthstarCity_Tournament_3F_Layout",
+      "width": 18,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NorthstarCity_Tournament_3F/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Tournament_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_TOURNAMENT_4F",
+      "name": "NorthstarCity_Tournament_4F_Layout",
+      "width": 18,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NorthstarCity_Tournament_4F/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Tournament_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_LIGHTHOUSE",
+      "name": "NorthstarCity_Lighthouse_Layout",
+      "width": 38,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/NorthstarCity_Lighthouse/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Lighthouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_TELESCOPE_SEA",
+      "name": "NorthstarCity_TelescopeSea_Layout",
+      "width": 52,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/NorthstarCity_TelescopeSea/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_TelescopeSea/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_POKEMON_CENTER_1F",
+      "name": "NorthstarCity_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/NorthstarCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_MART",
+      "name": "NorthstarCity_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NorthstarCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_HOUSE1",
+      "name": "PinleafTown_House1_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_HOUSE2",
+      "name": "PinleafTown_House2_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_HOUSE3",
+      "name": "PinleafTown_House3_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_HOUSE4",
+      "name": "PinleafTown_House4_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_House4/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_HOUSE5",
+      "name": "PinleafTown_House5_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_House5/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_House5/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_FARM_HOUSE",
+      "name": "PinleafTown_FarmHouse_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PinleafTown_FarmHouse/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_FarmHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_STORAGE_FACILITY",
+      "name": "PinleafTown_StorageFacility_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PinleafTown_StorageFacility/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_StorageFacility/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_FLOWER_SHOP",
+      "name": "PinleafTown_FlowerShop_Layout",
+      "width": 15,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
+      "border_filepath": "data/layouts/PinleafTown_FlowerShop/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_FlowerShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_INN_1F",
+      "name": "PinleafTown_Inn_1F_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_Inn_1F/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_Inn_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_INN_2F",
+      "name": "PinleafTown_Inn_2F_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PinleafTown_Inn_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_Inn_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PINLEAF_TOWN_MART",
+      "name": "PinleafTown_Mart_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/PinleafTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/PinleafTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_FOREST",
+      "name": "AnheimForest_Layout",
+      "width": 86,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/AnheimForest/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKFALL_CAVE_1F",
+      "name": "RockfallCave_1F_Layout",
+      "width": 89,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RusturfTunnel",
+      "border_filepath": "data/layouts/RockfallCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/RockfallCave_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKFALL_CAVE_B1F",
+      "name": "RockfallCave_B1F_Layout",
+      "width": 46,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RusturfTunnel",
+      "border_filepath": "data/layouts/RockfallCave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/RockfallCave_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_STEEP_RAVINE",
+      "name": "SteepRavine_Layout",
+      "width": 80,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/SteepRavine/border.bin",
+      "blockdata_filepath": "data/layouts/SteepRavine/map.bin"
+    },
+    {
+      "id": "LAYOUT_TAMAROK_TUNNELS",
+      "name": "TamarokTunnels_Layout",
+      "width": 70,
+      "height": 100,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MauvilleGym",
+      "border_filepath": "data/layouts/TamarokTunnels/border.bin",
+      "blockdata_filepath": "data/layouts/TamarokTunnels/map.bin"
+    },
+    {
+      "id": "LAYOUT_TAMAROK_PEAK",
+      "name": "TamarokPeak_Layout",
+      "width": 40,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/TamarokPeak/border.bin",
+      "blockdata_filepath": "data/layouts/TamarokPeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALACE_OF_ICE_ENTRANCE",
+      "name": "PalaceOfIce_Entrance_Layout",
+      "width": 19,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RusturfTunnel",
+      "border_filepath": "data/layouts/PalaceOfIce_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/PalaceOfIce_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALACE_OF_ICE_INSIDE",
+      "name": "PalaceOfIce_Inside_Layout",
+      "width": 59,
+      "height": 56,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MauvilleGym",
+      "border_filepath": "data/layouts/PalaceOfIce_Inside/border.bin",
+      "blockdata_filepath": "data/layouts/PalaceOfIce_Inside/map.bin"
+    },
+    {
+      "id": "LAYOUT_SNOWDRIFT_FOREST",
+      "name": "SnowdriftForest_Layout",
+      "width": 48,
+      "height": 58,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/SnowdriftForest/border.bin",
+      "blockdata_filepath": "data/layouts/SnowdriftForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCTIC_BAY",
+      "name": "ArcticBay_Layout",
+      "width": 76,
+      "height": 72,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/ArcticBay/border.bin",
+      "blockdata_filepath": "data/layouts/ArcticBay/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3_HOUSE1",
+      "name": "Route3_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/Route3_House1/border.bin",
+      "blockdata_filepath": "data/layouts/Route3_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_POKEMON_DAY_CARE",
+      "name": "Route4_PokemonDayCare_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/Route4_PokemonDayCare/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_PokemonDayCare/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5_HOUSE1",
+      "name": "Route5_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/Route5_House1/border.bin",
+      "blockdata_filepath": "data/layouts/Route5_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9_STARTER_DOME",
+      "name": "Route9_StarterDome_Layout",
+      "width": 36,
+      "height": 37,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PokemonFanClub",
+      "border_filepath": "data/layouts/Route9_StarterDome/border.bin",
+      "blockdata_filepath": "data/layouts/Route9_StarterDome/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_FOREST_HOUSE1",
+      "name": "AnheimForest_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/AnheimForest_House1/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimForest_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MUDDY_UNDERPASS",
+      "name": "MuddyUnderpass_Layout",
+      "width": 76,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RusturfTunnel",
+      "border_filepath": "data/layouts/MuddyUnderpass/border.bin",
+      "blockdata_filepath": "data/layouts/MuddyUnderpass/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_INTERLINK",
+      "name": "LaveriaCity_Interlink_Layout",
+      "width": 17,
+      "height": 28,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/LaveriaCity_Interlink/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_Interlink/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CITY_INTERLINK",
+      "name": "UnionCity_Interlink_Layout",
+      "width": 40,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/UnionCity_Interlink/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCity_Interlink/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_CITY_INTERLINK",
+      "name": "NorthstarCity_Interlink_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/NorthstarCity_Interlink/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarCity_Interlink/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER",
+      "name": "Underwater_Layout",
+      "width": 100,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRANIA_TOWN",
+      "name": "MiraniaTown_Layout",
+      "width": 52,
+      "height": 70,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Unused2",
+      "border_filepath": "data/layouts/MiraniaTown/border.bin",
+      "blockdata_filepath": "data/layouts/MiraniaTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE31",
+      "name": "Route31_Layout",
+      "width": 122,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/Route31/border.bin",
+      "blockdata_filepath": "data/layouts/Route31/map.bin"
     }
   ]
 }

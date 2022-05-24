@@ -1,4 +1,4 @@
-static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
+static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] = 
 {
     {
         .mapSecId = MAPSEC_LITTLEROOT_TOWN,
@@ -6,14 +6,64 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Littleroot_0,
     },
     {
+        .mapSecId = MAPSEC_CHANDRA_VILLAGE,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Chandra_0,
+    },
+    {
         .mapSecId = MAPSEC_OLDALE_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Oldale_0,
     },
     {
+        .mapSecId = MAPSEC_SUNRISE_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Sunrise_0,
+    },
+    {
         .mapSecId = MAPSEC_DEWFORD_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Dewford_0,
+    },
+    {
+        .mapSecId = MAPSEC_GREENDALE_VILLAGE,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Greendale_0,
+    },
+    {
+        .mapSecId = MAPSEC_UNION_CITY,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Union_0,
+    },
+    {
+        .mapSecId = MAPSEC_ANHEIM_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Anheim_0,
+    },
+    {
+        .mapSecId = MAPSEC_LAVERIA_CITY,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Laveria_0,
+    },
+    {
+        .mapSecId = MAPSEC_HIGHWIND_VILLAGE,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Highwind_0,
+    },
+    {
+        .mapSecId = MAPSEC_NORTHSTAR_CITY,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Northstar_0,
+    },
+    {
+        .mapSecId = MAPSEC_PINLEAF_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Pinleaf_0,
+    },
+    {
+        .mapSecId = MAPSEC_MIRANIA_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Mirania_0,
     },
     {
         .mapSecId = MAPSEC_LAVARIDGE_TOWN,

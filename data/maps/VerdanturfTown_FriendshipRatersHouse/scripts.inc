@@ -1,7 +1,7 @@
-VerdanturfTown_FriendshipRatersHouse_MapScripts::
+VerdanturfTown_FriendshipRatersHouse_MapScripts:: @ 8203030
 	.byte 0
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_FriendshipRater::
+VerdanturfTown_FriendshipRatersHouse_EventScript_FriendshipRater:: @ 8203031
 	lock
 	faceplayer
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou, MSGBOX_DEFAULT
@@ -17,88 +17,88 @@ VerdanturfTown_FriendshipRatersHouse_EventScript_FriendshipRater::
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_DetestsYou::
+VerdanturfTown_FriendshipRatersHouse_EventScript_DetestsYou:: @ 8203094
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_VeryWary::
+VerdanturfTown_FriendshipRatersHouse_EventScript_VeryWary:: @ 820309E
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_VeryWary, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_NotUsedToYou::
+VerdanturfTown_FriendshipRatersHouse_EventScript_NotUsedToYou:: @ 82030A8
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_GettingUsedToYou::
+VerdanturfTown_FriendshipRatersHouse_EventScript_GettingUsedToYou:: @ 82030B2
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_LikesYouQuiteALot::
+VerdanturfTown_FriendshipRatersHouse_EventScript_LikesYouQuiteALot:: @ 82030BC
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_VeryHappy::
+VerdanturfTown_FriendshipRatersHouse_EventScript_VeryHappy:: @ 82030C6
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_AdoresYou::
+VerdanturfTown_FriendshipRatersHouse_EventScript_AdoresYou:: @ 82030D0
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou, MSGBOX_DEFAULT
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu::
+VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu:: @ 82030DA
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
+	playmoncry SPECIES_PIKACHU, 0
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_Pikachu, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou:
+VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou: @ 82030ED
 	.string "Let me see your POKéMON.\n"
 	.string "I'll check to see how much it likes you.\p"
 	.string "Oh.\n"
 	.string "Your POKéMON…$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou:
+VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou: @ 8203141
 	.string "It adores you.\n"
 	.string "It can't possibly love you any more.\l"
 	.string "I even feel happy seeing it.$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy:
+VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy: @ 8203192
 	.string "It seems to be very happy.\n"
 	.string "It obviously likes you a whole lot.$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot:
+VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot: @ 82031D1
 	.string "It likes you quite a lot.\n"
 	.string "It seems to want to be babied a little.$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou:
+VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou: @ 8203213
 	.string "It's getting used to you.\n"
 	.string "It seems to believe in you.$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou:
+VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou: @ 8203249
 	.string "It's not very used to you yet.\n"
 	.string "It neither loves nor hates you.$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_VeryWary:
+VerdanturfTown_FriendshipRatersHouse_Text_VeryWary: @ 8203288
 	.string "It's very wary.\n"
 	.string "It has scary viciousness in its eyes.\l"
 	.string "It doesn't like you much at all.$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou:
+VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou: @ 82032DF
 	.string "This is a little hard for me to say…\p"
 	.string "Your POKéMON simply detests you.\n"
 	.string "Doesn't that make you uncomfortable?$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_Pikachu:
+VerdanturfTown_FriendshipRatersHouse_Text_Pikachu: @ 820334A
 	.string "PIKACHU: Pika pika!$"
 

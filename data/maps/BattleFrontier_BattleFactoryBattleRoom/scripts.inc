@@ -7,7 +7,7 @@
 .set LOCALID_SCIENTIST_6, 7
 .set LOCALID_PLAYER, 8
 
-BattleFrontier_BattleFactoryBattleRoom_MapScripts::
+BattleFrontier_BattleFactoryBattleRoom_MapScripts:: @ 825ADAB
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_BattleFactoryBattleRoom_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattleFactoryBattleRoom_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleFactoryBattleRoom_OnFrame
@@ -16,46 +16,50 @@ BattleFrontier_BattleFactoryBattleRoom_MapScripts::
 	@ On this map the player (OBJ_EVENT_ID_PLAYER) is hidden
 	@ The player is represented instead by LOCALID_PLAYER, which has the gfx id VAR_OBJ_GFX_ID_F
 
-BattleFrontier_BattleFactoryBattleRoom_OnTransition:
+BattleFrontier_BattleFactoryBattleRoom_OnTransition: @ 825ADBB
 	frontier_settrainers
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale
-	call_if_eq VAR_RESULT, FEMALE, BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale
+	compare VAR_RESULT, MALE
+	call_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale
+	compare VAR_RESULT, FEMALE
+	call_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale
 	frontier_getbrainstatus
 	copyvar VAR_TEMP_F, VAR_RESULT
-	goto_if_ne VAR_RESULT, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleFactoryBattleRoom_EventScript_SetUpFactoryHeadObj
+	compare VAR_RESULT, FRONTIER_BRAIN_NOT_READY
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_SetUpFactoryHeadObj
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_SetUpFactoryHeadObj::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_SetUpFactoryHeadObj:: @ 825ADF3
 	call BattleFrontier_EventScript_SetBrainObjectGfx
 	setobjectxyperm LOCALID_OPPONENT, 7, 9
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_OnWarp:
+BattleFrontier_BattleFactoryBattleRoom_OnWarp: @ 825AE00
 	map_script_2 VAR_TEMP_1, 0, BattleFrontier_BattleFactoryBattleRoom_EventScript_HideObjects
 	.2byte 0
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_HideObjects::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_HideObjects:: @ 825AE0A
 	setvar VAR_TEMP_1, 1
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM
-	goto_if_ne VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleFactoryBattleRoom_EventScript_EndHideObjects
+	compare VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_EndHideObjects
 	hideobjectat LOCALID_OPPONENT, MAP_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM
-BattleFrontier_BattleFactoryBattleRoom_EventScript_EndHideObjects::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_EndHideObjects:: @ 825AE24
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale:: @ 825AE25
 	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	return
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale:: @ 825AE2B
 	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 
-BattleFrontier_BattleFactoryBattleRoom_OnFrame:
+BattleFrontier_BattleFactoryBattleRoom_OnFrame: @ 825AE31
 	map_script_2 VAR_TEMP_0, 0, BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom
 	.2byte 0
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoomFactoryHeadBattle::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoomFactoryHeadBattle:: @ 825AE3B
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_OPPONENT, BattleFrontier_BattleFactoryBattleRoom_Movement_NolandMoveToBattle
@@ -66,8 +70,9 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoomFactoryHeadBattle::
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom::
-	goto_if_ne VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoomFactoryHeadBattle
+BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom:: @ 825AE67
+	compare VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoomFactoryHeadBattle
 	applymovement LOCALID_PLAYER, BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerEnterRoom
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerEnterRoom
 	waitmovement 0
@@ -78,8 +83,9 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom::
 	addobject LOCALID_OPPONENT
 	applymovement LOCALID_OPPONENT, BattleFrontier_BattleFactoryBattleRoom_Movement_OpponentEnter
 	waitmovement 0
-BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent::
-	goto_if_ne VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland
+BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent:: @ 825AEA7
+	compare VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland
 	palace_getopponentintro
 	lockall
 	msgbox gStringVar4, MSGBOX_DEFAULT
@@ -93,49 +99,53 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent::
 	waitstate
 	switch VAR_RESULT
 	case 1, BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedOpponent
-BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyLost::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyLost:: @ 825AEF8
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedOpponent::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedOpponent:: @ 825AF0F
 	factory_get FACTORY_DATA_WIN_STREAK_SWAPS
-	goto_if_eq VAR_RESULT, MAX_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak
+	compare VAR_RESULT, MAX_STREAK
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak
 	addvar VAR_RESULT, 1
 	setorcopyvar VAR_0x8006, VAR_RESULT
 	factory_set FACTORY_DATA_WIN_STREAK_SWAPS  @ uses VAR_0x8006 above
-BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak:: @ 825AF3E
 	call BattleFrontier_EventScript_IncrementWinStreak
-BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum:: @ 825AF43
 	frontier_get FRONTIER_DATA_BATTLE_NUM
 	addvar VAR_RESULT, 1
 	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
 	switch VAR_RESULT
 	case 7, BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyWon
 	setvar VAR_0x8006, 1
-	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM, 8, 8
+	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM, 255, 8, 8
 	waitstate
-BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyWon::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyWon:: @ 825AF85
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_WON
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland:: @ 825AF9C
 	switch VAR_TEMP_F
 	case FRONTIER_BRAIN_GOLD, BattleFrontier_BattleFactoryBattleRoom_EventScript_IntroNolandGold
 	case FRONTIER_BRAIN_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver
 	case FRONTIER_BRAIN_STREAK_LONG, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold
 	frontier_get FRONTIER_DATA_HEARD_BRAIN_SPEECH
-	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver
+	compare VAR_RESULT, FALSE
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
-BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver:: @ 825AFEF
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn, MSGBOX_DEFAULT
 	call BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle
-	goto_if_eq VAR_RESULT, 1, BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandSilver
+	compare VAR_RESULT, 1
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandSilver
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyLost
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandSilver::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandSilver:: @ 825B00C
 	frontier_getsymbols
-	goto_if_ne VAR_RESULT, 0, BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland
+	compare VAR_RESULT, 0
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_PLAYER, BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerApproachNoland
@@ -148,20 +158,23 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandSilver::
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred, MSGBOX_DEFAULT
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_IntroNolandGold::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_IntroNolandGold:: @ 825B051
 	frontier_get FRONTIER_DATA_HEARD_BRAIN_SPEECH
-	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold
+	compare VAR_RESULT, FALSE
+	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
-BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold:: @ 825B07E
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn, MSGBOX_DEFAULT
 	call BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle
-	goto_if_eq VAR_RESULT, 1, BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandGold
+	compare VAR_RESULT, 1
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandGold
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyLost
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandGold::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandGold:: @ 825B09B
 	frontier_getsymbols
-	goto_if_eq VAR_RESULT, 2, BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland
+	compare VAR_RESULT, 2
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass, MSGBOX_DEFAULT
 	waitmessage
 	applymovement LOCALID_PLAYER, BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerApproachNoland
@@ -174,7 +187,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNolandGold::
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_LastTimeILoseToYou, MSGBOX_DEFAULT
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle:: @ 825B0E0
 	closemessage
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, FALSE
 	special HealPlayerParty
@@ -184,14 +197,16 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle::
 	waitstate
 	return
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland:: @ 825B105
 	factory_get FACTORY_DATA_WIN_STREAK_SWAPS
-	goto_if_eq VAR_RESULT, MAX_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak
+	compare VAR_RESULT, MAX_STREAK
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak
 	addvar VAR_RESULT, 1
 	setorcopyvar VAR_0x8006, VAR_RESULT
 	factory_set FACTORY_DATA_WIN_STREAK_SWAPS  @ uses VAR_0x8006 above
 	factory_get FACTORY_DATA_WIN_STREAK
-	goto_if_eq VAR_RESULT, MAX_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum
+	compare VAR_RESULT, MAX_STREAK
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum
 	addvar VAR_RESULT, 1
 	factory_set FACTORY_DATA_WIN_STREAK, VAR_RESULT
 	frontier_get FRONTIER_DATA_BATTLE_NUM
@@ -199,7 +214,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland::
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyWon
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerEnterRoom:
+BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerEnterRoom: @ 825B17B
 	walk_up
 	walk_up
 	walk_up
@@ -208,11 +223,11 @@ BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerEnterRoom:
 	face_right
 	step_end
 
-BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerApproachNoland:
+BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerApproachNoland: @ 825B182
 	walk_right
 	step_end
 
-BattleFrontier_BattleFactoryBattleRoom_Movement_OpponentEnter:
+BattleFrontier_BattleFactoryBattleRoom_Movement_OpponentEnter: @ 825B184
 	walk_down
 	walk_down
 	walk_down
@@ -221,26 +236,27 @@ BattleFrontier_BattleFactoryBattleRoom_Movement_OpponentEnter:
 	face_left
 	step_end
 
-BattleFrontier_BattleFactoryBattleRoom_Movement_NolandMoveToBattle:
+BattleFrontier_BattleFactoryBattleRoom_Movement_NolandMoveToBattle: @ 825B18B
 	walk_up
 	walk_up
 	walk_up
 	face_left
 	step_end
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby:: @ 825B190
 	copyvar VAR_RESULT, VAR_FRONTIER_BATTLE_MODE
-	goto_if_eq VAR_RESULT, FRONTIER_MODE_DOUBLES, BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyDoubles
-	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY, 4, 8
+	compare VAR_RESULT, FRONTIER_MODE_DOUBLES
+	goto_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyDoubles
+	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY, 255, 4, 8
 	waitstate
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyDoubles::
-	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY, 14, 8
+BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyDoubles:: @ 825B1AA
+	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY, 255, 14, 8
 	waitstate
 	end
 
-BattleFrontier_BattleFactoryBattleRoom_EventScript_ScientistsFaceBattle::
+BattleFrontier_BattleFactoryBattleRoom_EventScript_ScientistsFaceBattle:: @ 825B1B4
 	applymovement LOCALID_SCIENTIST_1, Common_Movement_WalkInPlaceFasterRight
 	applymovement LOCALID_SCIENTIST_2, Common_Movement_WalkInPlaceFasterRight
 	applymovement LOCALID_SCIENTIST_3, Common_Movement_WalkInPlaceFasterRight
@@ -250,11 +266,11 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_ScientistsFaceBattle::
 	waitmovement 0
 	return
 
-BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn:
+BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn: @ 825B1E2
 	.string "Hey, hey!\n"
 	.string "Get a move on!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead:
+BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead: @ 825B1FB
 	.string "Hey, my name's NOLAND!\n"
 	.string "I'm basically in charge of this place,\l"
 	.string "which is why I'm the FACTORY HEAD!\p"
@@ -271,26 +287,26 @@ BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead:
 	.string "conditions as you.\p"
 	.string "I'll be using rental POKéMON, too!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn:
+BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn: @ 825B3F1
 	.string "Shake out every last bit of your\n"
 	.string "knowledge and bring it on!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass:
+BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass: @ 825B42D
 	.string "NOLAND: Smart going!\n"
 	.string "Let's see your FRONTIER PASS.$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_ReceivedKnowledgeSymbol:
+BattleFrontier_BattleFactoryBattleRoom_Text_ReceivedKnowledgeSymbol: @ 825B460
 	.string "The Knowledge Symbol was embossed\n"
 	.string "on the FRONTIER PASS!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred:
+BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred: @ 825B498
 	.string "Heh…\n"
 	.string "You're a pretty bright spark…\p"
 	.string "Next time, I'll come after you hard.\n"
 	.string "No holds barred, understand?\p"
 	.string "You keep up your studies!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime:
+BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime: @ 825B517
 	.string "NOLAND: Hey, hey! How's it going?\n"
 	.string "You keeping up with your studies?\p"
 	.string "…Oh?\p"
@@ -299,21 +315,21 @@ BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime:
 	.string "Now, this should be fun!\n"
 	.string "I'm getting excited, hey!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn:
+BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn: @ 825B5CF
 	.string "All right!\n"
 	.string "Bring it on!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass:
+BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass: @ 825B5E7
 	.string "NOLAND: What the…\n"
 	.string "You're getting out of my league!\p"
 	.string "Sheesh!\n"
 	.string "Let's see that FRONTIER PASS!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_KnowledgeSymbolTookGoldenShine:
+BattleFrontier_BattleFactoryBattleRoom_Text_KnowledgeSymbolTookGoldenShine: @ 825B640
 	.string "The Knowledge Symbol took on\n"
 	.string "a golden shine!$"
 
-BattleFrontier_BattleFactoryBattleRoom_Text_LastTimeILoseToYou:
+BattleFrontier_BattleFactoryBattleRoom_Text_LastTimeILoseToYou: @ 825B66D
 	.string "Pfft, man!\p"
 	.string "That's absolutely the last time\n"
 	.string "I lose to you!\p"

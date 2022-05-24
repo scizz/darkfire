@@ -29,7 +29,9 @@
       "map": "MAP_ROUTE126"
     }
   ],
-  "object_events": [],
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 45,
@@ -39,32 +41,10 @@
       "dest_warp_id": 0
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 30,
-      "y": 17,
-      "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_HEART_SCALE"
-    },
-    {
-      "type": "hidden_item",
-      "x": 41,
-      "y": 19,
-      "elevation": 3,
-      "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL"
-    },
-    {
-      "type": "hidden_item",
-      "x": 63,
-      "y": 19,
-      "elevation": 3,
-      "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_STARDUST"
-    },
     {
       "type": "hidden_item",
       "x": 10,

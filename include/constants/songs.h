@@ -314,7 +314,7 @@
 #define MUS_BIRCH_LAB               383 // MUS_ODAMAKI
 #define MUS_B_TOWER_RS              384 // MUS_B_TOWER
 #define MUS_ENCOUNTER_SWIMMER       385 // MUS_SWIMEYE
-#define MUS_CAVE_OF_ORIGIN          386 // MUS_DAN03
+#define MUS_ABANDONED_SHIP_OF_ORIGIN          386 // MUS_DAN03
 #define MUS_OBTAIN_BERRY            387 // MUS_ME_KINOMI
 #define MUS_AWAKEN_LEGEND           388 // MUS_ME_TAMA
 #define MUS_SLOTS_JACKPOT           389 // MUS_ME_B_BIG

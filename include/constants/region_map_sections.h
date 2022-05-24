@@ -214,7 +214,17 @@
 #define MAPSEC_ALTERING_CAVE                0xD2
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
+#define MAPSEC_CHANDRA_VILLAGE              0xD5
+#define MAPSEC_SUNRISE_TOWN                 0xD6
+#define MAPSEC_UNION_CITY                   0xD7
+#define MAPSEC_GREENDALE_VILLAGE            0xD8
+#define MAPSEC_ANHEIM_TOWN                  0xD9
+#define MAPSEC_LAVERIA_CITY                 0xDA
+#define MAPSEC_HIGHWIND_VILLAGE             0xDB
+#define MAPSEC_NORTHSTAR_CITY               0xDC
+#define MAPSEC_PINLEAF_TOWN                 0xDD
+#define MAPSEC_MIRANIA_TOWN                 0xDE
+#define MAPSEC_NONE                         0xDF
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

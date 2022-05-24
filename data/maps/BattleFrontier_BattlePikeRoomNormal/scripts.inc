@@ -3,18 +3,18 @@
 .equ LOCALID_OBJ_0, 1
 .equ LOCALID_OBJ_1, 2
 
-BattleFrontier_BattlePikeRoomNormal_MapScripts::
+BattleFrontier_BattlePikeRoomNormal_MapScripts:: @ 825D152
 	map_script MAP_SCRIPT_ON_RESUME, BattleFrontier_BattlePikeRoom_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_BattlePikeRoom_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePikeRoomNormal_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattlePikeRoom_OnWarp
 	.byte 0
 
-BattleFrontier_BattlePikeRoomNormal_OnFrame:
+BattleFrontier_BattlePikeRoomNormal_OnFrame: @ 825D167
 	map_script_2 VAR_TEMP_0, 0, BattleFrontier_BattlePikeRoomNormal_EventScript_EnterRoom
 	.2byte 0
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterRoom:: @ 825D171
 	setvar VAR_TEMP_0, 1
 	pike_getroomtype
 	switch VAR_RESULT
@@ -26,7 +26,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterRoom::
 	case PIKE_ROOM_BRAIN, BattleFrontier_BattlePikeRoomNormal_EventScript_EnterBrainRoom
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterSingleBattleRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterSingleBattleRoom:: @ 825D1C6
 	lockall
 	delay 16
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
@@ -42,18 +42,18 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterSingleBattleRoom::
 	waitstate
 	switch VAR_RESULT
 	case 1, BattleFrontier_BattlePikeRoomNormal_EventScript_WonSingleBattle
-BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost::
+BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost:: @ 825D20A
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
-	warp MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY, 5, 6
+	warp MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY, 255, 5, 6
 	waitstate
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_WonSingleBattle::
+BattleFrontier_BattlePikeRoomNormal_EventScript_WonSingleBattle:: @ 825D226
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
 	waitmovement 0
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterHardBattleRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterHardBattleRoom:: @ 825D231
 	lockall
 	delay 16
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_BattleSomewhatToughTrainer, MSGBOX_DEFAULT
@@ -75,7 +75,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterHardBattleRoom::
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_WonHardBattle::
+BattleFrontier_BattlePikeRoomNormal_EventScript_WonHardBattle:: @ 825D285
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
 	waitmovement 0
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCApproachPlayer
@@ -93,7 +93,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WonHardBattle::
 	waitmovement 0
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterBrainRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterBrainRoom:: @ 825D2BF
 	delay 22
 	lockall
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_PreQueenHealNPCApproachPlayer
@@ -104,7 +104,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterBrainRoom::
 	case 1, BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenHealOneMon
 	case 2, BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenHealTwoMons
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter::
+BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter:: @ 825D2FB
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ShallFetchOurMaster, MSGBOX_DEFAULT
 	closemessage
 	special SpawnCameraObject
@@ -137,18 +137,21 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter::
 	case FRONTIER_BRAIN_STREAK, BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucySilver
 	case FRONTIER_BRAIN_STREAK_LONG, BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucyGold
 	frontier_get FRONTIER_DATA_HEARD_BRAIN_SPEECH
-	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucySilver
+	compare VAR_RESULT, FALSE
+	goto_if_ne BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucySilver
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
-BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucySilver::
+BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucySilver:: @ 825D3BD
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_HopeYouDidntUseUpLuck, MSGBOX_DEFAULT
 	call BattleFrontier_BattlePikeRoomNormal_EventScript_DoPikeQueenBattle
-	goto_if_eq VAR_RESULT, 1, BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucySilver
+	compare VAR_RESULT, 1
+	goto_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucySilver
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucySilver::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucySilver:: @ 825D3DA
 	frontier_getsymbols
-	goto_if_ne VAR_RESULT, 0, BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy
+	compare VAR_RESULT, 0
+	goto_if_ne BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_LucyShowMeFrontierPass, MSGBOX_DEFAULT
 	waitmessage
 	playfanfare MUS_OBTAIN_SYMBOL
@@ -160,20 +163,23 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucySilver::
 	closemessage
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_IntroLucyGold::
+BattleFrontier_BattlePikeRoomNormal_EventScript_IntroLucyGold:: @ 825D416
 	frontier_get FRONTIER_DATA_HEARD_BRAIN_SPEECH
-	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucyGold
+	compare VAR_RESULT, FALSE
+	goto_if_ne BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucyGold
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_LucyYouAgain, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
-BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucyGold::
+BattleFrontier_BattlePikeRoomNormal_EventScript_BattleLucyGold:: @ 825D443
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_NowComeOn, MSGBOX_DEFAULT
 	call BattleFrontier_BattlePikeRoomNormal_EventScript_DoPikeQueenBattle
-	goto_if_eq VAR_RESULT, 1, BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucyGold
+	compare VAR_RESULT, 1
+	goto_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucyGold
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucyGold::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucyGold:: @ 825D460
 	frontier_getsymbols
-	goto_if_eq VAR_RESULT, 2, BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy
+	compare VAR_RESULT, 2
+	goto_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_LucyFrontierPass, MSGBOX_DEFAULT
 	waitmessage
 	playfanfare MUS_OBTAIN_SYMBOL
@@ -186,38 +192,38 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucyGold::
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy:: @ 825D49D
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_LucyMoveAside
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2
 	waitmovement 0
 	pike_get PIKE_DATA_WIN_STREAK
 	addvar VAR_RESULT, 1
-	pike_set PIKE_DATA_WIN_STREAK, VAR_RESULT
+	pike_set PIKE_DATA_WIN_STREAK VAR_RESULT
 	call BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom
 	waitstate
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenNoHeal::
+BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenNoHeal:: @ 825D4DC
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomNoHeal, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenHealOneMon::
+BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenHealOneMon:: @ 825D4EA
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealOne, MSGBOX_DEFAULT
 	playfanfare MUS_HEAL
 	waitfanfare
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenHealTwoMons::
+BattleFrontier_BattlePikeRoomNormal_EventScript_PreQueenHealTwoMons:: @ 825D4FC
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealTwo, MSGBOX_DEFAULT
 	playfanfare MUS_HEAL
 	waitfanfare
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterFullHealRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterFullHealRoom:: @ 825D50E
 	lockall
 	delay 16
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
@@ -234,7 +240,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterFullHealRoom::
 	releaseall
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterDoubleBattleRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterDoubleBattleRoom:: @ 825D53E
 	lockall
 	delay 16
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1WalkRight
@@ -266,7 +272,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterDoubleBattleRoom::
 	goto BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_WonDoubleBattle::
+BattleFrontier_BattlePikeRoomNormal_EventScript_WonDoubleBattle:: @ 825D5DC
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2
 	waitmovement 0
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1Exit
@@ -277,31 +283,37 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WonDoubleBattle::
 	waitmovement 0
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_EnterStatusRoom::
+BattleFrontier_BattlePikeRoomNormal_EventScript_EnterStatusRoom:: @ 825D605
 	lockall
 	message BattleFrontier_BattlePikeRoomNormal_Text_WatchOut
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonApproachPlayer
 	waitmovement 0
 	pike_getstatusmon
 	copyvar VAR_0x8004, VAR_RESULT
-	call_if_eq VAR_0x8004, PIKE_STATUSMON_KIRLIA, BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack
-	call_if_eq VAR_0x8004, PIKE_STATUSMON_DUSCLOPS, BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack
+	compare VAR_0x8004, PIKE_STATUSMON_KIRLIA
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack
+	compare VAR_0x8004, PIKE_STATUSMON_DUSCLOPS
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled, MSGBOX_DEFAULT
 	closemessage
 	releaseall
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
+BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack:: @ 825D643
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	playmoncry SPECIES_KIRLIA, 0
 	waitmoncry
 	pike_getstatus
-	call_if_eq VAR_RESULT, PIKE_STATUS_TOXIC, BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedToxic
-	call_if_eq VAR_RESULT, PIKE_STATUS_BURN, BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedWillOWisp
-	call_if_eq VAR_RESULT, PIKE_STATUS_PARALYSIS, BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedThunderWave
-	call_if_eq VAR_RESULT, PIKE_STATUS_SLEEP, BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedHypnosis
+	compare VAR_RESULT, PIKE_STATUS_TOXIC
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedToxic
+	compare VAR_RESULT, PIKE_STATUS_BURN
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedWillOWisp
+	compare VAR_RESULT, PIKE_STATUS_PARALYSIS
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedThunderWave
+	compare VAR_RESULT, PIKE_STATUS_SLEEP
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedHypnosis
 	pike_flashscreen
 	waitstate
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
@@ -309,11 +321,11 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	playmoncry SPECIES_KIRLIA, 0
 	waitmoncry
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough, MSGBOX_DEFAULT
 	waitse
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	playmoncry SPECIES_KIRLIA, 0
 	waitmoncry
 	closemessage
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
@@ -322,15 +334,17 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia, MSGBOX_DEFAULT
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack:: @ 825D6D5
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_DUSCLOPS, CRY_MODE_NORMAL
+	playmoncry SPECIES_DUSCLOPS, 0
 	waitmoncry
 	pike_getstatus
-	call_if_eq VAR_RESULT, PIKE_STATUS_FREEZE, BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedIceBeam
-	call_if_eq VAR_RESULT, PIKE_STATUS_BURN, BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp
+	compare VAR_RESULT, PIKE_STATUS_FREEZE
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedIceBeam
+	compare VAR_RESULT, PIKE_STATUS_BURN
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp
 	pike_flashscreen
 	waitstate
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
@@ -338,11 +352,11 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_DUSCLOPS, CRY_MODE_NORMAL
+	playmoncry SPECIES_DUSCLOPS, 0
 	waitmoncry
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough, MSGBOX_DEFAULT
 	waitse
-	playmoncry SPECIES_DUSCLOPS, CRY_MODE_NORMAL
+	playmoncry SPECIES_DUSCLOPS, 0
 	waitmoncry
 	closemessage
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
@@ -351,37 +365,37 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops, MSGBOX_DEFAULT
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedToxic::
+BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedToxic:: @ 825D751
 	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedWillOWisp::
+BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedWillOWisp:: @ 825D758
 	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedThunderWave::
+BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedThunderWave:: @ 825D75F
 	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedHypnosis::
+BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedHypnosis:: @ 825D766
 	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedIceBeam::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedIceBeam:: @ 825D76D
 	message BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp:: @ 825D774
 	message BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DoPikeQueenBattle::
+BattleFrontier_BattlePikeRoomNormal_EventScript_DoPikeQueenBattle:: @ 825D77B
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2
 	waitmovement 0
@@ -391,12 +405,12 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DoPikeQueenBattle::
 	waitstate
 	return
 
-BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer: @ 825D795
 	walk_down
 	walk_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit:
+BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit: @ 825D798
 	walk_up
 	walk_up
 	walk_up
@@ -404,17 +418,17 @@ BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit:
 	walk_up
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExit:
+BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExit: @ 825D79E
 	walk_up
 	set_invisible
 	walk_up
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon:
+BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon: @ 825D7A2
 	walk_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer: @ 825D7A4
 	walk_down
 	face_left
 	delay_16
@@ -422,7 +436,7 @@ BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer:
 	face_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_MonApproachPlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_MonApproachPlayer: @ 825D7AA
 	walk_fast_down
 	walk_fast_right
 	walk_fast_right
@@ -431,57 +445,57 @@ BattleFrontier_BattlePikeRoomNormal_Movement_MonApproachPlayer:
 	face_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC:
+BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC: @ 825D7B1
 	face_up
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside:
+BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside: @ 825D7B3
 	walk_left
-BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceRight:
+BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceRight: @ 825D7B4
 	face_right
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCApproachPlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCApproachPlayer: @ 825D7B6
 	walk_down
 	walk_down
 	walk_right
 	face_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer1:
+BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer1: @ 825D7BB
 	face_left
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2:
+BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2: @ 825D7BD
 	face_right
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceUp:
+BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceUp: @ 825D7BF
 	face_up
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1WalkRight:
+BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1WalkRight: @ 825D7C1
 	walk_right
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2WalkLeft:
+BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2WalkLeft: @ 825D7C3
 	walk_left
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_DoubleTrainersWalkDown:
+BattleFrontier_BattlePikeRoomNormal_Movement_DoubleTrainersWalkDown: @ 825D7C5
 	walk_down
 	walk_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1FacePlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1FacePlayer: @ 825D7C8
 	face_right
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2FacePlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2FacePlayer: @ 825D7CA
 	face_left
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1Exit:
+BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1Exit: @ 825D7CC
 	walk_up
 	walk_up
 	walk_up
@@ -491,7 +505,7 @@ BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1Exit:
 	walk_up
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2Exit:
+BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2Exit: @ 825D7D4
 	walk_up
 	walk_up
 	walk_up
@@ -502,40 +516,40 @@ BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2Exit:
 	step_end
 
 @ For approaching Lucy and exiting room after defeating Lucy
-BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2:
+BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2: @ 825D7DC
 	walk_up
 	walk_up
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_PreQueenHealNPCApproachPlayer:
+BattleFrontier_BattlePikeRoomNormal_Movement_PreQueenHealNPCApproachPlayer: @ 825D7DF
 	walk_down
 	walk_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExitForLucy:
+BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExitForLucy: @ 825D7E2
 	walk_up
 	walk_up
 	walk_up
 	set_invisible
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_LucyEnter:
+BattleFrontier_BattlePikeRoomNormal_Movement_LucyEnter: @ 825D7E7
 	set_visible
 	walk_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Movement_LucyMoveAside:
+BattleFrontier_BattlePikeRoomNormal_Movement_LucyMoveAside: @ 825D7EA
 	walk_left
 	face_right
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_NPC::
+BattleFrontier_BattlePikeRoomNormal_EventScript_NPC:: @ 825D7ED
 	pike_getroomtype
 	switch VAR_RESULT
 	case PIKE_ROOM_NPC, BattleFrontier_BattlePikeRoomNormal_EventScript_NormalNPC
 	case PIKE_ROOM_STATUS, BattleFrontier_BattlePikeRoomNormal_EventScript_StatusNPC
 	case PIKE_ROOM_HEAL_PART, BattleFrontier_BattlePikeRoomNormal_EventScript_HealNPC
-BattleFrontier_BattlePikeRoomNormal_EventScript_NormalNPC::
+BattleFrontier_BattlePikeRoomNormal_EventScript_NormalNPC:: @ 825D81B
 	lock
 	faceplayer
 	pike_getnpcmsg
@@ -545,7 +559,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_NormalNPC::
 	release
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_StatusNPC::
+BattleFrontier_BattlePikeRoomNormal_EventScript_StatusNPC:: @ 825D831
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeHopeMonsAreFine, MSGBOX_DEFAULT
@@ -553,10 +567,12 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_StatusNPC::
 	release
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_HealNPC::
+BattleFrontier_BattlePikeRoomNormal_EventScript_HealNPC:: @ 825D83E
 	pike_healonetwomons
-	call_if_eq VAR_RESULT, 2, BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons
-	call_if_eq VAR_RESULT, 1, BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreOneMon
+	compare VAR_RESULT, 2
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons
+	compare VAR_RESULT, 1
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreOneMon
 	playfanfare MUS_HEAL
 	waitfanfare
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell, MSGBOX_DEFAULT
@@ -566,14 +582,14 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_HealNPC::
 	waitmovement 0
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreOneMon::
+BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreOneMon:: @ 825D875
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreOneMon, MSGBOX_DEFAULT
 	closemessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons::
+BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons:: @ 825D881
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreTwoMons, MSGBOX_DEFAULT
@@ -581,7 +597,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons::
 	return
 
 @ Dusclops or Kirlia
-BattleFrontier_BattlePikeRoomNormal_EventScript_StatusMon::
+BattleFrontier_BattlePikeRoomNormal_EventScript_StatusMon:: @ 825D88D
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_Silence, MSGBOX_DEFAULT
@@ -591,180 +607,180 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_StatusMon::
 	waitmovement 0
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesMostlyClosed::
-	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage1_Tile0, TRUE
-	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage1_Tile1, TRUE
-	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage1_Tile2, TRUE
-	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage1_Tile3, TRUE
-	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage1_Tile4, TRUE
-	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage1_Tile5, FALSE
-	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage1_Tile6, TRUE
+BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesMostlyClosed:: @ 825D8A4
+	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage1_Tile0, 1
+	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage1_Tile1, 1
+	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage1_Tile2, 1
+	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage1_Tile3, 1
+	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage1_Tile4, 1
+	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage1_Tile5, 0
+	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage1_Tile6, 1
 	special DrawWholeMapView
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesLittleClosed::
-	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage2_Tile0, TRUE
-	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage2_Tile1, TRUE
-	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage2_Tile2, TRUE
-	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage2_Tile3, TRUE
-	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage2_Tile4, TRUE
-	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage2_Tile5, FALSE
-	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage2_Tile6, TRUE
+BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesLittleClosed:: @ 825D8E7
+	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage2_Tile0, 1
+	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage2_Tile1, 1
+	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage2_Tile2, 1
+	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage2_Tile3, 1
+	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage2_Tile4, 1
+	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage2_Tile5, 0
+	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage2_Tile6, 1
 	special DrawWholeMapView
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesOpen::
-	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage3_Tile0, TRUE
-	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage3_Tile1, TRUE
-	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage3_Tile2, TRUE
-	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage3_Tile3, TRUE
-	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage3_Tile4, TRUE
-	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage3_Tile5, FALSE
-	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage3_Tile6, TRUE
+BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesOpen:: @ 825D92A
+	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage3_Tile0, 1
+	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage3_Tile1, 1
+	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage3_Tile2, 1
+	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage3_Tile3, 1
+	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage3_Tile4, 1
+	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage3_Tile5, 0
+	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage3_Tile6, 1
 	special DrawWholeMapView
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesClosed::
-	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage0_Tile0, TRUE
-	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage0_Tile1, TRUE
-	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage0_Tile2, TRUE
-	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage0_Tile3, TRUE
-	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage0_Tile4, TRUE
-	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage0_Tile5, FALSE
-	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage0_Tile6, TRUE
+BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesClosed:: @ 825D96D
+	setmetatile 4, 1, METATILE_BattlePike_Curtain_Stage0_Tile0, 1
+	setmetatile 3, 2, METATILE_BattlePike_Curtain_Stage0_Tile1, 1
+	setmetatile 4, 2, METATILE_BattlePike_Curtain_Stage0_Tile2, 1
+	setmetatile 5, 2, METATILE_BattlePike_Curtain_Stage0_Tile3, 1
+	setmetatile 3, 3, METATILE_BattlePike_Curtain_Stage0_Tile4, 1
+	setmetatile 4, 3, METATILE_BattlePike_Curtain_Stage0_Tile5, 0
+	setmetatile 5, 3, METATILE_BattlePike_Curtain_Stage0_Tile6, 1
 	special DrawWholeMapView
 	return
 
-BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanUp:
+BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanUp: @ 825D9B0
 	walk_up
 	walk_up
 	step_end
 
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanDown:
+BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanDown: @ 825D9B3
 	walk_down
 	walk_down
 	step_end
 
-BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreToFullHealth:
+BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreToFullHealth: @ 825D9B6
 	.string "Welcome…\n"
 	.string "You must be commended for your luck…\p"
 	.string "Your POKéMON shall be restored\n"
 	.string "to full health…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge:
+BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge: @ 825DA13
 	.string "I urge you to enjoy the rest of your\n"
 	.string "Battle Choice challenge…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreOneMon:
+BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreOneMon: @ 825DA51
 	.string "Ah, you're a lucky one.\n"
 	.string "I'm in somewhat-good spirits now.\p"
 	.string "I will restore one of your POKéMON\n"
 	.string "to full health.$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell:
+BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell: @ 825DABE
 	.string "The best of luck to you.\n"
 	.string "Farewell.$"
 
 @ Seems there was a planned room type where the player could choose to battle and would be healed if they won
 @ Possibly replaced/superseded by the hard battle room, which is the same but the battle isnt optional
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Text_CareForBattleWillRestoreMons:
+BattleFrontier_BattlePikeRoomNormal_Text_CareForBattleWillRestoreMons: @ 825DAE1
 	.string "Excuse me…\p"
 	.string "Would you care for a battle?\n"
 	.string "I'll restore your POKéMON if you win.$"
 
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Text_NowShallWe:
+BattleFrontier_BattlePikeRoomNormal_Text_NowShallWe: @ 825DB2F
 	.string "Very well…\n"
 	.string "Now, shall we?$"
 
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Text_HowUnsportingOfYou:
+BattleFrontier_BattlePikeRoomNormal_Text_HowUnsportingOfYou: @ 825DB49
 	.string "I see…\n"
 	.string "How unsporting of you…$"
 
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreMonsAsPromised:
+BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreMonsAsPromised: @ 825DB67
 	.string "Magnificent…\p"
 	.string "As promised, I shall restore your\n"
 	.string "POKéMON to full health.$"
 
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell2:
+BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell2: @ 825DBAE
 	.string "The best of luck to you.\n"
 	.string "Farewell.$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_WatchOut:
+BattleFrontier_BattlePikeRoomNormal_Text_WatchOut: @ 825DBD1
 	.string "Oh, my!\p"
 	.string "Watch out!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop:
+BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop: @ 825DBE4
 	.string "Now, now!\n"
 	.string "KIRLIA, stop that!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop:
+BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop: @ 825DC01
 	.string "Now, now!\n"
 	.string "DUSCLOPS, stop that!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic:
+BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic: @ 825DC20
 	.string "KIRLIA used TOXIC!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis:
+BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis: @ 825DC33
 	.string "KIRLIA used HYPNOSIS!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave:
+BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave: @ 825DC49
 	.string "KIRLIA used THUNDER WAVE!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp:
+BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp: @ 825DC63
 	.string "KIRLIA used WILL-O-WISP!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp:
+BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp: @ 825DC7C
 	.string "DUSCLOPS used WILL-O-WISP!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam:
+BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam: @ 825DC97
 	.string "DUSCLOPS used ICE BEAM!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough:
+BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough: @ 825DCAF
 	.string "Look here!\n"
 	.string "That's quite enough!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia:
+BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia: @ 825DCCF
 	.string "I must apologize to you…\p"
 	.string "My KIRLIA has a TIMID nature…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops:
+BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops: @ 825DD06
 	.string "I must apologize to you…\p"
 	.string "My DUSCLOPS has a TIMID nature…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled:
+BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled: @ 825DD3F
 	.string "It attacks without warning if it is\n"
 	.string "startled by another person…\p"
 	.string "Are you and your POKéMON all right?$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ApologizeHopeMonsAreFine:
+BattleFrontier_BattlePikeRoomNormal_Text_ApologizeHopeMonsAreFine: @ 825DDA3
 	.string "I do apologize for what happened…\n"
 	.string "I do hope your POKéMON are fine.$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_Silence:
+BattleFrontier_BattlePikeRoomNormal_Text_Silence: @ 825DDE6
 	.string "… … … … … …\n"
 	.string "… … … … … …$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_BattleSomewhatToughTrainer:
+BattleFrontier_BattlePikeRoomNormal_Text_BattleSomewhatToughTrainer: @ 825DDFE
 	.string "Welcome…\p"
 	.string "Here, we will have you battle\n"
 	.string "a somewhat-tough TRAINER…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_RestoreToFullHealth:
+BattleFrontier_BattlePikeRoomNormal_Text_RestoreToFullHealth: @ 825DE3F
 	.string "How wonderful…\p"
 	.string "To honor your victory, your POKéMON\n"
 	.string "shall be restored to full health…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge2:
+BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge2: @ 825DE94
 	.string "I urge you to enjoy the rest of your\n"
 	.string "Battle Choice challenge…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen:
+BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen: @ 825DED2
 	.string "I am LUCY…\n"
 	.string "I am the law here…\l"
 	.string "For I am the PIKE QUEEN…\p"
@@ -773,23 +789,23 @@ BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen:
 	.string "…I'm not one for idle chatter.\n"
 	.string "Hurry. Come on…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_HopeYouDidntUseUpLuck:
+BattleFrontier_BattlePikeRoomNormal_Text_HopeYouDidntUseUpLuck: @ 825DF71
 	.string "Your luck…\n"
 	.string "I hope you didn't use it all up here…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_LucyShowMeFrontierPass:
+BattleFrontier_BattlePikeRoomNormal_Text_LucyShowMeFrontierPass: @ 825DFA2
 	.string "LUCY: … … … … … …\n"
 	.string "Show me your FRONTIER PASS…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ReceivedLuckSymbol:
+BattleFrontier_BattlePikeRoomNormal_Text_ReceivedLuckSymbol: @ 825DFD0
 	.string "The Luck Symbol was embossed on\n"
 	.string "the FRONTIER PASS!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_AllThereIsDisappear:
+BattleFrontier_BattlePikeRoomNormal_Text_AllThereIsDisappear: @ 825E003
 	.string "…That's all there is…\n"
 	.string "Disappear already…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_LucyYouAgain:
+BattleFrontier_BattlePikeRoomNormal_Text_LucyYouAgain: @ 825E02C
 	.string "LUCY: …You again…\p"
 	.string "… … … … … …\p"
 	.string "…I've trampled flowers and braved\n"
@@ -799,51 +815,51 @@ BattleFrontier_BattlePikeRoomNormal_Text_LucyYouAgain:
 	.string "… … … … … …\n"
 	.string "Fine… I'll do it…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_NowComeOn:
+BattleFrontier_BattlePikeRoomNormal_Text_NowComeOn: @ 825E0E8
 	.string "Now!\n"
 	.string "Come on!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_LucyFrontierPass:
+BattleFrontier_BattlePikeRoomNormal_Text_LucyFrontierPass: @ 825E0F6
 	.string "LUCY: … … … … … …\p"
 	.string "…FRONTIER PASS…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_LuckSymbolTookGoldenShine:
+BattleFrontier_BattlePikeRoomNormal_Text_LuckSymbolTookGoldenShine: @ 825E118
 	.string "The Luck Symbol took on\n"
 	.string "a golden shine!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_IWontForget:
+BattleFrontier_BattlePikeRoomNormal_Text_IWontForget: @ 825E140
 	.string "…You, I won't forget…\n"
 	.string "…Ever…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomNoHeal:
+BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomNoHeal: @ 825E15D
 	.string "I welcome you…\p"
 	.string "Giggle…\n"
 	.string "You seem to be bereft of luck…\p"
 	.string "If only you hadn't chosen this room,\n"
 	.string "your POKéMON could have been healed…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealOne:
+BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealOne: @ 825E1DD
 	.string "I welcome you…\p"
 	.string "Since you have chosen this room, I will\n"
 	.string "restore one POKéMON to full health…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealTwo:
+BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealTwo: @ 825E238
 	.string "I welcome you…\p"
 	.string "Since you have chosen this room, I will\n"
 	.string "restore two POKéMON to full health…$"
 
 @ Unused
-BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreAllMons:
+BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreAllMons: @ 825E293
 	.string "I welcome you…\p"
 	.string "Giggle…\n"
 	.string "You should thank your lucky stars…\p"
 	.string "Since you have chosen this room,\n"
 	.string "all your POKéMON will be restored…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ShallFetchOurMaster:
+BattleFrontier_BattlePikeRoomNormal_Text_ShallFetchOurMaster: @ 825E311
 	.string "I shall go fetch our master…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreTwoMons:
+BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreTwoMons: @ 825E32E
 	.string "Ah, you're a lucky one!\n"
 	.string "I'm in good spirits now.\p"
 	.string "I will restore two of your POKéMON\n"
