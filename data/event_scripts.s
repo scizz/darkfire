@@ -1057,3 +1057,235 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/ChandraVillage/scripts.inc"
+
+	.include "data/maps/ChandraVillage_PlayerHouse_1F/scripts.inc"
+
+	.include "data/maps/ChandraVillage_PlayerHouse_2F/scripts.inc"
+
+	.include "data/maps/ChandraVillage_TylerHouse_1F/scripts.inc"
+
+	.include "data/maps/ChandraVillage_TylerHouse_2F/scripts.inc"
+
+	.include "data/maps/SunriseTown/scripts.inc"
+
+	.include "data/maps/UnionCity/scripts.inc"
+
+	.include "data/maps/GreendaleVillage/scripts.inc"
+
+	.include "data/maps/AnheimTown/scripts.inc"
+
+	.include "data/maps/LaveriaCity/scripts.inc"
+
+	.include "data/maps/HighwindVillage/scripts.inc"
+
+	.include "data/maps/NorthstarCity/scripts.inc"
+
+	.include "data/maps/PinleafTown/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/Route10/scripts.inc"
+
+	.include "data/maps/Route11/scripts.inc"
+
+	.include "data/maps/ChandraVillage_Lab/scripts.inc"
+
+	.include "data/maps/SunriseTown_House1/scripts.inc"
+
+	.include "data/maps/SunriseTown_House2/scripts.inc"
+
+	.include "data/maps/SunriseTown_Hotel_1F/scripts.inc"
+
+	.include "data/maps/SunriseTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/SunriseTown_Mart/scripts.inc"
+
+	.include "data/maps/UnionCity_House1_1F/scripts.inc"
+
+	.include "data/maps/UnionCity_House1_2F/scripts.inc"
+
+	.include "data/maps/UnionCity_House1_3F/scripts.inc"
+
+	.include "data/maps/UnionCity_House2/scripts.inc"
+
+	.include "data/maps/UnionCity_House3_1F/scripts.inc"
+
+	.include "data/maps/UnionCity_House3_2F/scripts.inc"
+
+	.include "data/maps/UnionCity_GovOffice_1F/scripts.inc"
+
+	.include "data/maps/UnionCity_GovOffice_2F/scripts.inc"
+
+	.include "data/maps/UnionCity_GovOffice_3F/scripts.inc"
+
+	.include "data/maps/UnionCity_AbandonedMuseum/scripts.inc"
+
+	.include "data/maps/UnionCity_BikeShop/scripts.inc"
+
+	.include "data/maps/UnionCity_GameCorner/scripts.inc"
+
+	.include "data/maps/UnionCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/UnionCity_DepartmentStore_1F/scripts.inc"
+
+	.include "data/maps/UnionCity_DepartmentStore_2F/scripts.inc"
+
+	.include "data/maps/UnionCity_DepartmentStore_3F/scripts.inc"
+
+	.include "data/maps/UnionCity_DepartmentStore_4F/scripts.inc"
+
+	.include "data/maps/UnionCity_DepartmentStore_5F/scripts.inc"
+
+	.include "data/maps/UnionCity_DepartmentStoreElevator/scripts.inc"
+
+	.include "data/maps/GreendaleVillage_House1/scripts.inc"
+
+	.include "data/maps/GreendaleVillage_RoseHouse/scripts.inc"
+
+	.include "data/maps/GreendaleVillage_TrainerSchool/scripts.inc"
+
+	.include "data/maps/GreendaleVillage_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/GreendaleVillage_Mart/scripts.inc"
+
+	.include "data/maps/AnheimTown_House1/scripts.inc"
+
+	.include "data/maps/AnheimTown_House2/scripts.inc"
+
+	.include "data/maps/AnheimTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/AnheimTown_Mart/scripts.inc"
+
+	.include "data/maps/LaveriaCity_House1/scripts.inc"
+
+	.include "data/maps/LaveriaCity_House2/scripts.inc"
+
+	.include "data/maps/LaveriaCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/LaveriaCity_Mart/scripts.inc"
+
+	.include "data/maps/HighwindVillage_House1/scripts.inc"
+
+	.include "data/maps/HighwindVillage_House2/scripts.inc"
+
+	.include "data/maps/HighwindVillage_RangersLodge/scripts.inc"
+
+	.include "data/maps/HighwindVillage_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/HighwindVillage_Mart/scripts.inc"
+
+	.include "data/maps/NorthstarCity_House1/scripts.inc"
+
+	.include "data/maps/NorthstarCity_House2/scripts.inc"
+
+	.include "data/maps/NorthstarCity_House3/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Apartments/scripts.inc"
+
+	.include "data/maps/NorthstarCity_TrainerSchool/scripts.inc"
+
+	.include "data/maps/NorthstarCity_StorageFacility/scripts.inc"
+
+	.include "data/maps/NorthstarCity_ShippingCenter/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Tournament_1F/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Tournament_2F/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Tournament_3F/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Tournament_4F/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Lighthouse/scripts.inc"
+
+	.include "data/maps/NorthstarCity_TelescopeSea/scripts.inc"
+
+	.include "data/maps/NorthstarCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Mart/scripts.inc"
+
+	.include "data/maps/PinleafTown_House1/scripts.inc"
+
+	.include "data/maps/PinleafTown_House2/scripts.inc"
+
+	.include "data/maps/PinleafTown_House3/scripts.inc"
+
+	.include "data/maps/PinleafTown_House4/scripts.inc"
+
+	.include "data/maps/PinleafTown_House5/scripts.inc"
+
+	.include "data/maps/PinleafTown_FarmHouse/scripts.inc"
+
+	.include "data/maps/PinleafTown_StorageFacility/scripts.inc"
+
+	.include "data/maps/PinleafTown_FlowerShop/scripts.inc"
+
+	.include "data/maps/PinleafTown_Inn_1F/scripts.inc"
+
+	.include "data/maps/PinleafTown_Inn_2F/scripts.inc"
+
+	.include "data/maps/PinleafTown_Mart/scripts.inc"
+
+	.include "data/maps/AnheimForest/scripts.inc"
+
+	.include "data/maps/RockfallCave_1F/scripts.inc"
+
+	.include "data/maps/RockfallCave_B1F/scripts.inc"
+
+	.include "data/maps/SteepRavine/scripts.inc"
+
+	.include "data/maps/TamarokTunnels/scripts.inc"
+
+	.include "data/maps/TamarokPeak/scripts.inc"
+
+	.include "data/maps/PalaceOfIce_Entrance/scripts.inc"
+
+	.include "data/maps/PalaceOfIce_Inside/scripts.inc"
+
+	.include "data/maps/SnowdriftForest/scripts.inc"
+
+	.include "data/maps/ArcticBay/scripts.inc"
+
+	.include "data/maps/Route3_House1/scripts.inc"
+
+	.include "data/maps/Route4_PokemonDayCare/scripts.inc"
+
+	.include "data/maps/Route5_House1/scripts.inc"
+
+	.include "data/maps/Route9_StarterDome/scripts.inc"
+
+	.include "data/maps/AnheimForest_House1/scripts.inc"
+
+	.include "data/maps/MuddyUnderpass/scripts.inc"
+
+	.include "data/maps/LaveriaCity_Interlink/scripts.inc"
+
+	.include "data/maps/UnionCity_Interlink/scripts.inc"
+
+	.include "data/maps/NorthstarCity_Interlink/scripts.inc"
+
+	.include "data/maps/Underwater/scripts.inc"
+
+	.include "data/maps/MiraniaTown/scripts.inc"
+
+	.include "data/maps/Route31/scripts.inc"
+
+	.include "data/maps/NightmareHall/scripts.inc"

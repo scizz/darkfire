@@ -43,7 +43,8 @@
 #define MAP_UNDERWATER             (10 | (1 << 8))
 
 // Map Group 2
-#define MAP_ARCTIC_BAY (0 | (2 << 8))
+#define MAP_ARCTIC_BAY     (0 | (2 << 8))
+#define MAP_NIGHTMARE_HALL (1 | (2 << 8))
 
 // Map Group 3
 #define MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_1F (0 | (3 << 8))

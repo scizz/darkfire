@@ -2,10 +2,18 @@ ChandraVillage_MapScripts::
 	.byte 0
 
 ChandraVillage_Tyler_Debug::
-	givemon SPECIES_DRAGONITE, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_METAGROSS, 91, ITEM_NONE
-	givemon SPECIES_DITTO, 91, ITEM_NONE
-	givemon SPECIES_DARKRAI, 91, ITEM_NONE
+	lockall
+	givemon SPECIES_NUZLEAF, 77, ITEM_DRAGON_FANG
+	giveitem ITEM_MACH_BIKE, 1
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	addobject 16
+	hideobjectat 16, MAP_CHANDRA_VILLAGE
+	setfollower 16, 0x7E
+	updatefollowerpokemongraphic
+	showfollower
+	releaseall
 	end
 
 ChandraVillage_Hoenn_Girl::
@@ -96,7 +104,7 @@ ChandraVillage_Hoenn:
 
 ChandraVillage_Flowers:
 	.string "{COLOR}{RED}Chandra Village is best known for its\n"
-	.string "magical scent, from our flowers.\p"
+	.string "magical scent from the flowers.\p"
 	.string "In the summertime, we often receive\n"
 	.string "visits from Sunflora and Skiploom!$"
 

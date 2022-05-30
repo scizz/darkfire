@@ -288,7 +288,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_BULBASAUR",
       "x": 15,
       "y": 22,
       "elevation": 3,
@@ -301,7 +301,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_TREECKO",
       "x": 17,
       "y": 20,
       "elevation": 3,
@@ -314,7 +314,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_CHIKORITA",
       "x": 21,
       "y": 21,
       "elevation": 3,
@@ -327,7 +327,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_TORCHIC",
       "x": 12,
       "y": 12,
       "elevation": 3,
@@ -340,7 +340,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_CHARMANDER",
       "x": 12,
       "y": 10,
       "elevation": 3,
@@ -353,7 +353,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL",
       "x": 7,
       "y": 10,
       "elevation": 3,
@@ -366,7 +366,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_TOTODILE",
       "x": 20,
       "y": 10,
       "elevation": 3,
@@ -379,7 +379,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE",
       "x": 23,
       "y": 9,
       "elevation": 3,
@@ -392,7 +392,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_MUDKIP",
       "x": 28,
       "y": 10,
       "elevation": 3,

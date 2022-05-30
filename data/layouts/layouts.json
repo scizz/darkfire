@@ -5560,6 +5560,16 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/Route31/border.bin",
       "blockdata_filepath": "data/layouts/Route31/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTMARE_HALL",
+      "name": "NightmareHall_Layout",
+      "width": 27,
+      "height": 39,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontierRankingHall",
+      "border_filepath": "data/layouts/NightmareHall/border.bin",
+      "blockdata_filepath": "data/layouts/NightmareHall/map.bin"
     }
   ]
 }

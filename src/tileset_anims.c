@@ -25,6 +25,7 @@ static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Building(u16);
+static void TilesetAnim_Petalburg(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
 static void TilesetAnim_Slateport(u16);
@@ -67,6 +68,7 @@ static void QueueAnimTiles_Lavaridge_Lava(u16);
 static void QueueAnimTiles_EverGrande_Flowers(u16, u8);
 static void QueueAnimTiles_Pacifidlog_LogBridges(u8);
 static void QueueAnimTiles_Pacifidlog_WaterCurrents(u8);
+static void QueueAnimTiles_Petalburg_Chimney_Smoke(u16);
 static void QueueAnimTiles_Sootopolis_StormyWater(u16);
 static void QueueAnimTiles_Underwater_Seaweed(u8);
 static void QueueAnimTiles_Cave_Lava(u16);
@@ -724,19 +726,19 @@ static void QueueAnimTiles_General_Water(u16 timer)
 static void QueueAnimTiles_General_PondWaterEdge(u16 timer)
 {
     u16 i = timer % 2; 
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_PondWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(475)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_PondWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(475)), 1 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_General_PondWaterSide(u16 timer)
 {
     u16 i = timer % 8; 
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_PondWaterSide[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(476)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_PondWaterSide[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(476)), 1 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_General_PondWaterTop(u16 timer)
 {
     u16 i = timer % 8; 
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_PondWaterTop[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(477)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_PondWaterTop[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(477)), 1 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
@@ -755,7 +757,7 @@ void InitTilesetAnim_Petalburg(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = NULL;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Petalburg;
 }
 
 void InitTilesetAnim_Rustboro(void)
@@ -1003,6 +1005,12 @@ static void TilesetAnim_Pacifidlog(u16 timer)
         QueueAnimTiles_Pacifidlog_WaterCurrents(timer / 16);
 }
 
+static void TilesetAnim_Petalburg(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_Petalburg_Chimney_Smoke(timer >> 4);
+}
+
 static void TilesetAnim_Sootopolis(u16 timer)
 {
     if (timer % 16 == 0)
@@ -1052,6 +1060,12 @@ static void QueueAnimTiles_Pacifidlog_LogBridges(u8 timer)
 {
     u8 i = timer % ARRAY_COUNT(gTilesetAnims_Pacifidlog_LogBridges);
     AppendTilesetAnimToBuffer(gTilesetAnims_Pacifidlog_LogBridges[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 464)), 30 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Petalburg_Chimney_Smoke(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Chimney_Smoke);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Chimney_Smoke[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 374)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Underwater_Seaweed(u8 timer)

@@ -92,7 +92,8 @@
     "Underwater"
   ],
   "gMapGroup_DarkfireSpecialArea": [
-    "ArcticBay"
+    "ArcticBay",
+    "NightmareHall"
   ],
   "gMapGroup_IndoorChandra": [
     "ChandraVillage_PlayerHouse_1F",

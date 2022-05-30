@@ -30,13 +30,13 @@ contest_types := cool beauty cute smart tough
 ### Tilesets ###
 
 $(TILESETGFXDIR)/secondary/petalburg/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 159
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/rustboro/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 498
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/dewford/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 503
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/slateport/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 504
@@ -45,7 +45,7 @@ $(TILESETGFXDIR)/secondary/mauville/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 503
 
 $(TILESETGFXDIR)/secondary/lavaridge/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 450
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/fortree/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 493
@@ -175,10 +175,10 @@ $(TILESETGFXDIR)/secondary/inside_of_truck/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 62
 
 $(TILESETGFXDIR)/secondary/contest/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 430
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/lilycove_museum/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 431
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/lab/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 500
@@ -196,10 +196,10 @@ $(TILESETGFXDIR)/secondary/unused_2/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 150
 
 $(TILESETGFXDIR)/secondary/rustboro_gym/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 60
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/dewford_gym/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 61
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/lavaridge_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 54
@@ -211,13 +211,13 @@ $(TILESETGFXDIR)/secondary/fortree_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 61
 
 $(TILESETGFXDIR)/secondary/mossdeep_gym/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 82
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/sootopolis_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 484
 
 $(TILESETGFXDIR)/secondary/trick_house_puzzle/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 294
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/inside_ship/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 342
@@ -235,7 +235,7 @@ $(TILESETGFXDIR)/secondary/battle_pike/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 382
 
 $(TILESETGFXDIR)/secondary/mirage_tower/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 420
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/mossdeep_game_corner/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 95
@@ -250,7 +250,7 @@ $(TILESETGFXDIR)/secondary/navel_rock/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 420
 
 $(TILESETGFXDIR)/secondary/battle_frontier_ranking_hall/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 136
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/mystery_events_house/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 509

@@ -446,11 +446,6 @@ Route109_EventScript_Gwen::
 	msgbox Route109_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route109_EventScript_Carter::
-	trainerbattle_single TRAINER_CARTER, Route109_Text_CarterIntro, Route109_Text_CarterDefeated
-	msgbox Route109_Text_CarterPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route109_EventScript_Paul::
 	trainerbattle_double TRAINER_MEL_AND_PAUL, Route109_Text_PaulIntro, Route109_Text_PaulDefeated, Route109_Text_PaulNotEnoughPokemon
 	msgbox Route109_Text_PaulPostBattle, MSGBOX_AUTOCLOSE

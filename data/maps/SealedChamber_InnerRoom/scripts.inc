@@ -12,18 +12,14 @@ SealedChamber_InnerRoom_EventScript_BrailleBackWall:: @ 82391F8
 	goto_if_eq SealedChamber_InnerRoom_EventScript_NoEffect
 	fadeoutbgm 0
 	playse SE_TRUCK_MOVE
-	special DoSealedChamberShakingEffect1
 	waitstate
 	delay 40
-	special DoSealedChamberShakingEffect2
 	waitstate
 	playse SE_DOOR
 	delay 40
-	special DoSealedChamberShakingEffect2
 	waitstate
 	playse SE_DOOR
 	delay 40
-	special DoSealedChamberShakingEffect2
 	waitstate
 	playse SE_DOOR
 	delay 40

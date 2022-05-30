@@ -130,14 +130,14 @@
       "x": 14,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_CHANDRA_VILLAGE",
+      "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "dest_warp_id": 0
     },
     {
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "dest_map": "MAP_CHANDRA_VILLAGE",
       "dest_warp_id": 1
     },
     {

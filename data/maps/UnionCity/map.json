@@ -47,7 +47,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_EEVEE",
       "x": 83,
       "y": 32,
       "elevation": 3,
@@ -86,7 +86,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_TENTACOOL",
       "x": 95,
       "y": 39,
       "elevation": 3,
@@ -112,7 +112,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FIRE_CUSHION",
+      "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
       "x": 61,
       "y": 16,
       "elevation": 3,
@@ -177,7 +177,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FIRE_CUSHION",
+      "graphics_id": "OBJ_EVENT_GFX_TAILLOW",
       "x": 61,
       "y": 44,
       "elevation": 3,
@@ -216,7 +216,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
+      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_FOLLOWER",
       "x": 67,
       "y": 48,
       "elevation": 3,
@@ -281,7 +281,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 55,
       "y": 15,
       "elevation": 3,
@@ -320,7 +320,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FIRE_CUSHION",
+      "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
       "x": 50,
       "y": 47,
       "elevation": 3,
@@ -333,7 +333,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
       "x": 44,
       "y": 49,
       "elevation": 3,
@@ -372,7 +372,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FIRE_CUSHION",
+      "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
       "x": 43,
       "y": 27,
       "elevation": 3,
@@ -489,7 +489,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_RATTATA",
       "x": 10,
       "y": 37,
       "elevation": 3,

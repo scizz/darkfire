@@ -78,11 +78,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
+      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_FOLLOWER",
       "x": 15,
       "y": 30,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -156,7 +156,7 @@
       "flag": "FLAG_ITEM_ROUTE_2_POTION"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WATER_CUSHION",
+      "graphics_id": "OBJ_EVENT_GFX_TENTACOOL",
       "x": 34,
       "y": 3,
       "elevation": 3,
