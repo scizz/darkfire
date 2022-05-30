@@ -3,7 +3,9 @@ ChandraVillage_MapScripts::
 
 ChandraVillage_Tyler_Debug::
 	lockall
-	givemon SPECIES_NUZLEAF, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_TOTODILE, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_MACHOP, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_SABLEYE, 77, ITEM_DRAGON_FANG
 	giveitem ITEM_MACH_BIKE, 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
