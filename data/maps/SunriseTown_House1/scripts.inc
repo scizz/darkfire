@@ -27,7 +27,7 @@ SunriseTown_House1_Little_Girl_Two::
 	end
 
 SunriseTown_House1_Text_Man:
-	.string "{COLOR}{BLUE}Have you seen the news today? Have you?\n"
+	.string "{COLOR}{BLUE}Have you seen the news? Have you?\n"
 	.string "Just disastrous!\p"
 	.string "Underground battling? Hurting Pokémon?\n"
 	.string "Just terrible!$"
