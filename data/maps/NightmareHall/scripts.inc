@@ -69,8 +69,8 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	applymovement 7, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	msgbox NightmareHall_Text_Wartortle, MSGBOX_AUTOCLOSE
-	playmoncry SPECIES_WARTORTLE, 0
+	msgbox NightmareHall_Text_Sandslash, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_SANDSLASH, 0
 	waitmoncry
 	applymovement 6, Common_Movement_WalkRightFaster
 	applymovement 4, Common_Movement_WalkLeftFaster
@@ -99,7 +99,7 @@ NightmareHall_CutSceneTrigger::
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	playmoncry SPECIES_WARTORTLE, 1
+	playmoncry SPECIES_SANDSLASH, 1
 	waitmoncry
 	applymovement 7, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -107,7 +107,7 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	applymovement 7, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	msgbox NightmareHall_Text_Wartortle_Hurt, MSGBOX_AUTOCLOSE
+	msgbox NightmareHall_Text_Sandslash_Hurt, MSGBOX_AUTOCLOSE
 	delay 30
 	applymovement 3, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -123,7 +123,7 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	playse SE_M_EMBER
 	waitse
-	playmoncry SPECIES_WARTORTLE, 1
+	playmoncry SPECIES_SANDSLASH, 1
 	waitmoncry
 	delay 30
 	setobjectxy 6, 0, 0
@@ -136,7 +136,7 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	applymovement 7, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	msgbox NightmareHall_Text_Wartortle_Fainted, MSGBOX_AUTOCLOSE
+	msgbox NightmareHall_Text_Sandslash_Fainted, MSGBOX_AUTOCLOSE
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
@@ -353,24 +353,24 @@ NightmareHall_Text_Spectate:
 NightmareHall_Text_YesBossTwo:
 	.string "{COLOR}{BLUE}Yes, boss…$"
 
-NightmareHall_Text_Wartortle:
-	.string "{COLOR}{BLUE}Wartortle!\n"
+NightmareHall_Text_Sandslash:
+	.string "{COLOR}{BLUE}Sandslash!\n"
 	.string "Use Leer!$"
 
 NightmareHall_Text_Houndour:
 	.string "{COLOR}{BLUE}Houndour!\n"
 	.string "Use Ember!$"
 
-NightmareHall_Text_Wartortle_Hurt:
-	.string "{COLOR}{BLUE}Wartortle!\n"
+NightmareHall_Text_Sandslash_Hurt:
+	.string "{COLOR}{BLUE}Sandslash!\n"
 	.string "No!$"
 
 NightmareHall_Text_Houndour_Final:
 	.string "{COLOR}{BLUE}Houndour!\n"
 	.string "It's burned! Finish it!$"
 
-NightmareHall_Text_Wartortle_Fainted:
-	.string "{COLOR}{BLUE}No! My Wartortle!\n"
+NightmareHall_Text_Sandslash_Fainted:
+	.string "{COLOR}{BLUE}No! My Sandslash!\n"
 	.string "How did you defeat it with Ember?!\p"
 	.string "You… You've burned it to ashes!\n"
 	.string "It won't go back in its Poké Ball!\p"
