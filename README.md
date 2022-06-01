@@ -17,6 +17,6 @@ The project is currently being developed by [Karl](https://github.com/scizz) and
 
 ## Can I contribute to Pokémon Darkfire?
 
-Yes! Contributions are welcome via Pull Requests and they will be reviewed by Karl. Alternatively, you are welcome to provide feedback in the Pokémon Darkfire [Discord Server](https://discord.com/invite/dCJ4aHurKd)
+Yes! Contributions are welcome via Pull Requests and they will be reviewed by Karl. Alternatively, you are welcome to provide feedback in the Pokémon Darkfire [Discord Server](https://discord.com/invite/dCJ4aHurKd).
 
 [Click here to join the Pokémon Darkfire Discord Server!](https://discord.com/invite/dCJ4aHurKd)

@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 19,
+      "x": 24,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -107,7 +107,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 20,
+      "x": 19,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -120,7 +120,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
-      "x": 19,
+      "x": 20,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -162,7 +162,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NightmareHall_CutSceneTrigger"
     },
     {
       "type": "trigger",
@@ -171,7 +171,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NightmareHall_CutSceneTrigger"
     },
     {
       "type": "trigger",
@@ -180,7 +180,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NightmareHall_CutSceneTrigger"
     }
   ],
   "bg_events": [
