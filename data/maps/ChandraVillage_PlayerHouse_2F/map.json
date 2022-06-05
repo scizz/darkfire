@@ -90,6 +90,15 @@
       "var": "VAR_STORYLINE_STATE",
       "var_value": "2",
       "script": "ChandraVillage_PlayerHouse_2F_Storyline_State_2"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "3",
+      "script": "ChandraVillage_PlayerHouse_2F_Storyline_State_2"
     }
   ],
   "bg_events": [

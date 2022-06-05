@@ -17,7 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
       "x": 6,
-      "y": 4,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -45,7 +45,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "2",
+      "script": "ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes"
+    }
   ],
   "bg_events": [
 
