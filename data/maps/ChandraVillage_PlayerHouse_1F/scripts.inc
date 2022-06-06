@@ -17,6 +17,7 @@ ChandraVillage_PlayerHouse_1F_Mother::
 	waitfanfare
 	msgbox ChandraVillage_PlayerHouse_1F_Text_EquipShoes, MSGBOX_AUTOCLOSE
 	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_STORYLINE_STATE, 3
 	releaseall
 	end
@@ -85,6 +86,7 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	applymovement LOCALID_MOM, WalkURRUFL
 	waitmovement 0
 	setvar VAR_STORYLINE_STATE, 3
+	setflag FLAG_HIDE_MAP_NAME_POPUP
 	releaseall
 	end
 
