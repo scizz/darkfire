@@ -692,8 +692,8 @@
 #define FLAG_STARTER_DOME_POTION            0x289
 #define FLAG_HIDE_CHANDRA_VILLAGE_PLAYERS_BEDROOM_MOM                   0x28A 
 #define FLAG_HIDE_CHANDRA_VILLAGE_TYLER_1   0x28B
+#define FLAG_HIDE_CHANDRA_VILLAGE_TYLER_2   0x28C
 
-#define FLAG_UNUSED_0x28C                   0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D                   0x28D // Unused Flag
 #define FLAG_UNUSED_0x28E                   0x28E // Unused Flag
 #define FLAG_UNUSED_0x28F                   0x28F // Unused Flag

@@ -166,7 +166,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_CHANDRA_VILLAGE_TYLER_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
@@ -272,7 +272,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "4",
+      "script": "ChandraVillage_Storyline_State_4"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "4",
+      "script": "ChandraVillage_Storyline_State_4"
+    }
   ],
   "bg_events": [
     {

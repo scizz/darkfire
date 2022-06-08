@@ -1,4 +1,6 @@
 .set LOCALID_TYLER, 10
+.set LOCALID_TYLER_LAB, 11
+.set LOCALID_PROF, 12
 
 ChandraVillage_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_OnFrame
@@ -135,6 +137,95 @@ ChandraVillage_Facility_Sign::
 	msgbox ChandraVillage_Text_Facility, MSGBOX_SIGN
 	end
 
+ChandraVillage_Storyline_State_4::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, WU2FL
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_ButProf, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_TylerWithout, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
+	delay 10
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_Player, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_WontBeAlone, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PROF, WDFR
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
+	waitmovement 0
+	delay 30
+	msgbox ChandraVillage_Storyline_State_4_WillYouHelp, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq ChandraVillage_Storyline_State_4_Yes
+	goto ChandraVillage_Storyline_State_4_No
+	end
+
+ChandraVillage_Storyline_State_4_Yes::
+	closemessage
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_ThatsTheSpirit, MSGBOX_AUTOCLOSE
+	goto ChandraVillage_Storyline_State_4_Part_2
+	end
+
+ChandraVillage_Storyline_State_4_No::
+	closemessage
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_VeryFunny, MSGBOX_AUTOCLOSE
+	goto ChandraVillage_Storyline_State_4_Part_2
+	end
+
+ChandraVillage_Storyline_State_4_Part_2::
+	delay 30
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	msgbox ChandraVillage_Storyline_State_4_WeWillHelp, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PROF, WUFR
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_VeryWell, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_WontLetYouDown, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_PlayerLetsShow, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PROF, WDFR
+	waitmovement 0
+	msgbox ChandraVillage_Storyline_State_4_FollowTyler, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_TYLER_LAB, WLFU
+	waitmovement 0
+	opendoor 39, 6
+	waitdooranim
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_TYLER_LAB
+	closedoor 39, 6
+	waitdooranim
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_TYLER_2
+	setvar VAR_STORYLINE_STATE, 5
+	releaseall
+	end
+
 WalkL3:
 	walk_left
 	walk_left
@@ -154,6 +245,27 @@ RunR3D5R3D:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_down
+	step_end
+
+WU2FL:
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+WDFR:
+	walk_down
+	face_right
+	step_end
+
+WUFR:
+	walk_up
+	face_right
+	step_end
+
+WLFU:
+	walk_left
+	face_up
 	step_end
 
 ChandraVillage_Text_TylerIntro_Player:
@@ -260,3 +372,59 @@ ChandraVillage_Joker_Gift:
 ChandraVillage_Joker_End:
 	.string "{COLOR}{BLUE}That's it!\n"
 	.string "I'm all outta jokes!$"
+
+ChandraVillage_Storyline_State_4_ButProf:
+	.string "{COLOR}{BLUE}But, Professor Hawthorne, if you\n"
+	.string "don't let us in there, the Rattata\l"
+	.string "will destroy your research notes!$"
+
+ChandraVillage_Storyline_State_4_TylerWithout:
+	.string "Tyler, without your own Pokémon I\n"
+	.string "have no other choice but to say no…\p"
+	.string "It's far too dangerous to let you\n"
+	.string "in there on your own.$"
+
+ChandraVillage_Storyline_State_4_Player:
+	.string "{COLOR}{BLUE}{PLAYER}!$"
+
+ChandraVillage_Storyline_State_4_WontBeAlone:
+	.string "{COLOR}{BLUE}Professor Hawthorne, I won't be alone.\n"
+	.string "{PLAYER} is here to help, too!$"
+
+ChandraVillage_Storyline_State_4_WillYouHelp:
+	.string "…\p"
+	.string "{PLAYER}…\n"
+	.string "Will you help Tyler with the Rattata?$"
+
+ChandraVillage_Storyline_State_4_ThatsTheSpirit:
+	.string "{COLOR}{BLUE}That's the spirit, {PLAYER}!$"
+
+ChandraVillage_Storyline_State_4_VeryFunny:
+	.string "{COLOR}{BLUE}Very funny, {PLAYER}!$"
+
+ChandraVillage_Storyline_State_4_WeWillHelp:
+	.string "{COLOR}{BLUE}Professor, we will help.\n"
+	.string "We won't let you down!$"
+
+ChandraVillage_Storyline_State_4_VeryWell:
+	.string "Very well.\n"
+	.string "Both of you be very careful.\p"
+	.string "I have left two Pokémon inside the\n"
+	.string "facility outside of their Poké Balls.\p"
+	.string "If you can find a way to tame them\n"
+	.string "and defeat the wild Rattata, I will\l"
+	.string "consider both of you Pokémon Trainers.$"
+
+ChandraVillage_Storyline_State_4_WontLetYouDown:
+	.string "{COLOR}{BLUE}We won't let you down, Professor!$"
+
+ChandraVillage_Storyline_State_4_PlayerLetsShow:
+	.string "{COLOR}{BLUE}{PLAYER}!\p"
+	.string "Let's show the Professor what we're\n"
+	.string "made of!$"
+
+ChandraVillage_Storyline_State_4_FollowTyler:
+	.string "{PLAYER}…\p"
+	.string "Follow Tyler and pick a Pokémon to\n"
+	.string "fight with.\p"
+	.string "Let me know when you're both done.$"
