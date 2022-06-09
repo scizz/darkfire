@@ -42,27 +42,27 @@ static const union AnimCmd sAnim_QuintyPlumpGoSouth[] =
 
 static const union AnimCmd sAnim_QuintyPlumpGoNorth[] =
 {
-    ANIMCMD_FRAME(4, 8),
+    ANIMCMD_FRAME(5, 8),
     ANIMCMD_FRAME(1, 8),
-    ANIMCMD_FRAME(4, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 8, .hFlip = TRUE),
     ANIMCMD_FRAME(1, 8),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoWest[] =
 {
-    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_FRAME(7, 8),
     ANIMCMD_FRAME(2, 8),
-    ANIMCMD_FRAME(6, 8),
+    ANIMCMD_FRAME(8, 8),
     ANIMCMD_FRAME(2, 8),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoEast[] =
 {
-    ANIMCMD_FRAME(5, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(7, 8, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 8, .hFlip = TRUE),
-    ANIMCMD_FRAME(6, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 8, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 8, .hFlip = TRUE),
     ANIMCMD_JUMP(0),
 };
@@ -78,27 +78,27 @@ static const union AnimCmd sAnim_QuintyPlumpGoFastSouth[] =
 
 static const union AnimCmd sAnim_QuintyPlumpGoFastNorth[] =
 {
-    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_FRAME(5, 4),
     ANIMCMD_FRAME(1, 4),
-    ANIMCMD_FRAME(4, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 4, .hFlip = TRUE),
     ANIMCMD_FRAME(1, 4),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoFastWest[] =
 {
-    ANIMCMD_FRAME(5, 4),
+    ANIMCMD_FRAME(7, 4),
     ANIMCMD_FRAME(2, 4),
-    ANIMCMD_FRAME(6, 4),
+    ANIMCMD_FRAME(8, 4),
     ANIMCMD_FRAME(2, 4),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoFastEast[] =
 {
-    ANIMCMD_FRAME(5, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(7, 4, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 4, .hFlip = TRUE),
-    ANIMCMD_FRAME(6, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 4, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 4, .hFlip = TRUE),
     ANIMCMD_JUMP(0),
 };
@@ -114,27 +114,27 @@ static const union AnimCmd sAnim_QuintyPlumpGoFasterSouth[] =
 
 static const union AnimCmd sAnim_QuintyPlumpGoFasterNorth[] =
 {
-    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_FRAME(5, 2),
     ANIMCMD_FRAME(1, 2),
-    ANIMCMD_FRAME(4, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 2, .hFlip = TRUE),
     ANIMCMD_FRAME(1, 2),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoFasterWest[] =
 {
-    ANIMCMD_FRAME(5, 2),
+    ANIMCMD_FRAME(7, 2),
     ANIMCMD_FRAME(2, 2),
-    ANIMCMD_FRAME(6, 2),
+    ANIMCMD_FRAME(8, 2),
     ANIMCMD_FRAME(2, 2),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoFasterEast[] =
 {
-    ANIMCMD_FRAME(5, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(7, 2, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 2, .hFlip = TRUE),
-    ANIMCMD_FRAME(6, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 2, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 2, .hFlip = TRUE),
     ANIMCMD_JUMP(0),
 };
@@ -150,27 +150,27 @@ static const union AnimCmd sAnim_QuintyPlumpGoFastestSouth[] =
 
 static const union AnimCmd sAnim_QuintyPlumpGoFastestNorth[] =
 {
-    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(5, 1),
     ANIMCMD_FRAME(1, 1),
-    ANIMCMD_FRAME(4, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 1, .hFlip = TRUE),
     ANIMCMD_FRAME(1, 1),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoFastestWest[] =
 {
-    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(7, 1),
     ANIMCMD_FRAME(2, 1),
-    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_FRAME(8, 1),
     ANIMCMD_FRAME(2, 1),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_QuintyPlumpGoFastestEast[] =
 {
-    ANIMCMD_FRAME(5, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(7, 1, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 1, .hFlip = TRUE),
-    ANIMCMD_FRAME(6, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 1, .hFlip = TRUE),
     ANIMCMD_FRAME(2, 1, .hFlip = TRUE),
     ANIMCMD_JUMP(0),
 };
