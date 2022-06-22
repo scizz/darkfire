@@ -1,3 +1,10 @@
+.set LOCALID_TYLER_LAB, 1
+.set LOCALID_PROF, 3
+.set LOCALID_BALL_EEVEE, 4
+.set LOCALID_BALL_PIKACHU, 5
+.set LOCALID_EEVEE, 6
+.set LOCALID_PIKACHU, 7
+
 ChandraVillage_Lab_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_Lab_OnFrame
 	.byte 0
@@ -54,6 +61,210 @@ ChandraVillage_Lab_TryAgain::
 	release
 	end
 
+ChandraVillage_Lab_Pikachu::
+	lockall
+	showmonpic SPECIES_PIKACHU, 10, 3
+	playmoncry SPECIES_PIKACHU, 0
+	waitmoncry
+	msgbox ChandraVillage_Lab_Pikachu_Text_PickPikachu, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ChandraVillage_Lab_Pikachu_Yes
+	hidemonpic
+	msgbox ChandraVillage_Lab_Text_ChooseCarefully, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ChandraVillage_Lab_Pikachu_Yes::
+	hidemonpic
+	msgbox ChandraVillage_Lab_Pikachu_Yes_Text_ThrowPokeBall, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceSlowUp
+	call ChandraVillage_Lab_Catch_Pikachu
+	givemon SPECIES_PIKACHU, 5, ITEM_ORAN_BERRY
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox ChandraVillage_Lab_Pikachu_Yes_Text_ReceivedPikachu, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_SYS_POKEMON_GET
+	msgbox ChandraVillage_Lab_Pikachu_Yes_Text_NicknamePikachu, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ChandraVillage_Lab_Nickname_Pikachu
+	closemessage
+	goto ChandraVillage_Lab_Pikachu_Caught
+
+ChandraVillage_Lab_Pikachu_Caught::
+	delay 10
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, WR5
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox ChandraVillage_Lab_Pikachu_Yes_Congratulations, MSGBOX_DEFAULT
+	closemessage
+	goto ChandraVillage_Lab_Tyler_Pick_Eevee
+	end
+
+ChandraVillage_Lab_Eevee::
+	lockall
+	showmonpic SPECIES_EEVEE, 10, 3
+	playmoncry SPECIES_EEVEE, 0
+	waitmoncry
+	msgbox ChandraVillage_Lab_Eevee_Text_PickEevee, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ChandraVillage_Lab_Eevee_Yes
+	hidemonpic
+	msgbox ChandraVillage_Lab_Text_ChooseCarefully, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ChandraVillage_Lab_Eevee_Yes::
+	hidemonpic
+	msgbox ChandraVillage_Lab_Eevee_Yes_Text_ThrowPokeBall, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceSlowUp
+	call ChandraVillage_Lab_Catch_Eevee
+	givemon SPECIES_EEVEE, 5, ITEM_ORAN_BERRY
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox ChandraVillage_Lab_Eevee_Yes_Text_ReceivedEevee, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_SYS_POKEMON_GET
+	msgbox ChandraVillage_Lab_Eevee_Yes_Text_NicknameEevee, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ChandraVillage_Lab_Nickname_Eevee
+	closemessage
+	goto ChandraVillage_Lab_Eevee_Caught
+
+ChandraVillage_Lab_Eevee_Caught::
+	delay 10
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, WL2UL2
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox ChandraVillage_Lab_Eevee_Yes_Congratulations, MSGBOX_DEFAULT
+	closemessage
+	goto ChandraVillage_Lab_Tyler_Pick_Pikachu
+	end
+
+ChandraVillage_Lab_Nickname_Eevee::
+	call Common_EventScript_NameReceivedPartyMon
+	goto ChandraVillage_Lab_Eevee_Caught
+	end
+
+ChandraVillage_Lab_Nickname_Pikachu::
+	call Common_EventScript_NameReceivedPartyMon
+	goto ChandraVillage_Lab_Pikachu_Caught
+	end
+
+ChandraVillage_Lab_Tyler_Pick_Eevee::
+	applymovement LOCALID_TYLER_LAB, WL6UL4
+	applymovement OBJ_EVENT_ID_PLAYER, WDL6UL3
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox ChandraVillage_Lab_Tyler_Text_GoPokeBall, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
+	call ChandraVillage_Lab_Catch_Eevee
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedEevee, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	end
+
+ChandraVillage_Lab_Tyler_Pick_Pikachu::
+	applymovement LOCALID_TYLER_LAB, WR6DR3U
+	applymovement OBJ_EVENT_ID_PLAYER, WR7DR3FU
+	waitmovement 0
+	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox ChandraVillage_Lab_Tyler_Text_GoPokeBall, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
+	call ChandraVillage_Lab_Catch_Pikachu
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedPikachu, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	end
+
+ChandraVillage_Lab_Catch_Pikachu::
+	playse SE_BALL_THROW
+	waitse
+	waitmovement 0
+	delay 10
+	clearflag FLAG_HIDE_CHANDRA_VILLAGE_POKE_BALL_2
+	addobject LOCALID_BALL_PIKACHU
+	removeobject LOCALID_PIKACHU
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_PIKACHU
+	applymovement LOCALID_BALL_PIKACHU, BallBounce
+	waitmovement 0
+	playse SE_BALL_BOUNCE_2
+	waitse
+	applymovement LOCALID_BALL_PIKACHU, BallBounce
+	waitmovement 0
+	playse SE_BALL_BOUNCE_3
+	waitse
+	applymovement LOCALID_BALL_PIKACHU, BallBounce
+	waitmovement 0
+	playse SE_BALL_BOUNCE_4
+	waitse
+	delay 60
+	removeobject LOCALID_BALL_PIKACHU
+	return
+
+ChandraVillage_Lab_Catch_Eevee::
+	playse SE_BALL_THROW
+	waitse
+	waitmovement 0
+	delay 10
+	clearflag FLAG_HIDE_CHANDRA_VILLAGE_POKE_BALL_1
+	addobject LOCALID_BALL_EEVEE
+	removeobject LOCALID_EEVEE
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_EEVEE
+	applymovement LOCALID_BALL_EEVEE, BallBounce
+	waitmovement 0
+	playse SE_BALL_BOUNCE_2
+	waitse
+	applymovement LOCALID_BALL_EEVEE, BallBounce
+	waitmovement 0
+	playse SE_BALL_BOUNCE_3
+	waitse
+	applymovement LOCALID_BALL_EEVEE, BallBounce
+	waitmovement 0
+	playse SE_BALL_BOUNCE_4
+	waitse
+	delay 60
+	removeobject LOCALID_BALL_EEVEE
+	return
+
 ChandraVillage_Lab_Aide::
 	goto_if_set FLAG_SYS_POKEDEX_GET, ChandraVillage_Lab_Aide_Dex
 	msgbox ChandraVillage_Lab_Text_Aide, MSGBOX_NPC
@@ -84,10 +295,83 @@ WR4:
 	walk_right
 	step_end
 
+WL2UL2:
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
+WR5:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WL6UL4:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WDL6UL3:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WR6DR3U:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+WR7DR3FU:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	face_up
+	step_end
+
 ChandraVillage_Lab_Text_ListenUp:
-	.string "{COLOR}{BLUE}Okay, {PLAYER}, listen up!\p"
+	.string "{COLOR}{BLUE}OK, {PLAYER}, listen up!\p"
 	.string "Professor Hawthorne left a couple of\n"
-	.string "Pokémon at the back of the Lab.\p"
+	.string "Pokémon at the back of the lab.\p"
 	.string "They look pretty tame to me.\n"
 	.string "Let's go check them out!$"
 
@@ -97,7 +381,7 @@ ChandraVillage_Lab_Text_Hmm:
 ChandraVillage_Lab_Text_DoYouThink:
 	.string "{COLOR}{BLUE}Do you think these Pokémon want to sit\n"
 	.string "around an old man all day, watching\l"
-	.string "him while he writes boring lab-notes?\p"
+	.string "him while he writes boring lab notes?\p"
 	.string "Tch… Mom once made me spend time\n"
 	.string "with Professor Hawthorne.\l"
 	.string "I'd rather watch paint dry!\p"
@@ -108,7 +392,7 @@ ChandraVillage_Lab_Text_DoYouThink:
 	.string "Here, take one of these Poké Balls…$"
 
 ChandraVillage_Lab_Text_DontHoldInHand:
-	.string "{COLOR}{BLUE}No! Don't put it in your bag!\n"
+	.string "{COLOR}{BLUE}No! Don't put it in your Bag!\n"
 	.string "Take it out and hold it in your hand.\p"
 	.string "We're going to catch these Pokémon\n"
 	.string "and help get rid of this infestation!\p"
@@ -119,16 +403,72 @@ ChandraVillage_Lab_Text_DontHoldInHand:
 	.string "chance the Professor will give us to\l"
 	.string "prove we can be Pokémon Trainers!\p"
 	.string "My advice is to creep up slowly and\n"
-	.string "not spook them.\p"
+	.string "try not to spook them.\p"
 	.string "Pick a Pokémon, {PLAYER}!$"
 
 ChandraVillage_Lab_Text_TryAgain:
-	.string "{COLOR}{BLUE}It's okay, {PLAYER}…\n"
+	.string "{COLOR}{BLUE}It's OK, {PLAYER}…\n"
 	.string "Let's try this again!$"
 
 ChandraVillage_Lab_Text_BattleThePokemon:
 	.string "{COLOR}{BLUE}Battle the Pokémon and show me what\n"
 	.string "you're made of!$"
+
+ChandraVillage_Lab_Eevee_Text_PickEevee:
+	.string "Do you want the Normal Evolution\n"
+	.string "Pokémon, Eevee?$"
+
+ChandraVillage_Lab_Pikachu_Text_PickPikachu:
+	.string "Do you want the Electric Mouse\n"
+	.string "Pokémon, Pikachu?$"
+
+ChandraVillage_Lab_Text_ChooseCarefully:
+	.string "Take your time choosing a Pokémon.\n"
+	.string "Your first Pokémon is important.$"
+
+ChandraVillage_Lab_Eevee_Yes_Text_ThrowPokeBall:
+	.string "{PLAYER} threw a Poké Ball at Eevee.$"
+
+ChandraVillage_Lab_Pikachu_Yes_Text_ThrowPokeBall:
+	.string "{PLAYER} threw a Poké Ball at Pikachu.$"
+
+ChandraVillage_Lab_Eevee_Yes_Text_ReceivedEevee:
+	.string "Gotcha!\n"
+	.string "{PLAYER} caught Eevee!$"
+
+ChandraVillage_Lab_Pikachu_Yes_Text_ReceivedPikachu:
+	.string "Gotcha!\n"
+	.string "{PLAYER} caught Pikachu!$"
+
+ChandraVillage_Lab_Eevee_Yes_Text_NicknameEevee:
+	.string "Would you like to give a nickname to\n"
+	.string "Eevee?$"
+
+ChandraVillage_Lab_Pikachu_Yes_Text_NicknamePikachu:
+	.string "Would you like to give a nickname to\n"
+	.string "Pikachu?$"
+
+ChandraVillage_Lab_Eevee_Yes_Congratulations:
+	.string "{COLOR}{BLUE}Good job, {PLAYER}!\n"
+	.string "Eevee is a great choice!\p"
+	.string "OK… That only leaves Pikachu to catch…\n"
+	.string "Come on, {PLAYER}!$"
+
+ChandraVillage_Lab_Pikachu_Yes_Congratulations:
+	.string "{COLOR}{BLUE}Good job, {PLAYER}!\n"
+	.string "Pikachu is a great choice!\p"
+	.string "OK… That only leaves Eevee to catch…\n"
+	.string "Come on, {PLAYER}!$"
+
+ChandraVillage_Lab_Tyler_Text_GoPokeBall:
+	.string "{COLOR}{BLUE}Go! Poke Ball!\n"
+	.string "Do your thing!$"
+
+ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedPikachu:
+	.string "Tyler caught Pikachu!$"
+
+ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedEevee:
+	.string "Tyler caught Eevee!$"
 
 ChandraVillage_Lab_Text_Aide:
 	.string "Pfft… The Professor is such a wimp.\n"
@@ -136,4 +476,4 @@ ChandraVillage_Lab_Text_Aide:
 
 ChandraVillage_Lab_Text_Aide_Dex:
 	.string "You saved the Professor from Rattata?\n"
-	.string "You want a medal? He's a wimp.$"
+	.string "OK? You want a medal? He's a wimp.$"
