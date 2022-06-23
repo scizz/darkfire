@@ -13,7 +13,11 @@ Pokémon Darkfire is a former binary ROM hack of Pokémon Emerald. It is current
 
 ## Who maintains the project?
 
-The project is currently being developed by [Karl](https://github.com/scizz) and [Ray](https://github.com/RayMav3rick), with general support from [WiserVisor](https://github.com/WiserVisor)
+The project is currently being developed by [Karl](https://github.com/scizz) and [Ray](https://github.com/RayMav3rick), with general support from [WiserVisor](https://github.com/WiserVisor).
+
+## How to Build?
+
+There is currently no stable release available to build. However, you *can* play our original project at [PokeCommunity](https://www.pokecommunity.com/showthread.php?t=421395), if you wish.
 
 ## Can I contribute to Pokémon Darkfire?
 
