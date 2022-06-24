@@ -2697,12 +2697,12 @@ bool8 DexNavTryMakeShinyMon(void)
         shinyRate += searchLevel - 200;
         searchLevel = 200;
     }
-    else if (searchLevel > 100)
+    if (searchLevel > 100)
     {
         shinyRate += (searchLevel * 2) - 200;
         searchLevel = 100;
     }
-    else if (searchLevel > 0)
+    if (searchLevel > 0)
     {
         shinyRate += searchLevel * 6;
     }
