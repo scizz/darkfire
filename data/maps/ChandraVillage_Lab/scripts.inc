@@ -90,6 +90,7 @@ ChandraVillage_Lab_Pikachu_Yes::
 	goto_if_eq ChandraVillage_Lab_Nickname_Pikachu
 	closemessage
 	goto ChandraVillage_Lab_Pikachu_Caught
+	end
 
 ChandraVillage_Lab_Pikachu_Caught::
 	delay 10
@@ -140,6 +141,7 @@ ChandraVillage_Lab_Eevee_Yes::
 	goto_if_eq ChandraVillage_Lab_Nickname_Eevee
 	closemessage
 	goto ChandraVillage_Lab_Eevee_Caught
+	end
 
 ChandraVillage_Lab_Eevee_Caught::
 	delay 10
@@ -192,6 +194,17 @@ ChandraVillage_Lab_Tyler_Pick_Eevee::
 	msgbox ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedEevee, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Lab_Text_Tyler_YayCaughtEevee, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, WR2DR3
+	applymovement LOCALID_TYLER_LAB, WR3DR2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	goto ChandraVillage_Lab_Tyler_End
 	end
 
 ChandraVillage_Lab_Tyler_Pick_Pikachu::
@@ -213,6 +226,25 @@ ChandraVillage_Lab_Tyler_Pick_Pikachu::
 	msgbox ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedPikachu, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox ChandraVillage_Lab_Text_Tyler_YayCaughtPikachu, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, WL6
+	applymovement LOCALID_TYLER_LAB, WDWL5
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	goto ChandraVillage_Lab_Tyler_End
+	end
+
+ChandraVillage_Lab_Tyler_End::
+	msgbox ChandraVillage_Lab_Text_FightRattata, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
+	waitmovement 0
+	release
 	end
 
 ChandraVillage_Lab_Catch_Pikachu::
@@ -368,6 +400,42 @@ WR7DR3FU:
 	face_up
 	step_end
 
+WR2DR3:
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WR3DR2:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	step_end
+
+WL6:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WDWL5:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 ChandraVillage_Lab_Text_ListenUp:
 	.string "{COLOR}{BLUE}OK, {PLAYER}, listen up!\p"
 	.string "Professor Hawthorne left a couple of\n"
@@ -469,6 +537,30 @@ ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedPikachu:
 
 ChandraVillage_Lab_Eevee_Yes_Text_TylerReceivedEevee:
 	.string "Tyler caught Eevee!$"
+
+ChandraVillage_Lab_Text_Tyler_YayCaughtEevee:
+	.string "{COLOR}{BLUE}We did it, {PLAYER}!\n"
+	.string "I caught an Eevee!\p"
+	.string "OK, let's go check out the Rattata…\n"
+	.string "Lead the way!$"
+
+ChandraVillage_Lab_Text_Tyler_YayCaughtPikachu:
+	.string "{COLOR}{BLUE}We did it, {PLAYER}!\n"
+	.string "I caught a Pikachu!\p"
+	.string "OK, let's go check out the Rattata…\n"
+	.string "Lead the way!$"
+
+ChandraVillage_Lab_Text_FightRattata:
+	.string "{COLOR}{BLUE}Say, {PLAYER}…\n"
+	.string "Let me watch you in battle.\p"
+	.string "Now you've got a Pokémon, these\n"
+	.string "Rattata shouldn't be a problem!\p"
+	.string "…\n"
+	.string "OK! Tell ya what!\p"
+	.string "If you can get rid of them, I'll\n"
+	.string "battle you myself, OK?\p"
+	.string "Haha! Show me what you got,\n"
+	.string "{PLAYER}!$"
 
 ChandraVillage_Lab_Text_Aide:
 	.string "Pfft… The Professor is such a wimp.\n"
