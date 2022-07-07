@@ -700,10 +700,10 @@
 #define FLAG_HIDE_CHANDRA_VILLAGE_PIKACHU   0x291
 #define FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_1 0x292
 #define FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2 0x293 
+#define FLAG_HIDE_CHANDRA_VILLAGE_LAB_TYLER 0x294
+#define FLAG_HIDE_CHANDRA_VILLAGE_PROF      0x295
+#define FLAG_TAKEN_PIKACHU                  0x296
 
-#define FLAG_UNUSED_0x294                   0x294 // Unused Flag
-#define FLAG_UNUSED_0x295                   0x295 // Unused Flag
-#define FLAG_UNUSED_0x296                   0x296 // Unused Flag
 #define FLAG_UNUSED_0x297                   0x297 // Unused Flag
 #define FLAG_UNUSED_0x298                   0x298 // Unused Flag
 #define FLAG_UNUSED_0x299                   0x299 // Unused Flag

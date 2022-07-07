@@ -8,9 +8,11 @@ ChandraVillage_MapScripts::
 
 ChandraVillage_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 3, ChandraVillage_Intro
+	map_script_2 VAR_STORYLINE_STATE, 7, ChandraVillage_LabDone
 	.2byte 0
 
 ChandraVillage_Intro::
+	lockall
 	applymovement LOCALID_TYLER, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
@@ -39,6 +41,64 @@ ChandraVillage_Intro::
 	fadedefaultbgm
 	releaseall
 	end
+
+ChandraVillage_LabDone::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Text_HowDidYouGetOn, MSGBOX_DEFAULT
+	closemessage
+	delay 60
+	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox ChandraVillage_Text_WowPlayer, MSGBOX_DEFAULT
+	call_if_set FLAG_TAKEN_PIKACHU, ChandraVillage_GivePikachu
+	call_if_unset FLAG_TAKEN_PIKACHU, ChandraVillage_GiveEevee
+	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_DEFAULT
+	playfanfare SE_DEX_SEARCH
+	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_DEFAULT
+	waitfanfare
+	msgbox ChandraVillage_Text_PokedexDesc, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, WRFL
+	applymovement LOCALID_PROF, WRFU
+	waitmovement 0
+	opendoor 39, 6
+	waitdooranim
+	applymovement LOCALID_PROF, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_PROF
+	closedoor 39, 6
+	waitdooranim
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF
+	setflag FLAG_SYS_POKEDEX_GET
+	setvar VAR_STORYLINE_STATE, 8
+	releaseall
+	end
+
+ChandraVillage_GivePikachu::
+	playfanfare MUS_EVOLVED
+	msgbox ChandraVillage_Text_ReceivedPikachu, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	return
+
+ChandraVillage_GiveEevee::
+	playfanfare MUS_EVOLVED
+	msgbox ChandraVillage_Text_ReceivedEevee, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	return
 
 ChandraVillage_Tyler_Debug::
 	lockall
@@ -105,6 +165,10 @@ ChandraVillage_Letterbox::
 
 ChandraVillage_Town_Sign::
 	msgbox ChandraVillage_Text_Town_Sign, MSGBOX_SIGN
+	end
+
+ChandraVillage_Prof::
+	msgbox ChandraVillage_Text_Prof, MSGBOX_NPC
 	end
 
 ChandraVillage_Joker::
@@ -226,6 +290,16 @@ ChandraVillage_Storyline_State_4_Part_2::
 	releaseall
 	end
 
+WRFL:
+	walk_right
+	face_left
+	step_end
+
+WRFU:
+	walk_right
+	face_up
+	step_end
+
 WalkL3:
 	walk_left
 	walk_left
@@ -268,6 +342,53 @@ WLFU:
 	face_up
 	step_end
 
+ChandraVillage_Text_HowDidYouGetOn:
+	.string "How did you get on with the Rattata,\n"
+	.string "{PLAYER}?\p"
+	.string "…$"
+
+ChandraVillage_Text_WowPlayer:
+	.string "Wow, {PLAYER}, I…\n"
+	.string "You… You tamed my Pokémon?\p"
+	.string "…\p"
+	.string "You even beat the pests using the\n"
+	.string "Pokémon?! I can't believe it!\p"
+	.string "Well, {PLAYER}, you have proved yourself\n"
+	.string "as a real Pokémon Trainer!\p"
+	.string "Keep the Pokémon you caught.\n"
+	.string "Take it as a token of my thanks.$"
+
+ChandraVillage_Text_ReceivedPikachu:
+	.string "Professor Hawthorne gave you the\n"
+	.string "Pikachu!$"
+
+ChandraVillage_Text_ReceivedEevee:
+	.string "Professor Hawthorne gave you the\n"
+	.string "Eevee!$"
+
+ChandraVillage_Text_GivePokedex:
+	.string "Also, please take this Pokédex…$"
+
+ChandraVillage_Text_ReceivePokedex:
+	.string "You received a Pokédex!$"
+
+ChandraVillage_Text_PokedexDesc:
+	.string "The Pokédex stores data on Pokémon\n"
+	.string "you've seen or caught.\p"
+	.string "It's a vital tool if you're serious\n"
+	.string "about becoming a good Trainer.\p"
+	.string "…\n"
+	.string "Oh, yes…\p"
+	.string "Tyler ran off somewhere in a hurry.\n"
+	.string "I think he's excited to have his first\l"
+	.string "official Pokémon.\p"
+	.string "You should find him and try battling\n"
+	.string "in the real world!\l"
+	.string "There is a lot to learn out there.\p"
+	.string "Well, I must return to the lab and get\n"
+	.string "back to work.\p"
+	.string "Thanks again, {PLAYER}!$"
+
 ChandraVillage_Text_TylerIntro_Player:
 	.string "{COLOR}{BLUE}{PLAYER}!$"
 
@@ -277,7 +398,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "a Poké Flute to wake you up!\p"
 	.string "Anyway… Listen, {PLAYER}.\p"
 	.string "There's an infestation of Pokémon in\n"
-	.string "the Professor's Lab.\p"
+	.string "the Professor's lab.\p"
 	.string "We need to go and sort the problem!\p"
 	.string "If we don't show the Professor what we\n"
 	.string "are capable of, I fear he will never\l"
@@ -285,7 +406,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "Let's go there and show him how real\n"
 	.string "Pokémon Trainers fight!\p"
 	.string "Haha!\n"
-	.string "Meet me by the Professor's Lab!$"
+	.string "Meet me by the Professor's lab!$"
 
 ChandraVillage_Hoenn:
 	.string "{COLOR}{RED}My family and I moved to Tenjo from\n"
@@ -334,6 +455,11 @@ ChandraVillage_Text_Mail:
 ChandraVillage_Text_Town_Sign:
 	.string "Chandra Village\n"
 	.string "A place to call home.$"
+
+ChandraVillage_Text_Prof:
+	.string "{PLAYER}…\p"
+	.string "Pick a Pokémon from inside the lab\n"
+	.string "and get rid of the Rattata.$"
 
 ChandraVillage_Text_Facility:
 	.string "Professor Hawthorne's Pokémon\n"

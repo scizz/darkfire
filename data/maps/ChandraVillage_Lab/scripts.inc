@@ -8,8 +8,18 @@
 .set LOCALID_RATTATA_TWO, 8
 
 ChandraVillage_Lab_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ChandraVillage_Lab_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_Lab_OnFrame
 	.byte 0
+
+ChandraVillage_Lab_OnTransition:
+	call_if_set FLAG_SYS_POKEDEX_GET, ChandraVillage_Lab_ShowProf
+	end
+
+ChandraVillage_Lab_ShowProf::
+	clearflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF
+	addobject LOCALID_PROF
+	return
 
 ChandraVillage_Lab_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 5, ChandraVillage_Lab_PickPokemon
@@ -78,6 +88,7 @@ ChandraVillage_Lab_Pikachu::
 
 ChandraVillage_Lab_Pikachu_Yes::
 	hidemonpic
+	setflag FLAG_TAKEN_PIKACHU
 	msgbox ChandraVillage_Lab_Pikachu_Yes_Text_ThrowPokeBall, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceSlowUp
 	call ChandraVillage_Lab_Catch_Pikachu
@@ -316,10 +327,8 @@ ChandraVillage_Lab_Rattata1::
 	waitmoncry
 	setwildbattle SPECIES_RATTATA, 2, ITEM_NONE
 	dowildbattle
-	delay 30
 	playmoncry SPECIES_RATTATA, 1
 	waitmoncry
-	delay 30
 	fadescreen 1
 	delay 60
 	removeobject LOCALID_RATTATA_ONE
@@ -336,10 +345,8 @@ ChandraVillage_Lab_Rattata2::
 	waitmoncry
 	setwildbattle SPECIES_RATTATA, 3, ITEM_NONE
 	dowildbattle
-	delay 30
 	playmoncry SPECIES_RATTATA, 1
 	waitmoncry
-	delay 30
 	fadescreen 1
 	delay 60
 	removeobject LOCALID_RATTATA_TWO
@@ -355,7 +362,25 @@ ChandraVillage_Lab_Tyler::
 	goto_if_unset FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_1, ChandraVillage_Lab_Tyler_NotDone
 	goto_if_unset FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2, ChandraVillage_Lab_Tyler_NotDone
 	msgbox ChandraVillage_Lab_Text_GoodJob, MSGBOX_DEFAULT
+	closemessage
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_1, 6
+	call_if_eq ChandraVillage_Standing_Under
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_TYLER_LAB, WD7
+	waitmovement 0
+	playse SE_EXIT
+	waitse
+	removeobject LOCALID_TYLER_LAB
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_TYLER
+	setvar VAR_STORYLINE_STATE, 7
+	release
 	end
+
+ChandraVillage_Standing_Under::
+	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkRight
+	waitmovement 0
+	return
 
 ChandraVillage_Lab_PickOne::
 	msgbox ChandraVillage_Lab_Text_PickOne, MSGBOX_DEFAULT
@@ -367,6 +392,19 @@ ChandraVillage_Lab_Tyler_NotDone::
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
 	waitmovement 0
 	release
+	end
+
+ChandraVillage_Lab_Exit::
+	lock
+	msgbox ChandraVillage_Lab_Text_ComeBack, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	release
+	end
+
+ChandraVillage_Lab_Prof::
+	msgbox ChandraVillage_Lab_Text_Prof, MSGBOX_NPC
 	end
 
 WU6:
@@ -497,6 +535,16 @@ WDWL5:
 	walk_left
 	walk_left
 	walk_left
+	step_end
+
+WD7:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 ChandraVillage_Lab_Text_ListenUp:
@@ -652,3 +700,12 @@ ChandraVillage_Lab_Text_GoodJob:
 	.string "the infestation has been handled…\p"
 	.string "Meet me at my house afterwards and\n"
 	.string "we can talk about our battle!$"
+
+ChandraVillage_Lab_Text_ComeBack:
+	.string "{COLOR}{BLUE}Come back, {PLAYER}!$"
+
+ChandraVillage_Lab_Text_Prof:
+	.string "Hi, {PLAYER}.\n"
+	.string "Thanks again for saving the lab.\p"
+	.string "I hope the Pokémon and Pokédex I gave\n"
+	.string "you helps you in your journey.$"

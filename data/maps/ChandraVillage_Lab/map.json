@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ChandraVillage_Lab_Tyler",
-      "flag": "0"
+      "flag": "FLAG_HIDE_CHANDRA_VILLAGE_LAB_TYLER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "ChandraVillage_Lab_Prof",
       "flag": "FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF"
     },
     {
@@ -138,18 +138,35 @@
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_CHANDRA_VILLAGE",
-      "dest_warp_id": 0
+      "dest_warp_id": 4
     },
     {
       "x": 7,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_CHANDRA_VILLAGE",
-      "dest_warp_id": 0
+      "dest_warp_id": 4
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "6",
+      "script": "ChandraVillage_Lab_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "6",
+      "script": "ChandraVillage_Lab_Exit"
+    }
   ],
   "bg_events": [
 
