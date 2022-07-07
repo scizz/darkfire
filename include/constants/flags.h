@@ -698,9 +698,9 @@
 #define FLAG_HIDE_CHANDRA_VILLAGE_POKE_BALL_2 0x28F
 #define FLAG_HIDE_CHANDRA_VILLAGE_EEVEE     0x290
 #define FLAG_HIDE_CHANDRA_VILLAGE_PIKACHU   0x291
+#define FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_1 0x292
+#define FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2 0x293 
 
-#define FLAG_UNUSED_0x292                   0x292 // Unused Flag
-#define FLAG_UNUSED_0x293                   0x293 // Unused Flag
 #define FLAG_UNUSED_0x294                   0x294 // Unused Flag
 #define FLAG_UNUSED_0x295                   0x295 // Unused Flag
 #define FLAG_UNUSED_0x296                   0x296 // Unused Flag

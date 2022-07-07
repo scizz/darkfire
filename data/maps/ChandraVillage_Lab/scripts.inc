@@ -4,6 +4,8 @@
 .set LOCALID_BALL_PIKACHU, 5
 .set LOCALID_EEVEE, 6
 .set LOCALID_PIKACHU, 7
+.set LOCALID_RATTATA_ONE, 9
+.set LOCALID_RATTATA_TWO, 8
 
 ChandraVillage_Lab_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_Lab_OnFrame
@@ -306,6 +308,67 @@ ChandraVillage_Lab_Aide_Dex::
 	msgbox ChandraVillage_Lab_Text_Aide_Dex, MSGBOX_NPC
 	end
 
+ChandraVillage_Lab_Rattata1::
+	lock
+	faceplayer
+	playmoncry SPECIES_RATTATA, 0
+	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_RATTATA, 2, ITEM_NONE
+	dowildbattle
+	delay 30
+	playmoncry SPECIES_RATTATA, 1
+	waitmoncry
+	delay 30
+	fadescreen 1
+	delay 60
+	removeobject LOCALID_RATTATA_ONE
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_1
+	fadescreen 0
+	release
+	end
+
+ChandraVillage_Lab_Rattata2::
+	lock
+	faceplayer
+	playmoncry SPECIES_RATTATA, 0
+	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_RATTATA, 3, ITEM_NONE
+	dowildbattle
+	delay 30
+	playmoncry SPECIES_RATTATA, 1
+	waitmoncry
+	delay 30
+	fadescreen 1
+	delay 60
+	removeobject LOCALID_RATTATA_TWO
+	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2
+	fadescreen 0
+	release
+	end
+
+ChandraVillage_Lab_Tyler::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_POKEMON_GET, ChandraVillage_Lab_PickOne
+	goto_if_unset FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_1, ChandraVillage_Lab_Tyler_NotDone
+	goto_if_unset FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2, ChandraVillage_Lab_Tyler_NotDone
+	msgbox ChandraVillage_Lab_Text_GoodJob, MSGBOX_DEFAULT
+	end
+
+ChandraVillage_Lab_PickOne::
+	msgbox ChandraVillage_Lab_Text_PickOne, MSGBOX_DEFAULT
+	release
+	end
+
+ChandraVillage_Lab_Tyler_NotDone::
+	msgbox ChandraVillage_Lab_Text_NotDone, MSGBOX_DEFAULT
+	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
 WU6:
 	walk_up
 	walk_up
@@ -563,9 +626,29 @@ ChandraVillage_Lab_Text_FightRattata:
 	.string "{PLAYER}!$"
 
 ChandraVillage_Lab_Text_Aide:
-	.string "Pfft… The Professor is such a wimp.\n"
+	.string "Pfft…\p"
+	.string "The Professor is such a wimp.\n"
 	.string "These Rattata won't distract me!$"
 
 ChandraVillage_Lab_Text_Aide_Dex:
 	.string "You saved the Professor from Rattata?\n"
 	.string "OK? You want a medal? He's a wimp.$"
+
+ChandraVillage_Lab_Text_Rattata:
+	.string "Grraat!$"
+
+ChandraVillage_Lab_Text_PickOne:
+	.string "{COLOR}{BLUE}Come on, {PLAYER}!\n"
+	.string "Pick a Pokémon to fight with!$"
+
+ChandraVillage_Lab_Text_NotDone:
+	.string "{COLOR}{BLUE}Let's go, {PLAYER}!\n"
+	.string "You got this! Defeat the Rattata!$"
+
+ChandraVillage_Lab_Text_GoodJob:
+	.string "{COLOR}{BLUE}Good job, {PLAYER}!\n"
+	.string "It looks like you know how to battle!\p"
+	.string "Let's go and tell Professor Hawthorne\n"
+	.string "the infestation has been handled…\p"
+	.string "Meet me at my house afterwards and\n"
+	.string "we can talk about our battle!$"
