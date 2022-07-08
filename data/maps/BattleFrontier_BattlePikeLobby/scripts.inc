@@ -368,7 +368,8 @@ BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints2: @ 825C209
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_ReachedBattlePointLimit: @ 825C26C
 	.string "You appear to have reached the limit\n"
-	.string "for Battle Points…\pPlease exchange some Battle Points\n"
+	.string "for Battle Points…\p"
+	.string "Please exchange some Battle Points\n"
 	.string "for prizes, then return…$"
 
 BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting: @ 825C2E0

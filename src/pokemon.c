@@ -3465,7 +3465,7 @@ void CreateBattleTowerMon_HandleLevel(struct Pokemon *mon, struct BattleTowerPok
     if (gSaveBlock2Ptr->frontier.lvlMode != FRONTIER_LVL_50)
         level = GetFrontierEnemyMonLevel(gSaveBlock2Ptr->frontier.lvlMode);
     else if (lvl50)
-        level = 50;
+        level = FRONTIER_MAX_LEVEL_50;
     else
         level = src->level;
 
@@ -6174,7 +6174,7 @@ u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit)
     return offset;
 }
 
-static void BufferStatRoseMessage(s32 arg0)
+static void BufferStatRoseMessage(s32 statIdx)
 {
     gBattlerTarget = gBattlerInMenuId;
     StringCopy(gBattleTextBuff1, gStatNamesTable[sStatsToRaise[arg0]]);
@@ -6782,13 +6782,13 @@ u16 GetLinkTrainerFlankId(u8 linkPlayerId)
     return flankId;
 }
 
-s32 GetBattlerMultiplayerId(u16 a1)
+s32 GetBattlerMultiplayerId(u16 id)
 {
-    s32 id;
-    for (id = 0; id < MAX_LINK_PLAYERS; id++)
-        if (gLinkPlayers[id].id == a1)
+    s32 multiplayerId;
+    for (multiplayerId = 0; multiplayerId < MAX_LINK_PLAYERS; multiplayerId++)
+        if (gLinkPlayers[multiplayerId].id == id)
             break;
-    return id;
+    return multiplayerId;
 }
 
 u8 GetTrainerEncounterMusicId(u16 trainerOpponentId)
@@ -7623,7 +7623,7 @@ void SetWildMonHeldItem(void)
                 || GetMonAbility(&gPlayerParty[0]) == ABILITY_SUPER_LUCK))
         {
             chanceNoItem = 20;
-            chanceCommon = 80;
+            chanceNotRare = 80;
         }
 
         for (i = 0; i < count; i++)

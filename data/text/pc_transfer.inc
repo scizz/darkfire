@@ -4,8 +4,9 @@ gText_PkmnTransferredSomeonesPC:: @ 8273216
 	.string "It was placed in \n"
 	.string "BOX “{STR_VAR_1}.”$"
 
-gText_PkmnTransferredLanettesPC:: @ 8273256
-	.string "{STR_VAR_2} was transferred to\nLANETTE'S PC.\p"
+gText_PkmnTransferredLanettesPC::
+	.string "{STR_VAR_2} was transferred to\n"
+	.string "LANETTE'S PC.\p"
 	.string "It was placed in \n"
 	.string "BOX “{STR_VAR_1}.”$"
 

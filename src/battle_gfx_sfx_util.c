@@ -358,12 +358,12 @@ void SpriteCB_WaitForBattlerBallReleaseAnim(struct Sprite *sprite)
     }
 }
 
-static void UnusedDoBattleSpriteAffineAnim(struct Sprite *sprite, bool8 arg1)
+static void UnusedDoBattleSpriteAffineAnim(struct Sprite *sprite, bool8 pointless)
 {
     sprite->animPaused = TRUE;
     sprite->callback = SpriteCallbackDummy;
 
-    if (!arg1)
+    if (!pointless)
         StartSpriteAffineAnim(sprite, 1);
     else
         StartSpriteAffineAnim(sprite, 1);
@@ -612,7 +612,7 @@ static void BattleLoadMonSpriteGfx(struct Pokemon *mon, u32 battlerId, bool32 op
     if (species == SPECIES_CASTFORM || species == SPECIES_CHERRIM)
     {
         paletteOffset = 0x100 + battlerId * 16;
-        LZDecompressWram(lzPaletteData, gBattleStruct->castformPalette[CASTFORM_NORMAL]);
+        LZDecompressWram(lzPaletteData, gBattleStruct->castformPalette);
         LoadPalette(gBattleStruct->castformPalette[gBattleMonForms[battlerId]], paletteOffset, 0x20);
     }
 
@@ -747,7 +747,7 @@ bool8 BattleLoadAllHealthBoxesGfx(u8 state)
     return retVal;
 }
 
-void LoadBattleBarGfx(u8 arg0)
+void LoadBattleBarGfx(u8 unused)
 {
     LZDecompressWram(gBattleInterfaceGfx_BattleBar, gMonSpritesGfxPtr->barFontGfx);
 }
@@ -931,7 +931,7 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 castform, bo
         if (targetSpecies == SPECIES_CASTFORM || targetSpecies == SPECIES_CHERRIM)
         {
             gSprites[gBattlerSpriteIds[battlerAtk]].anims = gMonFrontAnimsPtrTable[targetSpecies];
-            LZDecompressWram(lzPaletteData, gBattleStruct->castformPalette[CASTFORM_NORMAL]);
+            LZDecompressWram(lzPaletteData, gBattleStruct->castformPalette);
             LoadPalette(gBattleStruct->castformPalette[gBattleMonForms[battlerDef]], paletteOffset, 32);
         }
 
