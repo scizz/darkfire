@@ -2742,7 +2742,7 @@ static int SelectOpponentMonsFromParty(int *partyMovePoints, bool8 allowRandom)
 #define TYPE_x4     80
 
 // arg2 is either 2, a personality, or an OTID
-static int GetTypeEffectivenessPoints(int move, int targetSpecies, int arg2)
+static int GetTypeEffectivenessPoints(int move, int targetSpecies, int mode)
 {
     int defType1, defType2, defAbility, moveType;
     int i = 0;
