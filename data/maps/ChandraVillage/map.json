@@ -82,7 +82,7 @@
       "x": 37,
       "y": 24,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -289,6 +289,33 @@
       "var": "VAR_STORYLINE_STATE",
       "var_value": "4",
       "script": "ChandraVillage_Storyline_State_4"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_CHANDRA_VILLAGE_EXIT_NORTH",
+      "var_value": "0",
+      "script": "ChandraVillage_ExitNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_CHANDRA_VILLAGE_EXIT_NORTH",
+      "var_value": "0",
+      "script": "ChandraVillage_ExitNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_CHANDRA_VILLAGE_EXIT_NORTH",
+      "var_value": "0",
+      "script": "ChandraVillage_ExitNorth"
     }
   ],
   "bg_events": [

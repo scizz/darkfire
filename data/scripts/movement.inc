@@ -132,3 +132,7 @@ Common_Movement_Delay32: @ 82725C6
 Common_Movement_WalkUp: @ 82725C9
 	walk_up
 	step_end
+
+Common_Movement_WalkDown: @ 82725C9
+	walk_down
+	step_end

@@ -11,6 +11,43 @@ ChandraVillage_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 7, ChandraVillage_LabDone
 	.2byte 0
 
+ChandraVillage_ExitNorth::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement 13, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement 13, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement 13, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	goto_if_set FLAG_SYS_POKEMON_GET, ChandraVillage_ExitNorthPokemon
+	msgbox ChandraVillage_Text_ExitNorth, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 13, Common_Movement_FaceDown
+	waitmovement 0
+	releaseall
+	end
+
+ChandraVillage_ExitNorthPokemon:: 
+	msgbox ChandraVillage_Text_ExitNorthPokemon, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement 13, Common_Movement_FaceDown
+	waitmovement 0
+	releaseall
+	end
+
 ChandraVillage_Intro::
 	lockall
 	applymovement LOCALID_TYLER, Common_Movement_FaceLeft
@@ -102,9 +139,12 @@ ChandraVillage_GiveEevee::
 
 ChandraVillage_Tyler_Debug::
 	lockall
-	givemon SPECIES_TOTODILE, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_MACHOP, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_SABLEYE, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_PALKIA, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_MEW, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_MEWTWO, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_JIRACHI, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_DEOXYS, 77, ITEM_DRAGON_FANG
+	givemon SPECIES_GRIMER, 77, ITEM_DRAGON_FANG
 	giveitem ITEM_MACH_BIKE, 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
@@ -342,6 +382,30 @@ WLFU:
 	face_up
 	step_end
 
+ChandraVillage_Text_ExitNorth:
+	.string "{COLOR}{BLUE}Hey, kid!\p"
+	.string "What do you get when you mix a Pikachu\n"
+	.string "and a Haunter?\p"
+	.string "…\p"
+	.string "A Pikaboo!\n"
+	.string "HAHA.\p"
+	.string "…\p"
+	.string "What's that?\n"
+	.string "Haunter doesn't scare you?\p"
+	.string "OK, but leaving the village without\n"
+	.string "a Pokémon should!\l"
+	.string "It's dangerous out there!$"
+
+ChandraVillage_Text_ExitNorthPokemon:
+	.string "{COLOR}{BLUE}Hey, kid!\p"
+	.string "Why did the Miltank cross the road?\p"
+	.string "…\p"
+	.string "To get to the udder side!\n"
+	.string "HAHA.\p"
+	.string "…\p"
+	.string "No, but seriously, you should find\n"
+	.string "Tyler before leaving the village.$"
+	
 ChandraVillage_Text_HowDidYouGetOn:
 	.string "How did you get on with the Rattata,\n"
 	.string "{PLAYER}?\p"
