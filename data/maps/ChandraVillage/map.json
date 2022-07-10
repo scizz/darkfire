@@ -292,8 +292,8 @@
     },
     {
       "type": "trigger",
-      "x": 51,
-      "y": 2,
+      "x": 52,
+      "y": 3,
       "elevation": 0,
       "var": "VAR_CHANDRA_VILLAGE_EXIT_NORTH",
       "var_value": "0",

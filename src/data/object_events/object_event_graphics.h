@@ -603,6 +603,7 @@ const u32 gObjectEventPic_Drowzee[] = INCBIN_U32("graphics/object_events/pics/po
 const u32 gObjectEventPic_Hypno[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/hypno.4bpp");
 const u16 gObjectEventPal_Hypno[] = INCBIN_U16("graphics/object_events/palettes/followers/hypno.gbapal");
 const u32 gObjectEventPic_Krabby[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/krabby.4bpp");
+const u16 gObjectEventPal_Krabby[] = INCBIN_U16("graphics/object_events/palettes/followers/krabby.gbapal");
 const u32 gObjectEventPic_Kingler[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/kingler.4bpp");
 const u16 gObjectEventPal_Kingler[] = INCBIN_U16("graphics/object_events/palettes/followers/kingler.gbapal");
 const u32 gObjectEventPic_Voltorb[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/voltorb.4bpp");

@@ -806,6 +806,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SPORT_BALL              0x1077
 #define OBJ_EVENT_PAL_TAG_PARK_BALL               0x1076
 #define OBJ_EVENT_PAL_TAG_CHERISH_BALL            0x1075
+#define OBJ_EVENT_PAL_TAG_KRABBY                  0x1076
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -927,6 +928,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Haunter,               OBJ_EVENT_PAL_TAG_HAUNTER},
     {gObjectEventPal_Gengar,                OBJ_EVENT_PAL_TAG_GENGAR},
     {gObjectEventPal_Hypno,                 OBJ_EVENT_PAL_TAG_HYPNO},
+    {gObjectEventPal_Krabby,                OBJ_EVENT_PAL_TAG_KRABBY},
     {gObjectEventPal_Kingler,               OBJ_EVENT_PAL_TAG_KINGLER},
     {gObjectEventPal_Voltorb,               OBJ_EVENT_PAL_TAG_VOLTORB},
     {gObjectEventPal_Exeggcute,             OBJ_EVENT_PAL_TAG_EXEGGCUTE},
