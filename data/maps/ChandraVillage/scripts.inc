@@ -11,6 +11,10 @@ ChandraVillage_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 7, ChandraVillage_LabDone
 	.2byte 0
 
+ChandraVillage_WhiteOut::
+	setvar VAR_STORYLINE_STATE, 5
+	end
+
 ChandraVillage_ExitNorth::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -139,13 +143,7 @@ ChandraVillage_GiveEevee::
 
 ChandraVillage_Tyler_Debug::
 	lockall
-	givemon SPECIES_KRABBY, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_RHYHORN, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_RHYDON, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_JIRACHI, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_DEOXYS, 77, ITEM_DRAGON_FANG
-	givemon SPECIES_GRIMER, 77, ITEM_DRAGON_FANG
-	giveitem ITEM_MACH_BIKE, 1
+	givemon SPECIES_ARIADOS, 5, ITEM_DRAGON_FANG
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -522,8 +520,8 @@ ChandraVillage_Text_Town_Sign:
 
 ChandraVillage_Text_Prof:
 	.string "{PLAYER}…\p"
-	.string "Pick a Pokémon from inside the lab\n"
-	.string "and get rid of the Rattata.$"
+	.string "Enter to the lab and help get rid of\n"
+	.string "the Rattata!$"
 
 ChandraVillage_Text_Facility:
 	.string "Professor Hawthorne's Pokémon\n"

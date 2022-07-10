@@ -2,7 +2,7 @@ ChandraVillage_TylerHouse_2F_MapScripts::
 	.byte 0
 
 ChandraVillage_TylerHouse_2F_ShowHideTyler::
-	goto_if_set FLAG_SYS_POKEMON_GET, ChandraVillage_TylerHouse_2F_ShowTyler
+	goto_if_set FLAG_HIDE_CHANDRA_VILLAGE_LAB_TYLER, ChandraVillage_TylerHouse_2F_ShowTyler
 	removeobject 1
 	removeobject 2
 	setflag FLAG_HIDE_TYLERS_HOUSE_TYLER
@@ -15,7 +15,6 @@ ChandraVillage_TylerHouse_2F_ShowTyler::
 	clearflag FLAG_HIDE_TYLERS_HOUSE_BAG
 	addobject 1
 	addobject 2
-	setvar VAR_TYLERS_HOUSE, 1
 	release
 	end
 
@@ -178,6 +177,7 @@ ChandraVillage_TylerHouse_2F_End::
 	waitse
 	setflag FLAG_HIDE_TYLERS_HOUSE_TYLER
 	setvar VAR_STORYLINE_STATE, 9
+	setvar VAR_TYLERS_HOUSE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	release
