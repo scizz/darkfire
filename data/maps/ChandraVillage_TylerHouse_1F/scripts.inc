@@ -18,7 +18,7 @@ ChandraVillage_TylerHouse_1F_Mother_Badge_One:
 ChandraVillage_TylerHouse_Text_1F_Mother:
 	.string "{COLOR}{RED}Hi, {PLAYER}.\n"
 	.string "How are you and your mother doing?\p"
-	.string "Tyler has gone to the Professor's Lab.$"
+	.string "Tyler has gone to the Professor's lab.$"
 
 ChandraVillage_TylerHouse_Text_1F_Mother_PKMN_Menu:
 	.string "{COLOR}{RED}So… You and Tyler have your first\n"

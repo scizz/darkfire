@@ -101,7 +101,7 @@
 #define VAR_CHANDRA_VILLAGE_EXIT_NORTH       0x4052 // Darkfire Var
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
 #define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE            0x4055 // Unused Var
+#define VAR_TYLERS_HOUSE                     0x4055 // Darkfire Var
 #define VAR_PACIFIDLOG_TOWN_STATE            0x4056 // Unused Var
 #define VAR_PETALBURG_CITY_STATE             0x4057
 #define VAR_SLATEPORT_CITY_STATE             0x4058

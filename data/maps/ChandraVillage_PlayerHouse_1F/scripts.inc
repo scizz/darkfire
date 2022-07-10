@@ -28,6 +28,7 @@ ChandraVillage_PlayerHouse_1F_MotherTalkedTo::
 
 ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 	lockall
+	faceplayer
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_PKMN_Menu, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
@@ -35,6 +36,7 @@ ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 
 ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	lockall
+	faceplayer
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest

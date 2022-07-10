@@ -703,9 +703,9 @@
 #define FLAG_HIDE_CHANDRA_VILLAGE_LAB_TYLER 0x294
 #define FLAG_HIDE_CHANDRA_VILLAGE_PROF      0x295
 #define FLAG_TAKEN_PIKACHU                  0x296
+#define FLAG_HIDE_TYLERS_HOUSE_TYLER        0x297
+#define FLAG_HIDE_TYLERS_HOUSE_BAG          0x298
 
-#define FLAG_UNUSED_0x297                   0x297 // Unused Flag
-#define FLAG_UNUSED_0x298                   0x298 // Unused Flag
 #define FLAG_UNUSED_0x299                   0x299 // Unused Flag
 #define FLAG_UNUSED_0x29A                   0x29A // Unused Flag
 #define FLAG_UNUSED_0x29B                   0x29B // Unused Flag
