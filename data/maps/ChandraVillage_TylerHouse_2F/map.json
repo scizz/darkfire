@@ -100,27 +100,27 @@
       "x": 2,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "8",
+      "script": "ChandraVillage_TylerHouse_2F_TylerIntro"
     },
     {
       "type": "trigger",
       "x": 3,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "8",
+      "script": "ChandraVillage_TylerHouse_2F_TylerIntro"
     },
     {
       "type": "trigger",
       "x": 4,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "8",
+      "script": "ChandraVillage_TylerHouse_2F_TylerIntro"
     }
   ],
   "bg_events": [
