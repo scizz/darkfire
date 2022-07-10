@@ -1,5 +1,90 @@
+.set LOCALID_TYLER, 6
+
 Route1_MapScripts::
 	.byte 0
+
+Route1_Storyline_State9::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 22
+	goto_if_eq Route1_Tyler_Left
+	compare VAR_TEMP_0, 23
+	goto_if_eq Route1_Tyler_Middle
+	goto Route1_Tyler_Right
+	end
+
+Route1_Tyler_Left::
+	applymovement LOCALID_TYLER WLD4
+	waitmovement 0
+	call Route1_TylerIntro
+	applymovement LOCALID_TYLER, WU2R3U3R3U2R6
+	applymovement OBJ_EVENT_ID_PLAYER, WU3R3U3R3U2R5
+	applymovement OBJ_EVENT_ID_FOLLOWER, WU4R3U3R3U2R4
+	waitmovement 0
+	goto Route1_TylerGrass
+	end
+
+Route1_Tyler_Middle::
+	applymovement LOCALID_TYLER WD4
+	waitmovement 0
+	call Route1_TylerIntro
+	applymovement LOCALID_TYLER, WU2R2U2R3U3R6
+	applymovement OBJ_EVENT_ID_PLAYER, WU3R2U2R3U3R5
+	applymovement OBJ_EVENT_ID_FOLLOWER, WU4R2U2R3U3R4
+	waitmovement 0
+	goto Route1_TylerGrass
+	end
+
+Route1_Tyler_Right::
+	applymovement LOCALID_TYLER WRD4
+	waitmovement 0
+	call Route1_TylerIntro
+	applymovement LOCALID_TYLER, WU2R2U3R2U2R6
+	applymovement OBJ_EVENT_ID_PLAYER, WU3R2U3R2U2R5
+	applymovement OBJ_EVENT_ID_FOLLOWER, WU4R2U3R2U2R4
+	waitmovement 0
+	goto Route1_TylerGrass
+	end
+
+Route1_TylerIntro::
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	msgbox Route1_Text_HeyPlayer, MSGBOX_DEFAULT
+	closemessage
+	playbgm MUS_FOLLOW_ME, TRUE
+	return
+
+Route1_TylerGrass::
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route1_Text_ListenCarefully, MSGBOX_DEFAULT
+	release
+	end
+
+Route1_WestExitPrevention::
+	lock
+	applymovement LOCALID_TYLER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route1_Text_ComeBack, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
+	waitmovement 0
+	release
+	end
 
 Route1_Jump_Event::
 	lock
@@ -64,6 +149,240 @@ Route1_Boy::
 Route1_Location_Sign::
 	msgbox Route1_Location_Sign_Text, MSGBOX_SIGN
 	end
+
+WLD4:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WD4:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WRD4:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WU2R3U3R3U2R6:
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU3R3U3R3U2R5:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU4R3U3R3U2R4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU2R2U2R3U3R6:
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU3R2U2R3U3R5:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU4R2U2R3U3R4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU2R2U3R2U2R6:
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+	
+WU3R2U3R2U2R5:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WU4R2U3R2U2R4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Route1_Text_HeyPlayer:
+	.string "{COLOR}{BLUE}Hey, {PLAYER}!\p"
+	.string "I decided to bring my Pokémon here\n"
+	.string "after our battle at my house.\p"
+	.string "You can toughen up your Pokémon in\n"
+	.string "areas with a lot of grass.\p"
+	.string "Here, I'll show you a cool area…\n"
+	.string "Follow me!$"
+
+Route1_Text_ListenCarefully:
+	.string "{COLOR}{BLUE}OK, {PLAYER}…\n"
+	.string "I need you to listen carefully…\p"
+	.string "Wild Pokémon jump out in grassy areas\n"
+	.string "like these, and you should be prepared.\l"
+	.string "Some Pokémon can be really strong!\p"
+	.string "Let's train our Pokémon and see what we\n"
+	.string "can find around here!$"
+
+Route1_Text_ComeBack:
+	.string "{COLOR}{BLUE}{PLAYER}! Come back!\n"
+	.string "Don't leave me!$"
 
 Route1_Jump_Text:
 	.string "{COLOR}{BLUE}Hey!\n"

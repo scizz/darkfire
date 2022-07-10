@@ -752,6 +752,10 @@ Common_EventScript_FerryDepart::
 	waitmovement 0
 	return
 
+Common_EventScript_GetPlayerPos::
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	return
+
 Movement_FerryDepart:
 	walk_slow_right
 	walk_slow_right

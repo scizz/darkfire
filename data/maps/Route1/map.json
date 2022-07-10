@@ -124,55 +124,55 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 32,
+      "y": 31,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
+      "script": "Route1_Storyline_State9"
     },
     {
       "type": "trigger",
       "x": 23,
-      "y": 32,
+      "y": 31,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
+      "script": "Route1_Storyline_State9"
     },
     {
       "type": "trigger",
       "x": 24,
-      "y": 32,
+      "y": 31,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
+      "script": "Route1_Storyline_State9"
     },
     {
       "type": "trigger",
       "x": 27,
       "y": 24,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
+      "script": "Route1_WestExitPrevention"
     },
     {
       "type": "trigger",
       "x": 28,
       "y": 25,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
+      "script": "Route1_WestExitPrevention"
     },
     {
       "type": "trigger",
       "x": 35,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
       "script": "NULL"
     },
     {
@@ -180,8 +180,8 @@
       "x": 36,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
       "script": "NULL"
     },
     {
@@ -189,8 +189,8 @@
       "x": 37,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
       "script": "NULL"
     },
     {
@@ -198,8 +198,8 @@
       "x": 38,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "9",
       "script": "NULL"
     }
   ],
