@@ -1,3 +1,4 @@
+.set LOCALID_PIDGEY, 5
 .set LOCALID_TYLER, 6
 
 Route1_MapScripts::
@@ -84,6 +85,19 @@ Route1_WestExitPrevention::
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
 	waitmovement 0
 	release
+	end
+
+Route1_PidgeyIntro::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_PIDGEY, Levitate
+	waitmovement 0
+	release
+	end
+
+Route1_Tyler::
+	msgbox Route1_Text_Tyler, MSGBOX_NPC
 	end
 
 Route1_Jump_Event::
@@ -362,6 +376,10 @@ WU4R2U3R2U2R4:
 	walk_right
 	step_end
 
+Levitate:
+	levitate
+	step_end
+
 Route1_Text_HeyPlayer:
 	.string "{COLOR}{BLUE}Hey, {PLAYER}!\p"
 	.string "I decided to bring my Pokémon here\n"
@@ -383,6 +401,10 @@ Route1_Text_ListenCarefully:
 Route1_Text_ComeBack:
 	.string "{COLOR}{BLUE}{PLAYER}! Come back!\n"
 	.string "Don't leave me!$"
+
+Route1_Text_Tyler:	
+	.string "{COLOR}{BLUE}Let's train our Pokémon together,\n"
+	.string "{PLAYER}!$"
 
 Route1_Jump_Text:
 	.string "{COLOR}{BLUE}Hey!\n"
@@ -413,10 +435,10 @@ Route1_Jump_Text_5:
 	.string "Who knows what secrets you'll find!$"
 
 Route1_Old_Man_Text:
-	.string "Lots of beginners go through this route,\n"
-	.string "and I get to see them all.\p"
-	.string "They remind me of when I was a wee lad,\n"
-	.string "starting out my journey…\p"
+	.string "Lots of beginners go through this\n"
+	.string "route, and I get to see them all.\p"
+	.string "They remind me of when I was a wee\n"
+	.string "lad, starting out my journey…\p"
 	.string "Great things await ahead!$"
 
 Route1_Boy_Text:

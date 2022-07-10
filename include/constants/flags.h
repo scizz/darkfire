@@ -705,9 +705,9 @@
 #define FLAG_TAKEN_PIKACHU                  0x296
 #define FLAG_HIDE_TYLERS_HOUSE_TYLER        0x297
 #define FLAG_HIDE_TYLERS_HOUSE_BAG          0x298
+#define FLAG_HIDE_ROUTE_1_PIDGEY            0x299
+#define FLAG_HIDE_ROUTE_1_TYLER             0x29A
 
-#define FLAG_UNUSED_0x299                   0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A                   0x29A // Unused Flag
 #define FLAG_UNUSED_0x29B                   0x29B // Unused Flag
 #define FLAG_UNUSED_0x29C                   0x29C // Unused Flag
 #define FLAG_UNUSED_0x29D                   0x29D // Unused Flag
