@@ -1,5 +1,113 @@
+.set LOCALID_TYLER, 23
+.set LOCALID_PRESIDENT, 18
+
 UnionCity_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, UnionCity_OnFrame
 	.byte 0
+
+UnionCity_OnFrame::
+	map_script_2 VAR_STORYLINE_STATE, 10, UnionCity_TylerPresidentIntro
+	.2byte 0
+
+UnionCity_TylerPresidentIntro::
+	lock
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 54
+	call_if_eq UnionCity_TylerPresidentIntro_Left
+	compare VAR_TEMP_0, 56
+	call_if_eq UnionCity_TylerPresidentIntro_Right
+	applymovement LOCALID_TYLER, WD5
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	msgbox UnionCity_Text_WelcomeToUnion, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_TYLER, WL8
+	waitmovement 0
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	goto UnionCity_TylerPresidentIntro_President
+	end
+
+UnionCity_TylerPresidentIntro_Left::
+	applymovement LOCALID_TYLER, Common_Movement_WalkLeft
+	waitmovement 0
+	return
+
+UnionCity_TylerPresidentIntro_Right::
+	applymovement LOCALID_TYLER, Common_Movement_WalkRight
+	waitmovement 0
+	return
+
+UnionCity_TylerPresidentIntro_President::
+	compare VAR_TEMP_0, 54
+	call_if_eq UnionCity_TylerPresidentIntro_PresLeft
+	compare VAR_TEMP_0, 55
+	call_if_eq UnionCity_TylerPresidentIntro_PresMiddle
+	compare VAR_TEMP_0, 56
+	call_if_eq UnionCity_TylerPresidentIntro_PresRight
+	applymovement LOCALID_PRESIDENT, JSR
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_PRESIDENT, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox UnionCity_Text_OhGoodHeavens, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq UnionCity_TylerPresidentIntro_PresidentYes
+	goto UnionCity_TylerPresidentIntro_PresidentNo
+	end
+
+UnionCity_TylerPresidentIntro_PresLeft::
+	applymovement LOCALID_PRESIDENT, RL9
+	waitmovement 0
+	return
+
+UnionCity_TylerPresidentIntro_PresMiddle::
+	applymovement LOCALID_PRESIDENT, RL8
+	waitmovement 0
+	return
+
+UnionCity_TylerPresidentIntro_PresRight::
+	applymovement LOCALID_PRESIDENT, RL7
+	waitmovement 0
+	return
+
+UnionCity_TylerPresidentIntro_PresidentYes::
+	closemessage
+	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox UnionCity_Text_PlayerYes, MSGBOX_DEFAULT
+	closemessage
+	goto UnionCity_TylerPresidentIntro_PresidentFinal
+	end
+
+UnionCity_TylerPresidentIntro_PresidentNo::
+	closemessage
+	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox UnionCity_Text_PlayerNo, MSGBOX_DEFAULT
+	closemessage
+	goto UnionCity_TylerPresidentIntro_PresidentFinal
+	end
+
+UnionCity_TylerPresidentIntro_PresidentFinal::
+	applymovement OBJ_EVENT_ID_PLAYER, DDFL
+	applymovement LOCALID_PRESIDENT, RUL9
+	waitmovement 0
+	removeobject LOCALID_PRESIDENT
+	removeobject LOCALID_TYLER
+	setflag FLAG_HIDE_UNION_CITY_PRESIDENT
+	setvar VAR_STORYLINE_STATE, 11
+	release
+	end
 
 UnionCity_Sign::
 	msgbox UnionCity_Text_Sign, MSGBOX_SIGN
@@ -200,6 +308,128 @@ UnionCity_Gambler_Yes::
 	msgbox UnionCity_Text_Gambler_Yes, MSGBOX_DEFAULT
 	release
 	end
+
+WD5:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WL8:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+JSR:
+	jump_special_right
+	step_end
+
+DDFL:
+	delay_16
+	delay_16
+	face_left
+	step_end
+
+RUL9:
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+RL9:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+RL8:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+RL7:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+UnionCity_Text_WelcomeToUnion::
+	.string "{COLOR}{BLUE}Hey, {PLAYER}!\n"
+	.string "Welcome to Union City!\p"
+	.string "I just came from the Government's\n"
+	.string "Office, but the President isn't home\l"
+	.string "right now…\p"
+	.string "It's a shame, really, because I had\n"
+	.string "some important questions for him.\p"
+	.string "Especially about this SUBO gang\n"
+	.string "running around the city!\p"
+	.string "Oh, well…\p"
+	.string "Maybe he is up to bigger and better\n"
+	.string "things.\p"
+	.string "Anyway, {PLAYER}, someone told me to\n"
+	.string "stock up on items for Anheim Forest,\l"
+	.string "to the west of the city…\p"
+	.string "Bugs aren't a problem for me, but they\n"
+	.string "might be for you, so I'm passing on\l"
+	.string "the advice!\p"
+	.string "Later!$"
+
+UnionCity_Text_OhGoodHeavens:
+	.string "President: Oh, good heavens!\n"
+	.string "I am so sorry, I didn't see you!\p"
+	.string "Current events in the city have me\n"
+	.string "running around on a wild goose chase!\p"
+	.string "…\n"
+	.string "…\p"
+	.string "You look like a Trainer!\n"
+	.string "A new Trainer!\p"
+	.string "You must have come from Chandra\n"
+	.string "Village, yes?$"
+
+UnionCity_Text_PlayerYes:
+	.string "President: Oh, how wonderful!\p"
+	.string "Well, Trainer, be sure to pay me a\n"
+	.string "visit in my office when things are a\l"
+	.string "little less crazy around here.\p"
+	.string "Gotta run!$"
+
+UnionCity_Text_PlayerNo:
+	.string "President: … No?\p"
+	.string "Well, Trainer, be sure to pay me a\n"
+	.string "visit in my office when things are a\l"
+	.string "little less crazy around here.\p"
+	.string "Gotta run!$"
 
 UnionCity_Text_Sign:
 	.string "Union City\p"

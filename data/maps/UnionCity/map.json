@@ -252,7 +252,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_UNION_CITY_PRESIDENT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
@@ -317,7 +317,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_UNION_CITY_PRESIDENT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
@@ -540,21 +540,21 @@
       "x": 54,
       "y": 53,
       "elevation": 0,
-      "dest_map": "MAP_UNION_CITY",
+      "dest_map": "MAP_UNION_CITY_INTERLINK",
       "dest_warp_id": 0
     },
     {
       "x": 55,
       "y": 53,
       "elevation": 0,
-      "dest_map": "MAP_UNION_CITY",
+      "dest_map": "MAP_UNION_CITY_INTERLINK",
       "dest_warp_id": 0
     },
     {
       "x": 56,
       "y": 53,
       "elevation": 0,
-      "dest_map": "MAP_UNION_CITY",
+      "dest_map": "MAP_UNION_CITY_INTERLINK",
       "dest_warp_id": 0
     },
     {
