@@ -88,12 +88,169 @@ Route1_WestExitPrevention::
 	end
 
 Route1_PidgeyIntro::
-	lock
+	setobjectmovementtype LOCALID_PIDGEY, MOVEMENT_TYPE_NONE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	playse SE_PIN
+	waitse
+	playmoncry SPECIES_PIDGEY, 0
+	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	delay 10
+	applymovement LOCALID_TYLER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 35
+	goto_if_eq Route1_PidgeyIntro_Left
+	compare VAR_TEMP_0, 36
+	goto_if_eq Route1_PidgeyIntro_LeftMiddle
+	compare VAR_TEMP_0, 37
+	goto_if_eq Route1_PidgeyIntro_Left
+	goto Route1_PidgeyIntro_Right
+	end
+
+Route1_PidgeyIntro_Left::
+	applymovement LOCALID_TYLER, WFR2U4
+	waitmovement 0
+	goto Route1_PidgeyMain
+	end
+
+Route1_PidgeyIntro_LeftMiddle::
+	applymovement LOCALID_TYLER, WFRU4
+	waitmovement 0
+	goto Route1_PidgeyMain
+	end
+
+Route1_PidgeyIntro_Right::
+	applymovement LOCALID_TYLER, WFR3U4
+	waitmovement 0
+	goto Route1_PidgeyMain
+	end
+
+Route1_PidgeyMain::
+	delay 30
+	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox Route1_PidgeyMain_ItsAPidgey, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TYLER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_PIDGEY, Levitate
 	waitmovement 0
-	release
+	delay 30
+	applymovement LOCALID_PIDGEY, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PIDGEY, FlyUp
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 35
+	goto_if_eq Route1_PidgeyFly_Left
+	compare VAR_TEMP_0, 36
+	goto_if_eq Route1_PidgeyFly_LeftMiddle
+	compare VAR_TEMP_0, 37
+	goto_if_eq Route1_PidgeyFly_RightMiddle
+	goto Route1_PidgeyFly_Right
+	end
+
+Route1_PidgeyFly_Left::
+	applymovement LOCALID_PIDGEY, WRD2
+	waitmovement 0
+	goto Route1_PidgeyBattle
+	end
+
+Route1_PidgeyFly_LeftMiddle::
+	applymovement LOCALID_PIDGEY, WR2D2
+	waitmovement 0
+	goto Route1_PidgeyBattle
+	end
+
+Route1_PidgeyFly_RightMiddle::
+	applymovement LOCALID_PIDGEY, WR3D2
+	waitmovement 0
+	goto Route1_PidgeyBattle
+	end
+
+Route1_PidgeyFly_Right::
+	applymovement LOCALID_PIDGEY, WR4D2
+	waitmovement 0
+	goto Route1_PidgeyBattle
+	end
+
+Route1_PidgeyBattle::
+	applymovement LOCALID_PIDGEY, FlyDown
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	applymovement 3, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement 3, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox Route1_PidgeyBattle_PlayerLookOut, MSGBOX_DEFAULT
+	setwildbattle SPECIES_PIDGEY, 4, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_PIDGEY, 1
+	waitmoncry
+	delay 10
+	fadescreen 1
+	delay 60
+	removeobject LOCALID_PIDGEY
+	setflag FLAG_HIDE_ROUTE_1_PIDGEY
+	fadescreen 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 35
+	goto_if_eq Route1_PidgeyPlayer_Left
+	goto Route1_PidgeyPlayer_Other
+	end
+
+Route1_PidgeyPlayer_Left::
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	goto Route1_PidgeyFinal
+	end
+
+Route1_PidgeyPlayer_Other::
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	goto Route1_PidgeyFinal
+	end
+
+Route1_PidgeyFinal::
+	msgbox Route1_PidgeyFinal_WayToGo, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_TYLER, WU6
+	waitmovement 0
+	removeobject LOCALID_TYLER
+	setflag FLAG_HIDE_ROUTE_1_TYLER
+	setvar VAR_STORYLINE_STATE, 10
+	setvar VAR_TEMP_3, 1
 	end
 
 Route1_Tyler::
@@ -153,7 +310,17 @@ Route1_Jump_Event_Complete::
 	end
 
 Route1_Old_Man::
-	msgbox Route1_Old_Man_Text, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_eq VAR_TEMP_3, 1, Route1_Old_Man_Pidgey
+	msgbox Route1_Old_Man_Text, MSGBOX_DEFAULT
+	release
+	end
+
+Route1_Old_Man_Pidgey::
+	msgbox Route1_Old_Man_Text_Pidgey, MSGBOX_DEFAULT
+	setvar VAR_TEMP_3, 0
+	release
 	end
 
 Route1_Boy::
@@ -201,6 +368,8 @@ WU2R3U3R3U2R6:
 	walk_right
 	walk_up
 	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -222,6 +391,8 @@ WU3R3U3R3U2R5:
 	walk_right
 	walk_right
 	walk_right
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_right
@@ -247,6 +418,8 @@ WU4R3U3R3U2R4:
 	walk_right
 	walk_up
 	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -263,6 +436,8 @@ WU2R2U2R3U3R6:
 	walk_right
 	walk_right
 	walk_right
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -288,6 +463,8 @@ WU3R2U2R3U3R5:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -310,6 +487,8 @@ WU4R2U2R3U3R4:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -326,6 +505,8 @@ WU2R2U3R2U2R6:
 	walk_up
 	walk_right
 	walk_right
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_right
@@ -349,6 +530,8 @@ WU3R2U3R2U2R5:
 	walk_right
 	walk_up
 	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -370,14 +553,82 @@ WU4R2U3R2U2R4:
 	walk_right
 	walk_up
 	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
 	walk_right
 	walk_right
 	step_end
 
+WFRU4:
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+WFR2U4:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+WFR3U4:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
 Levitate:
 	levitate
+	step_end
+
+WRD2:
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+WR2D2:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+WR3D2:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+WR4D2:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+FlyUp:
+	stop_levitate
+	fly_up
+	step_end
+
+FlyDown:
+	fly_down
 	step_end
 
 Route1_Text_HeyPlayer:
@@ -405,6 +656,40 @@ Route1_Text_ComeBack:
 Route1_Text_Tyler:	
 	.string "{COLOR}{BLUE}Let's train our Pokémon together,\n"
 	.string "{PLAYER}!$"
+
+Route1_PidgeyIntro_Pidgey:
+	.string "Pidgey: Gaaarr!$"
+
+Route1_PidgeyIntro_Text_PlayerFoundSomething:
+	.string "{COLOR}{BLUE}What's that, {PLAYER}?\n"
+	.string "Have you found something?$"
+
+Route1_PidgeyMain_ItsAPidgey:
+	.string "{COLOR}{BLUE}Woah, it looks like a Pidgey!\p"
+	.string "Be careful, {PLAYER}.\p"
+	.string "Pidgeys can strike ferociously if they\n"
+	.string "feel threatened or alarmed!$"
+
+Route1_PidgeyBattle_PlayerLookOut:
+	.string "{COLOR}{BLUE}{PLAYER}!\n"
+	.string "Look out!$"
+
+Route1_PidgeyFinal_WayToGo:
+	.string "{COLOR}{BLUE}Good job, {PLAYER}!\n"
+	.string "You handled that Pidgey really well!\p"
+	.string "I was a little worried it was going to\n"
+	.string "whip up a Sand Attack!\p"
+	.string "…\p"
+	.string "Anyway, with that Pidgey dealt with,\n"
+	.string "I'm going to explore the town ahead.\p"
+	.string "There's a really nice hotel there and I\n"
+	.string "want to show people my new Pokémon.\p"
+	.string "Oh…\n"
+	.string "Also a quick heads up.\p"
+	.string "I've heard they're having some issues\n"
+	.string "with Krabby on the beach…\l"
+	.string "So I definitely won't be going there!\p"
+	.string "See ya!$"
 
 Route1_Jump_Text:
 	.string "{COLOR}{BLUE}Hey!\n"
@@ -440,6 +725,12 @@ Route1_Old_Man_Text:
 	.string "They remind me of when I was a wee\n"
 	.string "lad, starting out my journey…\p"
 	.string "Great things await ahead!$"
+
+Route1_Old_Man_Text_Pidgey:
+	.string "Incredible! Just incredible!\n"
+	.string "You handled that Pidgey exceptionally!\p"
+	.string "You are a real Trainer to watch!\n"
+	.string "Bravo!$"
 
 Route1_Boy_Text:
 	.string "{COLOR}{BLUE}I managed to get this far without a\n"

@@ -182,7 +182,7 @@
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "9",
-      "script": "NULL"
+      "script": "Route1_PidgeyIntro"
     },
     {
       "type": "trigger",
@@ -191,7 +191,7 @@
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "9",
-      "script": "NULL"
+      "script": "Route1_PidgeyIntro"
     },
     {
       "type": "trigger",
@@ -200,7 +200,7 @@
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "9",
-      "script": "NULL"
+      "script": "Route1_PidgeyIntro"
     }
   ],
   "bg_events": [

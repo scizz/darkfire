@@ -292,7 +292,7 @@
     },
     {
       "type": "trigger",
-      "x": 51,
+      "x": 50,
       "y": 2,
       "elevation": 0,
       "var": "VAR_TYLERS_HOUSE",
