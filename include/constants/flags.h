@@ -708,10 +708,10 @@
 #define FLAG_HIDE_ROUTE_1_PIDGEY            0x299
 #define FLAG_HIDE_ROUTE_1_TYLER             0x29A
 #define FLAG_HIDE_UNION_CITY_PRESIDENT      0x29B
+#define FLAG_HIDE_ANHEIM_FOREST_LUCYS_PARENTS 0x29C
+#define FLAG_HIDE_ANHEIM_FOREST_LUCY        0x29D
+#define FLAG_HIDE_ANHEIM_FOREST_BEEDRILL    0x29E
 
-#define FLAG_UNUSED_0x29C                   0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D                   0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E                   0x29E // Unused Flag
 #define FLAG_UNUSED_0x29F                   0x29F // Unused Flag
 #define FLAG_UNUSED_0x2A0                   0x2A0 // Unused Flag
 #define FLAG_UNUSED_0x2A1                   0x2A1 // Unused Flag
