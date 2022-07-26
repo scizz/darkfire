@@ -110,6 +110,72 @@ AnheimForest_LucyEventEnd::
 	release
 	end
 
+AnheimForest_Beedrill::
+	lock
+	faceplayer
+	playmoncry SPECIES_BEEDRILL, 0
+	msgbox AnheimForest_Text_Beedrill, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_BEEDRILL, 7, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_BEEDRILL, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 27
+	setflag FLAG_HIDE_ANHEIM_FOREST_BEEDRILL
+	setobjectmovementtype 26, MOVEMENT_TYPE_FACE_LEFT
+	fadescreen 0
+	release
+	end
+
+AnheimForest_Lucy::
+	lock
+	faceplayer
+	msgbox AnheimForest_Text_Lucy, MSGBOX_DEFAULT
+	delay 30
+	msgbox AnheimForest_Text_Dots, MSGBOX_DEFAULT
+	delay 30
+	msgbox AnheimForest_Text_PleaseMove, MSGBOX_DEFAULT
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement 26, WL5
+	waitmovement 0
+	applymovement 27, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox AnheimForest_Text_Thanks, MSGBOX_DEFAULT
+	closemessage
+	applymovement 26, WDL4
+	waitmovement 0
+	removeobject 26
+	setflag FLAG_HIDE_ANHEIM_FOREST_LUCY
+	release
+	end
+
+WL5:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WDL4:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 AnheimForest_Text_Sign:
 	.string "Anheim Forest\n"
 	.string "Please do not litter!$"
@@ -219,3 +285,23 @@ AnheimForest_Text_FatherRareCandy:
 	.string "Well, {PLAYER},\n"
 	.string "thank you for all of your help!\p"
 	.string "We wish you the best!$"
+
+AnheimForest_Text_Beedrill:
+	.string "Beedrill: Bzzzr!!$"
+
+AnheimForest_Text_Lucy:
+	.string "{COLOR}{RED}Hey…\p"
+	.string "…\p"
+	.string "I didn't need your help, you know.\n"
+	.string "I was handling just fine.$"
+
+AnheimForest_Text_Dots:
+	.string "{COLOR}{RED}… … …\n"
+	.string "… … …$"
+
+AnheimForest_Text_PleaseMove:
+	.string "{COLOR}{RED}…\n"
+	.string "Could you please move?$"
+
+AnheimForest_Text_Thanks:
+	.string "{COLOR}{RED}Thanks.$"
