@@ -36,7 +36,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
@@ -49,7 +49,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
@@ -62,7 +62,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
@@ -101,7 +101,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
@@ -114,7 +114,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
@@ -127,7 +127,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LUCY",
@@ -140,7 +140,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
@@ -233,7 +233,33 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "0",
+      "script": "GreendaleVillage_Tournament"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "11",
+      "script": "GreendaleVillage_Tournament"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "11",
+      "script": "GreendaleVillage_Tournament"
+    }
   ],
   "bg_events": [
     {
