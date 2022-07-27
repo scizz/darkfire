@@ -1,5 +1,45 @@
+.set LOCALID_SUBO, 24
+
 AnheimForest_MapScripts::
 	.byte 0
+
+AnheimForest_SUBO::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	opendoor 31, 45
+	waitdooranim
+	clearflag FLAG_HIDE_ANHEIM_FOREST_SUBO
+	addobject LOCALID_SUBO
+	applymovement LOCALID_SUBO, Common_Movement_WalkDown
+	waitmovement 0
+	closedoor 31, 45
+	waitdooranim
+	msgbox AnheimForest_Text_SUBO_Dots, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox AnheimForest_Text_WhereDidThatBeedrill, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_FaceUp
+	waitmovement 0
+	opendoor 31, 45
+	waitdooranim
+	applymovement LOCALID_SUBO, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_SUBO
+	setflag FLAG_HIDE_ANHEIM_FOREST_SUBO
+	closedoor 31, 45
+	waitdooranim
+	setvar VAR_STORYLINE_STATE, 13
+	release
+	end
 
 AnheimForest_Sign::
 	msgbox AnheimForest_Text_Sign, MSGBOX_SIGN
@@ -175,6 +215,12 @@ WDL4:
 	walk_left
 	walk_left
 	step_end
+
+AnheimForest_Text_SUBO_Dots:
+	.string "{COLOR}{BLUE}…$"
+
+AnheimForest_Text_WhereDidThatBeedrill:
+	.string "{COLOR}{BLUE}Where did that Beedrill go…$"
 
 AnheimForest_Text_Sign:
 	.string "Anheim Forest\n"

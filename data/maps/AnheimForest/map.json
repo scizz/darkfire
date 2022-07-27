@@ -553,18 +553,18 @@
       "x": 26,
       "y": 47,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "12",
+      "script": "AnheimForest_SUBO"
     },
     {
       "type": "trigger",
       "x": 26,
       "y": 48,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "12",
+      "script": "AnheimForest_SUBO"
     },
     {
       "type": "trigger",

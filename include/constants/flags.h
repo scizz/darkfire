@@ -713,8 +713,8 @@
 #define FLAG_HIDE_ANHEIM_FOREST_BEEDRILL    0x29E
 #define FLAG_HIDE_GREENDALE_VILLAGE_ROSE    0x29F
 #define FLAG_START_GREENDALE_VILLAGE_TOURNAMENT 0x2A0
+#define FLAG_HIDE_ANHEIM_FOREST_SUBO        0x2A1
 
-#define FLAG_UNUSED_0x2A1                   0x2A1 // Unused Flag
 #define FLAG_UNUSED_0x2A2                   0x2A2 // Unused Flag
 #define FLAG_UNUSED_0x2A3                   0x2A3 // Unused Flag
 #define FLAG_UNUSED_0x2A4                   0x2A4 // Unused Flag
