@@ -544,6 +544,8 @@
 #define MUS_ROUTE_1                 611
 #define MUS_TRAINER_BATTLE          612
 #define MUS_ABANDONED_MUSEUM        613
+#define MUS_ANHEIM_FOREST           614
+
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

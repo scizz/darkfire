@@ -1274,3 +1274,6 @@ $(MID_SUBDIR)/mus_trainer_battle.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_abandoned_museum.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V107
+
+$(MID_SUBDIR)/mus_anheim_forest.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V097
