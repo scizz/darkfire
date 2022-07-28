@@ -1262,3 +1262,6 @@ $(MID_SUBDIR)/se_m_leer.s: %.s: %.mid
 
 $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -v100 -P5
+
+$(MID_SUBDIR)/mus_chandra_village.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V127
