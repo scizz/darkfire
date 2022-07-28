@@ -1280,3 +1280,6 @@ $(MID_SUBDIR)/mus_anheim_forest.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_cave.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
+
+$(MID_SUBDIR)/mus_ice_palace.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V087
