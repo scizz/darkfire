@@ -1268,3 +1268,6 @@ $(MID_SUBDIR)/mus_chandra_village.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_route_1.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V117
+
+$(MID_SUBDIR)/mus_trainer_battle.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V087

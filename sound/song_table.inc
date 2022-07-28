@@ -613,6 +613,7 @@ gSongTable::
 	song ph_nurse_solo, 2, 2
 	song mus_chandra_village, 0, 0
 	song mus_route_1, 0, 0
+	song mus_trainer_battle, 0, 0
 
 	.align 2
 dummy_song_header:
