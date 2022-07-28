@@ -616,6 +616,7 @@ gSongTable::
 	song mus_trainer_battle, 0, 0
 	song mus_abandoned_museum, 0, 0
 	song mus_anheim_forest, 0, 0
+	song mus_cave, 0, 0
 
 	.align 2
 dummy_song_header:
