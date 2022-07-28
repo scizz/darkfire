@@ -223,12 +223,8 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	msgbox GreendaleVillage_Text_PfftWhatAWimp, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_RANGER, WLD6
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, WUFL
+	applymovement OBJ_EVENT_ID_FOLLOWER, WUFFL
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -601,7 +597,7 @@ WDRFUD16FD:
 	walk_right
 	face_up
 	delay_16
-	face_down
+	follower_face_down
 	step_end
 	
 D16FD:
