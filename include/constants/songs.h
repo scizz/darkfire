@@ -549,6 +549,7 @@
 #define MUS_ICE_PALACE              616
 #define MUS_SNOWDRIFT_FOREST        617
 #define MUS_TAMAROK_PEAK            618
+#define MUS_TEMPLE_OF_KINGS         619
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
