@@ -622,6 +622,7 @@ gSongTable::
 	song mus_tamarok_peak, 0, 0
 	song mus_temple_of_kings, 0, 0
 	song mus_subo_control, 0, 0
+	song mus_subo_theme, 0, 0
 
 	.align 2
 dummy_song_header:

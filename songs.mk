@@ -1295,3 +1295,6 @@ $(MID_SUBDIR)/mus_temple_of_kings.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_subo_control.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V087
+
+$(MID_SUBDIR)/mus_subo_theme.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V102
