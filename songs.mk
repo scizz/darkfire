@@ -1292,3 +1292,6 @@ $(MID_SUBDIR)/mus_tamarok_peak.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_temple_of_kings.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V107
+
+$(MID_SUBDIR)/mus_subo_control.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V087

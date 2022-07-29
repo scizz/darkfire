@@ -354,6 +354,9 @@ void PrintControllerOp(const Event& event)
     case 0x01:
         PrintOp(event.time, "MOD   ", "%u", event.param2);
         break;
+    case 0x03:
+        PrintByte("KEYSH , %s_key%+d", g_asmLabel.c_str(), -event.param2);
+        break;
     case 0x07:
         PrintOp(event.time, "VOL   ", "%u*%s_mvl/mxv", event.param2, g_asmLabel.c_str());
         break;
