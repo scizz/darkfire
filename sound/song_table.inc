@@ -627,6 +627,7 @@ gSongTable::
 	song mus_route_5_6, 0, 0
 	song mus_route_7_8, 0, 0
 	song mus_route_9_10, 0, 0
+	song mus_dreamworld, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -556,6 +556,7 @@
 #define MUS_ROUTE_5_6               623
 #define MUS_ROUTE_7_8               624
 #define MUS_ROUTE_9_10              625
+#define MUS_DREAMWORLD              626
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
