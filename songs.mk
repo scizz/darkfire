@@ -1306,4 +1306,7 @@ $(MID_SUBDIR)/mus_route_5_6.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V087
 
 $(MID_SUBDIR)/mus_route_7_8.s: %.s: %.mid
-	$(MID) $< $@ -E -G191 -V087
+	$(MID) $< $@ -E -G191 -V08
+
+$(MID_SUBDIR)/mus_route_9_10.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V082
