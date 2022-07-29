@@ -1298,3 +1298,6 @@ $(MID_SUBDIR)/mus_subo_control.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_subo_theme.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V102
+
+$(MID_SUBDIR)/mus_route_3_4.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V087
