@@ -719,7 +719,7 @@ void BattleArena_AddSkillPoints(u8 battler)
         }
         else if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
         {
-            if (!(gMoveResultFlags & MOVE_RESULT_MISSED) || gBattleCommunication[6] != 1)
+            if (!(gMoveResultFlags & MOVE_RESULT_MISSED) || gBattleCommunication[MISS_TYPE] != B_MSG_PROTECTED)
                 skillPoints[battler] -= 2;
         }
         else if ((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) && (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE))
@@ -741,7 +741,7 @@ void BattleArena_AddSkillPoints(u8 battler)
     }
 }
 
-void BattleArena_DeductMindPoints(u8 battler, u16 stringId)
+void BattleArena_DeductSkillPoints(u8 battler, u16 stringId)
 {
     s8 *skillPoints = gBattleStruct->arenaSkillPoints;
 

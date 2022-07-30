@@ -52,8 +52,7 @@ enum
 {
     SAVE_NORMAL,
     SAVE_LINK, // Link / Battle Frontier
-    //EREADER_SAVE, // deprecated in Emerald
-    SAVE_LINK2, // unknown 2nd link save
+    SAVE_EREADER, // deprecated in Emerald
     SAVE_HALL_OF_FAME,
     SAVE_OVERWRITE_DIFFERENT_FILE,
     SAVE_HALL_OF_FAME_ERASE_BEFORE // unused
@@ -105,8 +104,8 @@ bool8 WriteSaveBlock2(void);
 bool8 WriteSaveBlock1Sector(void);
 u8 LoadGameSave(u8 saveType);
 u16 GetSaveBlocksPointersBaseOffset(void);
-u32 TryReadSpecialSaveSector(u8 sector, u8* dst);
-u32 TryWriteSpecialSaveSector(u8 sector, u8* src);
+u32 TryReadSpecialSaveSector(u8 sector, u8 *dst);
+u32 TryWriteSpecialSaveSector(u8 sector, u8 *src);
 void Task_LinkFullSave(u8 taskId);
 
 // save_failed_screen.c
