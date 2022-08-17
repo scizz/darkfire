@@ -1037,21 +1037,13 @@ struct SaveBlock1
     /*0x322C*/ struct MysteryGiftSave mysteryGift;
     /*0x3???*/ u8 dexSeen[NUM_DEX_FLAG_BYTES];
     /*0x3???*/ u8 dexCaught[NUM_DEX_FLAG_BYTES];
-<<<<<<< HEAD
-    /*0x3718*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
-=======
     /*0x3???*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
->>>>>>> 6b35dd5774146d0d29b259b5aefba6409f7ad82c
     /*0x3???*/ struct RamScript ramScript;
     /*0x3???*/ struct RecordMixingGift recordMixingGift;
     /*0x3???*/ LilycoveLady lilycoveLady;
     /*0x3???*/ struct TrainerNameRecord trainerNameRecords[20];
     /*0x3???*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
-<<<<<<< HEAD
-    /*0x3D64*/ struct TrainerHillSave trainerHill;
-=======
     /*0x3???*/ struct TrainerHillSave trainerHill;
->>>>>>> 6b35dd5774146d0d29b259b5aefba6409f7ad82c
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
 };
