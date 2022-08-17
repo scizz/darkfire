@@ -4,6 +4,7 @@
 #include "pokemon.h"
 #include "battle_controllers.h"
 #include "battle_interface.h"
+#include "battle_z_move.h"
 #include "graphics.h"
 #include "sprite.h"
 #include "window.h"
@@ -160,40 +161,40 @@ static const u8 *GetHealthboxElementGfxPtr(u8);
 static u8* AddTextPrinterAndCreateWindowOnHealthbox(const u8 *, u32, u32, u32, u32 *);
 
 static void RemoveWindowOnHealthbox(u32 windowId);
-static void UpdateHpTextInHealthboxInDoubles(u8 healthboxSpriteId, s16 value, u8 maxOrCurrent);
-static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId);
+static void UpdateHpTextInHealthboxInDoubles(u8, s16, u8);
+static void UpdateStatusIconInHealthbox(u8);
 
-static void TextIntoHealthboxObject(void *dest, u8 *windowTileData, s32 windowWidth);
-static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 windowWidth);
-static void HpTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 windowWidth);
-static void FillHealthboxObject(void *dest, u32 arg1, u32 arg2);
+static void TextIntoHealthboxObject(void *, u8 *, s32);
+static void SafariTextIntoHealthboxObject(void *, u8 *, u32);
+static void HpTextIntoHealthboxObject(void *, u8 *, u32);
+static void FillHealthboxObject(void *, u32, u32);
 
-static void Task_HidePartyStatusSummary_BattleStart_1(u8 taskId);
-static void Task_HidePartyStatusSummary_BattleStart_2(u8 taskId);
-static void Task_HidePartyStatusSummary_DuringBattle(u8 taskId);
+static void Task_HidePartyStatusSummary_BattleStart_1(u8);
+static void Task_HidePartyStatusSummary_BattleStart_2(u8);
+static void Task_HidePartyStatusSummary_DuringBattle(u8);
 
-static void SpriteCB_HealthBoxOther(struct Sprite *sprite);
-static void SpriteCB_HealthBar(struct Sprite *sprite);
-static void SpriteCB_StatusSummaryBar_Enter(struct Sprite *sprite);
-static void SpriteCB_StatusSummaryBar_Exit(struct Sprite *sprite);
-static void SpriteCB_StatusSummaryBalls_Enter(struct Sprite *sprite);
-static void SpriteCB_StatusSummaryBalls_Exit(struct Sprite *sprite);
-static void SpriteCB_StatusSummaryBalls_OnSwitchout(struct Sprite *sprite);
+static void SpriteCB_HealthBoxOther(struct Sprite *);
+static void SpriteCB_HealthBar(struct Sprite *);
+static void SpriteCB_StatusSummaryBar_Enter(struct Sprite *);
+static void SpriteCB_StatusSummaryBar_Exit(struct Sprite *);
+static void SpriteCB_StatusSummaryBalls_Enter(struct Sprite *);
+static void SpriteCB_StatusSummaryBalls_Exit(struct Sprite *);
+static void SpriteCB_StatusSummaryBalls_OnSwitchout(struct Sprite *);
 
-static void SpriteCb_MegaTrigger(struct Sprite *sprite);
-static void SpriteCb_MegaIndicator(struct Sprite *sprite);
+static void SpriteCb_MegaTrigger(struct Sprite *);
+static void SpriteCb_MegaIndicator(struct Sprite *);
 
-static u8 GetStatusIconForBattlerId(u8 statusElementId, u8 battlerId);
-static s32 CalcNewBarValue(s32 maxValue, s32 currValue, s32 receivedValue, s32 *arg3, u8 arg4, u16 arg5);
-static u8 GetScaledExpFraction(s32 currValue, s32 receivedValue, s32 maxValue, u8 scale);
-static void MoveBattleBarGraphically(u8 battlerId, u8 whichBar);
-static u8 CalcBarFilledPixels(s32 maxValue, s32 oldValue, s32 receivedValue, s32 *currValue, u8 *arg4, u8 scale);
+static u8 GetStatusIconForBattlerId(u8, u8);
+static s32 CalcNewBarValue(s32, s32, s32, s32 *, u8, u16);
+static u8 GetScaledExpFraction(s32, s32, s32, u8);
+static void MoveBattleBarGraphically(u8, u8);
+static u8 CalcBarFilledPixels(s32, s32, s32, s32 *, u8 *, u8);
 
-static void SpriteCb_AbilityPopUp(struct Sprite *sprite);
-static void Task_FreeAbilityPopUpGfx(u8 taskId);
+static void SpriteCb_AbilityPopUp(struct Sprite *);
+static void Task_FreeAbilityPopUpGfx(u8);
 
-static void SpriteCB_LastUsedBall(struct Sprite *sprite);
-static void SpriteCB_LastUsedBallWin(struct Sprite *sprite);
+static void SpriteCB_LastUsedBall(struct Sprite *);
+static void SpriteCB_LastUsedBallWin(struct Sprite *);
 
 static const struct OamData sOamData_64x32 =
 {
@@ -1528,6 +1529,12 @@ void HideMegaTriggerSprite(void)
         ChangeMegaTriggerSprite(gBattleStruct->mega.triggerSpriteId, 0);
         gSprites[gBattleStruct->mega.triggerSpriteId].tHide = TRUE;
     }
+}
+
+void HideTriggerSprites(void)
+{
+    HideMegaTriggerSprite();
+    HideZMoveTriggerSprite();
 }
 
 void DestroyMegaTriggerSprite(void)
@@ -3309,7 +3316,7 @@ bool32 CanThrowLastUsedBall(void)
 #else
     if (!CanThrowBall())
         return FALSE;
-    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+    if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_FRONTIER))
         return FALSE;
     if (!CheckBagHasItem(gLastThrownBall, 1))
         return FALSE;
