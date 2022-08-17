@@ -7728,8 +7728,8 @@ void SetWildMonHeldItem(void)
 {
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_TRAINER | BATTLE_TYPE_PYRAMID | BATTLE_TYPE_PIKE)))
     {
-        u16 rnd = Random() % 100;
-        u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, 0);
+        u16 rnd;
+        u16 species;
         u16 chanceNoItem = 45;
         u16 chanceNotRare = 95;
         u16 count = (WILD_DOUBLE_BATTLE) ? 2 : 1;
@@ -7737,13 +7737,13 @@ void SetWildMonHeldItem(void)
 
         if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG, 0)
             && (GetMonAbility(&gPlayerParty[0]) == ABILITY_COMPOUND_EYES
-             || GetMonAbility(&gPlayerParty[0]) == ABILITY_SUPER_LUCK))
+                || GetMonAbility(&gPlayerParty[0]) == ABILITY_SUPER_LUCK))
         {
             chanceNoItem = 20;
             chanceNotRare = 80;
         }
 
-        if (gMapHeader.mapLayoutId == LAYOUT_ALTERING_CAVE)
+        for (i = 0; i < count; i++)
         {
             if (GetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, NULL) != ITEM_NONE)
                 continue; // prevent ovewriting previously set item
