@@ -249,14 +249,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
-    },
-    {
-      "type": "hidden_item",
-      "x": 4,
-      "y": 5,
-      "elevation": 3,
-      "item": "ITEM_ICE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL"
     }
   ]
 }

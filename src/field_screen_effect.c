@@ -275,7 +275,7 @@ void FieldCB_DefaultWarpExit(void)
     WarpFadeInScreen();
     SetUpWarpExitTask();
     FollowMe_WarpSetEnd();
-    ScriptContext2_Enable();
+    ScriptContext_Enable();
     LockPlayerFieldControls();
 }
 
@@ -421,7 +421,7 @@ static void Task_ExitNonDoor(u8 taskId)
         if (WaitForWeatherFadeIn())
         {
             UnfreezeObjectEvents();
-            ScriptContext2_Disable();
+            ScriptContext_Stop();
             gSaveBlock2Ptr->follower.comeOutDoorStairs = 2;
             UnlockPlayerFieldControls();
             DestroyTask(taskId);

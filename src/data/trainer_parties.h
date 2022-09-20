@@ -3819,7 +3819,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Karen5[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_ToriAndTia[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ToriAndTia[] = {
     {
     .iv = 0,
     .lvl = 18,
