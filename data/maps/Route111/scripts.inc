@@ -152,8 +152,8 @@ Route111_EventScript_RootFossilDisappeared:: @ 81F0EA7
 	end
 
 @ Unused
-Route111_Movement_PlayerFall:: @ 81F0EB1
-	store_lock_anim
+Route111_Movement_PlayerFall::
+	lock_anim
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down

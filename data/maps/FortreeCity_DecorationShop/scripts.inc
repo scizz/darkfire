@@ -19,8 +19,8 @@ FortreeCity_DecorationShop_EventScript_ClerkDesks:: @ 8218020
 	release
 	end
 
-    .align 2
-FortreeCity_DecorationShop_PokemartDecor_Desks: @ 8218038
+	.align 2
+FortreeCity_DecorationShop_PokemartDecor_Desks:
 	.2byte DECOR_SMALL_DESK
 	.2byte DECOR_POKEMON_DESK
 	.2byte DECOR_HEAVY_DESK

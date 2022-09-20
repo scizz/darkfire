@@ -33,8 +33,8 @@ EverGrandeCity_ChampionsRoom_EventScript_EnterRoom:: @ 8228A1E
 	waitmovement 0
 	setvar VAR_TEMP_1, 1
 	goto EverGrandeCity_ChampionsRoom_EventScript_Wallace
-    releaseall
-    end
+	releaseall
+	end
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace: @ 8228A42
 	walk_up

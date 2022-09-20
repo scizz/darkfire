@@ -134,7 +134,7 @@ SkyPillar_Top_EventScript_AwakenRayquaza:: @ 823979A
 	special RemoveCameraObject
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 5
 	setvar VAR_SKY_PILLAR_STATE, 1
-	setvar VAR_SKY_PILLAR_RAQUAZA_CRY_DONE, 1
+	setvar VAR_SKY_PILLAR_RAYQUAZA_CRY_DONE, 1
 	releaseall
 	end
 

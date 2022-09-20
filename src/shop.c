@@ -63,7 +63,7 @@ static void BuyMenuBuildListMenuTemplate(void);
 static void BuyMenuInitBgs(void);
 static void BuyMenuInitWindows(void);
 static void BuyMenuDecompressBgGraphics(void);
-static void BuyMenuSetListEntry(struct ListMenuItem*, u16, u8*);
+static void BuyMenuSetListEntry(struct ListMenuItem *, u16, u8 *);
 static void BuyMenuAddItemIcon(u16, u8);
 static void BuyMenuRemoveItemIcon(u16, u8);
 static void BuyMenuPrint(u8 windowId, const u8 *text, u8 x, u8 y, s8 speed, u8 colorSet);
@@ -85,7 +85,7 @@ static bool8 IsMetatileLayerEmpty(const u16 *src)
     return TRUE;
 }
 
-static void BuyMenuDrawMapMetatile(s16, s16, const u16*, u8);
+static void BuyMenuDrawMapMetatile(s16, s16, const u16 *, u8);
 static void BuyMenuDrawMapMetatileLayer(u16 *dest, s16 offset1, s16 offset2, const u16 *src);
 static bool8 BuyMenuCheckIfObjectEventOverlapsMenuBg(s16 *);
 static void ExitBuyMenu(u8 taskId);
@@ -289,7 +289,7 @@ static u8 CreateShopMenu(u8 martType)
 {
     int numMenuItems;
 
-    ScriptContext2_Enable();
+    LockPlayerFieldControls();
     sMartInfo.martType = martType;
 
     if (martType == MART_TYPE_NORMAL)
@@ -311,7 +311,7 @@ static u8 CreateShopMenu(u8 martType)
         numMenuItems = ARRAY_COUNT(sShopMenuActions_BuyQuit);
     }
 
-    SetStandardWindowBorderStyle(sMartInfo.windowId, 0);
+    SetStandardWindowBorderStyle(sMartInfo.windowId, FALSE);
     PrintMenuTable(sMartInfo.windowId, numMenuItems, sMartInfo.menuActions);
     InitMenuInUpperLeftCornerNormal(sMartInfo.windowId, numMenuItems, 0);
     PutWindowTilemap(sMartInfo.windowId);
@@ -382,10 +382,10 @@ void CB2_ExitSellMenu(void)
 
 static void Task_HandleShopMenuQuit(u8 taskId)
 {
-    ClearStdWindowAndFrameToTransparent(sMartInfo.windowId, 2);
+    ClearStdWindowAndFrameToTransparent(sMartInfo.windowId, 2); // Incorrect use, making it not copy it to vram.
     RemoveWindow(sMartInfo.windowId);
     TryPutSmartShopperOnAir();
-    ScriptContext2_Disable();
+    UnlockPlayerFieldControls();
     DestroyTask(taskId);
 
     if (sMartInfo.callback)
@@ -1043,8 +1043,8 @@ static void Task_BuyHowManyDialogueHandleInput(u8 taskId)
         if (JOY_NEW(A_BUTTON))
         {
             PlaySE(SE_SELECT);
-            ClearStdWindowAndFrameToTransparent(4, 0);
-            ClearStdWindowAndFrameToTransparent(3, 0);
+            ClearStdWindowAndFrameToTransparent(4, FALSE);
+            ClearStdWindowAndFrameToTransparent(3, FALSE);
             ClearWindowTilemap(4);
             ClearWindowTilemap(3);
             PutWindowTilemap(1);
@@ -1056,8 +1056,8 @@ static void Task_BuyHowManyDialogueHandleInput(u8 taskId)
         else if (JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
-            ClearStdWindowAndFrameToTransparent(4, 0);
-            ClearStdWindowAndFrameToTransparent(3, 0);
+            ClearStdWindowAndFrameToTransparent(4, FALSE);
+            ClearStdWindowAndFrameToTransparent(3, FALSE);
             ClearWindowTilemap(4);
             ClearWindowTilemap(3);
             BuyMenuReturnToItemList(taskId);
@@ -1152,7 +1152,7 @@ static void BuyMenuReturnToItemList(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    ClearDialogWindowAndFrameToTransparent(5, 0);
+    ClearDialogWindowAndFrameToTransparent(5, FALSE);
     BuyMenuPrintCursor(tListTaskId, 1);
     PutWindowTilemap(1);
     PutWindowTilemap(2);
@@ -1231,19 +1231,19 @@ void CreatePokemartMenu(const u16 *itemsForSale)
     CreateShopMenu(MART_TYPE_NORMAL);
     SetShopItemsForSale(itemsForSale);
     ClearItemPurchases();
-    SetShopMenuCallback(EnableBothScriptContexts);
+    SetShopMenuCallback(ScriptContext_Enable);
 }
 
 void CreateDecorationShop1Menu(const u16 *itemsForSale)
 {
     CreateShopMenu(MART_TYPE_DECOR);
     SetShopItemsForSale(itemsForSale);
-    SetShopMenuCallback(EnableBothScriptContexts);
+    SetShopMenuCallback(ScriptContext_Enable);
 }
 
 void CreateDecorationShop2Menu(const u16 *itemsForSale)
 {
     CreateShopMenu(MART_TYPE_DECOR2);
     SetShopItemsForSale(itemsForSale);
-    SetShopMenuCallback(EnableBothScriptContexts);
+    SetShopMenuCallback(ScriptContext_Enable);
 }

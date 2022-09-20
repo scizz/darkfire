@@ -2,6 +2,7 @@
 #define GUARD_CONSTANTS_GLOBAL_H
 
 #include "constants/battle_config.h"
+#include "constants/overworld_config.h"
 
 // Invalid Versions show as "----------" in Gen 4 and Gen 5's summary screen.
 // In Gens 6 and 7, invalid versions instead show "a distant land" in the summary screen.
@@ -109,6 +110,12 @@
 #define WONDER_CARD_BODY_TEXT_LINES 4
 #define WONDER_NEWS_BODY_TEXT_LINES 10
 #define TYPE_NAME_LENGTH 6
+#if B_EXPANDED_ABILITY_NAMES == TRUE
+#define ABILITY_NAME_LENGTH 16
+#else
+#define ABILITY_NAME_LENGTH 12
+#endif
+#define TRAINER_NAME_LENGTH 10
 
 #define MAX_STAMP_CARD_STAMPS 7
 

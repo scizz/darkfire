@@ -488,9 +488,9 @@ BattleFrontier_BattlePalaceLobby_Text_FeatWillBeRecorded: @ 824E4F7
 	.string "I must ask you to briefly wait.$"
 
 @ Unused
-BattleFrontier_BattlePalaceLobby_Text_BattlePointsFor7WinStreak: @ 824E5333
-    .string "For the feat of your 7-win streak,\n"
-    .string "we present you with Battle Point(s).$"
+BattleFrontier_BattlePalaceLobby_Text_BattlePointsFor7WinStreak:
+	.string "For the feat of your 7-win streak,\n"
+	.string "we present you with Battle Point(s).$"
 
 BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize: @ 824E57B
 	.string "You seem to have no space for\n"
