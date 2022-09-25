@@ -1295,3 +1295,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route31/scripts.inc"
 
 	.include "data/maps/NightmareHall/scripts.inc"
+
+	.include "data/maps/ForestsHeart/scripts.inc"

@@ -5570,6 +5570,16 @@
       "secondary_tileset": "gTileset_BattleFrontierRankingHall",
       "border_filepath": "data/layouts/NightmareHall/border.bin",
       "blockdata_filepath": "data/layouts/NightmareHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORESTS_HEART",
+      "name": "ForestsHeart_Layout",
+      "width": 40,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/ForestsHeart/border.bin",
+      "blockdata_filepath": "data/layouts/ForestsHeart/map.bin"
     }
   ]
 }
