@@ -289,7 +289,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "UnionCity_SUBO_Event"
     },
     {
       "type": "trigger",
