@@ -5574,8 +5574,8 @@
     {
       "id": "LAYOUT_FORESTS_HEART",
       "name": "ForestsHeart_Layout",
-      "width": 40,
-      "height": 48,
+      "width": 42,
+      "height": 46,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/ForestsHeart/border.bin",
