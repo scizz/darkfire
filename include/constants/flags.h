@@ -715,9 +715,9 @@
 #define FLAG_HIDE_GREENDALE_VILLAGE_ROSE    0x29F
 #define FLAG_START_GREENDALE_VILLAGE_TOURNAMENT 0x2A0
 #define FLAG_HIDE_ANHEIM_FOREST_SUBO        0x2A1
+#define FLAG_HIDE_ABANDONED_MUSEUM_SUBO     0x2A2
+#define FLAG_HIDE_ABANDONED_MUSEUM_POKE_BALL 0x2A3
 
-#define FLAG_UNUSED_0x2A2                   0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3                   0x2A3 // Unused Flag
 #define FLAG_UNUSED_0x2A4                   0x2A4 // Unused Flag
 #define FLAG_UNUSED_0x2A5                   0x2A5 // Unused Flag
 #define FLAG_UNUSED_0x2A6                   0x2A6 // Unused Flag
