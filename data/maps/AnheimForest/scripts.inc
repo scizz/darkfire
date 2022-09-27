@@ -1,4 +1,5 @@
 .set LOCALID_SUBO, 24
+.set LOCALID_TYLER, 19
 
 AnheimForest_MapScripts::
 	.byte 0
@@ -200,6 +201,71 @@ AnheimForest_Lucy::
 	release
 	end
 
+AnheimForest_Tyler_Encounter::
+	lock
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox AnheimForest_Text_HmmHowDoIGetPast, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_TYLER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 10
+	msgbox AnheimForest_Text_Player, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 21
+	goto_if_eq AnheimForest_Tyler_Encounter_Up
+	applymovement LOCALID_TYLER, WR4UR
+	waitmovement 0
+	goto AnheimForest_Tyler_Encounter_Main
+	end
+
+AnheimForest_Tyler_Encounter_Up::
+	applymovement LOCALID_TYLER, WR5
+	waitmovement 0
+	goto AnheimForest_Tyler_Encounter_Main
+	end
+
+AnheimForest_Tyler_Encounter_Main::
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox AnheimForest_Text_HowsItGoing, MSGBOX_AUTOCLOSE
+	delay 30
+	msgbox AnheimForest_Text_DotDotDot, MSGBOX_AUTOCLOSE
+	delay 10
+	msgbox AnheimForest_Text_SayPlayer, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_TAKEN_PIKACHU, AnheimForest_Tyler_Encounter_Eevee
+	goto AnheimForest_Tyler_Encounter_Pikachu
+	end
+
+AnheimForest_Tyler_Encounter_Eevee::
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	goto AnheimForest_Tyler_Encounter_PostMatch
+	end
+
+AnheimForest_Tyler_Encounter_Pikachu::
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+	goto AnheimForest_Tyler_Encounter_PostMatch
+	end
+
+AnheimForest_Tyler_Encounter_PostMatch::
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox AnheimForest_Text_ThatWasSomeBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_TYLER, WU3L3U3
+	waitmovement 0
+	removeobject LOCALID_TYLER
+	setvar VAR_STORYLINE_STATE, 15
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
+
 WL5:
 	walk_left
 	walk_left
@@ -214,6 +280,27 @@ WDL4:
 	walk_left
 	walk_left
 	walk_left
+	step_end
+
+WR4UR:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_right
+	step_end
+
+WU3L3U3:
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 AnheimForest_Text_SUBO_Dots:
@@ -351,3 +438,56 @@ AnheimForest_Text_PleaseMove:
 
 AnheimForest_Text_Thanks:
 	.string "{COLOR}{RED}Thanks.$"
+
+AnheimForest_Text_HmmHowDoIGetPast:
+	.string "{COLOR}{BLUE}Hmm…\n"
+	.string "How do I get past that tree…$"
+
+AnheimForest_Text_Player:
+	.string "{COLOR}{BLUE}{PLAYER}!$"
+
+AnheimForest_Text_HowsItGoing:
+	.string "{COLOR}{BLUE}How's it going, {PLAYER}?\n"
+	.string "Long time no see!\p"
+	.string "I was getting bored of all the noise in\n"
+	.string "Union City and decided to find a more\l"
+	.string "relaxing place to hang out and explore.\p"
+	.string "I've got to say, {PLAYER},\n"
+	.string "Union City seems like a shady place.\p"
+	.string "I'm not sure why, but I feel like the\n"
+	.string "Government is hiding stuff from us.\p"
+	.string "I was even feeling weird vibes inside\n"
+	.string "the Government Offices!\p"
+	.string "Well, whatever they're hiding is still\n"
+	.string "a mystery to me.\l"
+	.string "I think, though, it is something huge!\p"
+	.string "But I'm onto them, {PLAYER}!\n"
+	.string "Nothing will ever stop the truth!\p"
+	.string "I, Tyler The Great, will find out\n"
+	.string "exactly what is going on, and I will be\l"
+	.string "the one who exposes them all!$"
+
+AnheimForest_Text_DotDotDot:
+	.string "{COLOR}{BLUE}…$"
+
+AnheimForest_Text_SayPlayer:
+	.string "{COLOR}{BLUE}Say, {PLAYER}…\p"
+	.string "I wonder how much stronger you have\n"
+	.string "become since our last battle…\p"
+	.string "Well, I guess there is only one way to\n"
+	.string "find out!\l"
+	.string "How about it, {PLAYER}?\n"
+	.string "Prepare to lose!$"
+
+AnheimForest_Text_ThatWasSomeBattle:
+	.string "{COLOR}{BLUE}That was some battle, {PLAYER}!\n"
+	.string "I definitely need to become stronger.\p"
+	.string "…\p"
+	.string "Anyway, I'm off to train in Route 5.\n"
+	.string "I'm gonna need a stronger team.\p"
+	.string "I heard there are some secrets there\n"
+	.string "which people are trying to figure out.\p"
+	.string "But I won't let these minor things\n"
+	.string "stop me from exposing the truth!\p"
+	.string "Keep your eyes peeled, {PLAYER}.\p"
+	.string "See ya!$"

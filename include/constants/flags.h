@@ -717,8 +717,8 @@
 #define FLAG_HIDE_ANHEIM_FOREST_SUBO        0x2A1
 #define FLAG_HIDE_ABANDONED_MUSEUM_SUBO     0x2A2
 #define FLAG_HIDE_ABANDONED_MUSEUM_POKE_BALL 0x2A3
+#define FLAG_HIDE_ANHEIM_FOREST_TYLER       0x2A4
 
-#define FLAG_UNUSED_0x2A4                   0x2A4 // Unused Flag
 #define FLAG_UNUSED_0x2A5                   0x2A5 // Unused Flag
 #define FLAG_UNUSED_0x2A6                   0x2A6 // Unused Flag
 #define FLAG_UNUSED_0x2A7                   0x2A7 // Unused Flag

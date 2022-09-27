@@ -259,7 +259,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_TYLER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPINARAK",
@@ -571,18 +571,18 @@
       "x": 36,
       "y": 21,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "14",
+      "script": "AnheimForest_Tyler_Encounter"
     },
     {
       "type": "trigger",
       "x": 36,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "14",
+      "script": "AnheimForest_Tyler_Encounter"
     }
   ],
   "bg_events": [
