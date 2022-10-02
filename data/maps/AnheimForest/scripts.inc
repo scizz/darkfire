@@ -203,6 +203,8 @@ AnheimForest_Lucy::
 
 AnheimForest_Tyler_Encounter::
 	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox AnheimForest_Text_HmmHowDoIGetPast, MSGBOX_AUTOCLOSE

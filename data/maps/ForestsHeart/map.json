@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -14,15 +17,53 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 37,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_ANHEIM_TOWN",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 37,
+      "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_ANHEIM_TOWN",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 4,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_HEART",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 4,
+      "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_HEART",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 30,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_HEART",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 30,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_HEART",
+      "dest_warp_id": 3
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": "",
-  "allow_escaping": "",
-  "allow_running": ""
+  ]
 }

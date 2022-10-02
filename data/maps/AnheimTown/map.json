@@ -187,6 +187,20 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE5",
       "dest_warp_id": 0
+    },
+    {
+      "x": 7,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_HEART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 7,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_HEART",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
