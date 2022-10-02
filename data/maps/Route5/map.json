@@ -286,7 +286,7 @@
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "15",
-      "script": "NULL"
+      "script": "Route5_SUBO"
     },
     {
       "type": "trigger",
@@ -295,7 +295,7 @@
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "15",
-      "script": "NULL"
+      "script": "Route5_SUBO"
     }
   ],
   "bg_events": [

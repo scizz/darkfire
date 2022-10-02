@@ -1,5 +1,209 @@
+.set LOCALID_SUBO_1, 10
+.set LOCALID_SUBO_2, 11
+
 Route5_MapScripts::
 	.byte 0
+
+Route5_SUBO::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	delay 10
+	msgbox Route5_Text_LookGeorge, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route5_Text_DontSaySuchThings, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceDown
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
+	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_HeyYou, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 17
+	goto_if_eq Route5_SUBO_Left
+	goto Route5_SUBO_Right
+	end
+
+Route5_SUBO_Left::
+	applymovement LOCALID_SUBO_1, WD2
+	applymovement LOCALID_SUBO_2, WD3FL
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	playbgm MUS_SUBO_THEME, TRUE
+	msgbox Route5_Text_YoureATrainer, MSGBOX_AUTOCLOSE
+	delay 30
+	msgbox Route5_Text_DotDotDot, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route5_Text_WhatsTheMatter, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox Route5_Text_IThinkWeAreGeorge, MSGBOX_AUTOCLOSE
+	delay 10
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceDown
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Route5_Text_IsThatTrueGeorge, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Route5_Text_NoDontWorryGeorge, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, WURFL
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_YouThinkYouGeorge, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_SUBO_2, WFL
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, FLJSLFR
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkLeft
+	waitmovement 0
+	msgbox Route5_Text_GrrGetTheHeckGeorge, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_IllShowYouGeorge, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_ScrewThis, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, WFU5
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route5_Text_HeyPaulWait, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_YouWontGetAway, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_1, WFU5
+	waitmovement 0
+	removeobject LOCALID_SUBO_1
+	removeobject LOCALID_SUBO_2
+	setvar VAR_STORYLINE_STATE, 16
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
+
+Route5_SUBO_Right::
+	applymovement LOCALID_SUBO_2, WD2
+	applymovement LOCALID_SUBO_1, WD3FR
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	playbgm MUS_SUBO_THEME, TRUE
+	msgbox Route5_Text_YoureATrainer, MSGBOX_AUTOCLOSE
+	delay 30
+	msgbox Route5_Text_DotDotDot, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox Route5_Text_WhatsTheMatter, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox Route5_Text_IThinkWeArePaul, MSGBOX_AUTOCLOSE
+	delay 10
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceDown
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Route5_Text_IsThatTruePaul, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Route5_Text_NoDontWorryPaul, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_1, WULFR
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_YouThinkYouPaul, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_SUBO_1, WFR
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, FRJSRFL
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkRight
+	waitmovement 0
+	msgbox Route5_Text_GrrGetTheHeckPaul, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_IllShowYouPaul, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_ScrewThis, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, WFULU4
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route5_Text_HeyPaulWait, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route5_Text_YouWontGetAway, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_1, WFU5
+	waitmovement 0
+	removeobject LOCALID_SUBO_1
+	removeobject LOCALID_SUBO_2
+	setvar VAR_STORYLINE_STATE, 16
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
 
 Route5_Sign::
 	msgbox Route5_Text_Sign, MSGBOX_SIGN
@@ -58,6 +262,61 @@ Route5_EventScript_Trev::
 	msgbox Route5_Text_TrevPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+WURFL:
+	walk_up
+	walk_right
+	face_left
+	step_end
+
+WD3FL:
+	walk_down
+	walk_down
+	walk_down
+	face_left
+	step_end
+
+WFL:
+	walk_faster_left
+	step_end
+
+FLJSLFR:
+	face_left
+	jump_special_left
+	face_right
+	step_end
+
+WULFR:
+	walk_up
+	walk_left
+	face_right
+	step_end
+
+WD3FR:
+	walk_down
+	walk_down
+	walk_down
+	face_right
+	step_end
+
+WFR:
+	walk_faster_right
+	step_end
+
+FRJSRFL:
+	face_right
+	jump_special_right
+	face_left
+	step_end
+
+WFULU4:
+	walk_faster_up
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	step_end
+
 Route5_Text_Sign:
 	.string "Route 5\n"
 	.string "The Route of Legends$"
@@ -99,3 +358,90 @@ Route5_Text_Girl:
 Route5_Text_Camper:
 	.string "{COLOR}{BLUE}I always have my eye on that cave, but\n"
 	.string "I can't yet find a path to get there…$"
+
+Route5_Text_LookGeorge:
+	.string "{COLOR}{BLUE}Look, George… All I'm saying is these\n"
+	.string "stone tablets are old.\l"
+	.string "They probably don't even work anymore.$"
+
+Route5_Text_DontSaySuchThings:
+	.string "Don't say such things, Paul.\p"
+	.string "Everyone knows that whoever solves the\n"
+	.string "puzzle will be granted eternal wisdom!$"
+
+Route5_Text_HeyYou:
+	.string "Hey, you!$"
+
+Route5_Text_YoureATrainer:
+	.string "You're a Trainer, right?\p"
+	.string "What do you know about the stone\n"
+	.string "tablets in this route?$"
+
+Route5_Text_DotDotDot:
+	.string "…$"
+
+Route5_Text_WhatsTheMatter:
+	.string "What's the matter, kid?\n"
+	.string "Has Meowth caught your tongue?$"
+
+Route5_Text_IThinkWeAreGeorge:
+	.string "{COLOR}{BLUE}I think we are being mocked, George…$"
+
+Route5_Text_IsThatTrueGeorge:
+	.string "Is that true, kid? Are you mocking us?\n"
+	.string "You think this is a game?\p"
+	.string "Very well, then…\n"
+	.string "We will settle this with a battle!$"
+
+Route5_Text_NoDontWorryGeorge:
+	.string "{COLOR}{BLUE}No. Don't worry, George.\n"
+	.string "I will handle it myself.$"
+
+Route5_Text_YouThinkYouGeorge:
+	.string "{COLOR}{BLUE}You think you can make fun of us?\n"
+	.string "Not on my watch! Let's go, punk!$"
+
+Route5_Text_ThisOneIsStrongGeorge:
+	.string "{COLOR}{BLUE}Th-this one is strong!$"
+
+Route5_Text_GrrGetTheHeckGeorge:
+	.string "Grr… Get the heck out of my way!$"
+
+Route5_Text_IllShowYouGeorge:
+	.string "I'll show you what a real battle is!$"
+
+Route5_Text_ScrewThis:
+	.string "{COLOR}{BLUE}Screw this… I'm outta here!$"
+
+Route5_Text_HeyPaulWait:
+	.string "Hey! Paul! Wait for me!$"
+
+Route5_Text_YouWontGetAway:
+	.string "You won't get away with this, kid!\n"
+	.string "You won't be so lucky next time!$"
+
+Route5_Text_IThinkWeArePaul:
+	.string "I think we are being mocked, Paul…$"
+
+Route5_Text_IsThatTruePaul:
+	.string "{COLOR}{BLUE}Is that true, kid? Are you mocking us?\n"
+	.string "You think this is a game?\p"
+	.string "Very well, then…\n"
+	.string "We will settle this with a battle!$"
+
+Route5_Text_NoDontWorryPaul:
+	.string "No. Don't worry, Paul\n"
+	.string "I will handle him myself.$"
+
+Route5_Text_YouThinkYouPaul:
+	.string "You think you can make fun of us?\n"
+	.string "Not on my watch! Let's go, punk!$"
+
+Route5_Text_ThisOneIsStrongPaul:
+	.string "Th-this one is strong!$"
+
+Route5_Text_GrrGetTheHeckPaul:
+	.string "{COLOR}{BLUE}Grr… Get the heck out of my way!$"
+
+Route5_Text_IllShowYouPaul:
+	.string "{COLOR}{BLUE}I'll show you what a real battle is!$"
