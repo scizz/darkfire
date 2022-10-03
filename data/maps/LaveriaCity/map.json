@@ -275,18 +275,18 @@
       "x": 47,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "18",
+      "script": "LaveriaCity_Kojiro"
     },
     {
       "type": "trigger",
       "x": 47,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "18",
+      "script": "LaveriaCity_Kojiro"
     }
   ],
   "bg_events": [

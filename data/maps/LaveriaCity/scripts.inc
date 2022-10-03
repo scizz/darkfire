@@ -9,7 +9,7 @@ LaveriaCity_MapScripts::
 	.byte 0
 
 LaveriaCity_OnTransition:
-	call_if_set FLAG_HIDE_LAVERIA_CITY_SAILOR, LaveriaCity_ResetSailorEvent
+	call_if_set FLAG_HIDE_LAVERIA_CITY_SAILOR_1, LaveriaCity_ResetSailorEvent
 	end
 
 LaveriaCity_ResetSailorEvent::
@@ -58,6 +58,113 @@ LaveriaCity_PokeFan::
 LaveriaCity_Old_Man::
 	msgbox LaveriaCity_Text_Old_Man, MSGBOX_NPC
 	end
+
+LaveriaCity_Kojiro::
+	lock
+	playbgm MUS_NONE, TRUE
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WSR3
+	waitmovement 0
+	getpartysize
+	compare VAR_RESULT, 2
+	goto_if_ge LaveriaCity_Kojiro_Battle
+	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox LaveriaCity_Text_NoIHaveNoTime, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, WSL3
+	waitmovement 0
+	special RemoveCameraObject
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkLeft
+	waitmovement 0
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
+
+LaveriaCity_Kojiro_Battle::
+	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox LaveriaCity_Text_IfYouAreHere, MSGBOX_AUTOCLOSE
+	delay 30
+	playbgm MUS_CHANDRA_VILLAGE, TRUE
+	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox LaveriaCity_Text_WhatsThat, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, WSL3
+	waitmovement 0
+	special RemoveCameraObject
+	msgbox LaveriaCity_Text_DotDotNo, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox LaveriaCity_Text_DotDotYou, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	playfanfare MUS_OBTAIN_SYMBOL
+	special DoDomeConfetti
+	msgbox LaveriaCity_Text_PlayerDefeatedKojiro, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox LaveriaCity_Text_YouDidGood, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 12
+	goto_if_eq LaveriaCity_Kojiro_Top
+	goto LaveriaCity_Kojiro_Bottom
+	end
+
+LaveriaCity_Kojiro_Top::
+	applymovement LOCALID_KOJIRO, WL4
+	waitmovement 0
+	goto LaveriaCity_Kojiro_End
+
+LaveriaCity_Kojiro_Bottom::
+	applymovement LOCALID_KOJIRO, WL2DL2
+	waitmovement 0
+	goto LaveriaCity_Kojiro_End
+	end
+
+LaveriaCity_Kojiro_End::
+	giveitem ITEM_HM04, 1
+	msgbox LaveriaCity_Text_YouWillNeedThis, MSGBOX_AUTOCLOSE
+	fadescreen 1
+	delay 30
+	removeobject LOCALID_KOJIRO
+	setflag FLAG_BADGE02_GET
+	setvar VAR_STORYLINE_STATE, 19
+	fadescreen 0
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
+
+WSR3:
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	step_end
+
+WSL3:
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	step_end
+
+WL4:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WL2DL2:
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	step_end
 
 LaveriaCity_Text_Sign:
 	.string "Welcome to Laveria City\p"
@@ -117,3 +224,62 @@ LaveriaCity_Text_Old_Man:
 	.string "think you are going?\p"
 	.string "You think you have what it takes to\n"
 	.string "brave the snowstorm in Route 7?$"
+
+LaveriaCity_Text_NoIHaveNoTime:
+	.string "{COLOR}{BLUE}No… I have no time for you.\n"
+	.string "Come back when you are stronger.$"
+
+LaveriaCity_Text_IfYouAreHere:
+	.string "If you are here for Laveria City's\n"
+	.string "Tournament, you're late, Trainer.\p"
+	.string "I became the Champion… Again."
+
+LaveriaCity_Text_WhatsThat:
+	.string "What's that?\p"
+	.string "You really dare challenge me?\n"
+	.string "On my home turf?"
+
+LaveriaCity_Text_DotDotNo:
+	.string "…\n"
+	.string "…\p"
+	.string "No, you aren't like the others…\n"
+	.string "Power emanates through you.\p"
+	.string "Yes, you intrigued me right away when\n"
+	.string "I first saw you standing there.\p"
+	.string "…\n"
+	.string "Very well. I accept your challenge.\p"
+	.string "If you can beat me twice, I will\n"
+	.string "consider you as a Champion.\pLet's go!"
+
+LaveriaCity_Text_HmhNotToWorry:
+	.string "Hmh…\n"
+	.string "Not to worry… We press on."
+
+LaveriaCity_Text_DotDotYou:
+	.string "…\n"
+	.string "…\p"
+	.string "You are more than meets the eye.\n"
+	.string "A real Trainer, indeed.\p"
+	.string "But how will you do in a Single Battle?\n"
+	.string "Prepare yourself!"
+
+LaveriaCity_Text_MyInstinctWasCorrect:
+	.string "My instinct was correct…\n"
+	.string "You are the new Champion."
+
+LaveriaCity_Text_PlayerDefeatedKojiro:
+	.string "{PLAYER} defeated Kojiro!"
+
+LaveriaCity_Text_YouDidGood:
+	.string "You did good, Trainer.\p"
+	.string "I must ask, what is your name?\p"
+	.string "…\n"
+	.string "…\p"
+	.string "{PLAYER}.\p"
+	.string "Well, {PLAYER}.\n"
+	.string "Please take this for your victory."
+
+LaveriaCity_Text_YouWillNeedThis:
+	.string "You will need this if you are to\n"
+	.string "take on Mt. Tamarok, ahead.\p"
+	.string "Good luck, {PLAYER}…"
