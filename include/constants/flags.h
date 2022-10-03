@@ -719,11 +719,11 @@
 #define FLAG_HIDE_ABANDONED_MUSEUM_POKE_BALL 0x2A3
 #define FLAG_HIDE_ANHEIM_FOREST_TYLER       0x2A4
 #define FLAG_HIDE_ROUTE_5_SUBO              0x2A5
+#define FLAG_HIDE_LAVERIA_CITY_SAILOR_1     0x2A6
+#define FLAG_HIDE_LAVERIA_CITY_BOAT_1       0x2A7
+#define FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND 0x2A8
+#define FLAG_HIDE_LAVERIA_CITY_KOJIRO       0x2A9
 
-#define FLAG_UNUSED_0x2A6                   0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7                   0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8                   0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9                   0x2A9 // Unused Flag
 #define FLAG_UNUSED_0x2AA                   0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB                   0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC                   0x2AC // Unused Flag

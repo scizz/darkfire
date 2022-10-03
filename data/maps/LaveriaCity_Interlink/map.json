@@ -60,14 +60,14 @@
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": 5
     },
     {
       "x": 5,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": 6
     },
     {
       "x": 4,
@@ -81,28 +81,28 @@
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_ROUTE9",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     },
     {
       "x": 15,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": 7
     },
     {
       "x": 15,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": 8
     },
     {
       "x": 15,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": 9
     },
     {
       "x": 1,
@@ -123,11 +123,37 @@
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    }
   ],
   "bg_events": [
 

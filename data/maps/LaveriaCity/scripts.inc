@@ -1,5 +1,23 @@
+.set LOCALID_SAILOR_1, 6
+.set LOCALID_SAILOR_2, 3
+.set LOCALID_BOAT_1, 5
+.set LOCALID_BOAT_2, 4
+.set LOCALID_KOJIRO, 2
+
 LaveriaCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LaveriaCity_OnTransition
 	.byte 0
+
+LaveriaCity_OnTransition:
+	call_if_set FLAG_HIDE_LAVERIA_CITY_SAILOR, LaveriaCity_ResetSailorEvent
+	end
+
+LaveriaCity_ResetSailorEvent::
+	removeobject LOCALID_SAILOR_2
+	removeobject LOCALID_BOAT_2
+	addobject LOCALID_SAILOR_1
+	addobject LOCALID_BOAT_1
+	end
 
 LaveriaCity_Sign::
 	msgbox LaveriaCity_Text_Sign, MSGBOX_SIGN

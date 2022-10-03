@@ -229,14 +229,14 @@
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": 8
     },
     {
       "x": 137,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": 9
     },
     {
       "x": 88,
