@@ -80,7 +80,7 @@
       "flag": "FLAG_TEMP_7"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 11,
       "y": 11,
       "elevation": 3,
@@ -310,7 +310,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "19",
+      "script": "TamarokTunnels_SUBO"
+    }
   ],
   "bg_events": [
 

@@ -19,14 +19,14 @@
       "map": "MAP_ROUTE115"
     },
     {
-      "direction": "down",
-      "offset": 0,
-      "map": "MAP_ROUTE104"
-    },
-    {
       "direction": "right",
       "offset": 0,
       "map": "MAP_ROUTE116"
+    },
+    {
+      "direction": "up",
+      "offset": -1,
+      "map": "MAP_ROUTE104"
     }
   ],
   "object_events": [
