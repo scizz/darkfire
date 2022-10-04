@@ -76,6 +76,10 @@ Common_Movement_FollowerFaceUp:
 	follower_face_up
 	step_end
 
+Common_Movement_SetInvisible:
+	set_invisible
+	step_end
+
 Common_Movement_WalkInPlaceDown: @ 82725B4
 	walk_in_place_down
 	step_end
