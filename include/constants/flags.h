@@ -723,11 +723,11 @@
 #define FLAG_HIDE_LAVERIA_CITY_BOAT_1       0x2A7
 #define FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND 0x2A8
 #define FLAG_HIDE_LAVERIA_CITY_KOJIRO       0x2A9
+#define FLAG_ROUTE_9_STARTER_DOME_INTRO_COMPLETE 0x2AA
+#define FLAG_ROUTE_9_STARTER_DOME_COMPLETE  0x2AB
+#define FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL 0x2AC
+#define FLAG_HIDE_STARTER_DOME_TRAINERS_2   0x2AD
 
-#define FLAG_UNUSED_0x2AA                   0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB                   0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC                   0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD                   0x2AD // Unused Flag
 #define FLAG_UNUSED_0x2AE                   0x2AE // Unused Flag
 #define FLAG_UNUSED_0x2AF                   0x2AF // Unused Flag
 #define FLAG_UNUSED_0x2B0                   0x2B0 // Unused Flag

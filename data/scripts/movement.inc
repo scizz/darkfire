@@ -108,6 +108,14 @@ Common_Movement_WalkInPlaceSlowUp:
 	walk_in_place_slow_up
 	step_end
 
+Common_Movement_WalkDownFaster:
+	walk_faster_down
+	step_end
+
+Common_Movement_WalkUpFaster:
+	walk_faster_up
+	step_end
+
 Common_Movement_WalkLeftFaster:
 	walk_faster_left
 	step_end
