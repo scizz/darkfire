@@ -298,3 +298,82 @@ NorthstarCity_Text_PokeFan_M:
 	.string "I tried to get my son a job there,\n"
 	.string "but all he wants to do is hang out\l"
 	.string "with bad company in the upper west…$"
+
+Northstar_City_Text_ThatsIt:
+	.string "That's it, you're done pal!\n"
+	.string "You're all outta Pokémon!\p"
+	.string "Now hand over your Pokémon before we\n"
+	.string "send you to the bottom of the sea!$"
+
+Northstar_City_Text_Never:
+	.string "Never!\n"
+	.string "Not to you thugs!$"
+
+Northstar_City_Text_OhATrainer:
+	.string "Oh! A Trainer!\nI'm saved!$"
+
+Northstar_City_Text_:
+	.string "Trainer, please, you have to put a\n"
+	.string "stop to this!\p"
+	.string "I am here to investigate a stolen boat,\n"
+	.string "and these thugs have been chasing and\l"
+	.string "harrassing me…\p"
+	.string "You need to stop this!$"
+
+Northstar_City_Text_SoThatsHow:
+	.string "So, this is how it's gonna go?$"
+
+Northstar_City_Text_YoullStandUp:
+	.string "You'll stand up for him?\n"
+	.string "Fine.\p"
+	.string "That's two bodies at the bottom of the\nsea!$"
+
+Northstar_City_Text_ThisIsSuch:
+	.string "This is such a huge mess…$"
+
+Northstar_City_Text_NoWorries:
+	.string "No worries!\n"
+	.string "He won't beat me!$"
+
+Northstar_City_Text_SayGoodbye:
+	.string "Say goodbye to your Pokémon, kid!$"
+
+Northstar_City_Text_HahHah:
+	.string "Hah… Hah… The trek through the\n"
+	.string "snow has sapped all my strength…$"
+
+Northstar_City_Text_IDidntStand:
+	.string "I didn't stand a chance…\n"
+	.string "Now we're the ones all outta Pokémon. \p"
+	.string "We gotta bail!$"
+
+Northstar_City_Text_ThereAreMore:
+	.string "There are more of us in this cursed,\n"
+	.string "snow-ridden city.\p"
+	.string "You better back down, because when we\n"
+	.string "get some backup, things won't go so\l"
+	.string "well for you…\p"
+	.string "Disappear while you still can.\n"
+	.string "You've been warned!$"
+
+Northstar_City_Text_ThankYou:
+	.string "Thank you for saving me, Trainer!\n"
+	.string "What is your name?\p"
+	.string "…\n"
+	.string "…\p"
+	.string "{PLAYER}?\n"
+	.string "The Laveria City tournament champion?!\p"
+	.string "Holy smokes… Talk about being in\n"
+	.string "the right place at the right time!\p"
+	.string "The SUBO stole a boat from these docks\n"
+	.string "and chased my colleague.\p"
+	.string "My colleague is in control of some\n"
+	.string "extremely important documents.\p"
+	.string "{PLAYER}…\n"
+	.string "Please save my colleague!\p"
+	.string "You can get a better view of the\n"
+	.string "chase using the telescope in the\l"
+	.string "lighthouse next to us.\p"
+	.string "In the meantime, I must head back to\n"
+	.string "deliver the news to the President.\p"
+	.string "{PLAYER}, we are counting\non you!$"
