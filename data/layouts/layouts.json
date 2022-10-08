@@ -5630,6 +5630,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/NorthstarSea/border.bin",
       "blockdata_filepath": "data/layouts/NorthstarSea/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHSTAR_ARENA",
+      "name": "NorthstarArena_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_UnionRoom",
+      "border_filepath": "data/layouts/NorthstarArena/border.bin",
+      "blockdata_filepath": "data/layouts/NorthstarArena/map.bin"
     }
   ]
 }

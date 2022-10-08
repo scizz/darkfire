@@ -43,14 +43,15 @@
 #define MAP_UNDERWATER             (10 | (1 << 8))
 
 // Map Group 2
-#define MAP_ARCTIC_BAY     (0 | (2 << 8))
-#define MAP_NIGHTMARE_HALL (1 | (2 << 8))
-#define MAP_FORESTS_HEART  (2 | (2 << 8))
-#define MAP_SOUL_PEAK      (3 | (2 << 8))
-#define MAP_CHARRED_SUMMIT (4 | (2 << 8))
-#define MAP_CHARRED_PATH   (5 | (2 << 8))
-#define MAP_THUNDER_CREST  (6 | (2 << 8))
-#define MAP_NORTHSTAR_SEA  (7 | (2 << 8))
+#define MAP_ARCTIC_BAY      (0 | (2 << 8))
+#define MAP_NIGHTMARE_HALL  (1 | (2 << 8))
+#define MAP_FORESTS_HEART   (2 | (2 << 8))
+#define MAP_SOUL_PEAK       (3 | (2 << 8))
+#define MAP_CHARRED_SUMMIT  (4 | (2 << 8))
+#define MAP_CHARRED_PATH    (5 | (2 << 8))
+#define MAP_THUNDER_CREST   (6 | (2 << 8))
+#define MAP_NORTHSTAR_SEA   (7 | (2 << 8))
+#define MAP_NORTHSTAR_ARENA (8 | (2 << 8))
 
 // Map Group 3
 #define MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_1F (0 | (3 << 8))
