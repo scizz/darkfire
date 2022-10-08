@@ -1,0 +1,28 @@
+{
+  "id": "MAP_NORTHSTAR_SEA",
+  "name": "NorthstarSea",
+  "layout": "LAYOUT_NORTHSTAR_SEA",
+  "music": "MUS_ABANDONED_MUSEUM",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_RAIN",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
