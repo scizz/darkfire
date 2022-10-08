@@ -51,7 +51,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MUDKIP_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_MUDKIP",
       "x": 17,
       "y": 13,
       "elevation": 3,
@@ -61,7 +61,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_HIGHWIND_VILLAGE_DAZ_MUDKIP"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ANABEL",
@@ -74,7 +74,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_HIGHWIND_VILLAGE_DAZ_MUDKIP"
     }
   ],
   "warp_events": [
@@ -136,7 +136,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "0",
+      "script": "HighwindVillage_Daz"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "0",
+      "script": "HighwindVillage_Daz"
+    }
   ],
   "bg_events": [
     {

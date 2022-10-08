@@ -33,6 +33,10 @@ AnheimTown_Boy::
 	msgbox AnheimTown_Text_Boy, MSGBOX_NPC
 	end
 
+AnheimTown_Girl_2:
+	msgbox AnheimTown_Text_Girl_2, MSGBOX_NPC
+	end
+
 AnheimTown_Story_Time::
 	lock
 	faceplayer
@@ -146,6 +150,15 @@ AnheimTown_Text_Boy:
 	.string "There isn't much use for trains\n"
 	.string "nowadays since you can just fly around\l"
 	.string "on your Pokémon, provided you have one.$"
+
+AnheimTown_Text_Girl_2:
+	.string "{COLOR}{RED}Rumors say there exists a Mythical\n"
+	.string "Pokémon that resembles an onion.\p"
+	.string "The Pokémon can time-travel, visiting\n"
+	.string "various undisturbed forests during\l"
+	.string "peaceful times.\p"
+	.string "Wherever it visits, it leaves behind\n"
+	.string "flourishing grass and trees."
 
 AnheimTown_Text_Little_Girl_Story:
 	.string "{COLOR}{RED}Hello! My name's Diane. My dad told me\n"

@@ -1,5 +1,63 @@
+.set LOCALID_PROF, 21
+.set LOCALID_GIRL_1, 17
+.set LOCALID_LITTLE_GIRL_1, 18
+.set LOCALID_MOTHER_1, 19
+.set LOCALID_YOUNGSTER_1, 16
+.set LOCALID_DAZ_2, 14
+.set LOCALID_LITTLE_GIRL_2, 20
+.set LOCALID_DAZ_1, 15
+
 Route9_StarterDome_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route9_StarterDome_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route9_StarterDome_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, Route9_StarterDome_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route9_StarterDome_OnWarp
 	.byte 0
+
+Route9_StarterDome_OnTransition:
+	compare VAR_STORYLINE_STATE, 1
+	goto_if_ne Route9_StarterDome_HideLittleGirlDaz1
+	call Route9_StarterDome_HideLittleGirlDaz2
+	end
+
+Route9_StarterDome_HideLittleGirlDaz1::
+	removeobject LOCALID_LITTLE_GIRL_2
+	removeobject LOCALID_DAZ_2
+	setflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
+	end
+
+Route9_StarterDome_HideLittleGirlDaz2::
+	removeobject LOCALID_LITTLE_GIRL_1
+	removeobject LOCALID_DAZ_1
+	setflag FLAG_ROUTE_9_STARTER_DOME_INTRO_COMPLETE
+	return
+
+Route9_StarterDome_OnFrame:
+	map_script_2 VAR_STORYLINE_STATE, 0, Route9_StarterDome_Intro
+	map_script_2 VAR_STORYLINE_STATE, 1, Route9_StarterDome_BackToEntrance
+	.2byte 0
+
+Route9_StarterDome_OnLoad:
+	call_if_set FLAG_ROUTE_9_STARTER_DOME_COMPLETE, Route9_StarterDome_OpenStarterDoor
+	end
+
+Route9_StarterDome_OpenStarterDoor::
+	setmetatile 18, 30, 530, 0
+	setmetatile 19, 30, 530, 0
+	setmetatile 18, 29, 528, 0
+	setmetatile 19, 29, 528, 0
+	return
+
+Route9_StarterDome_OnWarp:
+	map_script_2 VAR_STORYLINE_STATE, 1, Route9_StarterDome_InitRoomObjects
+	.2byte 0
+
+Route9_StarterDome_InitRoomObjects::
+	updatefollowerpokemongraphic
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDFFU
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	showfollower
+	end
 
 Route9_StarterDome_Aide_Left_Table::
 	msgbox Route9_StarterDome_Text_Aide_Left_Table, MSGBOX_NPC
@@ -69,21 +127,810 @@ Route9_StarterDome_Youngster::
 	msgbox Route9_StarterDome_Text_Youngster, MSGBOX_NPC
 	end
 
-Route9_StarterDome_Text_Aide_Left_Table:
-	.string "{COLOR}{BLUE}H-wha'?\p"
-	.string "Oh…\p"
-	.string "Hello, kid…\n"
-	.string "Sorry. I'm working right now.\p"
-	.string "Go play with that machine behind me,\n"
-	.string "or something… It's a special PC.$"
+Route9_StarterDome_Woman::
+	msgbox Route9_StarterDome_Text_Woman, MSGBOX_NPC
+	end
 
-Route9_StarterDome_Text_Aide_PC:
+Route9_StarterDome_Intro::
+	removeobject 2
+	removeobject 3
+	removeobject 8
+	removeobject 9
+	setflag FLAG_HIDE_STARTER_DOME_TRAINERS_2
+	applymovement LOCALID_DAZ_1, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	updatefollowerpokemongraphic
+	showfollower
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	applymovement LOCALID_DAZ_1, WRFU
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_NowThatEveryone, MSGBOX_AUTOCLOSE
+	playbgm MUS_FOLLOW_ME, TRUE
+	applymovement LOCALID_PROF, WL2
+	delay 5
+	applymovement LOCALID_GIRL_1, WU2
+	delay 10
+	applymovement LOCALID_LITTLE_GIRL_1, WU2
+	delay 5
+	applymovement LOCALID_MOTHER_1, WU2
+	delay 5
+	applymovement LOCALID_YOUNGSTER_1, WU2
+	delay 5
+	applymovement OBJ_EVENT_ID_PLAYER, WU2
+	applymovement OBJ_EVENT_ID_FOLLOWER, WU2
+	delay 5
+	applymovement LOCALID_DAZ_1, WU2
+	waitmovement 0
+	applymovement LOCALID_PROF, WL6U14RUR8FD
+	applymovement LOCALID_GIRL_1, WL7U14R10UFD
+	applymovement LOCALID_LITTLE_GIRL_1, WL8U14RUR7FD
+	applymovement LOCALID_MOTHER_1, WL9U14RUR6FD
+	applymovement LOCALID_YOUNGSTER_1, D10WUL7U14R10FD
+	applymovement LOCALID_DAZ_1, D5WUL9U14R9FD
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_PLAYER, D10WUL8U14R8FD
+	applymovement OBJ_EVENT_ID_CAMERA, D10WUL8U14R8FD
+	applymovement OBJ_EVENT_ID_FOLLOWER, D10WU2L8U14R7FD
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, WSD3
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_DownHereIsTheGrass, MSGBOX_AUTOCLOSE
+	delay 60
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, WSU3
+	msgbox Route9_StarterDome_Text_BulbasaurChikoritaAndTreecko, MSGBOX_AUTOCLOSE
+	waitmovement 0
+	applymovement LOCALID_LITTLE_GIRL_1, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_MommyICanSee, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_LITTLE_GIRL_1, Common_Movement_FaceDown
+	waitmovement 0 
+	special RemoveCameraObject
+	applymovement LOCALID_PROF, WU6FL
+	delay 5
+	applymovement LOCALID_LITTLE_GIRL_1, WU6FL
+	delay 5
+	applymovement LOCALID_MOTHER_1, WRU5FL
+	applymovement LOCALID_GIRL_1, WLU5FL
+	delay 5
+	applymovement LOCALID_DAZ_1, D16WULU4FL
+	applymovement LOCALID_YOUNGSTER_1, WUFLD32WLU4FL
+	delay 5
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_PLAYER, D48WU4FL
+	applymovement OBJ_EVENT_ID_CAMERA, D48WU4FL
+	applymovement OBJ_EVENT_ID_FOLLOWER, D48WRU3FFL
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, WSL3
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_ToTheLeftIsTheFireArea, MSGBOX_AUTOCLOSE
+	delay 60
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, WSR3
+	msgbox Route9_StarterDome_Text_CharmanderCyndaquilAndTorchic, MSGBOX_AUTOCLOSE
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_FaceRight
+	delay 5
+	applymovement LOCALID_LITTLE_GIRL_1, Common_Movement_FaceRight
+	applymovement LOCALID_GIRL_1, Common_Movement_FaceRight
+	delay 5
+	applymovement LOCALID_MOTHER_1, Common_Movement_FaceRight
+	delay 5
+	applymovement LOCALID_DAZ_1, Common_Movement_FaceRight
+	applymovement LOCALID_YOUNGSTER_1, Common_Movement_FaceRight
+	delay 5
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, WSR3
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_AndToTheRightIsTheWaterArea, MSGBOX_AUTOCLOSE
+	delay 60
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, WSL3
+	msgbox Route9_StarterDome_Text_SquirtleTotodileAndMudkip, MSGBOX_AUTOCLOSE
+	waitmovement 0
+	special RemoveCameraObject
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement LOCALID_MOTHER_1, Common_Movement_FaceUp
+	applymovement LOCALID_GIRL_1, Common_Movement_FaceUp
+	delay 5
+	applymovement LOCALID_DAZ_1, Common_Movement_FaceUp
+	delay 5
+	applymovement LOCALID_YOUNGSTER_1, Common_Movement_FaceUp
+	delay 5
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_OkayThatConcludes, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DAZ_1, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement LOCALID_DAZ_1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_SweetPlayerDoYouKnow, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_Yes
+	goto Route9_StarterDome_No
+	end
+
+Route9_StarterDome_Yes::
+	msgbox Route9_StarterDome_Text_AsGoodAsAny, MSGBOX_AUTOCLOSE
+	goto Route9_StarterDome_Main
+	end
+
+Route9_StarterDome_No::
+	msgbox Route9_StarterDome_Text_IHeardThereWillBe, MSGBOX_AUTOCLOSE
+	goto Route9_StarterDome_Main
+	end
+
+Route9_StarterDome_Main::
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement LOCALID_DAZ_1, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_LetsGetBack, MSGBOX_AUTOCLOSE
+	clearflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
+	setvar VAR_STORYLINE_STATE, 1
+	warpsilent MAP_ROUTE9_STARTER_DOME, 18, 34
+	waitstate
+	end
+
+Route9_StarterDome_BackToEntrance::
+	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_AllRightAreYouReady, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PROF, Common_Movement_FaceUp
+	waitmovement 0
+	setmetatile 18, 30, 530, 0
+	setmetatile 19, 30, 530, 0
+	setmetatile 18, 29, 637, 0
+	setmetatile 19, 29, 638, 0
+	playse SE_PIN
+	special DrawWholeMapView
+	delay 10
+	setmetatile 18, 29, 528, 0
+	setmetatile 19, 29, 528, 0
+	playse SE_PIN
+	special DrawWholeMapView
+	delay 10
+	waitse
+	applymovement LOCALID_PROF, WLFR
+	waitmovement 0
+	applymovement LOCALID_LITTLE_GIRL_2, WFRU3LU3
+	delay 5
+	applymovement LOCALID_GIRL_1, WURU4
+	applymovement LOCALID_YOUNGSTER_1, WU2RU4
+	delay 5
+	applymovement OBJ_EVENT_ID_PLAYER, WRU
+	applymovement OBJ_EVENT_ID_FOLLOWER, WURFU
+	applymovement LOCALID_MOTHER_1, D16U5
+	waitmovement 0
+	delay 30
+	removeobject LOCALID_LITTLE_GIRL_2
+	removeobject LOCALID_GIRL_1
+	removeobject LOCALID_YOUNGSTER_1
+	removeobject LOCALID_MOTHER_1
+	applymovement LOCALID_PROF, WR2DWIPSD
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_PlayerIAmSoGlad, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DAZ_2, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	applymovement LOCALID_PROF, Common_Movement_FaceLeft
+	waitmovement 0
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq Route9_StarterDome_BackToEntranceMale
+	goto Route9_StarterDome_BackToEntranceFemale
+	end
+
+Route9_StarterDome_BackToEntranceMale::
+	msgbox Route9_StarterDome_Text_ProfHawthornePlayerBeatHes, MSGBOX_AUTOCLOSE
+	goto Route9_StarterDome_BackToEntranceNext
+	end
+
+Route9_StarterDome_BackToEntranceFemale::
+	msgbox Route9_StarterDome_Text_ProfHawthornePlayerBeatShes, MSGBOX_AUTOCLOSE
+	goto Route9_StarterDome_BackToEntranceNext
+	end
+
+Route9_StarterDome_BackToEntranceNext::
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_DidYouPlayer, MSGBOX_AUTOCLOSE
+	delay 10
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_AndWhoWouldYouBe, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_YeahTheyAre, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_HahSuchFervor, MSGBOX_AUTOCLOSE
+	delay 10
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	message Route9_StarterDome_Text_OhPlayerIAlmostForgot
+	waitmessage
+	multichoice 21, 8, MULTI_CHOOSE_STONE, TRUE
+	switch VAR_RESULT
+	case 0, Route9_StarterDome_GiveThunderStone
+	case 1, Route9_StarterDome_GiveFireStone
+	case 2, Route9_StarterDome_GiveWaterStone
+	case 3, Route9_StarterDome_GiveLeafStone
+	case 4, Route9_StarterDome_GiveMoonStone
+	case 5, Route9_StarterDome_GiveSunStone
+	end
+
+Route9_StarterDome_GiveThunderStone::
+	giveitem ITEM_THUNDER_STONE, 1
+	goto Route9_StarterDome_EventEnd
+	end
+
+Route9_StarterDome_GiveFireStone::
+	giveitem ITEM_FIRE_STONE, 1
+	goto Route9_StarterDome_EventEnd
+	end
+
+Route9_StarterDome_GiveWaterStone::
+	giveitem ITEM_WATER_STONE, 1
+	goto Route9_StarterDome_EventEnd
+	end
+
+Route9_StarterDome_GiveLeafStone::
+	giveitem ITEM_LEAF_STONE, 1
+	goto Route9_StarterDome_EventEnd
+	end
+
+Route9_StarterDome_GiveMoonStone::
+	giveitem ITEM_MOON_STONE, 1
+	goto Route9_StarterDome_EventEnd
+	end
+
+Route9_StarterDome_GiveSunStone::
+	giveitem ITEM_SUN_STONE, 1
+	goto Route9_StarterDome_EventEnd
+	end
+
+Route9_StarterDome_EventEnd::
+	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_ExcellentIAmCertain, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, D32FD
+	applymovement LOCALID_DAZ_2, D32FD
+	applymovement LOCALID_PROF, WRD4LFD
+	waitmovement 0
+	playse SE_EXIT
+	removeobject LOCALID_PROF
+	waitse
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Route9_StarterDome_Text_WellPlayer, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_DAZ_2, WU6
+	waitmovement 0
+	removeobject LOCALID_DAZ_2
+	setflag FLAG_ROUTE_9_STARTER_DOME_COMPLETE
+	setflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
+	clearflag FLAG_HIDE_STARTER_DOME_TRAINERS_2 @addobject 2, 3, 8, 9
+	setvar VAR_STORYLINE_STATE, 2
+	end
+
+WDFFU:
+	lock_facing_direction
+	walk_faster_down
+	unlock_facing_direction
+	step_end
+
+WL6U14RUR8FD:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+WL7U14R10UFD:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	face_down
+	step_end
+
+WL8U14RUR7FD:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+WL9U14RUR6FD:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+D10WUL7U14R10FD:
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+D5WUL9U14R9FD:
+	delay_8
+	delay_8
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+D10WUL8U14R8FD:
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	delay_1
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+D10WU2L8U14R7FD:
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	delay_1
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+WU6FL:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+WRU5FL:
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+WLU5FL:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+D16WULU4FL:
+	delay_16
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+WUFLD32WLU4FL:
+	walk_up
+	face_left
+	delay_16
+	delay_16
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+D48WU4FL:
+	delay_16
+	delay_16
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+D48WRU3FFL:
+	delay_16
+	delay_16
+	delay_16
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	face_left @follower 
+	step_end
+
+WSD3:
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	step_end
+
+WSU3:
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+WFRU3LU3:
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+WU2RU4:
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WRU:
+	walk_right
+	walk_up
+	step_end
+
+WURFU:
+	walk_up
+	walk_right
+	face_up
+	step_end
+
+D16U5:
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WRD4LFD:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	face_down
+	step_end
+
+D32FD:
+	delay_16
+	delay_16
+	face_down
+	step_end
+
+WURU4:
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WR2DWIPSD:
+	walk_right
+	walk_right
+	walk_down
+	walk_in_place_slow_down
+	step_end
+
+Route9_StarterDome_Text_Aide_Left_Table:
 	.string "{COLOR}{BLUE}The Pokémon Dome Laboratory is truly a\n"
 	.string "technological miracle.\p"
 	.string "We use state-of-the-art machinery to\n"
 	.string "harness renewable energy sources such\l"
 	.string "as the sun and the wind to provide\l"
 	.string "cosy housing for all Pokémon here.$"
+
+Route9_StarterDome_Text_Aide_PC:
+	.string "{COLOR}{BLUE}H-wha'?\p"
+	.string "Oh…\p"
+	.string "Hello, kid…\n"
+	.string "Sorry. I'm working right now.\p"
+	.string "Go play with that machine behind me,\n"
+	.string "or something… It's a special PC.$"
 
 Route9_StarterDome_Text_Aide_Walk_Around:
 	.string "{COLOR}{BLUE}The Rangers' Federation is helping us\n"
@@ -161,3 +1008,172 @@ Route9_StarterDome_Text_Youngster:
 	.string "Pokémon. Water-types are my thing!\p"
 	.string "I want to Surf the Tenjo seas with\n"
 	.string "one, some day…$"
+
+Route9_StarterDome_Text_Woman:
+	.string "{COLOR}{RED}If you have a full party, feel free to\n"
+	.string "use the red and white machine at the\l"
+	.string "front of the Dome to access your PC.$"
+
+Route9_StarterDome_Text_NowThatEveryone:
+	.string "Now that everyone is here, let's take\n"
+	.string "a little tour of the Dome Laboratory!$"
+
+Route9_StarterDome_Text_DownHereIsTheGrass:
+	.string "Down here is the Grass Area of the\n"
+	.string "Dome Laboratory.$"
+
+Route9_StarterDome_Text_BulbasaurChikoritaAndTreecko:
+	.string "Bulbasaur, Chikorita and Treecko\n"
+	.string "can be found here among the trees.\p"
+	.string "They like to hide in the grass, so\n"
+	.string "you may have to look for them!$"
+
+Route9_StarterDome_Text_MommyICanSee:
+	.string "Mommy, I can see a Chikorita!$"
+
+Route9_StarterDome_Text_ToTheLeftIsTheFireArea:
+	.string "To the left is the Fire Area of the\n"
+	.string "Dome Laboratory.$"
+
+Route9_StarterDome_Text_CharmanderCyndaquilAndTorchic:
+	.string "Charmander, Cyndaquil and Torchic are\n"
+	.string "here, somewhere between the rocks.\p"
+	.string "Be careful, don't get burned trying\n"
+	.string "to catch them!$"
+
+Route9_StarterDome_Text_AndToTheRightIsTheWaterArea:
+	.string "And to the right is the Water Area of\n"
+	.string "the Dome Laboratory.$"
+
+Route9_StarterDome_Text_SquirtleTotodileAndMudkip:
+	.string "Squirtle, Totodile and Mudkip like to\n"
+	.string "swim in the pond here.\l"
+	.string "They're tricky to reach!$"
+
+Route9_StarterDome_Text_OkayThatConcludes:
+	.string "Okay, that concludes our tour!\p"
+	.string "Which one will you pick?\p"
+	.string "Better think hard, and remember,\n"
+	.string "you're allowed to choose only one!$"
+
+Route9_StarterDome_Text_SweetPlayerDoYouKnow:
+	.string "Sweet!\n"
+	.string "{PLAYER}!\p"
+	.string "Do you know which one you're gonna go\n"
+	.string "after?$"
+
+Route9_StarterDome_Text_IHeardThereWillBe:
+	.string "I heard there will be more giveaways\n"
+	.string "like this one in the future.\p"
+	.string "But, for this time, I know for sure\n"
+	.string "what I'm picking!$"
+
+Route9_StarterDome_Text_PlayerItsTheMoment:
+	.string "{PLAYER}!\nIt's the moment we've been waiting for!$"
+
+Route9_StarterDome_Text_AllRightAreYouReady:
+	.string "All right! Are you ready?\n"
+	.string "Let the giveaway commence!$"
+
+Route9_StarterDome_Text_PlayerIAmSoGlad:
+	.string "{PLAYER}!\n"
+	.string "I am so glad to see you here.\p"
+	.string "Your journey must be coming along well\n"
+	.string "if you've got all the way here from\l"
+	.string "Chandra Village.$"
+
+Route9_StarterDome_Text_ProfHawthornePlayerBeatShes:
+	.string "Prof. Hawthorne!\p"
+	.string "{PLAYER} beat the champion of Greendale\n"
+	.string "Village!\l"
+	.string "She's a rising star!$"
+
+Route9_StarterDome_Text_AsGoodAsAny:
+	.string "As good as any, I bet.\p"
+	.string "I heard there will be more giveaways\n"
+	.string "like this one in the future.\p"
+	.string "But, for this time, I know for sure\n"
+	.string "what I'm picking!$"
+
+Route9_StarterDome_Text_LetsGetBack:
+	.string "Let's get back, everybody.$"
+
+Route9_StarterDome_Text_ProfHawthornePlayerBeatHes:
+	.string "Prof. Hawthorne!\p"
+	.string "{PLAYER} beat the champion of Greendale\n"
+	.string "Village!\l"
+	.string "He's a rising star!$"
+
+Route9_StarterDome_Text_DidYouPlayer:
+	.string "Did you, {PLAYER}?\n"
+	.string "Congratulations!\p"
+	.string "The road to glory is long still,\n"
+	.string "though.$"
+
+Route9_StarterDome_Text_AndWhoWouldYouBe:
+	.string "And who would you be?\p"
+	.string "…\n"
+	.string "…\p"
+	.string "Hold on a minute…\n"
+	.string "You must be Daz, from Lumeria City.\p"
+	.string "Aren't your parents running that\n"
+	.string "popular battle club in the city?$"
+
+Route9_StarterDome_Text_YeahTheyAre:
+	.string "Yeah, they are. But I'm not gonna live\n"
+	.string "in their shadow forever!\p"
+	.string "I'm here to get my own Pokémon and\n"
+	.string "make a name for myself!$"
+
+Route9_StarterDome_Text_HahSuchFervor:
+	.string "Hah… Such fervor!\n"
+	.string "It'll get you far!$"
+
+Route9_StarterDome_Text_OhPlayerIAlmostForgot:
+	.string "Oh, {PLAYER}!\n"
+	.string "I almost forgot!\p"
+	.string "It just so happens that I have some\n"
+	.string "evolutionary stones on me.\p"
+	.string "They came in the mail as a special\n"
+	.string "package from Union City.\p"
+	.string "As a reward for coming this far in your\n"
+	.string "journey, I'll let you choose one!\p"
+	.string "Which evolutionary stone would you\n"
+	.string "like, {PLAYER}?$"
+
+Route9_StarterDome_Text_ThunderStone:
+	.string "Are you sure you want to take the\n"
+	.string "ThunderStone?$"
+
+Route9_StarterDome_Text_WaterStone:
+	.string "Are you sure you want to take the\n"
+	.string "Water Stone?$"
+
+Route9_StarterDome_Text_FireStone:
+	.string "Are you sure you want to take the\n"
+	.string "Fire Stone?$"
+
+Route9_StarterDome_Text_LeafStone:
+	.string "Are you sure you want to take the\n"
+	.string "Leaf Stone?$"
+
+Route9_StarterDome_Text_MoonStone:
+	.string "Are you sure you want to take the\n"
+	.string "Moon Stone?$"
+
+Route9_StarterDome_Text_SunStone:
+	.string "Are you sure you want to take the\n"
+	.string "Sun Stone?$"
+
+Route9_StarterDome_Text_ExcellentIAmCertain:
+	.string "Excellent! I am certain that will help\n"
+	.string "you on your journey.\p"
+	.string "Anyway…\n"
+	.string "Best of luck to you both.\p"
+	.string "I apologize for being in a hurry, but I\n"
+	.string "must head back to Chandra Village now.\p"
+	.string "Good bye!$"
+
+Route9_StarterDome_Text_WellPlayer:
+	.string "Well, {PLAYER},\n"
+	.string "I'll see you around!$"
