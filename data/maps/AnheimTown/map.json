@@ -154,7 +154,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "AnheimTown_Text_Girl_2",
+      "script": "AnheimTown_Girl_2",
       "flag": "0"
     }
   ],

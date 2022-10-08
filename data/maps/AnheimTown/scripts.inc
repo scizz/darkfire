@@ -212,15 +212,6 @@ AnheimTown_Text_Old_Man:
 	.string "We have dedicated this place to him as\n"
 	.string "our thanks.$"
 
-AnheimTown_Text_Girl_2:
-	.string "{COLOR}{RED}Rumors say there exists a Mythical\n"
-	.string "Pokémon that resembles an onion.\p"
-	.string "The Pokémon can time-travel, visiting\n"
-	.string "various undisturbed forests during\l"
-	.string "peaceful times.\p"
-	.string "Wherever it visits, it leaves behind\n"
-	.string "flourishing grass and trees."
-
 GirlPhaseOne:
 	walk_up
 	face_right
