@@ -239,8 +239,8 @@
       "x": 24,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": 6
+      "dest_map": "MAP_HIGHWIND_VILLAGE",
+      "dest_warp_id": 0
     },
     {
       "x": 28,
