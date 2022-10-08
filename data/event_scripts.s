@@ -1301,3 +1301,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/SoulPeak/scripts.inc"
 
 	.include "data/maps/CharredSummit/scripts.inc"
+
+	.include "data/maps/CharredPath/scripts.inc"
