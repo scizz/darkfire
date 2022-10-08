@@ -1,3 +1,7 @@
+.set LOCALID_SUBO_1, 34
+.set LOCALID_GOV, 35
+.set LOCALID_SUBO_2, 36
+
 NorthstarCity_MapScripts::
 	.byte 0
 
@@ -129,6 +133,291 @@ NorthstarCity_Fisherman::
 NorthstarCity_PokeFan_M::
 	msgbox NorthstarCity_Text_PokeFan_M, MSGBOX_NPC
 	end
+
+NorthstarCity_Storyline_SUBO::
+	lock
+	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Northstar_City_Text_ThatsIt, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox Northstar_City_Text_Never, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_GOV, FLExc
+	playse SE_PIN
+	delay 5
+	applymovement LOCALID_SUBO_1, FLExc
+	playse SE_PIN
+	delay 10
+	applymovement LOCALID_SUBO_2, FLExc
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Northstar_City_Text_OhATrainer, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 26
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveGovTop
+	compare VAR_TEMP_0, 27
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveGovMiddle
+	goto NorthstarCity_Storyline_SUBO_MoveGovBottom
+	end
+
+NorthstarCity_Storyline_SUBO_MoveGovTop::
+	applymovement LOCALID_GOV, WFL6UFR
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_BattleSetUp
+	end
+
+NorthstarCity_Storyline_SUBO_MoveGovMiddle::
+	applymovement LOCALID_GOV, WFL3DL3UFR
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_BattleSetUp
+	end
+
+NorthstarCity_Storyline_SUBO_MoveGovBottom::
+	applymovement LOCALID_GOV, WFL6DFR
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_BattleSetUp
+	end
+
+NorthstarCity_Storyline_SUBO_BattleSetUp::
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Northstar_City_Text_TrainerPlease, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Northstar_City_Text_SoThisIsHow, MSGBOX_AUTOCLOSE
+	compare VAR_TEMP_0, 26
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOTop
+	compare VAR_TEMP_0, 27
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOMiddle
+	goto NorthstarCity_Storyline_SUBO_MoveSUBOBottom
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBOTop::
+	applymovement LOCALID_SUBO_2, WL2U2L
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_Battle
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBOMiddle::
+	applymovement LOCALID_SUBO_2, WL2UL
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_Battle
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBOBottom::
+	applymovement LOCALID_SUBO_2, WL3
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_Battle
+	end
+
+NorthstarCity_Storyline_SUBO_Battle::
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	playbgm MUS_SUBO_THEME, TRUE
+	msgbox Northstar_City_Text_YoullStandUp, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox Northstar_City_Text_NoWorries, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 26
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBO2Top
+	compare VAR_TEMP_0, 27
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBO2Middle
+	goto NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBO2Top::
+	applymovement LOCALID_SUBO_1, WL2DL2FU
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_Battle2
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBO2Middle::
+	applymovement LOCALID_SUBO_1, WL4FD
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_Battle2
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom::
+	applymovement LOCALID_SUBO_1, WL2DL2FD
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_Battle2
+	end
+
+NorthstarCity_Storyline_SUBO_Battle2::
+	msgbox Northstar_City_Text_SayGoodbye, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 26
+	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Northstar_City_Text_IDidntStand, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Northstar_City_Text_ThereAreMore, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkUp
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_ClearSUBO
+	end
+
+NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop::
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Northstar_City_Text_IDidntStand, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Northstar_City_Text_ThereAreMore, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkDown
+	waitmovement 0
+	goto NorthstarCity_Storyline_SUBO_ClearSUBO
+	end
+
+NorthstarCity_Storyline_SUBO_ClearSUBO::
+	applymovement LOCALID_SUBO_1, WL8
+	applymovement LOCALID_SUBO_2, WL8
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Northstar_City_Text_ThankYou, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_GOV, WL6
+	waitmovement 0
+	removeobject LOCALID_SUBO_1
+	removeobject LOCALID_GOV
+	removeobject LOCALID_SUBO_2
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV
+	setvar VAR_STORYLINE_STATE, 1
+	release
+	end
+
+FLExc:
+	face_left
+	emote_exclamation_mark
+	step_end
+
+WFL6UFR:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	face_right
+	step_end
+
+WFL3DL3UFR:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	face_right
+	step_end
+
+WFL6DFR:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	face_right
+	step_end
+
+WL2U2L:
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_left
+	step_end
+
+WL2UL:
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	step_end
+
+WL2DL2FU:
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+WL4FD:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+WL2DL2FD:
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	face_down
+	step_end
 
 NorthstarCity_Text_Old_Man_Badge:
 	.string "That badge…\n"
@@ -312,7 +601,7 @@ Northstar_City_Text_Never:
 Northstar_City_Text_OhATrainer:
 	.string "Oh! A Trainer!\nI'm saved!$"
 
-Northstar_City_Text_:
+Northstar_City_Text_TrainerPlease:
 	.string "Trainer, please, you have to put a\n"
 	.string "stop to this!\p"
 	.string "I am here to investigate a stolen boat,\n"
@@ -320,7 +609,7 @@ Northstar_City_Text_:
 	.string "harrassing me…\p"
 	.string "You need to stop this!$"
 
-Northstar_City_Text_SoThatsHow:
+Northstar_City_Text_SoThisIsHow:
 	.string "So, this is how it's gonna go?$"
 
 Northstar_City_Text_YoullStandUp:

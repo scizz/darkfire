@@ -728,8 +728,8 @@
 #define FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL 0x2AC
 #define FLAG_HIDE_STARTER_DOME_TRAINERS_2   0x2AD
 #define FLAG_HIDE_HIGHWIND_VILLAGE_DAZ_MUDKIP 0x2AE
+#define FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV    0x2AF
 
-#define FLAG_UNUSED_0x2AF                   0x2AF // Unused Flag
 #define FLAG_UNUSED_0x2B0                   0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1                   0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2                   0x2B2 // Unused Flag

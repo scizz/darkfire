@@ -454,33 +454,33 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
       "x": 107,
       "y": 27,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 107,
       "y": 28,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV"
     }
   ],
   "warp_events": [
@@ -603,27 +603,27 @@
       "x": 103,
       "y": 26,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NorthstarCity_Storyline_SUBO"
     },
     {
       "type": "trigger",
       "x": 103,
       "y": 27,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NorthstarCity_Storyline_SUBO"
     },
     {
       "type": "trigger",
       "x": 103,
       "y": 28,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NorthstarCity_Storyline_SUBO"
     }
   ],
   "bg_events": [
