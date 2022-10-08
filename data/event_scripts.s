@@ -1297,3 +1297,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/NightmareHall/scripts.inc"
 
 	.include "data/maps/ForestsHeart/scripts.inc"
+
+	.include "data/maps/SoulPeak/scripts.inc"

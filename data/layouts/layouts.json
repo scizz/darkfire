@@ -5580,6 +5580,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/ForestsHeart/border.bin",
       "blockdata_filepath": "data/layouts/ForestsHeart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOUL_PEAK",
+      "name": "SoulPeak_Layout",
+      "width": 40,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_UnionRoom",
+      "border_filepath": "data/layouts/SoulPeak/border.bin",
+      "blockdata_filepath": "data/layouts/SoulPeak/map.bin"
     }
   ]
 }
