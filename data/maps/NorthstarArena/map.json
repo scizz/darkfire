@@ -2,7 +2,7 @@
   "id": "MAP_NORTHSTAR_ARENA",
   "name": "NorthstarArena",
   "layout": "LAYOUT_NORTHSTAR_ARENA",
-  "music": "",
+  "music": "MUS_ABANDONED_MUSEUM",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
