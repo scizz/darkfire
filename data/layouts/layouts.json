@@ -5590,6 +5590,16 @@
       "secondary_tileset": "gTileset_UnionRoom",
       "border_filepath": "data/layouts/SoulPeak/border.bin",
       "blockdata_filepath": "data/layouts/SoulPeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_CHARRED_SUMMIT",
+      "name": "CharredSummit_Layout",
+      "width": 52,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FortreeGym",
+      "border_filepath": "data/layouts/CharredSummit/border.bin",
+      "blockdata_filepath": "data/layouts/CharredSummit/map.bin"
     }
   ]
 }

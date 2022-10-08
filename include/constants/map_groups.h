@@ -47,6 +47,7 @@
 #define MAP_NIGHTMARE_HALL (1 | (2 << 8))
 #define MAP_FORESTS_HEART  (2 | (2 << 8))
 #define MAP_SOUL_PEAK      (3 | (2 << 8))
+#define MAP_CHARRED_SUMMIT (4 | (2 << 8))
 
 // Map Group 3
 #define MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_1F (0 | (3 << 8))
