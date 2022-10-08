@@ -1303,3 +1303,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CharredSummit/scripts.inc"
 
 	.include "data/maps/CharredPath/scripts.inc"
+
+	.include "data/maps/ThunderCrest/scripts.inc"

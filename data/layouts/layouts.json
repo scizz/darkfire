@@ -5610,6 +5610,16 @@
       "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/CharredPath/border.bin",
       "blockdata_filepath": "data/layouts/CharredPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_THUNDER_CREST",
+      "name": "ThunderCrest_Layout",
+      "width": 48,
+      "height": 52,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/ThunderCrest/border.bin",
+      "blockdata_filepath": "data/layouts/ThunderCrest/map.bin"
     }
   ]
 }
