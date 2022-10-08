@@ -33,7 +33,7 @@ AnheimTown_Boy::
 	msgbox AnheimTown_Text_Boy, MSGBOX_NPC
 	end
 
-AnheimTown_Girl_2:
+AnheimTown_Girl_2::
 	msgbox AnheimTown_Text_Girl_2, MSGBOX_NPC
 	end
 
