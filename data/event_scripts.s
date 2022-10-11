@@ -1306,6 +1306,4 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/ThunderCrest/scripts.inc"
 
-	.include "data/maps/NorthstarSea/scripts.inc"
-
 	.include "data/maps/NorthstarArena/scripts.inc"

@@ -5622,16 +5622,6 @@
       "blockdata_filepath": "data/layouts/ThunderCrest/map.bin"
     },
     {
-      "id": "LAYOUT_NORTHSTAR_SEA",
-      "name": "NorthstarSea_Layout",
-      "width": 52,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/NorthstarSea/border.bin",
-      "blockdata_filepath": "data/layouts/NorthstarSea/map.bin"
-    },
-    {
       "id": "LAYOUT_NORTHSTAR_ARENA",
       "name": "NorthstarArena_Layout",
       "width": 15,
