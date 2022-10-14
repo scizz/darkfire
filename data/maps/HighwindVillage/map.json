@@ -7,9 +7,6 @@
   "requires_flash": false,
   "weather": "WEATHER_VOLCANIC_ASH",
   "map_type": "MAP_TYPE_TOWN",
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -183,5 +180,8 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HighwindVillage_Sign_Rangers_Lodge"
     }
-  ]
+  ],
+  "allow_cycling": "",
+  "allow_escaping": "",
+  "allow_running": ""
 }
