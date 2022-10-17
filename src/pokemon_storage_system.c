@@ -550,8 +550,7 @@ struct PokemonStorageSystemData
     u16 *displayMonTilePtr;
     struct Sprite *displayMonSprite;
     u16 displayMonPalBuffer[0x40];
-    u8 tileBuffer[0x800];
-    u8 unusedBuffer[0x1800]; // Unused
+    u8 tileBuffer[MON_PIC_SIZE * 4]; // 4x the size of a 'Mon sprite to account for Castform
     u8 itemIconBuffer[0x800];
     u8 wallpaperBgTilemapBuffer[0x1000];
     u8 displayMenuTilemapBuffer[0x800];
@@ -1579,8 +1578,8 @@ static void Task_PCMainMenu(u8 taskId)
         case MENU_B_PRESSED:
         case OPTION_EXIT:
             ClearStdWindowAndFrame(task->tWindowId, TRUE);
-            ScriptContext2_Disable();
-            EnableBothScriptContexts();
+            UnlockPlayerFieldControls();
+            ScriptContext_Enable();
             RemoveWindow(task->tWindowId);
             DestroyTask(taskId);
             break;
@@ -1655,7 +1654,7 @@ void ShowPokemonStorageSystemPC(void)
     u8 taskId = CreateTask(Task_PCMainMenu, 80);
     gTasks[taskId].tState = 0;
     gTasks[taskId].tSelectedOption = 0;
-    ScriptContext2_Enable();
+    LockPlayerFieldControls();
 }
 
 static void FieldTask_ReturnToPcMenu(void)
@@ -3755,7 +3754,7 @@ static void Task_ChangeScreen(u8 taskId)
         mode = sStorage->summaryScreenMode;
         FreePokeStorageData();
         if (mode == SUMMARY_MODE_NORMAL && boxMons == &sSavedMovingMon.box)
-            ShowPokemonSummaryScreenSet40EF(mode, boxMons, monIndex, maxMonIndex, CB2_ReturnToPokeStorage);
+            ShowPokemonSummaryScreenHandleDeoxys(mode, boxMons, monIndex, maxMonIndex, CB2_ReturnToPokeStorage);
         else
             ShowPokemonSummaryScreen(mode, boxMons, monIndex, maxMonIndex, CB2_ReturnToPokeStorage);
         break;

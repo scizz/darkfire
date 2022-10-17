@@ -21,11 +21,6 @@
 #include "constants/rgb.h"
 
 #define BATTLER_RECORD_SIZE 664
-#define ILLEGAL_BATTLE_TYPES ((BATTLE_TYPE_LINK | BATTLE_TYPE_SAFARI | BATTLE_TYPE_FIRST_BATTLE                  \
-                              | BATTLE_TYPE_WALLY_TUTORIAL | BATTLE_TYPE_ROAMER | BATTLE_TYPE_EREADER_TRAINER    \
-                              | BATTLE_TYPE_KYOGRE_GROUDON | BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI            \
-                              | BATTLE_TYPE_RECORDED | BATTLE_TYPE_TRAINER_HILL | BATTLE_TYPE_SECRET_BASE        \
-                              | BATTLE_TYPE_GROUDON | BATTLE_TYPE_KYOGRE | BATTLE_TYPE_RAYQUAZA))
 
 struct PlayerInfo
 {
@@ -67,7 +62,8 @@ struct RecordedBattleSave
     u32 checksum;
 };
 
-STATIC_ASSERT(sizeof(struct RecordedBattleSave) <= SECTOR_DATA_SIZE, RecordedBattleSaveFreeSpace);
+// Save data using TryWriteSpecialSaveSector is allowed to exceed SECTOR_DATA_SIZE (up to the counter field)
+STATIC_ASSERT(sizeof(struct RecordedBattleSave) <= SECTOR_COUNTER_OFFSET, RecordedBattleSaveFreeSpace);
 
 EWRAM_DATA u32 gRecordedBattleRngSeed = 0;
 EWRAM_DATA u32 gBattlePalaceMoveSelectionRngValue = 0;
@@ -300,7 +296,7 @@ static bool32 IsRecordedBattleSaveValid(struct RecordedBattleSave *save)
 {
     if (save->battleFlags == 0)
         return FALSE;
-    if (save->battleFlags & ILLEGAL_BATTLE_TYPES)
+    if (save->battleFlags & BATTLE_TYPE_RECORDED_INVALID)
         return FALSE;
     if (CalcByteArraySum((void *)(save), sizeof(*save) - 4) != save->checksum)
         return FALSE;
@@ -474,8 +470,8 @@ bool32 MoveRecordedBattleToSaveData(void)
             break;
     }
 
-    free(battleSave);
-    free(savSection);
+    Free(battleSave);
+    Free(savSection);
     return ret;
 }
 

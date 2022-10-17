@@ -525,6 +525,9 @@ static const struct SpriteTemplate sSpriteTemplates_NextTurn[CONTESTANT_COUNT] =
     }
 };
 
+/*    v-- Origin
+[0    +][1     ]   64x8
+*/
 static const struct Subsprite sSubsprites_NextTurn[] =
 {
     {
@@ -2753,8 +2756,8 @@ static void Task_ContestReturnToField(u8 taskId)
 
 static void FieldCB_ContestReturnToField(void)
 {
-    ScriptContext2_Disable();
-    EnableBothScriptContexts();
+    UnlockPlayerFieldControls();
+    ScriptContext_Enable();
 }
 
 static void TryPutPlayerLast(void)
