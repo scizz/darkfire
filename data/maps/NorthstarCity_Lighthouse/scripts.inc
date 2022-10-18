@@ -82,6 +82,12 @@ NorthstarCity_Lighthouse_Old_Man_UseTelescope::
 	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 8
 	end
 
+NorthstarCity_Lighthouse_Old_Man_Complete::
+	faceplayer
+	msgbox NorthstarCity_Lighthouse_Text_IWonderIfTheBoat, MSGBOX_DEFAULT
+	release
+	end
+
 NorthstarCity_Lighthouse_Text_NotNow:
 	.string "Not now, my dear Grandson, not now…$"
 
