@@ -128,6 +128,18 @@ Common_Movement_WalkRightSlow:
 	walk_slow_right
 	step_end
 
+Common_Movement_WalkLeftSlow:
+	walk_slow_left
+	step_end
+
+Common_Movement_WalkUpSlow:
+	walk_slow_up
+	step_end
+
+Common_Movement_WalkDownSlow:
+	walk_slow_down
+	step_end
+
 Common_Movement_WalkLeft:
 	walk_left
 	step_end
