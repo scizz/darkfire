@@ -449,7 +449,7 @@ static void DrawDexNavSearchMonIcon(u16 species, u8 *dst, bool8 owned)
     u8 spriteId;
 
     LoadMonIconPalette(species);
-    spriteId = CreateMonIcon(species, SpriteCB_MonIcon, SPECIES_ICON_X - 6, GetSearchWindowY() + 8, 0, 0xFFFFFFFF, 0);
+    spriteId = CreateMonIcon(species, SpriteCB_MonIcon, SPECIES_ICON_X - 6, GetSearchWindowY() + 8, 0, 0xFFFFFFFF);
     gSprites[spriteId].oam.priority = 0;
     *dst = spriteId;
     
@@ -668,12 +668,12 @@ static bool8 DexNavPickTile(u8 environment, u8 areaX, u8 areaY, bool8 smallScan)
                             break; //occurs at same z coord
                         
                         scale = 440 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2)  - (2 * (topX + topY));
-                        weight = ((Random() % scale) < 1) && !MapGridIsImpassableAt(topX, topY);
+                        weight = ((Random() % scale) < 1) && !MapGridGetCollisionAt(topX, topY);
                     }
                     else
                     { // outdoors: grass
                         scale = 100 - (GetPlayerDistance(topX, topY) * 2);
-                        weight = (Random() % scale <= 5) && !MapGridIsImpassableAt(topX, topY);
+                        weight = (Random() % scale <= 5) && !MapGridGetCollisionAt(topX, topY);
                     }
                 }
                 break;
@@ -684,7 +684,7 @@ static bool8 DexNavPickTile(u8 environment, u8 areaX, u8 areaY, bool8 smallScan)
                     if (IsElevationMismatchAt(gObjectEvents[gPlayerAvatar.spriteId].currentElevation, topX, topY))
                         break;
 
-                    weight = (Random() % scale <= 1) && !MapGridIsImpassableAt(topX, topY);
+                    weight = (Random() % scale <= 1) && !MapGridGetCollisionAt(topX, topY);
                 }
                 break;
             default:
@@ -862,7 +862,7 @@ static void Task_InitDexNavSearch(u8 taskId)
     {
         Free(sDexNavSearchDataPtr);
         FreeMonIconPalettes();
-        ScriptContext1_SetupScript(EventScript_TooDark);
+        ScriptContext_SetupScript(EventScript_TooDark);
         DestroyTask(taskId);
         return;
     }
@@ -871,7 +871,7 @@ static void Task_InitDexNavSearch(u8 taskId)
     {
         Free(sDexNavSearchDataPtr);
         FreeMonIconPalettes();
-        ScriptContext1_SetupScript(EventScript_NotFoundNearby);
+        ScriptContext_SetupScript(EventScript_NotFoundNearby);
         DestroyTask(taskId);
         return;
     }
@@ -993,7 +993,7 @@ static void EndDexNavSearchSetupScript(const u8 *script, u8 taskId)
 {
     gSaveBlock1Ptr->dexNavChain = 0;   //reset chain
     EndDexNavSearch(taskId);
-    ScriptContext1_SetupScript(script);
+    ScriptContext_SetupScript(script);
 }
 
 static u8 GetMovementProximityBySearchLevel(void)
@@ -1081,7 +1081,7 @@ static void Task_DexNavSearch(u8 taskId)
         return;
     }
     
-    if (ScriptContext2_IsEnabled() == TRUE)
+    if (ArePlayerFieldControlsLocked() == TRUE)
     { // check if script just executed
         //gSaveBlock1Ptr->dexNavChain = 0;  //issue with reusable repels
         EndDexNavSearch(taskId);
@@ -1104,7 +1104,7 @@ static void Task_DexNavSearch(u8 taskId)
         
         FlagClear(FLAG_SYS_DEXNAV_SEARCH);
         gDexnavBattle = TRUE;        
-        ScriptContext1_SetupScript(EventScript_StartDexNavBattle);
+        ScriptContext_SetupScript(EventScript_StartDexNavBattle);
         Free(sDexNavSearchDataPtr);
         DestroyTask(taskId);
         return;
@@ -1868,7 +1868,7 @@ static void CB1_InitDexNavSearch(void)
 {
     u8 taskId;
     
-    if (!gPaletteFade.active && !ScriptContext2_IsEnabled() && gMain.callback2 == CB2_Overworld)
+    if (!gPaletteFade.active && !ArePlayerFieldControlsLocked() && gMain.callback2 == CB2_Overworld)
     {
         SetMainCallback1(CB1_Overworld);
         taskId = CreateTask(Task_InitDexNavSearch, 0);
@@ -2000,9 +2000,9 @@ static void TryDrawIconInSlot(u16 species, s16 x, s16 y)
     if (species == SPECIES_NONE || species > NUM_SPECIES)
         CreateNoDataIcon(x, y);   //'X' in slot
     else if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
-        CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, 0); //question mark
+        CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF); //question mark
     else
-        CreateMonIcon(species, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, 0);
+        CreateMonIcon(species, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF);
 }
 
 static void DrawSpeciesIcons(void)
@@ -2038,7 +2038,7 @@ static void DrawSpeciesIcons(void)
        else if (species == SPECIES_NONE || species > NUM_SPECIES)
             CreateNoDataIcon(x, y);
         else
-            CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, 0); //question mark if detector mode inactive
+            CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF); //question mark if detector mode inactive
     }
 }
 

@@ -428,6 +428,8 @@ bool32 IsVirtualObjectInvisible(u8 virtualObjId);
 void SetVirtualObjectSpriteAnim(u8 virtualObjId, u8 animNum);
 bool32 IsVirtualObjectAnimating(u8 virtualObjId);
 
+bool8 IsElevationMismatchAt(u8 elevation, s16 x, s16 y);
+
 // NEW
 u16 GetMiniStepCount(u8 speed);
 void RunMiniStep(struct Sprite *sprite, u8 speed, u8 currentFrame);
