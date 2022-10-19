@@ -1307,3 +1307,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/ThunderCrest/scripts.inc"
 
 	.include "data/maps/NorthstarArena/scripts.inc"
+
+	.include "data/maps/AnheimTown_House3/scripts.inc"

@@ -99,6 +99,7 @@
 #define MAP_ANHEIM_TOWN_HOUSE2            (1 | (7 << 8))
 #define MAP_ANHEIM_TOWN_POKEMON_CENTER_1F (2 | (7 << 8))
 #define MAP_ANHEIM_TOWN_MART              (3 | (7 << 8))
+#define MAP_ANHEIM_TOWN_HOUSE3            (4 | (7 << 8))
 
 // gMapGroup_IndoorLaveria
 #define MAP_LAVERIA_CITY_HOUSE1            (0 | (8 << 8))

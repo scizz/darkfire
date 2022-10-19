@@ -214,6 +214,13 @@
       "elevation": 0,
       "dest_map": "MAP_FORESTS_HEART",
       "dest_warp_id": 1
+    },
+    {
+      "x": 54,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_ANHEIM_TOWN_HOUSE3",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

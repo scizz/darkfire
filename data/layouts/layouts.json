@@ -5630,6 +5630,16 @@
       "secondary_tileset": "gTileset_UnionRoom",
       "border_filepath": "data/layouts/NorthstarArena/border.bin",
       "blockdata_filepath": "data/layouts/NorthstarArena/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANHEIM_TOWN_HOUSE3",
+      "name": "AnheimTown_House3_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/AnheimTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/AnheimTown_House3/map.bin"
     }
   ]
 }
