@@ -325,6 +325,7 @@ struct BaseStats
             u8 bodyColor : 7;
             u8 noFlip : 1;
             u16 flags;
+            u8 abilityHidden;
 };
 
 #include "constants/battle_config.h"
