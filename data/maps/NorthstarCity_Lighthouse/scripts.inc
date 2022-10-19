@@ -1,5 +1,43 @@
 NorthstarCity_Lighthouse_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NorthstarCity_Lighthouse_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NorthstarCity_Lighthouse_OnWarp
 	.byte 0
+
+NorthstarCity_Lighthouse_OnFrame:
+	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Lighthouse_TelescopeAfter
+	.2byte 0
+
+NorthstarCity_Lighthouse_OnWarp:
+	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Lighthouse_InitRoomObjects
+	.2byte 0
+
+NorthstarCity_Lighthouse_InitRoomObjects::
+	updatefollowerpokemongraphic
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDFFU
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	showfollower
+	end
+
+NorthstarCity_Lighthouse_TelescopeAfter::
+	lock
+	applymovement 3, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement 3, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox NorthstarCity_Lighthouse_Text_TrainerAreYouOkay, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement 3, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox NorthstarCity_Lighthouse_Text_OhThisIs, MSGBOX_AUTOCLOSE
+	setvar VAR_STORYLINE_STATE, 2
+	release
+	end
 
 NorthstarCity_Lighthouse_Old_Man::
 	lock
@@ -87,6 +125,24 @@ NorthstarCity_Lighthouse_Old_Man_Complete::
 	msgbox NorthstarCity_Lighthouse_Text_IWonderIfTheBoat, MSGBOX_DEFAULT
 	release
 	end
+
+NorthstarCity_Lighthouse_Text_TrainerAreYouOkay:
+	.string "Trainer? Are you okay?\n"
+	.string "Did you manage to track them?\p"
+	.string "…\n"
+	.string "…$"
+
+NorthstarCity_Lighthouse_Text_OhThisIs:
+	.string "Oh, this is just terrible news!\n"
+	.string "I just can't believe it!\p"
+	.string "The research notes are rumored to\n"
+	.string "contain information about dark energy.\p"
+	.string "These SUBO scoundrels have a thirst\n"
+	.string "for power, there's no denying that.\p"
+	.string "If they can harness the power of dark\n"
+	.string "energy, our region will be doomed.\p"
+	.string "Please, Trainer, restore peace to our\n"
+	.string "city and get rid of these thugs!$"
 
 NorthstarCity_Lighthouse_Text_NotNow:
 	.string "Not now, my dear Grandson, not now…$"
