@@ -965,11 +965,6 @@ u8 ChooseHiddenMonIndex(void)
 
 bool32 MapHasNoEncounterData(void)
 {
-    u16 headerId = GetCurrentMapWildMonHeaderId();
-    const struct WildPokemonInfo *landMonsInfo = gWildMonHeaders[headerId].landMonsInfo;
-    const struct WildPokemonInfo *waterMonsInfo = gWildMonHeaders[headerId].waterMonsInfo;
-    const struct WildPokemonInfo *hiddenMonsInfo = gWildMonHeaders[headerId].hiddenMonsInfo;
-    
-    return (landMonsInfo == NULL && waterMonsInfo == NULL && hiddenMonsInfo == NULL);
+    return (GetCurrentMapWildMonHeaderId() == HEADER_NONE);
 }
 
