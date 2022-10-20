@@ -2,7 +2,7 @@
 
 ## What is Pokémon Darkfire?
 
-Pokémon Darkfire is a former binary ROM hack of Pokémon Emerald. It is currently being redeveloped using the [pokeemerald](https://github.com/pret/pokeemerald) decompilation project, along with a small collection of other feature branches.
+Pokémon Darkfire is a former binary ROM hack of Pokémon Emerald. This ROM hack features a dark & gritty storyline and a brand new region to explore! It is currently being redeveloped using the [pokeemerald](https://github.com/pret/pokeemerald) decompilation project, along with a small collection of other feature branches.
 
 ## What feature branches are included?
 
