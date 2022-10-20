@@ -131,7 +131,6 @@ static const u8 sSecretBaseEntrancePositions[NUM_SECRET_BASE_GROUPS * 4] =
     [SECRET_BASE_SHRUB1]       = MAP_NUM(SECRET_BASE_SHRUB1),       0,  3,  3,
     [SECRET_BASE_SHRUB2]       = MAP_NUM(SECRET_BASE_SHRUB2),       0,  1,  2,
     [SECRET_BASE_SHRUB3]       = MAP_NUM(SECRET_BASE_SHRUB3),       0,  7,  8,
-    [SECRET_BASE_SHRUB4]       = MAP_NUM(SECRET_BASE_SHRUB4),       0,  9,  6,
 };
 
 #define GET_BASE_MAP_NUM(group)    (sSecretBaseEntrancePositions[(group) + 0])
@@ -508,7 +507,7 @@ void EnterNewlyCreatedSecretBase(void)
 bool8 CurMapIsSecretBase(void)
 {
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SECRET_BASE_RED_CAVE1)
-     && (u8)gSaveBlock1Ptr->location.mapNum <= MAP_NUM(SECRET_BASE_SHRUB4))
+     && (u8)gSaveBlock1Ptr->location.mapNum <= MAP_NUM(SECRET_BASE_TREE4))
         return TRUE;
     else
         return FALSE;

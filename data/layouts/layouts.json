@@ -2192,16 +2192,6 @@
       "blockdata_filepath": "data/layouts/SecretBase_Tree4/map.bin"
     },
     {
-      "id": "LAYOUT_SECRET_BASE_SHRUB4",
-      "name": "SecretBase_Shrub4_Layout",
-      "width": 14,
-      "height": 11,
-      "primary_tileset": "gTileset_SecretBase",
-      "secondary_tileset": "gTileset_SecretBaseShrub",
-      "border_filepath": "data/layouts/SecretBase_Shrub4/border.bin",
-      "blockdata_filepath": "data/layouts/SecretBase_Shrub4/map.bin"
-    },
-    {
       "id": "LAYOUT_BATTLE_COLOSSEUM_2P",
       "name": "BattleColosseum_2P_Layout",
       "width": 14,
