@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_ROUTE_6",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
@@ -120,7 +120,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 32,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKFALL_CAVE_1F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
