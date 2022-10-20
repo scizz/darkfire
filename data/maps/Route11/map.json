@@ -22,8 +22,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 7,
-      "y": 60,
+      "x": 12,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -36,10 +36,10 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 60,
+      "x": 15,
+      "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE11",
+      "dest_map": "MAP_ROCKFALL_CAVE_1F",
       "dest_warp_id": 0
     }
   ],
