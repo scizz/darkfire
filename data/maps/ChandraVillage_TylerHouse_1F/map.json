@@ -2,7 +2,7 @@
   "id": "MAP_CHANDRA_VILLAGE_TYLER_HOUSE_1F",
   "name": "ChandraVillage_TylerHouse_1F",
   "layout": "LAYOUT_CHANDRA_VILLAGE_TYLER_HOUSE_1F",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_CHANDRA_VILLAGE",
   "region_map_section": "MAPSEC_CHANDRA_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
