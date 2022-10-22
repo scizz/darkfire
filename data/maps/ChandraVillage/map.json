@@ -2,7 +2,7 @@
   "id": "MAP_CHANDRA_VILLAGE",
   "name": "ChandraVillage",
   "layout": "LAYOUT_CHANDRA_VILLAGE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_CHANDRA_VILLAGE",
   "region_map_section": "MAPSEC_CHANDRA_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY_CLOUDS",

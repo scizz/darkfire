@@ -147,11 +147,11 @@ ChandraVillage_Tyler_Debug::
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
-	@addobject 16
-	@hideobjectat 16, MAP_CHANDRA_VILLAGE
-	@setfollower 16, 0x7E
-	@updatefollowerpokemongraphic
-	@showfollower
+	addobject 16
+	hideobjectat 16, MAP_CHANDRA_VILLAGE
+	setfollower 16, 0x7E
+	updatefollowerpokemongraphic
+	showfollower
 	releaseall
 	end
 
