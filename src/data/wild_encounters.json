@@ -14315,6 +14315,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_SNOWDRIFT_FOREST",
+          "base_label": "gSnowdriftForest",
+          "land_mons": {
+            "encounter_rate": 13,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_SMOOCHUM"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_SMOOCHUM"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_NOCTOWL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_NOCTOWL"
+              }
+            ]
+          }
         }
       ]
     },
