@@ -27,6 +27,7 @@
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
 #include "constants/items.h"
+#include "constants/metatile_behaviors.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/trainer_types.h"
@@ -75,7 +76,7 @@ static u8 CheckForPlayerAvatarCollision(u8);
 static u8 CheckForPlayerAvatarStaticCollision(u8);
 static u8 CheckForObjectEventStaticCollision(struct ObjectEvent *, s16, s16, u8, u8);
 static bool8 CanStopSurfing(s16, s16, u8);
-static bool8 ShouldJumpLedge(s16, s16, u8);
+static bool8 ShouldJumpLedge(s16, s16, u8, struct ObjectEvent*);
 static bool8 TryPushBoulder(s16, s16, u8);
 static void CheckAcroBikeCollision(s16, s16, u8, u8 *);
 
@@ -698,7 +699,7 @@ u8 CheckForObjectEventCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u
     if (collision == COLLISION_ELEVATION_MISMATCH && CanStopSurfing(x, y, direction))
         return COLLISION_STOP_SURFING;
 
-    if (ShouldJumpLedge(x, y, direction))
+    if (ShouldJumpLedge(x, y, direction, objectEvent))
     {
         IncrementGameStat(GAME_STAT_JUMPED_DOWN_LEDGES);
         return COLLISION_LEDGE_JUMP;
@@ -743,12 +744,83 @@ static bool8 CanStopSurfing(s16 x, s16 y, u8 direction)
     }
 }
 
-static bool8 ShouldJumpLedge(s16 x, s16 y, u8 direction)
+static bool8 ShouldJumpLedge(s16 x, s16 y, u8 direction, struct ObjectEvent *objectEvent)
 {
     if (GetLedgeJumpDirection(x, y, direction) != DIR_NONE)
+    {
         return TRUE;
+    }
+    else if(MapGridGetMetatileBehaviorAt(x,y) == MB_OMNIDIRECTIONAL_JUMP)
+    {
+        s16 xTo = x;
+        s16 yTo = y;
+        if(GetCollisionAtCoords(objectEvent, x,y,direction) == COLLISION_NONE)
+            return FALSE;
+
+        switch(direction)
+        {
+        case DIR_NORTH:
+            yTo--;
+            break;
+        case DIR_EAST:
+            xTo++;
+            break;
+        case DIR_SOUTH:
+            yTo++;
+            break;
+        case DIR_WEST:
+            xTo--;
+            break;
+        }
+        if(GetCollisionAtCoords(objectEvent, xTo, yTo, direction) != COLLISION_NONE)
+            return FALSE;
+        return TRUE;
+    }
+    else if(MapGridGetMetatileBehaviorAt(x,y) == MB_NORTHSOUTH_JUMP)
+    {
+        s16 xTo = x;
+        s16 yTo = y;
+        if(GetCollisionAtCoords(objectEvent, x,y,direction) == COLLISION_NONE)
+            return FALSE;
+
+        switch(direction)
+        {
+        case DIR_NORTH:
+            yTo--;
+            break;
+        case DIR_SOUTH:
+            yTo++;
+            break;
+        }
+        if(GetCollisionAtCoords(objectEvent, xTo, yTo, direction) != COLLISION_NONE)
+            return FALSE;
+        return TRUE;
+    }
+    else if(MapGridGetMetatileBehaviorAt(x,y) == MB_EASTWEST_JUMP)
+    {
+        s16 xTo = x;
+        s16 yTo = y;
+        if(GetCollisionAtCoords(objectEvent, x,y,direction) == COLLISION_NONE)
+            return FALSE;
+
+        switch(direction)
+        {
+        case DIR_EAST:
+            xTo++;
+            break;
+        case DIR_WEST:
+            xTo--;
+            break;
+        }
+        if(GetCollisionAtCoords(objectEvent, xTo, yTo, direction) != COLLISION_NONE)
+            return FALSE;
+        return TRUE;
+    }
     else
+    {
         return FALSE;
+    }
+        
 }
 
 static bool8 TryPushBoulder(s16 x, s16 y, u8 direction)
