@@ -239,8 +239,8 @@
       "x": 24,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE5",
-      "dest_warp_id": 0
+      "dest_map": "MAP_PINLEAF_TOWN",
+      "dest_warp_id": 1
     },
     {
       "x": 28,
