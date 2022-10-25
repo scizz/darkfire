@@ -6,7 +6,7 @@ Pokémon Darkfire is a former binary ROM hack of Pokémon Emerald. This ROM hack
 
 ## What feature branches are included?
 
-- **[Battle Engine Upgrade](https://github.com/rh-hideout/pokeemerald-expansion/tree/battle_engine):** Upgrades the battle engine in pokeemerald to newer Generation games' standards. It also adds newer moves and abilities.
+- **[Battle Engine Upgrade](https://github.com/rh-hideout/pokeemerald-expansion/tree/battle_engine):** Upgrades the battle engine to newer Generation games' standards. It also adds newer moves and abilities.
 - **[Pokémon Expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/pokemon_expansion):** Adds Pokémon from newer Generations and makes them available in the National Dex. It also updates base stats and other Pokémon info.
 - **[Item Expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/item_expansion):** Adds items from newer Generations and also updates item effects for field use.
 - **[Following Pokémon](https://github.com/W1serV1ser/pokeemerald/tree/FollowingPokemon_Gen1-3):** Adds the Player's lead party Pokémon as a follower in the overworld.
