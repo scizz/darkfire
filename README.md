@@ -10,7 +10,7 @@ Pokémon Darkfire is a former binary ROM hack of Pokémon Emerald. This ROM hack
 - **[Pokémon Expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/pokemon_expansion):** Adds Pokémon from newer Generations and makes them available in the National Dex. It also updates base stats and other Pokémon info.
 - **[Item Expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/item_expansion):** Adds items from newer Generations and also updates item effects for field use.
 - **[Following Pokémon](https://github.com/W1serV1ser/pokeemerald/tree/FollowingPokemon_Gen1-3):** Adds the Player's lead party Pokémon as a follower in the overworld.
-- **[DexNav](https://github.com/ghoulslash/pokeemerald/tree/dexnav):** Adds a DexNav feature with detector mode.
+- **[DexNav](https://github.com/ghoulslash/pokeemerald/tree/dexnav):** Adds a DexNav feature with search and detector modes.
 
 ## Who maintains the project?
 
