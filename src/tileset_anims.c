@@ -53,6 +53,8 @@ static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Sea(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
+static void QueueAnimTiles_General_WeedT(u16);
+static void QueueAnimTiles_General_WeedNT(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
@@ -214,6 +216,28 @@ const u16 *const gTilesetAnims_General_LandWaterEdge[] = {
     gTilesetAnims_General_LandWaterEdge_Frame1,
     gTilesetAnims_General_LandWaterEdge_Frame2,
     gTilesetAnims_General_LandWaterEdge_Frame3
+};
+
+const u16 gTilesetAnims_General_WeedT_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/weed-t/weed-frame-t-0.4bpp");
+const u16 gTilesetAnims_General_WeedT_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/weed-t/weed-frame-t-1.4bpp");
+const u16 gTilesetAnims_General_WeedT_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/weed-t/weed-frame-t-2.4bpp");
+
+const u16 *const gTilesetAnims_General_WeedT[] = {
+    gTilesetAnims_General_WeedT_Frame0,
+    gTilesetAnims_General_WeedT_Frame1,
+    gTilesetAnims_General_WeedT_Frame2,
+    gTilesetAnims_General_WeedT_Frame1
+};
+
+const u16 gTilesetAnims_General_WeedNT_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/weed-nt/weed-frame-0.4bpp");
+const u16 gTilesetAnims_General_WeedNT_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/weed-nt/weed-frame-1.4bpp");
+const u16 gTilesetAnims_General_WeedNT_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/weed-nt/weed-frame-2.4bpp");
+
+const u16 *const gTilesetAnims_General_WeedNT[] = {
+    gTilesetAnims_General_WeedNT_Frame0,
+    gTilesetAnims_General_WeedNT_Frame1,
+    gTilesetAnims_General_WeedNT_Frame2,
+    gTilesetAnims_General_WeedNT_Frame1
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -726,6 +750,10 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_PondWaterSide(timer >> 5);
     if (timer % 16 == 8)
         QueueAnimTiles_General_PondWaterTop(timer >> 5);
+    if (timer % 16 == 9)
+        QueueAnimTiles_General_WeedT(timer >> 4);
+    if (timer % 16 == 10)
+        QueueAnimTiles_General_WeedNT(timer >> 4);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -780,6 +808,18 @@ static void QueueAnimTiles_General_Waterfall(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_Waterfall);
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 6 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_General_WeedT(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_WeedT);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_WeedT[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(16)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_General_WeedNT(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_WeedNT);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_WeedNT[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(6)), 1 * TILE_SIZE_4BPP);
 }
 
 void InitTilesetAnim_Petalburg(void)
