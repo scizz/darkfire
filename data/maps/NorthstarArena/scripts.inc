@@ -1,2 +1,9 @@
+.set LOCALID_BLACKBELT, 1
+.set LOCALID_RANGER, 2
+.set LOCALID_PSYCHIC, 3
+.set LOCALID_ACE_TRAINER, 4
+.set LOCALID_GENTLEMAN, 5
+.set LOCALID_SAILOR, 6
+
 NorthstarArena_MapScripts::
 	.byte 0
