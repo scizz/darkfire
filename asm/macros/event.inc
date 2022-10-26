@@ -1755,6 +1755,8 @@
 	@ checks if you have a follower. returns the result to VAR_RESULT
 	.macro checkfollower
 	.byte 0xe6
+	.endm
+
 	.macro showdescription
 	.byte 0xe7
 	.endm
@@ -1772,7 +1774,6 @@
 	.macro hideitemdesc
 	.byte 0xe8
 	.endm
-
 
 @ Supplementary
 
