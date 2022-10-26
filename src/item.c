@@ -346,6 +346,11 @@ bool8 AddBagItem(u16 itemId, u16 count)
     }
 }
 
+void ItemId_GetHoldEffectParam_Script()
+{
+    VarSet(VAR_RESULT, ItemId_GetHoldEffectParam(VarGet(VAR_0x8004)));
+}
+
 bool8 RemoveBagItem(u16 itemId, u16 count)
 {
     u8 i;
