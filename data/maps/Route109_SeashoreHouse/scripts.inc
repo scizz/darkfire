@@ -52,8 +52,8 @@ Route109_SeashoreHouse_EventScript_BuySodaPop::
 	msgbox Route109_SeashoreHouse_Text_HereYouGo, MSGBOX_DEFAULT
 	removemoney 300
 	updatemoneybox
-	giveitem ITEM_SODA_POP
 	hidemoneybox
+	giveitem ITEM_SODA_POP
 	release
 	end
 

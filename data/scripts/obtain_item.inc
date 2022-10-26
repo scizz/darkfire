@@ -2,6 +2,7 @@
 .set AMOUNT, VAR_0x8001
 
 Std_ObtainItem::
+	copyvar VAR_0x8006, ITEMID
 	additem ITEMID, AMOUNT
 	copyvar VAR_0x8007, VAR_RESULT
 	call EventScript_ObtainItemMessage
@@ -51,8 +52,11 @@ EventScript_BufferBerriesPocket::
 
 EventScript_ObtainedItem::
 	message gText_ObtainedTheItem
+	delay 10
+	showitemdesc
 	waitfanfare
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
+	hideitemdesc
 	setvar VAR_RESULT, TRUE
 	return
 
@@ -96,6 +100,7 @@ Std_FindItem::
 	lock
 	faceplayer
 	waitse
+	copyvar VAR_0x8006, ITEMID
 	copyvar VAR_0x8004, ITEMID
 	copyvar VAR_0x8005, AMOUNT
 	checkitemspace ITEMID, AMOUNT
@@ -111,20 +116,25 @@ Std_FindItem::
 EventScript_PickUpItem::
 	removeobject VAR_LAST_TALKED
 	additem VAR_0x8004, VAR_0x8005
+	copyvar VAR_0x8006 VAR_0x8004
 	specialvar VAR_RESULT, BufferTMHMMoveName
 	copyvar VAR_0x8008, VAR_RESULT
 	call_if_eq VAR_0x8008, TRUE, EventScript_FoundTMHM
 	call_if_eq VAR_0x8008, FALSE, EventScript_FoundItem
+	delay 10
+	showitemdesc
 	waitfanfare
 	waitmessage
 	bufferitemnameplural STR_VAR_2, VAR_0x8004, VAR_0x8005
 	pyramid_inchallenge
 	goto_if_eq VAR_RESULT, TRUE, EventScript_PutBattlePyramidItemInBag
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
+	hideitemdesc
 	return
 
 EventScript_PutBattlePyramidItemInBag::
 	msgbox gText_PlayerPutItemInBag, MSGBOX_DEFAULT
+	hideitemdesc
 	return
 
 EventScript_FoundTMHM::
@@ -145,6 +155,7 @@ EventScript_NoRoomToPickUpItem::
 EventScript_HiddenItemScript::
 	lockall
 	waitse
+	copyvar VAR_0x8006, VAR_0x8005
 	additem VAR_0x8005
 	copyvar VAR_0x8007, VAR_RESULT
 	bufferitemnameplural STR_VAR_2, VAR_0x8005, 1
@@ -174,11 +185,14 @@ EventScript_FoundHiddenItem::
 	end
 
 EventScript_PutHiddenItemInPocket::
+	delay 10
+	showitemdesc
 	waitmessage
 	waitfanfare
 	bufferitemnameplural STR_VAR_2, VAR_0x8004, 1
 	copyvar VAR_0x8004, VAR_0x8008
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
+	hideitemdesc
 	special TryPutTreasureInvestigatorsOnAir
 	special SetHiddenItemFlag
 	releaseall
