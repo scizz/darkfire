@@ -66,6 +66,11 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Mirania_0,
     },
     {
+    .mapSecId = MAPSEC_THYMESGROVE_CITY,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Thymesgrove_0,
+    },
+    {
         .mapSecId = MAPSEC_LAVARIDGE_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Lavaridge_0,

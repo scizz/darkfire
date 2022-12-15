@@ -1310,3 +1310,5 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/AnheimTown_House3/scripts.inc"
     .include "data/scripts/dexnav.inc"
+
+	.include "data/maps/ThymesgroveCity/scripts.inc"

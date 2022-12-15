@@ -5490,6 +5490,16 @@
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/AnheimTown_House3/border.bin",
       "blockdata_filepath": "data/layouts/AnheimTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_THYMESGROVE_CITY",
+      "name": "ThymesgroveCity_Layout",
+      "width": 90,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/ThymesgroveCity/border.bin",
+      "blockdata_filepath": "data/layouts/ThymesgroveCity/map.bin"
     }
   ]
 }
