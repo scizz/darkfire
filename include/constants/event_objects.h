@@ -687,8 +687,9 @@
 #define OBJ_EVENT_GFX_CHERISH_BALL               679
 #define OBJ_EVENT_GFX_EXPANDING_SPARKLE          680
 #define OBJ_EVENT_GFX_AUTUMN_TREE                681
+#define OBJ_EVENT_GFX_BAKERY                     682
 
-#define NUM_OBJ_EVENT_GFX                        682
+#define NUM_OBJ_EVENT_GFX                        683
 
 
 // These are dynamic object gfx ids.

@@ -1870,6 +1870,9 @@ $(OBJEVENTGFXDIR)/misc/mr_brineys_boat.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/autumn_tree.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/bakery.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png

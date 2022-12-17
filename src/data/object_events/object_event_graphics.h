@@ -1182,5 +1182,7 @@ const u32 gObjectEventPic_Deoxys_Defense[] = INCBIN_U32("graphics/object_events/
 const u32 gObjectEventPic_Deoxys_Speed[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/deoxys_speed.4bpp");
 const u32 gObjectEventPic_AutumnTree[] = INCBIN_U32("graphics/object_events/pics/misc/autumn_tree.4bpp");
 const u16 gObjectEventPal_AutumnTree[] = INCBIN_U16("graphics/object_events/palettes/autumn_tree.gbapal");
+const u32 gObjectEventPic_Bakery[] = INCBIN_U32("graphics/object_events/pics/misc/bakery.4bpp");
+const u16 gObjectEventPal_Bakery[] = INCBIN_U16("graphics/object_events/palettes/bakery.gbapal");
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");

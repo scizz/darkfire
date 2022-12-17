@@ -2288,6 +2288,10 @@ const struct SpriteFrameImage gObjectEventPicTable_AutumnTree[] = {
     overworld_frame(gObjectEventPic_AutumnTree, 8, 8, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Bakery[] = {
+    overworld_frame(gObjectEventPic_Bakery, 8, 8, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),
