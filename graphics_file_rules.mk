@@ -95,7 +95,7 @@ $(TILESETGFXDIR)/secondary/slateport/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/mauville/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 503 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/lavaridge/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
@@ -273,7 +273,7 @@ $(TILESETGFXDIR)/secondary/trick_house_puzzle/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/inside_ship/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 342 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/elite_four/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 505 -Wnum_tiles

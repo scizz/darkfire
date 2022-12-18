@@ -1312,3 +1312,5 @@ Common_EventScript_LegendaryFlewAway::
     .include "data/scripts/dexnav.inc"
 
 	.include "data/maps/ThymesgroveCity/scripts.inc"
+
+	.include "data/maps/Route12/scripts.inc"
