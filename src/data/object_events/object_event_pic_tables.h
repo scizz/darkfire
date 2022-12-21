@@ -2292,6 +2292,18 @@ const struct SpriteFrameImage gObjectEventPicTable_Bakery[] = {
     overworld_frame(gObjectEventPic_Bakery, 8, 8, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Colosseum3[] = {
+    overworld_frame(gObjectEventPic_Colosseum3, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Colosseum2[] = {
+    overworld_frame(gObjectEventPic_Colosseum2, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Colosseum1[] = {
+    overworld_frame(gObjectEventPic_Colosseum1, 8, 4, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),

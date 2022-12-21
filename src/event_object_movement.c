@@ -810,6 +810,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_KRABBY                  0x1076
 #define OBJ_EVENT_PAL_TAG_AUTUMN_TREE             0x1077
 #define OBJ_EVENT_PAL_TAG_BAKERY                  0x1078
+#define OBJ_EVENT_PAL_TAG_COLOSSEUM               0x1079
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -822,6 +823,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_AutumnTree,            OBJ_EVENT_PAL_TAG_AUTUMN_TREE},
+    {gObjectEventPal_Colosseum,             OBJ_EVENT_PAL_TAG_COLOSSEUM},
     {gObjectEventPal_Bakery,                OBJ_EVENT_PAL_TAG_BAKERY},
     {gObjectEventPal_Npc1,                  OBJ_EVENT_PAL_TAG_NPC_1},
     {gObjectEventPal_Npc2,                  OBJ_EVENT_PAL_TAG_NPC_2},

@@ -1873,6 +1873,15 @@ $(OBJEVENTGFXDIR)/misc/autumn_tree.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/bakery.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/colosseum3.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
+$(OBJEVENTGFXDIR)/misc/colosseum2.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
+$(OBJEVENTGFXDIR)/misc/colosseum1.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
 
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
