@@ -259,6 +259,7 @@
 #define METATILE_InsideOfTruck_ExitLight_Top           0x208
 
 // gTileset_InsideShip
+#define METATILE_InsideShip_CaveEntrance_Bottom         0x2BA
 #define METATILE_InsideShip_DoorIndent_Locked           0x234
 #define METATILE_InsideShip_DoorIndent_Unlocked         0x21A
 #define METATILE_InsideShip_IntactDoor_Bottom_Interior  0x297
