@@ -2504,7 +2504,7 @@ void SetObjectEventSpritePosByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup, 
 void FreeAndReserveObjectSpritePalettes(void)
 {
     FreeAllSpritePalettes();
-    gReservedSpritePaletteCount = 12;
+    gReservedSpritePaletteCount = OBJ_PALSLOT_COUNT;
 }
 
 void LoadObjectEventPalette(u16 paletteTag)

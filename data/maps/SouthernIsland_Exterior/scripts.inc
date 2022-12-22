@@ -33,21 +33,21 @@ SouthernIsland_Exterior_EventScript_AsYouLike:: @ 8242A17
 	release
 	end
 
-Ferry_EventScript_DepartIslandSouth:: @ 8242A21
-	applymovement OBJ_EVENT_ID_PLAYER, Ferry_EventScript_DepartIslandBoardSouth
+Ferry_EventScript_DepartIslandSouth::
+	applymovement OBJ_EVENT_ID_PLAYER, Ferry_Movement_DepartIslandBoardSouth
 	waitmovement 0
 	return
 
-Ferry_EventScript_DepartIslandWest:: @ 8242A2C
-	applymovement OBJ_EVENT_ID_PLAYER, Ferry_EventScript_DepartIslandBoardWest
+Ferry_EventScript_DepartIslandWest::
+	applymovement OBJ_EVENT_ID_PLAYER, Ferry_Movement_DepartIslandBoardWest
 	waitmovement 0
 	return
 
-Ferry_EventScript_DepartIslandBoardSouth: @ 8242A37
+Ferry_Movement_DepartIslandBoardSouth:
 	walk_down
 	step_end
 
-Ferry_EventScript_DepartIslandBoardWest: @ 8242A39
+Ferry_Movement_DepartIslandBoardWest:
 	walk_left
 	walk_in_place_faster_down
 	step_end

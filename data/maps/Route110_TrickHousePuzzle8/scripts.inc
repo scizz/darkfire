@@ -28,7 +28,7 @@ Route110_TrickHousePuzzle8_EventScript_Leroy:: @ 826E84D
 	msgbox Route110_TrickHousePuzzle8_Text_LeroyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route110_TrickHousePuzzle8_EventScript_WroteSecretCodeLockOpened:: @ 826E864
+Route110_TrickHousePuzzle8_Text_WroteSecretCodeLockOpened::
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
 	.string "“TRICK MASTER I love.”\n"
