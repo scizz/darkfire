@@ -7,9 +7,18 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "right",
+      "offset": 9,
+      "map": "MAP_THYMESGROVE_CITY"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
@@ -105,7 +114,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
       "x": 97,
-      "y": 38,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -325,8 +334,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": "",
-  "allow_escaping": "",
-  "allow_running": ""
+  ]
 }
