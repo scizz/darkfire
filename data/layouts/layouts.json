@@ -5494,7 +5494,7 @@
     {
       "id": "LAYOUT_THYMESGROVE_CITY",
       "name": "ThymesgroveCity_Layout",
-      "width": 90,
+      "width": 83,
       "height": 80,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -5510,6 +5510,16 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/Route12/border.bin",
       "blockdata_filepath": "data/layouts/Route12/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE13",
+      "name": "Route13_Layout",
+      "width": 80,
+      "height": 71,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LavaridgeGym",
+      "border_filepath": "data/layouts/Route13/border.bin",
+      "blockdata_filepath": "data/layouts/Route13/map.bin"
     }
   ]
 }

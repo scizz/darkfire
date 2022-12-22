@@ -1,0 +1,34 @@
+{
+  "id": "MAP_ROUTE13",
+  "name": "Route13",
+  "layout": "LAYOUT_ROUTE13",
+  "music": "MUS_ABANDONED_MUSEUM",
+  "region_map_section": "MAPSEC_ROUTE_13",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "left",
+      "offset": 2,
+      "map": "MAP_THYMESGROVE_CITY"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

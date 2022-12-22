@@ -7,13 +7,27 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "left",
+      "offset": -9,
+      "map": "MAP_ROUTE12"
+    },
+    {
+      "direction": "right",
+      "offset": -2,
+      "map": "MAP_ROUTE13"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 61,
+      "x": 54,
       "y": 53,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -26,7 +40,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 76,
+      "x": 69,
       "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -39,7 +53,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 76,
+      "x": 69,
       "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -52,7 +66,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 66,
+      "x": 59,
       "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -65,8 +79,34 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 66,
+      "x": 59,
       "y": 57,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
+      "x": 54,
+      "y": 57,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
+      "x": 74,
+      "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -79,6 +119,19 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
       "x": 61,
+      "y": 48,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
+      "x": 74,
       "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -91,8 +144,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 81,
-      "y": 53,
+      "x": 67,
+      "y": 48,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -104,72 +157,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 74,
-      "y": 47,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 68,
-      "y": 49,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 81,
-      "y": 57,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 74,
-      "y": 50,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 74,
-      "y": 60,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 68,
+      "x": 67,
       "y": 61,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -182,7 +170,20 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 60,
+      "x": 61,
+      "y": 61,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
+      "x": 53,
       "y": 69,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -195,7 +196,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 51,
+      "x": 45,
       "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -208,7 +209,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 30,
+      "x": 23,
       "y": 42,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -221,7 +222,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 46,
+      "x": 39,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -234,7 +235,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 55,
+      "x": 49,
       "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -247,7 +248,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 33,
+      "x": 27,
       "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -260,7 +261,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 57,
+      "x": 51,
       "y": 41,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -273,7 +274,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPEAROW",
-      "x": 52,
+      "x": 45,
       "y": 59,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -286,7 +287,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HOOTHOOT",
-      "x": 62,
+      "x": 55,
       "y": 43,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -299,7 +300,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PINECO",
-      "x": 62,
+      "x": 55,
       "y": 63,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -325,8 +326,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 28,
-      "y": 69,
+      "x": 23,
+      "y": 68,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -338,7 +339,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPEAROW",
-      "x": 22,
+      "x": 15,
       "y": 52,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -351,7 +352,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 34,
+      "x": 27,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -364,7 +365,20 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 74,
+      "x": 10,
+      "y": 42,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
+      "x": 73,
       "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -377,20 +391,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 80,
-      "y": 17,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
-      "x": 63,
+      "x": 56,
       "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -403,7 +404,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GASTLY",
-      "x": 77,
+      "x": 70,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -429,7 +430,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HOOTHOOT",
-      "x": 71,
+      "x": 60,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -455,7 +456,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MASQUERAIN",
-      "x": 66,
+      "x": 59,
       "y": 75,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -468,8 +469,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YANMA",
-      "x": 36,
-      "y": 77,
+      "x": 28,
+      "y": 76,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -481,7 +482,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPEAROW",
-      "x": 22,
+      "x": 18,
       "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -494,7 +495,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BAKERY",
-      "x": 33,
+      "x": 26,
       "y": 20,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -533,8 +534,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COLOSSEUM3",
-      "x": 62,
-      "y": 9,
+      "x": 55,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -546,8 +547,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COLOSSEUM2",
-      "x": 62,
-      "y": 5,
+      "x": 55,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -559,8 +560,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COLOSSEUM1",
-      "x": 62,
-      "y": 1,
+      "x": 55,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -573,7 +574,7 @@
   ],
   "warp_events": [
     {
-      "x": 33,
+      "x": 26,
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_THYMESGROVE_CITY",
@@ -585,8 +586,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": "",
-  "allow_escaping": "",
-  "allow_running": ""
+  ]
 }

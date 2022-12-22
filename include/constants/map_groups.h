@@ -30,6 +30,7 @@
 #define MAP_ROUTE11           (21 | (0 << 8))
 #define MAP_ROUTE12           (22 | (0 << 8))
 #define MAP_ROUTE31           (23 | (0 << 8))
+#define MAP_ROUTE13           (24 | (0 << 8))
 
 // Map Group 1
 #define MAP_ANHEIM_FOREST          (0 | (1 << 8))
