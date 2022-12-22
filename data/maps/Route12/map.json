@@ -105,7 +105,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_AUTUMN_TREE",
       "x": 97,
-      "y": 39,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
