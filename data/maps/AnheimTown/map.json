@@ -162,65 +162,65 @@
     {
       "x": 62,
       "y": 50,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_POKEMON_CENTER_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 43,
       "y": 52,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 44,
       "y": 40,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 45,
       "y": 24,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_MART",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 48,
       "y": 16,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE5",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 49,
       "y": 16,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE5",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 40,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_FORESTS_HEART",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 41,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_FORESTS_HEART",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 54,
       "y": 24,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

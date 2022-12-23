@@ -97,16 +97,16 @@
     {
       "x": 5,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_GREENDALE_VILLAGE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_GREENDALE_VILLAGE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_ROUTE1",
       "offset": 29,
-      "map": "MAP_ROUTE1"
+      "direction": "up"
     },
     {
-      "direction": "right",
+      "map": "MAP_ROUTE31",
       "offset": 9,
-      "map": "MAP_ROUTE31"
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -251,37 +251,37 @@
     {
       "x": 24,
       "y": 27,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_THYMESGROVE_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 28,
       "y": 25,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_2F",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 32,
       "y": 22,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_TYLER_HOUSE_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 36,
       "y": 20,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_TYLER_HOUSE_2F",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 39,
       "y": 6,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_LAB",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

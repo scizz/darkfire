@@ -20,16 +20,16 @@
     {
       "x": 73,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_ABANDONED_MUSEUM",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 11,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST_HOUSE1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

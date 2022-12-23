@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
+      "map": "MAP_ARCTIC_BAY",
       "offset": -6,
-      "map": "MAP_ARCTIC_BAY"
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -220,37 +220,37 @@
     {
       "x": 44,
       "y": 87,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_SNOWDRIFT_FOREST",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 45,
       "y": 87,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_SNOWDRIFT_FOREST",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 72,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 72,
       "y": 11,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 72,
       "y": 12,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

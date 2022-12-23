@@ -20,23 +20,23 @@
     {
       "x": 15,
       "y": 4,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 44,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_PALACE_OF_ICE_ENTRANCE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

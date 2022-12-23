@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_ROUTE10",
       "offset": -18,
-      "map": "MAP_ROUTE10"
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -246,23 +246,23 @@
     {
       "x": 18,
       "y": 5,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 19,
       "y": 5,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 28,
       "y": 44,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE9_STARTER_DOME",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

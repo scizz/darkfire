@@ -227,65 +227,65 @@
     {
       "x": 137,
       "y": 6,
-      "elevation": 0,
+      "elevation": 4,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     },
     {
       "x": 137,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
-      "dest_warp_id": 9
+      "dest_warp_id": "9"
     },
     {
       "x": 88,
       "y": 11,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 62,
       "y": 18,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 69,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 64,
       "y": 31,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 48,
       "y": 32,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 25,
       "y": 36,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 26,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

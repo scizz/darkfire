@@ -487,114 +487,114 @@
     {
       "x": 28,
       "y": 45,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_POKEMON_CENTER_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 48,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 49,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 50,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 41,
       "y": 42,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 42,
       "y": 42,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 40,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_HOUSE1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 52,
       "y": 28,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 75,
       "y": 41,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_HOUSE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 40,
       "y": 28,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_TRAINER_SCHOOL",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 60,
       "y": 22,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_STORAGE_FACILITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 68,
       "y": 51,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_TOURNAMENT_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 72,
       "y": 51,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_TOURNAMENT_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 58,
       "y": 28,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_MART",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 83,
       "y": 26,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_SHIPPING_CENTER",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 110,
       "y": 28,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

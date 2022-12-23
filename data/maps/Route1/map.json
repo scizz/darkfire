@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_CHANDRA_VILLAGE",
       "offset": -29,
-      "map": "MAP_CHANDRA_VILLAGE"
+      "direction": "down"
     },
     {
-      "direction": "up",
+      "map": "MAP_SUNRISE_TOWN",
       "offset": 17,
-      "map": "MAP_SUNRISE_TOWN"
+      "direction": "up"
     }
   ],
   "object_events": [

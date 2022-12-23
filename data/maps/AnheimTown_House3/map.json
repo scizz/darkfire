@@ -58,16 +58,16 @@
     {
       "x": 5,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     },
     {
       "x": 6,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     }
   ],
   "coord_events": [

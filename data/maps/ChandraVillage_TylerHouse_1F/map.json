@@ -32,16 +32,16 @@
     {
       "x": 4,
       "y": 8,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 8,
       "y": 2,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_TYLER_HOUSE_2F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -201,86 +201,86 @@
     {
       "x": 9,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 12,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 39,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 4
+      "dest_warp_id": "4"
     },
     {
       "x": 37,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 7
+      "dest_warp_id": "7"
     },
     {
       "x": 65,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 6
+      "dest_warp_id": "6"
     },
     {
       "x": 67,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 9
+      "dest_warp_id": "9"
     },
     {
       "x": 95,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     },
     {
       "x": 93,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 11
+      "dest_warp_id": "11"
     },
     {
       "x": 113,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
-      "dest_warp_id": 10
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [

@@ -71,23 +71,23 @@
     {
       "x": 3,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 2,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN_INN_2F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -500,51 +500,51 @@
     {
       "x": 78,
       "y": 61,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 79,
       "y": 61,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 31,
       "y": 45,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST_HOUSE1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 35,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE4",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 35,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE4",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 32,
       "y": 13,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 33,
       "y": 13,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

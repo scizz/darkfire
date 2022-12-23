@@ -84,23 +84,23 @@
     {
       "x": 15,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_DEPARTMENT_STORE_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_DEPARTMENT_STORE_3F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 2,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_DEPARTMENT_STORE_ELEVATOR",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -71,86 +71,86 @@
     {
       "x": 4,
       "y": 19,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 19,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 19,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 3,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 5,
       "y": 3,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 3,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 38,
       "y": 15,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 38,
       "y": 16,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 38,
       "y": 17,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 24,
       "y": 15,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 24,
       "y": 16,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 24,
       "y": 17,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

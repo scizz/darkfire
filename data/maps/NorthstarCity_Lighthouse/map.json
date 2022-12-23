@@ -58,51 +58,51 @@
     {
       "x": 3,
       "y": 8,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": 15
+      "dest_warp_id": "15"
     },
     {
       "x": 4,
       "y": 8,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": 15
+      "dest_warp_id": "15"
     },
     {
       "x": 2,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 17,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 20,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 35,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
-      "dest_warp_id": 4
+      "dest_warp_id": "4"
     },
     {
       "x": 36,
       "y": 4,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

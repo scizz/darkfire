@@ -58,23 +58,23 @@
     {
       "x": 2,
       "y": 8,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 3,
       "y": 8,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 3,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE1_2F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

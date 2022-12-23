@@ -45,16 +45,16 @@
     {
       "x": 3,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE1_1F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 1,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE1_3F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -123,44 +123,44 @@
     {
       "x": 10,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 39,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 37,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 65,
       "y": 1,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_UNION_CITY_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

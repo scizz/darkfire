@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "right",
+      "map": "MAP_MIRANIA_TOWN",
       "offset": 19,
-      "map": "MAP_MIRANIA_TOWN"
+      "direction": "right"
     },
     {
-      "direction": "left",
+      "map": "MAP_CHANDRA_VILLAGE",
       "offset": -9,
-      "map": "MAP_CHANDRA_VILLAGE"
+      "direction": "left"
     }
   ],
   "object_events": [

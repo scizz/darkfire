@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
+      "map": "MAP_THYMESGROVE_CITY",
       "offset": 2,
-      "map": "MAP_THYMESGROVE_CITY"
+      "direction": "left"
     }
   ],
   "object_events": [

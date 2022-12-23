@@ -32,9 +32,9 @@
     {
       "x": 2,
       "y": 5,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
