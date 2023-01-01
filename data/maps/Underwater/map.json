@@ -7,9 +7,6 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERWATER",
-  "allow_cycling": false,
-  "allow_escaping": true,
-  "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -24,5 +21,8 @@
   ],
   "bg_events": [
 
-  ]
+  ],
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": false
 }
