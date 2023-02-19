@@ -479,8 +479,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPEAROW",
-      "x": 18,
-      "y": 35,
+      "x": 17,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
