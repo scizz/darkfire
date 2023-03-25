@@ -12,23 +12,12 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE104",
-      "offset": -50,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE102",
-      "offset": 10,
-      "direction": "right"
-    }
-  ],
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 16,
-      "y": 18,
+      "x": 32,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -40,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WALLY",
-      "x": 15,
-      "y": 10,
+      "x": 31,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -53,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 8,
-      "y": 22,
+      "x": 33,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -66,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 20,
-      "y": 10,
+      "x": 31,
+      "y": 0,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -79,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 15,
-      "y": 10,
+      "x": 31,
+      "y": -2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -92,8 +81,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 12,
-      "y": 15,
+      "x": 32,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -105,8 +94,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCOTT",
-      "x": 13,
-      "y": 12,
+      "x": 31,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -119,43 +108,43 @@
   ],
   "warp_events": [
     {
-      "x": 10,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY_HOUSE1",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 7,
+      "x": 12,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY_WALLYS_HOUSE",
+      "dest_map": "MAP_PETALBURG_CITY",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
-      "y": 8,
+      "x": 4,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_GYM",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
-      "x": 20,
-      "y": 16,
+      "x": 17,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
-      "y": 24,
+      "x": 31,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
-      "y": 12,
+      "x": 31,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_MART",
       "dest_warp_id": "0"
@@ -164,8 +153,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 8,
-      "y": 10,
+      "x": -2,
+      "y": 9,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
       "var_value": "0",
@@ -173,7 +162,7 @@
     },
     {
       "type": "trigger",
-      "x": 8,
+      "x": -2,
       "y": 11,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -182,7 +171,7 @@
     },
     {
       "type": "trigger",
-      "x": 8,
+      "x": -1,
       "y": 12,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -191,7 +180,7 @@
     },
     {
       "type": "trigger",
-      "x": 8,
+      "x": -2,
       "y": 13,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -200,8 +189,8 @@
     },
     {
       "type": "trigger",
-      "x": 4,
-      "y": 10,
+      "x": -1,
+      "y": 7,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
       "var_value": "0",
@@ -209,8 +198,8 @@
     },
     {
       "type": "trigger",
-      "x": 4,
-      "y": 11,
+      "x": -2,
+      "y": 6,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
       "var_value": "0",
@@ -218,8 +207,8 @@
     },
     {
       "type": "trigger",
-      "x": 4,
-      "y": 12,
+      "x": -2,
+      "y": 8,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
       "var_value": "0",
@@ -227,8 +216,8 @@
     },
     {
       "type": "trigger",
-      "x": 4,
-      "y": 13,
+      "x": -2,
+      "y": 7,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
       "var_value": "0",
@@ -238,64 +227,64 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 17,
-      "y": 10,
+      "x": 31,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PetalburgCity_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 12,
+      "x": 31,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 16,
+      "x": 31,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 17,
-      "y": 16,
+      "x": 31,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PetalburgCity_EventScript_CitySign"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 16,
+      "x": 31,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 27,
-      "y": 12,
+      "x": 31,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 9,
+      "x": 31,
+      "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PetalburgCity_EventScript_WallyHouseSign"
     },
     {
       "type": "hidden_item",
-      "x": 11,
-      "y": 29,
+      "x": 31,
+      "y": 13,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_PETALBURG_CITY_RARE_CANDY"

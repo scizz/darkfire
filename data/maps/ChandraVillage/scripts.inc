@@ -148,9 +148,6 @@ ChandraVillage_Tyler_Debug::
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
-	giveitem ITEM_REPEL, 1
-	giveitem ITEM_SUPER_REPEL, 2
-	giveitem ITEM_MAX_REPEL, 2
 	addobject 16
 	hideobjectat 16, MAP_CHANDRA_VILLAGE
 	setfollower 16, 0x7E
