@@ -1887,7 +1887,7 @@ static void Task_DexNavExitAndSearch(u8 taskId)
     DexNavGuiFreeResources();
     DestroyTask(taskId);
     SetMainCallback1(CB1_DexNavSearchCallback);
-    SetMainCallback2(CB2_ReturnToField);
+    SetMainCallback2(CB2_ReturnToFieldContinueScript);
 }
 
 static void Task_DexNavFadeAndExit(u8 taskId)
