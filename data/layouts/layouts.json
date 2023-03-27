@@ -4,7 +4,7 @@
     {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
-      "width": 30,
+      "width": 40,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_InsideShip",
