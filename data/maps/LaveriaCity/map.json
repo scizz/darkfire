@@ -267,6 +267,13 @@
       "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
       "dest_warp_id": "6"
+    },
+    {
+      "x": 37,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_LAVERIA_CITY",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

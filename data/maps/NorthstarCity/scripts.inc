@@ -1,6 +1,7 @@
 .set LOCALID_SUBO_1, 34
 .set LOCALID_GOV, 35
 .set LOCALID_SUBO_2, 36
+.set LOCALID_SAILOR_BOAT, 27
 
 NorthstarCity_MapScripts::
 	.byte 0
@@ -339,6 +340,48 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	release
 	end
 
+NorthstarCity_Sailor_Boat::
+	lock
+	faceplayer
+	msgbox NorthstarCity_Text_Sailor_DoYouWantToSail, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq NorthstarCity_Sailor_Yes
+	msgbox NorthstarCity_Text_Sailor_NoWorries, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Sailor_Yes::
+	msgbox NorthstarCity_Text_Sailor_PerfectLetsGo, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_BOAT, Common_Movement_FaceRight
+	waitmovement 0
+	playse SE_EXIT
+	removeobject LOCALID_SAILOR_BOAT
+	waitse
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 36
+	goto_if_eq NorthstarCity_Player_Left
+	goto NorthstarCity_Player_Bottom
+	end
+
+NorthstarCity_Player_Left::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	goto NorthstarCity_Warp_To_Laveria
+	end
+
+NorthstarCity_Player_Bottom::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	goto NorthstarCity_Warp_To_Laveria
+	end
+
+NorthstarCity_Warp_To_Laveria::
+	warp MAP_LAVERIA_CITY, 37, 32
+	waitstate
+	end
+
 FLExc:
 	face_left
 	emote_exclamation_mark
@@ -666,3 +709,16 @@ Northstar_City_Text_ThankYou:
 	.string "In the meantime, I must head back to\n"
 	.string "deliver the news to the President.\p"
 	.string "{PLAYER}, we are counting\non you!$"
+
+NorthstarCity_Text_Sailor_DoYouWantToSail:
+	.string "{COLOR}{BLUE}Alright!\p"
+	.string "Do you want to sail back to Laveria\n"
+	.string "City?$"
+
+NorthstarCity_Text_Sailor_NoWorries:
+	.string "{COLOR}{BLUE}Perfect!\n"
+	.string "Let's go!$"
+
+NorthstarCity_Text_Sailor_PerfectLetsGo:
+	.string "{COLOR}{BLUE}No worries!\n"
+	.string "Just let me know when you wanna sail!$"
