@@ -12,6 +12,7 @@
 #include "event_scripts.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
+#include "field_door.h"
 #include "field_effect.h"
 #include "field_message_box.h"
 #include "field_player_avatar.h"
@@ -2505,6 +2506,10 @@ static bool32 ReturnToFieldLocal(u8 *state)
         break;
     case 1:
         InitViewGraphics();
+        
+        if (FlagGet(FLAG_FOLLOWER_IN_BUILDING))
+            FieldSetDoorOpened(gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x, gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y - 1);
+        
         TryLoadTrainerHillEReaderPalette();
         (*state)++;
         break;
