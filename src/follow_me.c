@@ -252,7 +252,11 @@ void FollowMe(struct ObjectEvent* npc, u8 state, bool8 ignoreScriptActive)
         if (gSaveBlock2Ptr->follower.comeOutDoorStairs == 1 || (FlagGet(FLAG_FOLLOWER_IN_BUILDING) && gMapHeader.mapType != MAP_TYPE_INDOOR))
         {
             if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_BIKE))
+            {
+                FlagClear(FLAG_FOLLOWER_IN_BUILDING);
                 gSaveBlock2Ptr->follower.comeOutDoorStairs = 0;
+                FieldAnimateDoorClose(player->currentCoords.x, player->currentCoords.y - 1);
+            }
             else
             {
                 //gPlayerAvatar.preventStep = TRUE;
@@ -912,7 +916,11 @@ static void Task_FollowerOutOfDoor(u8 taskId)
             ObjectEventTurn(follower, DIR_SOUTH); //The follower should be facing down when it comes out the door
             follower->singleMovementActive = FALSE;
             follower->heldMovementActive = FALSE;
-            ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_NORMAL_DOWN); //follower step down
+            
+            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH))
+                ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_FASTER_DOWN);
+            else
+                ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_FAST_DOWN); //follower step down
             task->data[0] = 2;
         //}
         break;
