@@ -53,6 +53,7 @@ enum {
     JUMP_DISTANCE_NORMAL,
     JUMP_DISTANCE_FAR,
     JUMP_DISTANCE_FAR_QUICK,
+    JUMP_DISTANCE_FAR_QUICKER,
 };
 
 // Sprite data used throughout
@@ -6095,7 +6096,11 @@ bool8 MovementAction_Jump2Down_Step0(struct ObjectEvent *objectEvent, struct Spr
     {
         sprite->x2 = 0;
         sprite->data[7] = 10;
-        InitJumpRegular(objectEvent, sprite, DIR_SOUTH, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
+        
+        if(TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH))
+            InitJumpRegular(objectEvent, sprite, DIR_SOUTH, JUMP_DISTANCE_FAR_QUICKER, JUMP_TYPE_QUICK);
+        else
+            InitJumpRegular(objectEvent, sprite, DIR_SOUTH, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
     }
     else
         InitJumpRegular(objectEvent, sprite, DIR_SOUTH, JUMP_DISTANCE_FAR, JUMP_TYPE_HIGH);
@@ -6119,7 +6124,11 @@ bool8 MovementAction_Jump2Up_Step0(struct ObjectEvent *objectEvent, struct Sprit
     {
         sprite->x2 = 0;
         sprite->data[7] = 10;
-        InitJumpRegular(objectEvent, sprite, DIR_NORTH, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
+        
+        if(TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH))
+            InitJumpRegular(objectEvent, sprite, DIR_NORTH, JUMP_DISTANCE_FAR_QUICKER, JUMP_TYPE_QUICK);
+        else
+            InitJumpRegular(objectEvent, sprite, DIR_NORTH, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
     }
     else
         InitJumpRegular(objectEvent, sprite, DIR_NORTH, JUMP_DISTANCE_FAR, JUMP_TYPE_HIGH);
@@ -6143,7 +6152,11 @@ bool8 MovementAction_Jump2Left_Step0(struct ObjectEvent *objectEvent, struct Spr
     {
         sprite->x2 = 8;
         sprite->data[7] = 10;
-        InitJumpRegular(objectEvent, sprite, DIR_WEST, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
+        
+        if(TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH))
+            InitJumpRegular(objectEvent, sprite, DIR_WEST, JUMP_DISTANCE_FAR_QUICKER, JUMP_TYPE_QUICK);
+        else
+            InitJumpRegular(objectEvent, sprite, DIR_WEST, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
     }
     else
         InitJumpRegular(objectEvent, sprite, DIR_WEST, JUMP_DISTANCE_FAR, JUMP_TYPE_HIGH);
@@ -6167,7 +6180,11 @@ bool8 MovementAction_Jump2Right_Step0(struct ObjectEvent *objectEvent, struct Sp
     {
         sprite->x2 = -8;
         sprite->data[7] = 10;
-        InitJumpRegular(objectEvent, sprite, DIR_EAST, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
+        
+        if(TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH))
+            InitJumpRegular(objectEvent, sprite, DIR_EAST, JUMP_DISTANCE_FAR_QUICKER, JUMP_TYPE_QUICK);
+        else
+            InitJumpRegular(objectEvent, sprite, DIR_EAST, JUMP_DISTANCE_FAR_QUICK, JUMP_TYPE_QUICK);
     }
     else
         InitJumpRegular(objectEvent, sprite, DIR_EAST, JUMP_DISTANCE_FAR, JUMP_TYPE_HIGH);
@@ -9262,18 +9279,22 @@ static u8 DoJumpSpriteMovement(struct Sprite *sprite)
         [JUMP_DISTANCE_NORMAL] = 16,
         [JUMP_DISTANCE_FAR] = 32,
         [JUMP_DISTANCE_FAR_QUICK] = 16,
+        [JUMP_DISTANCE_FAR_QUICKER] = 8,
     };
     u8 distanceToShift[] = {
         [JUMP_DISTANCE_IN_PLACE] = 0,
         [JUMP_DISTANCE_NORMAL] = 0,
         [JUMP_DISTANCE_FAR] = 1,
         [JUMP_DISTANCE_FAR_QUICK] = 1,
+        [JUMP_DISTANCE_FAR_QUICKER] = 0,
     };
     u8 result = 0;
 
     if (sprite->sDistance != JUMP_DISTANCE_IN_PLACE)
     {
-        if(sprite->sDistance == JUMP_DISTANCE_FAR_QUICK)
+        if (sprite->sDistance == JUMP_DISTANCE_FAR_QUICKER)
+            Step4(sprite, sprite->sDirection);
+        else if (sprite->sDistance == JUMP_DISTANCE_FAR_QUICK)
             Step2(sprite, sprite->sDirection);
         else
             Step1(sprite, sprite->sDirection);
