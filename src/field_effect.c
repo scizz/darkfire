@@ -1,8 +1,10 @@
 #include "global.h"
 #include "decompress.h"
+#include "event_data.h"
 #include "event_object_movement.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
+#include "field_door.h"
 #include "field_effect.h"
 #include "field_effect_helpers.h"
 #include "field_player_avatar.h"
@@ -1370,7 +1372,16 @@ static void Task_UseFly(u8 taskId)
             gFieldEffectArguments[0] = 0;
 
         FieldEffectStart(FLDEFF_USE_FLY);
-        FollowerIntoPokeball();
+        
+        if (FlagGet(FLAG_FOLLOWER_IN_BUILDING))
+        {
+            FlagClear(FLAG_FOLLOWER_IN_BUILDING);
+            gSaveBlock2Ptr->follower.comeOutDoorStairs = 0;
+            gSaveBlock2Ptr->follower.warpEnd = 0;
+            FieldAnimateDoorClose(gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x, gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y - 1);
+        }
+        else
+            FollowerIntoPokeball();
         
         task->data[0]++;
     }
