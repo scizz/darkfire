@@ -5743,7 +5743,19 @@ bool8 MovementAction_WalkSlowDiagonalDownRight_Step1(struct ObjectEvent *objectE
 
 bool8 MovementAction_WalkSlowDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitWalkSlow(objectEvent, sprite, DIR_SOUTH);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 19)
+        {
+            sprite->data[7] = 19;
+            sprite->animNum = 4;
+            sprite->x2 = 0;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitWalkSlow(objectEvent, sprite, DIR_SOUTH);
+    }
+    else
+        InitWalkSlow(objectEvent, sprite, DIR_SOUTH);
     return MovementAction_WalkSlowDown_Step1(objectEvent, sprite);
 }
 
@@ -5759,7 +5771,19 @@ bool8 MovementAction_WalkSlowDown_Step1(struct ObjectEvent *objectEvent, struct 
 
 bool8 MovementAction_WalkSlowUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitWalkSlow(objectEvent, sprite, DIR_NORTH);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 20)
+        {
+            sprite->data[7] = 20;
+            sprite->animNum = 5;
+            sprite->x2 = 0;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitWalkSlow(objectEvent, sprite, DIR_NORTH);
+    }
+    else
+        InitWalkSlow(objectEvent, sprite, DIR_NORTH);
     return MovementAction_WalkSlowUp_Step1(objectEvent, sprite);
 }
 
@@ -5775,7 +5799,19 @@ bool8 MovementAction_WalkSlowUp_Step1(struct ObjectEvent *objectEvent, struct Sp
 
 bool8 MovementAction_WalkSlowLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitWalkSlow(objectEvent, sprite, DIR_WEST);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 21)
+        {
+            sprite->data[7] = 21;
+            sprite->animNum = 6;
+            sprite->x2 = 8;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitWalkSlow(objectEvent, sprite, DIR_WEST);
+    }
+    else
+        InitWalkSlow(objectEvent, sprite, DIR_WEST);
     return MovementAction_WalkSlowLeft_Step1(objectEvent, sprite);
 }
 
@@ -5791,7 +5827,19 @@ bool8 MovementAction_WalkSlowLeft_Step1(struct ObjectEvent *objectEvent, struct 
 
 bool8 MovementAction_WalkSlowRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitWalkSlow(objectEvent, sprite, DIR_EAST);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 22)
+        {
+            sprite->data[7] = 22;
+            sprite->animNum = 7;
+            sprite->x2 = -8;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitWalkSlow(objectEvent, sprite, DIR_EAST);
+    }
+    else
+        InitWalkSlow(objectEvent, sprite, DIR_EAST);
     return MovementAction_WalkSlowRight_Step1(objectEvent, sprite);
 }
 
@@ -6255,7 +6303,7 @@ bool8 MovementAction_WalkFastDown_Step0(struct ObjectEvent *objectEvent, struct 
         if(sprite->data[7] != 6)
         {
             sprite->data[7] = 6;
-            sprite->animNum = 20;
+            sprite->animNum = 8;
             sprite->x2 = 0;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
@@ -6283,7 +6331,7 @@ bool8 MovementAction_WalkFastUp_Step0(struct ObjectEvent *objectEvent, struct Sp
         if(sprite->data[7] != 7)
         {
             sprite->data[7] = 7;
-            sprite->animNum = 21;
+            sprite->animNum = 9;
             sprite->x2 = 0;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
@@ -6311,7 +6359,7 @@ bool8 MovementAction_WalkFastLeft_Step0(struct ObjectEvent *objectEvent, struct 
         if(sprite->data[7] != 8)
         {
             sprite->data[7] = 8;
-            sprite->animNum = 22;
+            sprite->animNum = 10;
             sprite->x2 = 8;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
@@ -6339,7 +6387,7 @@ bool8 MovementAction_WalkFastRight_Step0(struct ObjectEvent *objectEvent, struct
         if(sprite->data[7] != 9)
         {
             sprite->data[7] = 9;
-            sprite->animNum = 23;
+            sprite->animNum = 11;
             sprite->x2 = -8;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
@@ -6551,7 +6599,19 @@ bool8 MovementAction_RideWaterCurrentRight_Step1(struct ObjectEvent *objectEvent
 
 bool8 MovementAction_WalkFasterDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FASTER);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 11)
+        {
+            sprite->data[7] = 11;
+            sprite->animNum = 12;
+            sprite->x2 = 0;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FASTER);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FASTER);
     return MovementAction_WalkFasterDown_Step1(objectEvent, sprite);
 }
 
@@ -6567,7 +6627,19 @@ bool8 MovementAction_WalkFasterDown_Step1(struct ObjectEvent *objectEvent, struc
 
 bool8 MovementAction_WalkFasterUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FASTER);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 12)
+        {
+            sprite->data[7] = 12;
+            sprite->animNum = 13;
+            sprite->x2 = 0;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FASTER);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FASTER);
     return MovementAction_WalkFasterUp_Step1(objectEvent, sprite);
 }
 
@@ -6583,7 +6655,19 @@ bool8 MovementAction_WalkFasterUp_Step1(struct ObjectEvent *objectEvent, struct 
 
 bool8 MovementAction_WalkFasterLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTER);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 13)
+        {
+            sprite->data[7] = 13;
+            sprite->animNum = 14;
+            sprite->x2 = 8;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTER);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTER);
     return MovementAction_WalkFasterLeft_Step1(objectEvent, sprite);
 }
 
@@ -6599,7 +6683,19 @@ bool8 MovementAction_WalkFasterLeft_Step1(struct ObjectEvent *objectEvent, struc
 
 bool8 MovementAction_WalkFasterRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTER);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 14)
+        {
+            sprite->data[7] = 14;
+            sprite->animNum = 15;
+            sprite->x2 = -8;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTER);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTER);
     return MovementAction_WalkFasterRight_Step1(objectEvent, sprite);
 }
 
@@ -6615,7 +6711,19 @@ bool8 MovementAction_WalkFasterRight_Step1(struct ObjectEvent *objectEvent, stru
 
 bool8 MovementAction_SlideDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FASTEST);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 15)
+        {
+            sprite->data[7] = 15;
+            sprite->animNum = 16;
+            sprite->x2 = 0;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FASTEST);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FASTEST);
     return MovementAction_SlideDown_Step1(objectEvent, sprite);
 }
 
@@ -6631,7 +6739,19 @@ bool8 MovementAction_SlideDown_Step1(struct ObjectEvent *objectEvent, struct Spr
 
 bool8 MovementAction_SlideUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FASTEST);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 16)
+        {
+            sprite->data[7] = 16;
+            sprite->animNum = 17;
+            sprite->x2 = 0;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FASTEST);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FASTEST);
     return MovementAction_SlideUp_Step1(objectEvent, sprite);
 }
 
@@ -6647,7 +6767,19 @@ bool8 MovementAction_SlideUp_Step1(struct ObjectEvent *objectEvent, struct Sprit
 
 bool8 MovementAction_SlideLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTEST);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 17)
+        {
+            sprite->data[7] = 17;
+            sprite->animNum = 18;
+            sprite->x2 = 8;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTEST);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTEST);
     return MovementAction_SlideLeft_Step1(objectEvent, sprite);
 }
 
@@ -6663,7 +6795,19 @@ bool8 MovementAction_SlideLeft_Step1(struct ObjectEvent *objectEvent, struct Spr
 
 bool8 MovementAction_SlideRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTEST);
+    if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+    {
+        if(sprite->data[7] != 18)
+        {
+            sprite->data[7] = 18;
+            sprite->animNum = 19;
+            sprite->x2 = -8;
+            SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
+        }
+        InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTEST);
+    }
+    else
+        InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTEST);
     return MovementAction_SlideRight_Step1(objectEvent, sprite);
 }
 

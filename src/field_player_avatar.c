@@ -661,6 +661,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     }
     else if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
     {
+        FollowerPokeballSparkle();
         gPlayerAvatar.creeping = TRUE;
         PlayerGoSlow(direction);
     }
