@@ -3067,7 +3067,16 @@ static void SurfFieldEffect_FieldMovePose(struct Task *task)
         SetPlayerAvatarFieldMove();
         ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
         task->tState++;
-        FollowerIntoPokeball();
+        
+        if (FlagGet(FLAG_FOLLOWER_IN_BUILDING))
+        {
+            FlagClear(FLAG_FOLLOWER_IN_BUILDING);
+            gSaveBlock2Ptr->follower.comeOutDoorStairs = 0;
+            gSaveBlock2Ptr->follower.warpEnd = 0;
+            FieldAnimateDoorClose(gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x, gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y - 1);
+        }
+        else
+            FollowerIntoPokeball();
     }
 }
 
