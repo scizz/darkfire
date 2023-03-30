@@ -608,6 +608,14 @@ PetalburgCity_EventScript_ScottExit3:: @ 81DC7C4
 	waitmovement 0
 	return
 
+WL1R4:
+	walk_left
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 PetalburgCity_Movement_ScottStartWalkLeft: @ 81DC7D6
 	walk_left
 	walk_left
@@ -716,9 +724,36 @@ PetalburgCity_Movement_PlayerWatchScottExit3: @ 81DC828
 	walk_in_place_faster_left
 	step_end
 
-PetalburgCity_EventScript_GymBoy:: @ 81DC82E
-	msgbox PetalburgCity_Text_AreYouRookieTrainer, MSGBOX_NPC
+PetalburgCity_EventScript_NPCMove::
+	lock
+	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, WR5
+	applymovement OBJ_EVENT_ID_FOLLOWER, WR5
+	waitmovement 0
+	release
 	end
+
+PetalburgCity_EventScript_FollowMove::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, WR5
+	applymovement OBJ_EVENT_ID_FOLLOWER, WR5
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	waitmovement 0
+	delay 60
+	release
+	end
+
+PetalburgCity_Text_LetsMove:
+	.string "Let's walk!$"
 
 PetalburgCity_Text_WhereIsWally: @ 81DC837
 	.string "Where has our WALLY gone?\p"

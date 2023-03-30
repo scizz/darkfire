@@ -47,7 +47,7 @@ Route9_StarterDome::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
-	applymovement LOCALID_DAZ_1, Common_Movement_FollowerFaceRight
+	applymovement LOCALID_DAZ_1, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -122,8 +122,8 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_FaceUp
 	waitmovement 0
-	opendoor 28, 44
-	waitdooranim
+	@opendoor 28, 44
+	@waitdooranim
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkUp
 	applymovement LOCALID_MOTHER, Common_Movement_WalkUp
 	applymovement LOCALID_GIRL, Common_Movement_WalkUp
@@ -143,8 +143,8 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	removeobject LOCALID_YOUNGSTER
 	delay 10
-	closedoor 28, 44
-	waitdooranim
+	@closedoor 28, 44
+	@waitdooranim
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -164,23 +164,23 @@ Route9_StarterDome_EnterTop::
 	applymovement OBJ_EVENT_ID_PLAYER, WL3FU
 	applymovement OBJ_EVENT_ID_FOLLOWER, WL3
 	waitmovement 0
-	opendoor 28, 44
-	waitdooranim
+	@opendoor 28, 44
+	@waitdooranim
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceUp
 	goto Route9_StarterDome_End
 	end
 
 Route9_StarterDome_EnterBottom::
 	applymovement LOCALID_DAZ_1, WL2U2
 	applymovement OBJ_EVENT_ID_PLAYER, WL3U
-	applymovement OBJ_EVENT_ID_FOLLOWER, WL4FFU
+	applymovement OBJ_EVENT_ID_FOLLOWER, WL4FU
 	waitmovement 0
-	opendoor 28, 44
-	waitdooranim
+	@opendoor 28, 44
+	@waitdooranim
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
@@ -287,12 +287,12 @@ WL3U:
 	walk_up
 	step_end
 
-WL4FFU:
+WL4FU:
 	walk_left
 	walk_left
 	walk_left
 	walk_left
-	follower_face_up
+	face_up
 	step_end
 
 Route9_Text_Sign:

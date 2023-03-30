@@ -81,15 +81,15 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 8,
-      "y": 2,
+      "x": 15,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgCity_EventScript_GymBoy",
+      "script": "PetalburgCity_EventScript_FollowMove",
       "flag": "0"
     },
     {
@@ -125,8 +125,8 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_NORTHSTAR_CITY_TOURNAMENT_4F",
+      "dest_warp_id": "0"
     },
     {
       "x": 17,
@@ -189,12 +189,12 @@
     },
     {
       "type": "trigger",
-      "x": -1,
-      "y": 7,
+      "x": 21,
+      "y": 8,
       "elevation": 3,
-      "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "PetalburgCity_EventScript_Scott0"
+      "script": "PetalburgCity_EventScript_FollowMove"
     },
     {
       "type": "trigger",
