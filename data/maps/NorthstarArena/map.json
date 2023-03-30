@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -91,15 +94,18 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_NORTHSTAR_ARENA",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false
+  ]
 }

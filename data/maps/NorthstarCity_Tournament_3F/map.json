@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 11,
+      "x": 10,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -154,9 +154,9 @@
       "x": 15,
       "y": 2,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NorthstarCity_Tournament_3F_Hide4FObjects"
     },
     {
       "type": "trigger",

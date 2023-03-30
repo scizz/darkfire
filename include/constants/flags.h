@@ -734,14 +734,14 @@
 #define FLAG_HIDE_ROUTE_9_DOME_CROWD        0x2B1
 #define FLAG_NORTHSTAR_TOURNAMENT_STARTED   0x2B2
 
-#define FLAG_UNUSED_0x2B3                   0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4                   0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5                   0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6                   0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7                   0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8                   0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9                   0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA                   0x2BA // Unused Flag
+#define FLAG_NORTHSTAR_TOURNAMENT_PSYCHIC   0x2B3
+#define FLAG_NORTHSTAR_TOURNAMENT_RANGER    0x2B4
+#define FLAG_NORTHSTAR_TOURNAMENT_OLD_MAN   0x2B5
+#define FLAG_NORTHSTAR_TOURNAMENT_BLACK_BELT 0x2B6
+#define FLAG_NORTHSTAR_TOURNAMENT_ACE_TRAINER 0x2B7
+#define FLAG_NORTHSTAR_TOURNAMENT_SAILOR    0x2B8
+#define FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE  0x2B9
+#define FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL 0x2BA
 #define FLAG_UNUSED_0x2BB                   0x2BB // Unused Flag
 
 // Event Flags

@@ -26,7 +26,7 @@ NorthstarCity_Tournament_4F_MapScripts::
 	.byte 0
 
 NorthstarCity_Tournament_4F_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 0, NorthstarCity_Tournament_4F_EventStart
+	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Tournament_4F_EventStart
 	.2byte 0
 
 NorthstarCity_Tournament_4F_EventStart::
@@ -68,8 +68,27 @@ NorthstarCity_Tournament_NotReady::
 NorthstarCity_Tournament_WelcomeBack::
 	msgbox NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq NorthstarCity_Tournament_Started
+	goto_if_eq NorthstarCity_Tournament_RandCheck
 	goto NorthstarCity_Tournament_NotReady
+	end
+
+NorthstarCity_Tournament_RandCheck::
+	random 2
+	switch VAR_RESULT
+	case 0, NorthstarCity_Tournament_HidePsychic
+	case 1, NorthstarCity_Tournament_HideRanger
+	end
+
+NorthstarCity_Tournament_HidePsychic::
+	removeobject LOCALID_PSYCHIC_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_PSYCHIC
+	goto NorthstarCity_Tournament_Started
+	end
+
+NorthstarCity_Tournament_HideRanger::
+	removeobject LOCALID_RANGER_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_RANGER
+	goto NorthstarCity_Tournament_Started
 	end
 
 NorthstarCity_Tournament_Started::
@@ -89,10 +108,12 @@ NorthstarCity_Tournament_Started::
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	msgbox NorthstarCity_Tournament_4F_Text_YourOpponentAwaits, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RECEPTIONIST, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_PLAYER, WL5DL2
 	applymovement OBJ_EVENT_ID_FOLLOWER, WDL5DL
 	waitmovement 0
-	setvar VAR_STORYLINE_STATE, 1
+	clearflag FLAG_FOLLOWER_IN_BUILDING
+	setvar VAR_STORYLINE_STATE, 2
 	end
 
 WU2L:

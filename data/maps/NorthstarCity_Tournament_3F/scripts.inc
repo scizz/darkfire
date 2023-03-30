@@ -9,6 +9,18 @@ NorthstarCity_Tournament_3F_Fat_Guy::
 	msgbox NorthstarCity_Tournament_3F_Text_Fat_Guy, MSGBOX_NPC
 	end
 
+NorthstarCity_Tournament_3F_Hide4FObjects::
+	lock
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	setflag FLAG_NORTHSTAR_TOURNAMENT_OLD_MAN
+	setflag FLAG_NORTHSTAR_TOURNAMENT_BLACK_BELT
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ACE_TRAINER
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SAILOR
+	setflag FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL
+	setvar VAR_STORYLINE_STATE, 1
+	release
+	end
+
 NorthstarCity_Tournament_3F_Text_Psychic:
 	.string "Something very sinister is brewing in\n"
 	.string "the horizon of the Tenjo region…\p"
