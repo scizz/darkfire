@@ -26,10 +26,10 @@ NorthstarCity_Tournament_4F_MapScripts::
 	.byte 0
 
 NorthstarCity_Tournament_4F_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 0, NorthstarCity_Tournament_4F_EventCheck
+	map_script_2 VAR_STORYLINE_STATE, 0, NorthstarCity_Tournament_4F_EventStart
 	.2byte 0
 
-NorthstarCity_Tournament_4F_EventCheck::
+NorthstarCity_Tournament_4F_EventStart::
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_ExclamationMark
@@ -42,7 +42,7 @@ NorthstarCity_Tournament_4F_EventCheck::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_STARTED, NorthstarCity_Tournament_Started
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_STARTED, NorthstarCity_Tournament_WelcomeBack
 	msgbox NorthstarCity_Tournament_4F_Text_GreetingsIfYouveCome, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq NorthstarCity_Tournament_PartyCheck
@@ -65,13 +65,69 @@ NorthstarCity_Tournament_NotReady::
 	waitstate
 	end
 
+NorthstarCity_Tournament_WelcomeBack::
+	msgbox NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq NorthstarCity_Tournament_Started
+	goto NorthstarCity_Tournament_NotReady
+	end
+
 NorthstarCity_Tournament_Started::
 	setflag FLAG_NORTHSTAR_TOURNAMENT_STARTED
+	applymovement LOCALID_RECEPTIONIST, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_GreatFollowMe, MSGBOX_AUTOCLOSE
+	showfollower
+	applymovement LOCALID_RECEPTIONIST, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement LOCALID_RECEPTIONIST, WD5
+	applymovement OBJ_EVENT_ID_PLAYER, WRD4
+	applymovement OBJ_EVENT_ID_FOLLOWER WR2D3
+	waitmovement 0
+	applymovement LOCALID_RECEPTIONIST, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_YourOpponentAwaits, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, WL5DL2
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDL5DL
+	waitmovement 0
+	setvar VAR_STORYLINE_STATE, 1
 	end
 
 WU2L:
 	walk_up
 	walk_up
+	walk_left
+	step_end
+
+WR2D3:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WDL5DL:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	step_end
+
+WL5DL2:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_left
 	walk_left
 	step_end
 
@@ -99,6 +155,10 @@ NorthstarCity_Tournament_4F_Text_GreetingsIfYouveCome:
 
 NorthstarCity_Tournament_4F_Text_PleaseComeBack:
 	.string "{COLOR}{RED}Please come back when you are ready.$"
+
+NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer:
+	.string "{COLOR}{RED}Welcome back, {PLAYER}!\p"
+	.string "Are you ready for the tournament?$"
 
 NorthstarCity_Tournament_4F_Text_UnbelievableTheFirstBattle:
 	.string "{COLOR}{RED}Unbelievable! The first battle\n"
