@@ -112,8 +112,70 @@ NorthstarCity_Tournament_Started::
 	applymovement OBJ_EVENT_ID_PLAYER, WL5DL2
 	applymovement OBJ_EVENT_ID_FOLLOWER, WDL5DL
 	waitmovement 0
-	clearflag FLAG_FOLLOWER_IN_BUILDING
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WL2
+	waitmovement 0
+	special RemoveCameraObject
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_AreWeLiveYet, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceDown
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_GoodEvening, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceRight
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_RANGER NorthstarCity_Tournament_PsychicOpponent
+	goto NorthstarCity_Tournament_RangerOpponent
+	end
+
+NorthstarCity_Tournament_PsychicOpponent::
+	msgbox NorthstarCity_Tournament_4F_Text_OurFirstMatchPsychic, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_PSYCHIC_ARENA, Common_Movement_WalkInPlaceSlowRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	goto NorthstarCity_Tournament_DirectorMagic
+	end
+
+NorthstarCity_Tournament_RangerOpponent::
+	msgbox NorthstarCity_Tournament_4F_Text_OurFirstMatchRanger, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_RANGER_ARENA, Common_Movement_WalkInPlaceSlowRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	goto NorthstarCity_Tournament_DirectorMagic
+	end
+
+NorthstarCity_Tournament_DirectorMagic::
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_DirectorWorkYourMagic, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	playse SE_PIN
+	waitse
+	delay 30
 	setvar VAR_STORYLINE_STATE, 2
+	@warpsilent MAP_NORTHSTAR_ARENA, 7, 5
+	@waitstate
 	end
 
 WU2L:
