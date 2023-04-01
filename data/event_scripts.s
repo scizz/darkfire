@@ -1321,3 +1321,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/PortBalina/scripts.inc"
 
 	.include "data/maps/WaterwayCity/scripts.inc"
+
+	.include "data/maps/MoonspringCity/scripts.inc"

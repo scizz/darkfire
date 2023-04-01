@@ -5540,6 +5540,16 @@
       "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/WaterwayCity/border.bin",
       "blockdata_filepath": "data/layouts/WaterwayCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOONSPRING_CITY",
+      "name": "MoonspringCity_Layout",
+      "width": 78,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/MoonspringCity/border.bin",
+      "blockdata_filepath": "data/layouts/MoonspringCity/map.bin"
     }
   ]
 }
