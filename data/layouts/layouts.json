@@ -5620,6 +5620,16 @@
       "secondary_tileset": "gTileset_SootopolisGym",
       "border_filepath": "data/layouts/Route17/border.bin",
       "blockdata_filepath": "data/layouts/Route17/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE25",
+      "name": "Route25_Layout",
+      "width": 130,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/Route25/border.bin",
+      "blockdata_filepath": "data/layouts/Route25/map.bin"
     }
   ]
 }
