@@ -5504,8 +5504,8 @@
     {
       "id": "LAYOUT_ROUTE12",
       "name": "Route12_Layout",
-      "width": 127,
-      "height": 56,
+      "width": 92,
+      "height": 52,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/Route12/border.bin",
