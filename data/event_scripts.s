@@ -1329,3 +1329,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DriftstreamTown/scripts.inc"
 
 	.include "data/maps/TwilightVillage/scripts.inc"
+
+	.include "data/maps/Route14/scripts.inc"
