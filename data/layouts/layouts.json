@@ -5550,6 +5550,16 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/MoonspringCity/border.bin",
       "blockdata_filepath": "data/layouts/MoonspringCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONYA_VILLAGE",
+      "name": "ZonyaVillage_Layout",
+      "width": 30,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/ZonyaVillage/border.bin",
+      "blockdata_filepath": "data/layouts/ZonyaVillage/map.bin"
     }
   ]
 }
