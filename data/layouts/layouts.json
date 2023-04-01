@@ -4327,7 +4327,7 @@
       "width": 102,
       "height": 62,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "secondary_tileset": "gTileset_MossdeepGameCorner",
       "border_filepath": "data/layouts/UnionCity/border.bin",
       "blockdata_filepath": "data/layouts/UnionCity/map.bin"
     },
