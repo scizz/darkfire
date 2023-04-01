@@ -31,6 +31,7 @@
 #define MAP_ROUTE12           (22 | (0 << 8))
 #define MAP_ROUTE31           (23 | (0 << 8))
 #define MAP_ROUTE13           (24 | (0 << 8))
+#define MAP_PORT_BALINA       (25 | (0 << 8))
 
 // gMapGroup_DarkfireDungeons
 #define MAP_ANHEIM_FOREST          (0 | (1 << 8))

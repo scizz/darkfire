@@ -65,6 +65,7 @@
     "PinleafTown",
     "MiraniaTown",
     "ThymesgroveCity",
+    "PortBalina",
     "Route1",
     "Route2",
     "Route3",
@@ -77,8 +78,8 @@
     "Route10",
     "Route11",
     "Route12",
-    "Route31",
-    "Route13"
+    "Route13",
+    "Route31"
   ],
   "gMapGroup_DarkfireDungeons": [
     "AnheimForest",

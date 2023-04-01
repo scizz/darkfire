@@ -5520,6 +5520,16 @@
       "secondary_tileset": "gTileset_LavaridgeGym",
       "border_filepath": "data/layouts/Route13/border.bin",
       "blockdata_filepath": "data/layouts/Route13/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_BALINA",
+      "name": "PortBalina_Layout",
+      "width": 46,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleArena",
+      "border_filepath": "data/layouts/PortBalina/border.bin",
+      "blockdata_filepath": "data/layouts/PortBalina/map.bin"
     }
   ]
 }
