@@ -1325,3 +1325,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/MoonspringCity/scripts.inc"
 
 	.include "data/maps/ZonyaVillage/scripts.inc"
+
+	.include "data/maps/DriftstreamTown/scripts.inc"

@@ -5560,6 +5560,16 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/ZonyaVillage/border.bin",
       "blockdata_filepath": "data/layouts/ZonyaVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRIFTSTREAM_TOWN",
+      "name": "DriftstreamTown_Layout",
+      "width": 42,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/DriftstreamTown/border.bin",
+      "blockdata_filepath": "data/layouts/DriftstreamTown/map.bin"
     }
   ]
 }
