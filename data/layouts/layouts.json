@@ -5530,6 +5530,16 @@
       "secondary_tileset": "gTileset_BattleArena",
       "border_filepath": "data/layouts/PortBalina/border.bin",
       "blockdata_filepath": "data/layouts/PortBalina/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY",
+      "name": "WaterwayCity_Layout",
+      "width": 68,
+      "height": 108,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/WaterwayCity/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity/map.bin"
     }
   ]
 }
