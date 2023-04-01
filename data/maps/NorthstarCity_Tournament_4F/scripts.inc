@@ -23,11 +23,23 @@
 
 NorthstarCity_Tournament_4F_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NorthstarCity_Tournament_4F_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NorthstarCity_Tournament_4F_OnWarp
 	.byte 0
 
 NorthstarCity_Tournament_4F_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Tournament_4F_EventStart
 	.2byte 0
+
+NorthstarCity_Tournament_4F_OnWarp:
+	map_script_2 VAR_STORYLINE_STATE, 3, NorthstarCity_Tournament_4F_InitRoomObjects
+	.2byte 0
+
+
+NorthstarCity_Tournament_4F_InitRoomObjects::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WRFFL
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	showfollower
+	end
 
 NorthstarCity_Tournament_4F_EventStart::
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_FaceUp
@@ -174,8 +186,8 @@ NorthstarCity_Tournament_DirectorMagic::
 	waitse
 	delay 30
 	setvar VAR_STORYLINE_STATE, 2
-	@warpsilent MAP_NORTHSTAR_ARENA, 7, 5
-	@waitstate
+	warpsilent MAP_NORTHSTAR_ARENA, 7, 5
+	waitstate
 	end
 
 WU2L:

@@ -143,7 +143,7 @@ ChandraVillage_GiveEevee::
 
 ChandraVillage_Tyler_Debug::
 	lockall
-	givemon SPECIES_EEVEE, 25, ITEM_DRAGON_FANG
+	givemon SPECIES_FLAREON, 25, ITEM_DRAGON_FANG
 	givemon SPECIES_DRAGONAIR, 25, ITEM_DRAGON_FANG
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
