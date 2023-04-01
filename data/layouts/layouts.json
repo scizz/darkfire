@@ -5570,6 +5570,16 @@
       "secondary_tileset": "gTileset_LilycoveMuseum",
       "border_filepath": "data/layouts/DriftstreamTown/border.bin",
       "blockdata_filepath": "data/layouts/DriftstreamTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWILIGHT_VILLAGE",
+      "name": "TwilightVillage_Layout",
+      "width": 44,
+      "height": 30,
+      "primary_tileset": "gTileset_Volcano",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/TwilightVillage/border.bin",
+      "blockdata_filepath": "data/layouts/TwilightVillage/map.bin"
     }
   ]
 }
