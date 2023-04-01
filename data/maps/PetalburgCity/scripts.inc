@@ -7,7 +7,18 @@
 PetalburgCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_OnWarp
 	.byte 0
+
+PetalburgCity_OnWarp:
+	map_script_2 VAR_STORYLINE_STATE, 1, PetalburgCity_InitRoomObjects
+	.2byte 0
+
+PetalburgCity_InitRoomObjects::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WRFFL
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	showfollower
+	end
 
 PetalburgCity_OnTransition: @ 81DC2D7
 	setflag FLAG_VISITED_PETALBURG_CITY
@@ -103,6 +114,21 @@ PetalburgCity_EventScript_Boy:: @ 81DC3E6
 PetalburgCity_EventScript_WallysMom:: @ 81DC3FD
 	msgbox PetalburgCity_Text_WhereIsWally, MSGBOX_NPC
 	end
+
+PetalburgCity_EventScript_DoorWarp::
+	lock
+	faceplayer
+	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
+	setvar VAR_STORYLINE_STATE, 1
+	warp MAP_PETALBURG_CITY, 12, 10
+	waitstate
+	end
+
+WRFFL:
+	lock_facing_direction
+	walk_faster_right
+	unlock_facing_direction
+	step_end
 
 PetalburgCity_Movement_WalkToWallyHousePlayer: @ 81DC406
 	delay_8
@@ -753,7 +779,7 @@ PetalburgCity_EventScript_FollowMove::
 	end
 
 PetalburgCity_Text_LetsMove:
-	.string "Let's walk!$"
+	.string "Let's warp!$"
 
 PetalburgCity_Text_WhereIsWally: @ 81DC837
 	.string "Where has our WALLY gone?\p"
