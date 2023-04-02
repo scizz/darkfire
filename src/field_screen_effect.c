@@ -429,7 +429,11 @@ static void Task_ExitNonDoor(u8 taskId)
         {
             UnfreezeObjectEvents();
             UnlockPlayerFieldControls();
-            gSaveBlock2Ptr->follower.comeOutDoorStairs = 2;
+            
+            // Account for follower exiting pokeball after scripted warp
+            if (gSaveBlock2Ptr->follower.createSurfBlob != 2)
+                gSaveBlock2Ptr->follower.comeOutDoorStairs = 2;
+            
             DestroyTask(taskId);
         }
         break;

@@ -7,7 +7,7 @@
 PetalburgCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_OnWarp
+	@map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_OnWarp
 	.byte 0
 
 PetalburgCity_OnWarp:
@@ -120,6 +120,7 @@ PetalburgCity_EventScript_DoorWarp::
 	faceplayer
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
 	setvar VAR_STORYLINE_STATE, 1
+    setfollowerwarppos DIR_WEST
 	warp MAP_PETALBURG_CITY, 12, 10
 	waitstate
 	end

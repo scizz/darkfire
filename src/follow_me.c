@@ -1493,3 +1493,8 @@ void ShowFollower(void)
 	gObjectEvents[gSaveBlock2Ptr->follower.objId].invisible = FALSE;
 }
 
+void SetFollowerWarpPosition(void)
+{
+    gSaveBlock2Ptr->follower.createSurfBlob = 1;
+}
+

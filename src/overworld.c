@@ -1149,6 +1149,44 @@ static void SetPlayerCoordsFromWarp(void)
     }
 }
 
+static void SetFollowerCoordsFromWarp(void)
+{
+    struct ObjectEvent* player = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent* follower = &gObjectEvents[gSaveBlock2Ptr->follower.objId];
+
+    gSaveBlock2Ptr->follower.warpEnd = 0;        
+    
+    // Based on value passed in via setfollowerwarppos macro, place the follower relative to the player.
+    // If DIR_NONE, then setup for follower popping out of pokeball
+    switch(gSpecialVar_Result)
+    {
+        case DIR_NONE:
+            MoveObjectEventToMapCoords(follower, player->currentCoords.x, player->currentCoords.y);
+            gSaveBlock2Ptr->follower.createSurfBlob = 2;
+            break;
+        case DIR_SOUTH:
+            MoveObjectEventToMapCoords(follower, player->currentCoords.x, player->currentCoords.y + 1);
+            follower->invisible = FALSE;
+            gSaveBlock2Ptr->follower.createSurfBlob = 0;
+            break;
+        case DIR_NORTH:
+            MoveObjectEventToMapCoords(follower, player->currentCoords.x, player->currentCoords.y - 1);
+            follower->invisible = FALSE;
+            gSaveBlock2Ptr->follower.createSurfBlob = 0;
+            break;
+        case DIR_WEST:
+            MoveObjectEventToMapCoords(follower, player->currentCoords.x - 1, player->currentCoords.y);
+            follower->invisible = FALSE;
+            gSaveBlock2Ptr->follower.createSurfBlob = 0;
+            break;
+        case DIR_EAST:
+            MoveObjectEventToMapCoords(follower, player->currentCoords.x + 1, player->currentCoords.y);
+            follower->invisible = FALSE;
+            gSaveBlock2Ptr->follower.createSurfBlob = 0;
+            break;
+    }
+}
+
 void WarpIntoMap(void)
 {
     ApplyCurrentWarp();
@@ -2118,6 +2156,10 @@ static void CB2_LoadMap2(void)
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);
     SetMainCallback2(CB2_Overworld);
+    
+    // Handle placing follower after warp as determined via setfollowerwarppos macro
+    if (gSaveBlock2Ptr->follower.inProgress && gSaveBlock2Ptr->follower.createSurfBlob == 1)
+        SetFollowerCoordsFromWarp();
 }
 
 void CB2_ReturnToFieldContestHall(void)

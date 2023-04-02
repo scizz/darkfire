@@ -173,8 +173,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         if (TryStartStepBasedScript(&position, metatileBehavior, playerDirection) == TRUE)
             return TRUE;
     }
-    else if(gSaveBlock2Ptr->follower.inProgress)
+    else if(gSaveBlock2Ptr->follower.inProgress && gSaveBlock2Ptr->follower.createSurfBlob != 2)
     {
+        // Keep the follower bouncing, unless we're dealing with a follower coming out of a pokeball after a scripted warp.
         ObjectEventClearHeldMovementIfFinished(&gObjectEvents[gSaveBlock2Ptr->follower.objId]);
         ObjectEventSetHeldMovement(&gObjectEvents[gSaveBlock2Ptr->follower.objId], 0x9E);
     }
