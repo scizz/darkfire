@@ -10530,7 +10530,6 @@ u8 MovementAction_FollowingPokemon_Grow_Step1(struct ObjectEvent *objectEvent, s
         {
             sprite->data[7] = 0;
             gSaveBlock2Ptr->follower.createSurfBlob = 0;
-            GroundEffect_Shadow(objectEvent, sprite);
             switch(gObjectEvents[gPlayerAvatar.objectEventId].facingDirection)
             {
                 case DIR_SOUTH:
@@ -10547,7 +10546,7 @@ u8 MovementAction_FollowingPokemon_Grow_Step1(struct ObjectEvent *objectEvent, s
                     break;
             }
         }
-        
+        GroundEffect_Shadow(objectEvent, sprite);
         sprite->data[2]++;
     }
 
