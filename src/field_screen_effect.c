@@ -976,7 +976,7 @@ static void Task_SpinEnterWarp(u8 taskId)
     case 1:
         if (WaitForWeatherFadeIn() && IsPlayerSpinEntranceActive() != TRUE)
         {
-            FollowMe_WarpSetEnd();
+            //FollowMe_WarpSetEnd();
             UnfreezeObjectEvents();
             UnlockPlayerFieldControls();
             DestroyTask(taskId);
