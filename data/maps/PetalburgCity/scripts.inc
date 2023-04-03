@@ -120,9 +120,10 @@ PetalburgCity_EventScript_DoorWarp::
 	faceplayer
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
 	setvar VAR_STORYLINE_STATE, 1
-    setfollowerwarppos DIR_WEST
-	warp MAP_PETALBURG_CITY, 12, 10
-	waitstate
+    @setfollowerwarppos DIR_WEST
+	@warp MAP_PETALBURG_CITY, 12, 10
+	@waitstate
+    showborderlesspic 22, 8
 	end
 
 WRFFL:
@@ -265,6 +266,7 @@ PetalburgCity_EventScript_CitySign:: @ 81DC47F
 
 PetalburgCity_EventScript_Gentleman:: @ 81DC488
 	msgbox PetalburgCity_Text_FullPartyExplanation, MSGBOX_NPC
+    hidemonpic
 	end
 
 PetalburgCity_EventScript_WallyHouseSign:: @ 81DC491

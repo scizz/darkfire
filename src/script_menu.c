@@ -1,5 +1,6 @@
 #include "global.h"
 #include "main.h"
+#include "data.h"
 #include "event_data.h"
 #include "field_effect.h"
 #include "field_specials.h"
@@ -13,6 +14,7 @@
 #include "strings.h"
 #include "task.h"
 #include "text.h"
+#include "trainer_pokemon_sprites.h"
 #include "constants/field_specials.h"
 #include "constants/items.h"
 #include "constants/script_menu.h"
@@ -672,6 +674,30 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
         gSprites[spriteId].callback = SpriteCallbackDummy;
         gSprites[spriteId].oam.priority = 0;
         SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, TRUE);
+        ScheduleBgCopyTilemapToVram(0);
+        return TRUE;
+    }
+}
+
+bool8 ScriptMenu_ShowBorderlessPic(u8 x, u8 y)
+{
+    u8 taskId;
+    u8 spriteId;
+    u16 species = GetMonData(&gPlayerParty[GetLeadMonNotFaintedIndex()], MON_DATA_SPECIES, NULL);
+
+    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE)
+    {
+        return FALSE;
+    }
+    else
+    {
+        spriteId = CreateMonSprite_PicBox(species, x * 8 + 40, y * 8 + 40, 0);
+        taskId = CreateTask(Task_PokemonPicWindow, 0x50);
+        gTasks[taskId].tState = 0;
+        gTasks[taskId].tMonSpecies = species;
+        gTasks[taskId].tMonSpriteId = spriteId;
+        gSprites[spriteId].callback = SpriteCallbackDummy;
+        gSprites[spriteId].oam.priority = 1;
         ScheduleBgCopyTilemapToVram(0);
         return TRUE;
     }

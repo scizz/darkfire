@@ -9,6 +9,7 @@ bool8 ScriptMenu_YesNo(u8 left, u8 top);
 bool8 ScriptMenu_MultichoiceGrid(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 columnCount);
 bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y);
 bool8 (*ScriptMenu_HidePokemonPic(void))(void);
+bool8 ScriptMenu_ShowBorderlessPic(u8 x, u8 y);
 int ConvertPixelWidthToTileWidth(int width);
 u8 CreateWindowFromRect(u8 x, u8 y, u8 width, u8 height);
 void ClearToTransparentAndRemoveWindow(u8 windowId);

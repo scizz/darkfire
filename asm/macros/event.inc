@@ -2072,6 +2072,12 @@
     setvar VAR_RESULT, \pos
     callnative SetFollowerWarpPosition
     .endm
+    
+    .macro showborderlesspic x:req, y:req
+    .byte 0xe9
+    .byte \x
+    .byte \y
+    .endm
 
 	@ Attempts to trigger a special evolution method in the overworld.
 	@ There may be other conditions required which are coded for in GetEvolutionTargetSpecies.

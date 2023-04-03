@@ -1466,6 +1466,15 @@ bool8 ScrCmd_hidemonpic(struct ScriptContext *ctx)
     return TRUE;
 }
 
+bool8 ScrCmd_showborderlesspic(struct ScriptContext *ctx)
+{
+    u8 x = ScriptReadByte(ctx);
+    u8 y = ScriptReadByte(ctx);
+    
+    ScriptMenu_ShowBorderlessPic(x, y);
+    return FALSE;
+}
+
 bool8 ScrCmd_showcontestpainting(struct ScriptContext *ctx)
 {
     u8 contestWinnerId = ScriptReadByte(ctx);
