@@ -654,12 +654,34 @@ static void Task_PokemonPicWindow(u8 taskId)
     }
 }
 
+static void Task_BorderlessPicWindow(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+
+    switch (task->tState)
+    {
+    case 0:
+        task->tState++;
+        break;
+    case 1:
+        // Wait until state is advanced by ScriptMenu_HidePokemonPic
+        break;
+    case 2:
+        FreeResourcesAndDestroySprite(&gSprites[task->tMonSpriteId], task->tMonSpriteId);
+        task->tState++;
+        break;
+    case 3:
+        DestroyTask(taskId);
+        break;
+    }
+}
+
 bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
 {
     u8 taskId;
     u8 spriteId;
 
-    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE)
+    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE || FindTaskIdByFunc(Task_BorderlessPicWindow) != TASK_NONE)
     {
         return FALSE;
     }
@@ -682,17 +704,17 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
 bool8 ScriptMenu_ShowBorderlessPic(u8 x, u8 y)
 {
     u8 taskId;
-    u8 spriteId;
+    u16 spriteId;
     u16 species = GetMonData(&gPlayerParty[GetLeadMonNotFaintedIndex()], MON_DATA_SPECIES, NULL);
 
-    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE)
+    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE || FindTaskIdByFunc(Task_BorderlessPicWindow) != TASK_NONE)
     {
         return FALSE;
     }
     else
     {
         spriteId = CreateMonSprite_PicBox(species, x * 8 + 40, y * 8 + 40, 0);
-        taskId = CreateTask(Task_PokemonPicWindow, 0x50);
+        taskId = CreateTask(Task_BorderlessPicWindow, 0x50);
         gTasks[taskId].tState = 0;
         gTasks[taskId].tMonSpecies = species;
         gTasks[taskId].tMonSpriteId = spriteId;
@@ -708,7 +730,12 @@ bool8 (*ScriptMenu_HidePokemonPic(void))(void)
     u8 taskId = FindTaskIdByFunc(Task_PokemonPicWindow);
 
     if (taskId == TASK_NONE)
-        return NULL;
+    {
+        taskId = FindTaskIdByFunc(Task_BorderlessPicWindow);
+        
+        if (taskId == TASK_NONE)
+            return NULL;
+    }
     gTasks[taskId].tState++;
     return IsPicboxClosed;
 }
