@@ -261,7 +261,6 @@ u32 FldEff_Shadow(void)
     spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[sShadowEffectTemplateIds[graphicsInfo->shadowSize]], 0, 0, 0x94 + 1);
     if (spriteId != MAX_SPRITES)
     {
-        // SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(8, 12));
         gSprites[spriteId].oam.objMode = 1;
         gSprites[spriteId].coordOffsetEnabled = TRUE;
         gSprites[spriteId].data[0] = gFieldEffectArguments[0];
@@ -269,8 +268,8 @@ u32 FldEff_Shadow(void)
         gSprites[spriteId].data[2] = gFieldEffectArguments[2];
         gSprites[spriteId].data[3] = (graphicsInfo->height >> 1) - gShadowVerticalOffsets[graphicsInfo->shadowSize];
     }
-    SetGpuReg(REG_OFFSET_DISPCNT, 0x1F40);
-    SetGpuReg(REG_OFFSET_BLDALPHA, 0x0A10);
+    //SetGpuReg(REG_OFFSET_DISPCNT, 0x1F40);
+    //SetGpuReg(REG_OFFSET_BLDALPHA, 0x0A10);
 }
 
 void UpdateShadowFieldEffect(struct Sprite *sprite)
