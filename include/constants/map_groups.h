@@ -42,6 +42,7 @@
 #define MAP_ROUTE17           (33 | (0 << 8))
 #define MAP_ROUTE25           (34 | (0 << 8))
 #define MAP_ROUTE31           (35 | (0 << 8))
+#define MAP_MAYHEM_CITY       (36 | (0 << 8))
 
 // gMapGroup_DarkfireDungeons
 #define MAP_ANHEIM_FOREST          (0 | (1 << 8))

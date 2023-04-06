@@ -5630,6 +5630,16 @@
       "secondary_tileset": "gTileset_BattlePyramid",
       "border_filepath": "data/layouts/Route25/border.bin",
       "blockdata_filepath": "data/layouts/Route25/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAYHEM_CITY",
+      "name": "MayhemCity_Layout",
+      "width": 80,
+      "height": 90,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MayhemCity/border.bin",
+      "blockdata_filepath": "data/layouts/MayhemCity/map.bin"
     }
   ]
 }
