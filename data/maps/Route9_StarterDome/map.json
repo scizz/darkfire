@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE9_STARTER_DOME",
   "name": "Route9_StarterDome",
   "layout": "LAYOUT_ROUTE9_STARTER_DOME",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ROUTE_9_10",
   "region_map_section": "MAPSEC_ROUTE_9",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
