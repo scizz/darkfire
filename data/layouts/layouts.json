@@ -5644,10 +5644,10 @@
     {
       "id": "LAYOUT_WEST_DISTRICT",
       "name": "WestDistrict_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 125,
+      "height": 59,
+      "primary_tileset": "gTileset_WestDistrict1",
+      "secondary_tileset": "gTileset_WestDistrict2",
       "border_filepath": "data/layouts/WestDistrict/border.bin",
       "blockdata_filepath": "data/layouts/WestDistrict/map.bin"
     },

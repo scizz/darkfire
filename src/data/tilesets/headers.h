@@ -836,3 +836,25 @@ const struct Tileset gTileset_Volcano =
     .metatileAttributes = gMetatileAttributes_Volcano,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_WestDistrict1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_WestDistrict1,
+    .palettes = gTilesetPalettes_WestDistrict1,
+    .metatiles = gMetatiles_WestDistrict1,
+    .metatileAttributes = gMetatileAttributes_WestDistrict1,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_WestDistrict2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_WestDistrict2,
+    .palettes = gTilesetPalettes_WestDistrict2,
+    .metatiles = gMetatiles_WestDistrict2,
+    .metatileAttributes = gMetatileAttributes_WestDistrict2,
+    .callback = NULL,
+};
