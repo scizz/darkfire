@@ -231,7 +231,7 @@ Route9_StarterDome_Intro::
 	applymovement LOCALID_YOUNGSTER_1, Common_Movement_FaceRight
 	delay 5
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSR3
 	waitmovement 0
@@ -255,7 +255,7 @@ Route9_StarterDome_Intro::
 	applymovement LOCALID_YOUNGSTER_1, Common_Movement_FaceUp
 	delay 5
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement 0
 	msgbox Route9_StarterDome_Text_OkayThatConcludes, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_DAZ_1, Common_Movement_FaceDown
@@ -325,7 +325,7 @@ Route9_StarterDome_BackToEntrance::
 	applymovement LOCALID_YOUNGSTER_1, WU2RU4
 	delay 5
 	applymovement OBJ_EVENT_ID_PLAYER, WRU
-	applymovement OBJ_EVENT_ID_FOLLOWER, WURFU
+	applymovement OBJ_EVENT_ID_FOLLOWER, WURFFU
 	applymovement LOCALID_MOTHER_1, D16U5
 	waitmovement 0
 	delay 30
@@ -752,7 +752,7 @@ D10WU2L8U14R7FD:
 	walk_right
 	walk_right
 	walk_right
-	face_down
+	follower_face_down
 	step_end
 
 WU6FL:
@@ -828,7 +828,7 @@ D48WRU3FFL:
 	walk_up
 	walk_up
 	walk_up
-	face_left @follower 
+	follower_face_left 
 	step_end
 
 WSD3:
@@ -873,6 +873,12 @@ WURFU:
 	walk_up
 	walk_right
 	face_up
+	step_end
+
+WURFFU:
+	walk_up
+	walk_right
+	follower_face_up
 	step_end
 
 D16U5:
@@ -1029,7 +1035,7 @@ Route9_StarterDome_Text_BulbasaurChikoritaAndTreecko:
 	.string "you may have to look for them!$"
 
 Route9_StarterDome_Text_MommyICanSee:
-	.string "Mommy, I can see a Chikorita!$"
+	.string "{COLOR}{RED}Mommy, I can see a Chikorita!$"
 
 Route9_StarterDome_Text_ToTheLeftIsTheFireArea:
 	.string "To the left is the Fire Area of the\n"
