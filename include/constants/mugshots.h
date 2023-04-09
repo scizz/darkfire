@@ -1,0 +1,6 @@
+#ifndef GUARD_CONSTANTS_MUGSHOTS_H
+#define GUARD_CONSTANTS_MUGSHOTS_H
+
+#define MUGSHOT_PROF 0
+
+#endif

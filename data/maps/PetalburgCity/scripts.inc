@@ -118,11 +118,12 @@ PetalburgCity_EventScript_WallysMom:: @ 81DC3FD
 PetalburgCity_EventScript_DoorWarp::
 	lock
 	faceplayer
-	speakername CommonName_Text_Tyler
-	showborderlesspic 21, 8
+	speakername CommonName_Text_Prof
+	setvar VAR_0x8000, MUGSHOT_PROF
+	callnative DrawMugshot
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
-	setvar VAR_STORYLINE_STATE, 1
-	hidemonpic
+	callnative ClearMugshot
+	release
 	end
 
 WRFFL:
@@ -781,6 +782,9 @@ PetalburgCity_EventScript_FollowMove::
 
 CommonName_Text_Tyler:
 	.string "Tyler$"
+
+CommonName_Text_Prof:
+	.string "Professor$"
 
 PetalburgCity_Text_LetsMove:
 	.string "What's up, {PLAYER}?!$"
