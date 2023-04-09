@@ -118,12 +118,11 @@ PetalburgCity_EventScript_WallysMom:: @ 81DC3FD
 PetalburgCity_EventScript_DoorWarp::
 	lock
 	faceplayer
+	speakername CommonName_Text_Tyler
+	showborderlesspic 21, 8
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
 	setvar VAR_STORYLINE_STATE, 1
-    @setfollowerwarppos DIR_WEST
-	@warp MAP_PETALBURG_CITY, 12, 10
-	@waitstate
-    showborderlesspic 22, 8
+	hidemonpic
 	end
 
 WRFFL:
@@ -266,7 +265,6 @@ PetalburgCity_EventScript_CitySign:: @ 81DC47F
 
 PetalburgCity_EventScript_Gentleman:: @ 81DC488
 	msgbox PetalburgCity_Text_FullPartyExplanation, MSGBOX_NPC
-    hidemonpic
 	end
 
 PetalburgCity_EventScript_WallyHouseSign:: @ 81DC491
@@ -781,8 +779,11 @@ PetalburgCity_EventScript_FollowMove::
 	release
 	end
 
+CommonName_Text_Tyler:
+	.string "Tyler$"
+
 PetalburgCity_Text_LetsMove:
-	.string "Let's warp!$"
+	.string "What's up, {PLAYER}?!$"
 
 PetalburgCity_Text_WhereIsWally: @ 81DC837
 	.string "Where has our WALLY gone?\p"

@@ -1341,3 +1341,11 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route25/scripts.inc"
 
 	.include "data/maps/MayhemCity/scripts.inc"
+
+	.include "data/maps/WestDistrict/scripts.inc"
+
+	.include "data/maps/BattleDistrict/scripts.inc"
+
+	.include "data/maps/Docks/scripts.inc"
+
+	.include "data/maps/Outskirts/scripts.inc"

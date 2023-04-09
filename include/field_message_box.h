@@ -9,6 +9,8 @@ enum
     FIELD_MESSAGE_BOX_AUTO_SCROLL,
 };
 
+extern const u8* gSpeakerName;
+
 bool8 ShowFieldMessage(const u8 *message);
 bool8 ShowPokenavFieldMessage(const u8 *message);
 bool8 ShowFieldMessageFromBuffer(void);
@@ -18,5 +20,6 @@ bool8 IsFieldMessageBoxHidden(void);
 u8 GetFieldMessageBoxMode(void);
 void StopFieldMessage(void);
 void InitFieldMessageBox(void);
+void SetSpeakerName(const u8* name);
 
 #endif // GUARD_FIELD_MESSAGE_BOX_H

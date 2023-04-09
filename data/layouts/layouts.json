@@ -5640,6 +5640,46 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/MayhemCity/border.bin",
       "blockdata_filepath": "data/layouts/MayhemCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEST_DISTRICT",
+      "name": "WestDistrict_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WestDistrict/border.bin",
+      "blockdata_filepath": "data/layouts/WestDistrict/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_DISTRICT",
+      "name": "BattleDistrict_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BattleDistrict/border.bin",
+      "blockdata_filepath": "data/layouts/BattleDistrict/map.bin"
+    },
+    {
+      "id": "LAYOUT_DOCKS",
+      "name": "Docks_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Docks/border.bin",
+      "blockdata_filepath": "data/layouts/Docks/map.bin"
+    },
+    {
+      "id": "LAYOUT_OUTSKIRTS",
+      "name": "Outskirts_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Outskirts/border.bin",
+      "blockdata_filepath": "data/layouts/Outskirts/map.bin"
     }
   ]
 }

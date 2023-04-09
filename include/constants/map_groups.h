@@ -43,6 +43,10 @@
 #define MAP_ROUTE17           (34 | (0 << 8))
 #define MAP_ROUTE25           (35 | (0 << 8))
 #define MAP_ROUTE31           (36 | (0 << 8))
+#define MAP_WEST_DISTRICT     (37 | (0 << 8))
+#define MAP_BATTLE_DISTRICT   (38 | (0 << 8))
+#define MAP_DOCKS             (39 | (0 << 8))
+#define MAP_OUTSKIRTS         (40 | (0 << 8))
 
 // gMapGroup_DarkfireDungeons
 #define MAP_ANHEIM_FOREST          (0 | (1 << 8))
