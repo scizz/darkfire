@@ -1,6 +1,12 @@
 #ifndef GUARD_FIELD_EFFECTS_H
 #define GUARD_FIELD_EFFECTS_H
 
+struct FaceSpritePalPair
+{
+    const void * gfx;
+    const void * pal;
+};
+
 extern const struct SpritePalette gNewGameBirchObjectPaletteInfo;
 extern const struct SpriteTemplate gNewGameBirchObjectTemplate;
 extern const struct OamData gNewGameBirchOamAttributes;
@@ -34,6 +40,8 @@ bool8 FieldEffectCmd_end(u8 **script, u32 *val);
 bool8 FieldEffectCmd_loadgfx_callnative(u8 **script, u32 *val);
 bool8 FieldEffectCmd_loadtiles_callnative(u8 **script, u32 *val);
 bool8 FieldEffectCmd_loadfadedpal_callnative(u8 **script, u32 *val);
+bool8 FieldEffectCmd_emotion(u8 **script, u32 *val);
+bool8 IsFaceSpriteRightActive(void);
 void FieldCB_FallWarpExit(void);
 void StartEscalatorWarp(u8 metatileBehavior, u8 priority);
 void StartLavaridgeGymB1FWarp(u8 priority);
@@ -48,6 +56,7 @@ u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority);
 void StartEscapeRopeFieldEffect(void);
 void FieldEffectFreeGraphicsResources(struct Sprite *sprite);
 void FieldEff_CaveDust(void);
-
+void CreateFaceSprite(u8 id, u8 emotion, bool8 right);
+void DeleteFaceSprites(u8 mode);
 
 #endif // GUARD_FIELD_EFFECTS_H

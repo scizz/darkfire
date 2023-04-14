@@ -28,12 +28,16 @@
 #include "trainer_pokemon_sprites.h"
 #include "trig.h"
 #include "util.h"
+#include "malloc.h"
 #include "follow_me.h"
+#include "field_message_box.h"
+#include "text_window.h"
 #include "constants/field_effects.h"
 #include "constants/event_object_movement.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/emotions.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -3964,4 +3968,178 @@ u8 FldEff_CaveDust(void)
     }
     
     return spriteId;
+}
+
+#define TAG_FACE_LEFT 0x1337
+#define TAG_FACE_RIGHT 0x1338
+
+#define FACE_POS_LEFT_X 40
+#define FACE_POS_RIGHT_X 230 - FACE_POS_LEFT_X
+#define FACE_POS_Y 83
+
+static const struct OamData sFaceOam = {
+    .size = SPRITE_SIZE(64x64),
+    .shape = SPRITE_SHAPE(64x64)
+};
+
+static const struct SpriteTemplate sFaceTemplateRight = 
+{
+    .tileTag = TAG_FACE_RIGHT,
+    .paletteTag = TAG_FACE_RIGHT,
+    .anims = gDummySpriteAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .images = NULL,
+    .callback = SpriteCallbackDummy,
+    .oam = &sFaceOam,
+};
+
+static const struct SpriteTemplate sFaceTemplateLeft = 
+{
+    .tileTag = TAG_FACE_LEFT,
+    .paletteTag = TAG_FACE_LEFT,
+    .anims = gDummySpriteAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .images = NULL,
+    .callback = SpriteCallbackDummy,
+    .oam = &sFaceOam,
+};
+
+static const u32 sMugshotImg_Prof[] = INCBIN_U32("graphics/mugshots/prof-normal.4bpp.lz");
+static const u32 sMugshotImg_ProfLaughing[] = INCBIN_U32("graphics/mugshots/prof-laughing.4bpp.lz");
+static const u32 sMugshotImg_ProfWorried[] = INCBIN_U32("graphics/mugshots/prof-worried.4bpp.lz");
+static const u16 sMugshotPal_Prof[] = INCBIN_U16("graphics/mugshots/prof.gbapal");
+
+static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
+{
+    [FS_PROF] = {
+        [FSE_NORMAL] = {sMugshotImg_Prof, sMugshotPal_Prof},
+        [FSE_LAUGHING] = {sMugshotImg_ProfLaughing, sMugshotPal_Prof},
+        [FSE_WORRIED] = {sMugshotImg_ProfWorried, sMugshotPal_Prof},
+    }
+};
+
+static u8 FindFaceSprite(u16 tag)
+{
+    u32 i;
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        struct Sprite *sprite = &gSprites[sSpriteOrder[i]];
+
+        if (sprite->template->tileTag == tag && sprite->inUse)
+            return sSpriteOrder[i];
+    }
+    return MAX_SPRITES;
+}
+
+void CreateFaceSprite(u8 id, u8 emotion, bool8 right)
+{
+    
+    const void *gfx, *pal;
+    struct CompressedSpriteSheet sheetToLoad;
+    struct SpritePalette palToLoad;
+    u8 createdSprite, currentSpriteId;
+    if(id == FS_PLAYER)
+    {
+        if(gSaveBlock2Ptr->playerGender == MALE)
+            id = FS_PROF;
+        else
+            id = FS_PROF;
+    }
+    else if(id == FS_PROF)
+    {
+        if(gSaveBlock2Ptr->playerGender == MALE)
+            id = FS_PROF;
+        else
+            id = FS_PROF;
+    }
+    if(id == FS_NULL)
+    {
+        return;
+    }
+
+    if(id >= ARRAY_COUNT(sFaceSpriteSheets))
+    {
+        AGB_WARNING(FALSE);
+        id = 0;
+    }
+    if(emotion >= FSE_COUNT)
+    {
+        AGB_WARNING(FALSE);
+        emotion = FSE_NORMAL;
+    }
+    gfx = sFaceSpriteSheets[id][emotion].gfx != NULL ? sFaceSpriteSheets[id][emotion].gfx : sFaceSpriteSheets[id][FSE_NORMAL].gfx;
+    pal = sFaceSpriteSheets[id][emotion].pal != NULL ? sFaceSpriteSheets[id][emotion].pal : sFaceSpriteSheets[id][FSE_NORMAL].pal;
+    if(gfx == NULL || pal == NULL)
+    {
+        AGB_WARNING(FALSE);
+        return;
+    }
+    sheetToLoad.data = gfx;
+    sheetToLoad.size = 64*32;
+    sheetToLoad.tag = right ? TAG_FACE_RIGHT : TAG_FACE_LEFT;
+    palToLoad.data = pal;
+    palToLoad.tag = sheetToLoad.tag;
+
+    currentSpriteId = FindFaceSprite(sheetToLoad.tag);
+    if(currentSpriteId != MAX_SPRITES)
+    {
+        DestroySprite(&gSprites[currentSpriteId]);
+        FreeSpriteTilesByTag(sheetToLoad.tag);
+        FreeSpritePaletteByTag(palToLoad.tag);
+    }
+    LoadCompressedSpriteSheet(&sheetToLoad);
+    LoadSpritePalette(&palToLoad);
+
+    createdSprite = CreateSprite(right ? &sFaceTemplateRight : &sFaceTemplateLeft, right ? FACE_POS_RIGHT_X : FACE_POS_LEFT_X,FACE_POS_Y,0);
+    
+    //Flip sprite
+    if(!right)
+        gSprites[createdSprite].oam.matrixNum = (1<<3);
+
+    gSprites[createdSprite].data[0] = 0xFF;
+}
+
+static void TryDeleteFaceSprite(u16 tag)
+{
+    u8 spriteId = FindFaceSprite(tag);
+    if(spriteId != MAX_SPRITES)
+    {
+        if(gSprites[spriteId].data[0] != 0xFF)
+        {
+            u32 freeWord;
+            ClearStdWindowAndFrameToTransparent(gSprites[spriteId].data[0], TRUE);
+            RemoveWindow(gSprites[spriteId].data[0]);
+            LoadWordFromTwoHalfwords(&gSprites[spriteId].data[1], &freeWord);
+            Free((void*) freeWord);
+            LoadWordFromTwoHalfwords(&gSprites[spriteId].data[3], &freeWord);
+            Free((void*) freeWord);
+        }
+        DestroySprite(&gSprites[spriteId]);
+        FreeSpriteTilesByTag(tag);
+        FreeSpritePaletteByTag(tag);
+    }        
+}
+
+bool8 IsFaceSpriteRightActive(void)
+{
+    return FindFaceSprite(TAG_FACE_RIGHT) != MAX_SPRITES;
+}
+
+void DeleteFaceSprites(u8 mode)
+{
+    switch(mode)
+    {
+        case FDEL_LEFT:
+            TryDeleteFaceSprite(TAG_FACE_LEFT);
+            break;
+        case FDEL_RIGHT:
+            TryDeleteFaceSprite(TAG_FACE_RIGHT);
+            break;
+        case FDEL_BOTH:
+            TryDeleteFaceSprite(TAG_FACE_LEFT);
+            TryDeleteFaceSprite(TAG_FACE_RIGHT);
+        break;
+        default:
+            AGB_WARNING(FALSE);
+    }
 }

@@ -1008,8 +1008,8 @@ static void TilesetAnim_Rustboro(u16 timer)
 
 static void TilesetAnim_Dewford(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_Dewford_Flag(timer / 8);
+    //if (timer % 8 == 0)
+    //    QueueAnimTiles_Dewford_Flag(timer / 8);
 }
 
 static void TilesetAnim_Slateport(u16 timer)

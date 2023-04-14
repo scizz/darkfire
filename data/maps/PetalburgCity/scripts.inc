@@ -119,10 +119,9 @@ PetalburgCity_EventScript_DoorWarp::
 	lock
 	faceplayer
 	speakername CommonName_Text_Prof
-	setvar VAR_0x8000, MUGSHOT_PROF
-	callnative DrawMugshot
+	showface 0, 0, 1, 1
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
-	callnative ClearMugshot
+	hideface 1
 	release
 	end
 

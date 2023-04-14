@@ -48,7 +48,9 @@
 #include "trainer_see.h"
 #include "tv.h"
 #include "window.h"
+#include "malloc.h"
 #include "constants/event_objects.h"
+#include "gba/isagbprint.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(void);
@@ -2426,5 +2428,23 @@ bool8 ScrCmd_showitemdesc(struct ScriptContext *ctx)
 bool8 ScrCmd_hideitemdesc(struct ScriptContext *ctx)
 {
     HideHeaderBox();
+    return FALSE;
+}
+
+bool8 ScrCmd_showface(struct ScriptContext *ctx)
+{
+    u8 spriteId = ScriptReadByte(ctx);
+    u8 emotion = ScriptReadByte(ctx);
+    bool8 positionRight = ScriptReadByte(ctx);
+    //u8 nameMode = ScriptReadByte(ctx);
+    CreateFaceSprite(spriteId, emotion, positionRight);
+
+    return FALSE;
+}
+
+bool8 ScrCmd_hideface(struct ScriptContext *ctx)
+{
+    u8 mode = ScriptReadByte(ctx);
+    DeleteFaceSprites(mode);
     return FALSE;
 }

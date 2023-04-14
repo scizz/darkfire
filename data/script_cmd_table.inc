@@ -235,6 +235,8 @@ gScriptCmdTable::
 	.4byte ScrCmd_hideitemdesc              @ 0xe8
 	.4byte ScrCmd_showborderlesspic         @ 0xe9
 	.4byte ScrCmd_setspeaker 				@ 0xea
+	.4byte ScrCmd_showface					@ 0xeb
+	.4byte ScrCmd_hideface					@ 0xec
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

@@ -150,4 +150,3 @@
 	.include "src/rayquaza_scene.o"
 	.include "src/debug.o"
 	.include "src/dexnav.o"
-        .include "src/mugshot.o"
