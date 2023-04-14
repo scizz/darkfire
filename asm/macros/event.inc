@@ -1930,10 +1930,44 @@
 	YES = 1
 	NO  = 0
 
-	@ Buffers the given text and calls the relevant standard message script (see gStdScripts).
-	.macro msgbox text:req, type=MSGBOX_DEFAULT
+	.macro msgbox text:req, type=MSGBOX_DEFAULT, face1, pos=FS_LEFT, emot1=FSE_NORMAL, nameMode=FSN_SHOW, face2, emot2=FSE_NORMAL
+	.ifnb \face1
+		.if \type==MSGBOX_YESNO
+			showface \face1, \emot1, \pos, FSN_HIDE
+		.else
+			showface \face1, \emot1, \pos, \nameMode
+		.endif
+	.endif
+	.ifnb \face2
+		.if \pos==FS_LEFT
+			.if \type==MSGBOX_YESNO
+				showface \face2, \emot2, FS_RIGHT, FSN_HIDE
+			.else
+				showface \face2, \emot2, FS_RIGHT, \nameMode
+			.endif
+		.else
+			.if \type==MSGBOX_YESNO
+				showface \face2, \emot2, FS_LEFT, FSN_HIDE
+			.else
+				showface \face2, \emot2, FS_LEFT, \nameMode
+			.endif
+		.endif
+	.endif
 	loadword 0, \text
 	callstd \type
+	.ifnb \face1
+		hideface FDEL_BOTH
+	.else
+		.ifnb \face2
+			hideface FDEL_BOTH
+		.endif
+	.endif
+	.endm
+
+	.macro repeatmove name:req, count:req
+	.rept \count
+	\name
+	.endr
 	.endm
 
 	@ Gives 'amount' of the specified 'item' to the player and prints a message with fanfare.
