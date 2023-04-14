@@ -2074,16 +2074,29 @@
 	callnative FollowerIntoPokeball
 	.endm
     
-    .macro setfollowerwarppos pos:req
-    setvar VAR_RESULT, \pos
-    callnative SetFollowerWarpPosition
-    .endm
+	.macro setfollowerwarppos pos:req
+	setvar VAR_RESULT, \pos
+	callnative SetFollowerWarpPosition
+	.endm
     
-    .macro showborderlesspic x:req, y:req
-    .byte 0xe9
-    .byte \x
-    .byte \y
-    .endm
+	.macro showborderlesspic x:req, y:req
+	.byte 0xe9
+	.byte \x
+	.byte \y
+	.endm
+
+	.macro showface id:req emot:req pos:req mode=FSN_SHOW
+	.byte 0xeb
+	.byte \id
+	.byte \emot
+	.byte \pos
+	.byte \mode
+	.endm
+
+	.macro hideface mode:req
+	.byte 0xec
+	.byte \mode
+	.endm
 
 	@ Attempts to trigger a special evolution method in the overworld.
 	@ There may be other conditions required which are coded for in GetEvolutionTargetSpecies.

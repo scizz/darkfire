@@ -283,7 +283,8 @@ u8 gReservedSpritePaletteCount;
 
 EWRAM_DATA struct Sprite gSprites[MAX_SPRITES + 1] = {0};
 EWRAM_DATA static u16 sSpritePriorities[MAX_SPRITES] = {0};
-EWRAM_DATA static u8 sSpriteOrder[MAX_SPRITES] = {0};
+EWRAM_DATA u8 sSpriteOrder[MAX_SPRITES] = {0};
+EWRAM_DATA u8 gSpriteInUseCount = 0;
 EWRAM_DATA static bool8 sShouldProcessSpriteCopyRequests = 0;
 EWRAM_DATA static u8 sSpriteCopyRequestCount = 0;
 EWRAM_DATA static struct SpriteCopyRequest sSpriteCopyRequests[MAX_SPRITES] = {0};

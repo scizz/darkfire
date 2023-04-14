@@ -255,6 +255,8 @@ extern const struct SpriteTemplate gDummySpriteTemplate;
 
 extern u8 gReservedSpritePaletteCount;
 extern struct Sprite gSprites[];
+extern u8 sSpriteOrder[];
+extern u8 gSpriteInUseCount;
 extern u8 gOamLimit;
 extern u16 gReservedSpriteTileCount;
 extern s16 gSpriteCoordOffsetX;
