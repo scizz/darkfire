@@ -7,16 +7,15 @@
 
 //Face emotions
 #define FSE_NORMAL 0
-#define FSE_HAPPY 1
-#define FSE_DETERMINED 2
-#define FSE_SAD 3
+#define FSE_LAUGHING 1
+#define FSE_WORRIED 2
 #define FSE_SHADOW 1
 
 #define FSN_HIDE 0
 #define FSN_SHOW 1
 #define FSN_UNDISCOVERED 2
 
-#define FSE_COUNT FSE_SAD+1
+#define FSE_COUNT FSE_WORRIED+1
 
 //Face indices
 #define FS_PROF 0
