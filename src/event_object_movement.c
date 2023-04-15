@@ -810,10 +810,10 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SPORT_BALL              0x1077
 #define OBJ_EVENT_PAL_TAG_PARK_BALL               0x1076
 #define OBJ_EVENT_PAL_TAG_CHERISH_BALL            0x1075
-#define OBJ_EVENT_PAL_TAG_KRABBY                  0x1076
-#define OBJ_EVENT_PAL_TAG_AUTUMN_TREE             0x1077
-#define OBJ_EVENT_PAL_TAG_BAKERY                  0x1078
-#define OBJ_EVENT_PAL_TAG_COLOSSEUM               0x1079
+#define OBJ_EVENT_PAL_TAG_KRABBY                  0x1074
+#define OBJ_EVENT_PAL_TAG_AUTUMN_TREE             0x1073
+#define OBJ_EVENT_PAL_TAG_BAKERY                  0x1072
+#define OBJ_EVENT_PAL_TAG_COLOSSEUM               0x1071
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
