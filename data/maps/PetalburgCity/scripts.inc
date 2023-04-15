@@ -122,7 +122,10 @@ PetalburgCity_EventScript_DoorWarp::
 	showface 0, 0, 1, 1
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
 	hideface 1
+    showborderlesspic 10, 3
 	release
+    delay 25
+    hidemonpic
 	end
 
 WRFFL:
