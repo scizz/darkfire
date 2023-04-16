@@ -698,8 +698,9 @@
 #define OBJ_EVENT_GFX_GRAFFITI_3                 690
 #define OBJ_EVENT_GFX_GRAFFITI_4                 691
 #define OBJ_EVENT_GFX_GRAFFITI_5                 692
+#define OBJ_EVENT_GFX_PLATES                     693
 
-#define NUM_OBJ_EVENT_GFX                        693
+#define NUM_OBJ_EVENT_GFX                        694
 
 
 // These are dynamic object gfx ids.

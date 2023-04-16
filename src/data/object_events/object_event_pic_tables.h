@@ -2319,14 +2319,21 @@ const struct SpriteFrameImage gObjectEventPicTable_Graffiti1[] = {
 const struct SpriteFrameImage gObjectEventPicTable_Graffiti2[] = {
     overworld_frame(gObjectEventPic_Graffiti2, 8, 8, 0),
 };
+
 const struct SpriteFrameImage gObjectEventPicTable_Graffiti3[] = {
     overworld_frame(gObjectEventPic_Graffiti3, 4, 3, 0),
 };
+
 const struct SpriteFrameImage gObjectEventPicTable_Graffiti4[] = {
     overworld_frame(gObjectEventPic_Graffiti4, 2, 2, 0),
 };
+
 const struct SpriteFrameImage gObjectEventPicTable_Graffiti5[] = {
     overworld_frame(gObjectEventPic_Graffiti5, 2, 2, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Plates[] = {
+    overworld_frame(gObjectEventPic_Plates, 8, 8, 0),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {

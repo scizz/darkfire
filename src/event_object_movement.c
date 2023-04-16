@@ -816,6 +816,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_COLOSSEUM               0x1071
 #define OBJ_EVENT_PAL_TAG_PARKING_LOT             0x1070
 #define OBJ_EVENT_PAL_TAG_GRAFFITI                0x1069
+#define OBJ_EVENT_PAL_TAG_PLATES                  0x1068
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -827,6 +828,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #include "data/object_events/object_event_graphics_info_pointers.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
+    {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},
     {gObjectEventPal_AutumnTree,            OBJ_EVENT_PAL_TAG_AUTUMN_TREE},

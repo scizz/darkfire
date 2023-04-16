@@ -1197,5 +1197,7 @@ const u32 gObjectEventPic_Graffiti3[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_Graffiti4[] = INCBIN_U32("graphics/object_events/pics/misc/4.4bpp");
 const u32 gObjectEventPic_Graffiti5[] = INCBIN_U32("graphics/object_events/pics/misc/5.4bpp");
 const u16 gObjectEventPal_Graffiti[] = INCBIN_U16("graphics/object_events/palettes/graffiti.gbapal");
+const u32 gObjectEventPic_Plates[] = INCBIN_U32("graphics/object_events/pics/misc/plates.4bpp");
+const u16 gObjectEventPal_Plates[] = INCBIN_U16("graphics/object_events/palettes/plates.gbapal");
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
