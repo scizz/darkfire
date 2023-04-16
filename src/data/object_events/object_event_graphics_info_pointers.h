@@ -691,6 +691,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bakery;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Colosseum3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Colosseum2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Colosseum1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParkingLot1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParkingLot2;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -1380,6 +1382,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_COLOSSEUM3] =               &gObjectEventGraphicsInfo_Colosseum3,
     [OBJ_EVENT_GFX_COLOSSEUM2] =               &gObjectEventGraphicsInfo_Colosseum2,
     [OBJ_EVENT_GFX_COLOSSEUM1] =               &gObjectEventGraphicsInfo_Colosseum1,
+    [OBJ_EVENT_GFX_PARKING_LOT_1] =            &gObjectEventGraphicsInfo_ParkingLot1,
+    [OBJ_EVENT_GFX_PARKING_LOT_2] =            &gObjectEventGraphicsInfo_ParkingLot2,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

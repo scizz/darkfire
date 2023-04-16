@@ -691,8 +691,10 @@
 #define OBJ_EVENT_GFX_COLOSSEUM3                 683
 #define OBJ_EVENT_GFX_COLOSSEUM2                 684
 #define OBJ_EVENT_GFX_COLOSSEUM1                 685
+#define OBJ_EVENT_GFX_PARKING_LOT_1              686
+#define OBJ_EVENT_GFX_PARKING_LOT_2              687
 
-#define NUM_OBJ_EVENT_GFX                        686
+#define NUM_OBJ_EVENT_GFX                        688
 
 
 // These are dynamic object gfx ids.

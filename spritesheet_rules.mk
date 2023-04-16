@@ -1882,6 +1882,11 @@ $(OBJEVENTGFXDIR)/misc/colosseum2.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/colosseum1.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 4
 
+$(OBJEVENTGFXDIR)/misc/parking_lot1.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
+$(OBJEVENTGFXDIR)/misc/parking_lot2.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
 
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
