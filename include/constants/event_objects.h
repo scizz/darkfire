@@ -699,8 +699,18 @@
 #define OBJ_EVENT_GFX_GRAFFITI_4                 691
 #define OBJ_EVENT_GFX_GRAFFITI_5                 692
 #define OBJ_EVENT_GFX_PLATES                     693
+#define OBJ_EVENT_GFX_ANTENNAE                   694
+#define OBJ_EVENT_GFX_CRATE_SMALL                695
+#define OBJ_EVENT_GFX_FIRE_HYDRANT               696
+#define OBJ_EVENT_GFX_LIGHTHOUSE_1               697
+#define OBJ_EVENT_GFX_LIGHTHOUSE_2               698
+#define OBJ_EVENT_GFX_SIGN_BIG                   699
+#define OBJ_EVENT_GFX_SWINGS                     700
+#define OBJ_EVENT_GFX_TRAFFIC_LIGHTS             701
+#define OBJ_EVENT_GFX_TRASH                      702
 
-#define NUM_OBJ_EVENT_GFX                        694
+
+#define NUM_OBJ_EVENT_GFX                        703
 
 
 // These are dynamic object gfx ids.

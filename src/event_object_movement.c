@@ -817,6 +817,15 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PARKING_LOT             0x1070
 #define OBJ_EVENT_PAL_TAG_GRAFFITI                0x1069
 #define OBJ_EVENT_PAL_TAG_PLATES                  0x1068
+#define OBJ_EVENT_PAL_TAG_ANTENNAE                0x1067
+#define OBJ_EVENT_PAL_TAG_CRATE                   0x1066
+#define OBJ_EVENT_PAL_TAG_FIRE_HYDRANT            0x1065
+#define OBJ_EVENT_PAL_TAG_LIGHTHOUSE              0x1064
+#define OBJ_EVENT_PAL_TAG_SIGN_BIG                0x1063
+#define OBJ_EVENT_PAL_TAG_SWINGS                  0x1062
+#define OBJ_EVENT_PAL_TAG_TRAFFIC_LIGHTS          0x1061
+#define OBJ_EVENT_PAL_TAG_TRASH                   0x1060
+
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -828,6 +837,15 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #include "data/object_events/object_event_graphics_info_pointers.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
+    {gObjectEventPal_Antennae,              OBJ_EVENT_PAL_TAG_ANTENNAE},
+    {gObjectEventPal_Crate,                 OBJ_EVENT_PAL_TAG_CRATE},
+    {gObjectEventPal_FireHydrant,           OBJ_EVENT_PAL_TAG_FIRE_HYDRANT},
+    {gObjectEventPal_Lighthouse,            OBJ_EVENT_PAL_TAG_LIGHTHOUSE},
+    {gObjectEventPal_SignBig,               OBJ_EVENT_PAL_TAG_SIGN_BIG},
+    {gObjectEventPal_Swings,                OBJ_EVENT_PAL_TAG_SWINGS},
+    {gObjectEventPal_TrafficLights,         OBJ_EVENT_PAL_TAG_TRAFFIC_LIGHTS},
+    {gObjectEventPal_Trash,                 OBJ_EVENT_PAL_TAG_TRASH},
+
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},

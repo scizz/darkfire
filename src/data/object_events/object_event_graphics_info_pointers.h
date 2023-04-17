@@ -699,6 +699,15 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Graffiti3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Graffiti4;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Graffiti5;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Plates;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Antennae;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrateSmall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FireHydrant;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lighthouse1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lighthouse2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SignBig;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Swings;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrafficLights;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trash;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1395,6 +1404,15 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GRAFFITI_4] =               &gObjectEventGraphicsInfo_Graffiti4,
     [OBJ_EVENT_GFX_GRAFFITI_5] =               &gObjectEventGraphicsInfo_Graffiti5,
     [OBJ_EVENT_GFX_PLATES] =                   &gObjectEventGraphicsInfo_Plates,
+    [OBJ_EVENT_GFX_ANTENNAE] =                 &gObjectEventGraphicsInfo_Antennae,
+    [OBJ_EVENT_GFX_CRATE_SMALL] =              &gObjectEventGraphicsInfo_CrateSmall,
+    [OBJ_EVENT_GFX_FIRE_HYDRANT] =             &gObjectEventGraphicsInfo_FireHydrant,
+    [OBJ_EVENT_GFX_LIGHTHOUSE_1] =             &gObjectEventGraphicsInfo_Lighthouse1,
+    [OBJ_EVENT_GFX_LIGHTHOUSE_2] =             &gObjectEventGraphicsInfo_Lighthouse2,
+    [OBJ_EVENT_GFX_SIGN_BIG] =                 &gObjectEventGraphicsInfo_SignBig,
+    [OBJ_EVENT_GFX_SWINGS] =                   &gObjectEventGraphicsInfo_Swings,
+    [OBJ_EVENT_GFX_TRAFFIC_LIGHTS] =           &gObjectEventGraphicsInfo_TrafficLights,
+    [OBJ_EVENT_GFX_TRASH] =                    &gObjectEventGraphicsInfo_Trash,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
