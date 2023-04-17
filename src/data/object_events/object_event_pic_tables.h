@@ -2366,6 +2366,7 @@ const struct SpriteFrameImage gObjectEventPicTable_Swings[] = {
 
 const struct SpriteFrameImage gObjectEventPicTable_TrafficLights[] = {
     overworld_frame(gObjectEventPic_TrafficLights, 8, 8, 0),
+    overworld_frame(gObjectEventPic_TrafficLights, 8, 8, 1),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Trash[] = {

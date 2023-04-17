@@ -297,7 +297,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lighthouse2 = {TAG
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SignBig = {TAG_NONE, OBJ_EVENT_PAL_TAG_SIGN_BIG, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_SignBig, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Swings = {TAG_NONE, OBJ_EVENT_PAL_TAG_SWINGS, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_Swings, gDummySpriteAffineAnimTable};
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrafficLights = {TAG_NONE, OBJ_EVENT_PAL_TAG_TRAFFIC_LIGHTS, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_TrafficLights, gDummySpriteAffineAnimTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrafficLights = {TAG_NONE, OBJ_EVENT_PAL_TAG_TRAFFIC_LIGHTS, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, FALSE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_TrafficLights, gDummySpriteAffineAnimTable};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trash = {TAG_NONE, OBJ_EVENT_PAL_TAG_TRASH, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, gObjectEventPicTable_Trash, gDummySpriteAffineAnimTable};
 
