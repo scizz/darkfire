@@ -2336,6 +2336,43 @@ const struct SpriteFrameImage gObjectEventPicTable_Plates[] = {
     overworld_frame(gObjectEventPic_Plates, 8, 8, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Antennae[] = {
+    overworld_frame(gObjectEventPic_Antennae, 4, 4, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_CrateSmall[] = {
+    overworld_frame(gObjectEventPic_CrateSmall, 2, 4, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_FireHydrant[] = {
+    overworld_frame(gObjectEventPic_FireHydrant, 2, 4, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Lighthouse1[] = {
+    overworld_frame(gObjectEventPic_Lighthouse1, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Lighthouse2[] = {
+    overworld_frame(gObjectEventPic_Lighthouse2, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_SignBig[] = {
+    overworld_frame(gObjectEventPic_SignBig, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Swings[] = {
+    overworld_frame(gObjectEventPic_Swings, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_TrafficLights[] = {
+    overworld_frame(gObjectEventPic_TrafficLights, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Trash[] = {
+    overworld_frame(gObjectEventPic_Trash, 2, 4, 0),
+};
+
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),
