@@ -388,6 +388,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+    turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	waitmovement 0
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
