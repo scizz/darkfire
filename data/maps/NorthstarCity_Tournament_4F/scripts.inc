@@ -28,15 +28,20 @@ NorthstarCity_Tournament_4F_MapScripts::
 
 NorthstarCity_Tournament_4F_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Tournament_4F_EventStart
+	map_script_2 VAR_STORYLINE_STATE, 3, NorthstarCity_Tournament_4F_FirstRoundComplete
+	map_script_2 VAR_STORYLINE_STATE, 5, NorthstarCity_Tournament_4F_SecondRoundComplete
+	map_script_2 VAR_STORYLINE_STATE, 7, NorthstarCity_Tournament_4F_ThirdRoundComplete
 	.2byte 0
 
 NorthstarCity_Tournament_4F_OnWarp:
 	map_script_2 VAR_STORYLINE_STATE, 3, NorthstarCity_Tournament_4F_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 5, NorthstarCity_Tournament_4F_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 7, NorthstarCity_Tournament_4F_InitRoomObjects
 	.2byte 0
 
 
 NorthstarCity_Tournament_4F_InitRoomObjects::
-	applymovement OBJ_EVENT_ID_FOLLOWER, WRFFL
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	showfollower
 	end
@@ -80,11 +85,11 @@ NorthstarCity_Tournament_NotReady::
 NorthstarCity_Tournament_WelcomeBack::
 	msgbox NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq NorthstarCity_Tournament_RandCheck
+	goto_if_eq NorthstarCity_Tournament_RandCheckOne
 	goto NorthstarCity_Tournament_NotReady
 	end
 
-NorthstarCity_Tournament_RandCheck::
+NorthstarCity_Tournament_RandCheckOne::
 	random 2
 	switch VAR_RESULT
 	case 0, NorthstarCity_Tournament_HidePsychic
@@ -124,10 +129,7 @@ NorthstarCity_Tournament_Started::
 	applymovement OBJ_EVENT_ID_PLAYER, WL5DL2
 	applymovement OBJ_EVENT_ID_FOLLOWER, WDL5DL
 	waitmovement 0
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, WL2
-	waitmovement 0
-	special RemoveCameraObject
+	call NorthstarCity_Tournament_4F_CameraPan
 	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox NorthstarCity_Tournament_4F_Text_AreWeLiveYet, MSGBOX_AUTOCLOSE
@@ -180,14 +182,443 @@ NorthstarCity_Tournament_DirectorMagic::
 	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox NorthstarCity_Tournament_4F_Text_DirectorWorkYourMagic, MSGBOX_AUTOCLOSE
+	setvar VAR_STORYLINE_STATE, 2
+	goto NorthstarCity_Tournament_4F_BattleWarp
+	end
+
+NorthstarCity_Tournament_4F_CameraPan::
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WL2
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+NorthstarCity_Tournament_4F_CameraPanRight::
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WR2
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+NorthstarCity_Tournament_4F_FirstRoundComplete::
+	call NorthstarCity_Tournament_4F_CameraPan
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_RANGER, NorthstarTournament_4F_FirstRoundCompletePsychic
+	goto NorthstarTournament_4F_FirstRoundCompleteRanger
+	end
+
+NorthstarCity_Tournament_4F_SecondRoundComplete::
+	call NorthstarCity_Tournament_4F_CameraPan
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_BLACK_BELT, NorthstarTournament_4F_SecondRoundCompleteOldMan
+	goto NorthstarTournament_4F_SecondRoundCompleteBlackBelt
+	end
+
+NorthstarCity_Tournament_4F_ThirdRoundComplete::
+	call NorthstarCity_Tournament_4F_CameraPan
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_SAILOR, NorthstarTournament_4F_ThirdRoundCompleteAceTrainer
+	goto NorthstarTournament_4F_ThirdRoundCompleteSailor
+	end
+
+NorthstarTournament_4F_FirstRoundCompleteRanger::
+	msgbox NorthstarCity_Tournament_4F_Text_UnbelievableTheFirstBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RANGER_ARENA, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_AwhThisIsEmbarrassing, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RANGER_ARENA, WR2UR9
+	waitmovement 0
+	removeobject LOCALID_RANGER_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_RANGER
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	goto NorthstarCity_Tournament_4F_RoundCheckTwo
+	end
+
+NorthstarTournament_4F_FirstRoundCompletePsychic::
+	msgbox NorthstarCity_Tournament_4F_Text_UnbelievableTheFirstBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PSYCHIC_ARENA, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_HmphICouldntForesee, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PSYCHIC_ARENA, WR2UR9
+	waitmovement 0
+	removeobject LOCALID_PSYCHIC_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_PSYCHIC
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	goto NorthstarCity_Tournament_4F_RoundCheckTwo
+	end
+
+NorthstarTournament_4F_SecondRoundCompleteBlackBelt::
+	msgbox NorthstarCity_Tournament_4F_Text_OoohAnOutstandingPerformance, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_BLACKBELT_ARENA, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_WellFought, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_BLACKBELT_ARENA, WR2UR9
+	waitmovement 0
+	removeobject LOCALID_BLACKBELT_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_BLACK_BELT
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	goto NorthstarCity_Tournament_4F_RoundCheckThree
+	end
+
+NorthstarTournament_4F_SecondRoundCompleteOldMan::
+	msgbox NorthstarCity_Tournament_4F_Text_OoohAnOutstandingPerformance, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_GENTLEMAN_ARENA, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_TheWayYouBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_GENTLEMAN_ARENA, WR2UR9
+	waitmovement 0
+	removeobject LOCALID_GENTLEMAN_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_OLD_MAN
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	goto NorthstarCity_Tournament_4F_RoundCheckThree
+	end
+
+NorthstarTournament_4F_ThirdRoundCompleteSailor::
+	msgbox NorthstarCity_Tournament_4F_Text_LadiesAndGentlemen, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_ARENA, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_ISteeredThatBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_ARENA, WR2UR9
+	waitmovement 0
+	removeobject LOCALID_SAILOR_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	goto NorthstarCity_Tournament_4F_TournamentWin
+	end
+
+NorthstarTournament_4F_ThirdRoundCompleteAceTrainer::
+	msgbox NorthstarCity_Tournament_4F_Text_LadiesAndGentlemen, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_ACE_TRAINER_ARENA, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_ItWasThePressure, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_ACE_TRAINER_ARENA, WR2UR9
+	waitmovement 0
+	removeobject LOCALID_ACE_TRAINER_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	goto NorthstarCity_Tournament_4F_TournamentWin
+	end
+
+NorthstarCity_Tournament_4F_RoundCheckTwo::
+	random 2
+	switch VAR_RESULT
+	case 0, NorthstarCity_Tournament_ShowBlackBelt
+	case 1, NorthstarCity_Tournament_ShowOldMan
+	end
+
+NorthstarCity_Tournament_4F_RoundCheckThree::
+	random 2
+	switch VAR_RESULT
+	case 0, NorthstarCity_Tournament_ShowSailor
+	case 1, NorthstarCity_Tournament_ShowAceTrainer
+	end
+
+NorthstarCity_Tournament_ShowBlackBelt::
+	addobject LOCALID_BLACKBELT_DOOR
+	applymovement LOCALID_BLACKBELT_DOOR, WL9DL2FR
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_OurSecondMatchIsBlackBelt, MSGBOX_AUTOCLOSE
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_BLACK_BELT
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	setvar VAR_STORYLINE_STATE, 4
+	goto NorthstarCity_Tournament_4F_BattleWarp
+	end
+
+NorthstarCity_Tournament_ShowOldMan::
+	addobject LOCALID_GENTLEMAN_DOOR
+	applymovement LOCALID_GENTLEMAN_DOOR, WL9DL2FR
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_OurSecondMatchOldMan, MSGBOX_AUTOCLOSE
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_OLD_MAN
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	setvar VAR_STORYLINE_STATE, 4
+	goto NorthstarCity_Tournament_4F_BattleWarp
+	end
+
+NorthstarCity_Tournament_ShowSailor::
+	addobject LOCALID_SAILOR_DOOR
+	applymovement LOCALID_SAILOR_DOOR, WL9DL2FR
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_OurThirdMatchSailor, MSGBOX_AUTOCLOSE
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_SAILOR
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	setvar VAR_STORYLINE_STATE, 6
+	goto NorthstarCity_Tournament_4F_BattleWarp
+	end
+
+NorthstarCity_Tournament_ShowAceTrainer::
+	addobject LOCALID_ACE_TRAINER_DOOR
+	applymovement LOCALID_ACE_TRAINER_DOOR, WL9DL2FR
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_OurThirdMatchAceTrainer, MSGBOX_AUTOCLOSE
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ACE_TRAINER
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	setvar VAR_STORYLINE_STATE, 6
+	goto NorthstarCity_Tournament_4F_BattleWarp
+	end
+
+NorthstarCity_Tournament_4F_BattleWarp::
 	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	playse SE_PIN
 	waitse
 	delay 30
-	setvar VAR_STORYLINE_STATE, 2
+	setfollowerwarppos DIR_EAST
 	warpsilent MAP_NORTHSTAR_ARENA, 7, 5
 	waitstate
+	end
+
+NorthstarCity_Tournament_4F_TournamentWin::
+	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	playfanfare MUS_OBTAIN_SYMBOL
+	special DoDomeConfetti
+	msgbox NorthstarCity_Tournament_4F_Text_PlayerWins, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	msgbox NorthstarCity_Tournament_4F_Text_AndNowThatsOut, MSGBOX_AUTOCLOSE
+	playse SE_PIN
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 0  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	special ShakeCamera
+	waitse
+	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_What, MSGBOX_AUTOCLOSE
+	delay 60
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_ComeAgainCentral, MSGBOX_AUTOCLOSE
+	playbgm MUS_SUBO_THEME, TRUE
+	applymovement 4, Common_Movement_QuestionMark
+	playse SE_PIN
+	delay 10
+	applymovement 3, Common_Movement_QuestionMark
+	playse SE_PIN
+	delay 5
+	applymovement 2, Common_Movement_QuestionMark
+	playse SE_PIN
+	delay 5
+	applymovement 4, Common_Movement_FaceRight
+	waitmovement 0
+	delay 5
+	applymovement 3, Common_Movement_FaceRight
+	waitmovement 0
+	delay 10
+	applymovement 2, Common_Movement_FaceRight
+	waitmovement 0
+	delay 5
+	applymovement 4, Common_Movement_FaceDown
+	applymovement 3, Common_Movement_FaceDown
+	delay 5
+	applymovement 2, Common_Movement_FaceDown
+	waitmovement 0
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	addobject LOCALID_RAKAZ
+	applymovement LOCALID_RAKAZ, WL4
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_QuestionMark
+	applymovement OBJ_EVENT_ID_PLAYER, FRQM
+	@applymovement OBJ_EVENT_ID_FOLLOWER, FFRQM
+	playse SE_PIN
+	delay 5
+	applymovement LOCALID_CAMERA_RIGHT, FRQM
+	playse SE_PIN
+	delay 5
+	applymovement LOCALID_CAMERA_BOTTOM, FRQM
+	applymovement LOCALID_CAMERA_LEFT, FRQM
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, WL5
+	applymovement LOCALID_SUBO_CROWD, WLD3R2
+	waitmovement 0
+	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceDown
+	applymovement LOCALID_CAMERA_RIGHT, Common_Movement_FaceDown
+	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceDown
+	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_HandOverThatMicrophone, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_ANNOUNCER, LFDWU
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_HuhOkayThen, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_FaceDown
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_FaceDown
+	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceRight
+	applymovement LOCALID_CAMERA_RIGHT, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_HelloHelloTenjo, MSGBOX_AUTOCLOSE
+	applymovement 4, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 5
+	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 5
+	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_ExclamationMark
+	waitse
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_AsSuchWeAreNow, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_YeahItsPaybackTime, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_NoThisCantBe, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_ExactlyAGrandChance, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SUBO_CROWD, WD2
+	waitmovement 0
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_YouKnowWhyImHere, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_NoILostAgain, MSGBOX_AUTOCLOSE
+	delay 10
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_WalkInPlaceSlowRight
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL
+	addobject 8
+	applymovement 8, JumpInPlace
+	waitmovement 0
+	playse SE_PIN
+	waitse
+	delay 5
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_WeakFool, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceDown
+	waitmovement 0
+	delay 5
+	applymovement LOCALID_CAMERA_RIGHT, Common_Movement_FaceDown
+	waitmovement 0
+	delay 5
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_AndWithThisTrainer, MSGBOX_AUTOCLOSE
+	delay 30
+	addobject LOCALID_SUBO_DOOR
+	applymovement LOCALID_RAKAZ, Common_Movement_FaceRight
+	applymovement LOCALID_SUBO_DOOR, WFL8
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO_DOOR, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_SirSirTheresTrouble, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_RAKAZ, Common_Movement_FaceDown
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
+	applymovement LOCALID_SUBO_DOOR, Common_Movement_FaceDown
+	applymovement LOCALID_SUBO_CROWD, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_ItSeemsOurMatch, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_RAKAZ, WDR
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_ISupposeYouAreLooking, MSGBOX_AUTOCLOSE
+	giveitem ITEM_HM05, 1
+	msgbox NorthstarCity_Tournament_4F_Text_UntilWeMeetAgain, MSGBOX_AUTOCLOSE
+	setflag FLAG_BADGE03_GET
+	fadescreen 1
+	call NorthstarCity_Tournament_4F_CameraPanRight
+	removeobject LOCALID_RECEPTIONIST
+	removeobject LOCALID_SUBO_CROWD
+	removeobject LOCALID_SUBO_DOOR
+	removeobject LOCALID_RAKAZ
+	removeobject LOCALID_ANNOUNCER
+	removeobject LOCALID_CAMERA_RIGHT
+	removeobject LOCALID_CAMERA_LEFT
+	removeobject LOCALID_CAMERA_BOTTOM
+	removeobject LOCALID_ACE_TRAINER_DOOR
+	removeobject LOCALID_SAILOR_DOOR
+	removeobject 4
+	removeobject 3
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
+	setflag FLAG_NORTHSTAR_TOURNAMENT_REST
+	delay 60
+	fadescreen 0
+	applymovement LOCALID_ROSE, WD4
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	msgbox NorthstarCity_Tournament_4F_Text_HeyItsMeRose, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_ROSE, WR3U3R2U2
+	waitmovement 0
+	playse SE_EXIT
+	removeobject LOCALID_ROSE
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	waitse
+	setvar VAR_STORYLINE_STATE, 8
 	end
 
 WU2L:
@@ -224,6 +655,90 @@ WL5DL2:
 	walk_down
 	walk_left
 	walk_left
+	step_end
+
+WR2UR9:
+	walk_right
+	walk_right
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+WL9DL2FR:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	face_right
+	step_end
+
+FRQM:
+	face_right
+	emote_question_mark
+	step_end
+
+FFRQM:
+	follower_face_right
+	emote_question_mark
+	step_end
+
+WLD3R2:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	step_end
+
+LFDWU:
+	lock_facing_direction
+	walk_up
+	step_end
+
+WFL8:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+WDR:
+	walk_down
+	walk_right
+	step_end
+
+WR3U3R2U2:
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
 	step_end
 
 NorthstarCity_Tournament_4F_Text_GreetingsIfYouveCome:

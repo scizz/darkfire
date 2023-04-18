@@ -742,7 +742,7 @@
 #define FLAG_NORTHSTAR_TOURNAMENT_SAILOR    0x2B8
 #define FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE  0x2B9
 #define FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL 0x2BA
-#define FLAG_UNUSED_0x2BB                   0x2BB // Unused Flag
+#define FLAG_NORTHSTAR_TOURNAMENT_REST 0x2BB
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -775,7 +775,7 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
 
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
+#define FLAG_NORTHSTAR_TOURNAMENT_ROSE                              0x2D9
 
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
@@ -1222,7 +1222,8 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
+#define FLAG_UNUSED_0x493                                           0x493
+
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
