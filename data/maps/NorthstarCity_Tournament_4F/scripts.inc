@@ -387,9 +387,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
-    turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	waitmovement 0
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
 	msgbox NorthstarCity_Tournament_4F_Text_PlayerWins, MSGBOX_DEFAULT
@@ -446,7 +445,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	applymovement LOCALID_ANNOUNCER, Common_Movement_QuestionMark
 	applymovement OBJ_EVENT_ID_PLAYER, FRQM
-	@applymovement OBJ_EVENT_ID_FOLLOWER, FFRQM
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_EAST
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_QuestionMark
 	playse SE_PIN
 	delay 5
 	applymovement LOCALID_CAMERA_RIGHT, FRQM
@@ -465,8 +465,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceDown
 	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_WEST
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	msgbox NorthstarCity_Tournament_4F_Text_HandOverThatMicrophone, MSGBOX_AUTOCLOSE
@@ -546,8 +546,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	applymovement LOCALID_SUBO_CROWD, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement 0
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceDown
 	waitmovement 0
 	delay 5
@@ -576,10 +576,10 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	applymovement LOCALID_SUBO_DOOR, Common_Movement_FaceDown
 	applymovement LOCALID_SUBO_CROWD, Common_Movement_FaceRight
 	waitmovement 0
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_WEST
 	msgbox NorthstarCity_Tournament_4F_Text_ItSeemsOurMatch, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_RAKAZ, WDR
 	waitmovement 0
@@ -610,8 +610,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	applymovement LOCALID_ROSE, WD4
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	@applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement 0
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	msgbox NorthstarCity_Tournament_4F_Text_HeyItsMeRose, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_ROSE, WR3U3R2U2
 	waitmovement 0
