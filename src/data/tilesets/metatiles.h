@@ -216,3 +216,9 @@ const u16 gMetatileAttributes_WestDistrict1[] = INCBIN_U16("data/tilesets/primar
 
 const u16 gMetatiles_WestDistrict2[] = INCBIN_U16("data/tilesets/secondary/west_district_2/metatiles.bin");
 const u16 gMetatileAttributes_WestDistrict2[] = INCBIN_U16("data/tilesets/secondary/west_district_2/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleDistrict1[] = INCBIN_U16("data/tilesets/primary/battle_district_1/metatiles.bin");
+const u16 gMetatileAttributes_BattleDistrict1[] = INCBIN_U16("data/tilesets/primary/battle_district_1/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleDistrict2[] = INCBIN_U16("data/tilesets/secondary/battle_district_2/metatiles.bin");
+const u16 gMetatileAttributes_BattleDistrict2[] = INCBIN_U16("data/tilesets/secondary/battle_district_2/metatile_attributes.bin");

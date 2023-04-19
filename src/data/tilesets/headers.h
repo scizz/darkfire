@@ -858,3 +858,25 @@ const struct Tileset gTileset_WestDistrict2 =
     .metatileAttributes = gMetatileAttributes_WestDistrict2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_BattleDistrict1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_BattleDistrict1,
+    .palettes = gTilesetPalettes_BattleDistrict1,
+    .metatiles = gMetatiles_BattleDistrict1,
+    .metatileAttributes = gMetatileAttributes_BattleDistrict1,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_BattleDistrict2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_BattleDistrict2,
+    .palettes = gTilesetPalettes_BattleDistrict2,
+    .metatiles = gMetatiles_BattleDistrict2,
+    .metatileAttributes = gMetatileAttributes_BattleDistrict2,
+    .callback = NULL,
+};
