@@ -5656,8 +5656,8 @@
       "name": "BattleDistrict_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_BattleDistrict1",
+      "secondary_tileset": "gTileset_BattleDistrict2",
       "border_filepath": "data/layouts/BattleDistrict/border.bin",
       "blockdata_filepath": "data/layouts/BattleDistrict/map.bin"
     },
