@@ -2,7 +2,7 @@
   "id": "MAP_TAMAROK_PEAK",
   "name": "TamarokPeak",
   "layout": "LAYOUT_TAMAROK_PEAK",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_TAMAROK_PEAK",
   "region_map_section": "MAPSEC_ROUTE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

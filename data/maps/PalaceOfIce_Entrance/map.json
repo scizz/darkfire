@@ -2,7 +2,7 @@
   "id": "MAP_PALACE_OF_ICE_ENTRANCE",
   "name": "PalaceOfIce_Entrance",
   "layout": "LAYOUT_PALACE_OF_ICE_ENTRANCE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ICE_PALACE",
   "region_map_section": "MAPSEC_ROUTE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
