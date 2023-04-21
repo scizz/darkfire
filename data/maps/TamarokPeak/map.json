@@ -22,14 +22,14 @@
       "y": 4,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
     },
     {
       "x": 7,
       "y": 44,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "7"
     },
     {
       "x": 19,

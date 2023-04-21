@@ -256,28 +256,28 @@
       "y": 22,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 25,
       "y": 19,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 14,
       "y": 30,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     },
     {
       "x": 28,
       "y": 47,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 51,
@@ -291,7 +291,7 @@
       "y": 73,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
     },
     {
       "x": 33,
@@ -305,7 +305,7 @@
       "y": 86,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_PEAK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 11,
@@ -319,7 +319,7 @@
       "y": 43,
       "elevation": 3,
       "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "0"
+      "dest_warp_id": "8"
     }
   ],
   "coord_events": [
