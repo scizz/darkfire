@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LUCY",
@@ -38,20 +38,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_ROSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 15,
       "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Old_Man",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -64,59 +64,59 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 15,
       "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Woman",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
       "x": 3,
       "y": 2,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Little_Girl",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 2,
       "y": 2,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Man",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 2,
-      "y": 9,
+      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Nerd",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TEALA",
@@ -129,7 +129,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Receptionist_1",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TEALA",
@@ -142,7 +142,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Tournament_1F_Receptionist_2",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_SUBO_TAKEOVER"
     }
   ],
   "warp_events": [

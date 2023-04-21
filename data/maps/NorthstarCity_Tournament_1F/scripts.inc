@@ -1,5 +1,16 @@
 NorthstarCity_Tournament_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_Tournament_1F_OnTransition
 	.byte 0
+
+NorthstarCity_Tournament_1F_OnTransition:
+	call_if_unset FLAG_NORTHSTAR_SUBO_TAKEOVER, NorthstarCity_Tournament_1F_HideSUBO
+	end
+
+NorthstarCity_Tournament_1F_HideSUBO::
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	end
 
 NorthstarCity_Tournament_1F_Woman::
 	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Tournament_1F_Woman_Badge
