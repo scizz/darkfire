@@ -66,11 +66,18 @@ NorthstarCity_Tournament_4F_EventStart::
 	goto NorthstarCity_Tournament_NotReady
 	end
 
+NorthstarCity_Tournament_WelcomeBack::
+	msgbox NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq NorthstarCity_Tournament_PartyCheck
+	goto NorthstarCity_Tournament_NotReady
+	end
+
 NorthstarCity_Tournament_PartyCheck::
 	getpartysize
 	compare VAR_RESULT, 2
-	goto_if_ge NorthstarCity_Tournament_Started
-	goto NorthstarCity_Tournament_NotReady
+	goto_if_ge NorthstarCity_Tournament_RandCheckOne
+	goto NorthstarCity_Tournament_NotReadyTwoPokemon
 	end
 
 NorthstarCity_Tournament_NotReady::
@@ -82,30 +89,13 @@ NorthstarCity_Tournament_NotReady::
 	waitstate
 	end
 
-NorthstarCity_Tournament_WelcomeBack::
-	msgbox NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer, MSGBOX_YESNO
-	compare VAR_RESULT, 1
-	goto_if_eq NorthstarCity_Tournament_RandCheckOne
-	goto NorthstarCity_Tournament_NotReady
-	end
-
-NorthstarCity_Tournament_RandCheckOne::
-	random 2
-	switch VAR_RESULT
-	case 0, NorthstarCity_Tournament_HidePsychic
-	case 1, NorthstarCity_Tournament_HideRanger
-	end
-
-NorthstarCity_Tournament_HidePsychic::
-	removeobject LOCALID_PSYCHIC_ARENA
-	setflag FLAG_NORTHSTAR_TOURNAMENT_PSYCHIC
-	goto NorthstarCity_Tournament_Started
-	end
-
-NorthstarCity_Tournament_HideRanger::
-	removeobject LOCALID_RANGER_ARENA
-	setflag FLAG_NORTHSTAR_TOURNAMENT_RANGER
-	goto NorthstarCity_Tournament_Started
+NorthstarCity_Tournament_NotReadyTwoPokemon::
+	msgbox NorthstarCity_Tournament_4F_Text_PleaseComeBackTwoPokemon, MSGBOX_AUTOCLOSE
+	setflag FLAG_NORTHSTAR_TOURNAMENT_STARTED
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	warp MAP_NORTHSTAR_CITY_TOURNAMENT_3F, 15, 1
+	waitstate
 	end
 
 NorthstarCity_Tournament_Started::
@@ -154,6 +144,25 @@ NorthstarCity_Tournament_Started::
 	waitmovement 0
 	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_RANGER NorthstarCity_Tournament_PsychicOpponent
 	goto NorthstarCity_Tournament_RangerOpponent
+	end
+
+NorthstarCity_Tournament_RandCheckOne::
+	random 2
+	switch VAR_RESULT
+	case 0, NorthstarCity_Tournament_HidePsychic
+	case 1, NorthstarCity_Tournament_HideRanger
+	end
+
+NorthstarCity_Tournament_HidePsychic::
+	removeobject LOCALID_PSYCHIC_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_PSYCHIC
+	goto NorthstarCity_Tournament_Started
+	end
+
+NorthstarCity_Tournament_HideRanger::
+	removeobject LOCALID_RANGER_ARENA
+	setflag FLAG_NORTHSTAR_TOURNAMENT_RANGER
+	goto NorthstarCity_Tournament_Started
 	end
 
 NorthstarCity_Tournament_PsychicOpponent::
@@ -601,6 +610,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	removeobject LOCALID_CAMERA_BOTTOM
 	removeobject LOCALID_ACE_TRAINER_DOOR
 	removeobject LOCALID_SAILOR_DOOR
+	removeobject LOCALID_BLACKBELT_DOOR
+	removeobject LOCALID_GENTLEMAN_DOOR
 	removeobject 4
 	removeobject 3
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
@@ -617,7 +628,9 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	playse SE_EXIT
 	removeobject LOCALID_ROSE
-	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE_4F
+	setflag FLAG_NORTHSTAR_SUBO_TAKEOVER
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
 	waitse
 	setvar VAR_STORYLINE_STATE, 8
 	end
@@ -766,6 +779,12 @@ NorthstarCity_Tournament_4F_Text_GreetingsIfYouveCome:
 
 NorthstarCity_Tournament_4F_Text_PleaseComeBack:
 	.string "{COLOR}{RED}Please come back when you are ready.$"
+
+NorthstarCity_Tournament_4F_Text_PleaseComeBackTwoPokemon:
+	.string "{COLOR}{RED}I'm sorry…\p"
+	.string "You need at least two Pokémon in\n"
+	.string "order to participate.\p"
+	.string "Please come back when you are ready.$"
 
 NorthstarCity_Tournament_4F_Text_WelcomeBackPlayer:
 	.string "{COLOR}{RED}Welcome back, {PLAYER}!\p"

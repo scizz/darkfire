@@ -143,11 +143,8 @@ ChandraVillage_GiveEevee::
 
 ChandraVillage_Tyler_Debug::
 	lockall
-	givemon SPECIES_FLAREON, 25, ITEM_DRAGON_FANG
-	givemon SPECIES_NOSEPASS, 25, ITEM_DRAGON_FANG
-	givemon SPECIES_SABLEYE, 25, ITEM_DRAGON_FANG
-	givemon SPECIES_PIKACHU, 25, ITEM_DRAGON_FANG
-	givemon SPECIES_TYPHLOSION, 25, ITEM_DRAGON_FANG
+	givemon SPECIES_GYARADOS, 35, ITEM_NONE
+	givemon SPECIES_CHARMANDER, 35, ITEM_NONE
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_DEXNAV_GET
@@ -155,7 +152,6 @@ ChandraVillage_Tyler_Debug::
 	addobject 3
 	setfollower 3, 0x7E
 	updatefollowerpokemongraphic
-	setflag FLAG_NORTHSTAR_TOURNAMENT_STARTED
 	showfollower
 	releaseall
 	end

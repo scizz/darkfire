@@ -1,5 +1,6 @@
 NorthstarCity_Tournament_3F_MapScripts::
 	.byte 0
+	end
 
 NorthstarCity_Tournament_3F_Psychic::
 	msgbox NorthstarCity_Tournament_3F_Text_Psychic, MSGBOX_NPC
@@ -7,6 +8,10 @@ NorthstarCity_Tournament_3F_Psychic::
 
 NorthstarCity_Tournament_3F_Fat_Guy::
 	msgbox NorthstarCity_Tournament_3F_Text_Fat_Guy, MSGBOX_NPC
+	end
+
+NorthstarCity_Tournament_3F_SUBO_Door::
+	msgbox NorthstarCity_Tournament_3F_Text_SUBO_Door, MSGBOX_NPC
 	end
 
 NorthstarCity_Tournament_3F_Hide4FObjects::
@@ -34,3 +39,8 @@ NorthstarCity_Tournament_3F_Text_Fat_Guy:
 	.string "was the almighty President.\p"
 	.string "I get paid to see hot Pokémon battles\n"
 	.string "first-hand - how cool is that?!$"
+
+NorthstarCity_Tournament_3F_Text_SUBO_Door:
+	.string "{COLOR}{RED}Forget it, kid! I ain't movin'!\n"
+	.string "Nope!\p"
+	.string "You ain't getting out of this one!$"
