@@ -301,6 +301,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrafficLights = {T
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trash = {TAG_NONE, OBJ_EVENT_PAL_TAG_TRASH, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, gObjectEventPicTable_Trash, gDummySpriteAffineAnimTable};
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NorthstarBoat = {TAG_NONE, OBJ_EVENT_PAL_TAG_NORTHSTAR_BOAT, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_NorthstarBoat, gDummySpriteAffineAnimTable};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur = {0xFFFF, OBJ_EVENT_PAL_TAG_BULBASAUR, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, gObjectEventImageAnimTable_FollowingPokemon, gObjectEventPicTable_Bulbasaur, FollowerAffineTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ivysaur = {0xFFFF, OBJ_EVENT_PAL_TAG_IVYSAUR, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, gObjectEventImageAnimTable_FollowingPokemon, gObjectEventPicTable_Ivysaur, FollowerAffineTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur = {0xFFFF, OBJ_EVENT_PAL_TAG_VENUSAUR, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, gObjectEventImageAnimTable_FollowingPokemon, gObjectEventPicTable_Venusaur, FollowerAffineTable};
