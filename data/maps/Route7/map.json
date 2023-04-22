@@ -289,8 +289,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SNEASEL",
-      "x": 54,
-      "y": 43,
+      "x": 48,
+      "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -328,42 +328,42 @@
       "y": 18,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 69,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 64,
       "y": 31,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     },
     {
       "x": 48,
       "y": 32,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 25,
       "y": 36,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "8"
     },
     {
       "x": 9,
       "y": 26,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "9"
     }
   ],
   "coord_events": [

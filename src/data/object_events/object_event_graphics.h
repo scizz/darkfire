@@ -1218,3 +1218,5 @@ const u16 gObjectEventPal_SignBig[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPal_Swings[] = INCBIN_U16("graphics/object_events/palettes/swings.gbapal");
 const u16 gObjectEventPal_TrafficLights[] = INCBIN_U16("graphics/object_events/palettes/traffic_lights.gbapal");
 const u16 gObjectEventPal_Trash[] = INCBIN_U16("graphics/object_events/palettes/trash.gbapal");
+const u32 gObjectEventPic_NorthstarBoat[] = INCBIN_U32("graphics/object_events/pics/misc/northstar_boat.4bpp");
+const u16 gObjectEventPal_NorthstarBoat[] = INCBIN_U16("graphics/object_events/palettes/northstar_boat.gbapal");

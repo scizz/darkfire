@@ -3,7 +3,16 @@
 .set LOCALID_GOVOFF, 6
 
 NorthstarCity_TelescopeSea_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_TelescopaSea_OnTransition
 	.byte 0
+
+NorthstarCity_TelescopaSea_OnTransition:
+	call NorthstarCity_TelescopaSea_SetFlashLevel
+	end
+
+NorthstarCity_TelescopaSea_SetFlashLevel::
+	setflashlevel 2
+	return
 
 NorthstarCity_TelescopeSea_SUBO::
 	lock
@@ -108,6 +117,7 @@ NorthstarCity_TelescopeSea_T9::
 	end
 
 NorthstarCity_TelescopeSea_SUBO_Main::
+	waitmovement 0
 	applymovement LOCALID_GOVOFF, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse

@@ -2,7 +2,7 @@
   "id": "MAP_PALACE_OF_ICE_ENTRANCE",
   "name": "PalaceOfIce_Entrance",
   "layout": "LAYOUT_PALACE_OF_ICE_ENTRANCE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ICE_PALACE",
   "region_map_section": "MAPSEC_ROUTE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -22,7 +22,7 @@
       "y": 22,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_PEAK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

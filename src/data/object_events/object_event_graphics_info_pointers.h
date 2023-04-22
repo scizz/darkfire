@@ -708,6 +708,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SignBig;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Swings;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrafficLights;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trash;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NorthstarBoat;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1413,6 +1414,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SWINGS] =                   &gObjectEventGraphicsInfo_Swings,
     [OBJ_EVENT_GFX_TRAFFIC_LIGHTS] =           &gObjectEventGraphicsInfo_TrafficLights,
     [OBJ_EVENT_GFX_TRASH] =                    &gObjectEventGraphicsInfo_Trash,
+    [OBJ_EVENT_GFX_NORTHSTAR_BOAT] =           &gObjectEventGraphicsInfo_NorthstarBoat,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

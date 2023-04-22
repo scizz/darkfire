@@ -708,9 +708,9 @@
 #define OBJ_EVENT_GFX_SWINGS                     700
 #define OBJ_EVENT_GFX_TRAFFIC_LIGHTS             701
 #define OBJ_EVENT_GFX_TRASH                      702
+#define OBJ_EVENT_GFX_NORTHSTAR_BOAT             703
 
-
-#define NUM_OBJ_EVENT_GFX                        703
+#define NUM_OBJ_EVENT_GFX                        704
 
 
 // These are dynamic object gfx ids.
