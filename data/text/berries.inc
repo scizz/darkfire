@@ -76,17 +76,17 @@ LilycoveCity_Text_BerrySuitsYou: @ 82A7244
 	.string "When it gets right down to it…\p"
 	.string "The same way suits suit me perfectly,\n"
 	.string "a crisp breeze suits the sea.\p"
-	.string "And you, a BERRY suits you to a “T”…\p"
+	.string "And you, a Berry suits you to a “T”…\p"
 	.string "Why should that be so?$"
 
 LilycoveCity_Text_BecauseYoureTrainer: @ 82A72E3
 	.string "When it gets right down to it…\p"
-	.string "It's because you're a TRAINER!$"
+	.string "It's because you're a Trainer!$"
 
 LilycoveCity_Text_PokeblocksSuitPokemon: @ 82A7321
 	.string "When it gets right down to it…\p"
 	.string "The way dignified simplicity suits me,\n"
-	.string "{POKEBLOCK}S perfectly suit POKéMON.$"
+	.string "PokéBlocks perfectly suit Pokémon.$"
 
 Route123_BerryMastersHouse_Text_YoureDeservingOfBerry: @ 82A7386
 	.string "You may call me the BERRY MASTER.\p"
