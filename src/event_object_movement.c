@@ -826,6 +826,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_TRAFFIC_LIGHTS          0x1061
 #define OBJ_EVENT_PAL_TAG_TRASH                   0x1060
 #define OBJ_EVENT_PAL_TAG_NORTHSTAR_BOAT          0x1059
+#define OBJ_EVENT_PAL_TAG_GAME_BOY                0x1058
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
@@ -847,6 +848,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_TrafficLights,         OBJ_EVENT_PAL_TAG_TRAFFIC_LIGHTS},
     {gObjectEventPal_Trash,                 OBJ_EVENT_PAL_TAG_TRASH},
     {gObjectEventPal_NorthstarBoat,         OBJ_EVENT_PAL_TAG_NORTHSTAR_BOAT},
+    {gObjectEventPal_GameBoy,               OBJ_EVENT_PAL_TAG_GAME_BOY},
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},

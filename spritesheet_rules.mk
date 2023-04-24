@@ -1936,6 +1936,9 @@ $(OBJEVENTGFXDIR)/misc/trash.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/northstar_boat.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/game_boy.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
