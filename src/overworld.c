@@ -3940,7 +3940,7 @@ void UpdateFollowerPokemonGraphic(void)
         
         // If the Unown is not A, set the graphics id to the proper Unown
         if (unownLetter)
-            leadMonGraphicId = OBJ_EVENT_GFX_DEOXYS_SPEED + unownLetter;
+            leadMonGraphicId = OBJ_EVENT_GFX_DEOXYS_ATTACK + unownLetter;
     }
     
     if(gSaveBlock2Ptr->follower.inProgress && leadMonGraphicId != gSaveBlock2Ptr->follower.graphicsId)
