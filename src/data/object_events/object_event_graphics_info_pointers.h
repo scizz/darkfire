@@ -1315,7 +1315,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MURKROW] =                  &gObjectEventGraphicsInfo_Murkrow,
     [OBJ_EVENT_GFX_SLOWKING] =                 &gObjectEventGraphicsInfo_Slowking,
     [OBJ_EVENT_GFX_MISDREAVUS] =               &gObjectEventGraphicsInfo_Misdreavus,
-    /*[OBJ_EVENT_GFX_UNOWN_A] =                  &gObjectEventGraphicsInfo_Unown_A,
+    [OBJ_EVENT_GFX_UNOWN_A] =                  &gObjectEventGraphicsInfo_Unown_A,
     [OBJ_EVENT_GFX_UNOWN_B] =                  &gObjectEventGraphicsInfo_Unown_B,
     [OBJ_EVENT_GFX_UNOWN_C] =                  &gObjectEventGraphicsInfo_Unown_C,
     [OBJ_EVENT_GFX_UNOWN_D] =                  &gObjectEventGraphicsInfo_Unown_D,
@@ -1342,7 +1342,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_UNOWN_Y] =                  &gObjectEventGraphicsInfo_Unown_Y,
     [OBJ_EVENT_GFX_UNOWN_Z] =                  &gObjectEventGraphicsInfo_Unown_Z,
     [OBJ_EVENT_GFX_UNOWN_EXCLAMATION] =        &gObjectEventGraphicsInfo_Unown_Exclamation,
-    [OBJ_EVENT_GFX_UNOWN_QUESTION] =           &gObjectEventGraphicsInfo_Unown_Question,*/
+    [OBJ_EVENT_GFX_UNOWN_QUESTION] =           &gObjectEventGraphicsInfo_Unown_Question,
     [OBJ_EVENT_GFX_WOBBUFFET] =                &gObjectEventGraphicsInfo_Wobbuffet,
     [OBJ_EVENT_GFX_GIRAFARIG] =                &gObjectEventGraphicsInfo_Girafarig,
     [OBJ_EVENT_GFX_PINECO] =                   &gObjectEventGraphicsInfo_Pineco,
