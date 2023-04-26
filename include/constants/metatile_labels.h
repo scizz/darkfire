@@ -211,7 +211,7 @@
 #define METATILE_General_CalmWater             0x1E4
 #define METATILE_General_CaveEntrance_Bottom   0x09F
 #define METATILE_General_CaveEntrance_Top      0x097
-#define METATILE_General_Door                  0x1A5
+#define METATILE_General_Door                  0x1BE
 #define METATILE_General_Door_Contest          0x18A
 #define METATILE_General_Door_Gym              0x189
 #define METATILE_General_Door_PokeCenter       0x1AA
@@ -231,7 +231,7 @@
 #define METATILE_General_RockWall_GrassBase    0x0B4
 #define METATILE_General_RockWall_RockBase     0x0B1
 #define METATILE_General_RockWall_SandBase     0x12D
-#define METATILE_General_RoughDeepWater        0x1BE
+#define METATILE_General_RoughDeepWater        0x1C2
 #define METATILE_General_RoughWater            0x1CE
 #define METATILE_General_SandPit_Center        0x151
 #define METATILE_General_SecretBase_TreeLeft   0x191

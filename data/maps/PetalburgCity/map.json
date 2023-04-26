@@ -125,8 +125,8 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_NORTHSTAR_CITY_TOURNAMENT_3F",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_PETALBURG_CITY",
+      "dest_warp_id": "2"
     },
     {
       "x": 17,
