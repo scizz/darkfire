@@ -40,7 +40,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TRAFFIC_LIGHTS",
       "x": 42,
-      "y": 25,
+      "y": 30,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
