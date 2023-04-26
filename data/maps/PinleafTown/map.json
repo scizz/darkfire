@@ -11,7 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
   "connections": [
     {
       "map": "MAP_ROUTE10",
@@ -295,7 +295,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PinleafTown_SUBO_3",
+      "script": "PinleafTown_SUBO_1",
       "flag": "0"
     },
     {
@@ -334,7 +334,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PinleafTown_SUBO_1",
+      "script": "PinleafTown_SUBO_3",
       "flag": "0"
     },
     {

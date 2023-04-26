@@ -128,7 +128,7 @@ PinleafTown_Text_Old_Man:
 	.string "have changed too much!$"
 
 PinleafTown_Text_SUBO_1:
-	.string "{COLOR}{BLUE}Hey! Can't you see we're busy here?!\n"
+	.string "{COLOR}{RED}Hey! Can't you see we're busy here?!\n"
 	.string "Leave us alone, you bully!$"
 
 PinleafTown_Text_SUBO_2:

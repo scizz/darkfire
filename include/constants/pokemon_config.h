@@ -15,10 +15,10 @@
 // If you're disabling a generation previous to others (eg: Gen 5 but not Gen 6, 7 and 8),
 // remember to update NATIONAL_DEX enum in include/constants/pokedex.h to avoid players from softlocking in the non-existant entries.
 #define P_GEN_4_POKEMON         TRUE        // Generation 4 Pokémon (DPPt, HGSS)
-#define P_GEN_5_POKEMON         TRUE        // Generation 5 Pokémon (BW, B2W2)
-#define P_GEN_6_POKEMON         TRUE        // Generation 6 Pokémon (XY, ORAS)
-#define P_GEN_7_POKEMON         TRUE        // Generation 7 Pokémon (SM, USUM, LGPE)
-#define P_GEN_8_POKEMON         TRUE        // Generation 8 Pokémon (SwSh, BDSP, LA)
+#define P_GEN_5_POKEMON         FALSE        // Generation 5 Pokémon (BW, B2W2)
+#define P_GEN_6_POKEMON         FALSE       // Generation 6 Pokémon (XY, ORAS)
+#define P_GEN_7_POKEMON         FALSE       // Generation 7 Pokémon (SM, USUM, LGPE)
+#define P_GEN_8_POKEMON         FALSE       // Generation 8 Pokémon (SwSh, BDSP, LA)
 
 #define P_ENABLE_DEBUG          TRUE        // Enables a debug menu for pokemon sprites and icons, accessed by pressing SELECT in the summary screen.
 
