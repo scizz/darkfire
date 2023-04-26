@@ -560,6 +560,23 @@ gSongTable::
 	song mus_rg_trainer_tower, 0, 0
 	song mus_rg_slow_pallet, 0, 0
 	song mus_rg_teachy_tv_menu, 0, 0
+	song mus_chandra_village, 0, 0
+	song mus_route_1, 0, 0
+	song mus_trainer_battle, 0, 0
+	song mus_abandoned_museum, 0, 0
+	song mus_anheim_forest, 0, 0
+	song mus_cave, 0, 0
+	song mus_ice_palace, 0, 0
+	song mus_snowdrift_forest, 0, 0
+	song mus_tamarok_peak, 0, 0
+	song mus_temple_of_kings, 0, 0
+	song mus_subo_control, 0, 0
+	song mus_subo_theme, 0, 0
+	song mus_route_3_4, 0, 0
+	song mus_route_5_6, 0, 0
+	song mus_route_7_8, 0, 0
+	song mus_route_9_10, 0, 0
+	song mus_dreamworld, 0, 0
 	song ph_trap_blend, 2, 2
 	song ph_trap_held, 2, 2
 	song ph_trap_solo, 2, 2
@@ -611,23 +628,6 @@ gSongTable::
 	song ph_nurse_blend, 2, 2
 	song ph_nurse_held, 2, 2
 	song ph_nurse_solo, 2, 2
-	song mus_chandra_village, 0, 0
-	song mus_route_1, 0, 0
-	song mus_trainer_battle, 0, 0
-	song mus_abandoned_museum, 0, 0
-	song mus_anheim_forest, 0, 0
-	song mus_cave, 0, 0
-	song mus_ice_palace, 0, 0
-	song mus_snowdrift_forest, 0, 0
-	song mus_tamarok_peak, 0, 0
-	song mus_temple_of_kings, 0, 0
-	song mus_subo_control, 0, 0
-	song mus_subo_theme, 0, 0
-	song mus_route_3_4, 0, 0
-	song mus_route_5_6, 0, 0
-	song mus_route_7_8, 0, 0
-	song mus_route_9_10, 0, 0
-	song mus_dreamworld, 0, 0
 
 	.align 2
 dummy_song_header:
