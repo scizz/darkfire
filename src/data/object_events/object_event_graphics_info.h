@@ -1211,7 +1211,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeEarlyStag
     .width = 16,
     .height = 16,
     .paletteSlot = PALSLOT_NPC_1,
-    .shadowSize = SHADOW_SIZE_S,
+    .shadowSize = SHADOW_SIZE_XL,
     .inanimate = TRUE,
     .disableReflectionPaletteLoad = FALSE,
     .tracks = TRACKS_NONE,
