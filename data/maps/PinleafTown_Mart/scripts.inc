@@ -27,9 +27,10 @@ PinleafTown_Mart_Text_Girl:
 	.string "this shop running.$"
 
 PinleafTown_Mart_Text_Boy:
-	.string "{COLOR}{BLUE}Oh boy, the herbs sold here are very,\n"
-	.string "very powerful medicine.\p"
-	.string "It's sure to give you an edge in\n"
+	.string "{COLOR}{BLUE}Oh, boy…\p"
+	.string "The herbs sold here are very,\n"
+	.string "very powerful medicines.\p"
+	.string "They're sure to give you an edge in\n"
 	.string "battle!\p"
-	.string "But Pokémon seem to hate the way they\n"
-	.string "taste…$"
+	.string "Only thing is, Pokémon seem to hate\n"
+	.string "the way they taste…$"

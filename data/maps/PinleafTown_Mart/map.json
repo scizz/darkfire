@@ -73,14 +73,14 @@
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 6,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [
