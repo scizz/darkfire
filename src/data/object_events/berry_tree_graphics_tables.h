@@ -94,7 +94,7 @@ static const struct SpriteFrameImage sPicTable_OranBerryTree[] = {
     overworld_frame(gObjectEventPic_OranBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Oran[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
+const u16 gBerryTreePaletteTagTable_Oran[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_SPROUT, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 static const struct SpriteFrameImage sPicTable_PersimBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),

@@ -827,6 +827,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_TRASH                   0x1066
 #define OBJ_EVENT_PAL_TAG_NORTHSTAR_BOAT          0x1065
 #define OBJ_EVENT_PAL_TAG_GAME_BOY                0x1064
+#define OBJ_EVENT_PAL_TAG_SPROUT                  0x1063
 
 #define OBJ_EVENT_PAL_TAG_TURTWIG                 0x1057
 #define OBJ_EVENT_PAL_TAG_GROTLE                  0x1056
@@ -977,6 +978,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #include "data/object_events/object_event_graphics_info_pointers.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
+    {gObjectEventPal_Sprout,                OBJ_EVENT_PAL_TAG_SPROUT},
     {gObjectEventPal_Antennae,              OBJ_EVENT_PAL_TAG_ANTENNAE},
     {gObjectEventPal_Crate,                 OBJ_EVENT_PAL_TAG_CRATE},
     {gObjectEventPal_FireHydrant,           OBJ_EVENT_PAL_TAG_FIRE_HYDRANT},
