@@ -24,8 +24,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
-      "x": 9,
-      "y": 18,
+      "x": 20,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -76,8 +76,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 23,
-      "y": 20,
+      "x": 22,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
