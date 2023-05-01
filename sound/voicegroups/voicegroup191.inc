@@ -94,7 +94,7 @@ voicegroup191::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ voice
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ fifths
 	voice_programmable_wave 60, 0, ProgrammableWaveData_8, 0, 7, 15, 1 @ bass (rough) switch "9B" to "99" for smooth
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Pad 1
+	voice_directsound 60, 0, pad1, 255, 250, 0, 230 @ Pad 1
 	voice_directsound 60, 0, pad2, 10, 254, 255, 250 @ Pad 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Pad 3
 	voice_directsound 60, 0, pad4, 255, 254, 0, 250 @ Pad 4
