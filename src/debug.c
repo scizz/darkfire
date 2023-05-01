@@ -3185,6 +3185,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_ROUTE_7_8) \
     X(MUS_ROUTE_9_10) \
     X(MUS_DREAMWORLD) \
+    X(MUS_NORTHSTAR_TOURNAMENT) \
     X(PH_TRAP_BLEND) \
     X(PH_TRAP_HELD) \
     X(PH_TRAP_SOLO) \

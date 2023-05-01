@@ -1313,3 +1313,6 @@ $(MID_SUBDIR)/mus_route_9_10.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_dreamworld.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V087
+    
+$(MID_SUBDIR)/mus_northstar_tournament.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V127

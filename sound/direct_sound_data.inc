@@ -4702,3 +4702,7 @@ piccolo::
     .align 2
 pad2::
     .incbin "sound/direct_sound_samples/pad2.bin"
+    
+    .align 2
+pad1::
+    .incbin "sound/direct_sound_samples/pad1.bin"
