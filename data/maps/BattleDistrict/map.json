@@ -46,7 +46,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TRAFFIC_LIGHTS",
       "x": 42,
-      "y": 30,
+      "y": 32,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -137,7 +137,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ANTENNAE",
       "x": 18,
-      "y": 34,
+      "y": 35,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -149,8 +149,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ANTENNAE",
-      "x": 34,
-      "y": 37,
+      "x": 62,
+      "y": 42,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -163,7 +163,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TRAFFIC_LIGHTS",
       "x": 56,
-      "y": 50,
+      "y": 49,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -203,6 +203,19 @@
       "graphics_id": "OBJ_EVENT_GFX_SWINGS",
       "x": 108,
       "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ANTENNAE",
+      "x": 35,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
