@@ -880,3 +880,25 @@ const struct Tileset gTileset_BattleDistrict2 =
     .metatileAttributes = gMetatileAttributes_BattleDistrict2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Port1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Port1,
+    .palettes = gTilesetPalettes_Port1,
+    .metatiles = gMetatiles_Port1,
+    .metatileAttributes = gMetatileAttributes_Port1,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Port2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Port2,
+    .palettes = gTilesetPalettes_Port2,
+    .metatiles = gMetatiles_Port2,
+    .metatileAttributes = gMetatileAttributes_Port2,
+    .callback = NULL,
+};
