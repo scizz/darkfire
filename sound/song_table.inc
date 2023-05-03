@@ -578,6 +578,7 @@ gSongTable::
 	song mus_route_9_10, 0, 0
 	song mus_dreamworld, 0, 0
 	song mus_northstar_tournament, 0, 0
+	song mus_surfing, 0, 0
 	song ph_trap_blend, 2, 2
 	song ph_trap_held, 2, 2
 	song ph_trap_solo, 2, 2

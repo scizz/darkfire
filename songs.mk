@@ -1316,3 +1316,6 @@ $(MID_SUBDIR)/mus_dreamworld.s: %.s: %.mid
     
 $(MID_SUBDIR)/mus_northstar_tournament.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
+
+$(MID_SUBDIR)/mus_surfing.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V127

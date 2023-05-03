@@ -508,7 +508,8 @@
 #define MUS_ROUTE_9_10              574
 #define MUS_DREAMWORLD              575
 #define MUS_NORTHSTAR_TOURNAMENT    576
-#define END_MUS                     MUS_NORTHSTAR_TOURNAMENT
+#define MUS_SURFING                 577
+#define END_MUS                     MUS_SURFING
 
 #define PH_TRAP_BLEND               END_MUS + 1
 #define PH_TRAP_HELD                END_MUS + 2
