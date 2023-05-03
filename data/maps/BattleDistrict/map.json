@@ -253,8 +253,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CRATE_SMALL",
-      "x": 106,
-      "y": 39,
+      "x": 108,
+      "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

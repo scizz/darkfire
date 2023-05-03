@@ -403,7 +403,6 @@
 #define METATILE_Petalburg_Door_BirchsLab   0x387
 #define METATILE_Petalburg_Door_Littleroot  0x248
 #define METATILE_Petalburg_Door_Oldale      0x287
-#define METATILE_Petalburg_ReflectiveWater  0x371
 
 // gTileset_PokemonCenter
 #define METATILE_PokemonCenter_CounterBarrier            0x25D
