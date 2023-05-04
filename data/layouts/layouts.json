@@ -5666,8 +5666,8 @@
       "name": "Docks_Layout",
       "width": 125,
       "height": 59,
-      "primary_tileset": "gTileset_BattleDistrict1",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_Port1",
+      "secondary_tileset": "gTileset_Port2",
       "border_filepath": "data/layouts/Docks/border.bin",
       "blockdata_filepath": "data/layouts/Docks/map.bin"
     },
