@@ -26,7 +26,7 @@
 #define MAP_PORT_BALINA       (17 | (0 << 8))
 #define MAP_WEST_DISTRICT     (18 | (0 << 8))
 #define MAP_BATTLE_DISTRICT   (19 | (0 << 8))
-#define MAP_DOCKS             (20 | (0 << 8))
+#define MAP_PORT              (20 | (0 << 8))
 #define MAP_OUTSKIRTS         (21 | (0 << 8))
 #define MAP_ROUTE1            (22 | (0 << 8))
 #define MAP_ROUTE2            (23 | (0 << 8))

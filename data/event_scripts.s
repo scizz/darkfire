@@ -1347,6 +1347,6 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/BattleDistrict/scripts.inc"
 
-	.include "data/maps/Docks/scripts.inc"
+	.include "data/maps/Port/scripts.inc"
 
 	.include "data/maps/Outskirts/scripts.inc"

@@ -5662,14 +5662,14 @@
       "blockdata_filepath": "data/layouts/BattleDistrict/map.bin"
     },
     {
-      "id": "LAYOUT_DOCKS",
-      "name": "Docks_Layout",
+      "id": "LAYOUT_PORT",
+      "name": "Port_Layout",
       "width": 125,
       "height": 59,
       "primary_tileset": "gTileset_Port1",
       "secondary_tileset": "gTileset_Port2",
-      "border_filepath": "data/layouts/Docks/border.bin",
-      "blockdata_filepath": "data/layouts/Docks/map.bin"
+      "border_filepath": "data/layouts/Port/border.bin",
+      "blockdata_filepath": "data/layouts/Port/map.bin"
     },
     {
       "id": "LAYOUT_OUTSKIRTS",

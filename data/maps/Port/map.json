@@ -1,7 +1,7 @@
 {
-  "id": "MAP_DOCKS",
-  "name": "Docks",
-  "layout": "LAYOUT_DOCKS",
+  "id": "MAP_PORT",
+  "name": "Port",
+  "layout": "LAYOUT_PORT",
   "music": "MUS_ABANDONED_MUSEUM",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
