@@ -90,7 +90,8 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerTop::
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
+	waitmovement 0 
 	goto NorthstarCity_Lighthouse_Old_Man_UseTelescope
 	end
 

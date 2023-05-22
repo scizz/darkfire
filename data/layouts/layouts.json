@@ -5054,7 +5054,7 @@
     {
       "id": "LAYOUT_NORTHSTAR_CITY_TELESCOPE_SEA",
       "name": "NorthstarCity_TelescopeSea_Layout",
-      "width": 52,
+      "width": 36,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",

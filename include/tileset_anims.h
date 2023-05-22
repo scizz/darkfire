@@ -8,7 +8,6 @@ void TransferTilesetAnimsBuffer(void);
 
 void InitTilesetAnim_General(void);
 void InitTilesetAnim_Petalburg(void);
-void InitTilesetAnim_Rustboro(void);
 void InitTilesetAnim_Dewford(void);
 void InitTilesetAnim_Slateport(void);
 void InitTilesetAnim_Mauville(void);

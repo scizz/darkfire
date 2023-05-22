@@ -17,8 +17,8 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PELIPPER",
       "x": 18,
-      "y": 4,
-      "elevation": 3,
+      "y": 5,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 44,
+      "x": 28,
       "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 48,
+      "x": 33,
       "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 47,
+      "x": 32,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 49,
+      "x": 34,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -81,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
-      "x": 45,
+      "x": 29,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -105,7 +105,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 51,
+      "x": 35,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -114,7 +114,7 @@
     },
     {
       "type": "trigger",
-      "x": 50,
+      "x": 34,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -123,7 +123,7 @@
     },
     {
       "type": "trigger",
-      "x": 49,
+      "x": 33,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -132,7 +132,7 @@
     },
     {
       "type": "trigger",
-      "x": 48,
+      "x": 32,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -141,7 +141,7 @@
     },
     {
       "type": "trigger",
-      "x": 47,
+      "x": 31,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -150,7 +150,7 @@
     },
     {
       "type": "trigger",
-      "x": 46,
+      "x": 30,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -159,7 +159,7 @@
     },
     {
       "type": "trigger",
-      "x": 45,
+      "x": 29,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -168,7 +168,7 @@
     },
     {
       "type": "trigger",
-      "x": 44,
+      "x": 28,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -177,7 +177,7 @@
     },
     {
       "type": "trigger",
-      "x": 43,
+      "x": 27,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -186,7 +186,7 @@
     },
     {
       "type": "trigger",
-      "x": 42,
+      "x": 26,
       "y": 19,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -195,16 +195,16 @@
     },
     {
       "type": "trigger",
-      "x": 41,
+      "x": 25,
       "y": 20,
       "elevation": 0,
       "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var_value": "2",
       "script": "NorthstarCity_TelescopeSea_SUBO"
     },
     {
       "type": "trigger",
-      "x": 41,
+      "x": 25,
       "y": 21,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -213,7 +213,7 @@
     },
     {
       "type": "trigger",
-      "x": 41,
+      "x": 25,
       "y": 22,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -222,12 +222,48 @@
     },
     {
       "type": "trigger",
-      "x": 41,
+      "x": 25,
       "y": 23,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "NorthstarCity_TelescopeSea_SUBO"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "1",
+      "script": "NorthstarSea_HideFollower"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "1",
+      "script": "NorthstarSea_HideFollower"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "1",
+      "script": "NorthstarSea_HideFollower"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_STORYLINE_STATE",
+      "var_value": "1",
+      "script": "NorthstarSea_HideFollower"
     }
   ],
   "bg_events": [

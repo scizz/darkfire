@@ -3,16 +3,38 @@
 .set LOCALID_GOVOFF, 6
 
 NorthstarCity_TelescopeSea_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_TelescopaSea_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NorthstarCity_TelescopeSea_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_TelescopeSea_OnTransition
 	.byte 0
 
-NorthstarCity_TelescopaSea_OnTransition:
-	call NorthstarCity_TelescopaSea_SetFlashLevel
+NorthstarCity_TelescopeSea_OnFrame::
+	map_script_2 VAR_STORYLINE_STATE, 0, NorthstarCity_TelescopeSea_Hide
+	.2byte 0
+
+NorthstarCity_TelescopeSea_OnTransition:
+	call NorthstarCity_TelescopeSea_SetFlashLevel
 	end
 
-NorthstarCity_TelescopaSea_SetFlashLevel::
+NorthstarCity_TelescopeSea_Hide::
+	applymovement OBJ_EVENT_ID_PLAYER, SetInvisible
+	waitmovement 0
+	showfollower
+	applymovement OBJ_EVENT_ID_FOLLOWER, SetInvisible
+	waitmovement 0
+	hidefollower
+	setflag FLAG_UNUSED_0x020
+	setvar VAR_STORYLINE_STATE, 1
+	end
+
+NorthstarCity_TelescopeSea_SetFlashLevel::
 	setflashlevel 2
 	return
+
+NorthstarSea_HideFollower::
+	hidefollower
+	applymovement OBJ_EVENT_ID_FOLLOWER, SetInvisible
+	setvar VAR_STORYLINE_STATE, 2
+	end
 
 NorthstarCity_TelescopeSea_SUBO::
 	lock
@@ -153,6 +175,10 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
 	warpsilent MAP_NORTHSTAR_CITY_LIGHTHOUSE, 36, 4
 	end
+
+SetInvisible:
+	set_invisible
+	step_end
 
 WRD2R4:
 	walk_right
