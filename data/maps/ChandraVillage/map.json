@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_SUNNY_CLOUDS",
   "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -43,7 +46,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 9,
-      "y": 20,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -56,7 +59,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES",
       "x": 8,
-      "y": 20,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -159,8 +162,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_QUINTY_PLUMP",
-      "x": 40,
-      "y": 7,
+      "x": 34,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -172,8 +175,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 38,
-      "y": 7,
+      "x": 32,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 2,
@@ -250,8 +253,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_FOLLOWER",
-      "x": 26,
-      "y": 8,
+      "x": 45,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -292,8 +295,8 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 39,
-      "y": 6,
+      "x": 33,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_LAB",
       "dest_warp_id": "0"
@@ -347,8 +350,8 @@
     },
     {
       "type": "trigger",
-      "x": 39,
-      "y": 7,
+      "x": 33,
+      "y": 9,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "6",
@@ -382,14 +385,11 @@
     },
     {
       "type": "sign",
-      "x": 43,
+      "x": 38,
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ChandraVillage_Facility_Sign"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
