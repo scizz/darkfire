@@ -902,3 +902,25 @@ const struct Tileset gTileset_Port2 =
     .metatileAttributes = gMetatileAttributes_Port2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Outskirts1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Outskirts1,
+    .palettes = gTilesetPalettes_Outskirts1,
+    .metatiles = gMetatiles_Outskirts1,
+    .metatileAttributes = gMetatileAttributes_Outskirts1,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Outskirts2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Outskirts2,
+    .palettes = gTilesetPalettes_Outskirts2,
+    .metatiles = gMetatiles_Outskirts2,
+    .metatileAttributes = gMetatileAttributes_Outskirts2,
+    .callback = NULL,
+};
