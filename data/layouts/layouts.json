@@ -5674,10 +5674,10 @@
     {
       "id": "LAYOUT_OUTSKIRTS",
       "name": "Outskirts_Layout",
-      "width": 120,
+      "width": 125,
       "height": 59,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_Outskirts1",
+      "secondary_tileset": "gTileset_Outskirts2",
       "border_filepath": "data/layouts/Outskirts/border.bin",
       "blockdata_filepath": "data/layouts/Outskirts/map.bin"
     }
