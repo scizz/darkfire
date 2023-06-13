@@ -819,8 +819,13 @@
 #define OBJ_EVENT_GFX_TRASH                      809
 #define OBJ_EVENT_GFX_NORTHSTAR_BOAT             810
 #define OBJ_EVENT_GFX_GAME_BOY                   811
+#define OBJ_EVENT_GFX_LIBRARY_1                  812
+#define OBJ_EVENT_GFX_LIBRARY_2                  813
+#define OBJ_EVENT_GFX_LIBRARY_3                  814
+#define OBJ_EVENT_GFX_LIBRARY_4                  815
 
-#define NUM_OBJ_EVENT_GFX                        812
+
+#define NUM_OBJ_EVENT_GFX                        816
 
 
 // These are dynamic object gfx ids.
