@@ -848,6 +848,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrafficLights;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trash;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NorthstarBoat;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GameBoy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library4;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1662,6 +1666,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRASH] =                    &gObjectEventGraphicsInfo_Trash,
     [OBJ_EVENT_GFX_NORTHSTAR_BOAT] =           &gObjectEventGraphicsInfo_NorthstarBoat,
     [OBJ_EVENT_GFX_GAME_BOY] =                 &gObjectEventGraphicsInfo_GameBoy,
+    [OBJ_EVENT_GFX_LIBRARY_1] =                &gObjectEventGraphicsInfo_Library1,
+    [OBJ_EVENT_GFX_LIBRARY_2] =                &gObjectEventGraphicsInfo_Library2,
+    [OBJ_EVENT_GFX_LIBRARY_3] =                &gObjectEventGraphicsInfo_Library3,
+    [OBJ_EVENT_GFX_LIBRARY_4] =                &gObjectEventGraphicsInfo_Library4,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

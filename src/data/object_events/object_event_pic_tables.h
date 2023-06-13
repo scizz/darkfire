@@ -2381,6 +2381,22 @@ const struct SpriteFrameImage gObjectEventPicTable_GameBoy[] = {
     overworld_frame(gObjectEventPic_GameBoy, 8, 8, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Library1[] = {
+    overworld_frame(gObjectEventPic_Library1, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Library2[] = {
+    overworld_frame(gObjectEventPic_Library2, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Library3[] = {
+    overworld_frame(gObjectEventPic_Library3, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Library4[] = {
+    overworld_frame(gObjectEventPic_Library4, 8, 8, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),
