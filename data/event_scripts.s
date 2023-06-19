@@ -1350,3 +1350,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Port/scripts.inc"
 
 	.include "data/maps/Outskirts/scripts.inc"
+
+	.include "data/maps/Route4EastTreeGrotto/scripts.inc"

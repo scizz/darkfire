@@ -5680,6 +5680,16 @@
       "secondary_tileset": "gTileset_Outskirts2",
       "border_filepath": "data/layouts/Outskirts/border.bin",
       "blockdata_filepath": "data/layouts/Outskirts/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4EAST_TREE_GROTTO",
+      "name": "Route4EastTreeGrotto_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route4EastTreeGrotto/border.bin",
+      "blockdata_filepath": "data/layouts/Route4EastTreeGrotto/map.bin"
     }
   ]
 }

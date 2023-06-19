@@ -1,8 +1,10 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
-    "gMapGroup_DarkfireSpecialArea",
+    "gMapGroup_DarkfireGrottos",
+    "gMapGroup_DarkfireSpecialAreas",
     "gMapGroup_IndoorChandra",
     "gMapGroup_IndoorSunrise",
     "gMapGroup_IndoorUnion",
@@ -109,15 +111,11 @@
     "MuddyUnderpass",
     "Underwater"
   ],
-  "gMapGroup_DarkfireSpecialArea": [
-    "ArcticBay",
-    "NightmareHall",
-    "ForestsHeart",
-    "SoulPeak",
-    "CharredSummit",
-    "CharredPath",
-    "ThunderCrest",
-    "NorthstarArena"
+  "gMapGroup_DarkfireGrottos": [
+    "Route4EastTreeGrotto"
+  ],
+  "gMapGroup_DarkfireSpecialAreas": [
+
   ],
   "gMapGroup_IndoorChandra": [
     "ChandraVillage_PlayerHouse_1F",
