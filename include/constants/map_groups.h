@@ -65,6 +65,14 @@
 #define MAP_ROUTE4EAST_TREE_GROTTO (0 | (2 << 8))
 
 // gMapGroup_DarkfireSpecialAreas
+#define MAP_ARCTIC_BAY      (0 | (3 << 8))
+#define MAP_NIGHTMARE_HALL  (1 | (3 << 8))
+#define MAP_FORESTS_HEART   (2 | (3 << 8))
+#define MAP_SOUL_PEAK       (3 | (3 << 8))
+#define MAP_CHARRED_SUMMIT  (4 | (3 << 8))
+#define MAP_CHARRED_PATH    (5 | (3 << 8))
+#define MAP_THUNDER_CREST   (6 | (3 << 8))
+#define MAP_NORTHSTAR_ARENA (7 | (3 << 8))
 
 // gMapGroup_IndoorChandra
 #define MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_1F (0 | (4 << 8))

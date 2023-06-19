@@ -1,5 +1,4 @@
 {
-  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
@@ -115,7 +114,14 @@
     "Route4EastTreeGrotto"
   ],
   "gMapGroup_DarkfireSpecialAreas": [
-
+    "ArcticBay",
+    "NightmareHall",
+    "ForestsHeart",
+    "SoulPeak",
+    "CharredSummit",
+    "CharredPath",
+    "ThunderCrest",
+    "NorthstarArena"
   ],
   "gMapGroup_IndoorChandra": [
     "ChandraVillage_PlayerHouse_1F",
