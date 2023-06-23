@@ -5687,7 +5687,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Grotto1",
       "border_filepath": "data/layouts/Route4EastTreeGrotto/border.bin",
       "blockdata_filepath": "data/layouts/Route4EastTreeGrotto/map.bin"
     }
