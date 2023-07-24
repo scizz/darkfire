@@ -4365,7 +4365,7 @@
       "id": "LAYOUT_HIGHWIND_VILLAGE",
       "name": "HighwindVillage_Layout",
       "width": 50,
-      "height": 52,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_TrickHousePuzzle",
       "border_filepath": "data/layouts/HighwindVillage/border.bin",
