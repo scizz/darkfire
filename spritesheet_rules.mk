@@ -2303,6 +2303,9 @@ $(OBJEVENTGFXDIR)/misc/library3.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/library4.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/underpass.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2

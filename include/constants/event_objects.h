@@ -823,9 +823,10 @@
 #define OBJ_EVENT_GFX_LIBRARY_2                  813
 #define OBJ_EVENT_GFX_LIBRARY_3                  814
 #define OBJ_EVENT_GFX_LIBRARY_4                  815
+#define OBJ_EVENT_GFX_UNDERPASS                  816
 
 
-#define NUM_OBJ_EVENT_GFX                        816
+#define NUM_OBJ_EVENT_GFX                        817
 
 
 // These are dynamic object gfx ids.
