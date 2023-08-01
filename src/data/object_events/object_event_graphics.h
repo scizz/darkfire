@@ -1482,3 +1482,5 @@ const u32 gObjectEventPic_Library2[] = INCBIN_U32("graphics/object_events/pics/m
 const u32 gObjectEventPic_Library3[] = INCBIN_U32("graphics/object_events/pics/misc/library3.4bpp");
 const u32 gObjectEventPic_Library4[] = INCBIN_U32("graphics/object_events/pics/misc/library4.4bpp");
 const u16 gObjectEventPal_Library[] = INCBIN_U16("graphics/object_events/palettes/library.gbapal");
+const u32 gObjectEventPic_Underpass[] = INCBIN_U32("graphics/object_events/pics/misc/underpass.4bpp");
+const u16 gObjectEventPal_Underpass[] = INCBIN_U16("graphics/object_events/palettes/underpass.gbapal");

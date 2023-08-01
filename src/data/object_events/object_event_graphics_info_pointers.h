@@ -852,6 +852,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library4;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Underpass;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1670,6 +1671,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LIBRARY_2] =                &gObjectEventGraphicsInfo_Library2,
     [OBJ_EVENT_GFX_LIBRARY_3] =                &gObjectEventGraphicsInfo_Library3,
     [OBJ_EVENT_GFX_LIBRARY_4] =                &gObjectEventGraphicsInfo_Library4,
+    [OBJ_EVENT_GFX_UNDERPASS] =                &gObjectEventGraphicsInfo_Underpass,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
