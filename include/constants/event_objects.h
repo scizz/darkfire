@@ -824,9 +824,10 @@
 #define OBJ_EVENT_GFX_LIBRARY_3                  814
 #define OBJ_EVENT_GFX_LIBRARY_4                  815
 #define OBJ_EVENT_GFX_UNDERPASS                  816
+#define OBJ_EVENT_GFX_ARCANINE_STATUE            817
 
 
-#define NUM_OBJ_EVENT_GFX                        817
+#define NUM_OBJ_EVENT_GFX                        818
 
 
 // These are dynamic object gfx ids.

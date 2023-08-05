@@ -7,9 +7,23 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_BATTLE_DISTRICT",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_PORT",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ABOMASNOW",
@@ -98,8 +112,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
