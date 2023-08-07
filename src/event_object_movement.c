@@ -831,6 +831,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_LIBRARY                 0x1062
 #define OBJ_EVENT_PAL_TAG_UNDERPASS               0x1061
 #define OBJ_EVENT_PAL_TAG_ARCANINE_STATUE         0x1060
+#define OBJ_EVENT_PAL_TAG_SIGN_TOWN_HALL          0x1059
 
 #define OBJ_EVENT_PAL_TAG_TURTWIG                 0x1057
 #define OBJ_EVENT_PAL_TAG_GROTLE                  0x1056
@@ -995,6 +996,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Library,               OBJ_EVENT_PAL_TAG_LIBRARY},
     {gObjectEventPal_Underpass,             OBJ_EVENT_PAL_TAG_UNDERPASS},
     {gObjectEventPal_ArcanineStatue,        OBJ_EVENT_PAL_TAG_ARCANINE_STATUE},
+    {gObjectEventPal_SignTownHall,          OBJ_EVENT_PAL_TAG_SIGN_TOWN_HALL},
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},

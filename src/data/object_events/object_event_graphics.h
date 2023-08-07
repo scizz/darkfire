@@ -1486,3 +1486,5 @@ const u32 gObjectEventPic_Underpass[] = INCBIN_U32("graphics/object_events/pics/
 const u16 gObjectEventPal_Underpass[] = INCBIN_U16("graphics/object_events/palettes/underpass.gbapal");
 const u32 gObjectEventPic_ArcanineStatue[] = INCBIN_U32("graphics/object_events/pics/misc/arcanine_statue.4bpp");
 const u16 gObjectEventPal_ArcanineStatue[] = INCBIN_U16("graphics/object_events/palettes/arcanine_statue.gbapal");
+const u32 gObjectEventPic_SignTownHall[] = INCBIN_U32("graphics/object_events/pics/misc/sign_town_hall.4bpp");
+const u16 gObjectEventPal_SignTownHall[] = INCBIN_U16("graphics/object_events/palettes/sign_town_hall.gbapal");
