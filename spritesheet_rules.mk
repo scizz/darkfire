@@ -2333,6 +2333,9 @@ $(OBJEVENTGFXDIR)/misc/statue_lunatone.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/statue_cresselia.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 6
 
+$(OBJEVENTGFXDIR)/misc/tree.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2

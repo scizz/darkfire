@@ -972,6 +972,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_ARCEUS_STEEL            0xFA6
 #define OBJ_EVENT_PAL_TAG_ARCEUS_WATER            0xFA5
 
+#define OBJ_EVENT_PAL_TAG_TREE                    0xFA4
+
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -999,6 +1001,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_ArcanineStatue,        OBJ_EVENT_PAL_TAG_ARCANINE_STATUE},
     {gObjectEventPal_SignTownHall,          OBJ_EVENT_PAL_TAG_SIGN_TOWN_HALL},
     {gObjectEventPal_StatueRegigigas,       OBJ_EVENT_PAL_TAG_STATUE_REGIGIGAS},
+    {gObjectEventPal_Tree,                  OBJ_EVENT_PAL_TAG_TREE},
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},

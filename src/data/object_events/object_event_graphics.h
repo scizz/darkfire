@@ -1496,3 +1496,5 @@ const u16 gObjectEventPal_StatueRegigigas[] = INCBIN_U16("graphics/object_events
 const u32 gObjectEventPic_StatueSolrock[] = INCBIN_U32("graphics/object_events/pics/misc/statue_solrock.4bpp");
 const u32 gObjectEventPic_StatueLunatone[] = INCBIN_U32("graphics/object_events/pics/misc/statue_lunatone.4bpp");
 const u32 gObjectEventPic_StatueCresselia[] = INCBIN_U32("graphics/object_events/pics/misc/statue_cresselia.4bpp");
+const u16 gObjectEventPal_Tree[] = INCBIN_U16("graphics/object_events/palettes/tree.gbapal");
+const u32 gObjectEventPic_Tree[] = INCBIN_U32("graphics/object_events/pics/misc/tree.4bpp");

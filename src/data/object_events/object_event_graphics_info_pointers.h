@@ -862,6 +862,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueRegisteel;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueSolrock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueLunatone;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueCresselia;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tree;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1690,6 +1691,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_STATUE_SOLROCK] =           &gObjectEventGraphicsInfo_StatueSolrock,
     [OBJ_EVENT_GFX_STATUE_LUNATONE] =          &gObjectEventGraphicsInfo_StatueLunatone,
     [OBJ_EVENT_GFX_STATUE_CRESSELIA] =         &gObjectEventGraphicsInfo_StatueCresselia,
+    [OBJ_EVENT_GFX_TREE] =                     &gObjectEventGraphicsInfo_Tree,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
