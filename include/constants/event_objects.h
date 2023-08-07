@@ -830,9 +830,10 @@
 #define OBJ_EVENT_GFX_STATUE_REGIROCK            820
 #define OBJ_EVENT_GFX_STATUE_REGICE              821
 #define OBJ_EVENT_GFX_STATUE_REGISTEEL           822
+#define OBJ_EVENT_GFX_STATUE_SOLROCK             823
+#define OBJ_EVENT_GFX_STATUE_LUNATONE            824
 
-
-#define NUM_OBJ_EVENT_GFX                        823
+#define NUM_OBJ_EVENT_GFX                        825
 
 
 // These are dynamic object gfx ids.

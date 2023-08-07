@@ -2324,6 +2324,12 @@ $(OBJEVENTGFXDIR)/misc/statue_regice.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/statue_registeel.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/misc/statue_solrock.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 5 -mheight 5
+
+$(OBJEVENTGFXDIR)/misc/statue_lunatone.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 5 -mheight 5
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
