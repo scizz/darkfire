@@ -855,6 +855,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Library4;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Underpass;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ArcanineStatue;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SignTownHall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueRegigigas;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1675,7 +1676,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LIBRARY_4] =                &gObjectEventGraphicsInfo_Library4,
     [OBJ_EVENT_GFX_UNDERPASS] =                &gObjectEventGraphicsInfo_Underpass,
     [OBJ_EVENT_GFX_ARCANINE_STATUE] =          &gObjectEventGraphicsInfo_ArcanineStatue,
-    [OBJ_EVENT_GFX_SIGN_TOWN_HALL] =          &gObjectEventGraphicsInfo_SignTownHall,
+    [OBJ_EVENT_GFX_SIGN_TOWN_HALL] =           &gObjectEventGraphicsInfo_SignTownHall,
+    [OBJ_EVENT_GFX_STATUE_REGIGIGAS] =         &gObjectEventGraphicsInfo_StatueRegigigas,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
