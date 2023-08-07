@@ -827,9 +827,12 @@
 #define OBJ_EVENT_GFX_ARCANINE_STATUE            817
 #define OBJ_EVENT_GFX_SIGN_TOWN_HALL             818
 #define OBJ_EVENT_GFX_STATUE_REGIGIGAS           819
+#define OBJ_EVENT_GFX_STATUE_REGIROCK            820
+#define OBJ_EVENT_GFX_STATUE_REGICE              821
+#define OBJ_EVENT_GFX_STATUE_REGISTEEL           822
 
 
-#define NUM_OBJ_EVENT_GFX                        820
+#define NUM_OBJ_EVENT_GFX                        823
 
 
 // These are dynamic object gfx ids.

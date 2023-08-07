@@ -2413,6 +2413,18 @@ const struct SpriteFrameImage gObjectEventPicTable_StatueRegigigas[] = {
     overworld_frame(gObjectEventPic_StatueRegigigas, 8, 8, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_StatueRegirock[] = {
+    overworld_frame(gObjectEventPic_StatueRegirock, 4, 4, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_StatueRegice[] = {
+    overworld_frame(gObjectEventPic_StatueRegice, 4, 4, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_StatueRegisteel[] = {
+    overworld_frame(gObjectEventPic_StatueRegisteel, 4, 4, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),
