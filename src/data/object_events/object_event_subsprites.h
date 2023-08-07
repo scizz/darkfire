@@ -509,6 +509,38 @@ static const struct SubspriteTable sOamTables_32x24[] = {
     {ARRAY_COUNT(sOamTable_32x24_0), sOamTable_32x24_0}
 };
 
+static const struct Subsprite sOamTable_40x40_0[] = {
+    {
+        .x = -40,
+        .y = -40,
+        .shape = SPRITE_SHAPE(40x40),
+        .size = SPRITE_SIZE(40x40),
+        .tileOffset = 0,
+        .priority = 2
+    }
+};
+
+static const struct SubspriteTable sOamTables_40x40[] = {
+    {},
+    {ARRAY_COUNT(sOamTable_40x40_0), sOamTable_40x40_0}
+};
+
+static const struct Subsprite sOamTable_32x24_0[] = {
+    {
+        .x = -32,
+        .y = -24,
+        .shape = SPRITE_SHAPE(32x24),
+        .size = SPRITE_SIZE(32x24),
+        .tileOffset = 0,
+        .priority = 2
+    }
+};
+
+static const struct SubspriteTable sOamTables_32x24[] = {
+    {},
+    {ARRAY_COUNT(sOamTable_32x24_0), sOamTable_32x24_0}
+};
+
 static const struct Subsprite sOamTable_96x40_0[] = {
     {
         .x = -48,
