@@ -834,8 +834,9 @@
 #define OBJ_EVENT_GFX_STATUE_LUNATONE            824
 #define OBJ_EVENT_GFX_STATUE_CRESSELIA           825
 #define OBJ_EVENT_GFX_TREE                       826
+#define OBJ_EVENT_GFX_PEARLPORIUM                827
 
-#define NUM_OBJ_EVENT_GFX                        827
+#define NUM_OBJ_EVENT_GFX                        828
 
 
 // These are dynamic object gfx ids.
