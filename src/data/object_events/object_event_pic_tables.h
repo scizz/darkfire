@@ -2426,15 +2426,15 @@ const struct SpriteFrameImage gObjectEventPicTable_StatueRegisteel[] = {
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_StatueSolrock[] = {
-    overworld_frame(gObjectEventPic_StatueSolrock, 5, 5, 0),
+    overworld_frame(gObjectEventPic_StatueSolrock, 8, 8, 0),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_StatueLunatone[] = {
-    overworld_frame(gObjectEventPic_StatueLunatone, 5, 5, 0),
+    overworld_frame(gObjectEventPic_StatueLunatone, 8, 8, 0),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_StatueCresselia[] = {
-    overworld_frame(gObjectEventPic_StatueCresselia, 4, 6, 0),
+    overworld_frame(gObjectEventPic_StatueCresselia, 8, 8, 0),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Tree[] = {
@@ -2447,6 +2447,12 @@ const struct SpriteFrameImage gObjectEventPicTable_Pearlporium[] = {
 
 const struct SpriteFrameImage gObjectEventPicTable_ContestHouse[] = {
     overworld_frame(gObjectEventPic_ContestHouse, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_ClamperlSign[] = {
+    overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 0),
+    overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 1),
+    overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {

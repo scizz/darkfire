@@ -836,8 +836,9 @@
 #define OBJ_EVENT_GFX_TREE                       826
 #define OBJ_EVENT_GFX_PEARLPORIUM                827
 #define OBJ_EVENT_GFX_CONTEST_HOUSE              828
+#define OBJ_EVENT_GFX_CLAMPERL_SIGN              829
 
-#define NUM_OBJ_EVENT_GFX                        829
+#define NUM_OBJ_EVENT_GFX                        830
 
 
 // These are dynamic object gfx ids.

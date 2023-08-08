@@ -2325,13 +2325,13 @@ $(OBJEVENTGFXDIR)/misc/statue_registeel.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 $(OBJEVENTGFXDIR)/misc/statue_solrock.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 5 -mheight 5
+	$(GFX) $< $@ -mwidth 8 -mheight 8
 
 $(OBJEVENTGFXDIR)/misc/statue_lunatone.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 5 -mheight 5
+	$(GFX) $< $@ -mwidth 8 -mheight 8
 
 $(OBJEVENTGFXDIR)/misc/statue_cresselia.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 4 -mheight 6
+	$(GFX) $< $@ -mwidth 8 -mheight 8
 
 $(OBJEVENTGFXDIR)/misc/tree.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
@@ -2341,6 +2341,9 @@ $(OBJEVENTGFXDIR)/misc/pearlporium.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/misc/contest_house.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
+
+$(OBJEVENTGFXDIR)/misc/clamperl_sign.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
