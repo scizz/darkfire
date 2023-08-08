@@ -2339,6 +2339,9 @@ $(OBJEVENTGFXDIR)/misc/tree.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/pearlporium.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/contest_house.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2

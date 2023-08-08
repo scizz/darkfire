@@ -1500,3 +1500,5 @@ const u16 gObjectEventPal_Tree[] = INCBIN_U16("graphics/object_events/palettes/t
 const u32 gObjectEventPic_Tree[] = INCBIN_U32("graphics/object_events/pics/misc/tree.4bpp");
 const u16 gObjectEventPal_Pearlporium[] = INCBIN_U16("graphics/object_events/palettes/pearlporium.gbapal");
 const u32 gObjectEventPic_Pearlporium[] = INCBIN_U32("graphics/object_events/pics/misc/pearlporium.4bpp");
+const u16 gObjectEventPal_ContestHouse[] = INCBIN_U16("graphics/object_events/palettes/contest_house.gbapal");
+const u32 gObjectEventPic_ContestHouse[] = INCBIN_U32("graphics/object_events/pics/misc/contest_house.4bpp");

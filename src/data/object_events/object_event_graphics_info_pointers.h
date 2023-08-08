@@ -864,6 +864,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueLunatone;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StatueCresselia;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tree;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pearlporium;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ContestHouse;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1694,6 +1695,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_STATUE_CRESSELIA] =         &gObjectEventGraphicsInfo_StatueCresselia,
     [OBJ_EVENT_GFX_TREE] =                     &gObjectEventGraphicsInfo_Tree,
     [OBJ_EVENT_GFX_PEARLPORIUM] =              &gObjectEventGraphicsInfo_Pearlporium,
+    [OBJ_EVENT_GFX_CONTEST_HOUSE] =            &gObjectEventGraphicsInfo_ContestHouse,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
