@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -492,8 +495,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 67,
-      "y": 15,
+      "x": 68,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -687,8 +690,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 123,
-      "y": 39,
+      "x": 118,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -818,7 +821,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TREE",
       "x": 68,
-      "y": 13,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -850,8 +853,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
