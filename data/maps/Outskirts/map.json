@@ -427,7 +427,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOK",
-      "x": 55,
+      "x": 56,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
