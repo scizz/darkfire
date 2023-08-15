@@ -648,7 +648,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
-      "x": 120,
+      "x": 116,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -661,7 +661,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RAPIDASH",
-      "x": 119,
+      "x": 115,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
