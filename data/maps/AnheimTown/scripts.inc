@@ -1,3 +1,5 @@
+.set LOCALID_LITTLE_GIRL, 3
+
 AnheimTown_MapScripts::
 	.byte 0
 
@@ -38,6 +40,13 @@ AnheimTown_Girl_2::
 	end
 
 AnheimTown_Story_Time::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	end
+
+AnheimTown_Story_Time2::
 	lock
 	faceplayer
 	msgbox AnheimTown_Text_Little_Girl_Story, MSGBOX_YESNO
@@ -48,9 +57,88 @@ AnheimTown_Story_Time::
 	end
 
 AnheimTown_Little_Girl_Yes::
+	closemessage
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 41
+	goto_if_eq AnheimTown_Little_Girl_Bottom
+	compare VAR_TEMP_0, 39
+	goto_if_eq AnheimTown_Little_Girl_Left
+	compare VAR_TEMP_0, 41
+	goto_if_eq AnheimTown_Little_Girl_Right
+	goto AnheimTown_Little_Girl_Top
+	end
+
+AnheimTown_Little_Girl_Bottom::
+	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	goto AnheimTown_Little_Girl_Main
+	end
+
+AnheimTown_Little_Girl_Left::
+	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	goto AnheimTown_Little_Girl_Main
+	end
+
+AnheimTown_Little_Girl_Right::
+	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	goto AnheimTown_Little_Girl_Main
+	end
+
+AnheimTown_Little_Girl_Top::
+	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	goto AnheimTown_Little_Girl_Main
+	end
+
+AnheimTown_Little_Girl_Main::
 	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 41
+	goto_if_eq AnheimTown_Little_Girl_MainBottom
+	compare VAR_TEMP_0, 39
+	goto_if_eq AnheimTown_Little_Girl_MainLeft
+	compare VAR_TEMP_0, 41
+	goto_if_eq AnheimTown_Little_Girl_MainRight
+	goto AnheimTown_Little_Girl_MainTop
+	end
+
+AnheimTown_Little_Girl_MainTop::
+	applymovement OBJ_EVENT_ID_PLAYER, WLFR
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
+	waitmovement 0
+	goto Little_Girl_MainStep
+	end
+
+AnheimTown_Little_Girl_MainBottom::
+	applymovement OBJ_EVENT_ID_PLAYER, WLFR
+	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
+	waitmovement 0
+	goto Little_Girl_MainStep
+	end
+
+AnheimTown_Little_Girl_MainLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, WLFR
+	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
+	waitmovement 0
+	goto Little_Girl_MainStep
+	end
+
+AnheimTown_Little_Girl_MainRight::
+	applymovement OBJ_EVENT_ID_PLAYER, WLFR
+	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
+	waitmovement 0
+	goto Little_Girl_MainStep
+	end
+
+Little_Girl_MainStep::
 	applymovement 3, GirlPhaseOne
 	waitmovement 0
 	delay 10
@@ -161,8 +249,10 @@ AnheimTown_Text_Girl_2:
 	.string "flourishing grass and trees."
 
 AnheimTown_Text_Little_Girl_Story:
-	.string "{COLOR}{RED}Hello! My name's Diane. My dad told me\n"
-	.string "the story of the Wise Pathfinder…\l"
+	.string "{COLOR}{RED}Hello!\n"
+	.string "My name's Diane.\p"
+	.string "My dad once told me the story of the\n"
+	.string "Wise Pathfinder…\l"
 	.string "You wanna hear it?$"
 
 AnheimTown_Text_Little_Girl_No:
@@ -170,9 +260,10 @@ AnheimTown_Text_Little_Girl_No:
 	.string "I'll be here if you change your mind!$"
 
 AnheimTown_Text_Little_Girl_Story_Yes:
-	.string "{COLOR}{RED}All right! The Wise Pathfinder was a\n"
-	.string "legendary Hiker and one of the first\l"
-	.string "people to climb the Tenjo Highroad.$"
+	.string "{COLOR}{RED}All right!\p"
+	.string "The Wise Pathfinder was a legendary\n"
+	.string "Hiker, and one of the first people\l"
+	.string "to climb the Tenjo Highroad.$"
 
 AnheimTown_Text_Little_Girl_Story_One:
 	.string "{COLOR}{RED}In his journey, he found a rock. But\n"
@@ -267,4 +358,9 @@ GirlToPlayer:
 GirlToPosition:
 	walk_down
 	walk_down
+	step_end
+
+WLFFR:
+	walk_left
+	follower_face_right
 	step_end
