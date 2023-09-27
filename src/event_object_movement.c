@@ -3161,23 +3161,6 @@ void SetObjectEventDirection(struct ObjectEvent *objectEvent, u8 direction)
         objectEvent->facingDirection = d2;
     }
     objectEvent->movementDirection = direction;
-    
-    if (gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
-    {
-        switch(objectEvent->facingDirection)
-        {
-            case DIR_SOUTH:
-            case DIR_NORTH:
-                gSprites[objectEvent->spriteId].x2 = 0;
-                break;
-            case DIR_WEST:
-                gSprites[objectEvent->spriteId].x2 = 8;
-                break;
-            case DIR_EAST:
-                gSprites[objectEvent->spriteId].x2 = -8;
-                break;
-        }
-    }
 }
 
 static const u8 *GetObjectEventScriptPointerByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)

@@ -396,8 +396,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
 	msgbox NorthstarCity_Tournament_4F_Text_PlayerWins, MSGBOX_DEFAULT
@@ -555,8 +555,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	applymovement LOCALID_SUBO_CROWD, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceDown
 	waitmovement 0
 	delay 5
@@ -622,7 +622,8 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
 	msgbox NorthstarCity_Tournament_4F_Text_HeyItsMeRose, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_ROSE, WR3U3R2U2
 	waitmovement 0
