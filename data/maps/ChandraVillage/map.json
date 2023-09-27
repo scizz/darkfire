@@ -160,7 +160,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_QUINTY_PLUMP",
       "x": 38,
-      "y": 8,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -173,7 +173,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 36,
-      "y": 8,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 2,
@@ -263,7 +263,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TREE",
-      "x": 40,
+      "x": 42,
       "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -277,7 +277,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TREE",
       "x": 34,
-      "y": 11,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -358,7 +358,7 @@
     },
     {
       "x": 37,
-      "y": 7,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_LAB",
       "dest_warp_id": "0"
@@ -413,7 +413,7 @@
     {
       "type": "trigger",
       "x": 37,
-      "y": 8,
+      "y": 9,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "6",
