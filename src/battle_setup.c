@@ -691,6 +691,8 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_POND;
     if (MetatileBehavior_IsMountain(tileBehavior))
         return BATTLE_TERRAIN_MOUNTAIN;
+    if (MetatileBehavior_IsTest(tileBehavior))
+        return BATTLE_TERRAIN_MOUNTAIN;
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
         // Is BRIDGE_TYPE_POND_*?

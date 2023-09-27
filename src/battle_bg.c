@@ -859,6 +859,11 @@ void DrawMainBattleBackground(void)
             LZDecompressVram(gBattleTerrainTilemap_Building, (void *)(BG_SCREEN_ADDR(26)));
             LoadCompressedPalette(gBattleTerrainPalette_Frontier, 0x20, 0x60);
             break;
+        case MAP_BATTLE_SCENE_NEW:
+            LZDecompressVram(gBattleTerrainTiles_Rock, (void *)(BG_CHAR_ADDR(2)));
+            LZDecompressVram(gBattleTerrainTilemap_Rock, (void *)(BG_SCREEN_ADDR(26)));
+            LoadCompressedPalette(gBattleTerrainPalette_Rock, 0x20, 0x60);
+            break;
         }
     }
 }
@@ -1289,6 +1294,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
             case MAP_BATTLE_SCENE_FRONTIER:
                 LZDecompressVram(gBattleTerrainTiles_Building, (void *)(BG_CHAR_ADDR(2)));
                 break;
+            case MAP_BATTLE_SCENE_NEW:
+                LZDecompressVram(gBattleTerrainTiles_Rock, (void *)(BG_CHAR_ADDR(2)));
+                break;
             }
         }
         break;
@@ -1351,6 +1359,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
             case MAP_BATTLE_SCENE_FRONTIER:
                 LZDecompressVram(gBattleTerrainTilemap_Building, (void *)(BG_SCREEN_ADDR(26)));
                 break;
+            case MAP_BATTLE_SCENE_NEW:
+                LZDecompressVram(gBattleTerrainTilemap_Rock, (void *)(BG_SCREEN_ADDR(26)));
+                break;
             }
         }
         break;
@@ -1412,6 +1423,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
                 break;
             case MAP_BATTLE_SCENE_FRONTIER:
                 LoadCompressedPalette(gBattleTerrainPalette_Frontier, 0x20, 0x60);
+                break;
+            case MAP_BATTLE_SCENE_NEW:
+                LoadCompressedPalette(gBattleTerrainPalette_Rock, 0x20, 0x60);
                 break;
             }
         }
