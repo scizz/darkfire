@@ -13374,12 +13374,12 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_SENTRET"
+                "species": "SPECIES_RATTATA"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 8,
@@ -13419,12 +13419,12 @@
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_LOTAD"
+                "species": "SPECIES_RATICATE"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_SEEDOT"
+                "species": "SPECIES_RATICATE"
               },
               {
                 "min_level": 7,
