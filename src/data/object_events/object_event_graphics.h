@@ -1504,3 +1504,5 @@ const u16 gObjectEventPal_ContestHouse[] = INCBIN_U16("graphics/object_events/pa
 const u32 gObjectEventPic_ContestHouse[] = INCBIN_U32("graphics/object_events/pics/misc/contest_house.4bpp");
 const u16 gObjectEventPal_ClamperlSign[] = INCBIN_U16("graphics/object_events/palettes/clamperl_sign.gbapal");
 const u32 gObjectEventPic_ClamperlSign[] = INCBIN_U32("graphics/object_events/pics/misc/clamperl_sign.4bpp");
+const u16 gObjectEventPal_Lab[] = INCBIN_U16("graphics/object_events/palettes/lab.gbapal");
+const u32 gObjectEventPic_Lab[] = INCBIN_U32("graphics/object_events/pics/misc/lab.4bpp");

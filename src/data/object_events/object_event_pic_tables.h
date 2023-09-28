@@ -2449,6 +2449,10 @@ const struct SpriteFrameImage gObjectEventPicTable_ContestHouse[] = {
     overworld_frame(gObjectEventPic_ContestHouse, 8, 8, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Lab[] = {
+    overworld_frame(gObjectEventPic_Lab, 8, 8, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_ClamperlSign[] = {
     overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 0),
     overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 1),
