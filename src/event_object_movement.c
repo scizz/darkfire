@@ -976,6 +976,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PEARLPORIUM             0xFA3
 #define OBJ_EVENT_PAL_TAG_CONTEST_HOUSE           0xFA2
 #define OBJ_EVENT_PAL_TAG_CLAMPERL_SIGN           0xFA1
+#define OBJ_EVENT_PAL_TAG_LAB                     0xFA0
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
@@ -1008,6 +1009,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Pearlporium,           OBJ_EVENT_PAL_TAG_PEARLPORIUM},
     {gObjectEventPal_ContestHouse,          OBJ_EVENT_PAL_TAG_CONTEST_HOUSE},
     {gObjectEventPal_ClamperlSign,          OBJ_EVENT_PAL_TAG_CLAMPERL_SIGN},
+    {gObjectEventPal_Lab,                   OBJ_EVENT_PAL_TAG_LAB},
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},
