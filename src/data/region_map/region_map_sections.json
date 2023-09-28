@@ -1720,6 +1720,14 @@
       "height": 1
     },
     {
+      "map_section": "MAPSEC_SUNRISE_TOWN",
+      "name": "Sunrise Town",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
       "map_section": "MAPSEC_ANHEIM_TOWN",
       "name": "Anheim Town",
       "x": 8,

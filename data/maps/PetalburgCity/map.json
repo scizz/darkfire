@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
-      "x": 20,
+      "x": 19,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -125,8 +125,8 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_SUNRISE_TOWN",
+      "dest_warp_id": "1"
     },
     {
       "x": 17,

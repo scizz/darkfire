@@ -2345,6 +2345,9 @@ $(OBJEVENTGFXDIR)/misc/contest_house.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/clamperl_sign.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/misc/lab.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
