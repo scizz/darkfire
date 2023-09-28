@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_SUNNY_CLOUDS",
   "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -69,9 +72,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
       "x": 21,
-      "y": 21,
+      "y": 20,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -146,8 +149,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_QUINTY_PLUMP",
-      "x": 28,
-      "y": 28,
+      "x": 5,
+      "y": 1,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -160,7 +163,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_QUINTY_PLUMP",
       "x": 38,
-      "y": 9,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -173,7 +176,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 36,
-      "y": 9,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 2,
@@ -265,7 +268,7 @@
       "graphics_id": "OBJ_EVENT_GFX_TREE",
       "x": 42,
       "y": 21,
-      "elevation": 0,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -291,7 +294,7 @@
       "graphics_id": "OBJ_EVENT_GFX_TREE",
       "x": 30,
       "y": 27,
-      "elevation": 0,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -304,7 +307,7 @@
       "graphics_id": "OBJ_EVENT_GFX_TREE",
       "x": 25,
       "y": 20,
-      "elevation": 0,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -358,7 +361,7 @@
     },
     {
       "x": 37,
-      "y": 8,
+      "y": 7,
       "elevation": 3,
       "dest_map": "MAP_CHANDRA_VILLAGE_LAB",
       "dest_warp_id": "0"
@@ -413,7 +416,7 @@
     {
       "type": "trigger",
       "x": 37,
-      "y": 9,
+      "y": 8,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "6",
@@ -439,7 +442,7 @@
     },
     {
       "type": "sign",
-      "x": 39,
+      "x": 38,
       "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -447,14 +450,11 @@
     },
     {
       "type": "sign",
-      "x": 38,
-      "y": 6,
+      "x": 41,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ChandraVillage_Facility_Sign"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
