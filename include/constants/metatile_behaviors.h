@@ -36,7 +36,7 @@
 #define MB_ICE 0x20
 #define MB_SAND 0x21
 #define MB_SEAWEED 0x22
-#define MB_UNUSED_23 0x23
+#define MB_URBAN 0x23
 #define MB_ASHGRASS 0x24
 #define MB_FOOTPRINTS 0x25
 #define MB_THIN_ICE 0x26

@@ -40,7 +40,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_EASTWEST_JUMP]                   = TILE_FLAG_UNUSED,
     [MB_SAND]                            = TILE_FLAG_UNUSED,
     [MB_SEAWEED]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
-    [MB_UNUSED_23]                       = TILE_FLAG_UNUSED,
+    [MB_URBAN]                           = TILE_FLAG_UNUSED,
     [MB_ASHGRASS]                        = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_FOOTPRINTS]                      = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_THIN_ICE]                        = TILE_FLAG_UNUSED,
@@ -857,6 +857,14 @@ bool8 MetatileBehavior_IsMountain(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSky(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SKY)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsUrban(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_URBAN)
         return TRUE;
     else
         return FALSE;

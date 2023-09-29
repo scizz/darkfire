@@ -63,6 +63,10 @@ const u32 gBattleTerrainTiles_Farm[] = INCBIN_U32("graphics/battle_terrain/farm/
 const u32 gBattleTerrainTilemap_Farm[] = INCBIN_U32("graphics/battle_terrain/farm/map.bin.lz");
 const u32 gBattleTerrainPalette_Farm[] = INCBIN_U32("graphics/battle_terrain/farm/palette.gbapal.lz");
 
+const u32 gBattleTerrainTiles_Urban[] = INCBIN_U32("graphics/battle_terrain/urban/tiles.4bpp.lz");
+const u32 gBattleTerrainTilemap_Urban[] = INCBIN_U32("graphics/battle_terrain/urban/map.bin.lz");
+const u32 gBattleTerrainPalette_Urban[] = INCBIN_U32("graphics/battle_terrain/urban/palette.gbapal.lz");
+
 // anim tiles
 
 const u32 gBattleTerrainAnimTiles_TallGrass[] = INCBIN_U32("graphics/battle_terrain/tall_grass/anim_tiles.4bpp.lz");

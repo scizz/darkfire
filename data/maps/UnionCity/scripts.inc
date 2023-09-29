@@ -309,6 +309,23 @@ UnionCity_Gambler_Yes::
 	release
 	end
 
+UnionCity_EventScript_Rattata::
+	lockall
+	playmoncry SPECIES_RATTATA, 0
+	msgbox ChandraVillage_Lab_Rattata1, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_RATTATA, 7, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_RATTATA, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 37
+	setflag FLAG_UNION_CITY_RATTATA
+	fadescreen 0
+	releaseall
+	end
+
 WD5:
 	walk_down
 	walk_down

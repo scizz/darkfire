@@ -401,8 +401,9 @@
 #define BATTLE_TERRAIN_ULTRA_SPACE      21
 // Custom battle terrains
 #define BATTLE_TERRAIN_SKY              22
+#define BATTLE_TERRAIN_URBAN            23
 
-#define BATTLE_TERRAIN_COUNT            23
+#define BATTLE_TERRAIN_COUNT            24
 
 #define B_WAIT_TIME_LONG        (B_WAIT_TIME_MULTIPLIER * 4)
 #define B_WAIT_TIME_MED         (B_WAIT_TIME_MULTIPLIER * 3)

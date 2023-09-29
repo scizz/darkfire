@@ -433,8 +433,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "UnionCity_EventScript_ItemPokeBall",
+      "flag": "FLAG_ITEM_UNION_CITY_POKE_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
@@ -498,8 +498,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "UnionCity_EventScript_ItemPokeBall",
-      "flag": "FLAG_ITEM_UNION_CITY_POKE_BALL"
+      "script": "UnionCity_EventScript_Rattata",
+      "flag": "FLAG_UNION_CITY_RATTATA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
