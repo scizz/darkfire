@@ -664,7 +664,7 @@
 #define FLAG_SUNRISE_TOWN_KRABBY_1          0x26B
 #define FLAG_SUNRISE_TOWN_KRABBY_2          0x26C
 #define FLAG_SUNRISE_TOWN_KRABBY_3          0x26D
-#define FLAG_SUNRISE_TOWN_KRABBY_4          0x26E
+#define FLAG_UNUSED                         0x26E // Unused
 #define FLAG_UNION_CITY_RARE_CANDY          0x26F 
 #define FLAG_UNION_CITY_COIN_CASE           0x270
 #define FLAG_UNION_CITY_SUBO_DEFEATED       0x271
