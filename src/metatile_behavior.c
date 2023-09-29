@@ -19,7 +19,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_NO_RUNNING]                      = TILE_FLAG_UNUSED,
     [MB_INDOOR_ENCOUNTER]                = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_MOUNTAIN_TOP]                    = TILE_FLAG_UNUSED,
-    [MB_TEST]                            = TILE_FLAG_UNUSED,
+    [MB_SKY]                             = TILE_FLAG_UNUSED,
     [MB_BATTLE_PYRAMID_WARP]             = TILE_FLAG_UNUSED,
     [MB_MOSSDEEP_GYM_WARP]               = TILE_FLAG_UNUSED,
     [MB_MT_PYRE_HOLE]                    = TILE_FLAG_UNUSED,
@@ -854,9 +854,9 @@ bool8 MetatileBehavior_IsMountain(u8 metatileBehavior)
         return FALSE;
 }
 
-bool8 MetatileBehavior_IsTest(u8 metatileBehavior)
+bool8 MetatileBehavior_IsSky(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_TEST)
+    if (metatileBehavior == MB_SKY)
         return TRUE;
     else
         return FALSE;

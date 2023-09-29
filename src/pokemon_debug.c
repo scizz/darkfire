@@ -367,6 +367,7 @@ const u8 gBattleBackgroundTerrainNames[][26] =
     [BATTLE_TERRAIN_CAVE]       = _("NORMAL - CAVE            "),
     [BATTLE_TERRAIN_BUILDING]   = _("NORMAL - BUILDING        "),
     [BATTLE_TERRAIN_PLAIN]      = _("NORMAL - PLAIN           "),
+    [BATTLE_TERRAIN_SKY]        = _("NORMAL - SKY             "),
 };
 //Function declarations
 static void PrintDigitChars(struct PokemonDebugMenu *data);
