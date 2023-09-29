@@ -21,6 +21,6 @@
 #define MAP_BATTLE_SCENE_GLACIA       6
 #define MAP_BATTLE_SCENE_DRAKE        7
 #define MAP_BATTLE_SCENE_FRONTIER     8
-#define MAP_BATTLE_SCENE_NEW          9
+#define MAP_BATTLE_SCENE_FARM         9
 
 #endif  // GUARD_CONSTANTS_MAP_TYPES_H

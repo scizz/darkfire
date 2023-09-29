@@ -348,7 +348,7 @@ const u8 gBattleBackgroundNames[][30] =
     [MAP_BATTLE_SCENE_GLACIA]   = _("GLACIA                  "),
     [MAP_BATTLE_SCENE_DRAKE]    = _("DRAKE                   "),
     [MAP_BATTLE_SCENE_FRONTIER] = _("FRONTIER                "),
-    [MAP_BATTLE_SCENE_NEW]      = _("NEW                     "),
+    [MAP_BATTLE_SCENE_FARM]     = _("FARM                    "),
     [MAP_BATTLE_SCENE_LEADER]   = _("LEADER                  "),
     [MAP_BATTLE_SCENE_WALLACE]  = _("WALLACE                 "),
     [MAP_BATTLE_SCENE_GROUDON]  = _("GROUDON                 "),
@@ -922,10 +922,10 @@ static void LoadBattleBg(u8 battleBgType, u8 battleTerrain)
         LZDecompressVram(gBattleTerrainTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
         LoadCompressedPalette(gBattleTerrainPalette_Frontier, 0x20, 0x60);
         break;
-    case MAP_BATTLE_SCENE_NEW:
-        LZDecompressVram(gBattleTerrainTiles_New, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleTerrainTilemap_New, (void*)(BG_SCREEN_ADDR(26)));
-        LoadCompressedPalette(gBattleTerrainPalette_New, 0x20, 0x60);
+    case MAP_BATTLE_SCENE_FARM:
+        LZDecompressVram(gBattleTerrainTiles_Farm, (void*)(BG_CHAR_ADDR(2)));
+        LZDecompressVram(gBattleTerrainTilemap_Farm, (void*)(BG_SCREEN_ADDR(26)));
+        LoadCompressedPalette(gBattleTerrainPalette_Farm, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_LEADER:
         LZDecompressVram(gBattleTerrainTiles_Building, (void*)(BG_CHAR_ADDR(2)));

@@ -59,9 +59,9 @@ const u32 gBattleTerrainPalette_Rayquaza[] = INCBIN_U32("graphics/battle_terrain
 
 // new battle backgrounds
 
-const u32 gBattleTerrainTiles_New[] = INCBIN_U32("graphics/battle_terrain/new/tiles.4bpp.lz");
-const u32 gBattleTerrainTilemap_New[] = INCBIN_U32("graphics/battle_terrain/new/map.bin.lz");
-const u32 gBattleTerrainPalette_New[] = INCBIN_U32("graphics/battle_terrain/new/palette.gbapal.lz");
+const u32 gBattleTerrainTiles_Farm[] = INCBIN_U32("graphics/battle_terrain/farm/tiles.4bpp.lz");
+const u32 gBattleTerrainTilemap_Farm[] = INCBIN_U32("graphics/battle_terrain/farm/map.bin.lz");
+const u32 gBattleTerrainPalette_Farm[] = INCBIN_U32("graphics/battle_terrain/farm/palette.gbapal.lz");
 
 // anim tiles
 

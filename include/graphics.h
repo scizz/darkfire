@@ -7504,9 +7504,9 @@ extern const u32 gBattleTerrainPalette_StadiumDrake[];
 extern const u32 gBattleTerrainPalette_StadiumWallace[];
 
 // new battle backgrounds
-extern const u32 gBattleTerrainTiles_New[];
-extern const u32 gBattleTerrainTilemap_New[];
-extern const u32 gBattleTerrainPalette_New[];
+extern const u32 gBattleTerrainTiles_Farm[];
+extern const u32 gBattleTerrainTilemap_Farm[];
+extern const u32 gBattleTerrainPalette_Farm[];
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];
