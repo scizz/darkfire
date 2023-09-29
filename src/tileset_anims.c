@@ -282,82 +282,122 @@ const u16 *const gTilesetAnims_Petalburg_Chimney_Smoke[] = {
 
 const u16 gTilesetAnims_Petalburg_Watermill1_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_1/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill1_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_1/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill1_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_1/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill1_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_1/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill1[] = {
     gTilesetAnims_Petalburg_Watermill1_Frame0,
-    gTilesetAnims_Petalburg_Watermill1_Frame1
+    gTilesetAnims_Petalburg_Watermill1_Frame1,
+    gTilesetAnims_Petalburg_Watermill1_Frame2,
+    gTilesetAnims_Petalburg_Watermill1_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill2_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_2/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill2_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_2/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill2_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_2/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill2_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_2/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill2[] = {
     gTilesetAnims_Petalburg_Watermill2_Frame0,
-    gTilesetAnims_Petalburg_Watermill2_Frame1
+    gTilesetAnims_Petalburg_Watermill2_Frame1,
+    gTilesetAnims_Petalburg_Watermill2_Frame2,
+    gTilesetAnims_Petalburg_Watermill2_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill3_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_3/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill3_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_3/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill3_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_3/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill3_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_3/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill3[] = {
     gTilesetAnims_Petalburg_Watermill3_Frame0,
-    gTilesetAnims_Petalburg_Watermill3_Frame1
+    gTilesetAnims_Petalburg_Watermill3_Frame1,
+    gTilesetAnims_Petalburg_Watermill3_Frame2,
+    gTilesetAnims_Petalburg_Watermill3_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill4_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_4/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill4_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_4/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill4_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_4/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill4_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_4/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill4[] = {
     gTilesetAnims_Petalburg_Watermill4_Frame0,
-    gTilesetAnims_Petalburg_Watermill4_Frame1
+    gTilesetAnims_Petalburg_Watermill4_Frame1,  
+    gTilesetAnims_Petalburg_Watermill4_Frame2,
+    gTilesetAnims_Petalburg_Watermill4_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill5_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_5/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill5_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_5/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill5_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_5/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill5_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_5/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill5[] = {
     gTilesetAnims_Petalburg_Watermill5_Frame0,
-    gTilesetAnims_Petalburg_Watermill5_Frame1
+    gTilesetAnims_Petalburg_Watermill5_Frame1,
+    gTilesetAnims_Petalburg_Watermill5_Frame2,
+    gTilesetAnims_Petalburg_Watermill5_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill6_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_6/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill6_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_6/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill6_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_6/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill6_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_6/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill6[] = {
     gTilesetAnims_Petalburg_Watermill6_Frame0,
-    gTilesetAnims_Petalburg_Watermill6_Frame1
+    gTilesetAnims_Petalburg_Watermill6_Frame1,
+    gTilesetAnims_Petalburg_Watermill6_Frame2,
+    gTilesetAnims_Petalburg_Watermill6_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill7_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_7/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill7_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_7/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill7_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_7/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill7_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_7/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill7[] = {
     gTilesetAnims_Petalburg_Watermill7_Frame0,
-    gTilesetAnims_Petalburg_Watermill7_Frame1
+    gTilesetAnims_Petalburg_Watermill7_Frame1,
+    gTilesetAnims_Petalburg_Watermill7_Frame2,
+    gTilesetAnims_Petalburg_Watermill7_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill8_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_8/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill8_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_8/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill8_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_8/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill8_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_8/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill8[] = {
     gTilesetAnims_Petalburg_Watermill8_Frame0,
-    gTilesetAnims_Petalburg_Watermill8_Frame1
+    gTilesetAnims_Petalburg_Watermill8_Frame1,
+    gTilesetAnims_Petalburg_Watermill8_Frame2,
+    gTilesetAnims_Petalburg_Watermill8_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill9_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_9/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill9_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_9/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill9_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_9/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill9_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_9/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill9[] = {
     gTilesetAnims_Petalburg_Watermill9_Frame0,
-    gTilesetAnims_Petalburg_Watermill9_Frame1
+    gTilesetAnims_Petalburg_Watermill9_Frame1,
+    gTilesetAnims_Petalburg_Watermill9_Frame2,
+    gTilesetAnims_Petalburg_Watermill9_Frame3
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill10_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_10/0.4bpp");
 const u16 gTilesetAnims_Petalburg_Watermill10_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_10/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill10_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_10/2.4bpp");
+const u16 gTilesetAnims_Petalburg_Watermill10_Frame3[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_10/3.4bpp");
 
 const u16 *const gTilesetAnims_Petalburg_Watermill10[] = {
     gTilesetAnims_Petalburg_Watermill10_Frame0,
-    gTilesetAnims_Petalburg_Watermill10_Frame1
+    gTilesetAnims_Petalburg_Watermill10_Frame1,
+    gTilesetAnims_Petalburg_Watermill10_Frame2,
+    gTilesetAnims_Petalburg_Watermill10_Frame3
 };
 
 const u16 gTilesetAnims_Underwater_Seaweed_Frame0[] = INCBIN_U16("data/tilesets/secondary/underwater/anim/seaweed/0.4bpp");
@@ -1097,23 +1137,23 @@ static void TilesetAnim_Petalburg(u16 timer)
         QueueAnimTiles_Petalburg_Chimney_Smoke(timer >> 4);
     if (timer % 16 == 1)
         QueueAnimTiles_Petalburg_Watermill1(timer >> 4);
-    if (timer % 16 == 2)
+    //if (timer % 16 == 2)
         QueueAnimTiles_Petalburg_Watermill2(timer >> 4);
-    if (timer % 16 == 3)
+    //if (timer % 16 == 3)
         QueueAnimTiles_Petalburg_Watermill3(timer >> 4);
-    if (timer % 16 == 4)
+    //if (timer % 16 == 4)
         QueueAnimTiles_Petalburg_Watermill4(timer >> 4);
-    if (timer % 16 == 5)
+    //if (timer % 16 == 5)
         QueueAnimTiles_Petalburg_Watermill5(timer >> 4);
-    if (timer % 16 == 6)
+    //if (timer % 16 == 6)
         QueueAnimTiles_Petalburg_Watermill6(timer >> 4);
-    if (timer % 16 == 7)
+    //if (timer % 16 == 7)
         QueueAnimTiles_Petalburg_Watermill7(timer >> 4);
-    if (timer % 16 == 8)
+    //if (timer % 16 == 8)
         QueueAnimTiles_Petalburg_Watermill8(timer >> 4);
-    if (timer % 16 == 9)
+    //if (timer % 16 == 9)
         QueueAnimTiles_Petalburg_Watermill9(timer >> 4);
-    if (timer % 16 == 10)
+    //if (timer % 16 == 10)
         QueueAnimTiles_Petalburg_Watermill10(timer >> 4);
 }
 
@@ -1177,61 +1217,61 @@ static void QueueAnimTiles_Petalburg_Chimney_Smoke(u16 timer)
 static void QueueAnimTiles_Petalburg_Watermill1(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill1);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill1[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 155)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill1[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 155)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill2(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill2);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill2[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 157)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill2[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 171)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill3(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill3);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 187)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 187)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill4(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill4);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill4[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 189)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill4[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 203)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill5(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill5);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill5[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 219)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill5[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 219)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill6(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill6);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill6[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 221)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill6[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 235)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill7(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill7);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill7[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 251)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill7[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 251)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill8(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill8);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill8[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 253)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill8[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 267)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill9(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill9);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 283)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 283)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill10(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Watermill10);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill10[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 285)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill10[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 299)), 4 * TILE_SIZE_4BPP);
 }
 
 
