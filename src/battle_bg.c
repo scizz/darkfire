@@ -882,6 +882,11 @@ void DrawMainBattleBackground(void)
             LZDecompressVram(gBattleTerrainTilemap_Farm, (void *)(BG_SCREEN_ADDR(26)));
             LoadCompressedPalette(gBattleTerrainPalette_Farm, 0x20, 0x60);
             break;
+        case MAP_BATTLE_SCENE_SNOW:
+            LZDecompressVram(gBattleTerrainTiles_Snow, (void *)(BG_CHAR_ADDR(2)));
+            LZDecompressVram(gBattleTerrainTilemap_Snow, (void *)(BG_SCREEN_ADDR(26)));
+            LoadCompressedPalette(gBattleTerrainPalette_Snow, 0x20, 0x60);
+            break;
         }
     }
 }
@@ -1315,6 +1320,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
             case MAP_BATTLE_SCENE_FARM:
                 LZDecompressVram(gBattleTerrainTiles_Farm, (void *)(BG_CHAR_ADDR(2)));
                 break;
+            case MAP_BATTLE_SCENE_SNOW:
+                LZDecompressVram(gBattleTerrainTiles_Snow, (void *)(BG_CHAR_ADDR(2)));
+                break;
             }
         }
         break;
@@ -1380,6 +1388,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
             case MAP_BATTLE_SCENE_FARM:
                 LZDecompressVram(gBattleTerrainTilemap_Farm, (void *)(BG_SCREEN_ADDR(26)));
                 break;
+            case MAP_BATTLE_SCENE_SNOW:
+                LZDecompressVram(gBattleTerrainTilemap_Snow, (void *)(BG_SCREEN_ADDR(26)));
+                break;
             }
         }
         break;
@@ -1444,6 +1455,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
                 break;
             case MAP_BATTLE_SCENE_FARM:
                 LoadCompressedPalette(gBattleTerrainPalette_Farm, 0x20, 0x60);
+                break;
+            case MAP_BATTLE_SCENE_SNOW:
+                LoadCompressedPalette(gBattleTerrainPalette_Snow, 0x20, 0x60);
                 break;
             }
         }

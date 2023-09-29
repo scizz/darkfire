@@ -7512,6 +7512,10 @@ extern const u32 gBattleTerrainTiles_Urban[];
 extern const u32 gBattleTerrainTilemap_Urban[];
 extern const u32 gBattleTerrainPalette_Urban[];
 
+extern const u32 gBattleTerrainTiles_Snow[];
+extern const u32 gBattleTerrainTilemap_Snow[];
+extern const u32 gBattleTerrainPalette_Snow[];
+
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];
 extern const u16 gPokedexBgHoenn_Pal[];

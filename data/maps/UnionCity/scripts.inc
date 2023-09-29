@@ -312,7 +312,7 @@ UnionCity_Gambler_Yes::
 UnionCity_EventScript_Rattata::
 	lockall
 	playmoncry SPECIES_RATTATA, 0
-	msgbox ChandraVillage_Lab_Rattata1, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_RATTATA, 7, ITEM_NONE
 	dowildbattle
