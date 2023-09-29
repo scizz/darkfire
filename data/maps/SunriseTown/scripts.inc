@@ -153,6 +153,57 @@ SunriseTown_Cook_Talked_To::
 	release
 	end
 
+SunriseTown_Krabby_1::
+	lockall
+	playmoncry SPECIES_KRABBY, 0
+	msgbox SunriseTown_Krabby_Text, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_KRABBY, 4, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_KRABBY, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 10
+	setflag FLAG_SUNRISE_TOWN_KRABBY_1
+	fadescreen 0
+	releaseall
+	end
+
+SunriseTown_Krabby_2::
+	lockall
+	playmoncry SPECIES_KRABBY, 0
+	msgbox SunriseTown_Krabby_Text, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_KRABBY, 4, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_KRABBY, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 11
+	setflag FLAG_SUNRISE_TOWN_KRABBY_2
+	fadescreen 0
+	releaseall
+	end
+
+SunriseTown_Krabby_3::
+	lockall
+	playmoncry SPECIES_KRABBY, 0
+	msgbox SunriseTown_Krabby_Text, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_KRABBY, 5, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_KRABBY, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 12
+	setflag FLAG_SUNRISE_TOWN_KRABBY_3
+	fadescreen 0
+	releaseall
+	end
+
 SunriseTown_Sign_Text:
 	.string "Welcome to Sunrise Town!\n"
 	.string "The Town of Illumination!$"
@@ -242,6 +293,9 @@ SunriseTown_Fat_Guy_Run_Away:
 	.string "{COLOR}{BLUE}What's that?\n"
 	.string "The food at the hotel is ready?!\p"
 	.string "Hold on - I'm coming!$"
+
+SunriseTown_Krabby_Text:
+	.string "Krabby: Krab-krab!$"
 
 RunRight8:
 	walk_fast_right
