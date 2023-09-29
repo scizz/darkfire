@@ -695,6 +695,8 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_SKY;
     if (MetatileBehavior_IsUrban(tileBehavior))
         return BATTLE_TERRAIN_URBAN;
+    if (MetatileBehavior_IsSandPath(tileBehavior))
+        return BATTLE_TERRAIN_SAND_PATH;
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
         // Is BRIDGE_TYPE_POND_*?

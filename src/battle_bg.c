@@ -715,6 +715,15 @@ static const struct BattleBackground sBattleTerrainTable[] =
         .entryTilemap = gBattleTerrainAnimTilemap_Rayquaza,
         .palette = gBattleTerrainPalette_Urban,
     },
+
+    [BATTLE_TERRAIN_SAND_PATH] =
+    {
+        .tileset = gBattleTerrainTiles_SandPath,
+        .tilemap = gBattleTerrainTilemap_SandPath,
+        .entryTileset = gBattleTerrainAnimTiles_Rayquaza,
+        .entryTilemap = gBattleTerrainAnimTilemap_Rayquaza,
+        .palette = gBattleTerrainPalette_SandPath,
+    },
 };
 
 static void CB2_UnusedBattleInit(void);
