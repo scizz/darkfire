@@ -26,7 +26,6 @@ SunriseTown_Little_Boy_Before::
 	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_1, SunriseTown_Little_Boy_Before_Main
 	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_2, SunriseTown_Little_Boy_Before_Main
 	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_3, SunriseTown_Little_Boy_Before_Main
-	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_4, SunriseTown_Little_Boy_Before_Main
 	msgbox SunriseTown_Little_Boy_Beach_Clear, MSGBOX_NPC
 	applymovement 7, Common_Movement_FaceLeft
 	applymovement 6, Common_Movement_WalkInPlaceSlowRight
@@ -55,7 +54,6 @@ SunriseTown_Little_Girl_Before::
 	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_1, SunriseTown_Little_Girl_Before_Main
 	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_2, SunriseTown_Little_Girl_Before_Main
 	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_3, SunriseTown_Little_Girl_Before_Main
-	goto_if_unset FLAG_SUNRISE_TOWN_KRABBY_4, SunriseTown_Little_Girl_Before_Main
 	msgbox SunriseTown_Little_Girl_Beach_Clear, MSGBOX_NPC
 	applymovement 6, Common_Movement_FaceRight
 	applymovement 7, Common_Movement_WalkInPlaceSlowLeft
