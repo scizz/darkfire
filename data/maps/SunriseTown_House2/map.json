@@ -19,7 +19,7 @@
       "x": 3,
       "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -32,7 +32,7 @@
       "x": 6,
       "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -47,14 +47,14 @@
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_SUNRISE_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_SUNRISE_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [
