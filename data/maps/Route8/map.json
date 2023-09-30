@@ -90,7 +90,7 @@
       "x": 53,
       "y": 31,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -269,14 +269,14 @@
       "y": 11,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 72,
       "y": 12,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
