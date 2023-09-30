@@ -502,14 +502,14 @@
       "y": 61,
       "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 79,
       "y": 61,
       "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 31,

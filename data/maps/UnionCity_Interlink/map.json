@@ -115,42 +115,42 @@
       "y": 15,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "13"
     },
     {
       "x": 38,
       "y": 16,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "14"
     },
     {
       "x": 38,
       "y": 17,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "15"
     },
     {
       "x": 24,
       "y": 15,
       "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 24,
       "y": 16,
       "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 24,
       "y": 17,
       "elevation": 3,
       "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
