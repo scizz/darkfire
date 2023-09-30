@@ -227,7 +227,7 @@
       "y": 40,
       "elevation": 3,
       "dest_map": "MAP_GREENDALE_VILLAGE_POKEMON_CENTER_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 34,
@@ -265,13 +265,13 @@
       "y": 30,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "0",
+      "var_value": "11",
       "script": "GreendaleVillage_Tournament"
     },
     {
       "type": "trigger",
       "x": 26,
-      "y": 29,
+      "y": 30,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "11",
@@ -280,7 +280,7 @@
     {
       "type": "trigger",
       "x": 27,
-      "y": 29,
+      "y": 30,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
       "var_value": "11",

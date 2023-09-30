@@ -34,14 +34,14 @@
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_GREENDALE_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_GREENDALE_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
