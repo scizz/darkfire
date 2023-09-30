@@ -273,6 +273,20 @@
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE3",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 56,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_ANHEIM_FOREST",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 57,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_ANHEIM_FOREST",
+      "dest_warp_id": "6"
     }
   ],
   "coord_events": [

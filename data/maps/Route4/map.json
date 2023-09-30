@@ -508,14 +508,14 @@
       "y": 51,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     },
     {
       "x": 85,
       "y": 51,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 55,
