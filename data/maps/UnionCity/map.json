@@ -554,21 +554,21 @@
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY_INTERLINK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     },
     {
       "x": 55,
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY_INTERLINK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 56,
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY_INTERLINK",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 48,
