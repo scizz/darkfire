@@ -32,7 +32,7 @@
       "x": 52,
       "y": 12,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -45,7 +45,7 @@
       "x": 38,
       "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -133,8 +133,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 15,
-      "y": 37,
+      "x": 7,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -146,10 +146,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 31,
-      "y": 30,
+      "x": 14,
+      "y": 42,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -172,10 +172,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 26,
-      "y": 44,
+      "x": 23,
+      "y": 42,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -185,7 +185,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 17,
+      "x": 15,
       "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -207,6 +207,19 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 27,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LaveriaCity_Man2",
       "flag": "0"
     }
   ],
@@ -230,7 +243,7 @@
       "y": 39,
       "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY_HOUSE1",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 32,
@@ -284,6 +297,13 @@
     {
       "x": 36,
       "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_LAVERIA_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 38,
       "elevation": 0,
       "dest_map": "MAP_LAVERIA_CITY",
       "dest_warp_id": "0"
@@ -345,10 +365,18 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 25,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LaveriaCity_Sign_Locked"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LaveriaCity_Sign_Route"
     }
   ]
 }

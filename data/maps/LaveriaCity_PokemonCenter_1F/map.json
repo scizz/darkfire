@@ -69,14 +69,14 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 7,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
+      "x": 6,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY",

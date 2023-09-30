@@ -47,6 +47,10 @@ LaveriaCity_Man::
 	msgbox LaveriaCity_Text_Man, MSGBOX_NPC
 	end
 
+LaveriaCity_Man2::
+	msgbox LaveriaCity_Text_Man2, MSGBOX_NPC
+	end
+
 LaveriaCity_Boy_2::
 	msgbox LaveriaCity_Text_Boy_2, MSGBOX_NPC
 	end
@@ -203,6 +207,16 @@ LaveriaCity_Text_Man:
 	.string "result of this harsh weather.\p"
 	.string "Oh, well…\n"
 	.string "The ice will eventually defrost!$"
+
+LaveriaCity_Text_Man2:
+	.string "{COLOR}{BLUE}Headed for Route 7?\n"
+	.string "It's beautiful, but unforgiving.\p"
+	.string "The air is crisp and invigorating, and\n"
+	.string "the frozen streams that snake through\l"
+	.string "the area glisten in the sunlight.\p"
+	.string "Be sure to bundle up, though.\n"
+	.string "the temperatures can drop to\l"
+	.string "bone-chilling levels.$"
 
 LaveriaCity_Text_Boy_2:
 	.string "{COLOR}{BLUE}Jeez! We've been snowed in!\n"
