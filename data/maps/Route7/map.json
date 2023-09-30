@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
   "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -361,6 +364,13 @@
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_TUNNELS",
       "dest_warp_id": "9"
+    },
+    {
+      "x": 137,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LAVERIA_CITY_INTERLINK",
+      "dest_warp_id": "7"
     }
   ],
   "coord_events": [
@@ -415,8 +425,5 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route7_Sign_Door"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
