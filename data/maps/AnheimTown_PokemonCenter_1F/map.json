@@ -56,14 +56,14 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 7,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
+      "x": 6,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",

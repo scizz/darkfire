@@ -223,14 +223,14 @@
       "y": 52,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE1",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 44,
       "y": 40,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE2",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 45,
@@ -251,7 +251,7 @@
       "y": 16,
       "elevation": 3,
       "dest_map": "MAP_ROUTE5",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 7,
@@ -272,7 +272,7 @@
       "y": 24,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN_HOUSE3",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 56,

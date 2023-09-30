@@ -378,14 +378,14 @@
       "y": 85,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 11,
       "y": 85,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 19,
