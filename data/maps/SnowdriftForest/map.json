@@ -35,8 +35,8 @@
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "SnowdriftForest_EventScript_Nob",
       "flag": "0"
     },
@@ -71,7 +71,7 @@
       "x": 18,
       "y": 48,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -100,8 +100,8 @@
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "SnowdriftForest_EventScript_Paula",
       "flag": "0"
     },
@@ -139,8 +139,8 @@
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "SnowdriftForest_EventScript_Angelina",
       "flag": "0"
     },
@@ -229,14 +229,14 @@
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_HIGHWIND_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
     },
     {
       "x": 5,
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_HIGHWIND_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "7"
     },
     {
       "x": 42,

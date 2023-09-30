@@ -82,18 +82,18 @@
   ],
   "warp_events": [
     {
-      "x": 7,
-      "y": 11,
-      "elevation": 3,
-      "dest_map": "MAP_HIGHWIND_VILLAGE",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 8,
       "y": 11,
       "elevation": 3,
       "dest_map": "MAP_HIGHWIND_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "elevation": 3,
+      "dest_map": "MAP_HIGHWIND_VILLAGE",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

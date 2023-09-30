@@ -19,7 +19,7 @@
       "x": 1,
       "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -60,14 +60,14 @@
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_HIGHWIND_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_HIGHWIND_VILLAGE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
