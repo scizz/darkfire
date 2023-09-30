@@ -272,7 +272,7 @@
       "x": 12,
       "y": 27,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -424,34 +424,48 @@
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_ROCKFALL_CAVE_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 100,
       "y": 18,
       "elevation": 3,
       "dest_map": "MAP_ROCKFALL_CAVE_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "7"
     },
     {
       "x": 92,
       "y": 29,
       "elevation": 3,
       "dest_map": "MAP_ROCKFALL_CAVE_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 69,
       "y": 30,
       "elevation": 3,
       "dest_map": "MAP_ROCKFALL_CAVE_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
     },
     {
       "x": 7,
       "y": 23,
       "elevation": 3,
       "dest_map": "MAP_STEEP_RAVINE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 77,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 78,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
       "dest_warp_id": "0"
     }
   ],

@@ -186,11 +186,60 @@
   ],
   "warp_events": [
     {
+      "x": 45,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "0"
+    },
+    {
       "x": 29,
       "y": 36,
-      "elevation": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "elevation": 0,
       "dest_map": "MAP_ROCKFALL_CAVE_1F",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 68,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKFALL_CAVE_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 77,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKFALL_CAVE_B1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 15,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

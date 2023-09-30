@@ -107,7 +107,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 39,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKFALL_CAVE_1F",
+      "dest_warp_id": "4"
+    }
   ],
   "coord_events": [
 
