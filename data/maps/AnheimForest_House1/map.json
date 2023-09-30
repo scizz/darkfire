@@ -22,21 +22,21 @@
       "y": 1,
       "elevation": 3,
       "dest_map": "MAP_MUDDY_UNDERPASS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

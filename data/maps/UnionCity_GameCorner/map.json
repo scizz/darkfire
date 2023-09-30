@@ -134,18 +134,18 @@
   ],
   "warp_events": [
     {
-      "x": 10,
-      "y": 10,
-      "elevation": 3,
-      "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 11,
       "y": 10,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_UNION_CITY",
+      "dest_warp_id": "9"
     }
   ],
   "coord_events": [

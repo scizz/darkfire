@@ -19,7 +19,7 @@
       "x": 9,
       "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -32,7 +32,7 @@
       "x": 3,
       "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -43,18 +43,18 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 7,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_UNION_CITY",
+      "dest_warp_id": "6"
     },
     {
       "x": 3,
