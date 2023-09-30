@@ -7523,6 +7523,7 @@ extern const u32 gBattleTerrainPalette_SandPath[];
 extern const u32 gBattleTerrainTiles_MainGrass[];
 extern const u32 gBattleTerrainTilemap_MainGrass[];
 extern const u32 gBattleTerrainPalette_MainGrass[];
+extern const u32 gBattleTerrainPalette_MainGrass2[];
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];

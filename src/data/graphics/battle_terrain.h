@@ -78,6 +78,7 @@ const u32 gBattleTerrainPalette_SandPath[] = INCBIN_U32("graphics/battle_terrain
 const u32 gBattleTerrainTiles_MainGrass[] = INCBIN_U32("graphics/battle_terrain/main_grass/tiles.4bpp.lz");
 const u32 gBattleTerrainTilemap_MainGrass[] = INCBIN_U32("graphics/battle_terrain/main_grass/map.bin.lz");
 const u32 gBattleTerrainPalette_MainGrass[] = INCBIN_U32("graphics/battle_terrain/main_grass/palette.gbapal.lz");
+const u32 gBattleTerrainPalette_MainGrass2[] = INCBIN_U32("graphics/battle_terrain/main_grass/palette2.gbapal.lz");
 
 // anim tiles
 

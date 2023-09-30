@@ -23,5 +23,6 @@
 #define MAP_BATTLE_SCENE_FRONTIER     8
 #define MAP_BATTLE_SCENE_FARM         9
 #define MAP_BATTLE_SCENE_SNOW         10
+#define MAP_BATTLE_SCENE_FOREST       11
 
 #endif  // GUARD_CONSTANTS_MAP_TYPES_H

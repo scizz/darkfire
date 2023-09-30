@@ -348,13 +348,14 @@ const u8 gBattleBackgroundNames[][30] =
     [MAP_BATTLE_SCENE_GLACIA]   = _("GLACIA                  "),
     [MAP_BATTLE_SCENE_DRAKE]    = _("DRAKE                   "),
     [MAP_BATTLE_SCENE_FRONTIER] = _("FRONTIER                "),
-    [MAP_BATTLE_SCENE_FARM]     = _("FARM                    "),
-    [MAP_BATTLE_SCENE_SNOW]     = _("SNOW                    "),
     [MAP_BATTLE_SCENE_LEADER]   = _("LEADER                  "),
     [MAP_BATTLE_SCENE_WALLACE]  = _("WALLACE                 "),
     [MAP_BATTLE_SCENE_GROUDON]  = _("GROUDON                 "),
     [MAP_BATTLE_SCENE_KYOGRE]   = _("KYOGRE                  "),
     [MAP_BATTLE_SCENE_RAYQUAZA] = _("RAYQUAZA                "),
+    [MAP_BATTLE_SCENE_FARM]     = _("FARM                    "),
+    [MAP_BATTLE_SCENE_SNOW]     = _("SNOW                    "),
+    [MAP_BATTLE_SCENE_FOREST]   = _("FOREST                  "),
 };
 const u8 gBattleBackgroundTerrainNames[][26] =
 {
@@ -926,16 +927,6 @@ static void LoadBattleBg(u8 battleBgType, u8 battleTerrain)
         LZDecompressVram(gBattleTerrainTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
         LoadCompressedPalette(gBattleTerrainPalette_Frontier, 0x20, 0x60);
         break;
-    case MAP_BATTLE_SCENE_FARM:
-        LZDecompressVram(gBattleTerrainTiles_Farm, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleTerrainTilemap_Farm, (void*)(BG_SCREEN_ADDR(26)));
-        LoadCompressedPalette(gBattleTerrainPalette_Farm, 0x20, 0x60);
-        break;
-    case MAP_BATTLE_SCENE_SNOW:
-        LZDecompressVram(gBattleTerrainTiles_Snow, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleTerrainTilemap_Snow, (void*)(BG_SCREEN_ADDR(26)));
-        LoadCompressedPalette(gBattleTerrainPalette_Snow, 0x20, 0x60);
-        break;
     case MAP_BATTLE_SCENE_LEADER:
         LZDecompressVram(gBattleTerrainTiles_Building, (void*)(BG_CHAR_ADDR(2)));
         LZDecompressVram(gBattleTerrainTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
@@ -960,6 +951,21 @@ static void LoadBattleBg(u8 battleBgType, u8 battleTerrain)
         LZDecompressVram(gBattleTerrainTiles_Rayquaza, (void*)(BG_CHAR_ADDR(2)));
         LZDecompressVram(gBattleTerrainTilemap_Rayquaza, (void*)(BG_SCREEN_ADDR(26)));
         LoadCompressedPalette(gBattleTerrainPalette_Rayquaza, 0x20, 0x60);
+        break;
+    case MAP_BATTLE_SCENE_FARM:
+        LZDecompressVram(gBattleTerrainTiles_Farm, (void*)(BG_CHAR_ADDR(2)));
+        LZDecompressVram(gBattleTerrainTilemap_Farm, (void*)(BG_SCREEN_ADDR(26)));
+        LoadCompressedPalette(gBattleTerrainPalette_Farm, 0x20, 0x60);
+        break;
+    case MAP_BATTLE_SCENE_SNOW:
+        LZDecompressVram(gBattleTerrainTiles_Snow, (void*)(BG_CHAR_ADDR(2)));
+        LZDecompressVram(gBattleTerrainTilemap_Snow, (void*)(BG_SCREEN_ADDR(26)));
+        LoadCompressedPalette(gBattleTerrainPalette_Snow, 0x20, 0x60);
+        break;
+    case MAP_BATTLE_SCENE_FOREST:
+        LZDecompressVram(gBattleTerrainTiles_MainGrass, (void*)(BG_CHAR_ADDR(2)));
+        LZDecompressVram(gBattleTerrainTilemap_MainGrass, (void*)(BG_SCREEN_ADDR(26)));
+        LoadCompressedPalette(gBattleTerrainPalette_MainGrass2, 0x20, 0x60);
         break;
     }
 }

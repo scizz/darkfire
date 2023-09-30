@@ -896,6 +896,11 @@ void DrawMainBattleBackground(void)
             LZDecompressVram(gBattleTerrainTilemap_Snow, (void *)(BG_SCREEN_ADDR(26)));
             LoadCompressedPalette(gBattleTerrainPalette_Snow, 0x20, 0x60);
             break;
+        case MAP_BATTLE_SCENE_FOREST:
+            LZDecompressVram(gBattleTerrainTiles_MainGrass, (void *)(BG_CHAR_ADDR(2)));
+            LZDecompressVram(gBattleTerrainTilemap_MainGrass, (void *)(BG_SCREEN_ADDR(26)));
+            LoadCompressedPalette(gBattleTerrainPalette_MainGrass2, 0x20, 0x60);
+            break;
         }
     }
 }
