@@ -203,28 +203,28 @@
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 10,
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "4"
     },
     {
       "x": 11,
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 12,
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 11,

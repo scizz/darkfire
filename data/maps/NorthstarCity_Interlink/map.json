@@ -68,21 +68,21 @@
       "y": 5,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 15,
       "y": 6,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 15,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

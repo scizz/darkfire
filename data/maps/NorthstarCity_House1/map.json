@@ -56,18 +56,18 @@
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 5,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_NORTHSTAR_CITY",
+      "dest_warp_id": "6"
     }
   ],
   "coord_events": [
