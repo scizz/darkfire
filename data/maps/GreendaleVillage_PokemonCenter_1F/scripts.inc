@@ -1,3 +1,5 @@
+.set LOCALID_NURSE, 3
+
 GreendaleVillage_PokemonCenter_1F_MapScripts::
 	.byte 0
 
