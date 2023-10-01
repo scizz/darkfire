@@ -867,6 +867,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pearlporium;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ContestHouse;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ClamperlSign;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lab;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SnorlaxSleeping;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1700,6 +1701,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CONTEST_HOUSE] =            &gObjectEventGraphicsInfo_ContestHouse,
     [OBJ_EVENT_GFX_CLAMPERL_SIGN] =            &gObjectEventGraphicsInfo_ClamperlSign,
     [OBJ_EVENT_GFX_LAB] =                      &gObjectEventGraphicsInfo_Lab,
+    [OBJ_EVENT_GFX_SNORLAX_SLEEPING] =         &gObjectEventGraphicsInfo_SnorlaxSleeping,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

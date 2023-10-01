@@ -249,9 +249,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_CUT] =
     {
         .effect = EFFECT_HIT,
-        .power = 50,
+        .power = 65,
         .type = TYPE_NORMAL,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 30,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -324,7 +324,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .power = 90,
             .zMovePower = 175,
         #else
-            .power = 70,
+            .power = 90,
             .zMovePower = 140,
         #endif
         .effect = EFFECT_SEMI_INVULNERABLE,
@@ -2651,7 +2651,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         #if B_UPDATED_MOVE_DATA >= GEN_4
             .accuracy = 100,
         #else
-            .accuracy = 70,
+            .accuracy = 100,
         #endif
         .effect = EFFECT_ACCURACY_DOWN,
         .power = 0,
@@ -4488,9 +4488,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_ROCK_SMASH] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .power = 40,
+            .power = 65,
         #else
-            .power = 20,
+            .power = 65,
         #endif
         .effect = EFFECT_DEFENSE_DOWN_HIT,
         .type = TYPE_FIGHTING,
@@ -5244,15 +5244,15 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_DIVE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .power = 80,
+            .power = 90,
             .zMovePower = 160,
         #else
-            .power = 60,
+            .power = 90,
             .zMovePower = 120,
         #endif
         .effect = EFFECT_SEMI_INVULNERABLE,
         .type = TYPE_WATER,
-        .accuracy = 100,
+        .accuracy = 95,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
