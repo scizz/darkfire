@@ -2348,6 +2348,9 @@ $(OBJEVENTGFXDIR)/misc/clamperl_sign.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/lab.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/pokemon/snorlax_sleeping.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
