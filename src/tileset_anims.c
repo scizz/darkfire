@@ -79,6 +79,12 @@ static void QueueAnimTiles_Petalburg_Watermill7(u16);
 static void QueueAnimTiles_Petalburg_Watermill8(u16);
 static void QueueAnimTiles_Petalburg_Watermill9(u16);
 static void QueueAnimTiles_Petalburg_Watermill10(u16);
+static void QueueAnimTiles_Dewford_Turbine1(u16);
+static void QueueAnimTiles_Dewford_Turbine2(u16);
+static void QueueAnimTiles_Dewford_Turbine3(u16);
+static void QueueAnimTiles_Dewford_Turbine4(u16);
+static void QueueAnimTiles_Dewford_Turbine5(u16);
+static void QueueAnimTiles_Dewford_Turbine6(u16);
 static void QueueAnimTiles_Sootopolis_StormyWater(u16);
 static void QueueAnimTiles_Underwater_Seaweed(u8);
 static void QueueAnimTiles_Cave_Lava(u16);
@@ -398,6 +404,66 @@ const u16 *const gTilesetAnims_Petalburg_Watermill10[] = {
     gTilesetAnims_Petalburg_Watermill10_Frame1,
     gTilesetAnims_Petalburg_Watermill10_Frame2,
     gTilesetAnims_Petalburg_Watermill10_Frame3
+};
+
+const u16 gTilesetAnims_Dewford_Turbine1_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_1/0.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine1_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_1/1.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine1_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_1/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Turbine1[] = {
+    gTilesetAnims_Dewford_Turbine1_Frame0,
+    gTilesetAnims_Dewford_Turbine1_Frame1,
+    gTilesetAnims_Dewford_Turbine1_Frame2
+};
+
+const u16 gTilesetAnims_Dewford_Turbine2_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_2/0.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine2_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_2/1.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine2_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_2/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Turbine2[] = {
+    gTilesetAnims_Dewford_Turbine2_Frame0,
+    gTilesetAnims_Dewford_Turbine2_Frame1,
+    gTilesetAnims_Dewford_Turbine2_Frame2
+};
+
+const u16 gTilesetAnims_Dewford_Turbine3_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_3/0.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine3_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_3/1.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine3_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_3/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Turbine3[] = {
+    gTilesetAnims_Dewford_Turbine3_Frame0,
+    gTilesetAnims_Dewford_Turbine3_Frame1,
+    gTilesetAnims_Dewford_Turbine3_Frame2
+};
+
+const u16 gTilesetAnims_Dewford_Turbine4_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_4/0.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine4_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_4/1.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine4_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_4/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Turbine4[] = {
+    gTilesetAnims_Dewford_Turbine4_Frame0,
+    gTilesetAnims_Dewford_Turbine4_Frame1,
+    gTilesetAnims_Dewford_Turbine4_Frame2
+};
+
+const u16 gTilesetAnims_Dewford_Turbine5_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_5/0.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine5_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_5/1.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine5_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_5/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Turbine5[] = {
+    gTilesetAnims_Dewford_Turbine5_Frame0,
+    gTilesetAnims_Dewford_Turbine5_Frame1,
+    gTilesetAnims_Dewford_Turbine5_Frame2
+};
+
+const u16 gTilesetAnims_Dewford_Turbine6_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_6/0.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine6_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_6/1.4bpp");
+const u16 gTilesetAnims_Dewford_Turbine6_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/turbine_6/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Turbine6[] = {
+    gTilesetAnims_Dewford_Turbine6_Frame0,
+    gTilesetAnims_Dewford_Turbine6_Frame1,
+    gTilesetAnims_Dewford_Turbine6_Frame2
 };
 
 const u16 gTilesetAnims_Underwater_Seaweed_Frame0[] = INCBIN_U16("data/tilesets/secondary/underwater/anim/seaweed/0.4bpp");
@@ -1065,8 +1131,15 @@ void InitTilesetAnim_BattleDome(void)
 
 static void TilesetAnim_Dewford(u16 timer)
 {
-    //if (timer % 8 == 0)
-    //    QueueAnimTiles_Dewford_Flag(timer / 8);
+    if (timer % 16 == 0)
+    QueueAnimTiles_Dewford_Flag(timer / 8);
+    if (timer % 8 == 1)
+    QueueAnimTiles_Dewford_Turbine1(timer >> 4);
+    QueueAnimTiles_Dewford_Turbine2(timer >> 4);
+    QueueAnimTiles_Dewford_Turbine3(timer >> 4);
+    QueueAnimTiles_Dewford_Turbine4(timer >> 4);
+    QueueAnimTiles_Dewford_Turbine5(timer >> 4);
+    QueueAnimTiles_Dewford_Turbine6(timer >> 4);
 }
 
 static void TilesetAnim_Slateport(u16 timer)
@@ -1274,7 +1347,41 @@ static void QueueAnimTiles_Petalburg_Watermill10(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Watermill10[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 299)), 4 * TILE_SIZE_4BPP);
 }
 
+static void QueueAnimTiles_Dewford_Turbine1(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Turbine1);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine1[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 12)), 4 * TILE_SIZE_4BPP);
+}
 
+static void QueueAnimTiles_Dewford_Turbine2(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Turbine2);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine2[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 16)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Dewford_Turbine3(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Turbine3);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 20)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Dewford_Turbine4(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Turbine4);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine4[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 24)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Dewford_Turbine5(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Turbine5);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine5[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 76)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Dewford_Turbine6(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Turbine6);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine6[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 80)), 4 * TILE_SIZE_4BPP);
+}
 
 
 static void QueueAnimTiles_Underwater_Seaweed(u8 timer)
