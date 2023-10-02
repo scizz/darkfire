@@ -47,6 +47,23 @@ Route2_EventScript_Ricky::
 	msgbox Route2_Text_RickyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route2_Zigzagoon::
+	lockall
+	playmoncry SPECIES_ZIGZAGOON, 0
+	msgbox Route2_Text_Zigzagoon, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_ZIGZAGOON, 5, ITEM_ORAN_BERRY
+	dowildbattle
+	playmoncry SPECIES_ZIGZAGOON, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 10
+	setflag FLAG_HIDE_ROUTE_2_ZIGZAGOON
+	fadescreen 0
+	releaseall
+	end
+
 Route2_Text_Sign:
 	.string "Route 2\n"
 	.string "{RIGHT_ARROW} Sunrise Town$"
@@ -84,3 +101,6 @@ Route2_Text_Old_Woman:
 	.string "My loyal Machop could have smashed\n"
 	.string "these rocks in no time, but he's no\l"
 	.string "longer with me…$"
+
+Route2_Text_Zigzagoon:
+	.string "Zigzagoon: Zigg!$"
