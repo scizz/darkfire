@@ -85,6 +85,7 @@ static void QueueAnimTiles_Dewford_Turbine3(u16);
 static void QueueAnimTiles_Dewford_Turbine4(u16);
 static void QueueAnimTiles_Dewford_Turbine5(u16);
 static void QueueAnimTiles_Dewford_Turbine6(u16);
+static void QueueAnimTiles_Dewford_Flower(u16);
 static void QueueAnimTiles_Sootopolis_StormyWater(u16);
 static void QueueAnimTiles_Underwater_Seaweed(u8);
 static void QueueAnimTiles_Cave_Lava(u16);
@@ -464,6 +465,17 @@ const u16 *const gTilesetAnims_Dewford_Turbine6[] = {
     gTilesetAnims_Dewford_Turbine6_Frame0,
     gTilesetAnims_Dewford_Turbine6_Frame1,
     gTilesetAnims_Dewford_Turbine6_Frame2
+};
+
+const u16 gTilesetAnims_Dewford_Flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flower/0.4bpp");
+const u16 gTilesetAnims_Dewford_Flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flower/1.4bpp");
+const u16 gTilesetAnims_Dewford_Flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flower/2.4bpp");
+
+const u16 *const gTilesetAnims_Dewford_Flower[] = {
+    gTilesetAnims_Dewford_Flower_Frame0,
+    gTilesetAnims_Dewford_Flower_Frame1,
+    gTilesetAnims_Dewford_Flower_Frame2,
+    gTilesetAnims_Dewford_Flower_Frame1
 };
 
 const u16 gTilesetAnims_Underwater_Seaweed_Frame0[] = INCBIN_U16("data/tilesets/secondary/underwater/anim/seaweed/0.4bpp");
@@ -1131,15 +1143,17 @@ void InitTilesetAnim_BattleDome(void)
 
 static void TilesetAnim_Dewford(u16 timer)
 {
-    if (timer % 16 == 0)
-    QueueAnimTiles_Dewford_Flag(timer / 8);
+    if (timer % 8 == 0)
+        QueueAnimTiles_Dewford_Flower(timer >> 4);
     if (timer % 8 == 1)
-    QueueAnimTiles_Dewford_Turbine1(timer >> 4);
-    QueueAnimTiles_Dewford_Turbine2(timer >> 4);
-    QueueAnimTiles_Dewford_Turbine3(timer >> 4);
-    QueueAnimTiles_Dewford_Turbine4(timer >> 4);
-    QueueAnimTiles_Dewford_Turbine5(timer >> 4);
-    QueueAnimTiles_Dewford_Turbine6(timer >> 4);
+        QueueAnimTiles_Dewford_Turbine1(timer >> 4);
+        QueueAnimTiles_Dewford_Turbine2(timer >> 4);
+        QueueAnimTiles_Dewford_Turbine3(timer >> 4);
+        QueueAnimTiles_Dewford_Turbine4(timer >> 4);
+        QueueAnimTiles_Dewford_Turbine5(timer >> 4);
+        QueueAnimTiles_Dewford_Turbine6(timer >> 4);
+    //if (timer % 8 == 2)
+    //   QueueAnimTiles_Dewford_Flag(timer / 8);
 }
 
 static void TilesetAnim_Slateport(u16 timer)
@@ -1383,6 +1397,11 @@ static void QueueAnimTiles_Dewford_Turbine6(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Turbine6[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 80)), 4 * TILE_SIZE_4BPP);
 }
 
+static void QueueAnimTiles_Dewford_Flower(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Flower);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 154)), 4 * TILE_SIZE_4BPP);
+}
 
 static void QueueAnimTiles_Underwater_Seaweed(u8 timer)
 {
