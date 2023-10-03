@@ -371,9 +371,7 @@ AnheimForest_Text_FatherRecap:
 	.string "{COLOR}{BLUE}Please, Trainer…\n"
 	.string "We are relying on you…\p"
 	.string "Our daughter loves playing by the\n"
-	.string "water.\p"
-	.string "Please find her and offer her a\n"
-	.string "stepping stone to safety!$"
+	.string "water.$"
 
 AnheimForest_Text_MotherLucySaved:
 	.string "{COLOR}{RED}Thank you so much for finding our\n"
