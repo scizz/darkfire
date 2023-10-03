@@ -452,6 +452,15 @@ bool32 IsVirtualObjectAnimating(u8 virtualObjId);
 
 bool8 IsElevationMismatchAt(u8 elevation, s16 x, s16 y);
 
+u8 GetObjectEventIdByLocalId(u8 localId);
+
+// run slow
+u8 GetPlayerRunSlowMovementAction(u32);
+//sideways stairs
+u8 GetSidewaysStairsToRightDirection(s16, s16, u8);
+u8 GetSidewaysStairsToLeftDirection(s16, s16, u8);
+u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 currentBehavior, u8 nextBehavior, u8 collision);
+
 // NEW
 u16 GetMiniStepCount(u8 speed);
 void RunMiniStep(struct Sprite *sprite, u8 speed, u8 currentFrame);
