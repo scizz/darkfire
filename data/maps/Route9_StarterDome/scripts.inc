@@ -131,6 +131,23 @@ Route9_StarterDome_Woman::
 	msgbox Route9_StarterDome_Text_Woman, MSGBOX_NPC
 	end
 
+Route9_StarterDome_Sailor::
+	lockall
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ROUTE_9_AWAKENING, Route9_Awakening_Received
+	msgbox Route9_Text_SailorOne, MSGBOX_DEFAULT
+	giveitem ITEM_AWAKENING, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_ROUTE_9_AWAKENING
+	goto Route9_Awakening_Received
+	end
+
+Route9_Awakening_Received::
+	msgbox Route9_Text_SailorTwo, MSGBOX_DEFAULT
+	releaseall
+	end
+
 Route9_StarterDome_Intro::
 	removeobject 2
 	removeobject 3
@@ -1019,6 +1036,17 @@ Route9_StarterDome_Text_Woman:
 	.string "{COLOR}{RED}If you have a full party, feel free to\n"
 	.string "use the red and white machine at the\l"
 	.string "front of the Dome to access your PC.$"
+
+Route9_Text_SailorOne:
+	.string "{COLOR}{BLUE}Zzz…\n"
+	.string "Wh- Huh?\p"
+	.string "Oh, hello.\p"
+	.string "If your Pokémon are as sleepy as I\n"
+	.string "am, just use this on them!$"
+
+Route9_Text_SailorTwo:
+	.string "{COLOR}{BLUE}I would use these beds here to sleep,\n"
+	.string "but I'm not sure if that's appropriate!$"
 
 Route9_StarterDome_Text_NowThatEveryone:
 	.string "Now that everyone is here, let's take\n"
