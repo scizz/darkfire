@@ -2,7 +2,7 @@
   "id": "MAP_ANHEIM_TOWN",
   "name": "AnheimTown",
   "layout": "LAYOUT_ANHEIM_TOWN",
-  "music": "MUS_ANHEIM_TOWN",
+  "music": "MUS_ANHEIM_FOREST",
   "region_map_section": "MAPSEC_ANHEIM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
