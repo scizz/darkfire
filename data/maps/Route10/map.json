@@ -409,8 +409,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUTTERFREE",
-      "x": 100,
-      "y": 44,
+      "x": 86,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
