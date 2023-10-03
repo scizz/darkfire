@@ -126,6 +126,24 @@ Route10_Sign_Farmond::
 	msgbox Route10_Text_Sign_Farmond, MSGBOX_SIGN
 	end
 
+Route10_Heracross::
+	lockall
+	playmoncry SPECIES_HERACROSS, 0
+	msgbox Route10_Text_Heracross, MSGBOX_DEFAULT
+	waitmoncry
+	setwildbattle SPECIES_HERACROSS, 15, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_HERACROSS, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 24
+	setflag FLAG_HIDE_ROUTE_10_HERACROSS
+	@setvar VAR_RANGER_EVENT_HERACROSS, 2
+	fadescreen 0
+	releaseall
+	end
+
 Route10_Text_Sign:
 	.string "Route 10\n"
 	.string "{LEFT_ARROW} Pinleaf Town$"

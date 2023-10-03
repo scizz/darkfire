@@ -58,6 +58,14 @@ Route4_EventScript_Joshua::
 	closemessage
 	end
 
+Route4_Mareep::
+	lockall
+	playmoncry SPECIES_MAREEP, 0
+	msgbox Route4_Text_Mareep, MSGBOX_DEFAULT
+	waitmoncry
+	releaseall
+	end
+
 Route4_Given::
 	msgbox Route4_Text_Given, MSGBOX_DEFAULT
 	closemessage
@@ -79,3 +87,6 @@ Route4_Text_Joshua_Gift:
 Route4_Text_Given:
 	.string "{COLOR}{BLUE}Moomoo Milk heals a Pokémon by 100 HP.\n"
 	.string "Though, once it's gone, it's gone!$"
+
+Route4_Text_Mareep:
+	.string "Mareep: Meep!$"

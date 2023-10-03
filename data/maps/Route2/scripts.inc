@@ -58,7 +58,7 @@ Route2_Zigzagoon::
 	waitmoncry
 	fadescreen 1
 	delay 60
-	removeobject 10
+	removeobject 5
 	setflag FLAG_HIDE_ROUTE_2_ZIGZAGOON
 	fadescreen 0
 	releaseall
