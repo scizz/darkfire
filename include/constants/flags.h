@@ -1186,11 +1186,11 @@
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_4_SUPER_REPEL                               0x46F // Darkfire Flag
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_ROUTE_3_MIRACLE_SEED                                   0x470 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_2_POKE_BALL                                 0x471 // Darkfire Flag
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_ROUTE_3_LARVITAR_BATTLE_WON                            0x472 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_4_PP_UP                                     0x473 // Darkfire Flag
-#define FLAG_UNUSED_0x474                                           0x474 // Unused Flag
+#define FLAG_ROUTE_3_LARVITAR_BATTLE_POTION_GIVEN                   0x474 // Darkfire Flag
 #define FLAG_ITEM_PINLEAF_TOWN_MAX_REVIVE                           0x475 // Darkfire Flag
 #define FLAG_ITEM_HIGHWIND_VILLAGE_SODA_POP                         0x476 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
