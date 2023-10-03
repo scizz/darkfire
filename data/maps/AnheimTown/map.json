@@ -2,7 +2,7 @@
   "id": "MAP_ANHEIM_TOWN",
   "name": "AnheimTown",
   "layout": "LAYOUT_ANHEIM_TOWN",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_ANHEIM_TOWN",
   "region_map_section": "MAPSEC_ANHEIM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
