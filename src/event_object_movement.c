@@ -6948,8 +6948,14 @@ bool8 MovementAction_WalkFastLeft_Step0(struct ObjectEvent *objectEvent, struct 
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
         //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
     }
+    else {
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            InitNpcForMovement(objectEvent, sprite, DIR_WEST, 1); //follower
+        }
     else
         InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_1);
+    }
     return MovementAction_WalkFastLeft_Step1(objectEvent, sprite);
 }
 
@@ -6980,8 +6986,14 @@ bool8 MovementAction_WalkFastRight_Step0(struct ObjectEvent *objectEvent, struct
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
         //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
     }
+    else {
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            InitNpcForMovement(objectEvent, sprite, DIR_EAST, 1); //follower
+        }
     else
         InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_1);
+    }
     return MovementAction_WalkFastRight_Step1(objectEvent, sprite);
 }
 
