@@ -224,3 +224,6 @@ Route10_Text_SUBO_4:
 	.string "{COLOR}{BLUE}Guard duty is sooo boring…\p"
 	.string "I wish I could be in Mayhem City right\n"
 	.string "now, smashing some stuff up!$"
+
+Route10_Text_Heracross:
+	.string "Heracross: Heraa!$"
