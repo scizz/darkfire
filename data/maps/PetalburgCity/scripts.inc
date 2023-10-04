@@ -122,10 +122,14 @@ PetalburgCity_EventScript_DoorWarp::
 	showface 0, 0, 1, 1
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
 	hideface 1
-    showborderlesspic 10, 3
+	showborderlesspic 10, 3
 	release
-    delay 25
-    hidemonpic
+	delay 25
+	hidemonpic
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_DEXNAV_GET
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 	end
 
 WRFFL:
