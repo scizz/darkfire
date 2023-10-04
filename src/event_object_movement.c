@@ -6549,7 +6549,7 @@ bool8 MovementAction_WalkNormalLeft_Step0(struct ObjectEvent *objectEvent, struc
     }
     if (objectEvent->directionOverwrite) {
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
-        InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
+        //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
     }
     else
         InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_NORMAL);
@@ -6581,7 +6581,7 @@ bool8 MovementAction_WalkNormalRight_Step0(struct ObjectEvent *objectEvent, stru
     }
     if (objectEvent->directionOverwrite) {
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
-        InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
+        //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
     }
     else
         InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_NORMAL);
@@ -6936,7 +6936,7 @@ bool8 MovementAction_WalkFastLeft_Step0(struct ObjectEvent *objectEvent, struct 
     }
     if (objectEvent->directionOverwrite) {
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
-        InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
+        //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
     }
     else
         InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_1);
@@ -6968,7 +6968,7 @@ bool8 MovementAction_WalkFastRight_Step0(struct ObjectEvent *objectEvent, struct
     }
     if (objectEvent->directionOverwrite) {
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
-        InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
+        //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_FAST_1);
     }
     else
         InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_1);
