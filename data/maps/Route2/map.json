@@ -22,6 +22,11 @@
       "map": "MAP_UNION_CITY",
       "offset": -49,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE1",
+      "offset": 33,
+      "direction": "down"
     }
   ],
   "object_events": [
