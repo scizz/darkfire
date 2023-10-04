@@ -6544,15 +6544,20 @@ bool8 MovementAction_WalkNormalLeft_Step0(struct ObjectEvent *objectEvent, struc
             sprite->animNum = 6;
             sprite->x2 = 8;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
-        }
-        //InitNpcForMovement(objectEvent, sprite, DIR_WEST, 0);
+        }    
     }
     if (objectEvent->directionOverwrite) {
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
         //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
     }
+    else {
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            InitNpcForMovement(objectEvent, sprite, DIR_WEST, 0); //follower
+        }
     else
         InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_NORMAL);
+    }
     return MovementAction_WalkNormalLeft_Step1(objectEvent, sprite);
 }
 
@@ -6577,14 +6582,19 @@ bool8 MovementAction_WalkNormalRight_Step0(struct ObjectEvent *objectEvent, stru
             sprite->x2 = -8;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
-        //InitNpcForMovement(objectEvent, sprite, DIR_EAST, 0);
     }
     if (objectEvent->directionOverwrite) {
         InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
         //InitNpcForMovement(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
     }
+    else {
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            InitNpcForMovement(objectEvent, sprite, DIR_EAST, 0); //follower
+        }
     else
         InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_NORMAL);
+    }
     return MovementAction_WalkNormalRight_Step1(objectEvent, sprite);
 }
 
