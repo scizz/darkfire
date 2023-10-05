@@ -786,6 +786,28 @@ PetalburgCity_EventScript_FollowMove::
 	release
 	end
 
+GiveQuest::
+	lock
+	faceplayer
+	msgbox GiveQuest_Text, MSGBOX_DEFAULT
+	setflag FLAG_SYS_QUEST_MENU_GET
+	release
+	end
+
+SetQuest::
+	lock
+	faceplayer
+	msgbox ActiveQuest_Text, MSGBOX_DEFAULT
+	questmenu QUEST_MENU_SET_ACTIVE QUEST_1
+	release
+	end
+
+GiveQuest_Text:
+	.string "Quests were added to Start Menu!$"	
+
+ActiveQuest_Text:
+	.string "Rockfall Cave quest activated!$"
+
 CommonName_Text_Tyler:
 	.string "Tyler$"
 
