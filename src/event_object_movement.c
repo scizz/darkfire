@@ -11259,6 +11259,7 @@ bool8 MovementActionFunc_RunSlowUp_Step0(struct ObjectEvent *objectEvent, struct
     return MovementActionFunc_RunSlow_Step1(objectEvent, sprite);
 }
 
+// add follower bob up and down 1px
 bool8 MovementActionFunc_RunSlowLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     if (objectEvent->directionOverwrite)
@@ -11285,6 +11286,13 @@ bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct S
         return TRUE;
     }
     return FALSE;
+}
+
+// trainer custom scripts
+u16 GetObjectEventTrainerSightFlagByObjectEventId(u8 objEventId)
+{
+    // ideally, would use a the last two bytes of the object event template
+    return GetObjectEventTemplateByLocalIdAndMap(gObjectEvents[objEventId].localId, gObjectEvents[objEventId].mapNum, gObjectEvents[objEventId].mapGroup)->trainerType;
 }
 
 // NEW
