@@ -6365,12 +6365,18 @@ bool8 MovementAction_WalkSlowLeft_Step0(struct ObjectEvent *objectEvent, struct 
             sprite->x2 = 8;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
-        InitWalkSlow(objectEvent, sprite, DIR_WEST);
+        //InitWalkSlow(objectEvent, sprite, DIR_WEST);
     }
     if (objectEvent->directionOverwrite)
         InitWalkSlow(objectEvent, sprite, objectEvent->directionOverwrite);
+    else {
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            InitNpcForMovement(objectEvent, sprite, DIR_WEST, 0); //follower
+        }
     else
         InitWalkSlow(objectEvent, sprite, DIR_WEST);
+    }
     return MovementAction_WalkSlowLeft_Step1(objectEvent, sprite);
 }
 
@@ -6395,12 +6401,18 @@ bool8 MovementAction_WalkSlowRight_Step0(struct ObjectEvent *objectEvent, struct
             sprite->x2 = -8;
             SeekSpriteAnim(sprite, ++sprite->animCmdIndex);
         }
-        InitWalkSlow(objectEvent, sprite, DIR_EAST);
+        //InitWalkSlow(objectEvent, sprite, DIR_EAST);
     }
     if (objectEvent->directionOverwrite)
         InitWalkSlow(objectEvent, sprite, objectEvent->directionOverwrite);
+    else {
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            InitNpcForMovement(objectEvent, sprite, DIR_EAST, 0); //follower
+        }
     else
         InitWalkSlow(objectEvent, sprite, DIR_EAST);
+    }
     return MovementAction_WalkSlowRight_Step1(objectEvent, sprite);
 }
 
