@@ -1319,3 +1319,6 @@ $(MID_SUBDIR)/mus_northstar_tournament.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_surfing.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
+
+$(MID_SUBDIR)/mus_anheim_town.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V127

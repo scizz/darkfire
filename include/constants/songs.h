@@ -509,6 +509,7 @@
 #define MUS_DREAMWORLD              575
 #define MUS_NORTHSTAR_TOURNAMENT    576
 #define MUS_SURFING                 577
+#define MUS_ANHEIM_TOWN             578
 #define END_MUS                     MUS_SURFING
 
 #define PH_TRAP_BLEND               END_MUS + 1

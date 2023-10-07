@@ -211,8 +211,8 @@ DirectSoundWaveData_sc88pro_flute::
 	.incbin "sound/direct_sound_samples/sc88pro_flute.bin"
 
 	.align 2
-DirectSoundWaveData_sc88pro_cello::
-	.incbin "sound/direct_sound_samples/sc88pro_cello.bin"
+DirectSoundWaveData_tg77_cello_c3::
+	.incbin "sound/direct_sound_samples/tg77_cello_c3.bin"
 
 	.align 2
 DirectSoundWaveData_sc88pro_fingered_bass::

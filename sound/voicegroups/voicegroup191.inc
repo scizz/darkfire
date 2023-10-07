@@ -48,7 +48,7 @@ voicegroup191::
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 0, 255, 127
 	voice_directsound 60, 0, violin, 255, 255, 0, 221
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ viola
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_cello, 255, 0, 255, 127
+	voice_directsound 60, 0, DirectSoundWaveData_tg77_cello_c3, 255, 127, 175, 127
 	voice_directsound 60, 0, contrabass, 255, 255, 0, 221 @ contrabass
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ tremolo strings
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_pizzicato_strings, 255, 216, 0, 165

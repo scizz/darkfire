@@ -2,11 +2,14 @@
   "id": "MAP_ANHEIM_FOREST",
   "name": "AnheimForest",
   "layout": "LAYOUT_ANHEIM_FOREST",
-  "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_ROUTE_3",
+  "music": "MUS_ANHEIM_FOREST",
+  "region_map_section": "MAPSEC_ANHEIM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_FOREST",
   "connections": 0,
@@ -607,8 +610,5 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "AnheimForest_Sign_Town"
     }
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
