@@ -2,7 +2,7 @@
   "id": "MAP_TAMAROK_TUNNELS",
   "name": "TamarokTunnels",
   "layout": "LAYOUT_TAMAROK_TUNNELS",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_CAVE",
   "region_map_section": "MAPSEC_ROUTE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
