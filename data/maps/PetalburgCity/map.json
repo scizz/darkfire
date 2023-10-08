@@ -332,7 +332,7 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ANHEIM_FOREST",
+      "dest_map": "MAP_HIGHWIND_VILLAGE",
       "dest_warp_id": "0"
     },
     {
@@ -374,7 +374,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": -2,
+      "x": 0,
       "y": 9,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -383,7 +383,7 @@
     },
     {
       "type": "trigger",
-      "x": -2,
+      "x": 0,
       "y": 11,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -392,7 +392,7 @@
     },
     {
       "type": "trigger",
-      "x": -1,
+      "x": 1,
       "y": 12,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -401,7 +401,7 @@
     },
     {
       "type": "trigger",
-      "x": -2,
+      "x": 0,
       "y": 13,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",
@@ -419,7 +419,7 @@
     },
     {
       "type": "trigger",
-      "x": -2,
+      "x": 0,
       "y": 6,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
@@ -428,7 +428,7 @@
     },
     {
       "type": "trigger",
-      "x": -2,
+      "x": 0,
       "y": 8,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
@@ -437,7 +437,7 @@
     },
     {
       "type": "trigger",
-      "x": -2,
+      "x": 0,
       "y": 7,
       "elevation": 3,
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",

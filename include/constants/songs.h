@@ -510,7 +510,8 @@
 #define MUS_NORTHSTAR_TOURNAMENT    576
 #define MUS_SURFING                 577
 #define MUS_ANHEIM_TOWN             578
-#define END_MUS                     MUS_SURFING
+#define MUS_HIGHWIND_VILLAGE        579
+#define END_MUS                     MUS_HIGHWIND_VILLAGE
 
 #define PH_TRAP_BLEND               END_MUS + 1
 #define PH_TRAP_HELD                END_MUS + 2

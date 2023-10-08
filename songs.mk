@@ -1321,4 +1321,7 @@ $(MID_SUBDIR)/mus_surfing.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
 
 $(MID_SUBDIR)/mus_anheim_town.s: %.s: %.mid
-	$(MID) $< $@ -E -G191 -V127
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
+
+$(MID_SUBDIR)/mus_highwind_village.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
