@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -378,8 +381,8 @@
       "dest_warp_id": "4"
     },
     {
-      "x": 11,
-      "y": 85,
+      "x": 39,
+      "y": 50,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_TOWN",
       "dest_warp_id": "5"
@@ -485,8 +488,5 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route5_Sign"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
