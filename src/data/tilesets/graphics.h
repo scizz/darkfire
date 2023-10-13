@@ -1824,3 +1824,22 @@ const u16 gTilesetPalettes_Grotto1[][16] =
 };
 
 const u32 gTilesetTiles_Grotto1[] = INCBIN_U32("data/tilesets/secondary/grotto_1/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Zorya[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/zorya/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Zorya[] = INCBIN_U32("data/tilesets/secondary/zorya/tiles.4bpp.lz");

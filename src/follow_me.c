@@ -845,6 +845,9 @@ void Task_DoDoorWarp(u8 taskId)
                 task->data[1] = FieldAnimateDoorClose(*x, *y - 1);
             ObjectEventClearHeldMovementIfFinished(&gObjectEvents[playerObjId]);
             SetPlayerVisibility(0);
+            
+            //todo remove shadow
+
             task->data[0] = 3;
         }
         break;
