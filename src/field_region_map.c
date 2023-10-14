@@ -54,7 +54,7 @@ static const struct BgTemplate sFieldRegionMapBgTemplates[] = {
         .priority = 0,
         .baseTile = 0
     }, {
-        .bg = 2,
+        .bg = 1,
         .charBaseIndex = 2,
         .mapBaseIndex = 28,
         .screenSize = 2,
@@ -162,7 +162,7 @@ static void FieldUpdateRegionMap(void)
         case 2:
             SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
             ShowBg(0);
-            ShowBg(2);
+            ShowBg(1);
             sFieldRegionMapHandler->state++;
             break;
         case 3:
