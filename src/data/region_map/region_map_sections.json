@@ -67,16 +67,176 @@
     {
       "map_section": "MAPSEC_ANHEIM_TOWN",
       "name": "Anheim Town",
-      "x": 19,
+      "x": 17,
       "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ANHEIM_FOREST",
+      "name": "Anheim Forest",
+      "x": 16,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_4",
+      "name": "Route 4",
+      "x": 14,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_GREENDALE_VILLAGE",
+      "name": "Greendale Village",
+      "x": 13,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_10",
+      "name": "Route 10",
+      "x": 9,
+      "y": 3,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_PINLEAF_TOWN",
+      "name": "Pinleaf Town",
+      "x": 8,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_9",
+      "name": "Route 9",
+      "x": 10,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_LAVERIA_CITY",
+      "name": "Laveria City",
+      "x": 10,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_7",
+      "name": "Route 7",
+      "x": 9,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_TAMAROK_TUNNELS",
+      "name": "Tamarok Tunnels",
+      "x": 8,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_6",
+      "name": "Route 6",
+      "x": 11,
+      "y": 0,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_CHARRED_SUMMIT",
+      "name": "Charred Summit",
+      "x": 13,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROCKFALL_CAVE",
+      "name": "Rockfall Cave",
+      "x": 14,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_SOUL_PEAK",
+      "name": "Soul Peak",
+      "x": 16,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_ROUTE_5",
       "name": "Route 5",
-      "x": 19,
+      "x": 16,
       "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_PALACE_OF_ICE",
+      "name": "Palace of Ice",
+      "x": 5,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_HIGHWIND_VILLAGE",
+      "name": "Highwind Village",
+      "x": 2,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_SNOWDRIFT_FOREST",
+      "name": "Snowdrift Forest",
+      "x": 2,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_8",
+      "name": "Route 8",
+      "x": 2,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ARCTIC_BAY",
+      "name": "Arctic Bay",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_NORTHSTAR_CITY",
+      "name": "Northstar City",
+      "x": 4,
+      "y": 0,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_31",
+      "name": "Route 31",
+      "x": 22,
+      "y": 7,
       "width": 1,
       "height": 1
     }
