@@ -2,7 +2,7 @@
   "id": "MAP_HIGHWIND_VILLAGE_POKEMON_CENTER_1F",
   "name": "HighwindVillage_PokemonCenter_1F",
   "layout": "LAYOUT_HIGHWIND_VILLAGE_POKEMON_CENTER_1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_HIGHWIND_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgCity_PokemonCenter_1F_EventScript_Nurse",
+      "script": "Highwind_Village_PokemonCenter_1F_EventScript_Nurse",
       "flag": "0"
     },
     {

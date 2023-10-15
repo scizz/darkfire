@@ -2,7 +2,12 @@
 .set LOCALID_MUDKIP, 4
 
 HighwindVillage_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HighwindVillage_OnTransition
 	.byte 0
+
+HighwindVillage_OnTransition:
+	setflag FLAG_VISITED_HIGHWIND_VILLAGE
+	end
 
 HighwindVillage_Sign::
 	msgbox HighwindVillage_Text_Sign, MSGBOX_SIGN
