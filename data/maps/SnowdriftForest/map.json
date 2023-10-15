@@ -2,7 +2,7 @@
   "id": "MAP_SNOWDRIFT_FOREST",
   "name": "SnowdriftForest",
   "layout": "LAYOUT_SNOWDRIFT_FOREST",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_SNOWDRIFT_FOREST",
   "region_map_section": "MAPSEC_SNOWDRIFT_FOREST",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
