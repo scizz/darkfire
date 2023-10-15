@@ -3,7 +3,7 @@
   "name": "TamarokTunnels",
   "layout": "LAYOUT_TAMAROK_TUNNELS",
   "music": "MUS_CAVE",
-  "region_map_section": "MAPSEC_ROUTE_7",
+  "region_map_section": "MAPSEC_TAMAROK_TUNNELS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

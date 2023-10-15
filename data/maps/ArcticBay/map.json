@@ -3,7 +3,7 @@
   "name": "ArcticBay",
   "layout": "LAYOUT_ARCTIC_BAY",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_ROUTE_8",
+  "region_map_section": "MAPSEC_ARCTIC_BAY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

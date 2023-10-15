@@ -3,7 +3,7 @@
   "name": "PalaceOfIce_Entrance",
   "layout": "LAYOUT_PALACE_OF_ICE_ENTRANCE",
   "music": "MUS_ICE_PALACE",
-  "region_map_section": "MAPSEC_ROUTE_7",
+  "region_map_section": "MAPSEC_PALACE_OF_ICE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

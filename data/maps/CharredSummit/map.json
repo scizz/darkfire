@@ -3,7 +3,7 @@
   "name": "CharredSummit",
   "layout": "LAYOUT_CHARRED_SUMMIT",
   "music": "MUS_ABANDONED_MUSEUM",
-  "region_map_section": "MAPSEC_ROUTE_6",
+  "region_map_section": "MAPSEC_CHARRED_SUMMIT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
