@@ -18,7 +18,7 @@ The project is currently being developed by [Karl](https://github.com/scizz) and
 
 ## How to Build?
 
-There is currently no stable release available to build. However, you *can* play our original project at [PokeCommunity](https://www.pokecommunity.com/showthread.php?t=421395), if you wish.
+There is currently no stable release available to build. However, you can play our original project at [PokeCommunity](https://www.pokecommunity.com/showthread.php?t=421395).
 
 ## Can I contribute to Pokémon Darkfire?
 
