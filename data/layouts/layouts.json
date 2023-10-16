@@ -5557,7 +5557,7 @@
       "width": 30,
       "height": 28,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_Zorya",
       "border_filepath": "data/layouts/ZonyaVillage/border.bin",
       "blockdata_filepath": "data/layouts/ZonyaVillage/map.bin"
     },
