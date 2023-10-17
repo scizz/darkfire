@@ -5554,8 +5554,8 @@
     {
       "id": "LAYOUT_ZONYA_VILLAGE",
       "name": "ZonyaVillage_Layout",
-      "width": 30,
-      "height": 28,
+      "width": 60,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Zorya",
       "border_filepath": "data/layouts/ZonyaVillage/border.bin",
