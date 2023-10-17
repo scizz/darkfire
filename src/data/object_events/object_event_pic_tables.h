@@ -2457,6 +2457,10 @@ const struct SpriteFrameImage gObjectEventPicTable_SnorlaxSleeping[] = {
     overworld_frame(gObjectEventPic_SnorlaxSleeping, 4, 4, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_RangerBoard[] = {
+    overworld_frame(gObjectEventPic_RangerBoard, 4, 4, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_ClamperlSign[] = {
     overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 0),
     overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 1),
