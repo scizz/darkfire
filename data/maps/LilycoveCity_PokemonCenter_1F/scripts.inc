@@ -6,7 +6,7 @@ LilycoveCity_PokemonCenter_1F_MapScripts:: @ 821C5B2
 	.byte 0
 
 LilycoveCity_PokemonCenter_1F_OnTransition: @ 821C5BD
-	setrespawn HEAL_LOCATION_LILYCOVE_CITY
+	setrespawn HEAL_LOCATION_LAVERIA_CITY
 	goto LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx
 	end
 

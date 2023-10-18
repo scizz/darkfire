@@ -126,7 +126,7 @@ SSTidalCorridor_EventScript_ExitSailor:: @ 823C119
 	end
 
 SSTidalCorridor_EventScript_ExitLilycove:: @ 823C13B
-	setrespawn HEAL_LOCATION_LILYCOVE_CITY
+	setrespawn HEAL_LOCATION_LAVERIA_CITY
 	msgbox SSTidalCorridor_Text_WeveArrived, MSGBOX_DEFAULT
 	call_if_set FLAG_RECEIVED_TM49, SSTidalCorridor_EventScript_HideSnatchGiver
 	warp MAP_LILYCOVE_CITY_HARBOR, 255, 8, 11
