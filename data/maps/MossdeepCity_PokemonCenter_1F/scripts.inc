@@ -6,7 +6,7 @@ MossdeepCity_PokemonCenter_1F_MapScripts:: @ 822223F
 	.byte 0
 
 MossdeepCity_PokemonCenter_1F_OnTransition: @ 822224A
-	setrespawn HEAL_LOCATION_MOSSDEEP_CITY
+	setrespawn HEAL_LOCATION_PINLEAF_TOWN
 	end
 
 MossdeepCity_PokemonCenter_1F_EventScript_Nurse:: @ 822224E
