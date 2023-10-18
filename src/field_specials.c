@@ -3758,7 +3758,7 @@ void GetBattlePyramidHint(void)
 void ResetHealLocationFromDewford(void)
 {
     if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(DEWFORD_TOWN) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(DEWFORD_TOWN))
-        SetLastHealLocationWarp(HEAL_LOCATION_PETALBURG_CITY);
+        SetLastHealLocationWarp(HEAL_LOCATION_SUNRISE_TOWN);
 }
 
 bool8 InPokemonCenter(void)

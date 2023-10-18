@@ -3,7 +3,7 @@
 
 #define HEAL_LOCATION_NONE                                     0
 #define HEAL_LOCATION_CHANDRA_VILLAGE                          1
-#define HEAL_LOCATION_PETALBURG_CITY                           2
+#define HEAL_LOCATION_SUNRISE_TOWN                             2
 #define HEAL_LOCATION_SLATEPORT_CITY                           3
 #define HEAL_LOCATION_MAUVILLE_CITY                            4
 #define HEAL_LOCATION_RUSTBORO_CITY                            5

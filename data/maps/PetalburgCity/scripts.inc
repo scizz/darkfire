@@ -21,7 +21,7 @@ PetalburgCity_InitRoomObjects::
 	end
 
 PetalburgCity_OnTransition: @ 81DC2D7
-	setflag FLAG_VISITED_PETALBURG_CITY
+	setflag FLAG_VISITED_SUNRISE_TOWN
 	compare VAR_PETALBURG_CITY_STATE, 0
 	call_if_eq PetalburgCity_EventScript_MoveGymBoyToWestEntrance
 	compare VAR_PETALBURG_CITY_STATE, 2
