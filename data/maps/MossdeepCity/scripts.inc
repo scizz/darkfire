@@ -76,7 +76,7 @@ MossdeepCity_EventScript_SpaceCenterSign:: @ 81E4B2F
 	end
 
 MossdeepCity_EventScript_VisitedMossdeep:: @ 81E4B38
-	setflag FLAG_VISITED_MOSSDEEP_CITY
+	setflag FLAG_VISITED_PINLEAF_TOWN
 	setvar VAR_TEMP_1, 1
 	end
 
