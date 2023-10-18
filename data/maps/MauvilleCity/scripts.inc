@@ -7,7 +7,7 @@ MauvilleCity_MapScripts::
 	.byte 0
 
 MauvilleCity_OnTransition:
-	setflag FLAG_VISITED_MAUVILLE_CITY
+	setflag FLAG_VISITED_GREENDALE_VILLAGE
 	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
 	clearflag FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION
 	setflag FLAG_SYS_TV_START
