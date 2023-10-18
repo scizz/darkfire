@@ -6,7 +6,7 @@ PetalburgCity_PokemonCenter_1F_MapScripts:: @ 82079E8
 	.byte 0
 
 PetalburgCity_PokemonCenter_1F_OnTransition: @ 82079F3
-	setrespawn HEAL_LOCATION_PETALBURG_CITY
+	setrespawn HEAL_LOCATION_SUNRISE_TOWN
 	call Common_EventScript_UpdateBrineyLocation
 	end
 
