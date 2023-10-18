@@ -6,7 +6,7 @@ FortreeCity_PokemonCenter_1F_MapScripts:: @ 82173D8
 	.byte 0
 
 FortreeCity_PokemonCenter_1F_OnTransition: @ 82173E3
-	setrespawn HEAL_LOCATION_FORTREE_CITY
+	setrespawn HEAL_LOCATION_ANHEIM_TOWN
 	end
 
 FortreeCity_PokemonCenter_1F_EventScript_Nurse:: @ 82173E7

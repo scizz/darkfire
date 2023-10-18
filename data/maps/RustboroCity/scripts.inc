@@ -11,7 +11,7 @@ RustboroCity_MapScripts:: @ 81E06BD
 	.byte 0
 
 RustboroCity_OnTransition: @ 81E06C8
-	setflag FLAG_VISITED_RUSTBORO_CITY
+	setflag FLAG_VISITED_ANHEIM_TOWN
 	call Common_EventScript_SetupRivalGfxId
 	compare VAR_RUSTBORO_CITY_STATE, 6
 	call_if_eq RustboroCity_EventScript_HideMapNamePopup
