@@ -6,7 +6,7 @@ RustboroCity_PokemonCenter_1F_MapScripts:: @ 8214D62
 	.byte 0
 
 RustboroCity_PokemonCenter_1F_OnTransition: @ 8214D6D
-	setrespawn HEAL_LOCATION_RUSTBORO_CITY
+	setrespawn HEAL_LOCATION_ROUTE_5
 	call Common_EventScript_UpdateBrineyLocation
 	end
 
