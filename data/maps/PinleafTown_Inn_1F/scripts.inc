@@ -1,8 +1,8 @@
-PinleafTown_Inn_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_Inn_OnTransition
+PinleafTown_Inn_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_Inn_1F_OnTransition
 	.byte 0
 
-PinleafTown_Inn_OnTransition:
+PinleafTown_Inn_1F_OnTransition:
 	setrespawn HEAL_LOCATION_PINLEAF_TOWN
 	end
 

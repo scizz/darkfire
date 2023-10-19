@@ -24,7 +24,7 @@ PinleafTown_Mart_Clerk::
 	end
 
 	.align 2
-LaveriaCity_Mart_Pokemart_Basic:
+PinleafTown_Mart_Basic:
 	.2byte ITEM_ENERGY_POWDER
 	.2byte ITEM_ENERGY_ROOT
 	.2byte ITEM_HEAL_POWDER
