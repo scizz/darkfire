@@ -11,7 +11,7 @@ GreendaleVillage_MapScripts::
 
 GreendaleVillage_Tournament::
 	lock
-	setrespawn HEAL_LOCATION_NORTHSTAR_CITY
+	setrespawn HEAL_LOCATION_GREENDALE_VILLAGE
 	special HealPlayerParty
 	removeobject LOCALID_ROSE
 	setflag FLAG_HIDE_GREENDALE_VILLAGE_ROSE
