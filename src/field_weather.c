@@ -449,6 +449,13 @@ static void FadeInScreenWithWeather(void)
         }
         break;
     case WEATHER_VOLCANIC_ASH:
+        if (FadeInScreen_FogHorizontal() == FALSE)
+        {
+            Weather_SetBlendCoeffs(8, 12); // Indoor shadows
+            gWeatherPtr->colorMapIndex = 0;
+            gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
+        }
+        break;
     case WEATHER_SANDSTORM:
     case WEATHER_FOG_DIAGONAL:
     case WEATHER_UNDERWATER:

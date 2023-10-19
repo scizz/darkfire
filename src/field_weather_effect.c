@@ -1389,7 +1389,7 @@ void FogHorizontal_InitVars(void)
         gWeatherPtr->fogHScrollCounter = 0;
         gWeatherPtr->fogHScrollOffset = 0;
         gWeatherPtr->fogHScrollPosX = 0;
-        Weather_SetBlendCoeffs(0, 16);
+        Weather_SetBlendCoeffs(8, 12);
     }
 }
 
@@ -1545,8 +1545,8 @@ void Ash_InitVars(void)
     gWeatherPtr->ashUnused = 20; // Never read
     if (!gWeatherPtr->ashSpritesCreated)
     {
-        Weather_SetBlendCoeffs(0, 16);
-        //SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(64, 63)); // These aren't valid blend coefficients!
+        Weather_SetBlendCoeffs(0, 12);
+        // SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(64, 63)); // These aren't valid blend coefficients!
     }
     //gWeatherPtr->noShadows = FALSE;
 }
@@ -1574,7 +1574,7 @@ void Ash_Main(void)
         if (!gWeatherPtr->ashSpritesCreated)
             CreateAshSprites();
 
-        Weather_SetTargetBlendCoeffs(16, 0, 1);
+        Weather_SetTargetBlendCoeffs(10, 12, 1);
         gWeatherPtr->initStep++;
         break;
     case 2:
@@ -1595,7 +1595,7 @@ bool8 Ash_Finish(void)
     switch (gWeatherPtr->finishStep)
     {
     case 0:
-        Weather_SetTargetBlendCoeffs(0, 16, 1);
+        Weather_SetTargetBlendCoeffs(0, 12, 1);
         gWeatherPtr->finishStep++;
         break;
     case 1:
@@ -1656,7 +1656,7 @@ static const union AnimCmd *const sAshSpriteAnimCmds[] =
 static const struct SpriteTemplate sAshSpriteTemplate =
 {
     .tileTag = GFXTAG_ASH,
-    .paletteTag = 0x1201,
+    .paletteTag = 0x1200,
     .oam = &sAshSpriteOamData,
     .anims = sAshSpriteAnimCmds,
     .images = NULL,
@@ -1764,7 +1764,7 @@ void FogDiagonal_InitVars(void)
         gWeatherPtr->fogDYOffset = 0;
         gWeatherPtr->fogDBaseSpritesX = 0;
         gWeatherPtr->fogDPosY = 0;
-        Weather_SetBlendCoeffs(0, 16);
+        Weather_SetBlendCoeffs(8, 12);
     }
     //gWeatherPtr->noShadows = TRUE;
 }
@@ -1979,7 +1979,7 @@ void Sandstorm_InitVars(void)
         if (gWeatherPtr->sandstormWaveIndex >= 0x80 - MIN_SANDSTORM_WAVE_INDEX)
             gWeatherPtr->sandstormWaveIndex = 0x80 - gWeatherPtr->sandstormWaveIndex;
 
-        Weather_SetBlendCoeffs(0, 16);
+        Weather_SetBlendCoeffs(8, 12);
     }
     //gWeatherPtr->noShadows = FALSE;
 }
