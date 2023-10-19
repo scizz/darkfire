@@ -1,7 +1,21 @@
 .set LOCALID_NURSE, 3
 
 UnionCity_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, UnionCity_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
+
+UnionCity_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_UNION_CITY
+	end
+
+UnionCity_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
 
 UnionCity_PokemonCenter_1F_Old_Man::
 	msgbox UnionCity_PokemonCenter_1F_Text_Old_Man, MSGBOX_NPC

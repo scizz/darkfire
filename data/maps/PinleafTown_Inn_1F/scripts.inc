@@ -1,5 +1,10 @@
-PinleafTown_Inn_1F_MapScripts::
+PinleafTown_Inn_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_Inn_OnTransition
 	.byte 0
+
+PinleafTown_Inn_OnTransition:
+	setrespawn HEAL_LOCATION_PINLEAF_TOWN
+	end
 
 PinleafTown_Inn_1F_Girl::
 	msgbox PinleafTown_Inn_1F_Text_Girl, MSGBOX_NPC

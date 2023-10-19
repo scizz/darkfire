@@ -1,7 +1,21 @@
 .set LOCALID_NURSE, 3
 
 GreendaleVillage_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, GreendaleVillage_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
+
+GreendaleVillage_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_GREENDALE_VILLAGE
+	end
+
+GreendaleVillage_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
 
 GreendaleVillage_PokemonCenter_1F_Boy::
 	msgbox GreendaleVillage_PokemonCenter_1F_Text_Boy, MSGBOX_NPC
