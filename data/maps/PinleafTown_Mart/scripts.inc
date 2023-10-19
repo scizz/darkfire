@@ -13,6 +13,25 @@ PinleafTown_Mart_Boy::
 	msgbox PinleafTown_Mart_Text_Boy, MSGBOX_NPC
 	end
 
+PinleafTown_Mart_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart PinleafTown_Mart_Basic
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LaveriaCity_Mart_Pokemart_Basic:
+	.2byte ITEM_ENERGY_POWDER
+	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_HEAL_POWDER
+	.2byte ITEM_NONE
+	release
+	end
+
 PinleafTown_Mart_Text_Assistant:
 	.string "{COLOR}{RED}Welcome to the Pinleaf Herb Shop!\p"
 	.string "We have various medicinal herbs with\n"
