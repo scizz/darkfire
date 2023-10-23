@@ -14558,7 +14558,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SEEDOT"
+                "species": "SPECIES_VENOMOTH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEVIPER"
               },
               {
                 "min_level": 5,
@@ -14569,11 +14574,6 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_VIGOROTH"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
