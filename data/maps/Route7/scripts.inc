@@ -1,5 +1,14 @@
 Route7_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Route7_OnLoad
+	map_script MAP_SCRIPT_ON_RESUME, Route7_OnResume
 	.byte
+
+Route7_OnLoad:
+	end
+
+Route7_OnResume:
+	setstepcallback STEP_CB_ASH
+	end
 
 Route7_Sign::
 	msgbox Route7_Text_Sign, MSGBOX_SIGN
