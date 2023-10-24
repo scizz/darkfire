@@ -240,503 +240,500 @@
 #define OBJ_EVENT_GFX_LINK_RS_MAY                236
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
-#define OBJ_EVENT_GFX_BULBASAUR                  239
-#define OBJ_EVENT_GFX_IVYSAUR                    240
-#define OBJ_EVENT_GFX_VENUSAUR                   241 
-#define OBJ_EVENT_GFX_CHARMANDER                 242
-#define OBJ_EVENT_GFX_CHARMELEON                 243
-#define OBJ_EVENT_GFX_CHARIZARD                  244
-#define OBJ_EVENT_GFX_SQUIRTLE                   245
-#define OBJ_EVENT_GFX_WARTORTLE                  246
-#define OBJ_EVENT_GFX_BLASTOISE                  247
-#define OBJ_EVENT_GFX_CATERPIE                   248
-#define OBJ_EVENT_GFX_METAPOD                    249
-#define OBJ_EVENT_GFX_BUTTERFREE                 250
-#define OBJ_EVENT_GFX_WEEDLE                     251
-#define OBJ_EVENT_GFX_KAKUNA                     252
-#define OBJ_EVENT_GFX_BEEDRILL                   253
-#define OBJ_EVENT_GFX_PIDGEY                     254
-#define OBJ_EVENT_GFX_PIDGEOTTO                  255
-#define OBJ_EVENT_GFX_PIDGEOT                    256
-#define OBJ_EVENT_GFX_RATTATA                    257
-#define OBJ_EVENT_GFX_RATICATE                   258
-#define OBJ_EVENT_GFX_SPEAROW                    259
-#define OBJ_EVENT_GFX_FEAROW                     260
-#define OBJ_EVENT_GFX_EKANS                      261
-#define OBJ_EVENT_GFX_ARBOK                      262
-#define OBJ_EVENT_GFX_PIKACHU_FOLLOWER           263
-#define OBJ_EVENT_GFX_RAICHU                     264
-#define OBJ_EVENT_GFX_SANDSHREW                  265
-#define OBJ_EVENT_GFX_SANDSLASH                  266
-#define OBJ_EVENT_GFX_NIDORAN_F                  267
-#define OBJ_EVENT_GFX_NIDORINA                   268
-#define OBJ_EVENT_GFX_NIDOQUEEN                  269
-#define OBJ_EVENT_GFX_NIDORAN_M                  270
-#define OBJ_EVENT_GFX_NIDORINO                   271
-#define OBJ_EVENT_GFX_NIDOKING                   272
-#define OBJ_EVENT_GFX_CLEFAIRY                   273
-#define OBJ_EVENT_GFX_CLEFABLE                   274
-#define OBJ_EVENT_GFX_VULPIX                     275
-#define OBJ_EVENT_GFX_NINETALES                  276
-#define OBJ_EVENT_GFX_JIGGLYPUFF                 277
-#define OBJ_EVENT_GFX_WIGGLYTUFF                 278
-#define OBJ_EVENT_GFX_ZUBAT                      279
-#define OBJ_EVENT_GFX_GOLBAT                     280
-#define OBJ_EVENT_GFX_ODDISH                     281
-#define OBJ_EVENT_GFX_GLOOM                      282
-#define OBJ_EVENT_GFX_VILEPLUME                  283
-#define OBJ_EVENT_GFX_PARAS                      284
-#define OBJ_EVENT_GFX_PARASECT                   285
-#define OBJ_EVENT_GFX_VENONAT                    286
-#define OBJ_EVENT_GFX_VENOMOTH                   287
-#define OBJ_EVENT_GFX_DIGLETT                    288
-#define OBJ_EVENT_GFX_DUGTRIO                    289
-#define OBJ_EVENT_GFX_MEOWTH                     290
-#define OBJ_EVENT_GFX_PERSIAN                    291
-#define OBJ_EVENT_GFX_PSYDUCK                    292
-#define OBJ_EVENT_GFX_GOLDUCK                    293
-#define OBJ_EVENT_GFX_MANKEY                     294
-#define OBJ_EVENT_GFX_PRIMEAPE                   295
-#define OBJ_EVENT_GFX_GROWLITHE                  296
-#define OBJ_EVENT_GFX_ARCANINE                   297
-#define OBJ_EVENT_GFX_POLIWAG                    298
-#define OBJ_EVENT_GFX_POLIWHIRL                  299
-#define OBJ_EVENT_GFX_POLIWRATH                  300
-#define OBJ_EVENT_GFX_ABRA                       301
-#define OBJ_EVENT_GFX_KADABRA                    302
-#define OBJ_EVENT_GFX_ALAKAZAM                   303
-#define OBJ_EVENT_GFX_MACHOP                     304
-#define OBJ_EVENT_GFX_MACHOKE                    305
-#define OBJ_EVENT_GFX_MACHAMP                    306
-#define OBJ_EVENT_GFX_BELLSPROUT                 307
-#define OBJ_EVENT_GFX_WEEPINBELL                 308
-#define OBJ_EVENT_GFX_VICTREEBEL                 309
-#define OBJ_EVENT_GFX_TENTACOOL                  310
-#define OBJ_EVENT_GFX_TENTACRUEL                 311
-#define OBJ_EVENT_GFX_GEODUDE                    312
-#define OBJ_EVENT_GFX_GRAVELER                   313
-#define OBJ_EVENT_GFX_GOLEM                      314
-#define OBJ_EVENT_GFX_PONYTA                     315
-#define OBJ_EVENT_GFX_RAPIDASH                   316
-#define OBJ_EVENT_GFX_SLOWPOKE                   317
-#define OBJ_EVENT_GFX_SLOWBRO                    318
-#define OBJ_EVENT_GFX_MAGNEMITE                  319
-#define OBJ_EVENT_GFX_MAGNETON                   320
-#define OBJ_EVENT_GFX_FARFETCHD                  321
-#define OBJ_EVENT_GFX_DODUO                      322
-#define OBJ_EVENT_GFX_DODRIO                     323
-#define OBJ_EVENT_GFX_SEEL                       324
-#define OBJ_EVENT_GFX_DEWGONG                    325
-#define OBJ_EVENT_GFX_GRIMER                     326
-#define OBJ_EVENT_GFX_MUK                        327
-#define OBJ_EVENT_GFX_SHELLDER                   328
-#define OBJ_EVENT_GFX_CLOYSTER                   329
-#define OBJ_EVENT_GFX_GASTLY                     330
-#define OBJ_EVENT_GFX_HAUNTER                    331
-#define OBJ_EVENT_GFX_GENGAR                     332
-#define OBJ_EVENT_GFX_ONIX                       333
-#define OBJ_EVENT_GFX_DROWZEE                    334
-#define OBJ_EVENT_GFX_HYPNO                      335
-#define OBJ_EVENT_GFX_KRABBY                     336
-#define OBJ_EVENT_GFX_KINGLER                    337
-#define OBJ_EVENT_GFX_VOLTORB                    338
-#define OBJ_EVENT_GFX_ELECTRODE                  339
-#define OBJ_EVENT_GFX_EXEGGCUTE                  340
-#define OBJ_EVENT_GFX_EXEGGUTOR                  341
-#define OBJ_EVENT_GFX_CUBONE                     342
-#define OBJ_EVENT_GFX_MAROWAK                    343
-#define OBJ_EVENT_GFX_HITMONLEE                  344
-#define OBJ_EVENT_GFX_HITMONCHAN                 345
-#define OBJ_EVENT_GFX_LICKITUNG                  346
-#define OBJ_EVENT_GFX_KOFFING                    347
-#define OBJ_EVENT_GFX_WEEZING                    348
-#define OBJ_EVENT_GFX_RHYHORN                    349
-#define OBJ_EVENT_GFX_RHYDON                     350
-#define OBJ_EVENT_GFX_CHANSEY                    351
-#define OBJ_EVENT_GFX_TANGELA                    352
-#define OBJ_EVENT_GFX_KANGASKHAN                 353
-#define OBJ_EVENT_GFX_HORSEA                     354
-#define OBJ_EVENT_GFX_SEADRA                     355
-#define OBJ_EVENT_GFX_GOLDEEN                    356
-#define OBJ_EVENT_GFX_SEAKING                    357
-#define OBJ_EVENT_GFX_STARYU                     358
-#define OBJ_EVENT_GFX_STARMIE                    359
-#define OBJ_EVENT_GFX_MR_MIME                    360
-#define OBJ_EVENT_GFX_SCYTHER                    361
-#define OBJ_EVENT_GFX_JYNX                       362
-#define OBJ_EVENT_GFX_ELECTABUZZ                 363
-#define OBJ_EVENT_GFX_MAGMAR                     364
-#define OBJ_EVENT_GFX_PINSIR                     365
-#define OBJ_EVENT_GFX_TAUROS                     366
-#define OBJ_EVENT_GFX_MAGIKARP                   367
-#define OBJ_EVENT_GFX_GYARADOS                   368
-#define OBJ_EVENT_GFX_LAPRAS                     369
-#define OBJ_EVENT_GFX_DITTO                      370
-#define OBJ_EVENT_GFX_EEVEE                      371
-#define OBJ_EVENT_GFX_VAPOREON                   372
-#define OBJ_EVENT_GFX_JOLTEON                    373
-#define OBJ_EVENT_GFX_FLAREON                    374
-#define OBJ_EVENT_GFX_PORYGON                    375
-#define OBJ_EVENT_GFX_OMANYTE                    376
-#define OBJ_EVENT_GFX_OMASTAR                    377
-#define OBJ_EVENT_GFX_KABUTO                     378
-#define OBJ_EVENT_GFX_KABUTOPS                   379
-#define OBJ_EVENT_GFX_AERODACTYL                 380
-#define OBJ_EVENT_GFX_SNORLAX                    381
-#define OBJ_EVENT_GFX_ARTICUNO                   382
-#define OBJ_EVENT_GFX_ZAPDOS                     383
-#define OBJ_EVENT_GFX_MOLTRES                    384
-#define OBJ_EVENT_GFX_DRATINI                    385
-#define OBJ_EVENT_GFX_DRAGONAIR                  386
-#define OBJ_EVENT_GFX_DRAGONITE                  387
-#define OBJ_EVENT_GFX_MEWTWO                     388
-#define OBJ_EVENT_GFX_MEW_FOLLOWER               389
-#define OBJ_EVENT_GFX_CHIKORITA                  390
-#define OBJ_EVENT_GFX_BAYLEEF                    391
-#define OBJ_EVENT_GFX_MEGANIUM                   392
-#define OBJ_EVENT_GFX_CYNDAQUIL                  393
-#define OBJ_EVENT_GFX_QUILAVA                    394
-#define OBJ_EVENT_GFX_TYPHLOSION                 395
-#define OBJ_EVENT_GFX_TOTODILE                   396
-#define OBJ_EVENT_GFX_CROCONAW                   397
-#define OBJ_EVENT_GFX_FERALIGATR                 398
-#define OBJ_EVENT_GFX_SENTRET                    399
-#define OBJ_EVENT_GFX_FURRET                     400
-#define OBJ_EVENT_GFX_HOOTHOOT                   401
-#define OBJ_EVENT_GFX_NOCTOWL                    402
-#define OBJ_EVENT_GFX_LEDYBA                     403
-#define OBJ_EVENT_GFX_LEDIAN                     404
-#define OBJ_EVENT_GFX_SPINARAK                   405
-#define OBJ_EVENT_GFX_ARIADOS                    406
-#define OBJ_EVENT_GFX_CROBAT                     407
-#define OBJ_EVENT_GFX_CHINCHOU                   408
-#define OBJ_EVENT_GFX_LANTURN                    409
-#define OBJ_EVENT_GFX_PICHU                      410
-#define OBJ_EVENT_GFX_CLEFFA                     411
-#define OBJ_EVENT_GFX_IGGLYBUFF                  412
-#define OBJ_EVENT_GFX_TOGEPI                     413
-#define OBJ_EVENT_GFX_TOGETIC                    414
-#define OBJ_EVENT_GFX_NATU                       415
-#define OBJ_EVENT_GFX_XATU                       416
-#define OBJ_EVENT_GFX_MAREEP                     417
-#define OBJ_EVENT_GFX_FLAAFFY                    418
-#define OBJ_EVENT_GFX_AMPHAROS                   419
-#define OBJ_EVENT_GFX_BELLOSSOM                  420
-#define OBJ_EVENT_GFX_MARILL                     421
-#define OBJ_EVENT_GFX_AZUMARILL_FOLLOWER         422
-#define OBJ_EVENT_GFX_SUDOWOODO_FOLLOWER         423
-#define OBJ_EVENT_GFX_POLITOED                   424
-#define OBJ_EVENT_GFX_HOPPIP                     425
-#define OBJ_EVENT_GFX_SKIPLOOM                   426
-#define OBJ_EVENT_GFX_JUMPLUFF                   427
-#define OBJ_EVENT_GFX_AIPOM                      428
-#define OBJ_EVENT_GFX_SUNKERN                    429
-#define OBJ_EVENT_GFX_SUNFLORA                   430
-#define OBJ_EVENT_GFX_YANMA                      431
-#define OBJ_EVENT_GFX_WOOPER                     432
-#define OBJ_EVENT_GFX_QUAGSIRE                   433
-#define OBJ_EVENT_GFX_ESPEON                     434
-#define OBJ_EVENT_GFX_UMBREON                    435
-#define OBJ_EVENT_GFX_MURKROW                    436
-#define OBJ_EVENT_GFX_SLOWKING                   437
-#define OBJ_EVENT_GFX_MISDREAVUS                 438
-#define OBJ_EVENT_GFX_UNOWN_A                    439
-#define OBJ_EVENT_GFX_WOBBUFFET                  440
-#define OBJ_EVENT_GFX_GIRAFARIG                  441
-#define OBJ_EVENT_GFX_PINECO                     442
-#define OBJ_EVENT_GFX_FORRETRESS                 443
-#define OBJ_EVENT_GFX_DUNSPARCE                  444
-#define OBJ_EVENT_GFX_GLIGAR                     445
-#define OBJ_EVENT_GFX_STEELIX                    446
-#define OBJ_EVENT_GFX_SNUBBULL                   447
-#define OBJ_EVENT_GFX_GRANBULL                   448
-#define OBJ_EVENT_GFX_QWILFISH                   449
-#define OBJ_EVENT_GFX_SCIZOR                     450
-#define OBJ_EVENT_GFX_SHUCKLE                    451
-#define OBJ_EVENT_GFX_HERACROSS                  452
-#define OBJ_EVENT_GFX_SNEASEL                    453
-#define OBJ_EVENT_GFX_TEDDIURSA                  454
-#define OBJ_EVENT_GFX_URSARING                   455
-#define OBJ_EVENT_GFX_SLUGMA                     456
-#define OBJ_EVENT_GFX_MAGCARGO                   457
-#define OBJ_EVENT_GFX_SWINUB                     458
-#define OBJ_EVENT_GFX_PILOSWINE                  459
-#define OBJ_EVENT_GFX_CORSOLA                    460
-#define OBJ_EVENT_GFX_REMORAID                   461
-#define OBJ_EVENT_GFX_OCTILLERY                  462
-#define OBJ_EVENT_GFX_DELIBIRD                   463
-#define OBJ_EVENT_GFX_MANTINE                    464
-#define OBJ_EVENT_GFX_SKARMORY                   465
-#define OBJ_EVENT_GFX_HOUNDOUR                   466
-#define OBJ_EVENT_GFX_HOUNDOOM                   467
-#define OBJ_EVENT_GFX_KINGDRA                    468
-#define OBJ_EVENT_GFX_PHANPY                     469
-#define OBJ_EVENT_GFX_DONPHAN                    470
-#define OBJ_EVENT_GFX_PORYGON2                   471
-#define OBJ_EVENT_GFX_STANTLER                   472
-#define OBJ_EVENT_GFX_SMEARGLE                   473
-#define OBJ_EVENT_GFX_TYROGUE                    474
-#define OBJ_EVENT_GFX_HITMONTOP                  475
-#define OBJ_EVENT_GFX_SMOOCHUM                   476
-#define OBJ_EVENT_GFX_ELEKID                     477
-#define OBJ_EVENT_GFX_MAGBY                      478
-#define OBJ_EVENT_GFX_MILTANK                    479
-#define OBJ_EVENT_GFX_BLISSEY                    480
-#define OBJ_EVENT_GFX_RAIKOU                     481
-#define OBJ_EVENT_GFX_ENTEI                      482
-#define OBJ_EVENT_GFX_SUICUNE                    483
-#define OBJ_EVENT_GFX_LARVITAR                   484
-#define OBJ_EVENT_GFX_PUPITAR                    485
-#define OBJ_EVENT_GFX_TYRANITAR                  486
-#define OBJ_EVENT_GFX_LUGIA_FOLLOWER             487
-#define OBJ_EVENT_GFX_HOOH_FOLLOWER              488
-#define OBJ_EVENT_GFX_CELEBI                     489
 
-#define OBJ_EVENT_GFX_TREECKO                    490
-#define OBJ_EVENT_GFX_GROVYLE                    491
-#define OBJ_EVENT_GFX_SCEPTILE                   492
-#define OBJ_EVENT_GFX_TORCHIC                    493
-#define OBJ_EVENT_GFX_COMBUSKEN                  494
-#define OBJ_EVENT_GFX_BLAZIKEN                   495
-#define OBJ_EVENT_GFX_MUDKIP                     496
-#define OBJ_EVENT_GFX_MARSHTOMP                  497
-#define OBJ_EVENT_GFX_SWAMPERT                   498
-#define OBJ_EVENT_GFX_POOCHYENA_FOLLOWER         499
-#define OBJ_EVENT_GFX_MIGHTYENA                  500
-#define OBJ_EVENT_GFX_ZIGZAGOON_FOLLOWER         501
-#define OBJ_EVENT_GFX_LINOONE                    502
-#define OBJ_EVENT_GFX_WURMPLE                    503
-#define OBJ_EVENT_GFX_SILCOON                    504
-#define OBJ_EVENT_GFX_BEAUTIFLY                  505
-#define OBJ_EVENT_GFX_CASCOON                    506
-#define OBJ_EVENT_GFX_DUSTOX                     507
-#define OBJ_EVENT_GFX_LOTAD                      508
-#define OBJ_EVENT_GFX_LOMBRE                     509
-#define OBJ_EVENT_GFX_LUDICOLO                   510
-#define OBJ_EVENT_GFX_SEEDOT                     511
-#define OBJ_EVENT_GFX_NUZLEAF                    512
-#define OBJ_EVENT_GFX_SHIFTRY                    513
-#define OBJ_EVENT_GFX_TAILLOW                    514
-#define OBJ_EVENT_GFX_SWELLOW                    515
-#define OBJ_EVENT_GFX_WINGULL_FOLLOWER           516
-#define OBJ_EVENT_GFX_PELIPPER                   517
-#define OBJ_EVENT_GFX_RALTS                      518
-#define OBJ_EVENT_GFX_KIRLIA_FOLLOWER            519
-#define OBJ_EVENT_GFX_GARDEVOIR                  520
-#define OBJ_EVENT_GFX_SURSKIT                    521
-#define OBJ_EVENT_GFX_MASQUERAIN                 522
-#define OBJ_EVENT_GFX_SHROOMISH                  523
-#define OBJ_EVENT_GFX_BRELOOM                    524
-#define OBJ_EVENT_GFX_SLAKOTH                    525
-#define OBJ_EVENT_GFX_VIGOROTH_FOLLOWER          526
-#define OBJ_EVENT_GFX_SLAKING                    527
-#define OBJ_EVENT_GFX_NINCADA                    528
-#define OBJ_EVENT_GFX_NINJASK                    529
-#define OBJ_EVENT_GFX_SHEDINJA                   530
-#define OBJ_EVENT_GFX_WHISMUR                    531
-#define OBJ_EVENT_GFX_LOUDRED                    532
-#define OBJ_EVENT_GFX_EXPLOUD                    533
-#define OBJ_EVENT_GFX_MAKUHITA                   534
-#define OBJ_EVENT_GFX_HARIYAMA                   535
-#define OBJ_EVENT_GFX_AZURILL_FOLLOWER           536
-#define OBJ_EVENT_GFX_NOSEPASS                   537
-#define OBJ_EVENT_GFX_SKITTY_FOLLOWER            538
-#define OBJ_EVENT_GFX_DELCATTY                   539
-#define OBJ_EVENT_GFX_SABLEYE                    540
-#define OBJ_EVENT_GFX_MAWILE                     541
-#define OBJ_EVENT_GFX_ARON                       542
-#define OBJ_EVENT_GFX_LAIRON                     543
-#define OBJ_EVENT_GFX_AGGRON                     544
-#define OBJ_EVENT_GFX_MEDITITE                   545
-#define OBJ_EVENT_GFX_MEDICHAM                   546
-#define OBJ_EVENT_GFX_ELECTRIKE                  547
-#define OBJ_EVENT_GFX_MANECTRIC                  548
-#define OBJ_EVENT_GFX_PLUSLE                     549
-#define OBJ_EVENT_GFX_MINUN                      550
-#define OBJ_EVENT_GFX_VOLBEAT                    551
-#define OBJ_EVENT_GFX_ILLUMISE                   552
-#define OBJ_EVENT_GFX_ROSELIA                    553
-#define OBJ_EVENT_GFX_GULPIN                     554
-#define OBJ_EVENT_GFX_SWALOT                     555
-#define OBJ_EVENT_GFX_CARVANHA                   556
-#define OBJ_EVENT_GFX_SHARPEDO                   557
-#define OBJ_EVENT_GFX_WAILMER                    558
-#define OBJ_EVENT_GFX_WAILORD                    559
-#define OBJ_EVENT_GFX_NUMEL                      560
-#define OBJ_EVENT_GFX_CAMERUPT                   561
-#define OBJ_EVENT_GFX_TORKOAL                    562
-#define OBJ_EVENT_GFX_SPOINK                     563
-#define OBJ_EVENT_GFX_GRUMPIG                    564
-#define OBJ_EVENT_GFX_SPINDA                     565
-#define OBJ_EVENT_GFX_TRAPINCH                   566
-#define OBJ_EVENT_GFX_VIBRAVA                    567
-#define OBJ_EVENT_GFX_FLYGON                     568
-#define OBJ_EVENT_GFX_CACNEA                     569
-#define OBJ_EVENT_GFX_CACTURNE                   570
-#define OBJ_EVENT_GFX_SWABLU                     571
-#define OBJ_EVENT_GFX_ALTARIA                    572
-#define OBJ_EVENT_GFX_ZANGOOSE                   573
-#define OBJ_EVENT_GFX_SEVIPER                    574
-#define OBJ_EVENT_GFX_LUNATONE                   575
-#define OBJ_EVENT_GFX_SOLROCK                    576
-#define OBJ_EVENT_GFX_BARBOACH                   577
-#define OBJ_EVENT_GFX_WHISCASH                   578
-#define OBJ_EVENT_GFX_CORPHISH                   579
-#define OBJ_EVENT_GFX_CRAWDAUNT                  580
-#define OBJ_EVENT_GFX_BALTOY                     581
-#define OBJ_EVENT_GFX_CLAYDOL                    582
-#define OBJ_EVENT_GFX_LILEEP                     583
-#define OBJ_EVENT_GFX_CRADILY                    584
-#define OBJ_EVENT_GFX_ANORITH                    585
-#define OBJ_EVENT_GFX_ARMALDO                    586
-#define OBJ_EVENT_GFX_FEEBAS                     587
-#define OBJ_EVENT_GFX_MILOTIC                    588
-#define OBJ_EVENT_GFX_CASTFORM                   589
-#define OBJ_EVENT_GFX_KECLEON_FOLLOWER           590
-#define OBJ_EVENT_GFX_SHUPPET                    591
-#define OBJ_EVENT_GFX_BANETTE                    592
-#define OBJ_EVENT_GFX_DUSKULL                    593
-#define OBJ_EVENT_GFX_DUSCLOPS_FOLLOWER          594
-#define OBJ_EVENT_GFX_TROPIUS                    595
-#define OBJ_EVENT_GFX_CHIMECHO                   596
-#define OBJ_EVENT_GFX_ABSOL                      597
-#define OBJ_EVENT_GFX_WYNAUT                     598
-#define OBJ_EVENT_GFX_SNORUNT                    599
-#define OBJ_EVENT_GFX_GLALIE                     600
-#define OBJ_EVENT_GFX_SPHEAL                     601
-#define OBJ_EVENT_GFX_SEALEO                     602
-#define OBJ_EVENT_GFX_WALREIN                    603
-#define OBJ_EVENT_GFX_CLAMPERL                   604
-#define OBJ_EVENT_GFX_HUNTAIL                    605
-#define OBJ_EVENT_GFX_GOREBYSS                   606
-#define OBJ_EVENT_GFX_RELICANTH                  607
-#define OBJ_EVENT_GFX_LUVDISC                    608
-#define OBJ_EVENT_GFX_BAGON                      609
-#define OBJ_EVENT_GFX_SHELGON                    610
-#define OBJ_EVENT_GFX_SALAMENCE                  611
-#define OBJ_EVENT_GFX_BELDUM                     612
-#define OBJ_EVENT_GFX_METANG                     613
-#define OBJ_EVENT_GFX_METAGROSS                  614
-#define OBJ_EVENT_GFX_REGIROCK_FOLLOWER          615
-#define OBJ_EVENT_GFX_REGICE_FOLLOWER            616
-#define OBJ_EVENT_GFX_REGISTEEL_FOLLOWER         617
-#define OBJ_EVENT_GFX_LATIAS_FOLLOWER            618
-#define OBJ_EVENT_GFX_LATIOS_FOLLOWER            619
-#define OBJ_EVENT_GFX_KYOGRE                     620
-#define OBJ_EVENT_GFX_GROUDON                    621
-#define OBJ_EVENT_GFX_RAYQUAZA_FOLLOWER          622
-#define OBJ_EVENT_GFX_JIRACHI                    623
-#define OBJ_EVENT_GFX_DEOXYS_NORMAL              624
-
-// Other forms
-
-#define OBJ_EVENT_GFX_TURTWIG                    625
-#define OBJ_EVENT_GFX_GROTLE                     626
-#define OBJ_EVENT_GFX_TORTERRA                   627
-#define OBJ_EVENT_GFX_CHIMCHAR                   628
-#define OBJ_EVENT_GFX_MONFERNO                   629
-#define OBJ_EVENT_GFX_INFERNAPE                  630
-#define OBJ_EVENT_GFX_PIPLUP                     631
-#define OBJ_EVENT_GFX_PRINPLUP                   632
-#define OBJ_EVENT_GFX_EMPOLEON                   633
-#define OBJ_EVENT_GFX_STARLY                     634
-#define OBJ_EVENT_GFX_STARAVIA                   635
-#define OBJ_EVENT_GFX_STARAPTOR                  636
-#define OBJ_EVENT_GFX_BIDOOF                     637
-#define OBJ_EVENT_GFX_BIBAREL                    638
-#define OBJ_EVENT_GFX_KRICKETOT                  639
-#define OBJ_EVENT_GFX_KRICKETUNE                 640
-#define OBJ_EVENT_GFX_SHINX                      641
-#define OBJ_EVENT_GFX_LUXIO                      642
-#define OBJ_EVENT_GFX_LUXRAY                     643
-#define OBJ_EVENT_GFX_BUDEW                      644
-#define OBJ_EVENT_GFX_ROSERADE                   645
-#define OBJ_EVENT_GFX_CRANIDOS                   646
-#define OBJ_EVENT_GFX_RAMPARDOS                  647
-#define OBJ_EVENT_GFX_SHIELDON                   648
-#define OBJ_EVENT_GFX_BASTIODON                  649
-#define OBJ_EVENT_GFX_BURMY                      650
-#define OBJ_EVENT_GFX_WORMADAM                   651
-#define OBJ_EVENT_GFX_MOTHIM                     652
-#define OBJ_EVENT_GFX_COMBEE                     653
-#define OBJ_EVENT_GFX_VESPIQUEN                  654
-#define OBJ_EVENT_GFX_PACHIRISU                  655
-#define OBJ_EVENT_GFX_BUIZEL                     656
-#define OBJ_EVENT_GFX_FLOATZEL                   657
-#define OBJ_EVENT_GFX_CHERUBI                    658
-#define OBJ_EVENT_GFX_CHERRIM                    659
-#define OBJ_EVENT_GFX_SHELLOS                    660
-#define OBJ_EVENT_GFX_GASTRODON                  661
-#define OBJ_EVENT_GFX_AMBIPOM                    662
-#define OBJ_EVENT_GFX_DRIFLOON                   663
-#define OBJ_EVENT_GFX_DRIFBLIM                   664
-#define OBJ_EVENT_GFX_BUNEARY                    665
-#define OBJ_EVENT_GFX_LOPUNNY                    666
-#define OBJ_EVENT_GFX_MISMAGIUS                  667
-#define OBJ_EVENT_GFX_HONCHKROW                  668
-#define OBJ_EVENT_GFX_GLAMEOW                    669
-#define OBJ_EVENT_GFX_PURUGLY                    670
-#define OBJ_EVENT_GFX_CHINGLING                  671
-#define OBJ_EVENT_GFX_STUNKY                     672
-#define OBJ_EVENT_GFX_SKUNTANK                   673
-#define OBJ_EVENT_GFX_BRONZOR                    674
-#define OBJ_EVENT_GFX_BRONZONG                   675
-#define OBJ_EVENT_GFX_BONSLY                     676
-#define OBJ_EVENT_GFX_MIME_JR                    677
-#define OBJ_EVENT_GFX_HAPPINY                    678
-#define OBJ_EVENT_GFX_CHATOT                     679
-#define OBJ_EVENT_GFX_SPIRITOMB                  680
-#define OBJ_EVENT_GFX_GIBLE                      681
-#define OBJ_EVENT_GFX_GABITE                     682
-#define OBJ_EVENT_GFX_GARCHOMP                   683
-#define OBJ_EVENT_GFX_MUNCHLAX                   684
-#define OBJ_EVENT_GFX_RIOLU                      685
-#define OBJ_EVENT_GFX_LUCARIO                    686
-#define OBJ_EVENT_GFX_HIPPOPOTAS                 687
-#define OBJ_EVENT_GFX_HIPPOWDON                  688
-#define OBJ_EVENT_GFX_SKORUPI                    689
-#define OBJ_EVENT_GFX_DRAPION                    690
-#define OBJ_EVENT_GFX_CROAGUNK                   691
-#define OBJ_EVENT_GFX_TOXICROAK                  692
-#define OBJ_EVENT_GFX_CARNIVINE                  693
-#define OBJ_EVENT_GFX_FINNEON                    694
-#define OBJ_EVENT_GFX_LUMINEON                   695
-#define OBJ_EVENT_GFX_MANTYKE                    696
-#define OBJ_EVENT_GFX_SNOVER                     697
-#define OBJ_EVENT_GFX_ABOMASNOW                  698
-#define OBJ_EVENT_GFX_WEAVILE                    699
-#define OBJ_EVENT_GFX_MAGNEZONE                  700
-#define OBJ_EVENT_GFX_LICKILICKY                 701
-#define OBJ_EVENT_GFX_RHYPERIOR                  702
-#define OBJ_EVENT_GFX_TANGROWTH                  703
-#define OBJ_EVENT_GFX_ELECTIVIRE                 704
-#define OBJ_EVENT_GFX_MAGMORTAR                  705
-#define OBJ_EVENT_GFX_TOGEKISS                   706
-#define OBJ_EVENT_GFX_YANMEGA                    707
-#define OBJ_EVENT_GFX_LEAFEON                    708
-#define OBJ_EVENT_GFX_GLACEON                    709
-#define OBJ_EVENT_GFX_GLISCOR                    710
-#define OBJ_EVENT_GFX_MAMOSWINE                  711
-#define OBJ_EVENT_GFX_PORYGONZ                   712
-#define OBJ_EVENT_GFX_GALLADE                    713
-#define OBJ_EVENT_GFX_PROBOPASS                  714
-#define OBJ_EVENT_GFX_DUSKNOIR                   715
-#define OBJ_EVENT_GFX_FROSLASS                   716
-#define OBJ_EVENT_GFX_ROTOM_BASE                 717
-#define OBJ_EVENT_GFX_UXIE                       718
-#define OBJ_EVENT_GFX_MESPRIT                    719
-#define OBJ_EVENT_GFX_AZELF                      720
-#define OBJ_EVENT_GFX_DIALGA                     721
-#define OBJ_EVENT_GFX_PALKIA                     722
-#define OBJ_EVENT_GFX_HEATRAN                    723
-#define OBJ_EVENT_GFX_REGIGIGAS                  724
-#define OBJ_EVENT_GFX_GIRATINA_NORMAL            725
-#define OBJ_EVENT_GFX_CRESSELIA                  726
-#define OBJ_EVENT_GFX_PHIONE                     727
-#define OBJ_EVENT_GFX_MANAPHY                    728
-#define OBJ_EVENT_GFX_DARKRAI                    729
-#define OBJ_EVENT_GFX_SHAYMIN_LAND               730
-#define OBJ_EVENT_GFX_ARCEUS_NORMAL              731
+#define OBJ_EVENT_GFX_BULBASAUR 239
+    #define OBJ_EVENT_GFX_IVYSAUR 240
+    #define OBJ_EVENT_GFX_VENUSAUR 241
+    #define OBJ_EVENT_GFX_CHARMANDER 242
+    #define OBJ_EVENT_GFX_CHARMELEON 243
+    #define OBJ_EVENT_GFX_CHARIZARD 244
+    #define OBJ_EVENT_GFX_SQUIRTLE 245
+    #define OBJ_EVENT_GFX_WARTORTLE 246
+    #define OBJ_EVENT_GFX_BLASTOISE 247
+    #define OBJ_EVENT_GFX_CATERPIE 248
+    #define OBJ_EVENT_GFX_METAPOD 249
+    #define OBJ_EVENT_GFX_BUTTERFREE 250
+    #define OBJ_EVENT_GFX_WEEDLE 251
+    #define OBJ_EVENT_GFX_KAKUNA 252
+    #define OBJ_EVENT_GFX_BEEDRILL 253
+    #define OBJ_EVENT_GFX_PIDGEY 254
+    #define OBJ_EVENT_GFX_PIDGEOTTO 255
+    #define OBJ_EVENT_GFX_PIDGEOT 256
+    #define OBJ_EVENT_GFX_RATTATA 257
+    #define OBJ_EVENT_GFX_RATICATE 258
+    #define OBJ_EVENT_GFX_SPEAROW 259
+    #define OBJ_EVENT_GFX_FEAROW 260
+    #define OBJ_EVENT_GFX_EKANS 261
+    #define OBJ_EVENT_GFX_ARBOK 262
+    #define OBJ_EVENT_GFX_PICHU 263
+    #define OBJ_EVENT_GFX_PIKACHU_FOLLOWER 264
+    #define OBJ_EVENT_GFX_RAICHU 265
+    #define OBJ_EVENT_GFX_SANDSHREW 266
+    #define OBJ_EVENT_GFX_SANDSLASH 267
+    #define OBJ_EVENT_GFX_NIDORAN_F 268
+    #define OBJ_EVENT_GFX_NIDORINA 269
+    #define OBJ_EVENT_GFX_NIDOQUEEN 270
+    #define OBJ_EVENT_GFX_NIDORAN_M 271
+    #define OBJ_EVENT_GFX_NIDORINO 272
+    #define OBJ_EVENT_GFX_NIDOKING 273
+    #define OBJ_EVENT_GFX_CLEFFA 274
+    #define OBJ_EVENT_GFX_CLEFAIRY 275
+    #define OBJ_EVENT_GFX_CLEFABLE 276
+    #define OBJ_EVENT_GFX_VULPIX 277
+    #define OBJ_EVENT_GFX_NINETALES 278
+    #define OBJ_EVENT_GFX_IGGLYBUFF 279
+    #define OBJ_EVENT_GFX_JIGGLYPUFF 280
+    #define OBJ_EVENT_GFX_WIGGLYTUFF 281
+    #define OBJ_EVENT_GFX_ZUBAT 282
+    #define OBJ_EVENT_GFX_GOLBAT 283
+    #define OBJ_EVENT_GFX_CROBAT 284
+    #define OBJ_EVENT_GFX_ODDISH 285
+    #define OBJ_EVENT_GFX_GLOOM 286
+    #define OBJ_EVENT_GFX_VILEPLUME 287
+    #define OBJ_EVENT_GFX_BELLOSSOM 288
+    #define OBJ_EVENT_GFX_PARAS 289
+    #define OBJ_EVENT_GFX_PARASECT 290
+    #define OBJ_EVENT_GFX_VENONAT 291
+    #define OBJ_EVENT_GFX_VENOMOTH 292
+    #define OBJ_EVENT_GFX_DIGLETT 293
+    #define OBJ_EVENT_GFX_DUGTRIO 294
+    #define OBJ_EVENT_GFX_MEOWTH 295
+    #define OBJ_EVENT_GFX_PERSIAN 296
+    #define OBJ_EVENT_GFX_PSYDUCK 297
+    #define OBJ_EVENT_GFX_GOLDUCK 298
+    #define OBJ_EVENT_GFX_MANKEY 299
+    #define OBJ_EVENT_GFX_PRIMEAPE 300
+    #define OBJ_EVENT_GFX_GROWLITHE 301
+    #define OBJ_EVENT_GFX_ARCANINE 302
+    #define OBJ_EVENT_GFX_POLIWAG 303
+    #define OBJ_EVENT_GFX_POLIWHIRL 304
+    #define OBJ_EVENT_GFX_POLIWRATH 305
+    #define OBJ_EVENT_GFX_POLITOED 306
+    #define OBJ_EVENT_GFX_ABRA 307
+    #define OBJ_EVENT_GFX_KADABRA 308
+    #define OBJ_EVENT_GFX_ALAKAZAM 309
+    #define OBJ_EVENT_GFX_MACHOP 310
+    #define OBJ_EVENT_GFX_MACHOKE 311
+    #define OBJ_EVENT_GFX_MACHAMP 312
+    #define OBJ_EVENT_GFX_BELLSPROUT 313
+    #define OBJ_EVENT_GFX_WEEPINBELL 314
+    #define OBJ_EVENT_GFX_VICTREEBEL 315
+    #define OBJ_EVENT_GFX_TENTACOOL 316
+    #define OBJ_EVENT_GFX_TENTACRUEL 317
+    #define OBJ_EVENT_GFX_GEODUDE 318
+    #define OBJ_EVENT_GFX_GRAVELER 319
+    #define OBJ_EVENT_GFX_GOLEM 320
+    #define OBJ_EVENT_GFX_PONYTA 321
+    #define OBJ_EVENT_GFX_RAPIDASH 322
+    #define OBJ_EVENT_GFX_SLOWPOKE 323
+    #define OBJ_EVENT_GFX_SLOWBRO 324
+    #define OBJ_EVENT_GFX_SLOWKING 325
+    #define OBJ_EVENT_GFX_MAGNEMITE 326
+    #define OBJ_EVENT_GFX_MAGNETON 327
+    #define OBJ_EVENT_GFX_MAGNEZONE 328
+    #define OBJ_EVENT_GFX_FARFETCHD 329
+    #define OBJ_EVENT_GFX_DODUO 330
+    #define OBJ_EVENT_GFX_DODRIO 331
+    #define OBJ_EVENT_GFX_SEEL 332
+    #define OBJ_EVENT_GFX_DEWGONG 333
+    #define OBJ_EVENT_GFX_GRIMER 334
+    #define OBJ_EVENT_GFX_MUK 335
+    #define OBJ_EVENT_GFX_SHELLDER 336
+    #define OBJ_EVENT_GFX_CLOYSTER 337
+    #define OBJ_EVENT_GFX_GASTLY 338
+    #define OBJ_EVENT_GFX_HAUNTER 339
+    #define OBJ_EVENT_GFX_GENGAR 340
+    #define OBJ_EVENT_GFX_ONIX 341
+    #define OBJ_EVENT_GFX_STEELIX 342
+    #define OBJ_EVENT_GFX_DROWZEE 343
+    #define OBJ_EVENT_GFX_HYPNO 344
+    #define OBJ_EVENT_GFX_KRABBY 345
+    #define OBJ_EVENT_GFX_KINGLER 346
+    #define OBJ_EVENT_GFX_VOLTORB 347
+    #define OBJ_EVENT_GFX_ELECTRODE 348
+    #define OBJ_EVENT_GFX_EXEGGCUTE 349
+    #define OBJ_EVENT_GFX_EXEGGUTOR 350
+    #define OBJ_EVENT_GFX_CUBONE 351
+    #define OBJ_EVENT_GFX_MAROWAK 352
+    #define OBJ_EVENT_GFX_TYROGUE 353
+    #define OBJ_EVENT_GFX_HITMONLEE 354
+    #define OBJ_EVENT_GFX_HITMONCHAN 355
+    #define OBJ_EVENT_GFX_HITMONTOP 356
+    #define OBJ_EVENT_GFX_LICKITUNG 357
+    #define OBJ_EVENT_GFX_LICKILICKY 358
+    #define OBJ_EVENT_GFX_KOFFING 359
+    #define OBJ_EVENT_GFX_WEEZING 360
+    #define OBJ_EVENT_GFX_RHYHORN 361
+    #define OBJ_EVENT_GFX_RHYDON 362
+    #define OBJ_EVENT_GFX_RHYPERIOR 363
+    #define OBJ_EVENT_GFX_HAPPINY 364
+    #define OBJ_EVENT_GFX_CHANSEY 365
+    #define OBJ_EVENT_GFX_BLISSEY 366
+    #define OBJ_EVENT_GFX_TANGELA 367
+    #define OBJ_EVENT_GFX_TANGROWTH 368
+    #define OBJ_EVENT_GFX_KANGASKHAN 369
+    #define OBJ_EVENT_GFX_HORSEA 370
+    #define OBJ_EVENT_GFX_SEADRA 371
+    #define OBJ_EVENT_GFX_KINGDRA 372
+    #define OBJ_EVENT_GFX_GOLDEEN 373
+    #define OBJ_EVENT_GFX_SEAKING 374
+    #define OBJ_EVENT_GFX_STARYU 375
+    #define OBJ_EVENT_GFX_STARMIE 376
+    #define OBJ_EVENT_GFX_MIME_JR 377
+    #define OBJ_EVENT_GFX_MR_MIME 378
+    #define OBJ_EVENT_GFX_SCYTHER 379
+    #define OBJ_EVENT_GFX_SCIZOR 380
+    #define OBJ_EVENT_GFX_SMOOCHUM 381
+    #define OBJ_EVENT_GFX_JYNX 382
+    #define OBJ_EVENT_GFX_ELEKID 383
+    #define OBJ_EVENT_GFX_ELECTABUZZ 384
+    #define OBJ_EVENT_GFX_ELECTIVIRE 385
+    #define OBJ_EVENT_GFX_MAGBY 386
+    #define OBJ_EVENT_GFX_MAGMAR 387
+    #define OBJ_EVENT_GFX_MAGMORTAR 388
+    #define OBJ_EVENT_GFX_PINSIR 389
+    #define OBJ_EVENT_GFX_TAUROS 390
+    #define OBJ_EVENT_GFX_MAGIKARP 391
+    #define OBJ_EVENT_GFX_GYARADOS 392
+    #define OBJ_EVENT_GFX_LAPRAS 393
+    #define OBJ_EVENT_GFX_DITTO 394
+    #define OBJ_EVENT_GFX_EEVEE 395
+    #define OBJ_EVENT_GFX_VAPOREON 396
+    #define OBJ_EVENT_GFX_JOLTEON 397
+    #define OBJ_EVENT_GFX_FLAREON 398
+    #define OBJ_EVENT_GFX_ESPEON 399
+    #define OBJ_EVENT_GFX_UMBREON 400
+    #define OBJ_EVENT_GFX_LEAFEON 401
+    #define OBJ_EVENT_GFX_GLACEON 402
+    #define OBJ_EVENT_GFX_PORYGON 403
+    #define OBJ_EVENT_GFX_PORYGON2 404
+    #define OBJ_EVENT_GFX_PORYGONZ 405
+    #define OBJ_EVENT_GFX_OMANYTE 406
+    #define OBJ_EVENT_GFX_OMASTAR 407
+    #define OBJ_EVENT_GFX_KABUTO 408
+    #define OBJ_EVENT_GFX_KABUTOPS 409
+    #define OBJ_EVENT_GFX_AERODACTYL 410
+    #define OBJ_EVENT_GFX_MUNCHLAX 411
+    #define OBJ_EVENT_GFX_SNORLAX 412
+    #define OBJ_EVENT_GFX_DRATINI 413
+    #define OBJ_EVENT_GFX_DRAGONAIR 414
+    #define OBJ_EVENT_GFX_DRAGONITE 415
+    #define OBJ_EVENT_GFX_CHIKORITA 416
+    #define OBJ_EVENT_GFX_BAYLEEF 417
+    #define OBJ_EVENT_GFX_MEGANIUM 418
+    #define OBJ_EVENT_GFX_CYNDAQUIL 419
+    #define OBJ_EVENT_GFX_QUILAVA 420
+    #define OBJ_EVENT_GFX_TYPHLOSION 421
+    #define OBJ_EVENT_GFX_TOTODILE 422
+    #define OBJ_EVENT_GFX_CROCONAW 423
+    #define OBJ_EVENT_GFX_FERALIGATR 424
+    #define OBJ_EVENT_GFX_SENTRET 425
+    #define OBJ_EVENT_GFX_FURRET 426
+    #define OBJ_EVENT_GFX_HOOTHOOT 427
+    #define OBJ_EVENT_GFX_NOCTOWL 428
+    #define OBJ_EVENT_GFX_LEDYBA 429
+    #define OBJ_EVENT_GFX_LEDIAN 430
+    #define OBJ_EVENT_GFX_SPINARAK 431
+    #define OBJ_EVENT_GFX_ARIADOS 432
+    #define OBJ_EVENT_GFX_CHINCHOU 433
+    #define OBJ_EVENT_GFX_LANTURN 434
+    #define OBJ_EVENT_GFX_TOGEPI 435
+    #define OBJ_EVENT_GFX_TOGETIC 436
+    #define OBJ_EVENT_GFX_TOGEKISS 437
+    #define OBJ_EVENT_GFX_NATU 438
+    #define OBJ_EVENT_GFX_XATU 439
+    #define OBJ_EVENT_GFX_MAREEP 440
+    #define OBJ_EVENT_GFX_FLAAFFY 441
+    #define OBJ_EVENT_GFX_AMPHAROS 442
+    #define OBJ_EVENT_GFX_AZURILL_FOLLOWER 443
+    #define OBJ_EVENT_GFX_MARILL 444
+    #define OBJ_EVENT_GFX_AZUMARILL_FOLLOWER 445
+    #define OBJ_EVENT_GFX_BONSLY 446
+    #define OBJ_EVENT_GFX_SUDOWOODO_FOLLOWER 447
+    #define OBJ_EVENT_GFX_HOPPIP 448
+    #define OBJ_EVENT_GFX_SKIPLOOM 449
+    #define OBJ_EVENT_GFX_JUMPLUFF 450
+    #define OBJ_EVENT_GFX_AIPOM 451
+    #define OBJ_EVENT_GFX_AMBIPOM 452
+    #define OBJ_EVENT_GFX_SUNKERN 453
+    #define OBJ_EVENT_GFX_SUNFLORA 454
+    #define OBJ_EVENT_GFX_YANMA 455
+    #define OBJ_EVENT_GFX_YANMEGA 456
+    #define OBJ_EVENT_GFX_WOOPER 457
+    #define OBJ_EVENT_GFX_QUAGSIRE 458
+    #define OBJ_EVENT_GFX_MURKROW 459
+    #define OBJ_EVENT_GFX_HONCHKROW 460
+    #define OBJ_EVENT_GFX_MISDREAVUS 461
+    #define OBJ_EVENT_GFX_MISMAGIUS 462
+    #define OBJ_EVENT_GFX_UNOWN_A 463
+    #define OBJ_EVENT_GFX_WYNAUT 464
+    #define OBJ_EVENT_GFX_WOBBUFFET 465
+    #define OBJ_EVENT_GFX_GIRAFARIG 466
+    #define OBJ_EVENT_GFX_PINECO 467
+    #define OBJ_EVENT_GFX_FORRETRESS 468
+    #define OBJ_EVENT_GFX_DUNSPARCE 469
+    #define OBJ_EVENT_GFX_GLIGAR 470
+    #define OBJ_EVENT_GFX_GLISCOR 471
+    #define OBJ_EVENT_GFX_SNUBBULL 472
+    #define OBJ_EVENT_GFX_GRANBULL 473
+    #define OBJ_EVENT_GFX_QWILFISH 474
+    #define OBJ_EVENT_GFX_SHUCKLE 475
+    #define OBJ_EVENT_GFX_HERACROSS 476
+    #define OBJ_EVENT_GFX_SNEASEL 477
+    #define OBJ_EVENT_GFX_WEAVILE 478
+    #define OBJ_EVENT_GFX_TEDDIURSA 479
+    #define OBJ_EVENT_GFX_URSARING 480
+    #define OBJ_EVENT_GFX_SLUGMA 481
+    #define OBJ_EVENT_GFX_MAGCARGO 482
+    #define OBJ_EVENT_GFX_SWINUB 483
+    #define OBJ_EVENT_GFX_PILOSWINE 484
+    #define OBJ_EVENT_GFX_MAMOSWINE 485
+    #define OBJ_EVENT_GFX_CORSOLA 486
+    #define OBJ_EVENT_GFX_REMORAID 487
+    #define OBJ_EVENT_GFX_OCTILLERY 488
+    #define OBJ_EVENT_GFX_DELIBIRD 489
+    #define OBJ_EVENT_GFX_MANTYKE 490
+    #define OBJ_EVENT_GFX_MANTINE 491
+    #define OBJ_EVENT_GFX_SKARMORY 492
+    #define OBJ_EVENT_GFX_HOUNDOUR 493
+    #define OBJ_EVENT_GFX_HOUNDOOM 494
+    #define OBJ_EVENT_GFX_PHANPY 495
+    #define OBJ_EVENT_GFX_DONPHAN 496
+    #define OBJ_EVENT_GFX_STANTLER 497
+    #define OBJ_EVENT_GFX_SMEARGLE 498
+    #define OBJ_EVENT_GFX_MILTANK 499
+    #define OBJ_EVENT_GFX_LARVITAR 500
+    #define OBJ_EVENT_GFX_PUPITAR 501
+    #define OBJ_EVENT_GFX_TYRANITAR 502
+    #define OBJ_EVENT_GFX_TREECKO 503
+    #define OBJ_EVENT_GFX_GROVYLE 504
+    #define OBJ_EVENT_GFX_SCEPTILE 505
+    #define OBJ_EVENT_GFX_TORCHIC 506
+    #define OBJ_EVENT_GFX_COMBUSKEN 507
+    #define OBJ_EVENT_GFX_BLAZIKEN 508
+    #define OBJ_EVENT_GFX_MUDKIP 509
+    #define OBJ_EVENT_GFX_MARSHTOMP 510
+    #define OBJ_EVENT_GFX_SWAMPERT 511
+    #define OBJ_EVENT_GFX_POOCHYENA_FOLLOWER 512
+    #define OBJ_EVENT_GFX_MIGHTYENA 513
+    #define OBJ_EVENT_GFX_ZIGZAGOON_FOLLOWER 514
+    #define OBJ_EVENT_GFX_LINOONE 515
+    #define OBJ_EVENT_GFX_WURMPLE 516
+    #define OBJ_EVENT_GFX_SILCOON 517
+    #define OBJ_EVENT_GFX_BEAUTIFLY 518
+    #define OBJ_EVENT_GFX_CASCOON 519
+    #define OBJ_EVENT_GFX_DUSTOX 520
+    #define OBJ_EVENT_GFX_LOTAD 521
+    #define OBJ_EVENT_GFX_LOMBRE 522
+    #define OBJ_EVENT_GFX_LUDICOLO 523
+    #define OBJ_EVENT_GFX_SEEDOT 524
+    #define OBJ_EVENT_GFX_NUZLEAF 525
+    #define OBJ_EVENT_GFX_SHIFTRY 526
+    #define OBJ_EVENT_GFX_TAILLOW 527
+    #define OBJ_EVENT_GFX_SWELLOW 528
+    #define OBJ_EVENT_GFX_WINGULL_FOLLOWER 529
+    #define OBJ_EVENT_GFX_PELIPPER 530
+    #define OBJ_EVENT_GFX_RALTS 531
+    #define OBJ_EVENT_GFX_KIRLIA_FOLLOWER 532
+    #define OBJ_EVENT_GFX_GARDEVOIR 533
+    #define OBJ_EVENT_GFX_GALLADE 534
+    #define OBJ_EVENT_GFX_SURSKIT 535
+    #define OBJ_EVENT_GFX_MASQUERAIN 536
+    #define OBJ_EVENT_GFX_SHROOMISH 537
+    #define OBJ_EVENT_GFX_BRELOOM 538
+    #define OBJ_EVENT_GFX_SLAKOTH 539
+    #define OBJ_EVENT_GFX_VIGOROTH_FOLLOWER 540
+    #define OBJ_EVENT_GFX_SLAKING 541
+    #define OBJ_EVENT_GFX_NINCADA 542
+    #define OBJ_EVENT_GFX_NINJASK 543
+    #define OBJ_EVENT_GFX_SHEDINJA 544
+    #define OBJ_EVENT_GFX_WHISMUR 545
+    #define OBJ_EVENT_GFX_LOUDRED 546
+    #define OBJ_EVENT_GFX_EXPLOUD 547
+    #define OBJ_EVENT_GFX_MAKUHITA 548
+    #define OBJ_EVENT_GFX_HARIYAMA 549
+    #define OBJ_EVENT_GFX_NOSEPASS 550
+    #define OBJ_EVENT_GFX_PROBOPASS 551
+    #define OBJ_EVENT_GFX_SKITTY_FOLLOWER 552
+    #define OBJ_EVENT_GFX_DELCATTY 553
+    #define OBJ_EVENT_GFX_SABLEYE 554
+    #define OBJ_EVENT_GFX_MAWILE 555
+    #define OBJ_EVENT_GFX_ARON 556
+    #define OBJ_EVENT_GFX_LAIRON 557
+    #define OBJ_EVENT_GFX_AGGRON 558
+    #define OBJ_EVENT_GFX_MEDITITE 559
+    #define OBJ_EVENT_GFX_MEDICHAM 560
+    #define OBJ_EVENT_GFX_ELECTRIKE 561
+    #define OBJ_EVENT_GFX_MANECTRIC 562
+    #define OBJ_EVENT_GFX_PLUSLE 563
+    #define OBJ_EVENT_GFX_MINUN 564
+    #define OBJ_EVENT_GFX_VOLBEAT 565
+    #define OBJ_EVENT_GFX_ILLUMISE 566
+    #define OBJ_EVENT_GFX_BUDEW 567
+    #define OBJ_EVENT_GFX_ROSELIA 568
+    #define OBJ_EVENT_GFX_ROSERADE 569
+    #define OBJ_EVENT_GFX_GULPIN 570
+    #define OBJ_EVENT_GFX_SWALOT 571
+    #define OBJ_EVENT_GFX_CARVANHA 572
+    #define OBJ_EVENT_GFX_SHARPEDO 573
+    #define OBJ_EVENT_GFX_WAILMER 574
+    #define OBJ_EVENT_GFX_WAILORD 575
+    #define OBJ_EVENT_GFX_NUMEL 576
+    #define OBJ_EVENT_GFX_CAMERUPT 577
+    #define OBJ_EVENT_GFX_TORKOAL 578
+    #define OBJ_EVENT_GFX_SPOINK 579
+    #define OBJ_EVENT_GFX_GRUMPIG 580
+    #define OBJ_EVENT_GFX_SPINDA 581
+    #define OBJ_EVENT_GFX_TRAPINCH 582
+    #define OBJ_EVENT_GFX_VIBRAVA 583
+    #define OBJ_EVENT_GFX_FLYGON 584
+    #define OBJ_EVENT_GFX_CACNEA 585
+    #define OBJ_EVENT_GFX_CACTURNE 586
+    #define OBJ_EVENT_GFX_SWABLU 587
+    #define OBJ_EVENT_GFX_ALTARIA 588
+    #define OBJ_EVENT_GFX_ZANGOOSE 589
+    #define OBJ_EVENT_GFX_SEVIPER 590
+    #define OBJ_EVENT_GFX_LUNATONE 591
+    #define OBJ_EVENT_GFX_SOLROCK 592
+    #define OBJ_EVENT_GFX_BARBOACH 593
+    #define OBJ_EVENT_GFX_WHISCASH 594
+    #define OBJ_EVENT_GFX_CORPHISH 595
+    #define OBJ_EVENT_GFX_CRAWDAUNT 596
+    #define OBJ_EVENT_GFX_BALTOY 597
+    #define OBJ_EVENT_GFX_CLAYDOL 598
+    #define OBJ_EVENT_GFX_LILEEP 599
+    #define OBJ_EVENT_GFX_CRADILY 600
+    #define OBJ_EVENT_GFX_ANORITH 601
+    #define OBJ_EVENT_GFX_ARMALDO 602
+    #define OBJ_EVENT_GFX_FEEBAS 603
+    #define OBJ_EVENT_GFX_MILOTIC 604
+    #define OBJ_EVENT_GFX_CASTFORM 605
+    #define OBJ_EVENT_GFX_KECLEON_FOLLOWER 606
+    #define OBJ_EVENT_GFX_SHUPPET 607
+    #define OBJ_EVENT_GFX_BANETTE 608
+    #define OBJ_EVENT_GFX_DUSKULL 609
+    #define OBJ_EVENT_GFX_DUSCLOPS_FOLLOWER 610
+    #define OBJ_EVENT_GFX_DUSKNOIR 611
+    #define OBJ_EVENT_GFX_TROPIUS 612
+    #define OBJ_EVENT_GFX_CHINGLING 613
+    #define OBJ_EVENT_GFX_CHIMECHO 614
+    #define OBJ_EVENT_GFX_ABSOL 615
+    #define OBJ_EVENT_GFX_SNORUNT 616
+    #define OBJ_EVENT_GFX_GLALIE 617
+    #define OBJ_EVENT_GFX_FROSLASS 618
+    #define OBJ_EVENT_GFX_SPHEAL 619
+    #define OBJ_EVENT_GFX_SEALEO 620
+    #define OBJ_EVENT_GFX_WALREIN 621
+    #define OBJ_EVENT_GFX_CLAMPERL 622
+    #define OBJ_EVENT_GFX_HUNTAIL 623
+    #define OBJ_EVENT_GFX_GOREBYSS 624
+    #define OBJ_EVENT_GFX_RELICANTH 625
+    #define OBJ_EVENT_GFX_LUVDISC 626
+    #define OBJ_EVENT_GFX_BAGON 627
+    #define OBJ_EVENT_GFX_SHELGON 628
+    #define OBJ_EVENT_GFX_SALAMENCE 629
+    #define OBJ_EVENT_GFX_BELDUM 630
+    #define OBJ_EVENT_GFX_METANG 631
+    #define OBJ_EVENT_GFX_METAGROSS 632
+    #define OBJ_EVENT_GFX_ARTICUNO 633
+    #define OBJ_EVENT_GFX_ZAPDOS 634
+    #define OBJ_EVENT_GFX_MOLTRES 635
+    #define OBJ_EVENT_GFX_RAIKOU 636
+    #define OBJ_EVENT_GFX_ENTEI 637
+    #define OBJ_EVENT_GFX_SUICUNE 638
+    #define OBJ_EVENT_GFX_REGIROCK_FOLLOWER 639
+    #define OBJ_EVENT_GFX_REGICE_FOLLOWER 640
+    #define OBJ_EVENT_GFX_REGISTEEL_FOLLOWER 641
+    #define OBJ_EVENT_GFX_REGIGIGAS 642
+    #define OBJ_EVENT_GFX_LUGIA_FOLLOWER 643
+    #define OBJ_EVENT_GFX_HOOH_FOLLOWER 644
+    #define OBJ_EVENT_GFX_LATIAS_FOLLOWER 645
+    #define OBJ_EVENT_GFX_LATIOS_FOLLOWER 646
+    #define OBJ_EVENT_GFX_KYOGRE 647
+    #define OBJ_EVENT_GFX_GROUDON 648
+    #define OBJ_EVENT_GFX_MEWTWO 649
+    #define OBJ_EVENT_GFX_MEW_FOLLOWER 650
+    #define OBJ_EVENT_GFX_CELEBI 651
+    #define OBJ_EVENT_GFX_RAYQUAZA_FOLLOWER 652
+    #define OBJ_EVENT_GFX_JIRACHI 653
+    #define OBJ_EVENT_GFX_DEOXYS_NORMAL 654
+    #define OBJ_EVENT_GFX_TURTWIG 655
+    #define OBJ_EVENT_GFX_GROTLE 656
+    #define OBJ_EVENT_GFX_TORTERRA 657
+    #define OBJ_EVENT_GFX_CHIMCHAR 658
+    #define OBJ_EVENT_GFX_MONFERNO 659
+    #define OBJ_EVENT_GFX_INFERNAPE 660
+    #define OBJ_EVENT_GFX_PIPLUP 661
+    #define OBJ_EVENT_GFX_PRINPLUP 662
+    #define OBJ_EVENT_GFX_EMPOLEON 663
+    #define OBJ_EVENT_GFX_STARLY 664
+    #define OBJ_EVENT_GFX_STARAVIA 665
+    #define OBJ_EVENT_GFX_STARAPTOR 666
+    #define OBJ_EVENT_GFX_BIDOOF 667
+    #define OBJ_EVENT_GFX_BIBAREL 668
+    #define OBJ_EVENT_GFX_KRICKETOT 669
+    #define OBJ_EVENT_GFX_KRICKETUNE 670
+    #define OBJ_EVENT_GFX_SHINX 671
+    #define OBJ_EVENT_GFX_LUXIO 672
+    #define OBJ_EVENT_GFX_LUXRAY 673
+    #define OBJ_EVENT_GFX_CRANIDOS 674
+    #define OBJ_EVENT_GFX_RAMPARDOS 675
+    #define OBJ_EVENT_GFX_SHIELDON 676
+    #define OBJ_EVENT_GFX_BASTIODON 677
+    #define OBJ_EVENT_GFX_BURMY 678
+    #define OBJ_EVENT_GFX_WORMADAM 679
+    #define OBJ_EVENT_GFX_MOTHIM 680
+    #define OBJ_EVENT_GFX_COMBEE 681
+    #define OBJ_EVENT_GFX_VESPIQUEN 682
+    #define OBJ_EVENT_GFX_PACHIRISU 683
+    #define OBJ_EVENT_GFX_BUIZEL 684
+    #define OBJ_EVENT_GFX_FLOATZEL 685
+    #define OBJ_EVENT_GFX_CHERUBI 686
+    #define OBJ_EVENT_GFX_CHERRIM 687
+    #define OBJ_EVENT_GFX_SHELLOS 688
+    #define OBJ_EVENT_GFX_GASTRODON 689
+    #define OBJ_EVENT_GFX_DRIFLOON 690
+    #define OBJ_EVENT_GFX_DRIFBLIM 691
+    #define OBJ_EVENT_GFX_BUNEARY 692
+    #define OBJ_EVENT_GFX_LOPUNNY 693
+    #define OBJ_EVENT_GFX_GLAMEOW 694
+    #define OBJ_EVENT_GFX_PURUGLY 695
+    #define OBJ_EVENT_GFX_STUNKY 696
+    #define OBJ_EVENT_GFX_SKUNTANK 697
+    #define OBJ_EVENT_GFX_BRONZOR 698
+    #define OBJ_EVENT_GFX_BRONZONG 699
+    #define OBJ_EVENT_GFX_CHATOT 700
+    #define OBJ_EVENT_GFX_SPIRITOMB 701
+    #define OBJ_EVENT_GFX_GIBLE 702
+    #define OBJ_EVENT_GFX_GABITE 703
+    #define OBJ_EVENT_GFX_GARCHOMP 704
+    #define OBJ_EVENT_GFX_RIOLU 705
+    #define OBJ_EVENT_GFX_LUCARIO 706
+    #define OBJ_EVENT_GFX_HIPPOPOTAS 707
+    #define OBJ_EVENT_GFX_HIPPOWDON 708
+    #define OBJ_EVENT_GFX_SKORUPI 709
+    #define OBJ_EVENT_GFX_DRAPION 710
+    #define OBJ_EVENT_GFX_CROAGUNK 711
+    #define OBJ_EVENT_GFX_TOXICROAK 712
+    #define OBJ_EVENT_GFX_CARNIVINE 713
+    #define OBJ_EVENT_GFX_FINNEON 714
+    #define OBJ_EVENT_GFX_LUMINEON 715
+    #define OBJ_EVENT_GFX_SNOVER 716
+    #define OBJ_EVENT_GFX_ABOMASNOW 717
+    #define OBJ_EVENT_GFX_ROTOM_BASE 718
+    #define OBJ_EVENT_GFX_UXIE 719
+    #define OBJ_EVENT_GFX_MESPRIT 720
+    #define OBJ_EVENT_GFX_AZELF 721
+    #define OBJ_EVENT_GFX_DIALGA 722
+    #define OBJ_EVENT_GFX_PALKIA 723
+    #define OBJ_EVENT_GFX_HEATRAN 724
+    #define OBJ_EVENT_GFX_GIRATINA_NORMAL 725
+    #define OBJ_EVENT_GFX_CRESSELIA 726
+    #define OBJ_EVENT_GFX_PHIONE 727
+    #define OBJ_EVENT_GFX_MANAPHY 728
+    #define OBJ_EVENT_GFX_DARKRAI 729
+    #define OBJ_EVENT_GFX_SHAYMIN_LAND 730
+    #define OBJ_EVENT_GFX_ARCEUS_NORMAL 731
 
 #define OBJ_EVENT_GFX_DEOXYS_SPEED               732
 #define OBJ_EVENT_GFX_DEOXYS_DEFENSE             733
