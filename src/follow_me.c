@@ -233,8 +233,8 @@ void FollowMe(struct ObjectEvent* npc, u8 state, bool8 ignoreScriptActive)
         return;
     else if (!gSaveBlock2Ptr->follower.inProgress)
         return;
-    //else if (ArePlayerFieldControlsLocked() && !ignoreScriptActive)
-    //    return; //Don't follow during a script
+    else if (ArePlayerFieldControlsLocked() && !ignoreScriptActive)
+        return; //Don't follow during a script
                 
     
     // fix post-surf jump
