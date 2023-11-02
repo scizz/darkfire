@@ -52,6 +52,7 @@ static void QueueAnimTiles_General_PondWaterTop(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Sea(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
+static void QueueAnimTiles_General_WaterfallBottom(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
 static void QueueAnimTiles_General_WeedT(u16);
 static void QueueAnimTiles_General_WeedNT(u16);
@@ -223,12 +224,34 @@ const u16 gTilesetAnims_General_Waterfall_Frame0[] = INCBIN_U16("data/tilesets/p
 const u16 gTilesetAnims_General_Waterfall_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/1.4bpp");
 const u16 gTilesetAnims_General_Waterfall_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/2.4bpp");
 const u16 gTilesetAnims_General_Waterfall_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/3.4bpp");
+const u16 gTilesetAnims_General_Waterfall_Frame4[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/4.4bpp");
+const u16 gTilesetAnims_General_Waterfall_Frame5[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/5.4bpp");
+const u16 gTilesetAnims_General_Waterfall_Frame6[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/6.4bpp");
+const u16 gTilesetAnims_General_Waterfall_Frame7[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/7.4bpp");
+const u16 gTilesetAnims_General_Waterfall_Frame8[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall/8.4bpp");
 
 const u16 *const gTilesetAnims_General_Waterfall[] = {
     gTilesetAnims_General_Waterfall_Frame0,
     gTilesetAnims_General_Waterfall_Frame1,
     gTilesetAnims_General_Waterfall_Frame2,
-    gTilesetAnims_General_Waterfall_Frame3
+    gTilesetAnims_General_Waterfall_Frame3,
+    gTilesetAnims_General_Waterfall_Frame4,
+    gTilesetAnims_General_Waterfall_Frame5,
+    gTilesetAnims_General_Waterfall_Frame6,
+    gTilesetAnims_General_Waterfall_Frame7,
+    gTilesetAnims_General_Waterfall_Frame8
+};
+
+const u16 gTilesetAnims_General_WaterfallBottom_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall_bottom/0.4bpp");
+const u16 gTilesetAnims_General_WaterfallBottom_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall_bottom/1.4bpp");
+const u16 gTilesetAnims_General_WaterfallBottom_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall_bottom/2.4bpp");
+const u16 gTilesetAnims_General_WaterfallBottom_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/waterfall_bottom/3.4bpp");
+
+const u16 *const gTilesetAnims_General_WaterfallBottom[] = {
+    gTilesetAnims_General_WaterfallBottom_Frame0,
+    gTilesetAnims_General_WaterfallBottom_Frame1,
+    gTilesetAnims_General_WaterfallBottom_Frame2,
+    gTilesetAnims_General_WaterfallBottom_Frame3
 };
 
 const u16 gTilesetAnims_General_LandWaterEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/land_water_edge/0.4bpp");
@@ -939,7 +962,8 @@ static void TilesetAnim_General(u16 timer)
     if (timer % 16 == 3)
         QueueAnimTiles_General_Sea(timer >> 4);
     if (timer % 16 == 4)
-        QueueAnimTiles_General_Waterfall(timer >> 4);
+        QueueAnimTiles_General_Waterfall(timer >> 3);
+        QueueAnimTiles_General_WaterfallBottom(timer >> 4);
     if (timer % 16 == 5)
         QueueAnimTiles_General_LandWaterEdge(timer >> 4);
     if (timer % 16 == 6)
@@ -1013,7 +1037,13 @@ static void QueueAnimTiles_General_Sea(u16 timer)
 static void QueueAnimTiles_General_Waterfall(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_Waterfall);
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 6 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(494)), 6 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_General_WaterfallBottom(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_WaterfallBottom);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_WaterfallBottom[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(500)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_General_WeedT(u16 timer)
