@@ -103,10 +103,11 @@ void Clouds_InitVars(void)
     //gWeatherPtr->noShadows = FALSE;
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 20;
+    Weather_SetBlendCoeffs(8, 12);
     gWeatherPtr->weatherGfxLoaded = FALSE;
     gWeatherPtr->initStep = 0;
-    if (gWeatherPtr->cloudSpritesCreated == FALSE)
-        Weather_SetBlendCoeffs(0, 16);
+    //if (gWeatherPtr->cloudSpritesCreated == FALSE)
+        //Weather_SetBlendCoeffs(0, 16);
 }
 
 void Clouds_InitAll(void)
@@ -125,7 +126,7 @@ void Clouds_Main(void)
         gWeatherPtr->initStep++;
         break;
     case 1:
-        Weather_SetTargetBlendCoeffs(12, 8, 1);
+        //Weather_SetTargetBlendCoeffs(12, 8, 1);
         gWeatherPtr->initStep++;
         break;
     case 2:
@@ -143,7 +144,7 @@ bool8 Clouds_Finish(void)
     switch (gWeatherPtr->finishStep)
     {
     case 0:
-        Weather_SetTargetBlendCoeffs(0, 16, 1);
+        //Weather_SetTargetBlendCoeffs(0, 16, 1);
         gWeatherPtr->finishStep++;
         return TRUE;
     case 1:
