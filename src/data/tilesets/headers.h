@@ -523,7 +523,7 @@ const struct Tileset gTileset_GenericBuilding =
     .palettes = gTilesetPalettes_GenericBuilding,
     .metatiles = gMetatiles_GenericBuilding,
     .metatileAttributes = gMetatileAttributes_GenericBuilding,
-    .callback = NULL,
+    .callback = InitTilesetAnim_GenericBuilding,
 };
 
 const struct Tileset gTileset_MauvilleGameCorner =

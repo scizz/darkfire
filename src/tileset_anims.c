@@ -43,6 +43,7 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_GenericBuilding(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_WhiteFlower(u16);
 static void QueueAnimTiles_General_Water(u16);
@@ -61,6 +62,7 @@ static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
+static void QueueAnimTiles_GenericBuilding_SunBeams(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
@@ -286,6 +288,18 @@ const u16 *const gTilesetAnims_General_WeedNT[] = {
     gTilesetAnims_General_WeedNT_Frame1,
     gTilesetAnims_General_WeedNT_Frame2,
     gTilesetAnims_General_WeedNT_Frame1
+};
+
+const u16 gTilesetAnims_GenericBuilding_SunBeams_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/sun_beams/0.4bpp");
+const u16 gTilesetAnims_GenericBuilding_SunBeams_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/sun_beams/1.4bpp");
+const u16 gTilesetAnims_GenericBuilding_SunBeams_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/sun_beams/2.4bpp");
+const u16 gTilesetAnims_GenericBuilding_SunBeams_Frame3[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/sun_beams/3.4bpp");
+
+const u16 *const gTilesetAnims_GenericBuilding_SunBeams[] = {
+    gTilesetAnims_GenericBuilding_SunBeams_Frame0,
+    gTilesetAnims_GenericBuilding_SunBeams_Frame1,
+    gTilesetAnims_GenericBuilding_SunBeams_Frame2,
+    gTilesetAnims_GenericBuilding_SunBeams_Frame3
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -1212,6 +1226,13 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
 }
 
+void InitTilesetAnim_GenericBuilding(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_GenericBuilding;
+}
+
 static void TilesetAnim_Dewford(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1587,6 +1608,12 @@ static void TilesetAnim_BikeShop(u16 timer)
         QueueAnimTiles_BikeShop_BlinkingLights(timer / 4);
 }
 
+static void TilesetAnim_GenericBuilding(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_GenericBuilding_SunBeams(timer >> 6);
+}
+
 static void TilesetAnim_BattlePyramid(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1643,6 +1670,12 @@ static void QueueAnimTiles_BikeShop_BlinkingLights(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_BikeShop_BlinkingLights);
     AppendTilesetAnimToBuffer(gTilesetAnims_BikeShop_BlinkingLights[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 496)), 9 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_GenericBuilding_SunBeams(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_SunBeams);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_SunBeams[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 10)), 6 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Sootopolis_StormyWater(u16 timer)
