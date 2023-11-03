@@ -11670,7 +11670,7 @@
               {
                 "min_level": 18,
                 "max_level": 18,
-                "species": "SPECIES_BELLSPROUT"
+                "species": "SPECIES_SENTRET"
               },
               {
                 "min_level": 18,
@@ -11685,7 +11685,7 @@
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_SENTRET"
+                "species": "SPECIES_BUTTERFREE"
               },
               {
                 "min_level": 21,
@@ -11695,17 +11695,17 @@
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_GLOOM"
+                "species": "SPECIES_ABRA"
               },
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_BUTTERFREE"
+                "species": "SPECIES_SUDOWOODO"
               },
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_SUDOWOODO"
+                "species": "SPECIES_ABRA"
               }
             ]
           },
