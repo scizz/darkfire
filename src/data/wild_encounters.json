@@ -13894,32 +13894,32 @@
               {
                 "min_level": 18,
                 "max_level": 18,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_SUNFLORA"
               },
               {
                 "min_level": 18,
                 "max_level": 18,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_HOPPIP"
               },
               {
                 "min_level": 19,
                 "max_level": 19,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_SKIPLOOM"
               },
               {
                 "min_level": 19,
                 "max_level": 19,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 19,
                 "max_level": 19,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_SKIPLOOM"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_MILTANK"
               },
               {
                 "min_level": 20,
@@ -13934,7 +13934,7 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_LEDIAN"
+                "species": "SPECIES_SUDOWOODO"
               },
               {
                 "min_level": 22,
@@ -13944,7 +13944,7 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_LEDIAN"
+                "species": "SPECIES_SUDOWOODO"
               }
             ]
           },
