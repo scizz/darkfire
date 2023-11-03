@@ -13528,12 +13528,12 @@
               {
                 "min_level": 17,
                 "max_level": 17,
-                "species": "SPECIES_SEEDOT"
+                "species": "SPECIES_PONYTA"
               },
               {
                 "min_level": 18,
                 "max_level": 18,
-                "species": "SPECIES_SEEDOT"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 17,
@@ -13552,8 +13552,8 @@
               },
               {
                 "min_level": 18,
-                "max_level": 18,
-                "species": "SPECIES_ODDISH"
+                "max_level": 21,
+                "species": "SPECIES_GLOOM"
               },
               {
                 "min_level": 18,
@@ -13568,7 +13568,7 @@
               {
                 "min_level": 19,
                 "max_level": 19,
-                "species": "SPECIES_NUZLEAF"
+                "species": "SPECIES_GLOOM"
               },
               {
                 "min_level": 17,
@@ -13578,7 +13578,7 @@
               {
                 "min_level": 18,
                 "max_level": 18,
-                "species": "SPECIES_NUZLEAF"
+                "species": "SPECIES_GLOOM"
               },
               {
                 "min_level": 21,
