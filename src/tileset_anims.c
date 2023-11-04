@@ -73,6 +73,7 @@ static void QueueAnimTiles_GenericBuilding_Water6(u16);
 static void QueueAnimTiles_GenericBuilding_Water7(u16);
 static void QueueAnimTiles_GenericBuilding_Water8(u16);
 static void QueueAnimTiles_GenericBuilding_Water9(u16);
+static void QueueAnimTiles_GenericBuilding_BigRock(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
@@ -420,6 +421,17 @@ const u16 *const gTilesetAnims_GenericBuilding_Water9[] = {
     gTilesetAnims_GenericBuilding_Water9_Frame1,
     gTilesetAnims_GenericBuilding_Water9_Frame2,
     gTilesetAnims_GenericBuilding_Water9_Frame1
+};
+
+const u16 gTilesetAnims_GenericBuilding_BigRock_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/big_rock/0.4bpp");
+const u16 gTilesetAnims_GenericBuilding_BigRock_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/big_rock/1.4bpp");
+const u16 gTilesetAnims_GenericBuilding_BigRock_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/big_rock/2.4bpp");
+
+const u16 *const gTilesetAnims_GenericBuilding_BigRock[] = {
+    gTilesetAnims_GenericBuilding_BigRock_Frame0,
+    gTilesetAnims_GenericBuilding_BigRock_Frame1,
+    gTilesetAnims_GenericBuilding_BigRock_Frame2,
+    gTilesetAnims_GenericBuilding_BigRock_Frame1
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -1745,6 +1757,8 @@ static void TilesetAnim_GenericBuilding(u16 timer)
         QueueAnimTiles_GenericBuilding_Water8(timer >> 4);
         QueueAnimTiles_GenericBuilding_Water9(timer >> 4);
     }
+    if (timer % 8 == 2)
+        QueueAnimTiles_GenericBuilding_BigRock(timer >> 4);
 }
 
 static void TilesetAnim_BattlePyramid(u16 timer)
@@ -1869,6 +1883,12 @@ static void QueueAnimTiles_GenericBuilding_Water9(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_Water9);
     AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_Water9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 351)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_GenericBuilding_BigRock(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_BigRock);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_BigRock[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 346)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Sootopolis_StormyWater(u16 timer)
