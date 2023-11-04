@@ -74,6 +74,9 @@ static void QueueAnimTiles_GenericBuilding_Water7(u16);
 static void QueueAnimTiles_GenericBuilding_Water8(u16);
 static void QueueAnimTiles_GenericBuilding_Water9(u16);
 static void QueueAnimTiles_GenericBuilding_BigRock(u16);
+static void QueueAnimTiles_GenericBuilding_SmallRockTop(u16);
+static void QueueAnimTiles_GenericBuilding_SmallRockBottom(u16);
+static void QueueAnimTiles_GenericBuilding_Wood(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
@@ -432,6 +435,36 @@ const u16 *const gTilesetAnims_GenericBuilding_BigRock[] = {
     gTilesetAnims_GenericBuilding_BigRock_Frame1,
     gTilesetAnims_GenericBuilding_BigRock_Frame2,
     gTilesetAnims_GenericBuilding_BigRock_Frame1
+};
+
+const u16 gTilesetAnims_GenericBuilding_SmallRockTop_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_top/0.4bpp");
+const u16 gTilesetAnims_GenericBuilding_SmallRockTop_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_top/1.4bpp");
+const u16 gTilesetAnims_GenericBuilding_SmallRockTop_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_top/2.4bpp");
+
+const u16 *const gTilesetAnims_GenericBuilding_SmallRockTop[] = {
+    gTilesetAnims_GenericBuilding_SmallRockTop_Frame0,
+    gTilesetAnims_GenericBuilding_SmallRockTop_Frame1,
+    gTilesetAnims_GenericBuilding_SmallRockTop_Frame2,
+    gTilesetAnims_GenericBuilding_SmallRockTop_Frame1
+};
+
+const u16 gTilesetAnims_GenericBuilding_SmallRockBottom_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_bottom/0.4bpp");
+const u16 gTilesetAnims_GenericBuilding_SmallRockBottom_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_bottom/1.4bpp");
+
+const u16 *const gTilesetAnims_GenericBuilding_SmallRockBottom[] = {
+    gTilesetAnims_GenericBuilding_SmallRockBottom_Frame0,
+    gTilesetAnims_GenericBuilding_SmallRockBottom_Frame1
+};
+
+const u16 gTilesetAnims_GenericBuilding_Wood_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/wood/0.4bpp");
+const u16 gTilesetAnims_GenericBuilding_Wood_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/wood/1.4bpp");
+const u16 gTilesetAnims_GenericBuilding_Wood_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/wood/2.4bpp");
+
+const u16 *const gTilesetAnims_GenericBuilding_Wood[] = {
+    gTilesetAnims_GenericBuilding_Wood_Frame0,
+    gTilesetAnims_GenericBuilding_Wood_Frame1,
+    gTilesetAnims_GenericBuilding_Wood_Frame2,
+    gTilesetAnims_GenericBuilding_Wood_Frame1
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -1759,6 +1792,13 @@ static void TilesetAnim_GenericBuilding(u16 timer)
     }
     if (timer % 8 == 2)
         QueueAnimTiles_GenericBuilding_BigRock(timer >> 4);
+    if (timer % 8 == 3)
+    {
+        QueueAnimTiles_GenericBuilding_SmallRockTop(timer >> 4);
+        QueueAnimTiles_GenericBuilding_SmallRockBottom(timer >> 4);
+    }
+    if (timer % 8 == 4)
+        QueueAnimTiles_GenericBuilding_Wood(timer >> 5);
 }
 
 static void TilesetAnim_BattlePyramid(u16 timer)
@@ -1889,6 +1929,24 @@ static void QueueAnimTiles_GenericBuilding_BigRock(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_BigRock);
     AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_BigRock[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 346)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_GenericBuilding_SmallRockTop(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_SmallRockTop);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_SmallRockTop[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 222)), 2 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_GenericBuilding_SmallRockBottom(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_SmallRockBottom);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_SmallRockBottom[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 238)), 2 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_GenericBuilding_Wood(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_Wood);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_Wood[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 188)), 2 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Sootopolis_StormyWater(u16 timer)
