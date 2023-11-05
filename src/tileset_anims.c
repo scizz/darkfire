@@ -46,6 +46,7 @@ static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_GenericBuilding(u16);
 static void TilesetAnim_RustboroGym(u16);
 static void TilesetAnim_PokemonCenter(u16);
+static void TilesetAnim_Lilycove(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_WhiteFlower(u16);
 static void QueueAnimTiles_General_Water(u16);
@@ -93,6 +94,7 @@ static void QueueAnimTiles_RustboroGym_Water8(u16);
 static void QueueAnimTiles_RustboroGym_Water9(u16);
 static void QueueAnimTiles_PokemonCenter_Map(u16);
 static void QueueAnimTiles_PokemonCenter_Stripe(u16);
+static void QueueAnimTiles_Lilycove_Flag(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
@@ -633,6 +635,18 @@ const u16 *const gTilesetAnims_PokemonCenter_Stripe[] = {
     gTilesetAnims_PokemonCenter_Stripe_Frame13,
     gTilesetAnims_PokemonCenter_Stripe_Frame14,
     gTilesetAnims_PokemonCenter_Stripe_Frame15
+};
+
+const u16 gTilesetAnims_Lilycove_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/lilycove/anim/flag/0.4bpp");
+const u16 gTilesetAnims_Lilycove_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/lilycove/anim/flag/1.4bpp");
+const u16 gTilesetAnims_Lilycove_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/lilycove/anim/flag/2.4bpp");
+const u16 gTilesetAnims_Lilycove_Flag_Frame3[] = INCBIN_U16("data/tilesets/secondary/lilycove/anim/flag/3.4bpp");
+
+const u16 *const gTilesetAnims_Lilycove_Flag[] = {
+    gTilesetAnims_Lilycove_Flag_Frame0,
+    gTilesetAnims_Lilycove_Flag_Frame1,
+    gTilesetAnims_Lilycove_Flag_Frame2,
+    gTilesetAnims_Lilycove_Flag_Frame3
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -1458,7 +1472,7 @@ void InitTilesetAnim_Lilycove(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = NULL;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Lilycove;
 }
 
 void InitTilesetAnim_Mossdeep(void)
@@ -2017,6 +2031,12 @@ static void TilesetAnim_PokemonCenter(u16 timer)
         QueueAnimTiles_PokemonCenter_Stripe(timer >> 2);
 }
 
+static void TilesetAnim_Lilycove(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_Lilycove_Flag(timer / 8);
+}
+
 static void TilesetAnim_BattleDome(u16 timer)
 {
     if (timer % 4 == 0)
@@ -2244,6 +2264,12 @@ static void QueueAnimTiles_PokemonCenter_Stripe(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_PokemonCenter_Stripe);
     AppendTilesetAnimToBuffer(gTilesetAnims_PokemonCenter_Stripe[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 243)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Lilycove_Flag(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Lilycove_Flag);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Lilycove_Flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 106)), 6 * TILE_SIZE_4BPP);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)
