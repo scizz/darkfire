@@ -25,6 +25,7 @@ void InitTilesetAnim_Building(void);
 void InitTilesetAnim_Cave(void);
 void InitTilesetAnim_BikeShop(void);
 void InitTilesetAnim_GenericBuilding(void);
+void InitTilesetAnim_RustboroGym(void);
 void InitTilesetAnim_Underwater(void);
 void InitTilesetAnim_SootopolisGym(void);
 void InitTilesetAnim_MauvilleGym(void);

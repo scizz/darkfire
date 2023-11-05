@@ -44,6 +44,7 @@ static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_GenericBuilding(u16);
+static void TilesetAnim_RustboroGym(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_WhiteFlower(u16);
 static void QueueAnimTiles_General_Water(u16);
@@ -79,6 +80,16 @@ static void QueueAnimTiles_GenericBuilding_SmallRockBottom(u16);
 static void QueueAnimTiles_GenericBuilding_Wood(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
+static void QueueAnimTiles_RustboroGym_Water0(u16);
+static void QueueAnimTiles_RustboroGym_Water1(u16);
+static void QueueAnimTiles_RustboroGym_Water2(u16);
+static void QueueAnimTiles_RustboroGym_Water3(u16);
+static void QueueAnimTiles_RustboroGym_Water4(u16);
+static void QueueAnimTiles_RustboroGym_Water5(u16);
+static void QueueAnimTiles_RustboroGym_Water6(u16);
+static void QueueAnimTiles_RustboroGym_Water7(u16);
+static void QueueAnimTiles_RustboroGym_Water8(u16);
+static void QueueAnimTiles_RustboroGym_Water9(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
@@ -465,6 +476,116 @@ const u16 *const gTilesetAnims_GenericBuilding_Wood[] = {
     gTilesetAnims_GenericBuilding_Wood_Frame1,
     gTilesetAnims_GenericBuilding_Wood_Frame2,
     gTilesetAnims_GenericBuilding_Wood_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water0_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water0_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water0_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water0[] = {
+    gTilesetAnims_RustboroGym_Water0_Frame0,
+    gTilesetAnims_RustboroGym_Water0_Frame1,
+    gTilesetAnims_RustboroGym_Water0_Frame2,
+    gTilesetAnims_RustboroGym_Water0_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water1_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/1/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water1_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/1/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water1_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/1/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water1[] = {
+    gTilesetAnims_RustboroGym_Water1_Frame0,
+    gTilesetAnims_RustboroGym_Water1_Frame1,
+    gTilesetAnims_RustboroGym_Water1_Frame2,
+    gTilesetAnims_RustboroGym_Water1_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water2_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/2/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water2_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/2/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water2_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/2/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water2[] = {
+    gTilesetAnims_RustboroGym_Water2_Frame0,
+    gTilesetAnims_RustboroGym_Water2_Frame1,
+    gTilesetAnims_RustboroGym_Water2_Frame2,
+    gTilesetAnims_RustboroGym_Water2_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water3_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/3/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water3_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/3/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water3_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/3/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water3[] = {
+    gTilesetAnims_RustboroGym_Water3_Frame0,
+    gTilesetAnims_RustboroGym_Water3_Frame1,
+    gTilesetAnims_RustboroGym_Water3_Frame2,
+    gTilesetAnims_RustboroGym_Water3_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water4_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/4/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water4_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/4/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water4_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/4/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water4[] = {
+    gTilesetAnims_RustboroGym_Water4_Frame0,
+    gTilesetAnims_RustboroGym_Water4_Frame1,
+    gTilesetAnims_RustboroGym_Water4_Frame2,
+    gTilesetAnims_RustboroGym_Water4_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water5_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/5/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water5_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/5/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water5_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/5/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water5[] = {
+    gTilesetAnims_RustboroGym_Water5_Frame0,
+    gTilesetAnims_RustboroGym_Water5_Frame1,
+    gTilesetAnims_RustboroGym_Water5_Frame2,
+    gTilesetAnims_RustboroGym_Water5_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water6_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/6/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water6_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/6/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water6_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/6/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water6[] = {
+    gTilesetAnims_RustboroGym_Water6_Frame0,
+    gTilesetAnims_RustboroGym_Water6_Frame1,
+    gTilesetAnims_RustboroGym_Water6_Frame2,
+    gTilesetAnims_RustboroGym_Water6_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water7_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/7/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water7_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/7/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water7_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/7/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water7[] = {
+    gTilesetAnims_RustboroGym_Water7_Frame0,
+    gTilesetAnims_RustboroGym_Water7_Frame1,
+    gTilesetAnims_RustboroGym_Water7_Frame2,
+    gTilesetAnims_RustboroGym_Water7_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water8_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/8/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water8_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/8/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water8_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/8/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water8[] = {
+    gTilesetAnims_RustboroGym_Water8_Frame0,
+    gTilesetAnims_RustboroGym_Water8_Frame1,
+    gTilesetAnims_RustboroGym_Water8_Frame2,
+    gTilesetAnims_RustboroGym_Water8_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Water9_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/9/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water9_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/9/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_Water9_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/9/2.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Water9[] = {
+    gTilesetAnims_RustboroGym_Water9_Frame0,
+    gTilesetAnims_RustboroGym_Water9_Frame1,
+    gTilesetAnims_RustboroGym_Water9_Frame2,
+    gTilesetAnims_RustboroGym_Water9_Frame1
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -1398,6 +1519,13 @@ void InitTilesetAnim_GenericBuilding(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_GenericBuilding;
 }
 
+void InitTilesetAnim_RustboroGym(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_RustboroGym;
+}
+
 static void TilesetAnim_Dewford(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1810,6 +1938,23 @@ static void TilesetAnim_BattlePyramid(u16 timer)
     }
 }
 
+static void TilesetAnim_RustboroGym(u16 timer)
+{
+    if (timer % 8 == 0)
+    {
+        QueueAnimTiles_RustboroGym_Water0(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water1(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water2(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water3(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water4(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water5(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water6(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water7(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water8(timer >> 5);
+        QueueAnimTiles_RustboroGym_Water9(timer >> 5);
+    }
+}
+
 static void TilesetAnim_BattleDome(u16 timer)
 {
     if (timer % 4 == 0)
@@ -1965,6 +2110,66 @@ static void QueueAnimTiles_BattlePyramid_StatueShadow(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattlePyramid_StatueShadow);
     AppendTilesetAnimToBuffer(gTilesetAnims_BattlePyramid_StatueShadow[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 135)), 8 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water0(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water0);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water0[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 45)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water1(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water1);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water1[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 61)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water2(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water2);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water2[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 77)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water3(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water3);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 93)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water4(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water4);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water4[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 109)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water5(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water5);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water5[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 110)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water6(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water6);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water6[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 111)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water7(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water7);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water7[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 46)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water8(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water8);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water8[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 62)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Water9(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water9);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 63)), 1 * TILE_SIZE_4BPP);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)

@@ -545,7 +545,7 @@ const struct Tileset gTileset_RustboroGym =
     .palettes = gTilesetPalettes_RustboroGym,
     .metatiles = gMetatiles_RustboroGym,
     .metatileAttributes = gMetatileAttributes_RustboroGym,
-    .callback = NULL,
+    .callback = InitTilesetAnim_RustboroGym,
 };
 
 const struct Tileset gTileset_DewfordGym =
