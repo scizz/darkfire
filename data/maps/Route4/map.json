@@ -5,7 +5,7 @@
   "music": "MUS_ROUTE_3_4",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -504,8 +504,8 @@
   ],
   "warp_events": [
     {
-      "x": 84,
-      "y": 51,
+      "x": 63,
+      "y": 66,
       "elevation": 3,
       "dest_map": "MAP_ANHEIM_FOREST",
       "dest_warp_id": "3"
