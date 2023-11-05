@@ -1779,16 +1779,16 @@ static void TilesetAnim_GenericBuilding(u16 timer)
         QueueAnimTiles_GenericBuilding_SunBeams(timer >> 6);
     if (timer % 8 == 1)
     {
-        QueueAnimTiles_GenericBuilding_Water0(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water1(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water2(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water3(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water4(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water5(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water6(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water7(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water8(timer >> 4);
-        QueueAnimTiles_GenericBuilding_Water9(timer >> 4);
+        QueueAnimTiles_GenericBuilding_Water0(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water1(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water2(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water3(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water4(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water5(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water6(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water7(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water8(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Water9(timer >> 5);
     }
     if (timer % 8 == 2)
         QueueAnimTiles_GenericBuilding_BigRock(timer >> 4);
