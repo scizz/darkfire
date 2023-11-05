@@ -1119,9 +1119,6 @@ void SetMapVarsToTrainer(void)
         gSpecialVar_LastTalked = sTrainerObjectEventLocalId;
         gSelectedObjectEvent = GetObjectEventIdByLocalIdAndMap(sTrainerObjectEventLocalId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
     }
-    if (gTrainerBattleOpponent_A != 0) {
-        gSpeakerName = gTrainers[gTrainerBattleOpponent_A].trainerName;
-    }
 }
 
 const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
@@ -1535,14 +1532,10 @@ static const u8 *ReturnEmptyStringIfNull(const u8 *string)
 
 static const u8 *GetIntroSpeechOfApproachingTrainer(void)
 {
-    if (gApproachingTrainerId == 0) {
-        gSpeakerName = gTrainers[gTrainerBattleOpponent_A].trainerName;
+    if (gApproachingTrainerId == 0)
         return ReturnEmptyStringIfNull(sTrainerAIntroSpeech);
-    }
-    else {
-        gSpeakerName = gTrainers[gTrainerBattleOpponent_B].trainerName;
+    else 
         return ReturnEmptyStringIfNull(sTrainerBIntroSpeech);
-    }
 }
 
 const u8 *GetTrainerALoseText(void)
