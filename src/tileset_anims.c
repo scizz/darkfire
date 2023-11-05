@@ -97,6 +97,7 @@ static void QueueAnimTiles_PokemonCenter_Map(u16);
 static void QueueAnimTiles_PokemonCenter_Stripe(u16);
 static void QueueAnimTiles_Lilycove_Flag(u16);
 static void QueueAnimTiles_Fallarbor_Campfire(u16);
+static void QueueAnimTiles_Fallarbor_Smoke(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
@@ -655,12 +656,6 @@ const u16 gTilesetAnims_Fallarbor_Campfire_Frame0[] = INCBIN_U16("data/tilesets/
 const u16 gTilesetAnims_Fallarbor_Campfire_Frame1[] = INCBIN_U16("data/tilesets/secondary/fallarbor/anim/campfire/1.4bpp");
 const u16 gTilesetAnims_Fallarbor_Campfire_Frame2[] = INCBIN_U16("data/tilesets/secondary/fallarbor/anim/campfire/2.4bpp");
 
-const u16 *const gTilesetAnims_Fallarbor_Campfire[] = {
-    gTilesetAnims_Fallarbor_Campfire_Frame0,
-    gTilesetAnims_Fallarbor_Campfire_Frame1,
-    gTilesetAnims_Fallarbor_Campfire_Frame2
-};
-
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
 const u16 gTilesetAnims_Lavaridge_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/1.4bpp");
 const u16 gTilesetAnims_Lavaridge_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/2.4bpp");
@@ -692,6 +687,22 @@ const u16 *const gTilesetAnims_Petalburg_Chimney_Smoke[] = {
     gTilesetAnims_Petalburg_Chimney_Smoke_Frame0,
     gTilesetAnims_Petalburg_Chimney_Smoke_Frame1,
     gTilesetAnims_Petalburg_Chimney_Smoke_Frame2
+};
+
+const u16 *const gTilesetAnims_Fallarbor_Campfire[] = {
+    gTilesetAnims_Fallarbor_Campfire_Frame0,
+    gTilesetAnims_Fallarbor_Campfire_Frame1,
+    gTilesetAnims_Fallarbor_Campfire_Frame2
+};
+
+const u16 gTilesetAnims_Fallarbor_Smoke_Frame0[] = INCBIN_U16("data/tilesets/secondary/fallarbor/anim/smoke/0.4bpp");
+const u16 gTilesetAnims_Fallarbor_Smoke_Frame1[] = INCBIN_U16("data/tilesets/secondary/fallarbor/anim/smoke/1.4bpp");
+const u16 gTilesetAnims_Fallarbor_Smoke_Frame2[] = INCBIN_U16("data/tilesets/secondary/fallarbor/anim/smoke/2.4bpp");
+
+const u16 *const gTilesetAnims_Fallarbor_Smoke[] = {
+    gTilesetAnims_Fallarbor_Smoke_Frame0,
+    gTilesetAnims_Fallarbor_Smoke_Frame1,
+    gTilesetAnims_Fallarbor_Smoke_Frame2
 };
 
 const u16 gTilesetAnims_Petalburg_Watermill1_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/watermill_1/0.4bpp");
@@ -2053,6 +2064,8 @@ static void TilesetAnim_Fallarbor(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_Fallarbor_Campfire(timer / 8);
+    if (timer % 8 == 1)
+        QueueAnimTiles_Fallarbor_Smoke(timer >> 4);
 }
 
 static void TilesetAnim_BattleDome(u16 timer)
@@ -2294,6 +2307,12 @@ static void QueueAnimTiles_Fallarbor_Campfire(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Fallarbor_Campfire);
     AppendTilesetAnimToBuffer(gTilesetAnims_Fallarbor_Campfire[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 309)), 6 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Fallarbor_Smoke(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Fallarbor_Smoke);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Fallarbor_Smoke[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 293)), 4 * TILE_SIZE_4BPP);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)
