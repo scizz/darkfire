@@ -292,7 +292,8 @@ void UpdateShadowFieldEffect(struct Sprite *sprite)
         if (!objectEvent->active || !objectEvent->hasShadow
          || MetatileBehavior_IsPokeGrass(objectEvent->currentMetatileBehavior)
          || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->currentMetatileBehavior)
-         || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->previousMetatileBehavior))
+         || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->previousMetatileBehavior)
+         || MetatileBehavior_IsDoor(objectEvent->currentMetatileBehavior))
         // || MetatileBehavior_IsReflective(objectEvent->currentMetatileBehavior)
         // || MetatileBehavior_IsReflective(objectEvent->previousMetatileBehavior))
         {
