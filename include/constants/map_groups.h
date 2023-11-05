@@ -60,6 +60,7 @@
 #define MAP_SNOWDRIFT_FOREST       (8 | (1 << 8))
 #define MAP_MUDDY_UNDERPASS        (9 | (1 << 8))
 #define MAP_UNDERWATER             (10 | (1 << 8))
+#define MAP_DESERT_CAVERNS         (11 | (1 << 8))
 
 // gMapGroup_DarkfireGrottos
 #define MAP_ROUTE4EAST_TREE_GROTTO (0 | (2 << 8))

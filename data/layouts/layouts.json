@@ -5690,6 +5690,16 @@
       "secondary_tileset": "gTileset_Grotto1",
       "border_filepath": "data/layouts/Route4EastTreeGrotto/border.bin",
       "blockdata_filepath": "data/layouts/Route4EastTreeGrotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESERT_CAVERNS",
+      "name": "DesertCaverns_Layout",
+      "width": 120,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_IslandHarbor",
+      "border_filepath": "data/layouts/DesertCaverns/border.bin",
+      "blockdata_filepath": "data/layouts/DesertCaverns/map.bin"
     }
   ]
 }

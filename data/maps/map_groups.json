@@ -108,7 +108,8 @@
     "PalaceOfIce_Inside",
     "SnowdriftForest",
     "MuddyUnderpass",
-    "Underwater"
+    "Underwater",
+    "DesertCaverns"
   ],
   "gMapGroup_DarkfireGrottos": [
     "Route4EastTreeGrotto"
