@@ -204,7 +204,7 @@ const struct Tileset gTileset_PokemonCenter =
     .palettes = gTilesetPalettes_PokemonCenter,
     .metatiles = gMetatiles_PokemonCenter,
     .metatileAttributes = gMetatileAttributes_PokemonCenter,
-    .callback = NULL,
+    .callback = InitTilesetAnim_PokemonCenter,
 };
 
 const struct Tileset gTileset_Cave =

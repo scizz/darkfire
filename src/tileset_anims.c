@@ -45,6 +45,7 @@ static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_GenericBuilding(u16);
 static void TilesetAnim_RustboroGym(u16);
+static void TilesetAnim_PokemonCenter(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_WhiteFlower(u16);
 static void QueueAnimTiles_General_Water(u16);
@@ -90,6 +91,8 @@ static void QueueAnimTiles_RustboroGym_Water6(u16);
 static void QueueAnimTiles_RustboroGym_Water7(u16);
 static void QueueAnimTiles_RustboroGym_Water8(u16);
 static void QueueAnimTiles_RustboroGym_Water9(u16);
+static void QueueAnimTiles_PokemonCenter_Map(u16);
+static void QueueAnimTiles_PokemonCenter_Stripe(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
@@ -586,6 +589,50 @@ const u16 *const gTilesetAnims_RustboroGym_Water9[] = {
     gTilesetAnims_RustboroGym_Water9_Frame1,
     gTilesetAnims_RustboroGym_Water9_Frame2,
     gTilesetAnims_RustboroGym_Water9_Frame1
+};
+
+const u16 gTilesetAnims_PokemonCenter_Map_Frame0[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/map/0.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Map_Frame1[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/map/1.4bpp");
+
+const u16 *const gTilesetAnims_PokemonCenter_Map[] = {
+    gTilesetAnims_PokemonCenter_Map_Frame0,
+    gTilesetAnims_PokemonCenter_Map_Frame1
+};
+
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame0[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/0.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame1[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/1.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame2[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/2.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame3[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/3.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame4[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/4.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame5[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/5.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame6[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/6.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame7[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/7.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame8[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/8.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame9[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/9.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame10[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/10.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame11[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/11.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame12[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/12.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame13[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/13.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame14[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/14.4bpp");
+const u16 gTilesetAnims_PokemonCenter_Stripe_Frame15[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/stripe/15.4bpp");
+
+const u16 *const gTilesetAnims_PokemonCenter_Stripe[] = {
+    gTilesetAnims_PokemonCenter_Stripe_Frame0,
+    gTilesetAnims_PokemonCenter_Stripe_Frame1,
+    gTilesetAnims_PokemonCenter_Stripe_Frame2,
+    gTilesetAnims_PokemonCenter_Stripe_Frame3,
+    gTilesetAnims_PokemonCenter_Stripe_Frame4,
+    gTilesetAnims_PokemonCenter_Stripe_Frame5,
+    gTilesetAnims_PokemonCenter_Stripe_Frame6,
+    gTilesetAnims_PokemonCenter_Stripe_Frame7,
+    gTilesetAnims_PokemonCenter_Stripe_Frame8,
+    gTilesetAnims_PokemonCenter_Stripe_Frame9,
+    gTilesetAnims_PokemonCenter_Stripe_Frame10,
+    gTilesetAnims_PokemonCenter_Stripe_Frame11,
+    gTilesetAnims_PokemonCenter_Stripe_Frame12,
+    gTilesetAnims_PokemonCenter_Stripe_Frame13,
+    gTilesetAnims_PokemonCenter_Stripe_Frame14,
+    gTilesetAnims_PokemonCenter_Stripe_Frame15
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -1526,6 +1573,13 @@ void InitTilesetAnim_RustboroGym(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_RustboroGym;
 }
 
+void InitTilesetAnim_PokemonCenter(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_PokemonCenter;
+}
+
 static void TilesetAnim_Dewford(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1955,6 +2009,14 @@ static void TilesetAnim_RustboroGym(u16 timer)
     }
 }
 
+static void TilesetAnim_PokemonCenter(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_PokemonCenter_Map(timer >> 5);
+    if (timer % 4 == 1)
+        QueueAnimTiles_PokemonCenter_Stripe(timer >> 2);
+}
+
 static void TilesetAnim_BattleDome(u16 timer)
 {
     if (timer % 4 == 0)
@@ -2170,6 +2232,18 @@ static void QueueAnimTiles_RustboroGym_Water9(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water9);
     AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 63)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_PokemonCenter_Map(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_PokemonCenter_Map);
+    AppendTilesetAnimToBuffer(gTilesetAnims_PokemonCenter_Map[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 296)), 8 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_PokemonCenter_Stripe(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_PokemonCenter_Stripe);
+    AppendTilesetAnimToBuffer(gTilesetAnims_PokemonCenter_Stripe[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 243)), 4 * TILE_SIZE_4BPP);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)
