@@ -4021,6 +4021,11 @@ static const u32 sMugshotImg_TylerSurprised[] = INCBIN_U32("graphics/mugshots/ty
 static const u32 sMugshotImg_TylerWink[] = INCBIN_U32("graphics/mugshots/tyler/wink.4bpp.lz");
 static const u16 sMugshotPal_Tyler[] = INCBIN_U16("graphics/mugshots/tyler/pal.gbapal");
 
+// Rose
+static const u32 sMugshotImg_RoseAngry[] = INCBIN_U32("graphics/mugshots/rose/angry.4bpp.lz");
+static const u32 sMugshotImg_RoseNormal[] = INCBIN_U32("graphics/mugshots/rose/normal.4bpp.lz");
+static const u16 sMugshotPal_Rose[] = INCBIN_U16("graphics/mugshots/rose/pal.gbapal");
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4036,6 +4041,10 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
         [FSE_SHOCKED]   = {sMugshotImg_TylerShocked, sMugshotPal_Tyler},
         [FSE_SURPRISED] = {sMugshotImg_TylerSurprised, sMugshotPal_Tyler},
         [FSE_WINK]      = {sMugshotImg_TylerWink, sMugshotPal_Tyler},
+    },
+    [FS_ROSE] = {
+        [FSE_ANGRY]  = {sMugshotImg_RoseAngry, sMugshotPal_Rose},
+        [FSE_NORMAL] = {sMugshotImg_RoseNormal, sMugshotPal_Rose},
     }
 };
 
