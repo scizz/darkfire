@@ -15,19 +15,21 @@
 #define FSE_SHOCKED 6
 #define FSE_SURPRISED 7
 #define FSE_WINK 8
+#define FSE_SAD 9
 #define FSE_SHADOW 1
 
 #define FSN_HIDE 0
 #define FSN_SHOW 1
 #define FSN_UNDISCOVERED 2
 
-#define FSE_COUNT FSE_WINK+1
+#define FSE_COUNT FSE_SAD+1
 
 //Face indices
 #define FS_PROF 0
 #define FS_TYLER 1
 #define FS_ROSE 2
 #define FS_RAKAZ 3
+#define FS_KOJIRO 4
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
