@@ -4026,6 +4026,11 @@ static const u32 sMugshotImg_RoseAngry[] = INCBIN_U32("graphics/mugshots/rose/an
 static const u32 sMugshotImg_RoseNormal[] = INCBIN_U32("graphics/mugshots/rose/normal.4bpp.lz");
 static const u16 sMugshotPal_Rose[] = INCBIN_U16("graphics/mugshots/rose/pal.gbapal");
 
+// Rakaz
+static const u32 sMugshotImg_RakazHappy[] = INCBIN_U32("graphics/mugshots/rakaz/happy.4bpp.lz");
+static const u32 sMugshotImg_RakazNormal[] = INCBIN_U32("graphics/mugshots/rakaz/normal.4bpp.lz");
+static const u16 sMugshotPal_Rakaz[] = INCBIN_U16("graphics/mugshots/rakaz/pal.gbapal");
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4045,6 +4050,10 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     [FS_ROSE] = {
         [FSE_ANGRY]  = {sMugshotImg_RoseAngry, sMugshotPal_Rose},
         [FSE_NORMAL] = {sMugshotImg_RoseNormal, sMugshotPal_Rose},
+    },
+    [FS_RAKAZ] = {
+        [FSE_HAPPY]  = {sMugshotImg_RakazHappy, sMugshotPal_Rakaz},
+        [FSE_NORMAL] = {sMugshotImg_RakazNormal, sMugshotPal_Rakaz},
     }
 };
 

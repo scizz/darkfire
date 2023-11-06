@@ -27,6 +27,7 @@
 #define FS_PROF 0
 #define FS_TYLER 1
 #define FS_ROSE 2
+#define FS_RAKAZ 3
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
