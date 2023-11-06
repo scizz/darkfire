@@ -9,13 +9,19 @@
 #define FSE_NORMAL 0
 #define FSE_LAUGHING 1
 #define FSE_WORRIED 2
+#define FSE_ANGRY 3
+#define FSE_CRAZY 4
+#define FSE_HAPPY 5
+#define FSE_SHOCKED 6
+#define FSE_SURPRISED 7
+#define FSE_WINK 8
 #define FSE_SHADOW 1
 
 #define FSN_HIDE 0
 #define FSN_SHOW 1
 #define FSN_UNDISCOVERED 2
 
-#define FSE_COUNT FSE_WORRIED+1
+#define FSE_COUNT FSE_WINK+1
 
 //Face indices
 #define FS_PROF 0

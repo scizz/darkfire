@@ -4005,10 +4005,21 @@ static const struct SpriteTemplate sFaceTemplateLeft =
     .oam = &sFaceOam,
 };
 
+// Professor Hawthorne
 static const u32 sMugshotImg_Prof[] = INCBIN_U32("graphics/mugshots/prof/prof-normal.4bpp.lz");
 static const u32 sMugshotImg_ProfLaughing[] = INCBIN_U32("graphics/mugshots/prof/prof-laughing.4bpp.lz");
 static const u32 sMugshotImg_ProfWorried[] = INCBIN_U32("graphics/mugshots/prof/prof-worried.4bpp.lz");
 static const u16 sMugshotPal_Prof[] = INCBIN_U16("graphics/mugshots/prof/prof.gbapal");
+
+// Tyler
+static const u32 sMugshotImg_TylerAngry[] = INCBIN_U32("graphics/mugshots/tyler/angry.4bpp.lz");
+static const u32 sMugshotImg_TylerCrazy[] = INCBIN_U32("graphics/mugshots/tyler/crazy.4bpp.lz");
+static const u32 sMugshotImg_TylerHappy[] = INCBIN_U32("graphics/mugshots/tyler/happy.4bpp.lz");
+static const u32 sMugshotImg_TylerNormal[] = INCBIN_U32("graphics/mugshots/tyler/normal.4bpp.lz");
+static const u32 sMugshotImg_TylerShocked[] = INCBIN_U32("graphics/mugshots/tyler/shocked.4bpp.lz");
+static const u32 sMugshotImg_TylerSurprised[] = INCBIN_U32("graphics/mugshots/tyler/surprised.4bpp.lz");
+static const u32 sMugshotImg_TylerWink[] = INCBIN_U32("graphics/mugshots/tyler/wink.4bpp.lz");
+static const u16 sMugshotPal_Tyler[] = INCBIN_U16("graphics/mugshots/tyler/pal.gbapal");
 
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
@@ -4016,8 +4027,18 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
         [FSE_NORMAL] = {sMugshotImg_Prof, sMugshotPal_Prof},
         [FSE_LAUGHING] = {sMugshotImg_ProfLaughing, sMugshotPal_Prof},
         [FSE_WORRIED] = {sMugshotImg_ProfWorried, sMugshotPal_Prof},
+    },
+    [FS_TYLER] = {
+        [FSE_ANGRY]     = {sMugshotImg_TylerAngry, sMugshotPal_Tyler},
+        [FSE_CRAZY]     = {sMugshotImg_TylerCrazy, sMugshotPal_Tyler},
+        [FSE_HAPPY]     = {sMugshotImg_TylerHappy, sMugshotPal_Tyler},
+        [FSE_NORMAL]    = {sMugshotImg_TylerNormal, sMugshotPal_Tyler},
+        [FSE_SHOCKED]   = {sMugshotImg_TylerShocked, sMugshotPal_Tyler},
+        [FSE_SURPRISED] = {sMugshotImg_TylerSurprised, sMugshotPal_Tyler},
+        [FSE_WINK]      = {sMugshotImg_TylerWink, sMugshotPal_Tyler},
     }
 };
+
 
 static u8 FindFaceSprite(u16 tag)
 {
