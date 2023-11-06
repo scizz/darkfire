@@ -4005,10 +4005,10 @@ static const struct SpriteTemplate sFaceTemplateLeft =
     .oam = &sFaceOam,
 };
 
-static const u32 sMugshotImg_Prof[] = INCBIN_U32("graphics/mugshots/prof-normal.4bpp.lz");
-static const u32 sMugshotImg_ProfLaughing[] = INCBIN_U32("graphics/mugshots/prof-laughing.4bpp.lz");
-static const u32 sMugshotImg_ProfWorried[] = INCBIN_U32("graphics/mugshots/prof-worried.4bpp.lz");
-static const u16 sMugshotPal_Prof[] = INCBIN_U16("graphics/mugshots/prof.gbapal");
+static const u32 sMugshotImg_Prof[] = INCBIN_U32("graphics/mugshots/prof/prof-normal.4bpp.lz");
+static const u32 sMugshotImg_ProfLaughing[] = INCBIN_U32("graphics/mugshots/prof/prof-laughing.4bpp.lz");
+static const u32 sMugshotImg_ProfWorried[] = INCBIN_U32("graphics/mugshots/prof/prof-worried.4bpp.lz");
+static const u16 sMugshotPal_Prof[] = INCBIN_U16("graphics/mugshots/prof/prof.gbapal");
 
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
