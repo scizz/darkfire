@@ -12624,7 +12624,7 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_ABRA"
+                "species": "SPECIES_SUNKERN"
               },
               {
                 "min_level": 7,
@@ -14068,7 +14068,7 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_MURKROW"
               },
               {
                 "min_level": 5,
@@ -14093,7 +14093,7 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_MURKROW"
               },
               {
                 "min_level": 10,
@@ -14548,7 +14548,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SEVIPER"
+                "species": "SPECIES_SLAKOTH"
               },
               {
                 "min_level": 5,
@@ -14568,7 +14568,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SLAKOTH"
+                "species": "SPECIES_VIGOROTH"
               },
               {
                 "min_level": 5,
