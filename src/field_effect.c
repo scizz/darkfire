@@ -4036,6 +4036,12 @@ static const u32 sMugshotImg_KojiroNormal[] = INCBIN_U32("graphics/mugshots/koji
 static const u32 sMugshotImg_KojiroSad[] = INCBIN_U32("graphics/mugshots/kojiro/sad.4bpp.lz");
 static const u16 sMugshotPal_Kojiro[] = INCBIN_U16("graphics/mugshots/kojiro/pal.gbapal");
 
+// Daz
+static const u32 sMugshotImg_DazAngry[] = INCBIN_U32("graphics/mugshots/daz/angry.4bpp.lz");
+static const u32 sMugshotImg_DazHappy[] = INCBIN_U32("graphics/mugshots/daz/happy.4bpp.lz");
+static const u32 sMugshotImg_DazNormal[] = INCBIN_U32("graphics/mugshots/daz/normal.4bpp.lz");
+static const u16 sMugshotPal_Daz[] = INCBIN_U16("graphics/mugshots/daz/pal.gbapal");
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4063,6 +4069,11 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     [FS_KOJIRO] = {
         [FSE_NORMAL] = {sMugshotImg_KojiroNormal, sMugshotPal_Kojiro},
         [FSE_SAD]    = {sMugshotImg_KojiroSad, sMugshotPal_Kojiro},
+    },
+    [FS_DAZ] = {
+        [FSE_ANGRY]     = {sMugshotImg_DazAngry, sMugshotPal_Daz},
+        [FSE_HAPPY]     = {sMugshotImg_DazHappy, sMugshotPal_Daz},
+        [FSE_NORMAL]    = {sMugshotImg_DazNormal, sMugshotPal_Daz},
     }
 };
 
