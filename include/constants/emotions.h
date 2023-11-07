@@ -31,6 +31,7 @@
 #define FS_RAKAZ 3
 #define FS_KOJIRO 4
 #define FS_DAZ 5
+#define FS_ZAGAN 6
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
