@@ -10,6 +10,7 @@ enum
 };
 
 extern const u8* gSpeakerName;
+extern const u8* gSpeakerNameRight;
 
 bool8 ShowFieldMessage(const u8 *message);
 bool8 ShowPokenavFieldMessage(const u8 *message);
@@ -21,5 +22,6 @@ u8 GetFieldMessageBoxMode(void);
 void StopFieldMessage(void);
 void InitFieldMessageBox(void);
 void SetSpeakerName(const u8* name);
+void SetSpeakerName2(const u8* name);
 
 #endif // GUARD_FIELD_MESSAGE_BOX_H

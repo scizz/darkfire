@@ -1781,7 +1781,7 @@
 	.4byte \text
 	.endm
 
-.macro questmenu case:req, questId:req
+	.macro questmenu case:req, questId:req
     .byte 0xed
     .byte \case
     .byte \questId
@@ -1932,6 +1932,12 @@
     subquestmenu QUEST_MENU_CHECK_COMPLETE \parent \child
     call_if_eq VAR_RESULT, FALSE, \dest
     .endm
+
+	@ Sets the text of the name box in the next-shown message box.
+	.macro speakername2 text:req
+	.byte 0xf0
+	.4byte \text
+	.endm
 
 @ Supplementary
 

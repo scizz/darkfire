@@ -9,6 +9,7 @@
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 EWRAM_DATA const u8* gSpeakerName = NULL;
+EWRAM_DATA const u8* gSpeakerNameRight = NULL;
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
 static void StartDrawFieldMessage(void);
@@ -38,6 +39,11 @@ static void Task_DrawFieldMessage(u8 taskId)
            if (gSpeakerName != NULL && !FlagGet(FLAG_SUPPRESS_SPEAKER_NAME)) {
                 DrawDialogueFrameWithNameplate(0, TRUE);
                 PutWindowTilemap(1);
+                CopyWindowToVram(1, COPYWIN_FULL);
+            }
+            else if (gSpeakerNameRight != NULL && !FlagGet(FLAG_SUPPRESS_SPEAKER_NAME)) {
+                DrawDialogueFrameWithNameplateRight(0, TRUE);
+                PutWindowTilemap(2);
                 CopyWindowToVram(1, COPYWIN_FULL);
             }
             else {
@@ -146,6 +152,22 @@ static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkip
         PutWindowTilemap(1);
         CopyWindowToVram(1, COPYWIN_FULL);
     }
+    if (gSpeakerNameRight != NULL && !FlagGet(FLAG_SUPPRESS_SPEAKER_NAME)) {
+        int strLen = GetStringWidth(FONT_SMALL, gSpeakerNameRight, -1);
+        if (strLen > 0) {
+            strLen = GetDialogFramePlateWidth()/2 - strLen/2;
+            gNamePlateBuffer[0] = EXT_CTRL_CODE_BEGIN;
+            gNamePlateBuffer[1] = EXT_CTRL_CODE_CLEAR_TO;
+            gNamePlateBuffer[2] = strLen;
+            StringExpandPlaceholders(&gNamePlateBuffer[3], gSpeakerNameRight);
+        } else {
+            StringExpandPlaceholders(&gNamePlateBuffer[0], gSpeakerNameRight);
+        }
+        FillDialogFramePlate();
+        AddTextPrinterParameterized2(1, FONT_SMALL, gNamePlateBuffer, 0, NULL, 1, 0, 2);
+        PutWindowTilemap(2);
+        CopyWindowToVram(1, COPYWIN_FULL);
+    }
     StringExpandPlaceholders(gStringVar4, str);
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
     CreateTask_DrawFieldMessage();
@@ -163,6 +185,7 @@ void HideFieldMessageBox(void)
     ClearDialogWindowAndFrame(0, TRUE);
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
     gSpeakerName = NULL;
+    gSpeakerNameRight = NULL;
 }
 
 u8 GetFieldMessageBoxMode(void)
@@ -194,4 +217,9 @@ void StopFieldMessage(void)
 void SetSpeakerName(const u8* name)
 {
     gSpeakerName = name;
+}
+
+void SetSpeakerName2(const u8* name)
+{
+    gSpeakerNameRight = name;
 }

@@ -240,6 +240,7 @@ gScriptCmdTable::
 	.4byte ScrCmd_questmenu                 @ 0xed
 	.4byte ScrCmd_subquestmenu              @ 0xee
 	.4byte ScrCmd_returnqueststate          @ 0xef
+	.4byte ScrCmd_setspeaker2               @ 0xf0
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

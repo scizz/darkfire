@@ -54,6 +54,7 @@ static u16 AddWindowParameterized(u8, u8, u8, u8, u8, u8, u16);
 static void WindowFunc_DrawStandardFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawDialogueFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawDialogueFrameWithPlate(u8, u8, u8, u8, u8, u8);
+static void WindowFunc_DrawDialogueFrameWithPlateRight(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_ClearStdWindowAndFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_ClearDialogWindowAndFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawDialogFrameWithCustomTileAndPalette(u8, u8, u8, u8, u8, u8);
@@ -97,6 +98,15 @@ static const struct WindowTemplate sStandardTextBox_WindowTemplates[] =
     {
         .bg = 0,
         .tilemapLeft = 2,
+        .tilemapTop = 13,
+        .width = DLW_WIN_PLATE_SIZE,
+        .height = 2,
+        .paletteNum = 15,
+        .baseBlock = (0x194 - (DLW_WIN_PLATE_SIZE*2)),
+    },
+    {
+        .bg = 0,
+        .tilemapLeft = 20,
         .tilemapTop = 13,
         .width = DLW_WIN_PLATE_SIZE,
         .height = 2,
@@ -244,6 +254,16 @@ void DrawDialogueFrameWithNameplate(u8 windowId, bool8 copyToVram)
     }
 }
 
+void DrawDialogueFrameWithNameplateRight(u8 windowId, bool8 copyToVram)
+{
+    CallWindowFunction(windowId, WindowFunc_DrawDialogueFrameWithPlateRight);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    PutWindowTilemap(windowId);
+    if (copyToVram == TRUE) {
+        CopyWindowToVram(windowId, COPYWIN_FULL);
+    }
+}
+
 void DrawStdWindowFrame(u8 windowId, bool8 copyToVram)
 {
     CallWindowFunction(windowId, WindowFunc_DrawStandardFrame);
@@ -367,14 +387,43 @@ static void WindowFunc_DrawDialogueFrameWithPlate(u8 bg, u8 L, u8 T, u8 w, u8 h,
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM + 11,  L - 1,     T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM);
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM + 10,  L - 1,     T - 2, 1,     1, DLG_WINDOW_PALETTE_NUM);
 
-    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM + 12,  L,         T - 1, PW,    1, DLG_WINDOW_PALETTE_NUM);
-    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  5,  L,         T - 2, PW,    1, DLG_WINDOW_PALETTE_NUM);
+    //FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM + 12,  L,         T - 1, PW,    1, DLG_WINDOW_PALETTE_NUM);
+    //FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  5,  L,         T - 2, PW,    1, DLG_WINDOW_PALETTE_NUM);
 
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM + 13,  L + PW,    T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM);
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  6,  L + PW,    T - 2, 1,     1, DLG_WINDOW_PALETTE_NUM);
 
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  2,  L + PW+ 1, T - 1, PR,    1, DLG_WINDOW_PALETTE_NUM);
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  3,  L + w - 1, T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  4,  L + w,     T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM);
+
+    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  7,  L - 2,     T,     1,     5, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  8,  L - 1,     T,     w + 1, 5, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  9,  L + w,     T,     1,     5, DLG_WINDOW_PALETTE_NUM);
+
+    FillBgTilemapBufferRect(bg, BG_TILE_V_FLIP(DLG_WINDOW_BASE_TILE_NUM +  0), L - 2,     T + h, 1,     1, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg, BG_TILE_V_FLIP(DLG_WINDOW_BASE_TILE_NUM +  1), L - 1,     T + h, 1,     1, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg, BG_TILE_V_FLIP(DLG_WINDOW_BASE_TILE_NUM +  2), L,         T + h, w - 1, 1, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg, BG_TILE_V_FLIP(DLG_WINDOW_BASE_TILE_NUM +  3), L + w - 1, T + h, 1,     1, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg, BG_TILE_V_FLIP(DLG_WINDOW_BASE_TILE_NUM +  4), L + w,     T + h, 1,     1, DLG_WINDOW_PALETTE_NUM);
+}
+
+static void WindowFunc_DrawDialogueFrameWithPlateRight(u8 bg, u8 L, u8 T, u8 w, u8 h, u8 paletteNum)
+{
+    int PW = DLW_WIN_PLATE_SIZE;
+    int PR = w - DLW_WIN_PLATE_SIZE - 2;
+    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  0,  L - 2,     T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM);
+    FillBgTilemapBufferRect(bg, BG_TILE_H_FLIP(DLG_WINDOW_BASE_TILE_NUM + 11),  L + 26,     T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM); // Bottom Left Part
+    FillBgTilemapBufferRect(bg, BG_TILE_H_FLIP(DLG_WINDOW_BASE_TILE_NUM + 10),  L + 26,     T - 2, 1,     1, DLG_WINDOW_PALETTE_NUM); // Top Left Part
+
+    //FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM + 12,  L,         T - 1, PW,    1, DLG_WINDOW_PALETTE_NUM); // BOTTOM BAR OF NAMEBOX
+    //FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  5,  L,         T - 2, PW,    1, DLG_WINDOW_PALETTE_NUM);
+
+    FillBgTilemapBufferRect(bg, BG_TILE_H_FLIP(DLG_WINDOW_BASE_TILE_NUM + 13), L + PW + 9,    T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM); // Bottom Left
+    FillBgTilemapBufferRect(bg, BG_TILE_H_FLIP(DLG_WINDOW_BASE_TILE_NUM +  6), L + PW + 9,    T - 2, 1,     1, DLG_WINDOW_PALETTE_NUM); // Top Right
+
+    FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  2,  L,         T - 1, PR,    1, DLG_WINDOW_PALETTE_NUM); // Not it
+    FillBgTilemapBufferRect(bg, BG_TILE_H_FLIP(DLG_WINDOW_BASE_TILE_NUM +  3), L - 1,     T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM); // ...
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  4,  L + w,     T - 1, 1,     1, DLG_WINDOW_PALETTE_NUM);
 
     FillBgTilemapBufferRect(bg,                DLG_WINDOW_BASE_TILE_NUM +  7,  L - 2,     T,     1,     5, DLG_WINDOW_PALETTE_NUM);
