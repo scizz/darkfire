@@ -9,27 +9,42 @@ ChandraVillage_PlayerHouse_1F_Mother::
 	goto_if_set FLAG_RECEIVED_RUNNING_SHOES, ChandraVillage_PlayerHouse_1F_MotherTalkedTo
 	lockall
 	faceplayer
-	msgbox ChandraVillage_PlayerHouse_1F_Text_OhAlmostForgot, MSGBOX_DEFAULT
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_PlayerHouse_1F_Text_OhAlmostForgot, MSGBOX_AUTOCLOSE
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	playfanfare MUS_OBTAIN_ITEM
+	speakername 0
 	message ChandraVillage_PlayerHouse_1F_Text_ReceivedRunningShoes
 	waitfanfare
 	msgbox ChandraVillage_PlayerHouse_1F_Text_EquipShoes, MSGBOX_AUTOCLOSE
-	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_DEFAULT
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_AUTOCLOSE
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_STORYLINE_STATE, 3
 	releaseall
 	end
 
 ChandraVillage_PlayerHouse_1F_MotherTalkedTo::
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_MotherTalkedTo, MSGBOX_NPC
+	speakername 0
 	end
 
 ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 	lockall
 	faceplayer
-	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_PKMN_Menu, MSGBOX_YESNO
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_PKMN_Menu, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	speakername CommonName_Text_Mom
+	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
 	goto ChandraVillage_Playerhouse_1F_Mother_No
@@ -37,7 +52,14 @@ ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	lockall
 	faceplayer
-	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One, MSGBOX_YESNO
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	speakername CommonName_Text_Mom
+	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
 	goto ChandraVillage_Playerhouse_1F_Mother_No
@@ -45,12 +67,17 @@ ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 ChandraVillage_PlayerHouse_1F_Mother_Rest::
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
-	msgbox ChandraVillage_PlayerHouse_1F_Text_Mother_Healed, MSGBOX_DEFAULT
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_PlayerHouse_1F_Text_Mother_Healed, MSGBOX_AUTOCLOSE
+	hideface 1
 	releaseall
 	end
 
 ChandraVillage_Playerhouse_1F_Mother_No::
-	msgbox ChandraVillage_PlayerHouse_1F_Text_Mother_No, MSGBOX_DEFAULT
+	showface FS_MOM, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_PlayerHouse_1F_Text_Mother_No, MSGBOX_AUTOCLOSE
+	hideface 1
 	releaseall
 	end
 
@@ -64,8 +91,11 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_OhPlayer, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
@@ -74,16 +104,23 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_AlmostForgot, MSGBOX_DEFAULT
+	speakername 0
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	playfanfare MUS_OBTAIN_ITEM
+	hideface 1
 	message ChandraVillage_PlayerHouse_1F_Text_ReceivedRunningShoes
 	waitfanfare
 	msgbox ChandraVillage_PlayerHouse_1F_Text_EquipShoes, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_DEFAULT
+	hideface 1
 	closemessage
 	applymovement LOCALID_MOM, WalkURRUFL
 	waitmovement 0
@@ -116,13 +153,14 @@ ChandraVillage_PlayerHouse_Text_1F_Mother_PKMN_Menu:
 	.string "…\n"
 	.string "…\p"
 	.string "Wow, Professor Hawthorne gave you a\n"
-	.string "Pokémon? That's great, darling!\p"
-	.string "How about a quick rest?$"
+	.string "Pokémon? That's great, darling!$"
 
 ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One:
 	.string "{COLOR}{RED}Welcome home, {PLAYER}.\n"
-	.string "How is your adventure going?\p"
-	.string "Would you like to take a quick rest?$"
+	.string "How is your adventure going?$"
+
+ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest:
+	.string "How about a quick rest?$"
 
 ChandraVillage_PlayerHouse_1F_Text_Mother_Healed:
 	.string "{COLOR}{RED}Take care, honey!\n"

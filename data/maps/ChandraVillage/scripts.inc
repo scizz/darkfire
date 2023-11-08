@@ -490,9 +490,9 @@ ChandraVillage_Flowers:
 ChandraVillage_Technology:
 	.string "{COLOR}{BLUE}Technology is incredible!\p"	
 	.string "There are communities online who\n"
-	.string "reverse-engineer old games and remake\l"
+	.string "reverse-engineer games and remake\l"
 	.string "them as their own.\p"
-	.string "I think it's called ROM hacking…$"
+	.string "I think it's called ROM Hacking…$"
 
 ChandraVillage_Slow:
 	.string "{COLOR}{BLUE}Slow down there!\n"
@@ -505,9 +505,8 @@ ChandraVillage_Structure:
 	.string "200 years…$"
 
 ChandraVillage_Dusclops:
-	.string "Many people think its design was\n"
-	.string "inspired by the Ghost-type Pokémon,\l"
-	.string "known as Dusclops.\p"
+	.string "It seems that its design was inspired\n"
+	.string "the Ghost-type Pokémon, Dusclops.\p"
 	.string "Some people even say they have\n"
 	.string "heard strange noises inside.$"
 
@@ -525,16 +524,15 @@ ChandraVillage_Text_Town_Sign:
 
 ChandraVillage_Text_Prof:
 	.string "{PLAYER}…\p"
-	.string "Enter to the lab and help get rid of\n"
-	.string "the Rattata!$"
+	.string "Enter the lab and help get rid of the\n"
+	.string "Rattata!$"
 
 ChandraVillage_Text_Facility:
-	.string "Professor Hawthorne's Pokémon\n"
-	.string "Research Facility$"
+	.string "Professor Hawthorne's Lab$"
 
 ChandraVillage_Wife:
-	.string "{COLOR}{RED}I'm sorry for my husband's\n"
-	.string "embarrassingly awful jokes!$"
+	.string "{COLOR}{RED}I'm sorry for my husband's jokes…\n"
+	.string "They're so embarrassing!$"
 
 ChandraVillage_Joker_Question:
 	.string "{COLOR}{BLUE}Oh, hello there.\n"

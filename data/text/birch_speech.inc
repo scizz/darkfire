@@ -13,7 +13,7 @@ gText_Birch_Pokemon:: @ 82C89FB
 gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "This world is widely inhabited by\n"
 	.string "creatures known as Pokémon.\p"
-	.string "We humans live alongside POKéMON,\n"
+	.string "We humans live alongside Pokémon,\n"
 	.string "at times as friendly playmates, and\l"
 	.string "at times as cooperative workmates.\p"
 	.string "And sometimes, we band together\n"
@@ -22,7 +22,7 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "know everything about Pokémon.\p"
 	.string "In fact, there are many, many\n"
 	.string "secrets surrounding Pokémon.\p"
-	.string "To unravel POKéMON mysteries,\n"
+	.string "To unravel Pokémon mysteries,\n"
 	.string "I've been undertaking research.\l"
 	.string "That's what I do.\p"
 	.string "$"

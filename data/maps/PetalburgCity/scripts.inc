@@ -118,14 +118,19 @@ PetalburgCity_EventScript_WallysMom:: @ 81DC3FD
 PetalburgCity_EventScript_DoorWarp::
 	lock
 	faceplayer
-	speakername CommonName_Text_Prof
-	showface 0, 0, 1, 1
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SURPRISED, 1, 1
 	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
 	hideface 1
-	showborderlesspic 10, 3
-	release
-	delay 25
-	hidemonpic
+	delay 60
+	speakername2 CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SURPRISED, 0, 1
+	msgbox PetalburgCity_Text_LetsMove, MSGBOX_AUTOCLOSE
+	hideface 0
+	@showborderlesspic 10, 3
+	@release
+	@delay 25
+	@hidemonpic
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_DEXNAV_GET
@@ -807,12 +812,6 @@ GiveQuest_Text:
 
 ActiveQuest_Text:
 	.string "Rockfall Cave quest activated!$"
-
-CommonName_Text_Tyler:
-	.string "Tyler$"
-
-CommonName_Text_Prof:
-	.string "Professor$"
 
 PetalburgCity_Text_LetsMove:
 	.string "What's up, {PLAYER}?!$"
