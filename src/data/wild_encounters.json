@@ -13745,29 +13745,29 @@
             "encounter_rate": 0,
             "mons": [
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 10,
+                "max_level": 35,
                 "species": "SPECIES_TENTACOOL"
               },
               {
-                "min_level": 15,
-                "max_level": 18,
+                "min_level": 10,
+                "max_level": 30,
                 "species": "SPECIES_WINGULL"
               },
               {
-                "min_level": 18,
-                "max_level": 22,
+                "min_level": 15,
+                "max_level": 24,
                 "species": "SPECIES_WINGULL"
               },
               {
                 "min_level": 25,
-                "max_level": 25,
+                "max_level": 30,
                 "species": "SPECIES_PELIPPER"
               },
               {
                 "min_level": 25,
-                "max_level": 25,
-                "species": "SPECIES_TENTACOOL"
+                "max_level": 30,
+                "species": "SPECIES_PELIPPER"
               }
             ]
           },
