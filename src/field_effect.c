@@ -4046,6 +4046,10 @@ static const u16 sMugshotPal_Daz[] = INCBIN_U16("graphics/mugshots/daz/pal.gbapa
 static const u32 sMugshotImg_ZaganNormal[] = INCBIN_U32("graphics/mugshots/zagan/normal.4bpp.lz");
 static const u16 sMugshotPal_Zagan[] = INCBIN_U16("graphics/mugshots/zagan/pal.gbapal");
 
+// Mom
+static const u32 sMugshotImg_MomNormal[] = INCBIN_U32("graphics/mugshots/mom/normal.4bpp.lz");
+static const u16 sMugshotPal_Mom[] = INCBIN_U16("graphics/mugshots/mom/pal.gbapal");
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4081,6 +4085,9 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     },
     [FS_ZAGAN] = {
         [FSE_NORMAL]     = {sMugshotImg_ZaganNormal, sMugshotPal_Zagan},
+    },
+    [FS_MOM] = {
+        [FSE_NORMAL]     = {sMugshotImg_MomNormal, sMugshotPal_Mom},
     }
 };
 

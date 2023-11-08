@@ -1,3 +1,30 @@
+CommonName_Text_Tyler:
+	.string "Tyler$"
+
+CommonName_Text_Prof:
+	.string "Professor$"
+
+CommonName_Text_Daz:
+	.string "Daz$"
+
+CommonName_Text_Kojiro:
+	.string "Kojiro$"
+
+CommonName_Text_Rakaz:
+	.string "Rakaz$"
+
+CommonName_Text_Rose:
+	.string "Rose$"
+
+CommonName_Text_Zagan:
+	.string "Zagan$"
+
+CommonName_Text_Mom:
+	.string "Mom$"
+
+CommonName_Text_Announcer:
+	.string "Announcer$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
