@@ -1,6 +1,6 @@
-.set LOCALID_TYLER, 10
-.set LOCALID_TYLER_LAB, 11
-.set LOCALID_PROF, 12
+.set LOCALID_TYLER, 8
+.set LOCALID_TYLER_LAB, 9
+.set LOCALID_PROF, 10
 
 ChandraVillage_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_OnFrame
@@ -19,9 +19,9 @@ ChandraVillage_ExitNorth::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 13, Common_Movement_FaceUp
+	applymovement 11, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 13, Common_Movement_ExclamationMark
+	applymovement 11, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -29,14 +29,14 @@ ChandraVillage_ExitNorth::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 13, Common_Movement_WalkInPlaceSlowUp
+	applymovement 11, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	goto_if_set FLAG_SYS_POKEMON_GET, ChandraVillage_ExitNorthPokemon
 	msgbox ChandraVillage_Text_ExitNorth, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 13, Common_Movement_FaceDown
+	applymovement 11, Common_Movement_FaceDown
 	waitmovement 0
 	releaseall
 	end
@@ -47,7 +47,7 @@ ChandraVillage_ExitNorthPokemon::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement 13, Common_Movement_FaceDown
+	applymovement 11, Common_Movement_FaceDown
 	waitmovement 0
 	releaseall
 	end
