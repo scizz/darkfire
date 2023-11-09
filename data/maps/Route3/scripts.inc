@@ -1,6 +1,10 @@
 Route3_MapScripts::
 	.byte 0
 
+Route3_Sign::
+	msgbox Route3_Text_Sign, MSGBOX_SIGN
+	end
+
 Route3_EventScript_MiracleSeed::
 	lockall
 	faceplayer
@@ -54,6 +58,10 @@ Route3_PotionReceived::
 	msgbox Route3_Text_ReceivedPotion, MSGBOX_DEFAULT
 	release
 	end
+
+Route3_Text_Sign:
+	.string "Route 3\n"
+	.string "{LEFT_ARROW} Anheim Forest"
 
 Route3_Text_Guitarist:
 	.string "{COLOR}{BLUE}I've got one piece of advice…\p"
