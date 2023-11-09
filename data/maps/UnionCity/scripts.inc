@@ -450,10 +450,10 @@ UnionCity_Text_PlayerNo:
 
 UnionCity_Text_Sign:
 	.string "Union City\p"
-	.string "“The city probing the integration of\na peaceful nature.”$"
+	.string "{FONT_SMALL}“Progress Illuminates the Urban Skyline”$"
 
 UnionCity_Text_Museum_Sign:
-	.string "No Ball Games!$"
+	.string "No ball games!$"
 
 UnionCity_Text_Gov_Sign:
 	.string "Tenjo Government Offices\n"
