@@ -46,6 +46,10 @@ AnheimForest_Sign::
 	msgbox AnheimForest_Text_Sign, MSGBOX_SIGN
 	end
 
+AnheimForest_Sign_Route_4::
+	msgbox AnheimForest_Text_Sign_Route_4, MSGBOX_SIGN
+	end
+
 AnheimForest_Sign_Town::
 	msgbox AnheimForest_Text_Sign_Town, MSGBOX_SIGN
 	end
@@ -305,15 +309,19 @@ WU3L3U3:
 	walk_up
 	step_end
 
+AnheimForest_Text_Sign:
+	.string "Welcome to Anheim Forest.\n"
+	.string "Please do not litter.$"
+
+AnheimForest_Text_Sign_Route_4:
+	.string "Anheim Forest\n"
+	.string "{LEFT_ARROW} Route 4$"
+
 AnheimForest_Text_SUBO_Dots:
 	.string "{COLOR}{BLUE}…$"
 
 AnheimForest_Text_WhereDidThatBeedrill:
 	.string "{COLOR}{BLUE}Where did that Beedrill go…$"
-
-AnheimForest_Text_Sign:
-	.string "Anheim Forest\n"
-	.string "Please do not litter!$"
 
 AnheimForest_Text_Sign_Town:
 	.string "{UP_ARROW} Anheim Town$"
