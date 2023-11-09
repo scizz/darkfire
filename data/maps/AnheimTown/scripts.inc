@@ -189,12 +189,11 @@ AnheimTown_Old_Man::
 	end
 
 AnheimTown_Sign_Text:
-	.string "Anheim Town\p"
-	.string "“The windswept trees with the\n"
-	.string "sweet fragrance of unity.”$"
+	.string "Anheim Town\n"
+	.string "{FONT_SMALL}“Windswept Trees With Fragrance of Unity”$"
 
 AnheimTown_Sign_Church_Text:
-	.string "Anheim Church.$"
+	.string "Anheim Church$"
 
 AnheimTown_Sign_Protector_Text:
 	.string "R.I.P\n"
