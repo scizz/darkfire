@@ -130,7 +130,7 @@ WUD:
 
 HighwindVillage_Text_Sign:
 	.string "Highwind Village\n"
-	.string "It's never too cold for ice cream!$"
+	.string "{FONT_SMALL}“Never Too Cold for Ice Cream!”$"
 
 HighwindVillage_Text_Sign_Rangers_Lodge:
 	.string "Rangers' Federation Lodge\n"
