@@ -171,9 +171,8 @@ WL2DL2:
 	step_end
 
 LaveriaCity_Text_Sign:
-	.string "Welcome to Laveria City\p"
-	.string "The place for frosty mornings and\n"
-	.string "toasty mugs!$"
+	.string "Welcome to Laveria City\n"
+	.string "{FONT_SMALL}“Where Pokémon Warmth Meets Snowy Comfort”$"
 
 LaveriaCity_Text_Sign_Route:
 	.string "{LEFT_ARROW} Route 7$"
