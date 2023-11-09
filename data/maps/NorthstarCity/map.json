@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -630,7 +633,7 @@
       "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NorthstarCity_Sign"
     },
     {
       "type": "sign",
@@ -638,7 +641,7 @@
       "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NorthstarCity_Sign"
     },
     {
       "type": "sign",
@@ -646,7 +649,7 @@
       "y": 52,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NorthstarCity_Tournament_Sign"
     },
     {
       "type": "sign",
@@ -654,7 +657,7 @@
       "y": 52,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NorthstarCity_Tournament_Sign"
     },
     {
       "type": "hidden_item",
@@ -680,8 +683,5 @@
       "item": "ITEM_NONE",
       "flag": "FLAG_TEMP_1"
     }
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false
+  ]
 }

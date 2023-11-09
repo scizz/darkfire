@@ -1,6 +1,18 @@
 PinleafTown_MapScripts::
 	.byte 0
 
+PinleafTown_Sign::
+	msgbox PinleafTown_Text_Sign, MSGBOX_SIGN
+	end
+
+PinleafTown_Sign_Inn::
+	msgbox PinleafTown_Text_Sign_Inn, MSGBOX_SIGN
+	end
+
+PinleafTown_Sign_Letterbox::
+	msgbox PinleafTown_Text_Sign_Letterbox, MSGBOX_SIGN
+	end
+
 PinleafTown_Vendor::
 	msgbox PinleafTown_Text_Vendor, MSGBOX_NPC
 	end
@@ -74,6 +86,17 @@ PinleafTown_Old_Lady::
 PinleafTown_Son::
 	msgbox PinleafTown_Text_Son, MSGBOX_NPC
 	end
+
+PinleafTown_Text_Sign:
+	.string "Pinleaf Town\n"
+	.string "{FONT_SMALL}“Where Crops Sprout and Adventures Bloom!”$"
+
+PinleafTown_Text_Sign_Inn:
+	.string "Pinleaf Inn\n"
+	.string "{FONT_SMALL}“Where Tranquility Meets Recovery”$"
+
+PinleafTown_Text_Sign_Letterbox:
+	.string "It's empty.$"
 
 PinleafTown_Text_Vendor:
 	.string "{COLOR}{BLUE}Hi, Trainer!\p"

@@ -6,6 +6,14 @@
 NorthstarCity_MapScripts::
 	.byte 0
 
+NorthstarCity_Sign::
+	msgbox NorthstarCity_Text_Sign, MSGBOX_SIGN
+	end
+
+NorthstarCity_Tournament_Sign::
+	msgbox NorthstarCity_Text_Tournament_Sign, MSGBOX_SIGN
+	end
+
 NorthstarCity_Old_Man::
 	lockall
 	faceplayer
@@ -461,6 +469,15 @@ WL2DL2FD:
 	walk_left
 	face_down
 	step_end
+
+NorthstarCity_Text_Sign:
+	.string "Northstar City\n"
+	.string "{FONT_SMALL}“Where Frost Meets Frenzy!”$"
+
+NorthstarCity_Text_Tournament_Sign:
+	.string "Northstar TV Station\p"
+	.string "The names of Trainers are scribbled\n"
+	.string "all over the sign…$"
 
 NorthstarCity_Text_Old_Man_Badge:
 	.string "That badge…\n"
