@@ -203,8 +203,8 @@ SunriseTown_Krabby_3::
 	end
 
 SunriseTown_Sign_Text:
-	.string "Welcome to Sunrise Town!\n"
-	.string "The Town of Illumination!$"
+	.string "Welcome to Sunrise Town\n"
+	.string "{FONT_SMALL}“Where Waves and Pokémon Shine Bright”$"
 
 SunriseTown_Hotel_Text:
 	.string "Welcome to Oritania Hotel.\n"
