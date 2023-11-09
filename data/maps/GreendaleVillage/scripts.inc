@@ -803,15 +803,15 @@ GreendaleVillage_Text_WellIDontKnow:
 
 GreendaleVillage_Text_Sign:
 	.string "Greendale Village\n"
-	.string "Let our scents mesmerize your senses!$"
+	.string "{FONT_SMALL}“Our Scents Will Mesmerize Your Senses!”$"
 
 GreendaleVillage_Text_Sign_School:
 	.string "Welcome to the Greendale Village\n"
 	.string "Trainer School.$"
 
 GreendaleVillage_Text_Sign_Park:
-	.string "Greendale Village Park.\n"
-	.string "Thank you for not littering.$"
+	.string "Greendale Village Park\n"
+	.string "{FONT_SMALL}Thank you for not littering.$"
 
 GreendaleVillage_Text_Old_Woman:
 	.string "Life has always been the best living\n"
