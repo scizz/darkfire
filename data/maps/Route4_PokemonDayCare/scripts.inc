@@ -11,5 +11,5 @@ Route4_PokemonDayCare_Text_Boy:
 	.string "in the Day Care.\p"
 	.string "Pokémon with Magma Armor or Flame Body\n"
 	.string "shorten the hatching process if they\l"
-	.string "are in the party with Eggs."
+	.string "are in the party with Eggs.$"
 

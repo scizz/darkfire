@@ -28,7 +28,7 @@ void InitTilesetAnim_GenericBuilding(void);
 void InitTilesetAnim_RustboroGym(void);
 void InitTilesetAnim_Underwater(void);
 void InitTilesetAnim_SootopolisGym(void);
-void InitTilesetAnim_MauvilleGym(void);
+//void InitTilesetAnim_MauvilleGym(void);
 void InitTilesetAnim_EliteFour(void);
 void InitTilesetAnim_BattleDome(void);
 void InitTilesetAnim_BattlePyramid(void);

@@ -332,8 +332,8 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ANHEIM_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE4",
+      "dest_warp_id": "2"
     },
     {
       "x": 8,

@@ -567,7 +567,7 @@ const struct Tileset gTileset_MauvilleGym =
     .palettes = gTilesetPalettes_MauvilleGym,
     .metatiles = gMetatiles_MauvilleGym,
     .metatileAttributes = gMetatileAttributes_MauvilleGym,
-    .callback = InitTilesetAnim_MauvilleGym,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_LavaridgeGym =

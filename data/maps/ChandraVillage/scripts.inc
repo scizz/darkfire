@@ -520,7 +520,7 @@ ChandraVillage_Text_Mail:
 
 ChandraVillage_Text_Town_Sign:
 	.string "Chandra Village\n"
-	.string "{FONT_SMALL}“A Place to Call Home”$"
+	.string "{FONT_SMALL}“The Place to Call Home”$"
 
 ChandraVillage_Text_Prof:
 	.string "{PLAYER}…\p"
