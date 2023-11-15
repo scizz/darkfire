@@ -1355,3 +1355,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route4EastTreeGrotto/scripts.inc"
 
 	.include "data/maps/DesertCaverns/scripts.inc"
+
+	.include "data/maps/DesertPass/scripts.inc"

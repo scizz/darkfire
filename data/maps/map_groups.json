@@ -110,7 +110,8 @@
     "SnowdriftForest",
     "MuddyUnderpass",
     "Underwater",
-    "DesertCaverns"
+    "DesertCaverns",
+    "DesertPass"
   ],
   "gMapGroup_DarkfireGrottos": [
     "Route4EastTreeGrotto"
