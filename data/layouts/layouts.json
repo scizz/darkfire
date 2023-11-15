@@ -5704,8 +5704,8 @@
     {
       "id": "LAYOUT_DESERT_PASS",
       "name": "DesertPass_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 120,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_IslandHarbor",
       "border_filepath": "data/layouts/DesertPass/border.bin",
