@@ -766,6 +766,7 @@
 #define METATILE_TrickHousePuzzle_BlueDoorV_Retracted         0x24D
 #define METATILE_TrickHousePuzzle_Button_Pressed              0x259
 #define METATILE_TrickHousePuzzle_Button_Up                   0x258
+#define METATILE_TrickHousePuzzle_Door                        0x384
 #define METATILE_TrickHousePuzzle_Door_Shuttered              0x26A
 #define METATILE_TrickHousePuzzle_Floor_ShadowTop             0x255
 #define METATILE_TrickHousePuzzle_Floor_ShadowTop_Alt         0x252
@@ -783,7 +784,6 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Open1              0x242
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
-#define METATILE_TrickHousePuzzle_Door                        0x384
 
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
