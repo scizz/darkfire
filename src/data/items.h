@@ -1876,7 +1876,7 @@ const struct Item gItems[] =
     {
         .name = _("Pearl"),
         .itemId = ITEM_PEARL,
-        .price = 2000,
+        .price = 0,
         .description = sPearlDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1888,7 +1888,7 @@ const struct Item gItems[] =
     {
         .name = _("Big Pearl"),
         .itemId = ITEM_BIG_PEARL,
-        .price = 8000,
+        .price = 0,
         .description = sBigPearlDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
