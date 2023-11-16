@@ -2,9 +2,11 @@
 #include "bg.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
+#include "item_menu.h"
 #include "main.h"
 #include "malloc.h"
 #include "menu.h"
+#include "overworld.h"
 #include "palette.h"
 #include "region_map.h"
 #include "strings.h"
@@ -29,7 +31,7 @@
 
 static EWRAM_DATA struct {
     MainCallback callback;
-    u32 unused;
+    u32 unused1;
     struct RegionMap regionMap;
     u16 state;
 } *sFieldRegionMapHandler = NULL;
@@ -191,7 +193,9 @@ static void FieldUpdateRegionMap(void)
             if (!gPaletteFade.active)
             {
                 FreeRegionMapIconResources();
-                SetMainCallback2(sFieldRegionMapHandler->callback);
+                //SetMainCallback2(sFieldRegionMapHandler->callback);
+                //SetMainCallback2(CB2_BagMenuFromStartMenu);
+                SetMainCallback2(CB2_ReturnToField);
                 TRY_FREE_AND_SET_NULL(sFieldRegionMapHandler);
                 FreeAllWindowBuffers();
             }

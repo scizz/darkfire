@@ -1734,6 +1734,17 @@ void CB2_OpenFlyMap(void)
     }
 }
 
+// Town Map port
+void CB2_OpenTownMap(void)
+{   
+    // Draw map
+    SetMainCallback2(CB2_FieldShowRegionMap);
+    ResetPaletteFade();
+    ResetSpriteData();
+    FreeSpriteTileRanges();
+    FreeAllSpritePalettes();
+}
+
 static void VBlankCB_FlyMap(void)
 {
     LoadOam();
