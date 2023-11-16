@@ -1,5 +1,14 @@
 SnowdriftForest_MapScripts::
-	.byte 0
+	map_script MAP_SCRIPT_ON_LOAD, SnowdriftForest_OnLoad
+	map_script MAP_SCRIPT_ON_RESUME, SnowdriftForest_OnResume
+	.byte
+
+SnowdriftForest_OnLoad:
+	end
+
+SnowdriftForest_OnResume:
+	setstepcallback STEP_CB_ASH
+	end
 
 SnowdriftForest_Sign::
 	msgbox SnowdriftForest_Text_Sign, MSGBOX_SIGN
