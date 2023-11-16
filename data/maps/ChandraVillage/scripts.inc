@@ -62,16 +62,22 @@ ChandraVillage_Intro::
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Text_TylerIntro_Player, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	applymovement LOCALID_TYLER, WalkL3
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Text_TylerIntro_HeySnorlax, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement LOCALID_TYLER, RunR3D5R3D
 	waitmovement 0
 	removeobject LOCALID_TYLER
