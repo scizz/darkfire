@@ -209,15 +209,15 @@ static const u32 sQuestMenuTilemap[] =
 
 //Strings used for the Quest Menu
 static const u8 sText_Empty[] = _("");
-static const u8 sText_AllHeader[] = _("All Missions");
-static const u8 sText_InactiveHeader[] = _("Inactive Missions");
-static const u8 sText_ActiveHeader[] = _("Active Missions");
-static const u8 sText_RewardHeader[] = _("Reward Available");
+static const u8 sText_AllHeader[] = _("All Quests");
+static const u8 sText_InactiveHeader[] = _("Inactive Quests");
+static const u8 sText_ActiveHeader[] = _("Active Quests");
+static const u8 sText_RewardHeader[] = _("Collect Reward");
 static const u8 sText_CompletedHeader[] =
-      _("Completed Missions");
+      _("Completed Quests");
 static const u8 sText_QuestNumberDisplay[] =
       _("{STR_VAR_1}/{STR_VAR_2}");
-static const u8 sText_Unk[] = _("??????");
+static const u8 sText_Unk[] = _("-");
 static const u8 sText_Active[] = _("Active");
 static const u8 sText_Reward[] = _("Reward");
 static const u8 sText_Complete[] = _("Done");
@@ -566,7 +566,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_1,
 	      gText_SideQuestDoneDesc_1,
 	      gText_SideQuestMap1,
-	      OBJ_EVENT_GFX_NOCTOWL,
+	      OBJ_EVENT_GFX_LARVITAR,
 	      OBJECT,
 	      NULL,
 	      0

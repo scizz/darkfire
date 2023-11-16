@@ -1865,7 +1865,7 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
-const u8 gText_SideQuestDesc_1[] = _("Rescue Larvitar from the dark depths\nof the cave.");
+const u8 gText_SideQuestDesc_1[] = _("Rescue Larvitar from the dark depths\nof Rockfall Cave.");
 const u8 gText_SideQuestDesc_2[] = _("Description 2");
 const u8 gText_SideQuestDesc_3[] = _("Description 3");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
