@@ -33,6 +33,7 @@
 #define FS_DAZ 5
 #define FS_ZAGAN 6
 #define FS_MOM 7
+#define FS_PRESIDENT 8
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
