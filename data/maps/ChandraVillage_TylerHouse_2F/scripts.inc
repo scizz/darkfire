@@ -23,8 +23,11 @@ ChandraVillage_TylerHouse_2F_TylerIntro::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement 1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_MyBagsPacked, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	delay 60
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 2
@@ -42,8 +45,11 @@ ChandraVillage_TylerHouse_2F_Left:
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_Player, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	removeobject 2
@@ -56,6 +62,8 @@ ChandraVillage_TylerHouse_2F_Left:
 	applymovement 1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_HowsItGoing, MSGBOX_DEFAULT
 	goto_if_set FLAG_TAKEN_PIKACHU ChandraVillage_TylerHouse_2F_TylerTeamEevee
 	goto ChandraVillage_TylerHouse_2F_TylerTeamPikachu
@@ -68,8 +76,11 @@ ChandraVillage_TylerHouse_2F_Middle:
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_Player, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	removeobject 2
@@ -82,6 +93,8 @@ ChandraVillage_TylerHouse_2F_Middle:
 	applymovement 1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_HowsItGoing, MSGBOX_DEFAULT
 	goto_if_set FLAG_TAKEN_PIKACHU ChandraVillage_TylerHouse_2F_TylerTeamEevee
 	goto ChandraVillage_TylerHouse_2F_TylerTeamPikachu
@@ -94,8 +107,11 @@ ChandraVillage_TylerHouse_2F_Right:
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_Player, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	removeobject 2
@@ -108,6 +124,8 @@ ChandraVillage_TylerHouse_2F_Right:
 	applymovement 1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_HowsItGoing, MSGBOX_DEFAULT
 	goto_if_set FLAG_TAKEN_PIKACHU ChandraVillage_TylerHouse_2F_TylerTeamEevee
 	goto ChandraVillage_TylerHouse_2F_TylerTeamPikachu
@@ -124,8 +142,11 @@ ChandraVillage_TylerHouse_2F_TylerTeamPikachu::
 	end
 
 ChandraVillage_TylerHouse_2F_TylerPostMatch::
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_ThatWasSomeBattle, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	goto ChandraVillage_TylerHouse_2F_CheckPosEnd
 	end
 
