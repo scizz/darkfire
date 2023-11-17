@@ -263,7 +263,7 @@ ChandraVillage_Storyline_State_4::
 	msgbox ChandraVillage_Storyline_State_4_ButProf, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Professor
+	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_WORRIED, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_TylerWithout, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -290,7 +290,7 @@ ChandraVillage_Storyline_State_4::
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
-	speakername CommonName_Text_Professor
+	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_WillYouHelp, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
@@ -333,7 +333,7 @@ ChandraVillage_Storyline_State_4_Part_2::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Professor
+	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_VeryWell, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -355,7 +355,7 @@ ChandraVillage_Storyline_State_4_Part_2::
 	hideface 1
 	applymovement LOCALID_PROF, WDFR
 	waitmovement 0
-	speakername CommonName_Text_Professor
+	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_FollowTyler, MSGBOX_AUTOCLOSE
 	hideface 0
