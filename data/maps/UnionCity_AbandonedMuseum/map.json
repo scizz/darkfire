@@ -299,7 +299,7 @@
       "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_DragonitesWeatheredMailBag"
     },
     {
       "type": "sign",
@@ -307,7 +307,7 @@
       "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientGengarShadowRelic"
     },
     {
       "type": "sign",
@@ -315,7 +315,7 @@
       "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -323,7 +323,7 @@
       "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -331,7 +331,7 @@
       "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_LatiasLatiosTwinFeathers"
     },
     {
       "type": "sign",
@@ -339,7 +339,7 @@
       "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_GoldenMagikarpScales"
     },
     {
       "type": "sign",
@@ -347,7 +347,7 @@
       "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_PikachusElectricRod"
     },
     {
       "type": "sign",
@@ -355,7 +355,7 @@
       "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientPokeBallShard"
     },
     {
       "type": "sign",
@@ -363,7 +363,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientIcyRockRegice"
     },
     {
       "type": "sign",
@@ -371,7 +371,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientUnownTablet"
     },
     {
       "type": "sign",
@@ -379,7 +379,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSkyPillarScroll"
     },
     {
       "type": "sign",
@@ -387,7 +387,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientArmaldoFossilizedClaw"
     },
     {
       "type": "sign",
@@ -395,7 +395,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_FossilizedLileepBlossom"
     },
     {
       "type": "sign",
@@ -403,7 +403,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RegirocksEnigmaticKeystone"
     },
     {
       "type": "sign",
@@ -411,7 +411,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_EeveeEvolutionStones"
     },
     {
       "type": "sign",
@@ -419,7 +419,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientOmanyteShell"
     },
     {
       "type": "sign",
@@ -427,7 +427,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_KabutoFossil"
     },
     {
       "type": "sign",
@@ -435,7 +435,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_MetagrossCoreCrystal"
     },
     {
       "type": "sign",
@@ -443,15 +443,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 25,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_ReconstructedAerodactylExhibit"
     },
     {
       "type": "sign",
@@ -459,7 +451,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientUnownTablet"
     },
     {
       "type": "sign",
@@ -467,7 +459,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientUnownTablet"
     },
     {
       "type": "sign",
@@ -475,7 +467,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -483,7 +475,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -491,7 +483,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RelicanthFossil"
     },
     {
       "type": "sign",
@@ -499,7 +491,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RelicanthFossil"
     },
     {
       "type": "sign",
@@ -507,7 +499,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RelicanthFossil"
     },
     {
       "type": "sign",
@@ -515,7 +507,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RelicanthFossil"
     },
     {
       "type": "sign",
@@ -523,7 +515,7 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RelicanthFossil"
     },
     {
       "type": "sign",
@@ -531,7 +523,7 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_RelicanthFossil"
     },
     {
       "type": "sign",
@@ -539,7 +531,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -547,7 +539,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -555,7 +547,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -563,7 +555,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery"
     },
     {
       "type": "sign",
@@ -571,7 +563,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientUnownTablet"
     },
     {
       "type": "sign",
@@ -579,7 +571,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_AncientUnownTablet"
     },
     {
       "type": "sign",
@@ -587,7 +579,23 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "UnionCity_AbandonedMuseum_HoOhRainbowFeather"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "UnionCity_AbandonedMuseum_TheUnidentifiedPokemon"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "UnionCity_AbandonedMuseum_ReconstructedAerodactylExhibit"
     }
   ]
 }

@@ -278,6 +278,91 @@ UnionCity_AbandonedMuseum_Little_Girl_Complete::
 	msgbox UnionCity_AbandonedMuseum_Text_Little_Girl_Complete, MSGBOX_NPC
 	end
 
+UnionCity_AbandonedMuseum_RelicanthFossil::
+	msgbox UnionCity_AbandonedMuseum_Text_RelicanthFossil, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_GoldenMagikarpScales::
+	msgbox UnionCity_AbandonedMuseum_Text_GoldenMagikarpScales, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientPokeBallShard::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientPokeBallShard, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_EeveeEvolutionStones::
+	msgbox UnionCity_AbandonedMuseum_Text_EeveeEvolutionStones, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_PikachusElectricRod::
+	msgbox UnionCity_AbandonedMuseum_Text_PikachusElectricRod, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientUnownTablet::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientUnownTablet, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_DragonitesWeatheredMailBag::
+	msgbox UnionCity_AbandonedMuseum_Text_DragonitesWeatheredMailBag, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_RegirocksEnigmaticKeystone::
+	msgbox UnionCity_AbandonedMuseum_Text_RegirocksEnigmaticKeystone, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientSpindaPatternedPottery::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientSpindaPatternedPottery, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_LatiasLatiosTwinFeathers::
+	msgbox UnionCity_AbandonedMuseum_Text_LatiasLatiosTwinFeathers, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientIcyRockRegice::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientIcyRockRegice, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientGengarShadowRelic::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientGengarShadowRelic, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientSkyPillarScroll::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientSkyPillarScroll, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientArmaldoFossilizedClaw::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientArmaldoFossilizedClaw, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_FossilizedLileepBlossom::
+	msgbox UnionCity_AbandonedMuseum_Text_FossilizedLileepBlossom, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_ReconstructedAerodactylExhibit::
+	msgbox UnionCity_AbandonedMuseum_Text_ReconstructedAerodactylExhibit, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_TheUnidentifiedPokemon::
+	msgbox UnionCity_AbandonedMuseum_Text_TheUnidentifiedPokemon, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_MetagrossCoreCrystal::
+	msgbox UnionCity_AbandonedMuseum_Text_MetagrossCoreCrystal, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_AncientOmanyteShell::
+	msgbox UnionCity_AbandonedMuseum_Text_AncientOmanyteShell, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_KabutoFossil::
+	msgbox UnionCity_AbandonedMuseum_Text_KabutoFossil, MSGBOX_NPC
+	end
+
+UnionCity_AbandonedMuseum_HoOhRainbowFeather::
+	msgbox UnionCity_AbandonedMuseum_Text_HoOhRainbowFeather, MSGBOX_NPC
+	end
+
+
 WFU5:
 	walk_fast_up
 	walk_fast_up
@@ -565,3 +650,214 @@ UnionCity_AbandonedMuseum_Text_WhatWasThat:
 	.string "itself will manifest before our eyes!\p"
 	.string "Quickly, please come with me back to\n"
 	.string "my office.$"
+
+UnionCity_AbandonedMuseum_Text_RelicanthFossil:
+	.string "“Ancient Relicanth Fossil”\p"
+	.string "Preserved within a sturdy glass case,\n"
+	.string "this relic hails from the distant past\l"
+	.string "of the Pokémon world, encapsulating\l"
+	.string "the soul of an early aquatic Pokémon.$"
+
+UnionCity_AbandonedMuseum_Text_GoldenMagikarpScales:
+	.string "“Golden Margikarp Scales”\p"
+	.string "Encased in a shimmering display, these\n"
+	.string "golden scales are rumored to have\l"
+	.string "belonged to a legendary Magikarp that\l"
+	.string "achieved greatness by transforming\l"
+	.string "into the majestic Gyarados.\p"
+	.string "The scales gleam with a lustrous\n"
+	.string "sheen, symbolizing the potential for\l"
+	.string "greatness hidden within seemingly\l"
+	.string "ordinary Pokémon.$"
+
+UnionCity_AbandonedMuseum_Text_AncientPokeBallShard:
+	.string "“Ancient Poké Ball Shard”\p"
+	.string "This weathered fragment of a Poké Ball\n"
+	.string "dates back to the earliest days of\l"
+	.string "Pokémon training.\p"
+	.string "The faded red and white coloration hint\n"
+	.string "at its age, and it serves as a\l"
+	.string "testament to the ingenuity of early\l"
+	.string "Trainers who developed these iconic\l"
+	.string "devices to catch and befriend Pokémon.$"
+
+UnionCity_AbandonedMuseum_Text_EeveeEvolutionStones:
+	.string "“Eevee Evolution Stones”\p"
+	.string "A set of shimmering Evolution Stones,\n"
+	.string "each associated with a specific Eevee\l"
+	.string "evolution.\p"
+	.string "From the fiery glow of the Fire Stone\n"
+	.string "to the calm aura of the Water Stone,\l"
+	.string "these artifacts showcase the diverse\l"
+	.string "paths Eevee can take on its journey.$"
+
+UnionCity_AbandonedMuseum_Text_PikachusElectricRod:
+	.string "“Pikachu's First Electric Rod”\p"
+	.string "A relic from Pikachu's early days,\n"
+	.string "the weathered electric rod is believed\l"
+	.string "to be one of the first tools used by\l"
+	.string "Pikachu to harness its electric powers.\p"
+	.string "The scorch marks and worn grip tell\n"
+	.string "the story of Pikachu's determination\l"
+	.string "and growth as an Electric-type Pokémon.$"
+
+UnionCity_AbandonedMuseum_Text_AncientUnownTablet:
+	.string "“Ancient Unown Tablet”\p"
+	.string "A tablet adorned with Unown script,\n"
+	.string "this artifact is believed to have been\l"
+	.string "part of an ancient Pokémon temple.\p"
+	.string "The mystical inscriptions spark\n"
+	.string "curiosity among researchers, hinting\l"
+	.string "at a connection between Unown and the\l"
+	.string "spiritual beliefs of civilization.$"
+
+UnionCity_AbandonedMuseum_Text_DragonitesWeatheredMailBag:
+	.string "“Dragonite's Weathered Mail Bag”\p"
+	.string "This tattered mail bag is believed to\n"
+	.string "have been carried by a loyal Dragonite\l"
+	.string "on long-distance delivery routes.\p"
+	.string "The faded patches and worn straps tell\n"
+	.string "the story of a Pokémon committed to\l"
+	.string "delivering messages across the vast\l"
+	.string "Pokémon world.$"
+
+UnionCity_AbandonedMuseum_Text_RegirocksEnigmaticKeystone:
+	.string "“Regirock's Enigmatic Keystone”\p"
+	.string "Encased in a protective barrier, this\n"
+	.string "engraved stone is thought to belong\l"
+	.string "to the Legendary Pokémon Regirock\l"
+	.string "to unlock its formidable power.\p"
+	.string "The inscriptions suggest a connection\n"
+	.string "to ancient rituals of the archaic trio.$"
+
+UnionCity_AbandonedMuseum_Text_AncientSpindaPatternedPottery:
+	.string "“Ancient Spinda Patterned Pottery”\p"
+	.string "A colorful pottery piece adorned with\n"
+	.string "intricate patterns reminiscent of\l"
+	.string "Spinda's unique spot formations.\p"
+	.string "This artifact is believed to have\n"
+	.string "been used in ancient Spinda-inspired\l"
+	.string "celebrations, where the chaotic beauty\l"
+	.string "of each pot was celebrated.$"
+
+UnionCity_AbandonedMuseum_Text_LatiasLatiosTwinFeathers:
+	.string "“Latias and Latios' Twin Feathers”\p"
+	.string "Twin feathers, one red and one blue,\n"
+	.string "understood to have belonged to the\l"
+	.string "Eon Duo, Latias and Latios.\p"
+	.string "The feathers are carefully displayed\n"
+	.string "to symbolize the harmonious balance\l"
+	.string "between these Legendary Pokémon as\l"
+	.string "they soared across the skies.$"
+
+UnionCity_AbandonedMuseum_Text_AncientIcyRockRegice:
+	.string "“Ancient Icy Rock of Regice”\p"
+	.string "A frost-covered rock believed to belong\n"
+	.string "to the Legendary Pokémon Regice.\p"
+	.string "The perpetual chill emanating from the\n"
+	.string "rock tells of the ice age when Regice\l"
+	.string "roamed the frozen landscapes, shaping\l"
+	.string "the very glaciers it called home.$"
+
+UnionCity_AbandonedMuseum_Text_AncientGengarShadowRelic:
+	.string "“Ancient Gengar Shadow Relic”\p"
+	.string "Preserved in a dimly lit case, this\n"
+	.string "eerie relic is believed to contain the\l"
+	.string "essence of a Gengar's shadow.\p"
+	.string "The shifting darkness within hints at\n"
+	.string "the bitter nature of the Ghost-type\l"
+	.string "Pokémon from ancient times.$"
+
+UnionCity_AbandonedMuseum_Text_AncientSkyPillarScroll:
+	.string "“Ancient Sky Pillar Scroll”\p"
+	.string "Unfurled carefully, the scroll depicts\n"
+	.string "the legendary Sky Pillar, a structure\l"
+	.string "associated with the Hoenn region.\p"
+	.string "The scroll's detailed illustrations\n"
+	.string "reveal the challenges Trainers faced\l"
+	.string "as they rose to face the Legendary\l"
+	.string "Pokémon Rayquaza.$"
+
+UnionCity_AbandonedMuseum_Text_AncientArmaldoFossilizedClaw:
+	.string "“Ancient Armaldo Claw”\p"
+	.string "The claw, once razor-sharp and capable\n"
+	.string "of rending through the toughest\l"
+	.string "exoskeletons, is now frozen in time\l"
+	.string "within a protective case.\p"
+	.string "The claw provides a rare glimpse into\n"
+	.string "the anatomy and predatory adaptations\l"
+	.string "that allowed Armaldo to thrive in\l"
+	.string "ancient seas.$"
+
+UnionCity_AbandonedMuseum_Text_FossilizedLileepBlossom:
+	.string "“Ancient Lileep Blossom”\p"
+	.string "The blossom, adorned with delicate\n"
+	.string "fronds and petal-like structures,\l"
+	.string "tells a tale of Lileep's life in\l"
+	.string "ancient seas.\p"
+	.string "The rock matrix surrounding the fossil\n"
+	.string "hints at the aquatic environments that\l"
+	.string "Lileep navigated with its graceful\l"
+	.string "appendages, seeking nourishment and\l"
+	.string "sunlight.$"
+
+UnionCity_AbandonedMuseum_Text_ReconstructedAerodactylExhibit:
+	.string "“Reconstructed Aerodactyl Exhibit”\p"
+	.string "Standing proudly in a dynamic pose,\n"
+	.string "this life-sized replica of Aerodactyl\l"
+	.string "is a marvel of paleontological\l"
+	.string "reconstruction, meticulously pieced\l"
+	.string "together from the fossilized remains\l"
+	.string "of the early Flying/Rock-type Pokémon.\p"
+	.string "The skeletal structure, once buried in\n"
+	.string "the sands of time, now commands the\l"
+	.string "heart of the museum.$"
+
+UnionCity_AbandonedMuseum_Text_TheUnidentifiedPokemon:
+	.string "“The Unidentified Pokémon”\p"
+	.string "The exhibit showcases few fossilized\n"
+	.string "remains that have been discovered,\l"
+	.string "leaving much to the imagination.\p"
+	.string "Created by a reconstructor's artistic\n"
+	.string "interpretation, visualizing what this\l"
+	.string "mysterious Pokémon might have looked\l"
+	.string "like based on the limited skeletal\l"
+	.string "evidence available.$"
+
+UnionCity_AbandonedMuseum_Text_MetagrossCoreCrystal:
+	.string "“Metagross' Metallic Core Crystal”\p"
+	.string "Encased in a transparent shell, this\n"
+	.string "crystal is thought to contain a\l"
+	.string "fragment of Metagross' metallic core.\p"
+	.string "The hexagonal patterns within the\n"
+	.string "crystal reflect the intricate build\l"
+	.string "of Metagross, the Iron Leg Pokémon.$"
+
+UnionCity_AbandonedMuseum_Text_AncientOmanyteShell:
+	.string "“Ancient Omanyte Shell”\p"
+	.string "The shell, adorned with intricate\n"
+	.string "spiral patterns and delicate ridges,\l"
+	.string "captures the essence of a Pokémon\l"
+	.string "that navigated the primeval oceans.\p"
+	.string "The fossil provides a glimpse into\n"
+	.string "Omanyte's aquatic lifestyle, detailing\l"
+	.string "the evolutionary adaptations that\l"
+	.string "allowed it to thrive in ancient seas.$"
+
+UnionCity_AbandonedMuseum_Text_KabutoFossil:
+	.string "“Ancient Kabuto Shell Fossil”\p"
+	.string "Preserved in stone, this fossilized\n"
+	.string "Kabuto shell provides insight into the\l"
+	.string "evolutionary history of Pokémon.\p"
+	.string "The intricate patterns on the shell\n"
+	.string "hint at the adaptations that allowed\l"
+	.string "Kabuto to thrive in ancient seas.$"
+
+UnionCity_AbandonedMuseum_Text_HoOhRainbowFeather:
+	.string "“Ho-Oh's Rainbow Feather”\p"
+	.string "A radiant feather that is said to have\n"
+	.string "come from the legendary Pokémon Ho-Oh.\p"
+	.string "Its iridescent colors shimmer in the\n"
+	.string "light, representing the promise of\l"
+	.string "eternal happiness to those who witness\l"
+	.string "the rainbow created by Ho-Oh's wings.$"
