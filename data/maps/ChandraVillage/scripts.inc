@@ -263,7 +263,10 @@ ChandraVillage_Storyline_State_4::
 	msgbox ChandraVillage_Storyline_State_4_ButProf, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Professor
+	showface FS_PROF, FSE_WORRIED, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_TylerWithout, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	delay 10
@@ -271,16 +274,24 @@ ChandraVillage_Storyline_State_4::
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_Player, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_WontBeAlone, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_PROF, WDFR
 	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
+	speakername CommonName_Text_Professor
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_WillYouHelp, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
 	goto_if_eq ChandraVillage_Storyline_State_4_Yes
@@ -289,42 +300,65 @@ ChandraVillage_Storyline_State_4::
 
 ChandraVillage_Storyline_State_4_Yes::
 	closemessage
+	hideface 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_WINK, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_ThatsTheSpirit, MSGBOX_AUTOCLOSE
+	hideface 1
 	goto ChandraVillage_Storyline_State_4_Part_2
 	end
 
 ChandraVillage_Storyline_State_4_No::
 	closemessage
+	hideface 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_WINK, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_VeryFunny, MSGBOX_AUTOCLOSE
+	hideface 1
 	goto ChandraVillage_Storyline_State_4_Part_2
 	end
 
 ChandraVillage_Storyline_State_4_Part_2::
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_WeWillHelp, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_PROF, WUFR
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Professor
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_VeryWell, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_WontLetYouDown, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_PlayerLetsShow, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_PROF, WDFR
 	waitmovement 0
+	speakername CommonName_Text_Professor
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_FollowTyler, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_TYLER_LAB, WLFU
 	waitmovement 0
 	opendoor 39, 6
