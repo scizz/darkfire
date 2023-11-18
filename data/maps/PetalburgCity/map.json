@@ -332,22 +332,22 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_UNION_CITY_ABANDONED_MUSEUM",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_ROUTE4",
+      "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_CHANDRA_VILLAGE",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ROUTE1",
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_HIGHWIND_VILLAGE",
+      "dest_warp_id": "0"
     },
     {
       "x": 17,

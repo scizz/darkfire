@@ -449,7 +449,7 @@ static void FadeInScreenWithWeather(void)
         }
         break;
     case WEATHER_VOLCANIC_ASH:
-    case WEATHER_SUNNY_CLOUDS:
+    //case WEATHER_SUNNY_CLOUDS:
         if (FadeInScreen_FogHorizontal() == FALSE)
         {
             Weather_SetBlendCoeffs(8, 12); // Indoor shadows
