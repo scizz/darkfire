@@ -346,8 +346,8 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_HIGHWIND_VILLAGE",
+      "dest_warp_id": "0"
     },
     {
       "x": 17,
