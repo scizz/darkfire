@@ -33,7 +33,7 @@ UnionCity_GovOffice_1F_Text_Sign_2:
 UnionCity_GovOffice_1F_Text_Bug_Catcher:
 	.string "{COLOR}{BLUE}This place is lame.\p"
 	.string "There's nothing interesting here.\n"
-	.string "Just a bunch of nerds upstairs."
+	.string "Just a bunch of nerds upstairs.$"
 
 UnionCity_GovOffice_1F_Text_Receptionist:
 	.string "{COLOR}{RED}Hello and welcome to the Union City\n"

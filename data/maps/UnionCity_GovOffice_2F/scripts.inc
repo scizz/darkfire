@@ -48,7 +48,7 @@ UnionCity_GovOffice_2F_Text_Nerd_4:
 	.string "something we should disavow.\p"
 	.string "Of course we don't have an agenda,\n"
 	.string "only the bad guys have an agenda!\l"
-	.string "That's why they're winning.$"
+	.string "That's why they're winning!$"
 
 UnionCity_GovOffice_2F_Text_Nerd_5:
 	.string "{COLOR}{BLUE}I am sometimes a sneaky fox and\n"
