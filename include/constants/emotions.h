@@ -35,6 +35,7 @@
 #define FS_MOM 7
 #define FS_PRESIDENT 8
 #define FS_ANNOUNCER 9
+#define FS_MALE_SUBO 10
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
