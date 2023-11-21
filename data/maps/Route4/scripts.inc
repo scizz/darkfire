@@ -60,6 +60,7 @@ Route4_EventScript_Joshua::
 
 Route4_Mareep::
 	lockall
+	faceplayer
 	playmoncry SPECIES_MAREEP, 0
 	msgbox Route4_Text_Mareep, MSGBOX_DEFAULT
 	waitmoncry
