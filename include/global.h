@@ -16,6 +16,9 @@
 #include "constants/easy_chat.h"
 #include "constants/trainer_hill.h"
 
+#define FREE_UNION_ROOM_CHAT //frees up field unk3C88. 210 bytes
+#define FREE_RECORD_MIXING_HALL_RECORDS // frees up SB2 hall records for record mixing (1032 bytes)
+
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
 
@@ -532,8 +535,10 @@ struct SaveBlock2
     /*0x1EC*/ struct BerryCrush berryCrush;
     /*0x1FC*/ struct PokemonJumpRecords pokeJump;
     /*0x20C*/ struct BerryPickingResults berryPick;
+    #ifndef FREE_RECORD_MIXING_HALL_RECORDS
     /*0x21C*/ struct RankingHall1P hallRecords1P[HALL_FACILITIES_COUNT][FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
     /*0x57C*/ struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
+    #endif
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
               struct Follower follower;
@@ -1055,7 +1060,9 @@ struct SaveBlock1
     /*0x3???*/ struct RecordMixingGift recordMixingGift;
     /*0x3???*/ LilycoveLady lilycoveLady;
     /*0x3???*/ struct TrainerNameRecord trainerNameRecords[20];
+    #ifndef FREE_UNION_ROOM_CHAT
     /*0x3???*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
+    #endif
     /*0x3D5A*/ u8 unused_3D5A[10];
     /*0x3???*/ struct TrainerHillSave trainerHill;
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
