@@ -99,8 +99,11 @@ ChandraVillage_LabDone::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_WORRIED, 1, 1
 	msgbox ChandraVillage_Text_HowDidYouGetOn, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	delay 60
 	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -108,15 +111,22 @@ ChandraVillage_LabDone::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_LAUGHING, 1, 1
 	msgbox ChandraVillage_Text_WowPlayer, MSGBOX_DEFAULT
+	speakername CommonName_Text_Prof
 	call_if_set FLAG_TAKEN_PIKACHU, ChandraVillage_GivePikachu
 	call_if_unset FLAG_TAKEN_PIKACHU, ChandraVillage_GiveEevee
 	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_DEFAULT
 	playfanfare SE_DEX_SEARCH
+	hideface 1
 	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_DEFAULT
 	waitfanfare
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Text_PokedexDesc, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, WRFL
 	applymovement LOCALID_PROF, WRFU
 	waitmovement 0
@@ -217,7 +227,10 @@ ChandraVillage_Town_Sign::
 	end
 
 ChandraVillage_Prof::
-	msgbox ChandraVillage_Text_Prof, MSGBOX_NPC
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_WORRIED, 1, 1
+	msgbox ChandraVillage_Text_Prof, MSGBOX_DEFAULT
+	hideface 1
 	end
 
 ChandraVillage_Joker::
