@@ -16,7 +16,10 @@ AnheimForest_SUBO::
 	waitmovement 0
 	closedoor 31, 45
 	waitdooranim
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_SUBO_Dots, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
@@ -177,11 +180,20 @@ AnheimForest_Beedrill::
 AnheimForest_Lucy::
 	lock
 	faceplayer
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_Lucy, MSGBOX_DEFAULT
+	hideface 1
 	delay 30
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_Dots, MSGBOX_DEFAULT
+	hideface 1
 	delay 30
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_ANGRY, 1, 1
 	msgbox AnheimForest_Text_PleaseMove, MSGBOX_DEFAULT
+	hideface 1
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
@@ -196,8 +208,11 @@ AnheimForest_Lucy::
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_Thanks, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement 26, WDL4
 	waitmovement 0
 	removeobject 26
@@ -211,7 +226,10 @@ AnheimForest_Tyler_Encounter::
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox AnheimForest_Text_HmmHowDoIGetPast, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_TYLER, Common_Movement_FaceRight
 	waitmovement 0
@@ -220,7 +238,10 @@ AnheimForest_Tyler_Encounter::
 	waitse
 	waitmovement 0
 	delay 10
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox AnheimForest_Text_Player, MSGBOX_AUTOCLOSE
+	hideface 1
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 21
 	goto_if_eq AnheimForest_Tyler_Encounter_Up
@@ -240,11 +261,20 @@ AnheimForest_Tyler_Encounter_Main::
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_HowsItGoing, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_DotDotDot, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_SayPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	goto_if_set FLAG_TAKEN_PIKACHU, AnheimForest_Tyler_Encounter_Eevee
 	goto AnheimForest_Tyler_Encounter_Pikachu
 	end
@@ -262,7 +292,10 @@ AnheimForest_Tyler_Encounter_Pikachu::
 AnheimForest_Tyler_Encounter_PostMatch::
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox AnheimForest_Text_ThatWasSomeBattle, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_TYLER, WU3L3U3
 	waitmovement 0
 	removeobject LOCALID_TYLER

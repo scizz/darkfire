@@ -49,14 +49,19 @@ GreendaleVillage_Tournament_Main::
 	delay 30
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_IAmVerySorry, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_AwwThisIsntFair, MSGBOX_AUTOCLOSE
 	delay 10
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername SpeakerName_Text_Ranger
 	msgbox GreendaleVillage_Text_ThisMeansIWont, MSGBOX_AUTOCLOSE
 	delay 30
 	applymovement LOCALID_YOUNGSTER, Common_Movement_FaceDown
@@ -67,12 +72,14 @@ GreendaleVillage_Tournament_Main::
 	waitmovement 0
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_WaitATrainer, MSGBOX_AUTOCLOSE
 	delay 10
 	applymovement LOCALID_YOUNGSTER, WR3FD
 	waitmovement 0
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_HeyYou, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_YOUNGSTER, WL3FR
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
@@ -94,13 +101,18 @@ GreendaleVillage_Tournament_Begin::
 	setflag FLAG_START_GREENDALE_VILLAGE_TOURNAMENT
 	applymovement LOCALID_COOLTRAINER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_ThereHostWeHave, MSGBOX_AUTOCLOSE
 	delay 10
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_ErmWellWasnt, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_WeUnderstand, MSGBOX_AUTOCLOSE
 	goto Greendale_Tournament_Battle
 	end
@@ -108,7 +120,10 @@ GreendaleVillage_Tournament_Begin::
 Greendale_Tournament_Battle::
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AhaOkayEhem, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_COOLTRAINER, WR2
 	applymovement LOCALID_RANGER, WL2
@@ -125,17 +140,22 @@ Greendale_Tournament_Battle::
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_GoodLuckToEveryone, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_YOUNGSTER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_IDidntSleep, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_ThisTournamentIsStupid, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_YOUNGSTER, RD6
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -159,6 +179,7 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	applymovement LOCALID_RANGER, Common_Movement_FaceLeft
 	applymovement LOCALID_COOLTRAINER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_AceTrainer
 	msgbox GreendaleVillage_Text_HahaWhatAWimp, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_COOLTRAINER, WD6
 	waitmovement 0
@@ -173,7 +194,10 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AndThatsTheEnd, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_NURSE1, Common_Movement_WalkDown
 	applymovement LOCALID_NURSE2, Common_Movement_WalkDown
 	waitmovement 0
@@ -182,10 +206,12 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	waitmovement 0
 	applymovement LOCALID_NURSE2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_Nurse
 	msgbox GreendaleVillage_Text_ThatWasAGreatBattle, MSGBOX_AUTOCLOSE
 	call Common_EventScript_OutOfCenterPartyHeal
 	applymovement LOCALID_NURSE2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_Nurse
 	msgbox GreendaleVillage_Text_GoodLuckInTheNext, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_NURSE1, Common_Movement_WalkUp
 	waitmovement 0
@@ -203,9 +229,13 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AllRightTrainers, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_Ranger
 	msgbox GreendaleVillage_Text_ImGoingToMoveUp, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -220,6 +250,7 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	applymovement LOCALID_COOLTRAINER, Common_Movement_FaceRight
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername SpeakerName_Text_Ranger
 	msgbox GreendaleVillage_Text_PfftWhatAWimp, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_RANGER, WLD6
 	waitmovement 0
@@ -241,10 +272,12 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	waitmovement 0
 	applymovement LOCALID_NURSE2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_Nurse
 	msgbox GreendaleVillage_Text_ThatWasAGreatBattle, MSGBOX_AUTOCLOSE
 	call Common_EventScript_OutOfCenterPartyHeal
 	applymovement LOCALID_NURSE2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_Nurse
 	msgbox GreendaleVillage_Text_GoodLuckInTheNext, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_NURSE1, Common_Movement_WalkUp
 	waitmovement 0
@@ -262,9 +295,13 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AllRightTrainers, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_COOLTRAINER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_AceTrainer
 	msgbox GreendaleVillage_Text_ThatTrainerWasWeak, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -285,24 +322,32 @@ GreendaleVillage_Tournament_Rose::
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AndWeHaveAWinner, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_NURSE1, WD2FR
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_NURSE1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_Nurse
 	msgbox GreendaleVillage_Text_ItsAGoodThingWeHave, MSGBOX_AUTOCLOSE
 	call Common_EventScript_OutOfCenterPartyHeal
 	applymovement LOCALID_NURSE1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_Nurse
 	msgbox GreendaleVillage_Text_ThereYouGoHoney, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_NURSE1, WU2FD
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_OkayPlayerAreYouReady, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_NURSE1, Common_Movement_FaceRight
 	delay 10
@@ -330,11 +375,17 @@ GreendaleVillage_Tournament_Rose::
 	applymovement LOCALID_NURSE2, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_Dots, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_OhItsYouAgain, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, LFDWL
 	applymovement OBJ_EVENT_ID_FOLLOWER, LFDWL
@@ -346,7 +397,10 @@ GreendaleVillage_Tournament_Rose_Battle::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_OkayYouBeatMe, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_ROSE, WD6
 	waitmovement 0
@@ -361,16 +415,25 @@ GreendaleVillage_Tournament_Rose_Battle::
 	waitmovement 0
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AndWeHaveANewChampion, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
+	hideface 1
 	applymovement LOCALID_HOST, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_TheWayYouHandled, MSGBOX_AUTOCLOSE
+	hideface 1
 	giveitem ITEM_HM01, 1
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_TeachThisHM, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_HOST, Common_Movement_FaceLeft
 	delay 30
@@ -378,7 +441,10 @@ GreendaleVillage_Tournament_Rose_Battle::
 	delay 30
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_WellIDontKnow, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_FOLLOWER, WDRFUD16FD
 	applymovement OBJ_EVENT_ID_PLAYER, D16FD
 	applymovement LOCALID_NURSE1, WD8
@@ -627,6 +693,18 @@ D16WLD7:
 	walk_down
 	walk_down
 	step_end
+
+SpeakerName_Text_Nurse:
+	.string "Nurse$"
+
+SpeakerName_Text_AceTrainer:
+	.string "Ace Trainer$"
+
+SpeakerName_Text_BugCatcher:
+	.string "Bug Catcher$"
+
+SpeakerName_Text_Ranger:
+	.string "Ranger$"
 	
 GreendaleVillage_Text_IAmVerySorry:
 	.string "{COLOR}{RED}I am very sorry, everyone.\p"

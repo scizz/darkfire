@@ -18,6 +18,6 @@ AnheimTown_House1_Text_Man:
 
 AnheimTown_House1_Text_Little_Boy:
 	.string "{COLOR}{BLUE}I accidentally knocked this\n"
-	.string "painting off the wall.\n"
+	.string "painting off the wall.\p"
 	.string "Please don't tell my dad.\n"
 	.string "He's in a bad mood…$"
