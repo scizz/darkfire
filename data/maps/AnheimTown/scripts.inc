@@ -39,6 +39,15 @@ AnheimTown_Girl_2::
 	msgbox AnheimTown_Text_Girl_2, MSGBOX_NPC
 	end
 
+AnheimTown_Man::
+	lock
+	faceplayer
+	msgbox AnheimTown_Text_Man, MSGBOX_AUTOCLOSE
+	applymovement 16, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
 AnheimTown_Story_Time::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -245,7 +254,7 @@ AnheimTown_Text_Girl_2:
 	.string "various undisturbed forests during\l"
 	.string "peaceful times.\p"
 	.string "Wherever it visits, it leaves behind\n"
-	.string "flourishing grass and trees."
+	.string "flourishing grass and trees.$"
 
 AnheimTown_Text_Little_Girl_Story:
 	.string "{COLOR}{RED}Hello!\n"
@@ -293,7 +302,7 @@ AnheimTown_Text_Little_Girl_To_Player:
 	.string "I ignore rocks all the time!$"
 
 AnheimTown_Text_Old_Man:
-	.string "Here lies The Protector of the Forest.\p"
+	.string "Here lies The Protector of The Forest.\p"
 	.string "He was once a famed Pokémon Trainer who\n"
 	.string "rose to defend the people of this town\l"
 	.string "from those who sought to exploit them.\p"
@@ -301,6 +310,13 @@ AnheimTown_Text_Old_Man:
 	.string "his life was lost…\p"
 	.string "We have dedicated this place to him as\n"
 	.string "our thanks.$"
+
+AnheimTown_Text_Man:
+	.string "{COLOR}{BLUE}The bond between people and Pokémon\n"
+	.string "is like the ripples of this pond…\p"
+	.string "Ever-expanding and connecting us all.\p"
+	.string "Meditate here with your Pokémon, and\n"
+	.string "you too may discover hidden strengths.$"
 
 GirlPhaseOne:
 	walk_up

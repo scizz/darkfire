@@ -430,7 +430,7 @@ Route5_Text_Woman:
 	.string "the coming challenges.\l"
 	.string "The journey will be long and tough.\p"
 	.string "I don't have what it takes to go past\n"
-	.string "here - but maybe a young trainer like\l"
+	.string "here - but maybe a young Trainer like\l"
 	.string "you does.\p"
 	.string "Best of luck!$"
 
