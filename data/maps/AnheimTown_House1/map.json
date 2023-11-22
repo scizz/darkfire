@@ -2,7 +2,7 @@
   "id": "MAP_ANHEIM_TOWN_HOUSE1",
   "name": "AnheimTown_House1",
   "layout": "LAYOUT_ANHEIM_TOWN_HOUSE1",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ANHEIM_TOWN",
   "region_map_section": "MAPSEC_ANHEIM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

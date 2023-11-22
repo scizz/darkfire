@@ -35,9 +35,9 @@ AnheimTown_House3_Text_Woman:
 
 AnheimTown_House3_Text_WomanGiven:
 	.string "{COLOR}{RED}Feel free to stay and share your tales\n"
-	.string "of adventure or enjoy the serenity.\p"
+	.string "of adventure, or enjoy the serenity.\p"
 	.string "I've always believed that the best\n"
-	.string "stories are shared over a cup of tea.$"
+	.string "stories are shared over a cup of Tea.$"
 
 AnheimTown_House3_Text_Girl:
 	.string "{COLOR}{RED}Weary Trainers come here to rest and\n"
