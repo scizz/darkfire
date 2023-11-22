@@ -109,7 +109,7 @@ GreendaleVillage_Tournament_Begin::
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_ErmWellWasnt, MSGBOX_AUTOCLOSE
-	hideface
+	hideface 1
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_BugCatcher
@@ -415,7 +415,7 @@ GreendaleVillage_Tournament_Rose_Battle::
 	waitmovement 0
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
-	speakername CommonName_Text_Announer
+	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AndWeHaveANewChampion, MSGBOX_DEFAULT
 	waitfanfare
@@ -425,12 +425,12 @@ GreendaleVillage_Tournament_Rose_Battle::
 	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername CommonName_Text_Announer
+	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_TheWayYouHandled, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_HM01, 1
-	speakername CommonName_Text_Announer
+	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_TeachThisHM, MSGBOX_AUTOCLOSE
 	hideface 1
@@ -441,7 +441,7 @@ GreendaleVillage_Tournament_Rose_Battle::
 	delay 30
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername CommonName_Text_Announer
+	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_WellIDontKnow, MSGBOX_AUTOCLOSE
 	hideface 1

@@ -22,6 +22,7 @@ UnionCity_SUBO_Event::
 UnionCity_SUBO_Event_Left::
 	applymovement LOCALID_NERD, WFU5
 	waitmovement 0
+	speakername SpeakerName_Text_RandomNerd
 	msgbox UnionCity_AbandonedMuseum_Text_GetOut, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, WFRFL
 	applymovement OBJ_EVENT_ID_FOLLOWER, WFRFFL
@@ -67,7 +68,10 @@ UnionCity_SUBO_Event_Push::
 	waitmovement 0
 	applymovement LOCALID_SUBO_PUSH, Common_Movement_FaceDown
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_WellWellWell, MSGBOX_AUTOCLOSE
+	hideface 1
 	goto UnionCity_SUBO_Event_Main
 	end
 
@@ -86,9 +90,13 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_RattataUseTackle, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	playmoncry SPECIES_RATTATA, 0
+	speakername SpeakerName_Text_Rattata
 	msgbox UnionCity_AbandonedMuseum_Text_Grrat, MSGBOX_AUTOCLOSE
 	waitmoncry
 	applymovement LOCALID_RATTATA, JumpRightLeft
@@ -105,20 +113,33 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_Waahhh, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_IllTellYouWhat, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_IReallyCant, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_TchRattata, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	playmoncry SPECIES_RATTATA, 0
+	speakername SpeakerName_Text_Rattata
 	msgbox UnionCity_AbandonedMuseum_Text_Grratata, MSGBOX_AUTOCLOSE
 	waitmoncry
 	applymovement LOCALID_RATTATA, JumpRightLeft
@@ -139,10 +160,16 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_WaahhhOkay, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_ThereWasntSoHard, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	delay 10
@@ -176,19 +203,31 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	msgbox UnionCity_AbandonedMuseum_Text_SpitItOut
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
+	msgbox UnionCity_AbandonedMuseum_Text_SpitItOut, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 30
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_UhHmh, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_HmmNorthOfAnheim, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_SUBO_L, Common_Movement_FaceUp
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_OhItSeemsWeHave, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_SUBO_F, Common_Movement_FaceUp
 	applymovement LOCALID_PRESIDENT, Common_Movement_FaceUp
 	waitmovement 0
@@ -196,7 +235,10 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_PlayerRight, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
 	playse SE_PIN
@@ -204,7 +246,10 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	msgbox UnionCity_AbandonedMuseum_Text_HehDontFeelAlarmed
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
+	msgbox UnionCity_AbandonedMuseum_Text_HehDontFeelAlarmed, MSGBOX_AUTOCLOSE
+	hideface 0
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, WU3
 	applymovement LOCALID_SUBO_L, WU3
@@ -214,22 +259,37 @@ UnionCity_SUBO_Event_Main::
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	playbgm MUS_SUBO_THEME, TRUE
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_InFactIveBeenWatching, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_DotDotDot, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_AnywayHereWeAre, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	speakername SpeakerName_Text_SuboLeader
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_AndMrPresident, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_SuboLeader
+	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_KeepItUp, MSGBOX_AUTOCLOSE
+	hideface 0
 	fadescreen 1
 	removeobject LOCALID_SUBO_F
 	removeobject LOCALID_SUBO_M
@@ -251,7 +311,10 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_WhatWasThat, MSGBOX_AUTOCLOSE
+	hideface 1
 	setvar VAR_STORYLINE_STATE, 14
 	warpsilent MAP_UNION_CITY_GOV_OFFICE_3F, 2, 2
 	end
@@ -469,6 +532,21 @@ WU3:
 	walk_up
 	walk_up
 	step_end
+
+SpeakerName_Text_SuboGrunt:
+	.string "SUBO Grunt$"
+
+SpeakerName_Text_SuboLeader:
+	.string "SUBO Leader$"
+
+SpeakerName_Text_QuestionMark:
+	.string "???$"
+
+SpeakerName_Text_RandomNerd:
+	.string "Random Nerd$"
+
+SpeakerName_Text_Rattata:
+	.string "Rattata$"
 
 UnionCity_AbandonedMuseum_Text_Old_Man:
 	.string "This museum was recently abandoned.\p"

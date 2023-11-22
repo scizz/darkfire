@@ -25,6 +25,9 @@ CommonName_Text_Mom:
 CommonName_Text_Announcer:
 	.string "Announcer$"
 
+CommonName_Text_President:
+	.string "President$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

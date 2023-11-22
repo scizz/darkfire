@@ -177,18 +177,18 @@ AnheimForest_Beedrill::
 AnheimForest_Lucy::
 	lock
 	faceplayer
-	speakername CommonName_Text_Lucy
-	showface FS_LUCY, FSE_NORMAL, 1, 1
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_Lucy, MSGBOX_DEFAULT
 	hideface 1
 	delay 30
-	speakername CommonName_Text_Lucy
-	showface FS_LUCY, FSE_NORMAL, 1, 1
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_Dots, MSGBOX_DEFAULT
 	hideface 1
 	delay 30
-	speakername CommonName_Text_Lucy
-	showface FS_LUCY, FSE_ANGRY, 1, 1
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_ANGRY, 1, 1
 	msgbox AnheimForest_Text_PleaseMove, MSGBOX_DEFAULT
 	hideface 1
 	delay 30
@@ -205,8 +205,8 @@ AnheimForest_Lucy::
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
 	waitmovement 0
-	speakername CommonName_Text_Lucy
-	showface FS_LUCY, FSE_NORMAL, 1, 1
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_Thanks, MSGBOX_DEFAULT
 	closemessage
 	hideface 1
