@@ -21,8 +21,11 @@ UnionCity_TylerPresidentIntro::
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Text_WelcomeToUnion, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement LOCALID_TYLER, WL8
 	waitmovement 0
@@ -59,6 +62,8 @@ UnionCity_TylerPresidentIntro_President::
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 0, 0
 	msgbox UnionCity_Text_OhGoodHeavens, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq UnionCity_TylerPresidentIntro_PresidentYes
@@ -82,19 +87,27 @@ UnionCity_TylerPresidentIntro_PresRight::
 
 UnionCity_TylerPresidentIntro_PresidentYes::
 	closemessage
+	hideface 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 0, 0
 	msgbox UnionCity_Text_PlayerYes, MSGBOX_DEFAULT
 	closemessage
+	hideface 0
 	goto UnionCity_TylerPresidentIntro_PresidentFinal
 	end
 
 UnionCity_TylerPresidentIntro_PresidentNo::
 	closemessage
+	hideface 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_President
+	showface FS_PRESIDENT, FSE_NORMAL, 0, 0
 	msgbox UnionCity_Text_PlayerNo, MSGBOX_DEFAULT
 	closemessage
+	hideface 0
 	goto UnionCity_TylerPresidentIntro_PresidentFinal
 	end
 
