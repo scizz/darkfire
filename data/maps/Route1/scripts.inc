@@ -53,8 +53,11 @@ Route1_TylerIntro::
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox Route1_Text_HeyPlayer, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	playbgm MUS_FOLLOW_ME, TRUE
 	return
 
@@ -63,7 +66,10 @@ Route1_TylerGrass::
 	fadedefaultbgm
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox Route1_Text_ListenCarefully, MSGBOX_DEFAULT
+	hideface 1
 	release
 	end
 
@@ -79,8 +85,11 @@ Route1_WestExitPrevention::
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SURPRISED, 1, 1
 	msgbox Route1_Text_ComeBack, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
 	waitmovement 0
@@ -94,6 +103,7 @@ Route1_PidgeyIntro::
 	playse SE_PIN
 	waitse
 	playmoncry SPECIES_PIDGEY, 0
+	speakername Speaker_Text_Pidgey
 	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
@@ -141,8 +151,11 @@ Route1_PidgeyMain::
 	delay 10
 	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SURPRISED, 1, 1
 	msgbox Route1_PidgeyMain_ItsAPidgey, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement LOCALID_TYLER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_PIDGEY, Levitate
@@ -152,6 +165,7 @@ Route1_PidgeyMain::
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername Speaker_Text_Pidgey
 	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_PIDGEY, FlyUp
@@ -208,7 +222,10 @@ Route1_PidgeyBattle::
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SHOCKED, 1, 1
 	msgbox Route1_PidgeyBattle_PlayerLookOut, MSGBOX_DEFAULT
+	hideface 1
 	setwildbattle SPECIES_PIDGEY, 4, ITEM_NONE
 	dowildbattle
 	playmoncry SPECIES_PIDGEY, 1
@@ -242,8 +259,11 @@ Route1_PidgeyPlayer_Other::
 	end
 
 Route1_PidgeyFinal::
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox Route1_PidgeyFinal_WayToGo, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement LOCALID_TYLER, WU6
 	waitmovement 0
@@ -254,7 +274,10 @@ Route1_PidgeyFinal::
 	end
 
 Route1_Tyler::
-	msgbox Route1_Text_Tyler, MSGBOX_NPC
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
+	msgbox Route1_Text_Tyler, MSGBOX_DEFAULT
+	hideface 1
 	end
 
 Route1_Jump_Event::
@@ -656,6 +679,9 @@ Route1_Text_ComeBack:
 Route1_Text_Tyler:	
 	.string "{COLOR}{BLUE}Let's train our Pokémon together,\n"
 	.string "{PLAYER}!$"
+
+Speaker_Text_Pidgey:
+	.string "Pidgey$"
 
 Route1_PidgeyIntro_Pidgey:
 	.string "Pidgey: Gaaarr!$"
