@@ -36,13 +36,19 @@ ChandraVillage_Lab_PickPokemon::
 	goto_if_set FLAG_SYS_POKEMON_GET, ChandraVillage_Lab_TryAgain
 	applymovement 1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Text_ListenUp, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement 1, WU6
 	applymovement OBJ_EVENT_ID_PLAYER, WU6
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Lab_Text_Hmm, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement 1, WL2
 	waitmovement 0
 	delay 30
@@ -53,22 +59,34 @@ ChandraVillage_Lab_PickPokemon::
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Lab_Text_DoYouThink, MSGBOX_DEFAULT
+	hideface 1
 	giveitem ITEM_POKE_BALL, 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY 1, 1
 	msgbox ChandraVillage_Lab_Text_DontHoldInHand, MSGBOX_DEFAULT
+	hideface 1
 	setvar VAR_STORYLINE_STATE, 6
 	release
 	end
 
 ChandraVillage_Lab_TryAgain::
 	lock
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Lab_Text_TryAgain, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement 1, WU6
 	applymovement OBJ_EVENT_ID_PLAYER, WU6
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Text_BattleThePokemon, MSGBOX_DEFAULT
+	hideface 1
 	setvar VAR_STORYLINE_STATE, 6
 	release
 	end
@@ -120,7 +138,10 @@ ChandraVillage_Lab_Pikachu_Caught::
 	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Lab_Pikachu_Yes_Congratulations, MSGBOX_DEFAULT
+	hideface 1
 	closemessage
 	goto ChandraVillage_Lab_Tyler_Pick_Eevee
 	end
@@ -171,7 +192,10 @@ ChandraVillage_Lab_Eevee_Caught::
 	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Lab_Eevee_Yes_Congratulations, MSGBOX_DEFAULT
+	hideface 1
 	closemessage
 	goto ChandraVillage_Lab_Tyler_Pick_Pikachu
 	end
@@ -199,8 +223,11 @@ ChandraVillage_Lab_Tyler_Pick_Eevee::
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Tyler_Text_GoPokeBall, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	call ChandraVillage_Lab_Catch_Eevee
 	playfanfare MUS_OBTAIN_ITEM
@@ -209,8 +236,11 @@ ChandraVillage_Lab_Tyler_Pick_Eevee::
 	closemessage
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Lab_Text_Tyler_YayCaughtEevee, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, WR2DR3
 	applymovement LOCALID_TYLER_LAB, WR3DR2
 	waitmovement 0
@@ -231,8 +261,11 @@ ChandraVillage_Lab_Tyler_Pick_Pikachu::
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Tyler_Text_GoPokeBall, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	call ChandraVillage_Lab_Catch_Pikachu
 	playfanfare MUS_OBTAIN_ITEM
@@ -241,8 +274,11 @@ ChandraVillage_Lab_Tyler_Pick_Pikachu::
 	closemessage
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Lab_Text_Tyler_YayCaughtPikachu, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, WL6
 	applymovement LOCALID_TYLER_LAB, WDWL5
 	waitmovement 0
@@ -253,7 +289,10 @@ ChandraVillage_Lab_Tyler_Pick_Pikachu::
 	end
 
 ChandraVillage_Lab_Tyler_End::
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Text_FightRattata, MSGBOX_DEFAULT
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
 	waitmovement 0
@@ -361,8 +400,11 @@ ChandraVillage_Lab_Tyler::
 	goto_if_unset FLAG_SYS_POKEMON_GET, ChandraVillage_Lab_PickOne
 	goto_if_unset FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_1, ChandraVillage_Lab_Tyler_NotDone
 	goto_if_unset FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2, ChandraVillage_Lab_Tyler_NotDone
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Lab_Text_GoodJob, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_1, 6
 	call_if_eq ChandraVillage_Standing_Under
@@ -383,12 +425,18 @@ ChandraVillage_Standing_Under::
 	return
 
 ChandraVillage_Lab_PickOne::
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Text_PickOne, MSGBOX_DEFAULT
+	hideface 1
 	release
 	end
 
 ChandraVillage_Lab_Tyler_NotDone::
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Text_NotDone, MSGBOX_DEFAULT
+	hideface 1
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
 	waitmovement 0
 	release
@@ -396,15 +444,21 @@ ChandraVillage_Lab_Tyler_NotDone::
 
 ChandraVillage_Lab_Exit::
 	lock
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SURPRISED, 1, 1
 	msgbox ChandraVillage_Lab_Text_ComeBack, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	release
 	end
 
 ChandraVillage_Lab_Prof::
-	msgbox ChandraVillage_Lab_Text_Prof, MSGBOX_NPC
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 1, 1
+	msgbox ChandraVillage_Lab_Text_Prof, MSGBOX_DEFAULT
+	hideface 1
 	end
 
 WU6:
