@@ -4314,7 +4314,7 @@
     {
       "id": "LAYOUT_SUNRISE_TOWN",
       "name": "SunriseTown_Layout",
-      "width": 64,
+      "width": 62,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Contest",
