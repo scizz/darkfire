@@ -15005,7 +15005,7 @@
           "map": "MAP_LAVERIA_CITY",
           "base_label": "gLaveriaCity0",
           "water_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 15,
@@ -15035,7 +15035,7 @@
             ]
           },
           "fishing_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 30,
             "mons": [
               {
                 "min_level": 5,
