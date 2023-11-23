@@ -2,7 +2,7 @@
   "id": "MAP_ROCKFALL_CAVE_B1F",
   "name": "RockfallCave_B1F",
   "layout": "LAYOUT_ROCKFALL_CAVE_B1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_CAVE",
   "region_map_section": "MAPSEC_ROCKFALL_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

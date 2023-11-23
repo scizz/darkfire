@@ -2,7 +2,7 @@
   "id": "MAP_PALACE_OF_ICE_INSIDE",
   "name": "PalaceOfIce_Inside",
   "layout": "LAYOUT_PALACE_OF_ICE_INSIDE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ICE_PALACE",
   "region_map_section": "MAPSEC_PALACE_OF_ICE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

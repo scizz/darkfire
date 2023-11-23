@@ -2,7 +2,7 @@
   "id": "MAP_STEEP_RAVINE",
   "name": "SteepRavine",
   "layout": "LAYOUT_STEEP_RAVINE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_CAVE",
   "region_map_section": "MAPSEC_ROUTE_6",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

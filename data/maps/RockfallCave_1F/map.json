@@ -2,7 +2,7 @@
   "id": "MAP_ROCKFALL_CAVE_1F",
   "name": "RockfallCave_1F",
   "layout": "LAYOUT_ROCKFALL_CAVE_1F",
-  "music": "MUS_B_FRONTIER",
+  "music": "MUS_CAVE",
   "region_map_section": "MAPSEC_ROCKFALL_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

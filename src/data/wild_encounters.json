@@ -11854,7 +11854,7 @@
           "map": "MAP_ROCKFALL_CAVE_1F",
           "base_label": "gRockfallCave_1F",
           "land_mons": {
-            "encounter_rate": 1,
+            "encounter_rate": 8,
             "mons": [
               {
                 "min_level": 10,
@@ -14277,7 +14277,7 @@
           "map": "MAP_ROCKFALL_CAVE_B1F",
           "base_label": "gRockfallCave_B1F",
           "land_mons": {
-            "encounter_rate": 9,
+            "encounter_rate": 8,
             "mons": [
               {
                 "min_level": 9,
@@ -14624,7 +14624,7 @@
           "map": "MAP_MUDDY_UNDERPASS",
           "base_label": "gMuddyUnderpass",
           "land_mons": {
-            "encounter_rate": 7,
+            "encounter_rate": 8,
             "mons": [
               {
                 "min_level": 11,
