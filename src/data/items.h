@@ -514,6 +514,21 @@ const struct Item gItems[] =
         .flingPower = 30,
     },
 
+    [ITEM_TEA] =
+    {
+        .name = _("Green Tea"),
+        .itemId = ITEM_TEA,
+        .price = 400,
+        .holdEffectParam = 50,
+        .description = sTeaDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
+        .flingPower = 30,
+    },
+
     [ITEM_MOOMOO_MILK] =
     {
         .name = _("Moomoo Milk"),
@@ -9807,19 +9822,6 @@ const struct Item gItems[] =
         .itemId = ITEM_RAINBOW_PASS,
         .price = 0,
         .description = sRainbowPassDesc,
-        .importance = 1,
-        .registrability = TRUE,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_TEA] =
-    {
-        .name = _("Tea"),
-        .itemId = ITEM_TEA,
-        .price = 0,
-        .description = sTeaDesc,
         .importance = 1,
         .registrability = TRUE,
         .pocket = POCKET_KEY_ITEMS,

@@ -93,6 +93,15 @@ const u8 gItemEffect_Lemonade[7] = {
 #endif
 };
 
+const u8 gItemEffect_Tea[7] = {
+    [4] = ITEM4_HEAL_HP,
+#if I_HEALTH_RECOVERY >= GEN_7
+    [6] = 50, // Amount of HP to recover
+#else
+    [6] = 60, // Amount of HP to recover
+#endif
+};
+
 const u8 gItemEffect_MoomooMilk[7] = {
     [4] = ITEM4_HEAL_HP,
     [6] = 100, // Amount of HP to recover
@@ -460,6 +469,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_FRESH_WATER - ITEM_POTION]      = gItemEffect_FreshWater,
     [ITEM_SODA_POP - ITEM_POTION]         = gItemEffect_SodaPop,
     [ITEM_LEMONADE - ITEM_POTION]         = gItemEffect_Lemonade,
+    [ITEM_TEA - ITEM_POTION]              = gItemEffect_Tea,
     [ITEM_MOOMOO_MILK - ITEM_POTION]      = gItemEffect_MoomooMilk,
     [ITEM_ENERGY_POWDER - ITEM_POTION]    = gItemEffect_EnergyPowder,
     [ITEM_ENERGY_ROOT - ITEM_POTION]      = gItemEffect_EnergyRoot,

@@ -215,6 +215,11 @@ static const u8 sMoomooMilkDesc[] = _(
     "that restores HP\n"
     "by 100 points.");
 
+static const u8 sTeaDesc[] = _(
+    "Restores the HP of\n"
+    "a Pokémon by\n"
+    "50 points.");
+
 static const u8 sEnergyPowderDesc[] = _(
     "A bitter powder\n"
     "that restores HP\n"
@@ -3777,11 +3782,6 @@ static const u8 sRainbowPassDesc[] = _(
     "For ferries serving\n"
     "Vermilion and the\n"
     "Sevii Islands.");
-
-static const u8 sTeaDesc[] = _(
-    "A thirst-quenching\n"
-    "tea prepared by an\n"
-    "old lady.");
 
 static const u8 sRubyDesc[] = _(
     "An exquisite, red-\n"
