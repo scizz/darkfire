@@ -74,7 +74,10 @@ LaveriaCity_Kojiro::
 	goto_if_ge LaveriaCity_Kojiro_Battle
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_NoIHaveNoTime, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_CAMERA, WSL3
 	waitmovement 0
 	special RemoveCameraObject
@@ -89,20 +92,32 @@ LaveriaCity_Kojiro::
 LaveriaCity_Kojiro_Battle::
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_IfYouAreHere, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	playbgm MUS_CHANDRA_VILLAGE, TRUE
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Text_WhatsThat, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_CAMERA, WSL3
 	waitmovement 0
 	special RemoveCameraObject
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_DotDotNo, MSGBOX_AUTOCLOSE
+	hideface 1
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Text_DotDotYou, MSGBOX_AUTOCLOSE
+	hideface 1
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
@@ -111,7 +126,10 @@ LaveriaCity_Kojiro_Battle::
 	closemessage
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_YouDidGood, MSGBOX_AUTOCLOSE
+	hideface 1
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 12
 	goto_if_eq LaveriaCity_Kojiro_Top
@@ -131,7 +149,10 @@ LaveriaCity_Kojiro_Bottom::
 
 LaveriaCity_Kojiro_End::
 	giveitem ITEM_HM04, 1
+	speakername CommonName_Text_Kojiro
+	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_YouWillNeedThis, MSGBOX_AUTOCLOSE
+	hideface 1
 	fadescreen 1
 	delay 30
 	removeobject LOCALID_KOJIRO
