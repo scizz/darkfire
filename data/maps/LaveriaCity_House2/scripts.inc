@@ -6,9 +6,12 @@ LaveriaCity_House2_Old_Man::
 	end
 
 LaveriaCity_House2_Text_Old_Man:
-	.string "As cold as ice she rebuked me.\n"
-	.string "Azure eyes would cry frozen tears.\p"
-	.string "Pallid, as far as could see, I'd\n"
-	.string "lived with her during my fears.\p"
-	.string "Then one day she just left me,\n"
-	.string "warmth returned, and I was free.$"
+	.string "Now, now…\n"
+	.string "About our elusive Champion…\p"
+	.string "The Champion of Laveria City is a\n"
+	.string "mysterious figure.\p"
+	.string "Rarely seen, like the northern lights,\n"
+	.string "legendary and awe-inspiring!\p"
+	.string "Some say he trains on the icy island,\n"
+	.string "communing with Ice-type Pokémon to\l"
+	.string "master the art of frigid battles.$"
