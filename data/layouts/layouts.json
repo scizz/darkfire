@@ -5710,6 +5710,26 @@
       "secondary_tileset": "gTileset_IslandHarbor",
       "border_filepath": "data/layouts/DesertPass/border.bin",
       "blockdata_filepath": "data/layouts/DesertPass/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_HOUSE3",
+      "name": "LaveriaCity_House3_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/LaveriaCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVERIA_CITY_HOUSE4",
+      "name": "LaveriaCity_House4_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/LaveriaCity_House4/border.bin",
+      "blockdata_filepath": "data/layouts/LaveriaCity_House4/map.bin"
     }
   ]
 }

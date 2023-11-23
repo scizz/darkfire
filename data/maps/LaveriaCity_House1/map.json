@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 4,
+      "x": 1,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 4,
+      "x": 1,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -43,14 +43,14 @@
   ],
   "warp_events": [
     {
-      "x": 2,
+      "x": 5,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY",
       "dest_warp_id": "2"
     },
     {
-      "x": 3,
+      "x": 6,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_LAVERIA_CITY",

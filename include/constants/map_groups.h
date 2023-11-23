@@ -130,6 +130,8 @@
 #define MAP_LAVERIA_CITY_HOUSE2            (1 | (9 << 8))
 #define MAP_LAVERIA_CITY_POKEMON_CENTER_1F (2 | (9 << 8))
 #define MAP_LAVERIA_CITY_MART              (3 | (9 << 8))
+#define MAP_LAVERIA_CITY_HOUSE3            (4 | (9 << 8))
+#define MAP_LAVERIA_CITY_HOUSE4            (5 | (9 << 8))
 
 // gMapGroup_IndoorHighwind
 #define MAP_HIGHWIND_VILLAGE_HOUSE1            (0 | (10 << 8))

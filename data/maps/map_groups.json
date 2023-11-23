@@ -179,7 +179,9 @@
     "LaveriaCity_House1",
     "LaveriaCity_House2",
     "LaveriaCity_PokemonCenter_1F",
-    "LaveriaCity_Mart"
+    "LaveriaCity_Mart",
+    "LaveriaCity_House3",
+    "LaveriaCity_House4"
   ],
   "gMapGroup_IndoorHighwind": [
     "HighwindVillage_House1",

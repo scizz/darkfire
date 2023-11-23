@@ -1,0 +1,28 @@
+{
+  "id": "MAP_LAVERIA_CITY_HOUSE4",
+  "name": "LaveriaCity_House4",
+  "layout": "LAYOUT_LAVERIA_CITY_HOUSE4",
+  "music": "MUS_ABANDONED_MUSEUM",
+  "region_map_section": "MAPSEC_LAVERIA_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

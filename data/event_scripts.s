@@ -1357,3 +1357,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DesertCaverns/scripts.inc"
 
 	.include "data/maps/DesertPass/scripts.inc"
+
+	.include "data/maps/LaveriaCity_House3/scripts.inc"
+
+	.include "data/maps/LaveriaCity_House4/scripts.inc"
