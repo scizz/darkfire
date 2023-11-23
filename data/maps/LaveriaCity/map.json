@@ -298,14 +298,14 @@
       "x": 36,
       "y": 36,
       "elevation": 0,
-      "dest_map": "MAP_LAVERIA_CITY",
+      "dest_map": "MAP_LAVERIA_CITY_HOUSE3",
       "dest_warp_id": "0"
     },
     {
-      "x": 21,
+      "x": 20,
       "y": 38,
       "elevation": 0,
-      "dest_map": "MAP_LAVERIA_CITY",
+      "dest_map": "MAP_LAVERIA_CITY_HOUSE4",
       "dest_warp_id": "0"
     }
   ],

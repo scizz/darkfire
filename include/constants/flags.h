@@ -678,7 +678,7 @@
 #define FLAG_NORTHSTAR_TOURNAMENT_NUGGET    0x279
 #define FLAG_RECEIVED_PINLEAF_PP_UP         0x27A
 #define FLAG_RECEIVED_PINLEAF_HP_UP         0x27B
-#define FLAG_UNUSED_0x27C                   0x27C // Unused Flag ANHEIM TOWN HOUSE 3
+#define FLAG_UNUSED_0x27C                   0x27C // Used in Anheim Town House 3
 #define FLAG_RECEIVED_PINLEAF_LUM_BERRY     0x27D
 #define FLAG_UNION_CITY_TM_BULK_UP          0x27E
 #define FLAG_ROUTE_3_QUEST_DELIVERED        0x27F
@@ -1227,8 +1227,8 @@
 #define FLAG_HIDE_ROCKFALL_CAVE_B1F_RANGER                          0x495 // Darkfire Flag
 #define FLAG_HIDE_ROUTE_10_HERACROSS                                0x496 // Darkfire Flag
 #define FLAG_RECEIVED_ANHEIM_TOWN_TEA                               0x497 // Darkfire Flag
+#define FLAG_RECEIVED_LAVERIA_CITY_SNOWBALL                         0x498 // Darkfire Flag
 
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
