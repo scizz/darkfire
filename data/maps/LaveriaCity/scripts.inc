@@ -226,7 +226,7 @@ LaveriaCity_Text_Man:
 	.string "No, it completely froze over as a\n"
 	.string "result of this harsh weather.\p"
 	.string "Oh, well…\n"
-	.string "The ice will eventually defrost!$"
+	.string "The ice will eventually defrost.$"
 
 LaveriaCity_Text_Man2:
 	.string "{COLOR}{BLUE}Headed for Route 7?\n"
@@ -234,8 +234,8 @@ LaveriaCity_Text_Man2:
 	.string "The air is crisp and invigorating, and\n"
 	.string "the frozen streams that snake through\l"
 	.string "the area glisten in the sunlight.\p"
-	.string "Be sure to bundle up, though.\n"
-	.string "the temperatures can drop to\l"
+	.string "Be sure to bundle up, though.\p"
+	.string "The temperatures can drop to\n"
 	.string "bone-chilling levels.$"
 
 LaveriaCity_Text_Boy_2:
@@ -246,11 +246,11 @@ LaveriaCity_Text_Boy_2:
 	.string "Town in the warm south…$"
 
 LaveriaCity_Text_PokeFan:
-	.string "{COLOR}{RED}I was once a Trainer, like you.\p"
-	.string "I even won a couple of tournaments,\n"
-	.string "but now I'm retired…\p"
+	.string "{COLOR}{RED}I was once a Trainer, like you.\n"
+	.string "I even won a couple of tournaments.\p"
+	.string "But now, I'm retired…\p"
 	.string "It's a bit boring here, but at least\n"
-	.string "I still have my trusted Pokémon!$"
+	.string "I still have my trusted Pokémon.$"
 
 LaveriaCity_Text_Old_Man:
 	.string "Ha!\p"
