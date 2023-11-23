@@ -884,8 +884,7 @@ GreendaleVillage_Text_Sign:
 	.string "{FONT_SMALL}“Our Scents Will Mesmerize Your Senses!”$"
 
 GreendaleVillage_Text_Sign_School:
-	.string "Welcome to the Greendale Village\n"
-	.string "Trainer School.$"
+	.string "Greendale Village Trainer School$"
 
 GreendaleVillage_Text_Sign_Park:
 	.string "Greendale Village Park\n"
