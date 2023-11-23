@@ -1510,3 +1510,4 @@ const u16 gObjectEventPal_SnorlaxSleeping[] = INCBIN_U16("graphics/object_events
 const u32 gObjectEventPic_SnorlaxSleeping[] = INCBIN_U32("graphics/object_events/pics/pokemon/snorlax_sleeping.4bpp");
 const u16 gObjectEventPal_RangerBoard[] = INCBIN_U16("graphics/object_events/palettes/ranger_board.gbapal");
 const u32 gObjectEventPic_RangerBoard[] = INCBIN_U32("graphics/object_events/pics/misc/ranger_board.4bpp");
+const u16 gObjectEventPal_Rakaz[] = INCBIN_U16("graphics/object_events/palettes/rakaz.gbapal");

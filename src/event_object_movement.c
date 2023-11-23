@@ -980,6 +980,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_LAB                     0xFA0
 #define OBJ_EVENT_PAL_TAG_SNORLAX_SLEEPING        0xF9F
 #define OBJ_EVENT_PAL_TAG_RANGER_BOARD            0xF9E
+#define OBJ_EVENT_PAL_TAG_RAKAZ                   0xF9D
 
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
@@ -1016,6 +1017,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lab,                   OBJ_EVENT_PAL_TAG_LAB},
     {gObjectEventPal_SnorlaxSleeping,       OBJ_EVENT_PAL_TAG_SNORLAX_SLEEPING},
     {gObjectEventPal_RangerBoard,           OBJ_EVENT_PAL_TAG_RANGER_BOARD},
+    {gObjectEventPal_Rakaz,                 OBJ_EVENT_PAL_TAG_RAKAZ},
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},
