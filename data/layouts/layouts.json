@@ -5205,7 +5205,7 @@
       "id": "LAYOUT_ROCKFALL_CAVE_1F",
       "name": "RockfallCave_1F_Layout",
       "width": 89,
-      "height": 40,
+      "height": 57,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/RockfallCave_1F/border.bin",
@@ -5224,7 +5224,7 @@
     {
       "id": "LAYOUT_STEEP_RAVINE",
       "name": "SteepRavine_Layout",
-      "width": 80,
+      "width": 54,
       "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DewfordGym",

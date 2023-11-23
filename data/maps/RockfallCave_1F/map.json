@@ -169,6 +169,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GREAT_BALL",
+      "x": 20,
+      "y": 44,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -227,6 +240,20 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE6",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 32,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 6,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_LAVERIA_CITY",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
