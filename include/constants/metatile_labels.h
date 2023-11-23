@@ -139,6 +139,7 @@
 #define METATILE_Contest_CounterFlap_Top     0x2D1
 #define METATILE_Contest_FloorShadow         0x261
 #define METATILE_Contest_WallShadow          0x221
+#define METATILE_Contest_Door                0x353
 
 // gTileset_Dewford
 #define METATILE_Dewford_Door              0x2D1
