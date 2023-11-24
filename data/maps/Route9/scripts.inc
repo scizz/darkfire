@@ -141,8 +141,8 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_FaceUp
 	waitmovement 0
-	@opendoor 28, 44
-	@waitdooranim
+	opendoor 28, 44
+	waitdooranim
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkUp
 	applymovement LOCALID_MOTHER, Common_Movement_WalkUp
 	applymovement LOCALID_GIRL, Common_Movement_WalkUp
@@ -162,8 +162,8 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	removeobject LOCALID_YOUNGSTER
 	delay 10
-	@closedoor 28, 44
-	@waitdooranim
+	closedoor 28, 44
+	waitdooranim
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -186,8 +186,8 @@ Route9_StarterDome_EnterTop::
 	applymovement OBJ_EVENT_ID_PLAYER, WL3FU
 	applymovement OBJ_EVENT_ID_FOLLOWER, WL3
 	waitmovement 0
-	@opendoor 28, 44
-	@waitdooranim
+	opendoor 28, 44
+	waitdooranim
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkLeft
@@ -201,8 +201,8 @@ Route9_StarterDome_EnterBottom::
 	applymovement OBJ_EVENT_ID_PLAYER, WL3U
 	applymovement OBJ_EVENT_ID_FOLLOWER, WL4FU
 	waitmovement 0
-	@opendoor 28, 44
-	@waitdooranim
+	opendoor 28, 44
+	waitdooranim
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp

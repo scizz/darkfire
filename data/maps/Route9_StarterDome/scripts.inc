@@ -166,7 +166,10 @@ Route9_StarterDome_Intro::
 	delay 10
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_NowThatEveryone, MSGBOX_AUTOCLOSE
+	hideface 0
 	playbgm MUS_FOLLOW_ME, TRUE
 	applymovement LOCALID_PROF, WL2
 	delay 5
@@ -198,15 +201,22 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_DownHereIsTheGrass, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 60
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSU3
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_BulbasaurChikoritaAndTreecko, MSGBOX_AUTOCLOSE
+	hideface 0
 	waitmovement 0
 	applymovement LOCALID_LITTLE_GIRL_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_LittleGirl
 	msgbox Route9_StarterDome_Text_MommyICanSee, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_LITTLE_GIRL_1, Common_Movement_FaceDown
 	waitmovement 0 
@@ -230,12 +240,18 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_ToTheLeftIsTheFireArea, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 60
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSR3
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_CharmanderCyndaquilAndTorchic, MSGBOX_AUTOCLOSE
+	hideface 0
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_FaceRight
 	delay 5
@@ -254,12 +270,18 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_AndToTheRightIsTheWaterArea, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 60
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSL3
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_SquirtleTotodileAndMudkip, MSGBOX_AUTOCLOSE
+	hideface 0
 	waitmovement 0
 	special RemoveCameraObject
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
@@ -274,7 +296,10 @@ Route9_StarterDome_Intro::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_OkayThatConcludes, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_DAZ_1, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_ExclamationMark
@@ -283,6 +308,8 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface2 FS_DAZ, FSE_HAPPY, 0, 0
 	msgbox Route9_StarterDome_Text_SweetPlayerDoYouKnow, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_Yes
@@ -291,11 +318,13 @@ Route9_StarterDome_Intro::
 
 Route9_StarterDome_Yes::
 	msgbox Route9_StarterDome_Text_AsGoodAsAny, MSGBOX_AUTOCLOSE
+	hideface 0
 	goto Route9_StarterDome_Main
 	end
 
 Route9_StarterDome_No::
 	msgbox Route9_StarterDome_Text_IHeardThereWillBe, MSGBOX_AUTOCLOSE
+	hideface 0
 	goto Route9_StarterDome_Main
 	end
 
@@ -304,7 +333,10 @@ Route9_StarterDome_Main::
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_FaceUp
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_LetsGetBack, MSGBOX_AUTOCLOSE
+	hideface 0
 	clearflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
 	setvar VAR_STORYLINE_STATE, 1
 	warpsilent MAP_ROUTE9_STARTER_DOME, 18, 34
@@ -318,7 +350,10 @@ Route9_StarterDome_BackToEntrance::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_AllRightAreYouReady, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_PROF, Common_Movement_FaceUp
 	waitmovement 0
 	setmetatile 18, 30, 530, 0
@@ -352,7 +387,10 @@ Route9_StarterDome_BackToEntrance::
 	removeobject LOCALID_MOTHER_1
 	applymovement LOCALID_PROF, WR2DWIPSD
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_PlayerIAmSoGlad, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_DAZ_2, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -368,32 +406,52 @@ Route9_StarterDome_BackToEntrance::
 	end
 
 Route9_StarterDome_BackToEntranceMale::
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox Route9_StarterDome_Text_ProfHawthornePlayerBeatHes, MSGBOX_AUTOCLOSE
+	hideface 1
 	goto Route9_StarterDome_BackToEntranceNext
 	end
 
 Route9_StarterDome_BackToEntranceFemale::
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox Route9_StarterDome_Text_ProfHawthornePlayerBeatShes, MSGBOX_AUTOCLOSE
+	hideface 1
 	goto Route9_StarterDome_BackToEntranceNext
 	end
 
 Route9_StarterDome_BackToEntranceNext::
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_DidYouPlayer, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_AndWhoWouldYouBe, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox Route9_StarterDome_Text_YeahTheyAre, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_LAUGHING, 0, 0
 	msgbox Route9_StarterDome_Text_HahSuchFervor, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	message Route9_StarterDome_Text_OhPlayerIAlmostForgot
 	waitmessage
 	multichoice 21, 8, MULTI_CHOOSE_STONE, TRUE
@@ -407,31 +465,37 @@ Route9_StarterDome_BackToEntranceNext::
 	end
 
 Route9_StarterDome_GiveThunderStone::
+	hideface 0
 	giveitem ITEM_THUNDER_STONE, 1
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveFireStone::
+	hideface 0
 	giveitem ITEM_FIRE_STONE, 1
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveWaterStone::
+	hideface 0
 	giveitem ITEM_WATER_STONE, 1
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveLeafStone::
+	hideface 0
 	giveitem ITEM_LEAF_STONE, 1
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveMoonStone::
+	hideface 0
 	giveitem ITEM_MOON_STONE, 1
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveSunStone::
+	hideface 0
 	giveitem ITEM_SUN_STONE, 1
 	goto Route9_StarterDome_EventEnd
 	end
@@ -439,7 +503,10 @@ Route9_StarterDome_GiveSunStone::
 Route9_StarterDome_EventEnd::
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_ExcellentIAmCertain, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement OBJ_EVENT_ID_PLAYER, D32FD
 	applymovement LOCALID_DAZ_2, D32FD
 	applymovement LOCALID_PROF, WRD4LFD
@@ -451,7 +518,10 @@ Route9_StarterDome_EventEnd::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox Route9_StarterDome_Text_WellPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_DAZ_2, WU6
