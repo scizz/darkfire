@@ -364,6 +364,7 @@
 #define METATILE_MossdeepGameCorner_CounterClosed_Top     0x22A
 #define METATILE_MossdeepGameCorner_CounterOpen_Bottom    0x234
 #define METATILE_MossdeepGameCorner_CounterOpen_Top       0x22C
+#define METATILE_MossdeepGameCorner_Door                  0x394
 
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250

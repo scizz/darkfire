@@ -135,6 +135,8 @@ static const u8 sDoorAnimTiles_AnheimTown[] = INCBIN_U8("graphics/door_anims/anh
 static const u16 sDoorNullPalette50[16] = {};
 static const u8 sDoorAnimTiles_SunriseTown[] = INCBIN_U8("graphics/door_anims/sunrise.4bpp");
 static const u16 sDoorNullPalette51[16] = {};
+static const u8 sDoorAnimTiles_UnionCity[] = INCBIN_U8("graphics/door_anims/union.4bpp");
+static const u16 sDoorNullPalette52[16] = {};
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -242,6 +244,7 @@ static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_HighwindVillage[] = {10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_AnheimTown[] = {10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_SunriseTown[] = {6, 6, 6, 6};
+static const u8 sDoorAnimPalettes_UnionCity[] = {9, 9, 9, 9};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -302,6 +305,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_TrickHousePuzzle_Door,                        DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_HighwindVillage, sDoorAnimPalettes_HighwindVillage},
     {METATILE_RustboroGym_General_Door,                     DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_AnheimTown, sDoorAnimPalettes_AnheimTown},
     {METATILE_Contest_Door,                                 DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_SunriseTown, sDoorAnimPalettes_SunriseTown},
+    {METATILE_MossdeepGameCorner_Door,                      DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_UnionCity, sDoorAnimPalettes_UnionCity},
     {},
 };
 
