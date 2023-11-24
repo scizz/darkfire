@@ -34,7 +34,10 @@ HighwindVillage_Daz::
 	applymovement LOCALID_MUDKIP, WD5
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox HighwindVillage_Text_YoPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_DAZ, Common_Movement_FaceLeft
 	delay 20
@@ -44,7 +47,10 @@ HighwindVillage_Daz::
 	delay 20
 	applymovement LOCALID_DAZ, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_Text_DidYouKnow, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 20
 	applymovement LOCALID_MUDKIP, Common_Movement_WalkDown
 	applymovement LOCALID_DAZ, Common_Movement_WalkUp
@@ -60,7 +66,10 @@ HighwindVillage_Daz::
 	delay 10
 	applymovement LOCALID_DAZ, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox HighwindVillage_Text_HahaMyMudkip, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_MUDKIP, Common_Movement_WalkUp
 	applymovement LOCALID_DAZ, Common_Movement_WalkUp
 	waitmovement 0
@@ -71,15 +80,24 @@ HighwindVillage_Daz::
 	waitmovement 0
 	applymovement LOCALID_DAZ, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_Text_OhPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_DAZ, WD2
 	applymovement LOCALID_MUDKIP, WUD
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_Text_HereYouGo, MSGBOX_AUTOCLOSE
+	hideface 1
 	giveitem ITEM_LIGHT_BALL, 1
 	compare VAR_RESULT, FALSE
 	call_if_eq HighwindVillage_Daz_AddPCItem
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_Text_MaybeYouCan, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_DAZ, WU5
 	applymovement LOCALID_MUDKIP, WDD16U5
 	waitmovement 0
