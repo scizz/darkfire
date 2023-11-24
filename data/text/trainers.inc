@@ -31,6 +31,45 @@ CommonName_Text_President:
 CommonName_Text_LittleGirl:
 	.string "Little Girl$"
 
+CommonName_Text_Psychic:
+	.string "Psychic$"
+
+CommonName_Text_Ranger:
+	.string "Ranger$"
+
+CommonName_Text_Gentleman:
+	.string "Gentleman$"
+
+CommonName_Text_Sailor:
+	.string "Sailor$"
+
+CommonName_Text_BlackBelt:
+	.string "Black Belt$"
+
+CommonName_Text_Cameraman:
+	.string "Cameraman$"
+
+CommonName_Text_AceTrainer:
+	.string "Ace Trainer$"
+
+CommonName_Text_SuboGrunt:
+	.string "SUBO Grunt$"
+
+SpeakerName_Text_SuboGrunt:
+	.string "SUBO Grunt$"
+
+SpeakerName_Text_SuboLeader:
+	.string "SUBO Leader$"
+
+SpeakerName_Text_QuestionMark:
+	.string "???$"
+
+SpeakerName_Text_RandomNerd:
+	.string "Random Nerd$"
+
+SpeakerName_Text_Rattata:
+	.string "Rattata$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

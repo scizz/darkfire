@@ -308,8 +308,8 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername CommonName_Text_Daz
-	showface2 FS_DAZ, FSE_HAPPY, 0, 0
+	speakername2 CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 0, 0
 	msgbox Route9_StarterDome_Text_SweetPlayerDoYouKnow, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_Yes

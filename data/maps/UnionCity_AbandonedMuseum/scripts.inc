@@ -533,21 +533,6 @@ WU3:
 	walk_up
 	step_end
 
-SpeakerName_Text_SuboGrunt:
-	.string "SUBO Grunt$"
-
-SpeakerName_Text_SuboLeader:
-	.string "SUBO Leader$"
-
-SpeakerName_Text_QuestionMark:
-	.string "???$"
-
-SpeakerName_Text_RandomNerd:
-	.string "Random Nerd$"
-
-SpeakerName_Text_Rattata:
-	.string "Rattata$"
-
 UnionCity_AbandonedMuseum_Text_Old_Man:
 	.string "This museum was recently abandoned.\p"
 	.string "It seems like nobody is interested in\n"
