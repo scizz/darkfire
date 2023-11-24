@@ -55,7 +55,10 @@ Route9_StarterDome::
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox Route9_Text_HeyNoWay, MSGBOX_AUTOCLOSE
+	hideface 1
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 46
 	goto_if_eq Route9_StarterDome_Top
@@ -83,27 +86,42 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox Route9_Text_YoureTheOne, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox Route9_Text_TheyreDoingAGiveaway, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_Text_TrainersAndTrainers, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_NORMAL, 1, 1
 	msgbox Route9_Text_YouAndProf, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_DAZ_1, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_Text_ComeOnEveryone, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_PROF, Common_Movement_WalkUp
 	waitmovement 0
 	opendoor 28, 44
@@ -115,6 +133,7 @@ Route9_StarterDome_DazIntro::
 	waitdooranim
 	applymovement LOCALID_LITTLE_GIRL, WU3WIPSD
 	waitmovement 0
+	speakername CommonName_Text_LittleGirl
 	msgbox Route9_Text_MommyMommy, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_MOTHER, WRU2
 	applymovement LOCALID_GIRL, WLU2
@@ -149,7 +168,10 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox Route9_Text_LetsGoPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_DAZ_1, WLU
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
