@@ -44,7 +44,10 @@ NorthstarArena_RoundThree::
 	end
 
 NorthstarArena_PsychicBattle::
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_TheArenaHasBeenSet, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_PSYCHIC, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -52,6 +55,7 @@ NorthstarArena_PsychicBattle::
 	waitmovement 0
 	applymovement LOCALID_PSYCHIC, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_BlackBelt
 	msgbox NorthstarArena_Text_IDidntGetAllTheWay, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30
@@ -60,7 +64,10 @@ NorthstarArena_PsychicBattle::
 	end
 
 NorthstarArena_RangerBattle::
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_TheArenaHasBeenSet, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -68,6 +75,7 @@ NorthstarArena_RangerBattle::
 	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Ranger
 	msgbox NorthstarArena_Text_SoYoureTheNewTrainer, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30
@@ -76,13 +84,17 @@ NorthstarArena_RangerBattle::
 	end
 
 NorthstarArena_BlackBeltBattle::
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_TheArenaIsReady, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_BLACKBELT, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_BLACKBELT, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_BlackBelt
 	msgbox NorthstarArena_Text_WellMetTrainer, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30
@@ -91,13 +103,17 @@ NorthstarArena_BlackBeltBattle::
 	end
 
 NorthstarArena_OldManBattle::
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_TheArenaIsReady, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_GENTLEMAN, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_GENTLEMAN, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Gentleman
 	msgbox NorthstarArena_Text_TheChildrenOfToday, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30
@@ -106,13 +122,17 @@ NorthstarArena_OldManBattle::
 	end
 
 NorthstarArena_SailorBattle::
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_BraceYourselves, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SAILOR, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_SAILOR, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_Sailor
 	msgbox NorthstarArena_Text_IfYouDontKnow, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30
@@ -121,13 +141,17 @@ NorthstarArena_SailorBattle::
 	end
 
 NorthstarArena_AceTrainerBattle::
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_BraceYourselves, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_ACE_TRAINER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_ACE_TRAINER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_AceTrainer
 	msgbox NorthstarArena_Text_YoYoureTheOne, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30
