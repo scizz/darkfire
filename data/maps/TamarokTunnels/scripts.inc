@@ -21,13 +21,22 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox TamarokTunnels_Text_HahahaGoodWork, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_TellMeAboutIt, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox TamarokTunnels_Text_WellWeCanTest, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 30
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
@@ -39,24 +48,37 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_FunsOver, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_SUBO_L, Common_Movement_FaceUp
 	waitmovement 0
 	delay 10
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_ThisExitHere, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_SUBO_L, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_NowAnotherScout, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_F, Common_Movement_QuestionMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
+	msgbox TamarokTunnels_Text_PlayerTheScrawnyKid, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 10
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceUp
 	waitmovement 0
@@ -68,16 +90,25 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_NoIdiot, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_FaceLeft
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername SpeakerName_Text_QuestionMark
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_WellWhatever, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox TamarokTunnels_Text_RogerThat, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_SUBO_F, WLDL2
 	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowLeft
@@ -95,23 +126,35 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_PlayerWhatASurprise, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_M, WR2WIPSR
 	applymovement OBJ_EVENT_ID_CAMERA, WSR3
 	waitmovement 0
 	playbgm MUS_SUBO_THEME, TRUE
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_WellItLooksLike, MSGBOX_AUTOCLOSE
+	hideface 1
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_HahaSoNaive, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_StandBackNow, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_L, WFLU
 	waitmovement 0
 	removeobject LOCALID_SUBO_L
