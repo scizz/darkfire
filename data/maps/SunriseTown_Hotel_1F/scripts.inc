@@ -35,8 +35,8 @@ SunriseTown_Hotel_1F_Text_Girl:
 	.string "{COLOR}{RED}Recently, Pearls have been washed\n"
 	.string "up along the Sunrise Town beach.\p"
 	.string "Though they cannot be sold in shops,\n"
-	.string "Big Pearls are highly sought after\l"
-	.string "by collectors all around the region.$"
+	.string "Pearls are highly sought after by\l"
+	.string "Collectors all around the region.$"
 
 SunriseTown_Hotel_1F_Text_Receptionist:
 	.string "{COLOR}{RED}Hello! Welcome to Oritania Hotel,\n"
@@ -46,11 +46,11 @@ SunriseTown_Hotel_1F_Text_Receptionist:
 
 SunriseTown_Hotel_1F_Text_Chef:
 	.string "{COLOR}{BLUE}The food is ready! Free of charge for\n"
-	.string "the residents of the Oritania Hotel.\p"
+	.string "the residents of the Oritania Hotel!\p"
 	.string "Now, where was that mister who was\n"
-	.string "staying here…\l"
-	.string "He's never missed dinner time before.$"
+	.string "staying here?\l"
+	.string "He's never missed dinner time before…$"
 
 SunriseTown_Hotel_1F_Text_Chef_Complete:
 	.string "{COLOR}{BLUE}The food is ready! Free of charge for\n"
-	.string "the residents of the Oritania Hotel.$"
+	.string "the residents of the Oritania Hotel!$"
