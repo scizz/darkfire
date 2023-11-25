@@ -2,7 +2,7 @@
   "id": "MAP_LAVERIA_CITY",
   "name": "LaveriaCity",
   "layout": "LAYOUT_LAVERIA_CITY",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_LAVERIA_CITY",
   "region_map_section": "MAPSEC_LAVERIA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
