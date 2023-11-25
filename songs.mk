@@ -1324,7 +1324,10 @@ $(MID_SUBDIR)/mus_anheim_town.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V087
 
 $(MID_SUBDIR)/mus_highwind_village.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
+	$(MID) $< $@ -E -G191 -V100
 
 $(MID_SUBDIR)/mus_laveria_city.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
+
+$(MID_SUBDIR)/mus_sunrise_town.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V127

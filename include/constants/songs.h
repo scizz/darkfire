@@ -512,7 +512,8 @@
 #define MUS_ANHEIM_TOWN             578
 #define MUS_HIGHWIND_VILLAGE        579
 #define MUS_LAVERIA_CITY            580
-#define END_MUS                     MUS_LAVERIA_CITY
+#define MUS_SUNRISE_TOWN            581
+#define END_MUS                     MUS_SUNRISE_TOWN
 
 #define PH_TRAP_BLEND               END_MUS + 1
 #define PH_TRAP_HELD                END_MUS + 2
