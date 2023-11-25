@@ -28,16 +28,16 @@ voicegroup191::
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_church_organ3_low, 255, 76, 154, 188  @ 8697754
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_church_organ3_high, 255, 76, 154, 188
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion, 64, 188, 108, 165
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ harmonica
+	voice_directsound 60, 0, DirectSoundWaveData_roland_harmonica, 255, 127, 220, 127 @ harmonica
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ tango accordian
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 249, 25, 127
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 64, 216, 51, 224 @ maybe steel?
+	voice_directsound 60, 0, DirectSoundWaveData_alesis_steel_guitar, 255, 255, 255, 127 @ maybe steel?
 	voice_directsound 60, 0, DirectSoundWaveData_unused_guitar_separates_power_chord, 255, 165, 206, 127 @ electric guitar (jazz)?
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ electric guitar (clean)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ electric guitar (muted)
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 128, 0, 255, 214
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_high, 128, 0, 255, 206
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ soon to be guitar harmonics
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ harmonics
 	voice_directsound 60, 0, acousticbass48, 255, 253, 0, 188 @ acoustic bass
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ soon to be electric bass (finger)
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fingered_bass, 255, 253, 0, 149 @ (should be pick bass)
@@ -48,7 +48,7 @@ voicegroup191::
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 0, 255, 127
 	voice_directsound 60, 0, violin, 255, 255, 0, 221
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ viola
-	voice_directsound 60, 0, DirectSoundWaveData_tg77_cello_c3, 255, 0, 220, 127
+	voice_directsound 60, 0, DirectSoundWaveData_tg77_cello_c3, 255, 0, 220, 127 @ cello
 	voice_directsound 60, 0, contrabass, 255, 255, 0, 221 @ contrabass
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ tremolo strings
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_pizzicato_strings, 255, 216, 0, 165

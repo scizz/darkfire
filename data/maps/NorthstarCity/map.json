@@ -2,7 +2,7 @@
   "id": "MAP_NORTHSTAR_CITY",
   "name": "NorthstarCity",
   "layout": "LAYOUT_NORTHSTAR_CITY",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_UNION_CITY",
   "region_map_section": "MAPSEC_NORTHSTAR_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

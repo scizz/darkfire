@@ -514,7 +514,8 @@
 #define MUS_LAVERIA_CITY            580
 #define MUS_SUNRISE_TOWN            581
 #define MUS_UNION_CITY              582
-#define END_MUS                     MUS_UNION_CITY
+#define MUS_GREENDALE_VILLAGE       583
+#define END_MUS                     MUS_GREENDALE_VILLAGE
 
 #define PH_TRAP_BLEND               END_MUS + 1
 #define PH_TRAP_HELD                END_MUS + 2

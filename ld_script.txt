@@ -1276,6 +1276,7 @@ SECTIONS {
         sound/songs/midi/mus_laveria_city.o(.rodata);
         sound/songs/midi/mus_sunrise_town.o(.rodata);
         sound/songs/midi/mus_union_city.o(.rodata);
+        sound/songs/midi/mus_greendale_village.o(.rodata);
     } =0
 
     lib_rodata :

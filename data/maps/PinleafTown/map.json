@@ -2,7 +2,7 @@
   "id": "MAP_PINLEAF_TOWN",
   "name": "PinleafTown",
   "layout": "LAYOUT_PINLEAF_TOWN",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_GREENDALE_VILLAGE",
   "region_map_section": "MAPSEC_PINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

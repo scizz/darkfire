@@ -1334,3 +1334,6 @@ $(MID_SUBDIR)/mus_sunrise_town.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_union_city.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V087
+
+$(MID_SUBDIR)/mus_greendale_village.s: %.s: %.mid
+	$(MID) $< $@ -E -G191 -V087

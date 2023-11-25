@@ -2,11 +2,14 @@
   "id": "MAP_GREENDALE_VILLAGE",
   "name": "GreendaleVillage",
   "layout": "LAYOUT_GREENDALE_VILLAGE",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_GREENDALE_VILLAGE",
   "region_map_section": "MAPSEC_GREENDALE_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -325,8 +328,5 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "GreendaleVillage_Sign_Park"
     }
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false
+  ]
 }

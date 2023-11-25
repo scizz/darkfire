@@ -584,6 +584,7 @@ gSongTable::
 	song mus_laveria_city, 0, 0
 	song mus_sunrise_town, 0, 0
 	song mus_union_city, 0, 0
+	song mus_greendale_village, 0, 0
 	song ph_trap_blend, 2, 2
 	song ph_trap_held, 2, 2
 	song ph_trap_solo, 2, 2

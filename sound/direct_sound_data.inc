@@ -215,8 +215,16 @@ DirectSoundWaveData_tg77_cello_c3::
 	.incbin "sound/direct_sound_samples/tg77_cello_c3.bin"
 
 	.align 2
+DirectSoundWaveData_alesis_steel_guitar::
+	.incbin "sound/direct_sound_samples/alesis_steel_guitar.bin"
+
+	.align 2
 DirectSoundWaveData_sc88pro_fingered_bass::
 	.incbin "sound/direct_sound_samples/sc88pro_fingered_bass.bin"
+
+	.align 2
+DirectSoundWaveData_roland_harmonica::
+	.incbin "sound/direct_sound_samples/sc88_harmonica.bin"
 
 	.align 2
 DirectSoundWaveData_unknown_koto_high::
