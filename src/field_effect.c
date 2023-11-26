@@ -4056,6 +4056,7 @@ static const u16 sMugshotPal_President[] = INCBIN_U16("graphics/mugshots/preside
 
 // Announcer
 static const u32 sMugshotImg_AnnouncerNormal[] = INCBIN_U32("graphics/mugshots/announcer/normal.4bpp.lz");
+static const u32 sMugshotImg_AnnouncerWorried[] = INCBIN_U32("graphics/mugshots/announcer/worried.4bpp.lz");
 static const u16 sMugshotPal_Announcer[] = INCBIN_U16("graphics/mugshots/announcer/pal.gbapal");
 
 // Male SUBO
@@ -4114,6 +4115,7 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     },
     [FS_ANNOUNCER] = {
         [FSE_NORMAL]     = {sMugshotImg_AnnouncerNormal, sMugshotPal_Announcer},
+        [FSE_WORRIED]    = {sMugshotImg_AnnouncerWorried, sMugshotPal_Announcer},
     },
     [FS_MALE_SUBO] = {
         [FSE_NORMAL]     = {sMugshotImg_MaleSuboNormal, sMugshotPal_MaleSubo},
