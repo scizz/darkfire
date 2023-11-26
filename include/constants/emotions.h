@@ -37,6 +37,7 @@
 #define FS_ANNOUNCER 9
 #define FS_MALE_SUBO 10
 #define FS_FEMALE_SUBO 11
+#define FS_SCIENTIST_SUBO 12
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE

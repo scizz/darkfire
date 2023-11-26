@@ -4066,6 +4066,10 @@ static const u16 sMugshotPal_MaleSubo[] = INCBIN_U16("graphics/mugshots/male_sub
 static const u32 sMugshotImg_FemaleSuboNormal[] = INCBIN_U32("graphics/mugshots/female_subo/normal.4bpp.lz");
 static const u16 sMugshotPal_FemaleSubo[] = INCBIN_U16("graphics/mugshots/female_subo/pal.gbapal");
 
+// Scientist SUBO
+static const u32 sMugshotImg_ScientistSuboNormal[] = INCBIN_U32("graphics/mugshots/scientist_subo/normal.4bpp.lz");
+static const u16 sMugshotPal_ScientistSubo[] = INCBIN_U16("graphics/mugshots/scientist_subo/pal.gbapal");
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4116,6 +4120,9 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     },
     [FS_FEMALE_SUBO] = {
         [FSE_NORMAL]     = {sMugshotImg_FemaleSuboNormal, sMugshotPal_FemaleSubo},
+    },
+    [FS_SCIENTIST_SUBO] = {
+        [FSE_NORMAL]     = {sMugshotImg_ScientistSuboNormal, sMugshotPal_ScientistSubo},
     }
 };
 
