@@ -2467,6 +2467,18 @@ const struct SpriteFrameImage gObjectEventPicTable_ClamperlSign[] = {
     overworld_frame(gObjectEventPic_ClamperlSign, 4, 4, 2),
 };
 
+static const struct SpriteFrameImage sPicTable_Kojiro[] = {
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 3),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 4),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 5),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 6),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 7),
+    overworld_frame(gObjectEventPic_Kojiro, 2, 2, 8),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),

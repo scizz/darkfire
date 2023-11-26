@@ -2354,6 +2354,9 @@ $(OBJEVENTGFXDIR)/pokemon/snorlax_sleeping.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/ranger_board.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/kojiro.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2

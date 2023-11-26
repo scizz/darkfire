@@ -837,8 +837,9 @@
 #define OBJ_EVENT_GFX_LAB                        830
 #define OBJ_EVENT_GFX_SNORLAX_SLEEPING           831
 #define OBJ_EVENT_GFX_RANGER_BOARD               832
+#define OBJ_EVENT_GFX_KOJIRO                     833
 
-#define NUM_OBJ_EVENT_GFX                        833
+#define NUM_OBJ_EVENT_GFX                        834
 
 
 // These are dynamic object gfx ids.
