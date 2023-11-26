@@ -31,7 +31,7 @@ voicegroup191::
 	voice_directsound 60, 0, DirectSoundWaveData_roland_harmonica, 255, 127, 220, 127 @ harmonica
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ tango accordian
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 249, 25, 127
-	voice_directsound 60, 0, DirectSoundWaveData_alesis_steel_guitar, 255, 255, 255, 127 @ maybe steel?
+	voice_directsound 60, 0, DirectSoundWaveData_alesis_steel_guitar, 255, 255, 255, 127 @ steel guitar
 	voice_directsound 60, 0, DirectSoundWaveData_unused_guitar_separates_power_chord, 255, 165, 206, 127 @ electric guitar (jazz)?
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ electric guitar (clean)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ electric guitar (muted)

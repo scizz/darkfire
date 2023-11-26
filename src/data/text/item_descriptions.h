@@ -3792,3 +3792,8 @@ static const u8 sSapphireDesc[] = _(
     "A brilliant blue gem\n"
     "that symbolizes\n"
     "honesty.");
+
+static const u8 sQuestBookDesc[] = _(
+    "A book that adds,\n"
+    "updates, and logs\n"
+    "Ranger Quests.");

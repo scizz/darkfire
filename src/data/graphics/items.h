@@ -1930,3 +1930,6 @@ const u32 gItemIcon_Gem[] = INCBIN_U32("graphics/items/icons/gem.4bpp.lz");
 const u32 gItemIconPalette_Ruby[] = INCBIN_U32("graphics/items/icon_palettes/ruby.gbapal.lz");
 
 const u32 gItemIconPalette_Sapphire[] = INCBIN_U32("graphics/items/icon_palettes/sapphire.gbapal.lz");
+
+const u32 gItemIcon_QuestBook[] = INCBIN_U32("graphics/items/icons/quest_book.4bpp.lz");
+const u32 gItemIconPalette_QuestBook[] = INCBIN_U32("graphics/items/icon_palettes/quest_book.gbapal.lz");

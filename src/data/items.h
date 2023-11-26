@@ -9848,4 +9848,17 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_QUEST_BOOK] =
+    {
+        .name = _("Quest Book"),
+        .itemId = ITEM_QUEST_BOOK,
+        .price = 0,
+        .description = sQuestBookDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_QuestBook,
+    },
 };

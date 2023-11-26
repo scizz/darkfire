@@ -32,6 +32,7 @@
 #include "party_menu.h"
 #include "pokeblock.h"
 #include "pokemon.h"
+#include "quests.h"
 #include "region_map.h"
 #include "script.h"
 #include "sound.h"
@@ -60,6 +61,7 @@ static void Task_OpenRegisteredPokeblockCase(u8);
 static void ItemUseOnFieldCB_Bike(u8);
 static void ItemUseOnFieldCB_Rod(u8);
 static void ItemUseOnFieldCB_Itemfinder(u8);
+static void ItemUseCB_QuestBook(u8);
 static void ItemUseOnFieldCB_Berry(u8);
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
@@ -678,6 +680,30 @@ void ItemUseOutOfBattle_PowderJar(u8 taskId)
     {
         DisplayItemMessageOnField(taskId, gStringVar4, Task_CloseCantUseKeyItemMessage);
     }
+}
+
+extern u8 QuestBookScript[];
+
+void ItemUseOutOfBattle_QuestBook(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseCB_QuestBook;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = MainCB;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else {
+        sItemUseOnFieldCB = ItemUseCB_QuestBook;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+}
+
+void ItemUseCB_QuestBook(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(QuestBookScript);
+    DestroyTask(taskId);
 }
 
 void ItemUseOutOfBattle_Berry(u8 taskId)
