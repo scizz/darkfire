@@ -1834,8 +1834,8 @@ const u8 gText_QuestActive[] =_("active");
 
 //names
 const u8 gText_SideQuestName_1[] = _("Rocky Rumpus");
-const u8 gText_SideQuestName_2[] = _("Side Quest 2");
-const u8 gText_SideQuestName_3[] = _("Side Quest 3");
+const u8 gText_SideQuestName_2[] = _("Owl You Need is a Little Shine");
+const u8 gText_SideQuestName_3[] = _("Not All Heras Wear Capes");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
 const u8 gText_SideQuestName_5[] = _("Side Quest 5");
 const u8 gText_SideQuestName_6[] = _("Side Quest 6");
@@ -1866,8 +1866,8 @@ const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
 const u8 gText_SideQuestDesc_1[] = _("Rescue Larvitar from the dark depths\nof Rockfall Cave.");
-const u8 gText_SideQuestDesc_2[] = _("Description 2");
-const u8 gText_SideQuestDesc_3[] = _("Description 3");
+const u8 gText_SideQuestDesc_2[] = _("Find the shiny Noctowl of Snowdrift\nForest.");
+const u8 gText_SideQuestDesc_3[] = _("Tame the wild Heracross that's been\nattacking Trainers!");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
 const u8 gText_SideQuestDesc_5[] = _("Description 5");
 const u8 gText_SideQuestDesc_6[] = _("Description 6");
@@ -1898,8 +1898,8 @@ const u8 gText_SideQuestDesc_30[] = _("Description 30");
 
 //completed quest description
 const u8 gText_SideQuestDoneDesc_1[] = _("You rescued Larvitar from Rockfall\nCave!");
-const u8 gText_SideQuestDoneDesc_2[] = _("Completed Quest 2");
-const u8 gText_SideQuestDoneDesc_3[] = _("Completed Quest 3");
+const u8 gText_SideQuestDoneDesc_2[] = _("You found the shiny Noctowl in\nSnowdrift Forest!");
+const u8 gText_SideQuestDoneDesc_3[] = _("You tamed the Heracross in Route 10!");
 const u8 gText_SideQuestDoneDesc_4[] = _("Completed Quest 4");
 const u8 gText_SideQuestDoneDesc_5[] = _("Completed Quest 5");
 const u8 gText_SideQuestDoneDesc_6[] = _("Completed Quest 6");
@@ -1930,35 +1930,35 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 
 //map
 const u8 gText_SideQuestMap1[] = _("Rockfall Cave");
-const u8 gText_SideQuestMap2[] = _("Map 2");
-const u8 gText_SideQuestMap3[] = _("Map 3");
-const u8 gText_SideQuestMap4[] = _("Map 4");
-const u8 gText_SideQuestMap5[] = _("Map 5");
-const u8 gText_SideQuestMap6[] = _("Map 6");
-const u8 gText_SideQuestMap7[] = _("Map 7");
-const u8 gText_SideQuestMap8[] = _("Map 8");
-const u8 gText_SideQuestMap9[] = _("Map 9");
-const u8 gText_SideQuestMap10[] = _("Map 10");
-const u8 gText_SideQuestMap11[] = _("Map 11");
-const u8 gText_SideQuestMap12[] = _("Map 12");
-const u8 gText_SideQuestMap13[] = _("Map 13");
-const u8 gText_SideQuestMap14[] = _("Map 14");
-const u8 gText_SideQuestMap15[] = _("Map 15");
-const u8 gText_SideQuestMap16[] = _("Map 16");
-const u8 gText_SideQuestMap17[] = _("Map 17");
-const u8 gText_SideQuestMap18[] = _("Map 18");
-const u8 gText_SideQuestMap19[] = _("Map 19");
-const u8 gText_SideQuestMap20[] = _("Map 20");
-const u8 gText_SideQuestMap21[] = _("Map 21");
-const u8 gText_SideQuestMap22[] = _("Map 22");
-const u8 gText_SideQuestMap23[] = _("Map 23");
-const u8 gText_SideQuestMap24[] = _("Map 24");
-const u8 gText_SideQuestMap25[] = _("Map 25");
-const u8 gText_SideQuestMap26[] = _("Map 26");
-const u8 gText_SideQuestMap27[] = _("Map 27");
-const u8 gText_SideQuestMap28[] = _("Map 28");
-const u8 gText_SideQuestMap29[] = _("Map 29");
-const u8 gText_SideQuestMap30[] = _("Map 30");
+const u8 gText_SideQuestMap2[] = _("Snowdrift Forest");
+const u8 gText_SideQuestMap3[] = _("Route 10");
+const u8 gText_SideQuestMap4[] = _("???");
+const u8 gText_SideQuestMap5[] = _("???");
+const u8 gText_SideQuestMap6[] = _("???");
+const u8 gText_SideQuestMap7[] = _("???");
+const u8 gText_SideQuestMap8[] = _("???");
+const u8 gText_SideQuestMap9[] = _("???");
+const u8 gText_SideQuestMap10[] = _("???");
+const u8 gText_SideQuestMap11[] = _("???");
+const u8 gText_SideQuestMap12[] = _("???");
+const u8 gText_SideQuestMap13[] = _("???");
+const u8 gText_SideQuestMap14[] = _("???");
+const u8 gText_SideQuestMap15[] = _("???");
+const u8 gText_SideQuestMap16[] = _("???");
+const u8 gText_SideQuestMap17[] = _("???");
+const u8 gText_SideQuestMap18[] = _("???");
+const u8 gText_SideQuestMap19[] = _("???");
+const u8 gText_SideQuestMap20[] = _("???");
+const u8 gText_SideQuestMap21[] = _("???");
+const u8 gText_SideQuestMap22[] = _("???");
+const u8 gText_SideQuestMap23[] = _("???");
+const u8 gText_SideQuestMap24[] = _("???");
+const u8 gText_SideQuestMap25[] = _("???");
+const u8 gText_SideQuestMap26[] = _("???");
+const u8 gText_SideQuestMap27[] = _("???");
+const u8 gText_SideQuestMap28[] = _("???");
+const u8 gText_SideQuestMap29[] = _("???");
+const u8 gText_SideQuestMap30[] = _("???");
 
 //subquests
 const u8 gText_SubQuest1_Name1[] = _("Part 1");
