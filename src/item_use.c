@@ -40,6 +40,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text.h"
+#include "text_window.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
 #include "constants/item_effects.h"
@@ -690,7 +691,7 @@ void ItemUseOutOfBattle_QuestBook(u8 taskId)
     {
         sItemUseOnFieldCB = ItemUseCB_QuestBook;
         gFieldCallback = FieldCB_UseItemOnField;
-        gBagMenu->newScreenCallback = MainCB;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
         Task_FadeAndCloseBagMenu(taskId);
     }
     else {
@@ -701,6 +702,7 @@ void ItemUseOutOfBattle_QuestBook(u8 taskId)
 
 void ItemUseCB_QuestBook(u8 taskId)
 {
+    LoadPalette(GetOverworldTextboxPalettePtr(), 0xF0, 0x20);
     LockPlayerFieldControls();
     ScriptContext_SetupScript(QuestBookScript);
     DestroyTask(taskId);

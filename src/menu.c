@@ -50,7 +50,6 @@ struct Menu
     bool8 APressMuted;
 };
 
-static u16 AddWindowParameterized(u8, u8, u8, u8, u8, u8, u16);
 static void WindowFunc_DrawStandardFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawDialogueFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawDialogueFrameWithPlate(u8, u8, u8, u8, u8, u8);
