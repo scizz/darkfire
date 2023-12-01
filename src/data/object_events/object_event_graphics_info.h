@@ -1146,7 +1146,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemBall = {
     .width = 16,
     .height = 16,
     .paletteSlot = PALSLOT_NPC_3,
-    .shadowSize = SHADOW_SIZE_S,
+    .shadowSize = SHADOW_SIZE_XL,
     .inanimate = TRUE,
     .disableReflectionPaletteLoad = FALSE,
     .tracks = TRACKS_NONE,
@@ -1182,7 +1182,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DreamBall = {TAG_N
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SportBall = {TAG_NONE, OBJ_EVENT_PAL_TAG_SPORT_BALL, OBJ_EVENT_PAL_TAG_NONE, 128, 16, 16, 4, SHADOW_SIZE_S, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_16x16, sOamTables_16x16, sAnimTable_Inanimate, sPicTable_SportBall, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParkBall = {TAG_NONE, OBJ_EVENT_PAL_TAG_PARK_BALL, OBJ_EVENT_PAL_TAG_NONE, 128, 16, 16, 4, SHADOW_SIZE_S, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_16x16, sOamTables_16x16, sAnimTable_Inanimate, sPicTable_ParkBall, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CherishBall = {TAG_NONE, OBJ_EVENT_PAL_TAG_CHERISH_BALL, OBJ_EVENT_PAL_TAG_NONE, 128, 16, 16, 4, SHADOW_SIZE_S, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_16x16, sOamTables_16x16, sAnimTable_Inanimate, sPicTable_CherishBall, gDummySpriteAffineAnimTable};
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpandingSparkle = {TAG_NONE, FLDEFF_PAL_TAG_SMALL_SPARKLE, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 4, SHADOW_SIZE_S, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_32x32, sOamTables_32x32, ExpandingSparkleTable, sPicTable_ExpandingSparkle, ExpandingSparkleAffineTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpandingSparkle = {TAG_NONE, FLDEFF_PAL_TAG_SMALL_SPARKLE, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 4, SHADOW_SIZE_XL, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_32x32, sOamTables_32x32, ExpandingSparkleTable, sPicTable_ExpandingSparkle, ExpandingSparkleAffineTable};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTree = {
     .tileTag = TAG_NONE,

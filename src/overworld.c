@@ -4473,7 +4473,7 @@ void FollowerPokeballSparkle(void)
             gSprites[gPlayerAvatar.spriteId].subpriority = 0; 
         }
         player->fixedPriority = TRUE;
-        gPlayerAvatar.preventStep = TRUE;
+        LockPlayerFieldControls();
 
         SeekSpriteAnim(&gSprites[follower->spriteId], 0);        
         ObjectEventForceSetHeldMovement(follower, MOVEMENT_ACTION_FOLLOWING_POKEMON_GROW);
@@ -4485,7 +4485,7 @@ void FollowerIntoPokeball(void)
     if (gObjectEvents[gSaveBlock2Ptr->follower.objId].invisible == FALSE && gSaveBlock2Ptr->follower.inProgress)
     {
         gSaveBlock2Ptr->follower.comeOutDoorStairs = 0;
-        gPlayerAvatar.preventStep = TRUE;
+        LockPlayerFieldControls();
         ObjectEventForceSetHeldMovement(&gObjectEvents[gSaveBlock2Ptr->follower.objId], MOVEMENT_ACTION_FOLLOWING_POKEMON_SHRINK);
         gSpecialVar_Unused_0x8014 = 1;
     }
