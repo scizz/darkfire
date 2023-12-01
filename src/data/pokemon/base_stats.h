@@ -5002,6 +5002,7 @@ const struct BaseStats gBaseStats[] =
         .catchRate = 255,
         .expYield = 52,
         .evYield_HP        = 1,
+        .itemCommon = ITEM_GLEAMING_SEED,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = 70,

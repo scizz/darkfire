@@ -8298,7 +8298,7 @@ void SetWildMonHeldItem(void)
     {
         u16 rnd;
         u16 species;
-        u16 chanceNoItem = 45;
+        u16 chanceNoItem = 62;
         u16 chanceNotRare = 95;
         u16 count = (WILD_DOUBLE_BATTLE) ? 2 : 1;
         u16 i;

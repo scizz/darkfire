@@ -3800,5 +3800,5 @@ static const u8 sQuestBookDesc[] = _(
 
 static const u8 sGleamingSeedDesc[] = _(
     "A seed that shines\n"
-    "brightly. It attracts\n"
-    "Owl Pokémon.");
+    "brightly. Collected\n"
+    "by Owl Pokémon.");
