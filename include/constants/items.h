@@ -929,7 +929,10 @@
 #define ITEM_SAPPHIRE 757
 #define ITEM_QUEST_BOOK 758
 
-#define ITEMS_COUNT 759
+// Quest Items
+#define ITEM_GLEAMING_SEED 759
+
+#define ITEMS_COUNT 760
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -3797,3 +3797,8 @@ static const u8 sQuestBookDesc[] = _(
     "A book that adds,\n"
     "updates, and logs\n"
     "Ranger Quests.");
+
+static const u8 sGleamingSeedDesc[] = _(
+    "A seed that shines\n"
+    "brightly. It attracts\n"
+    "Owl Pokémon.");

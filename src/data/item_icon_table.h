@@ -804,6 +804,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_RUBY] = {gItemIcon_Gem, gItemIconPalette_Ruby},
     [ITEM_SAPPHIRE] = {gItemIcon_Gem, gItemIconPalette_Sapphire},
     [ITEM_QUEST_BOOK] = {gItemIcon_QuestBook, gItemIconPalette_QuestBook},
+    [ITEM_GLEAMING_SEED] = {gItemIcon_GleamingSeed, gItemIconPalette_GleamingSeed},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

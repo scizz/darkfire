@@ -9861,4 +9861,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_QuestBook,
     },
+
+    [ITEM_GLEAMING_SEED] =
+    {
+        .name = _("Gleaming Seed"),
+        .itemId = ITEM_GLEAMING_SEED,
+        .price = 400,
+        .description = sGleamingSeedDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
 };
