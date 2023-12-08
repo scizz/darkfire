@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -496,7 +499,7 @@
       "graphics_id": "OBJ_EVENT_GFX_LIGHTHOUSE_1",
       "x": 110,
       "y": 28,
-      "elevation": 0,
+      "elevation": -1,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -771,8 +774,5 @@
       "item": "ITEM_NONE",
       "flag": "FLAG_TEMP_1"
     }
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false
+  ]
 }
