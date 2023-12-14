@@ -1228,8 +1228,8 @@
 #define FLAG_HIDE_ROUTE_10_HERACROSS                                0x496 // Darkfire Flag
 #define FLAG_RECEIVED_ANHEIM_TOWN_TEA                               0x497 // Darkfire Flag
 #define FLAG_RECEIVED_LAVERIA_CITY_SNOWBALL                         0x498 // Darkfire Flag
+#define FLAG_HIDE_RANGER_LODGE_RANGERS                              0x499 // Darkfire Flag
 
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag

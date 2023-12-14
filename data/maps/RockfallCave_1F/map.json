@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -168,7 +171,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GREAT_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 20,
       "y": 44,
       "elevation": 0,
@@ -258,8 +261,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": true,
-  "allow_running": true
+  ]
 }
