@@ -237,7 +237,7 @@ $(TILESETGFXDIR)/secondary/lab/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 500 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/underwater/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 500 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/generic_building/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 509 -Wnum_tiles
