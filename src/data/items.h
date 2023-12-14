@@ -9866,8 +9866,20 @@ const struct Item gItems[] =
     {
         .name = _("Gleaming Seed"),
         .itemId = ITEM_GLEAMING_SEED,
-        .price = 400,
+        .price = 5000,
         .description = sGleamingSeedDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_SHEENY_SEED] =
+    {
+        .name = _("Sheeny Seed"),
+        .itemId = ITEM_SHEENY_SEED,
+        .price = 400,
+        .description = sSheenySeedDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

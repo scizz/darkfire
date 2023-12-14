@@ -1935,4 +1935,5 @@ const u32 gItemIcon_QuestBook[] = INCBIN_U32("graphics/items/icons/quest_book.4b
 const u32 gItemIconPalette_QuestBook[] = INCBIN_U32("graphics/items/icon_palettes/quest_book.gbapal.lz");
 
 const u32 gItemIcon_GleamingSeed[] = INCBIN_U32("graphics/items/icons/gleaming_seed.4bpp.lz");
+const u32 gItemIcon_SheenySeed[] = INCBIN_U32("graphics/items/icons/sheeny_seed.4bpp.lz");
 const u32 gItemIconPalette_GleamingSeed[] = INCBIN_U32("graphics/items/icon_palettes/gleaming_seed.gbapal.lz");

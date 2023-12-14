@@ -3802,3 +3802,8 @@ static const u8 sGleamingSeedDesc[] = _(
     "A seed that shines\n"
     "brightly. Collected\n"
     "by Owl Pokémon.");
+
+static const u8 sSheenySeedDesc[] = _(
+    "A seed that shines\n"
+    "dimly. Collected\n"
+    "by Owl Pokémon.");

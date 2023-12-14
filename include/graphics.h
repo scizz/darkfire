@@ -8861,6 +8861,7 @@ extern const u32 gItemIconPalette_Sapphire[];
 extern const u32 gItemIcon_QuestBook[];
 extern const u32 gItemIconPalette_QuestBook[];
 extern const u32 gItemIcon_GleamingSeed[];
+extern const u32 gItemIcon_SheenySeed[];
 extern const u32 gItemIconPalette_GleamingSeed[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
