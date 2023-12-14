@@ -2479,6 +2479,10 @@ static const struct SpriteFrameImage sPicTable_Kojiro[] = {
     overworld_frame(gObjectEventPic_Kojiro, 2, 2, 8),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_IceNest[] = {
+    overworld_frame(gObjectEventPic_IceNest, 8, 8, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),

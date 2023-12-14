@@ -1513,3 +1513,5 @@ const u32 gObjectEventPic_RangerBoard[] = INCBIN_U32("graphics/object_events/pic
 const u16 gObjectEventPal_Rakaz[] = INCBIN_U16("graphics/object_events/palettes/rakaz.gbapal");
 const u32 gObjectEventPic_Kojiro[] = INCBIN_U32("graphics/object_events/pics/people/kojiro.4bpp");
 const u16 gObjectEventPal_Kojiro[] = INCBIN_U16("graphics/object_events/palettes/kojiro.gbapal");
+const u16 gObjectEventPal_IceNest[] = INCBIN_U16("graphics/object_events/palettes/ice_nest.gbapal");
+const u32 gObjectEventPic_IceNest[] = INCBIN_U32("graphics/object_events/pics/misc/ice_nest.4bpp");

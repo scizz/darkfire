@@ -870,6 +870,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lab;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SnorlaxSleeping;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerBoard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kojiro;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IceNest;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1706,6 +1707,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SNORLAX_SLEEPING] =         &gObjectEventGraphicsInfo_SnorlaxSleeping,
     [OBJ_EVENT_GFX_RANGER_BOARD] =             &gObjectEventGraphicsInfo_RangerBoard,
     [OBJ_EVENT_GFX_KOJIRO] =                   &gObjectEventGraphicsInfo_Kojiro,
+    [OBJ_EVENT_GFX_ICE_NEST] =                 &gObjectEventGraphicsInfo_IceNest,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

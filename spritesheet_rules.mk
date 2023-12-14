@@ -2357,6 +2357,9 @@ $(OBJEVENTGFXDIR)/misc/ranger_board.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/kojiro.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
+$(OBJEVENTGFXDIR)/misc/ice_nest.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
