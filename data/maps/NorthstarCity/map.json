@@ -39,7 +39,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 36,
+      "x": 35,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -664,8 +664,8 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 58,
-      "y": 28,
+      "x": 57,
+      "y": 29,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_MART",
       "dest_warp_id": "0"
