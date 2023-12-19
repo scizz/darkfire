@@ -50,7 +50,18 @@ NorthstarCity_Apartments_Expert_F::
 	end
 
 NorthstarCity_Apartments_Hiker::
-	msgbox NorthstarCity_Apartments_Text_Hiker, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_TM_MIST_NORTHSTAR, NorthstarCity_Apartments_TMMistReceived
+	msgbox NorthstarCity_Apartments_Text_Hiker, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM17, 1
+	setflag FLAG_RECEIVED_TM_MIST_NORTHSTAR
+	goto NorthstarCity_Apartments_TMMistReceived
+	end
+
+NorthstarCity_Apartments_TMMistReceived:
+	msgbox NorthstarCity_Apartments_Text_MistReceived, MSGBOX_AUTOCLOSE
+	release
 	end
 
 NorthstarCity_Apartments_SheenySeedWife::
@@ -194,7 +205,16 @@ NorthstarCity_Apartments_Text_Hiker:
 	.string "As I got closer, I realized it was\n"
 	.string "just a large doll, lodged in the snow.\p"
 	.string "Today, I still wonder who would place\n"
-	.string "such a thing there…$"
+	.string "such a thing there…\p"
+	.string "All I know is that you gotta protect"
+	.string "yourself out there!\l"
+	.string "Take this!$"
+
+NorthstarCity_Apartments_Text_MistReceived:
+	.string "TM17 contains Protect!\p"
+	.string "It prevents any attacks targeted at\n"
+	.string "the user from striking.\p"
+	.string "Be careful out there!$"
 
 NorthstarCity_Apartments_Text_OhHeyTherePlayer:
 	.string "{COLOR}{BLUE}Oh, greetings, Trainer!\p"
@@ -208,7 +228,7 @@ NorthstarCity_Apartments_Text_OhHeyTherePlayer:
 	.string "to trade with you!\p"
 	.string "I will offer 1 Gleaming Seed for every\n"
 	.string "10 Sheeny Seeds you can spare.\l"
-	.string "What do you say?$"
+	.string "Could you please gather them for me?$"
 
 NorthstarCity_Apartments_Text_FantasticIllBeHere:
 	.string "{COLOR}{BLUE}Fantastic!\p"
