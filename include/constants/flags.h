@@ -1229,9 +1229,9 @@
 #define FLAG_RECEIVED_ANHEIM_TOWN_TEA                               0x497 // Darkfire Flag
 #define FLAG_RECEIVED_LAVERIA_CITY_SNOWBALL                         0x498 // Darkfire Flag
 #define FLAG_HIDE_RANGER_LODGE_RANGERS                              0x499 // Darkfire Flag
+#define FLAG_SHEENY_SEED_QUEST_START                                0x49A // Darkfire Flag
+#define FLAG_SHEENY_SEED_QUEST_COMPLETE                             0x49B // Darkfire Flag
 
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag

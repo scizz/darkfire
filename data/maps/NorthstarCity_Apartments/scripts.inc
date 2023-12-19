@@ -53,6 +53,68 @@ NorthstarCity_Apartments_Hiker::
 	msgbox NorthstarCity_Apartments_Text_Hiker, MSGBOX_NPC
 	end
 
+NorthstarCity_Apartments_SheenySeedWife::
+	msgbox NorthstarCity_Apartments_Text_SheenySeedWife, MSGBOX_NPC
+	end
+
+NorthstarCity_Apartments_SheenySeedPlushie::
+	lock
+	msgbox NorthstarCity_Apartments_Text_SheenySeedPlushie, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Apartments_SheenySeedCollector::
+	lock
+	faceplayer
+	goto_if_set FLAG_SHEENY_SEED_QUEST_COMPLETE, NorthstarCity_Apartments_SheenySeedCollector_QuestComplete
+	goto_if_set FLAG_SHEENY_SEED_QUEST_START, NorthstarCity_Apartments_SheenySeedCollector_QuestStarted
+	msgbox NorthstarCity_Apartments_Text_OhHeyTherePlayer, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq NorthstarCity_Apartments_SheenySeedCollector_Yes
+	msgbox NorthstarCity_Apartments_Text_OhThatsAShame, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Apartments_SheenySeedCollector_Yes::
+	setflag FLAG_SHEENY_SEED_QUEST_START
+	msgbox NorthstarCity_Apartments_Text_FantasticIllBeHere, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Apartments_SheenySeedCollector_QuestStarted::
+	msgbox NorthstarCity_Apartments_Text_AhYoureBack, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq NorthstarCity_Apartments_SheenySeedCollector_TradeYes
+	msgbox NorthstarCity_Apartments_Text_TakeYourTime, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Apartments_SheenySeedCollector_TradeYes::
+	checkitem ITEM_SHEENY_SEED, 10
+	compare VAR_RESULT, 1
+	goto_if_ge NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade
+	msgbox NorthstarCity_Apartments_Text_ItAppearsYouDontHaveEnoughSeeds, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade::
+	msgbox NorthstarCity_Apartments_Text_YouHandedOver, MSGBOX_AUTOCLOSE
+	delay 30
+	msgbox NorthstarCity_Apartments_Text_ExcellentTheseSeeds, MSGBOX_AUTOCLOSE
+	giveitem ITEM_GLEAMING_SEED, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	removeitem ITEM_SHEENY_SEED, 10
+	setflag FLAG_SHEENY_SEED_QUEST_COMPLETE
+	msgbox NorthstarCity_Apartments_Text_GleamingSeedsAreSaid, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Apartments_SheenySeedCollector_QuestComplete::
+	msgbox NorthstarCity_Apartments_Text_ThankYouAgain, MSGBOX_AUTOCLOSE
+	release
+	end
+
 NorthstarCity_Apartments_Text_Little_Boy:
 	.string "{COLOR}{BLUE}I spend a lot of time studying because\n"
 	.string "it's snowing all the time outside.\p"
@@ -139,3 +201,83 @@ NorthstarCity_Apartments_Text_Hiker:
 	.string "just a large doll, lodged in the snow.\p"
 	.string "Today, I still wonder who would place\n"
 	.string "such a thing there…$"
+
+NorthstarCity_Apartments_Text_OhHeyTherePlayer:
+	.string "{COLOR}{BLUE}Oh, greetings, Trainer!\p"
+	.string "I've been studying Hoothoot and\n"
+	.string "Noctowl for years, you know.\l"
+	.string "Fascinating creatures, really!\p"
+	.string "I'm on a quest to gather some Sheeny\n"
+	.string "Seeds that Hoothoot often carry.\p"
+	.string "If you happen to come across any\n"
+	.string "during your travels, I'd be willing\l"
+	.string "to trade with you!\p"
+	.string "I will offer 1 Gleaming Seed for every\n"
+	.string "10 Sheeny Seeds you can spare.\l"
+	.string "What do you say?$"
+
+NorthstarCity_Apartments_Text_FantasticIllBeHere:
+	.string "{COLOR}{BLUE}Fantastic!\p"
+	.string "I'll be here eagerly awaiting your\n"
+	.string "collection of 10 Sheeny Seeds.\p"
+	.string "Hoothoot usually hold onto those seeds\n"
+	.string "tightly, so keep an eye out!$"
+
+NorthstarCity_Apartments_Text_TakeYourTime:
+	.string "{COLOR}{BLUE}Take your time, Trainer.\p"
+	.string "I'll be here, always ready to discuss\n"
+	.string "the wonders of Hoothoot and Noctowl!$"
+
+NorthstarCity_Apartments_Text_OhThatsAShame:
+	.string "{COLOR}{BLUE}Oh, that's a shame…\p"
+	.string "Well, if you change your mind, I'll be\n"
+	.string "right here, surrounded by plushies.$"
+
+NorthstarCity_Apartments_Text_AhYoureBack:
+	.string "{COLOR}{BLUE}Ah, you're back!\p"
+	.string "Did you manage to gather 10 Sheeny\n"
+	.string "Seeds from the Hoothoot?\p"
+	.string "If so, I'm ready to make a trade.\n"
+	.string "What do you say?$"
+
+NorthstarCity_Apartments_Text_YouHandedOver:
+	.string "You handed over 10 Sheeny Seeds\n"
+	.string "to the man.$"
+
+NorthstarCity_Apartments_Text_ExcellentTheseSeeds:
+	.string "{COLOR}{BLUE}Excellent!\n"
+	.string "These sheeny seeds are perfect.\p"
+	.string "As promised, here's a Gleaming Seed\n"
+	.string "for your efforts…\p"
+
+NorthstarCity_Apartments_Text_GleamingSeedsAreSaid:
+	.string "{COLOR}{BLUE}Gleaming Seeds are said to attract\n"
+	.string "Noctowl and bring good luck.\p"
+	.string "Thanks for helping me with my\n"
+	.string "Owl Pokémon research!$"
+
+NorthstarCity_Apartments_Text_ThankYouAgain:
+	.string "{COLOR}{BLUE}Thank you again for your help,\n"
+	.string "Trainer!\p"
+	.string "With these Sheeny Seeds, my studies on\n"
+	.string "Hoothoot and Noctowl will advance.\p"
+	.string "If you ever come across more Sheeny\n"
+	.string "Seeds, don't hesitate to find me here!$"
+
+NorthstarCity_Apartments_Text_ItAppearsYouDontHaveEnoughSeeds:
+	.string "{COLOR}{BLUE}Huh?\p"
+	.string "It appears you don't have enough\n"
+	.string "Sheeny Seeds…\p"
+	.string "When you collect 10 Sheeny Seeds,\n"
+	.string "please return to me.$"
+
+NorthstarCity_Apartments_Text_SheenySeedPlushie:
+	.string "It's a soft Hoothoot plushie.$"
+
+NorthstarCity_Apartments_Text_SheenySeedWife:
+	.string "{COLOR}{RED}My husband's owl obsession is reaching\n"
+	.string "new heights…\p"
+	.string "I've got feathers all over the house,\n"
+	.string "and he's hooting in his sleep.\p"
+	.string "He can sleep ouside with the Noctowl\n"
+	.string "tonight!$"
