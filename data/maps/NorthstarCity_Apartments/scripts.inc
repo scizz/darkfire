@@ -66,7 +66,6 @@ NorthstarCity_Apartments_SheenySeedPlushie::
 NorthstarCity_Apartments_SheenySeedCollector::
 	lock
 	faceplayer
-	goto_if_set FLAG_SHEENY_SEED_QUEST_COMPLETE, NorthstarCity_Apartments_SheenySeedCollector_QuestComplete
 	goto_if_set FLAG_SHEENY_SEED_QUEST_START, NorthstarCity_Apartments_SheenySeedCollector_QuestStarted
 	msgbox NorthstarCity_Apartments_Text_OhHeyTherePlayer, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
@@ -105,13 +104,8 @@ NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade::
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	removeitem ITEM_SHEENY_SEED, 10
-	setflag FLAG_SHEENY_SEED_QUEST_COMPLETE
+	clearflag FLAG_SHEENY_SEED_QUEST_START
 	msgbox NorthstarCity_Apartments_Text_GleamingSeedsAreSaid, MSGBOX_AUTOCLOSE
-	release
-	end
-
-NorthstarCity_Apartments_SheenySeedCollector_QuestComplete::
-	msgbox NorthstarCity_Apartments_Text_ThankYouAgain, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -248,19 +242,13 @@ NorthstarCity_Apartments_Text_ExcellentTheseSeeds:
 	.string "{COLOR}{BLUE}Excellent!\n"
 	.string "These sheeny seeds are perfect.\p"
 	.string "As promised, here's a Gleaming Seed\n"
-	.string "for your efforts…\p"
+	.string "for your efforts…$\p"
 
 NorthstarCity_Apartments_Text_GleamingSeedsAreSaid:
 	.string "{COLOR}{BLUE}Gleaming Seeds are said to attract\n"
 	.string "Noctowl and bring good luck.\p"
 	.string "Thanks for helping me with my\n"
-	.string "Owl Pokémon research!$"
-
-NorthstarCity_Apartments_Text_ThankYouAgain:
-	.string "{COLOR}{BLUE}Thank you again for your help,\n"
-	.string "Trainer!\p"
-	.string "With these Sheeny Seeds, my studies on\n"
-	.string "Hoothoot and Noctowl will advance.\p"
+	.string "Owl Pokémon research!\p"
 	.string "If you ever come across more Sheeny\n"
 	.string "Seeds, don't hesitate to find me here!$"
 
