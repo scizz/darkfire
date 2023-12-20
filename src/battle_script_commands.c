@@ -4157,8 +4157,8 @@ static void Cmd_getexp(void)
                         }
                         else
                         {
-                            gBattleMoveDamage = (gBattleMoveDamage * 100) / 100;
-                            i = STRINGID_EMPTYSTRING4;
+                            gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                            i = STRINGID_ABOOSTED;
                         }
                     }
                     else
