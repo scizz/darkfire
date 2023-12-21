@@ -592,7 +592,9 @@ u32 GetDoorSoundEffect(u32 x, u32 y)
 {
     int sound = GetDoorSoundType(sDoorAnimGraphicsTable, x, y);
 
-    if (sound == DOOR_SOUND_NORMAL)
+    if (FlagGet(FLAG_FOLLOWER_IN_BUILDING))
+        return SE_EXIT;
+    else if (sound == DOOR_SOUND_NORMAL)
         return SE_DOOR;
     else if (sound == DOOR_SOUND_SLIDING)
         return SE_SLIDING_DOOR;
