@@ -872,6 +872,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerBoard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kojiro;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IceNest;
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RattataOW;
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
@@ -1708,6 +1710,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_RANGER_BOARD] =             &gObjectEventGraphicsInfo_RangerBoard,
     [OBJ_EVENT_GFX_KOJIRO] =                   &gObjectEventGraphicsInfo_Kojiro,
     [OBJ_EVENT_GFX_ICE_NEST] =                 &gObjectEventGraphicsInfo_IceNest,
+    [OBJ_EVENT_GFX_RATTATA_OW] =               &gObjectEventGraphicsInfo_RattataOW,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

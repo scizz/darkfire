@@ -2360,6 +2360,9 @@ $(OBJEVENTGFXDIR)/people/kojiro.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/ice_nest.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/pokemon/followers/rattata_ow.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2

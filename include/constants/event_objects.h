@@ -839,8 +839,9 @@
 #define OBJ_EVENT_GFX_RANGER_BOARD               832
 #define OBJ_EVENT_GFX_KOJIRO                     833
 #define OBJ_EVENT_GFX_ICE_NEST                   834
+#define OBJ_EVENT_GFX_RATTATA_OW                 835
 
-#define NUM_OBJ_EVENT_GFX                        835
+#define NUM_OBJ_EVENT_GFX                        836
 
 
 // These are dynamic object gfx ids.

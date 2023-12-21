@@ -1515,3 +1515,4 @@ const u32 gObjectEventPic_Kojiro[] = INCBIN_U32("graphics/object_events/pics/peo
 const u16 gObjectEventPal_Kojiro[] = INCBIN_U16("graphics/object_events/palettes/kojiro.gbapal");
 const u16 gObjectEventPal_IceNest[] = INCBIN_U16("graphics/object_events/palettes/ice_nest.gbapal");
 const u32 gObjectEventPic_IceNest[] = INCBIN_U32("graphics/object_events/pics/misc/ice_nest.4bpp");
+const u32 gObjectEventPic_RattataOW[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/rattata_ow.4bpp");
