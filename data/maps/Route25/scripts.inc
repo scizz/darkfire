@@ -11,7 +11,7 @@ Route25_Sign::
 
 Route25_Text_Sign:
 	.string "Route 25\n"
-	.string "Chandra Village {RIGHT_ARROW}"
+	.string "Chandra Village {RIGHT_ARROW}$"
 
 Route25_Text_Man:
 	.string "{COLOR}{BLUE}As you can see, a devastating rock\n"

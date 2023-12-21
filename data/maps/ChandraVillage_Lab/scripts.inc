@@ -427,7 +427,7 @@ ChandraVillage_Standing_Under::
 ChandraVillage_Lab_PickOne::
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_Lab_Text_PickOne, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_PickOne, MSGBOX_AUTOCLOSE
 	hideface 1
 	release
 	end
@@ -435,7 +435,7 @@ ChandraVillage_Lab_PickOne::
 ChandraVillage_Lab_Tyler_NotDone::
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_Lab_Text_NotDone, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_NotDone, MSGBOX_AUTOCLOSE
 	hideface 1
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
 	waitmovement 0
@@ -457,7 +457,7 @@ ChandraVillage_Lab_Exit::
 ChandraVillage_Lab_Prof::
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_Lab_Text_Prof, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_Prof, MSGBOX_AUTOCLOSE
 	hideface 1
 	end
 
