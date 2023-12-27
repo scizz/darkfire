@@ -12,6 +12,17 @@ RockfallCave_B1F_RangerEvent1Main::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	applymovement 7, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	playmoncry SPECIES_CHARMANDER, 0
+	waitmoncry
+	msgbox RockfallCave_B1F_Text_TheRangersCharmanderUsedFlash, MSGBOX_DEFAULT
+	playse SE_M_REFLECT
+	animateflash 0
+	setflashlevel 0
+	closemessage
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Ranger
@@ -31,6 +42,7 @@ RockfallCave_B1F_RangerEvent1Main::
 	hideface 1
 	applymovement LOCALID_RANGER, Common_Movement_FaceLeft
 	waitmovement 0
+	delay 30
 	speakername CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
 	msgbox RockfallCave_B1F_Text_IWasJustInvestigating, MSGBOX_AUTOCLOSE
@@ -59,6 +71,7 @@ RockfallCave_B1F_RangerEvent1Main::
 	waitmoncry
 	applymovement LOCALID_RANGER, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 7, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_QuestionMark
 	playse SE_PIN
@@ -105,8 +118,10 @@ RockfallCave_B1F_RangerEvent1Finish::
 	msgbox RockfallCave_B1F_Text_GreatJobTrainer, MSGBOX_AUTOCLOSE
 	hideface 1
 	applymovement LOCALID_RANGER, WD3RD2
+	applymovement 7, DDWRDRD2
 	waitmovement 0
 	removeobject LOCALID_RANGER
+	removeobject 7
 	setflag FLAG_HIDE_ROCKFALL_CAVE_B1F_RANGER
 	setvar VAR_RANGER_EVENT_1, 4
 	release
@@ -141,9 +156,29 @@ RockfallCave_B1F_Larvitar::
 	releaseall
 	end
 
+RockfallCave_B1F_Charmander::
+	lock
+	faceplayer
+	playmoncry SPECIES_CHARMANDER, 0
+	speakername CommonName_Text_Charmander
+	msgbox RockfallCave_B1F_Text_Char, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
 WD3RD2:
 	walk_down
 	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+DDWRDRD2:
+	delay_16
+	delay_16
+	walk_right
 	walk_down
 	walk_right
 	walk_down
@@ -192,3 +227,9 @@ RockfallCave_B1F_Text_GreatJobTrainer:
 	.string "service, Trainer.\p"
 	.string "I'll report back to the Rangers'\n"
 	.string "Fedaration now the problem is solved!$"
+
+RockfallCave_B1F_Text_TheRangersCharmanderUsedFlash:
+	.string "The Ranger's Charmander used Flash…$"
+
+RockfallCave_B1F_Text_Char:
+	.string "Char!$"

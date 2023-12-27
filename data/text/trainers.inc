@@ -73,6 +73,9 @@ SpeakerName_Text_Rattata:
 CommonName_Text_Larvitar:
 	.string "Larvitar$"
 
+CommonName_Text_Charmander:
+	.string "Charmander$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
