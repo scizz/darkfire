@@ -1,7 +1,16 @@
 .set LOCALID_RANGER, 1
 
 RockfallCave_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RockfallCave_B1F_OnFrame
 	.byte 0
+
+RockfallCave_1F_OnFrame:
+	map_script_2 VAR_RANGER_EVENT_1, 2, RockfallCave_1F_RangerEvent1SetBack
+	.2byte 0
+
+RockfallCave_1F_RangerEvent1SetBack::
+	setvar VAR_RANGER_EVENT_1, 1
+	end
 
 RockfallCave_1F_RangerEvent1Start::
 	lockall
