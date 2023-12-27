@@ -70,6 +70,9 @@ SpeakerName_Text_RandomNerd:
 SpeakerName_Text_Rattata:
 	.string "Rattata$"
 
+CommonName_Text_Larvitar:
+	.string "Larvitar$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

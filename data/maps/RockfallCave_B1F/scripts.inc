@@ -1,13 +1,106 @@
+.set LOCALID_RANGER, 3
+
 RockfallCave_B1F_MapScripts::
 	.byte 0
 
+RockfallCave_B1F_RangerEvent1Main::
+	lockall
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_HowInTheWorld, MSGBOX_AUTOCLOSE
+	hideface 1
+	delay 30
+	applymovement LOCALID_RANGER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_OhTrainerYouMadeIt, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_RANGER, Common_Movement_FaceLeft
+	waitmovement 0
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_IWasJustInvestigating, MSGBOX_AUTOCLOSE
+	hideface 1
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 0  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	playse SE_BANG
+	special ShakeCamera
+	waitse
+	playse SE_BANG
+	special ShakeCamera
+	waitse
+	applymovement LOCALID_RANGER, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_WaitDoYouHearThis, MSGBOX_AUTOCLOSE
+	hideface 1
+	playmoncry SPECIES_LARVITAR, 0
+	waitmoncry
+	applymovement LOCALID_RANGER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WU2
+	waitmovement 0
+	playse SE_BANG
+	special ShakeCamera
+	waitse
+	playmoncry SPECIES_LARVITAR, 0
+	waitmoncry
+	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_ItsALarvitar, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement OBJ_EVENT_ID_CAMERA, WD2
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_FaceUp
+	waitmovement 0
+	setvar VAR_RANGER_EVENT_1, 2
+	release
+	end
+
 RockfallCave_B1F_Ranger::
-	msgbox RockfallCave_B1F_Text_Ranger, MSGBOX_NPC
+	lock
+	faceplayer
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_Ranger, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 RockfallCave_B1F_Larvitar::
 	lockall
 	playmoncry SPECIES_LARVITAR, 0
+	speakername CommonName_Text_Larvitar
 	msgbox RockfallCave_B1F_Text_Larvitar, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_LARVITAR, 15, ITEM_NONE
@@ -18,15 +111,37 @@ RockfallCave_B1F_Larvitar::
 	delay 60
 	removeobject 5
 	setflag FLAG_HIDE_ROCKFALL_CAVE_B1F_LARVITAR
-	@setvar VAR_RANGER_EVENT_LARVITAR, 2
+	setvar VAR_RANGER_EVENT_1, 3
 	fadescreen 0
 	releaseall
 	end
+
+RockfallCave_B1F_Text_HowInTheWorld:
+	.string "{COLOR}{BLUE}How in the world did the rocks in\n"
+	.string "this cave form like this?\p"
+	.string "I've never seen anything like it…$"
+
+RockfallCave_B1F_Text_OhTrainerYouMadeIt:
+	.string "{COLOR}{BLUE}Oh, Trainer!\n"
+	.string "You made it here!$"
+
+RockfallCave_B1F_Text_IWasJustInvestigating:
+	.string "{COLOR}{BLUE}I was just investigating these rocks\n"
+	.string "here… Fascinating stuff, right?$"
+
+RockfallCave_B1F_Text_WaitDoYouHearThis:
+	.string "{COLOR}{BLUE}Wait - do you hear this?\p"
+	.string "No, not the waterfall.\n"
+	.string "It sounds like rocks are breaking…$"
+
+RockfallCave_B1F_Text_ItsALarvitar:
+	.string "{COLOR}{BLUE}It's a Larvitar!\n"
+	.string "Go deal with it, Trainer!$"
 
 RockfallCave_B1F_Text_Ranger:
 	.string "{COLOR}{BLUE}Larvitar! Up ahead!\n"
 	.string "Go and deal with it, Trainer!$"
 
 RockfallCave_B1F_Text_Larvitar:
-	.string "Larvitar: Graar!$"
+	.string "Graar!$"
 
