@@ -1,7 +1,12 @@
 .set LOCALID_RANGER, 3
 
 RockfallCave_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RockfallCave_B1F_OnFrame
 	.byte 0
+
+RockfallCave_B1F_OnFrame:
+	map_script_2 VAR_RANGER_EVENT_1, 3, RockfallCave_B1F_RangerEvent1Finish
+	.2byte 0
 
 RockfallCave_B1F_RangerEvent1Main::
 	lockall
@@ -87,6 +92,24 @@ RockfallCave_B1F_RangerEvent1Main::
 	release
 	end
 
+RockfallCave_B1F_RangerEvent1Finish::
+	lock
+	applymovement LOCALID_RANGER, WU3
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox RockfallCave_B1F_Text_GreatJobTrainer, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_RANGER, WD3RD2
+	waitmovement 0
+	removeobject LOCALID_RANGER
+	setflag FLAG_HIDE_ROCKFALL_CAVE_B1F_RANGER
+	setvar VAR_RANGER_EVENT_1, 4
+	release
+	end
+
 RockfallCave_B1F_Ranger::
 	lock
 	faceplayer
@@ -115,6 +138,15 @@ RockfallCave_B1F_Larvitar::
 	fadescreen 0
 	releaseall
 	end
+
+WD3RD2:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
 
 RockfallCave_B1F_Text_HowInTheWorld:
 	.string "{COLOR}{BLUE}How in the world did the rocks in\n"
@@ -145,3 +177,16 @@ RockfallCave_B1F_Text_Ranger:
 RockfallCave_B1F_Text_Larvitar:
 	.string "Graar!$"
 
+RockfallCave_B1F_Text_GreatJobTrainer:
+	.string "{COLOR}{BLUE}Great job, Trainer!\n"
+	.string "You did good!\p"
+	.string "It looks like the Larvitar was eating\n"
+	.string "soil, like they usually do.\p"
+	.string "This one ate much of the cave, by\n"
+	.string "the looks of it!\p"
+	.string "I bet that's how the rocks we jumped\n"
+	.string "on earlier formed in the first place.\p"
+	.string "Anyway, thank you kindly for your\n"
+	.string "service, Trainer.\p"
+	.string "I'll report back to the Rangers'\n"
+	.string "Fedaration now the problem is solved!$"
