@@ -10,7 +10,7 @@ RockfallCave_B1F_OnFrame:
 
 RockfallCave_B1F_RangerEvent1Main::
 	lockall
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
@@ -86,6 +86,7 @@ RockfallCave_B1F_RangerEvent1Main::
 	hideface 1
 	applymovement OBJ_EVENT_ID_CAMERA, WD2
 	waitmovement 0
+	special RemoveCameraObject
 	applymovement LOCALID_RANGER, Common_Movement_FaceUp
 	waitmovement 0
 	setvar VAR_RANGER_EVENT_1, 2
@@ -97,6 +98,7 @@ RockfallCave_B1F_RangerEvent1Finish::
 	applymovement LOCALID_RANGER, WU3
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceDown
 	waitmovement 0
 	speakername CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
@@ -132,7 +134,7 @@ RockfallCave_B1F_Larvitar::
 	waitmoncry
 	fadescreen 1
 	delay 60
-	removeobject 5
+	removeobject 4
 	setflag FLAG_HIDE_ROCKFALL_CAVE_B1F_LARVITAR
 	setvar VAR_RANGER_EVENT_1, 3
 	fadescreen 0

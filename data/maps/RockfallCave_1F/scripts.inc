@@ -9,21 +9,21 @@ RockfallCave_1F_RangerEvent1Start::
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	speakername CommonName_Text_Ranger
+	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox RockfallCave_1F_Text_HaltTrainer, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
-	speakername CommonName_Text_Ranger
+	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox RockfallCave_1F_Text_DotDotDot, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
-	speakername CommonName_Text_Ranger
+	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox RockfallCave_1F_Text_SayYouLookStrong, MSGBOX_YESNO
 	hideface 0
@@ -33,7 +33,7 @@ RockfallCave_1F_RangerEvent1Start::
 	end
 
 RockfallCave_1F_RangerEvent1StartYes::
-	speakername CommonName_Text_Ranger
+	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox RockfallCave_1F_Text_ExcellentIllGoAhead, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -47,7 +47,7 @@ RockfallCave_1F_RangerEvent1StartYes::
 	end
 
 RockfallCave_1F_RangerEvent1StartNo::
-	speakername CommonName_Text_Ranger
+	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox RockfallCave_1F_Text_WellThenIllStickHere, MSGBOX_AUTOCLOSE
 	hideface 0

@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_ROCKFALL_CAVE",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
@@ -69,7 +69,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MISDREAVUS",
       "x": 24,
-      "y": 28,
+      "y": 31,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
