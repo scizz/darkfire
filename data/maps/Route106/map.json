@@ -93,22 +93,6 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 41,
-      "y": 11,
-      "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_POKE_BALL"
-    },
-    {
-      "type": "hidden_item",
-      "x": 53,
-      "y": 12,
-      "elevation": 0,
-      "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_STARDUST"
-    },
-    {
-      "type": "hidden_item",
       "x": 68,
       "y": 15,
       "elevation": 3,

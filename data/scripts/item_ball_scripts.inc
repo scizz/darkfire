@@ -362,12 +362,12 @@ TamarokTunnels_EventScript_ItemNeverMeltIce::
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
-GraniteCave_B2F_EventScript_ItemRepel:: @ 829116A
-	finditem ITEM_REPEL
+RockfallCave_B1F_EventScript_ItemEscapeRope::
+	finditem ITEM_ESCAPE_ROPE
 	end
 
-GraniteCave_B2F_EventScript_ItemRareCandy:: @ 8291177
-	finditem ITEM_RARE_CANDY
+RockfallCave_B1F_EventScript_ItemTM31::
+	finditem ITEM_TM31
 	end
 
 JaggedPass_EventScript_ItemBurnHeal:: @ 8291184

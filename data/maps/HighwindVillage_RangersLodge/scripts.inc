@@ -122,6 +122,10 @@ HighwindVillage_RangersLodge_Receptionist::
 	msgbox HighwindVillage_RangersLodge_Text_Receptionist, MSGBOX_NPC
 	end
 
+HighwindVillage_RangersLodge_Ranger_5::
+	msgbox HighwindVillage_RangersLodge_Text_HeyThereTrainer, MSGBOX_NPC
+	end
+
 HighwindVillage_RangersLodge_Text_HeyThereYouMustBePlayer:
 	.string "{COLOR}{BLUE}Hey there!\n"
 	.string "You must be Axel, right?\p"
@@ -245,3 +249,20 @@ HighwindVillage_RangersLodge_Text_Receptionist:
 	.string "hanging around here.\p"
 	.string "For this reason, the fires of the\n"
 	.string "hearth must be kept up at all times.$"
+
+HighwindVillage_RangersLodge_Text_HeyThereTrainer:
+	.string "{COLOR}{RED}Hey there, Trainer!\n"
+	.string "Welcome to the Ranger's Lodge!\p"
+	.string "Did you notice the grand Noctowl\n"
+	.string "statue at the entrance?\p"
+	.string "Noctowl is our guardian here, known\n"
+	.string "for its keen senses and wisdom.\p"
+	.string "It's known to collect Gleaming Seeds,\n"
+	.string "rare treasures found in the wild.\p"
+	.string "Noctowl appear where Gleaming Seeds\n"
+	.string "can be found, and their presence is a\l"
+	.string "sign of the seeds' magical properties.\p"
+	.string "If you're on the lookout for Noctowl,\n"
+	.string "follow the trail of Gleaming Seeds.\p"
+	.string "That's some free Ranger knowledge!\n"
+	.string "Hehehe.$"

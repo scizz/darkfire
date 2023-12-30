@@ -421,8 +421,8 @@
       "x": 7,
       "y": 26,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_ETHER",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_5_ETHER"
     },
     {
       "type": "sign",
