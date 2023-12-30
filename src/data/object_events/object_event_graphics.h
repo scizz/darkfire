@@ -1516,3 +1516,5 @@ const u16 gObjectEventPal_Kojiro[] = INCBIN_U16("graphics/object_events/palettes
 const u16 gObjectEventPal_IceNest[] = INCBIN_U16("graphics/object_events/palettes/ice_nest.gbapal");
 const u32 gObjectEventPic_IceNest[] = INCBIN_U32("graphics/object_events/pics/misc/ice_nest.4bpp");
 const u32 gObjectEventPic_RattataOW[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/rattata_ow.4bpp");
+const u32 gObjectEventPic_NoctowlShiny[] = INCBIN_U32("graphics/object_events/pics/pokemon/noctowl_shiny.4bpp");
+const u16 gObjectEventPal_NoctowlShiny[] = INCBIN_U16("graphics/object_events/palettes/noctowl_shiny.gbapal");

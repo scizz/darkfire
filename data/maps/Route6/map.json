@@ -503,7 +503,7 @@
       "y": 31,
       "elevation": 3,
       "item": "ITEM_PARALYZE_HEAL",
-      "flag": "FLAG_TEMP_1"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_6_PARALYZE_HEAL"
     },
     {
       "type": "hidden_item",
@@ -511,7 +511,7 @@
       "y": 11,
       "elevation": 3,
       "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_TEMP_1FLAG_HIDDEN_ITEM_ROUTE_6_POKE_BALL"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_6_POKE_BALL"
     },
     {
       "type": "hidden_item",
