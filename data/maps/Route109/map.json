@@ -330,14 +330,6 @@
     },
     {
       "type": "hidden_item",
-      "x": 16,
-      "y": 23,
-      "elevation": 3,
-      "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_REVIVE"
-    },
-    {
-      "type": "hidden_item",
       "x": 33,
       "y": 5,
       "elevation": 3,

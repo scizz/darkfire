@@ -625,7 +625,7 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 52,
+      "x": 51,
       "y": 28,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_HOUSE2",
@@ -639,7 +639,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 40,
+      "x": 39,
       "y": 28,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_TRAINER_SCHOOL",
@@ -667,7 +667,7 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 57,
+      "x": 56,
       "y": 29,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_MART",
@@ -755,24 +755,24 @@
       "x": 26,
       "y": 33,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_NORTHSTAR_CITY_ULTRA_BALL"
     },
     {
       "type": "hidden_item",
-      "x": 68,
-      "y": 28,
+      "x": 69,
+      "y": 29,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_NORTHSTAR_CITY_FULL_HEAL"
     },
     {
       "type": "hidden_item",
       "x": 79,
       "y": 28,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_SNOWBALL",
+      "flag": "FLAG_HIDDEN_ITEM_NORTHSTAR_CITY_SNOWBALL"
     }
   ]
 }

@@ -92,14 +92,6 @@
   ],
   "bg_events": [
     {
-      "type": "hidden_item",
-      "x": 68,
-      "y": 15,
-      "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_HEART_SCALE"
-    },
-    {
       "type": "sign",
       "x": 59,
       "y": 13,
