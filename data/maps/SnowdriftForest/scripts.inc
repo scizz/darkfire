@@ -65,3 +65,12 @@ SnowdriftForest_Text_Old_Lady:
 	.string "they're fairly timid creatures.\p"
 	.string "The secret is to tread lightly,\n"
 	.string "otherwise they'll hide in the grass!$"
+
+SnowdriftForest_Text_ItsAnEmpty:
+	.string "It's an empty bird nest…\n"
+	.string "Maybe a Pokémon can be lured here.$"
+
+SnowdriftForest_Text_PlantASeed:
+	.string "Plant a Seed?$"
+
+
