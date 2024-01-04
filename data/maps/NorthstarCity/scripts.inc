@@ -2,9 +2,67 @@
 .set LOCALID_GOV, 35
 .set LOCALID_SUBO_2, 36
 .set LOCALID_SAILOR_BOAT, 27
+.set LOCALID_SAILOR_ONE, 14
 
 NorthstarCity_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NorthstarCity_OnFrame
 	.byte 0
+
+NorthstarCity_OnFrame::
+	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_AfterTournament
+	.2byte 0
+
+NorthstarCity_AfterTournament::
+	applymovement LOCALID_SAILOR_ONE, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	msgbox NorthstarCity_Text_OhTrainer, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 68
+	goto_if_eq NorthstarCity_AfterTournament_Left
+	goto NorthstarCity_AfterTournament_Right
+	end
+
+NorthstarCity_AfterTournament_Left::
+	applymovement LOCALID_SAILOR_ONE, WL2
+	waitmovement 0
+	goto NorthstarCity_AfterTournamentEnd
+	end
+
+NorthstarCity_AfterTournament_Right::
+	applymovement LOCALID_SAILOR_ONE, WR2
+	waitmovement 0
+	goto NorthstarCity_AfterTournamentEnd
+	end
+
+NorthstarCity_AfterTournamentEnd::
+	applymovement LOCALID_SAILOR_ONE, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Northstar_City_Text_WhatANiceSurprise, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 68
+	goto_if_eq NorthstarCity_AfterTournament_EndLeft
+	goto NorthstarCity_AfterTournament_EndRight
+	end
+
+NorthstarCity_AfterTournament_EndLeft::
+	applymovement LOCALID_SAILOR_ONE, WR8
+	waitmovement 0
+	goto NorthstarCity_AfterTournament_EndHide
+	end
+
+NorthstarCity_AfterTournament_EndRight::
+	applymovement LOCALID_SAILOR_ONE, WR4U7
+	waitmovement 0
+	goto NorthstarCity_AfterTournament_EndHide
+	end
+
+NorthstarCity_AfterTournament_EndHide::	
+	removeobject LOCALID_SAILOR_ONE
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE
+	setvar VAR_STORYLINE_STATE, 2
+	end
 
 NorthstarCity_Sign::
 	msgbox NorthstarCity_Text_Sign, MSGBOX_SIGN
@@ -390,6 +448,31 @@ NorthstarCity_Warp_To_Laveria::
 	waitstate
 	end
 
+WR4U7:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WR8:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 FLExc:
 	face_left
 	emote_exclamation_mark
@@ -469,6 +552,24 @@ WL2DL2FD:
 	walk_left
 	face_down
 	step_end
+
+NorthstarCity_Text_OhTrainer:
+	.string "{COLOR}{BLUE}Oh, Trainer!$"
+
+Northstar_City_Text_WhatANiceSurprise:
+	.string "{COLOR}{BLUE}What a nice surprise!\p"
+	.string "It's your favorite Sailor, from\n"
+	.string "Laveria City!\p"
+	.string "…\n"
+	.string "…\p"
+	.string "I must say, I expected ya to be coming\n"
+	.string "out of the tournament after what ya\l"
+	.string "did to Kojiro in Laveria City!\p"
+	.string "Anyway, my boat is over at the docks.\n"
+	.string "I'm sailin' back to Laveria soon.\p"
+	.string "If ya fancy comin' back with me, come\n"
+	.string "find me and I'll be happy to!\p"
+	.string "See ya!$"
 
 NorthstarCity_Text_Sign:
 	.string "Northstar City\n"
