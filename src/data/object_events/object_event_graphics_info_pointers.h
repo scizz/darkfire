@@ -58,6 +58,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteM
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuriedItemBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
@@ -935,6 +936,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F] =     &gObjectEventGraphicsInfo_CyclingTriathleteF,
     [OBJ_EVENT_GFX_NURSE] =                    &gObjectEventGraphicsInfo_Nurse,
     [OBJ_EVENT_GFX_ITEM_BALL] =                &gObjectEventGraphicsInfo_ItemBall,
+    [OBJ_EVENT_GFX_BURIED_ITEM_BALL] =         &gObjectEventGraphicsInfo_BuriedItemBall,
     [OBJ_EVENT_GFX_GREAT_BALL] =               &gObjectEventGraphicsInfo_GreatBall,
     [OBJ_EVENT_GFX_ULTRA_BALL] =               &gObjectEventGraphicsInfo_UltraBall,
     [OBJ_EVENT_GFX_MASTER_BALL] =              &gObjectEventGraphicsInfo_MasterBall,

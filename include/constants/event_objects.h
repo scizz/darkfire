@@ -841,8 +841,9 @@
 #define OBJ_EVENT_GFX_ICE_NEST                   834
 #define OBJ_EVENT_GFX_RATTATA_OW                 835
 #define OBJ_EVENT_GFX_NOCTOWL_SHINY              836
+#define OBJ_EVENT_GFX_BURIED_ITEM_BALL           837
 
-#define NUM_OBJ_EVENT_GFX                        837
+#define NUM_OBJ_EVENT_GFX                        838
 
 
 // These are dynamic object gfx ids.

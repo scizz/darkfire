@@ -125,6 +125,7 @@ const u32 gObjectEventPic_Man4[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Man5[] = INCBIN_U32("graphics/object_events/pics/people/man_5.4bpp");
 const u32 gObjectEventPic_Nurse[] = INCBIN_U32("graphics/object_events/pics/people/nurse.4bpp");
 const u32 gObjectEventPic_ItemBall[] = INCBIN_U32("graphics/object_events/pics/misc/item_ball.4bpp");
+const u32 gObjectEventPic_BuriedItemBall[] = INCBIN_U32("graphics/object_events/pics/misc/buried_item_ball.4bpp");
 const u32 gObjectEventPic_GreatBall[] = INCBIN_U32("graphics/object_events/pics/misc/great_ball.4bpp");
 const u16 gObjectEventPal_GreatBall[] = INCBIN_U16("graphics/object_events/palettes/great_ball.gbapal");
 const u32 gObjectEventPic_UltraBall[] = INCBIN_U32("graphics/object_events/pics/misc/ultra_ball.4bpp");
