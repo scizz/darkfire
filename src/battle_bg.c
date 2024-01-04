@@ -610,11 +610,11 @@ static const struct BattleBackground sBattleTerrainTable[] =
 {
     [BATTLE_TERRAIN_GRASS] =
     {
-        .tileset = gBattleTerrainTiles_TallGrass,
-        .tilemap = gBattleTerrainTilemap_TallGrass,
+        .tileset = gBattleTerrainTiles_MainGrass,
+        .tilemap = gBattleTerrainTilemap_MainGrass,
         .entryTileset = gBattleTerrainAnimTiles_TallGrass,
         .entryTilemap = gBattleTerrainAnimTilemap_TallGrass,
-        .palette = gBattleTerrainPalette_TallGrass,
+        .palette = gBattleTerrainPalette_MainGrass,
     },
 
     [BATTLE_TERRAIN_LONG_GRASS] =
@@ -691,11 +691,11 @@ static const struct BattleBackground sBattleTerrainTable[] =
 
     [BATTLE_TERRAIN_PLAIN] =
     {
-        .tileset = gBattleTerrainTiles_MainGrass,
-        .tilemap = gBattleTerrainTilemap_MainGrass,
-        .entryTileset = gBattleTerrainAnimTiles_Building,
-        .entryTilemap = gBattleTerrainAnimTilemap_Building,
-        .palette = gBattleTerrainPalette_MainGrass,
+        .tileset = gBattleTerrainTiles_TallGrass,
+        .tilemap = gBattleTerrainTilemap_TallGrass,
+        .entryTileset = gBattleTerrainAnimTiles_TallGrass,
+        .entryTilemap = gBattleTerrainAnimTilemap_TallGrass,
+        .palette = gBattleTerrainPalette_TallGrass,
     },
 
     [BATTLE_TERRAIN_SKY] =
