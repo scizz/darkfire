@@ -1231,9 +1231,9 @@
 #define FLAG_HIDE_RANGER_LODGE_RANGERS                              0x499 // Darkfire Flag
 #define FLAG_SHEENY_SEED_QUEST_START                                0x49A // Darkfire Flag
 #define FLAG_RECEIVED_TM_MIST_NORTHSTAR                             0x49B // Darkfire Flag
-#define FLAG_HIDE_ROCKFALL_CAVE_RANGER                              0x49C
-
+#define FLAG_HIDE_ROCKFALL_CAVE_RANGER                              0x49C // Darkfire Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag

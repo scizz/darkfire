@@ -180,3 +180,7 @@ Common_Movement_WalkDown: @ 82725C9
 Common_Movement_ShrinkPokemon:
 	follower_shrink
 	step_end
+
+Common_Movement_JumpInPlaceDown:
+	jump_in_place_down
+	step_end

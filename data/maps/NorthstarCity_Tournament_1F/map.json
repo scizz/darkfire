@@ -206,18 +206,18 @@
       "x": 14,
       "y": 2,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NorthstarCity_Tournament_1F_SUBOEnd"
     },
     {
       "type": "trigger",
       "x": 15,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "NorthstarCity_Tournament_1F_SUBOEnd"
     }
   ],
   "bg_events": [

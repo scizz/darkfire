@@ -76,6 +76,9 @@ CommonName_Text_Larvitar:
 CommonName_Text_Charmander:
 	.string "Charmander$"
 
+CommonName_Text_Jigglypuff:
+	.string "Jigglypuff$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

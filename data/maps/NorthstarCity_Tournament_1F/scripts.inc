@@ -1,3 +1,7 @@
+.set LOCALID_SUBO, 4
+.set LOCALID_JIGGLYPUFF, 1
+.set LOCALID_ROSE, 2
+
 NorthstarCity_Tournament_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_Tournament_1F_OnTransition
 	.byte 0
@@ -10,6 +14,187 @@ NorthstarCity_Tournament_1F_HideSUBO::
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	end
+
+NorthstarCity_Tournament_1F_SUBOEnd::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
+	addobject LOCALID_SUBO
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 14
+	goto_if_eq NorthstarCity_Tournament_1F_Left
+	goto NorthstarCity_Tournament_1F_Down
+	end
+
+NorthstarCity_Tournament_1F_Left::
+	applymovement LOCALID_SUBO, WLU6
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndDialogue
+	end
+
+NorthstarCity_Tournament_1F_Down::
+	applymovement LOCALID_SUBO, WU5
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndDialogue
+	end
+
+NorthstarCity_Tournament_1F_SUBOEndDialogue::
+	playbgm MUS_SUBO_THEME, TRUE
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_HeyYouYouveCausedUs, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_GruntAreYouUpstairs, MSGBOX_AUTOCLOSE
+	hideface 1
+	delay 30
+	speakername SpeakerName_Text_QuestionMark
+	msgbox NorthstarCity_Tournament_1F_Text_YeahImStillUpHere, MSGBOX_AUTOCLOSE
+	delay 30
+	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_BossSaidItsTime, MSGBOX_AUTOCLOSE
+	hideface 1
+	delay 30
+	speakername SpeakerName_Text_QuestionMark
+	msgbox NorthstarCity_Tournament_1F_Text_Roger, MSGBOX_AUTOCLOSE
+	playse SE_PIN
+	waitse
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	addobject LOCALID_JIGGLYPUFF
+	applymovement LOCALID_JIGGLYPUFF, Common_Movement_JumpInPlaceDown
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 14
+	goto_if_eq NorthstarCity_Tournament_1F_JigglypuffLeft
+	goto NorthstarCity_Tournament_1F_JigglypuffDown
+	end
+
+NorthstarCity_Tournament_1F_JigglypuffLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_JigglypuffSleep
+	end
+
+NorthstarCity_Tournament_1F_JigglypuffDown::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_JigglypuffSleep
+	end
+
+NorthstarCity_Tournament_1F_JigglypuffSleep::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_HahaLater, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_SUBO, WD6
+	waitmovement 0
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 14
+	goto_if_eq NorthstarCity_Tournament_1F_JigglypuffLeftTwo
+	goto NorthstarCity_Tournament_1F_JigglypuffDownTwo
+	end
+
+NorthstarCity_Tournament_1F_JigglypuffLeftTwo::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_JigglypuffSleepNow
+	end
+
+NorthstarCity_Tournament_1F_JigglypuffDownTwo::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_JigglypuffSleepNow
+	end
+
+NorthstarCity_Tournament_1F_JigglypuffSleepNow::
+	speakername CommonName_Text_Jigglypuff
+	playmoncry SPECIES_JIGGLYPUFF, 1
+	msgbox NorthstarCity_Tournament_1F_Text_Jiggly, MSGBOX_AUTOCLOSE
+	waitmoncry
+	playse SE_M_SING
+	waitse
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	fadescreen 1
+	removeobject LOCALID_JIGGLYPUFF
+	playse SE_PIN
+	delay 30
+	waitse
+	playse SE_PIN
+	delay 30
+	waitse
+	addobject LOCALID_ROSE
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 14
+	goto_if_eq NorthstarCity_Tournament_1F_RoseLookUp
+	goto NorthstarCity_Tournament_1F_RoseLookRight
+	end
+
+NorthstarCity_Tournament_1F_RoseLookUp::
+	applymovement LOCALID_ROSE, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndRose
+	end
+
+NorthstarCity_Tournament_1F_RoseLookRight::
+	applymovement LOCALID_ROSE, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndRose
+	end
+
+NorthstarCity_Tournament_1F_SUBOEndRose::
+	fadescreen 0
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_PlayerIFoundAJigglypuff, MSGBOX_AUTOCLOSE
+	hideface 1
+	delay 30
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_AlsoIManaged, MSGBOX_AUTOCLOSE
+	hideface 1
+	giveitem ITEM_POKE_FLUTE, 1
+	delay 30
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_1F_Text_TakeItEasy, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_ROSE, WD6
+	waitmovement 0
+	removeobject LOCALID_ROSE
+	removeobject LOCALID_SUBO
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	setvar VAR_STORYLINE_STATE, 1
 	end
 
 NorthstarCity_Tournament_1F_Woman::
@@ -60,6 +245,67 @@ NorthstarCity_Tournament_1F_Man::
 NorthstarCity_Tournament_1F_Little_Girl::
 	msgbox NorthstarCity_Tournament_1F_Text_Little_Girl, MSGBOX_NPC
 	end
+
+WLU6:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+NorthstarCity_Tournament_1F_Text_HeyYouYouveCausedUs:
+	.string "{COLOR}{BLUE}Hey, you!\p"
+	.string "You've caused us nothing but problems\n"
+	.string "since we took over this tower!\p"
+	.string "You're really annoying, you know that?\n"
+	.string "Your meddling ends here!$"
+
+NorthstarCity_Tournament_1F_Text_GruntAreYouUpstairs:
+	.string "{COLOR}{BLUE}Grunt!\n"
+	.string "Are you still upstairs?!$"
+
+NorthstarCity_Tournament_1F_Text_YeahImStillUpHere:
+	.string "Yeah. I'm still up here.\n"
+	.string "Whaddya want?$"
+
+NorthstarCity_Tournament_1F_Text_BossSaidItsTime:
+	.string "{COLOR}{BLUE}Boss said it's time to go!\p"
+	.string "I got the kid here!\p"
+	.string "Throw that Jigglypuff down and let's\n"
+	.string "all get outta here!$"
+
+NorthstarCity_Tournament_1F_Text_Roger:
+	.string "Roger.$"
+
+NorthstarCity_Tournament_1F_Text_HahaLater:
+	.string "{COLOR}{BLUE}Hahahaha!\n"
+	.string "Later, sleepy-head!$"
+
+NorthstarCity_Tournament_1F_Text_Jiggly:
+	.string "Jiggly!$"
+
+NorthstarCity_Tournament_1F_Text_PlayerIFoundAJigglypuff:
+	.string "{COLOR}{RED}{PLAYER}?\p"
+	.string "I found a Jigglypuff upstairs.\n"
+	.string "It must have sang you to sleep.\p"
+	.string "…\n"
+	.string "…\p"
+	.string "The SUBO have escaped.\n"
+	.string "Who knows what their next move is…\p"
+	.string "I'm getting out of here.\n"
+	.string "You should do the same.\p"
+	.string "You can get a boat back to Laveria\n"
+	.string "City from the Northstar Docks.$"
+
+NorthstarCity_Tournament_1F_Text_AlsoIManaged:
+	.string "{COLOR}{RED}Also, I managed to take this from\n"
+	.string "one of the SUBO Grunts… Here.$"
+
+NorthstarCity_Tournament_1F_Text_TakeItEasy:
+	.string "{COLOR}{RED}Take it easy, okay?$"
 
 NorthstarCity_Tournament_1F_Text_Woman:
 	.string "{COLOR}{RED}I just made it to the city in time for\n"
