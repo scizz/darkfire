@@ -1233,10 +1233,10 @@
 #define FLAG_RECEIVED_TM_MIST_NORTHSTAR                             0x49B // Darkfire Flag
 #define FLAG_HIDE_ROCKFALL_CAVE_RANGER                              0x49C // Darkfire Flag
 #define FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE                         0x49D // Darkfire Flag
+#define FLAG_LAVERIA_CITY_AWAKENING_GIVEN                           0x49E // Darkfire Flag
+#define FLAG_LAVERIA_CITY_AWAKENING_QUEST_STARTED                   0x49F // Darkfire Flag
+#define FLAG_HIDE_LAVERIA_CITY_SAILOR_3                             0x4A0 // Darkfire Flag
 
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag

@@ -444,7 +444,7 @@ NorthstarCity_Player_Bottom::
 	end
 
 NorthstarCity_Warp_To_Laveria::
-	warp MAP_LAVERIA_CITY, 37, 32
+	warp MAP_LAVERIA_CITY, 39, 43
 	waitstate
 	end
 
