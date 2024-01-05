@@ -12,6 +12,7 @@ LaveriaCity_MapScripts::
 LaveriaCity_OnTransition:
 	removeobject LOCALID_SAILOR_3
 	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_3
+	call_if_unset FLAG_TEMP_4, LaveriaCity_ResetSailorEvent
 	call_if_unset FLAG_HIDE_LAVERIA_CITY_SAILOR_1, LaveriaCity_ResetSailorEvent
 	end
 
@@ -19,6 +20,10 @@ LaveriaCity_ResetSailorEvent::
 	removeobject LOCALID_SAILOR_2
 	removeobject LOCALID_BOAT_2
 	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND
+	addobject LOCALID_SAILOR_1
+	addobject LOCALID_BOAT_1
+	clearflag FLAG_HIDE_LAVERIA_CITY_BOAT_1
+	clearflag FLAG_HIDE_LAVERIA_CITY_SAILOR_1
 	end
 
 LaveriaCity_Sailor::
@@ -206,7 +211,119 @@ LaveriaCity_SailToIsland::
 	playse SE_EXIT
 	applymovement OBJ_EVENT_ID_PLAYER, SetVisible
 	waitmovement 0
+	savebgm MUS_DUMMY
+	fadedefaultbgm
 	waitse
+	applymovement LOCALID_SAILOR_2, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox LaveriaCity_Text_HereWeAreFeastYourEyes, MSGBOX_AUTOCLOSE
+	setflag FLAG_TEMP_4
+	release
+	end
+
+LaveriaCity_SailorTwo::
+	lock
+	faceplayer
+	msgbox LaveriaCity_Text_HeyoTrainer, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq LaveriaCity_SailorTwo_Yes
+	goto LaveriaCity_SailorTwo_No
+	end
+
+LaveriaCity_SailorTwo_Yes::
+	msgbox LaveriaCity_Text_VeryWellBackIntoTheCabin, MSGBOX_AUTOCLOSE
+	goto LaveriaCity_SailorTwo_CheckPlayerPos
+	end
+
+LaveriaCity_SailorTwo_No::
+	msgbox LaveriaCity_Text_JustLetMeKnow, MSGBOX_AUTOCLOSE
+	release
+	end
+
+LaveriaCity_SailorTwo_CheckPlayerPos::
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 14
+	call_if_eq LaveriaCity_SailorTwo_IslandPlayerRight
+	goto LaveriaCity_SailorTwo_IslandPlayerBottom
+	end
+
+LaveriaCity_SailorTwo_IslandPlayerRight::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_SAILOR_2, WDR
+	waitmovement 0
+	applymovement LOCALID_SAILOR_2, Common_Movement_FaceDown
+	waitmovement 0
+	playse SE_EXIT
+	removeobject LOCALID_SAILOR_2
+	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	goto LaveriaCity_SailorTwo_SailBackToLaveria
+	end
+
+LaveriaCity_SailorTwo_IslandPlayerBottom::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_SAILOR_2, WRD
+	waitmovement 0
+	playse SE_EXIT
+	removeobject LOCALID_SAILOR_2
+	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	goto LaveriaCity_SailorTwo_SailBackToLaveria
+	end
+
+LaveriaCity_SailorTwo_SailBackToLaveria::
+	playse SE_EXIT
+	hidefollower
+	applymovement OBJ_EVENT_ID_PLAYER, SetInvisible
+	delay 1
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	waitse
+	delay 30
+	playbgm MUS_SURFING, TRUE
+	applymovement LOCALID_BOAT_2, SailToCity
+	applymovement OBJ_EVENT_ID_PLAYER, SailToCity
+	waitmovement 0
+	playse SE_RG_SS_ANNE_HORN
+	waitse
+	clearflag FLAG_HIDE_LAVERIA_CITY_BOAT_1
+	addobject LOCALID_BOAT_1
+	removeobject LOCALID_BOAT_2
+	clearflag FLAG_HIDE_LAVERIA_CITY_SAILOR_1
+	playse SE_EXIT
+	addobject LOCALID_SAILOR_1
+	applymovement LOCALID_SAILOR_1, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceRight
+	waitmovement 0
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	playse SE_EXIT
+	applymovement OBJ_EVENT_ID_PLAYER, SetVisible
+	waitmovement 0
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	waitse
+	applymovement LOCALID_SAILOR_1, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox LaveriaCity_Text_WellHereWeAreJustLetMeKnow, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement LOCALID_SAILOR_1, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
+	waitmovement 0
+	release
 	end
 
 LaveriaCity_Sign::
@@ -392,6 +509,44 @@ SailToIsland:
 	walk_slow_up
 	step_end
 
+SailToCity:
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_down
+	step_end
+
 WUL:
 	walk_up
 	walk_left
@@ -504,6 +659,20 @@ LaveriaCity_Text_HereWeAreFeastYourEyes:
 	.string "Feast your eyes on Laveria Island!\p"
 	.string "Just let me know when you want to sail\n"
 	.string "back to the city, okay?$"
+
+LaveriaCity_Text_HeyoTrainer:
+	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
+	.string "Do you want to sail back to Laveria\n"
+	.string "City?$"
+
+LaveriaCity_Text_VeryWellBackIntoTheCabin:
+	.string "{COLOR}{BLUE}Very well!\n"
+	.string "Back into the cabin, partner!$"
+
+LaveriaCity_Text_WellHereWeAreJustLetMeKnow:
+	.string "{COLOR}{BLUE}Well, here we are!\p"
+	.string "Just let me know when you want to\n"
+	.string "sail across again, 'kay?$"
 
 LaveriaCity_Text_Sign:
 	.string "Welcome to Laveria City\n"
