@@ -9,14 +9,13 @@ LaveriaCity_MapScripts::
 	.byte 0
 
 LaveriaCity_OnTransition:
-	call_if_set FLAG_HIDE_LAVERIA_CITY_SAILOR_1, LaveriaCity_ResetSailorEvent
+	call_if_unset FLAG_HIDE_LAVERIA_CITY_SAILOR_1, LaveriaCity_ResetSailorEvent
 	end
 
 LaveriaCity_ResetSailorEvent::
 	removeobject LOCALID_SAILOR_2
 	removeobject LOCALID_BOAT_2
-	addobject LOCALID_SAILOR_1
-	addobject LOCALID_BOAT_1
+	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND
 	end
 
 LaveriaCity_Sign::
@@ -190,6 +189,65 @@ WL2DL2:
 	walk_left
 	walk_left
 	step_end
+
+LaveriaCity_Text_WhatYouWantToUse:
+	.string "{COLOR}{BLUE}What? You want to use my boat to get\n"
+	.string "to the island nearby?\p"
+	.string "Well, I'm busy fishing as you can see.\p"
+	.string "But, perhaps there is something you\n"
+	.string "could do for me…\p"
+	.string "My son is lazy and won't get up early\n"
+	.string "in the morning! It's driving me mad!\p"
+	.string "I need an Awakening to get him to wake\n"
+	.string "up on time.\p"
+	.string "Find one for me and we can talk about\n"
+	.string "getting you across the water. Deal?\p"
+
+LaveriaCity_Text_FantasticYouCanGetOne:
+	.string "Fantastic!\p"
+	.string "You can get an Awakening from a buddy\n"
+	.string "of mine in Route 9.$"
+
+LaveriaCity_Text_HelloTrainer:
+	.string "{COLOR}{BLUE}Hello, Trainer!\n"
+	.string "Do you want to sail to Laveria Island?$"
+
+LaveriaCity_Text_JustLetMeKnow:
+	.string "{COLOR}{BLUE}Just let me know when you wanna sail!$"
+
+LaveriaCity_Text_MySonIsLazy:
+	.string "{COLOR}{BLUE}My son is lazy and won't get up early\n"
+	.string "in the morning! It's driving me mad!\p"
+	.string "I need an Awakening to get him to wake\n"
+	.string "up on time.\p"
+	.string "Find one for me and we can talk about\n"
+	.string "getting you across the water. Deal?\p"
+	.string "You can get an Awakening from a buddy\n"
+	.string "of mine in Route 9.$"
+
+LaveriaCity_Text_YouHandedOver:
+	.string "{COLOR}{BLUE}You handed over an Awakening to the\n"
+	.string "Sailor.$"
+
+LaveriaCity_Text_AnAwakening:
+	.string "{COLOR}{BLUE}An Awakening!\n"
+	.string "My thanks!\p"
+	.string "Fine, let's go.\n"
+	.string "I was done fishing anyway…$"
+
+LaveriaCity_Text_AhoyTrainer:
+	.string "{COLOR}{BLUE}Ahoy, Trainer!\n"
+	.string "Where would you like to sail to?$"
+
+LaveriaCity_Text_RighteoThisWay:
+	.string "{COLOR}{BLUE}Righteo!\n"
+	.string "This way into the cabin!$"
+
+LaveriaCity_Text_HereWeAreFeastYourEyes:
+	.string "{COLOR}{BLUE}Here we are!\n"
+	.string "Feast your eyes on Laveria Island!\p"
+	.string "Just let me know when you want to sail\n"
+	.string "back to the city, okay?$"
 
 LaveriaCity_Text_Sign:
 	.string "Welcome to Laveria City\n"
