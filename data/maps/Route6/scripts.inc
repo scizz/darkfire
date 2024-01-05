@@ -10,11 +10,21 @@ Route6_Sign_West::
 	end
 
 Route6_Ranger_Female::
-	msgbox Route6_Text_Ranger_Female, MSGBOX_NPC
+	lock
+	faceplayer
+	speakername CommonName_Text_Ranger
+	showface FS_FEMALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox Route6_Text_Ranger_Female, MSGBOX_AUTOCLOSE
+	hideface 1
 	end
 
 Route6_Ranger_Male::
-	msgbox Route6_Text_Ranger_Male, MSGBOX_NPC
+	lock
+	faceplayer
+	speakername CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
+	msgbox Route6_Text_Ranger_Male, MSGBOX_AUTOCLOSE
+	hideface 1
 	end
 
 Route6_Man::
@@ -70,6 +80,53 @@ Route6_EventScript_Lucas::
 	trainerbattle_single TRAINER_LUCAS, Route6_Text_LucasIntro, Route6_Text_LucasDefeated
 	msgbox Route6_Text_LucasPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route6_Text_OkayOneTwoThree:
+	.string "{COLOR}{BLUE}Okay…\n"
+	.string "One… Two… Three…$"
+
+Route6_Text_ItsUseless:
+	.string "{COLOR}{BLUE}It's useless.\p"
+	.string "I'm too scared of heights to even\n"
+	.string "attempt to climb down this rope.\p"
+	.string "Why did I become a Ranger in the\n"
+	.string "first place…?$"
+
+Route6_Text_OhATrainer:
+	.string "{COLOR}{BLUE}Oh, a Trainer!\n"
+	.string "Greetings, Trainer.\p"
+	.string "I've been sent here to investigate the\n"
+	.string "Steep Ravine you see down below.\p"
+	.string "By whom, you ask?\n"
+	.string "The Rangers' Federation of course!\p"
+	.string "But I've… Uh. I've sprained my ankle!\n"
+	.string "So I can't climb down there!\p"
+	.string "Can you climb down this rope and see if\n"
+	.string "there are any dangerous Pokémon below?$"
+
+Route6_Text_NoWellIGuess:
+	.string "{COLOR}{BLUE}N-no?\p"
+	.string "W-well I, I guess I'll have to d-do it\n"
+	.string "myself…$"
+
+Route6_Text_HeyoTrainerYoureBack:
+	.string "{COLOR}{BLUE}Heyo, Trainer, you're back!\n"
+	.string "How was it down in the Steep Ravine?\p"
+	.string "Are you looking to go back down there?\n$"
+
+Route6_Text_IfYouEverWantToGetDown:
+	.string "{COLOR}{BLUE}If you ever want to get down in the\n"
+	.string "Steep Ravine, just let me know and I'll\l"
+	.string "lower you right in!$"
+
+Route6_Text_AllRIghtNow:
+	.string "{COLOR}{BLUE}All right!\p"
+	.string "Now, grab the rope and I'll lower you\n"
+	.string "in!$"
+
+Route6_Text_AreYouReadyFasten:
+	.string "{COLOR}{BLUE}Are you ready?\n"
+	.string "Fasten your harness and here we go!$"
 
 Route6_Text_Sign:
 	.string "Route 6\n"

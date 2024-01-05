@@ -147,7 +147,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route6_Ranger_Male",
       "flag": "0"
     },
     {
@@ -160,7 +160,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route6_Ranger_Female",
       "flag": "0"
     },
     {
@@ -507,8 +507,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 63,
-      "y": 11,
+      "x": 35,
+      "y": 34,
       "elevation": 3,
       "item": "ITEM_POKE_BALL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_6_POKE_BALL"

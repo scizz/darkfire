@@ -30,7 +30,7 @@ LaveriaCity_Sailor::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE03_GET, LaveriaCity_Sailor_SailMultiChoice
-	@goto_if_set FLAG_LAVERIA_CITY_AWAKENING_GIVEN, LaveriaCity_Sailor_SailToIsland
+	goto_if_set FLAG_LAVERIA_CITY_AWAKENING_GIVEN, LaveriaCity_Sailor_SailToIsland
 	goto_if_set FLAG_LAVERIA_CITY_AWAKENING_QUEST_STARTED, LaveriaCity_Sailor_CheckAwakening
 	msgbox LaveriaCity_Text_WhatYouWantToUse, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
@@ -39,6 +39,13 @@ LaveriaCity_Sailor::
 	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
 	waitmovement 0
 	release
+	end
+
+LaveriaCity_Sailor_SailToIsland::
+	msgbox LaveriaCity_Text_HelloTrainer, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq LaveriaCity_ChooseLaveriaIsland
+	goto LaveriaCity_CancelSailSelect
 	end
 
 LaveriaCity_Sailor_QuestStarted::
