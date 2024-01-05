@@ -255,6 +255,13 @@ static const struct MenuAction MultichoiceList_ChooseStone[] =
     {gText_SunStone},
 };
 
+static const struct MenuAction MultichoiceList_LaveriaNorthstarSail[] =
+{
+    {gText_NorthstarCity},
+    {gText_LaveriaIsland},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_GameCornerDolls[] =
 {
     {gText_TreeckoDollAndPrice},
@@ -791,7 +798,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_LAVERIA_NORTHSTAR_SAIL]     = MULTICHOICE(MultichoiceList_LaveriaNorthstarSail),
     [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),

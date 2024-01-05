@@ -1,5 +1,6 @@
 .set LOCALID_SAILOR_1, 6
 .set LOCALID_SAILOR_2, 3
+.set LOCALID_SAILOR_3, 19
 .set LOCALID_BOAT_1, 5
 .set LOCALID_BOAT_2, 4
 .set LOCALID_KOJIRO, 2
@@ -9,6 +10,8 @@ LaveriaCity_MapScripts::
 	.byte 0
 
 LaveriaCity_OnTransition:
+	removeobject LOCALID_SAILOR_3
+	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_3
 	call_if_unset FLAG_HIDE_LAVERIA_CITY_SAILOR_1, LaveriaCity_ResetSailorEvent
 	end
 
@@ -16,6 +19,194 @@ LaveriaCity_ResetSailorEvent::
 	removeobject LOCALID_SAILOR_2
 	removeobject LOCALID_BOAT_2
 	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND
+	end
+
+LaveriaCity_Sailor::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE03_GET, LaveriaCity_Sailor_SailMultiChoice
+	@goto_if_set FLAG_LAVERIA_CITY_AWAKENING_GIVEN, LaveriaCity_Sailor_SailToIsland
+	goto_if_set FLAG_LAVERIA_CITY_AWAKENING_QUEST_STARTED, LaveriaCity_Sailor_CheckAwakening
+	msgbox LaveriaCity_Text_WhatYouWantToUse, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq LaveriaCity_Sailor_QuestStarted
+	msgbox LaveriaCity_Text_NoSuitYourself, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+LaveriaCity_Sailor_QuestStarted::
+	setflag FLAG_LAVERIA_CITY_AWAKENING_QUEST_STARTED
+	msgbox LaveriaCity_Text_FantasticYouCanGetOne, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+LaveriaCity_Sailor_CheckAwakening::
+	msgbox LaveriaCity_Text_HelloTrainerDidYouManage, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq LaveriaCity_Sailor_FindAwakening
+	msgbox LaveriaCity_Text_WellGoGetIt, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+LaveriaCity_Sailor_FindAwakening::
+	msgbox LaveriaCity_Text_GreatPleaseHandItOver, MSGBOX_AUTOCLOSE
+	chooseitem ITEMS_POCKET
+	goto_if_eq VAR_ITEM_ID, ITEM_AWAKENING, LaveriaCity_Sailor_GiveAwakening
+	msgbox LaveriaCity_Text_HuhThisIsntAnAwakening, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+LaveriaCity_Sailor_GiveAwakening::
+	removeitem ITEM_AWAKENING, 1
+	msgbox LaveriaCity_Text_YouHandedOver, MSGBOX_AUTOCLOSE
+	delay 30
+	msgbox LaveriaCity_Text_AnAwakening, MSGBOX_AUTOCLOSE
+	setflag FLAG_LAVERIA_CITY_AWAKENING_GIVEN
+	goto LaveriaCity_SailToLaveriaIsland
+	end
+
+LaveriaCity_Sailor_SailMultiChoice::
+	message LaveriaCity_Text_AhoyTrainer
+	waitmessage
+	multichoicedefault 21, 6, MULTI_LAVERIA_NORTHSTAR_SAIL, 2, FALSE
+	switch VAR_RESULT
+	case 0, LaveriaCity_ChooseNorthstarCity
+	case 1, LaveriaCity_ChooseLaveriaIsland
+	case 2, LaveriaCity_CancelSailSelect
+	case MULTI_B_PRESSED, LaveriaCity_CancelSailSelect
+	end
+
+LaveriaCity_ChooseNorthstarCity::
+	msgbox LaveriaCity_Text_RighteoThisWay, MSGBOX_AUTOCLOSE
+	goto LaveriaCity_SailToNorthstarCity
+	end
+
+LaveriaCity_ChooseLaveriaIsland::
+	msgbox LaveriaCity_Text_RighteoThisWay, MSGBOX_AUTOCLOSE
+	goto LaveriaCity_SailToLaveriaIsland
+	end
+
+LaveriaCity_CancelSailSelect::
+	msgbox LaveriaCity_Text_JustLetMeKnow, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+LaveriaCity_SailToNorthstarCity::
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceRight
+	waitmovement 0
+	removeobject LOCALID_SAILOR_1
+	playse SE_EXIT
+	waitse
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 42
+	call_if_eq LaveriaCity_NorthstarPlayerTop
+	goto LaveriaCity_NorthstarPlayerLeft
+	end
+
+LaveriaCity_NorthstarPlayerTop::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	goto LaveriaCity_WarpToNorthstar
+	end
+
+LaveriaCity_NorthstarPlayerLeft::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	goto LaveriaCity_WarpToNorthstar
+	end
+
+LaveriaCity_WarpToNorthstar::
+	warp MAP_NORTHSTAR_CITY, 96, 36
+	waitstate
+	end
+
+LaveriaCity_SailToLaveriaIsland::
+	applymovement LOCALID_SAILOR_1, Common_Movement_FaceRight
+	waitmovement 0
+	removeobject LOCALID_SAILOR_1
+	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_1
+	playse SE_EXIT
+	waitse
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 42
+	call_if_eq LaveriaCity_IslandPlayerTop
+	goto LaveriaCity_IslandPlayerLeft
+	end
+
+LaveriaCity_IslandPlayerTop::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	goto LaveriaCity_SailToIsland
+	end
+
+LaveriaCity_IslandPlayerLeft::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	goto LaveriaCity_SailToIsland
+	end
+
+LaveriaCity_SailToIsland::
+	playse SE_EXIT
+	hidefollower
+	applymovement OBJ_EVENT_ID_PLAYER, SetInvisible
+	delay 1
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	waitse
+	delay 30
+	playbgm MUS_SURFING, TRUE
+	applymovement LOCALID_BOAT_1, SailToIsland
+	applymovement OBJ_EVENT_ID_PLAYER, SailToIsland
+	waitmovement 0
+	playse SE_RG_SS_ANNE_HORN
+	waitse
+	clearflag FLAG_HIDE_LAVERIA_CITY_SAILOR_BOAT_ISLAND
+	addobject LOCALID_BOAT_2
+	removeobject LOCALID_BOAT_1
+	setflag FLAG_HIDE_LAVERIA_CITY_BOAT_1
+	clearflag FLAG_HIDE_LAVERIA_CITY_SAILOR_3
+	playse SE_EXIT
+	addobject LOCALID_SAILOR_3
+	applymovement LOCALID_SAILOR_3, WUL
+	waitmovement 0
+	waitse
+	applymovement LOCALID_SAILOR_3, Common_Movement_FaceRight
+	waitmovement 0
+	addobject LOCALID_SAILOR_2
+	removeobject LOCALID_SAILOR_3
+	setflag FLAG_HIDE_LAVERIA_CITY_SAILOR_3
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	playse SE_EXIT
+	applymovement OBJ_EVENT_ID_PLAYER, SetVisible
+	waitmovement 0
+	waitse
 	end
 
 LaveriaCity_Sign::
@@ -163,6 +354,54 @@ LaveriaCity_Kojiro_End::
 	release
 	end
 
+SailToIsland:
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+WUL:
+	walk_up
+	walk_left
+	step_end
+
+WRD:
+	walk_right
+	walk_down
+	step_end
+
 WSR3:
 	walk_slow_right
 	walk_slow_right
@@ -190,6 +429,10 @@ WL2DL2:
 	walk_left
 	step_end
 
+SetVisible:
+	set_visible
+	step_end
+
 LaveriaCity_Text_WhatYouWantToUse:
 	.string "{COLOR}{BLUE}What? You want to use my boat to get\n"
 	.string "to the island nearby?\p"
@@ -201,10 +444,14 @@ LaveriaCity_Text_WhatYouWantToUse:
 	.string "I need an Awakening to get him to wake\n"
 	.string "up on time.\p"
 	.string "Find one for me and we can talk about\n"
-	.string "getting you across the water. Deal?\p"
+	.string "getting you across the water. Deal?$\p"
+
+LaveriaCity_Text_NoSuitYourself:
+	.string "{COLOR}{BLUE}No?\p"
+	.string "Suit yourself!$"
 
 LaveriaCity_Text_FantasticYouCanGetOne:
-	.string "Fantastic!\p"
+	.string "{COLOR}{BLUE}Fantastic!\p"
 	.string "You can get an Awakening from a buddy\n"
 	.string "of mine in Route 9.$"
 
@@ -215,18 +462,27 @@ LaveriaCity_Text_HelloTrainer:
 LaveriaCity_Text_JustLetMeKnow:
 	.string "{COLOR}{BLUE}Just let me know when you wanna sail!$"
 
-LaveriaCity_Text_MySonIsLazy:
-	.string "{COLOR}{BLUE}My son is lazy and won't get up early\n"
-	.string "in the morning! It's driving me mad!\p"
-	.string "I need an Awakening to get him to wake\n"
-	.string "up on time.\p"
+LaveriaCity_Text_HelloTrainerDidYouManage:
+	.string "{COLOR}{BLUE}Hello, Trainer!\p"
+	.string "Did you manage to fetch that Awakening\n"
+	.string "from my buddy in Route 9?$"
+
+LaveriaCity_Text_GreatPleaseHandItOver:
+	.string "{COLOR}{BLUE}Great!\n"
+	.string "Please hand it over…$"
+
+LaveriaCity_Text_HuhThisIsntAnAwakening:
+	.string "{COLOR}{BLUE}Huh?\n"
+	.string "This isn't an Awakening…\p"
 	.string "Find one for me and we can talk about\n"
-	.string "getting you across the water. Deal?\p"
-	.string "You can get an Awakening from a buddy\n"
-	.string "of mine in Route 9.$"
+	.string "getting you across the water. Deal?$\p"
+
+LaveriaCity_Text_WellGoGetIt:
+	.string "{COLOR}{BLUE}Well, go get it and we can talk about\n"
+	.string "getting you across the water. Deal?$"
 
 LaveriaCity_Text_YouHandedOver:
-	.string "{COLOR}{BLUE}You handed over an Awakening to the\n"
+	.string "You handed over an Awakening to the\n"
 	.string "Sailor.$"
 
 LaveriaCity_Text_AnAwakening:
