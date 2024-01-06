@@ -94,7 +94,7 @@ Route6_Ranger::
 	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox Route6_Text_ItsUseless, MSGBOX_AUTOCLOSE
-	hideface 1
+	hideface 0
 	delay 30
 	faceplayer
 	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
@@ -118,7 +118,7 @@ Route6_Ranger_Cleared::
 	goto_if_eq Route6_Ranger_Yes
 	msgbox Route6_Text_IfYouEverWantToGetDown, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement LOCALID_RANGER, Common_Movement_FaceDown
+	applymovement LOCALID_RANGER, Common_Movement_FaceRight
 	waitmovement 0
 	release
 	end
@@ -170,7 +170,7 @@ Route6_Ranger_Yes::
 	waitse
 	waitmovement 0
 	setflag FLAG_ROUTE_6_STEEP_RAVINE_CLEARED
-	warp MAP_NORTHSTAR_CITY, 45, 13
+	warp MAP_STEEP_RAVINE, 45, 13
 	waitstate
 	end
 
