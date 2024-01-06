@@ -1,3 +1,5 @@
+.set LOCALID_RANGER, 17
+
 Route6_MapScripts::
 	.byte 0
 
@@ -81,6 +83,116 @@ Route6_EventScript_Lucas::
 	msgbox Route6_Text_LucasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route6_Ranger::
+	lock
+	goto_if_set FLAG_ROUTE_6_STEEP_RAVINE_CLEARED, Route6_Ranger_Cleared
+	speakername2 CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
+	msgbox Route6_Text_OkayOneTwoThree, MSGBOX_AUTOCLOSE
+	hideface 0
+	delay 30
+	speakername2 CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
+	msgbox Route6_Text_ItsUseless, MSGBOX_AUTOCLOSE
+	hideface 1
+	delay 30
+	faceplayer
+	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	speakername2 CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
+	msgbox Route6_Text_OhATrainer, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route6_Ranger_Yes
+	goto Route6_Ranger_No
+	end
+
+Route6_Ranger_Cleared::
+	faceplayer
+	speakername2 CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
+	msgbox Route6_Text_HeyoTrainerYoureBack, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route6_Ranger_Yes
+	msgbox Route6_Text_IfYouEverWantToGetDown, MSGBOX_AUTOCLOSE
+	hideface 0
+	applymovement LOCALID_RANGER, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+Route6_Ranger_Yes::
+	msgbox Route6_Text_AllRIghtNow, MSGBOX_AUTOCLOSE
+	hideface 0
+	applymovement LOCALID_RANGER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, WR2D
+	waitmovement 0
+	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	speakername2 CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
+	msgbox Route6_Text_AreYouReadyFasten, MSGBOX_AUTOCLOSE
+	hideface 0
+	playse SE_PIN
+	waitse
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LFDD
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	setflag FLAG_ROUTE_6_STEEP_RAVINE_CLEARED
+	warp MAP_NORTHSTAR_CITY, 45, 13
+	waitstate
+	end
+
+Route6_Ranger_No::
+	msgbox Route6_Text_NoWellIGuess, MSGBOX_AUTOCLOSE
+	hideface 0
+	applymovement LOCALID_RANGER, Common_Movement_FaceRight
+	waitmovement 0
+	release
+	end
+
+LFDD:
+	lock_facing_direction
+	walk_down
+	step_end
+
+WR2D:
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
 Route6_Text_OkayOneTwoThree:
 	.string "{COLOR}{BLUE}Okay…\n"
 	.string "One… Two… Three…$"
@@ -106,7 +218,7 @@ Route6_Text_OhATrainer:
 
 Route6_Text_NoWellIGuess:
 	.string "{COLOR}{BLUE}N-no?\p"
-	.string "W-well I, I guess I'll have to d-do it\n"
+	.string "W-well, I guess I'll have to d-do it\n"
 	.string "myself…$"
 
 Route6_Text_HeyoTrainerYoureBack:
