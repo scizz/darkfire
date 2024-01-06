@@ -86,6 +86,7 @@ ChandraVillage_Intro::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	savebgm MUS_DUMMY
 	fadedefaultbgm
+	special ShowMapNamePopup
 	releaseall
 	end
 
