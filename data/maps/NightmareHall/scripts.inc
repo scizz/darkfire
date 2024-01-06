@@ -1,8 +1,18 @@
 NightmareHall_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NightmareHall_OnWarp
 	.byte 0
 
+NightmareHall_OnWarp:
+	map_script_2 VAR_STORYLINE_STATE, 0, NightmareHall_InitRoomObjects
+	.2byte 0
+
+NightmareHall_InitRoomObjects::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	call Script_SetGrayscaleTint
+	end
+
 NightmareHall_CutSceneTrigger::
-	applymovement OBJ_EVENT_ID_PLAYER, RightFour
+	applymovement OBJ_EVENT_ID_PLAYER, WR4
 	waitmovement 0
 	applymovement 10, FaceLeftQuestionMark
 	playse SE_PIN
@@ -268,12 +278,13 @@ NightmareHall_CutSceneTrigger::
 	setvar VAR_TEMP_0, 1
 	applymovement OBJ_EVENT_ID_PLAYER, RunDownTwelve
 	waitmovement 0
+	call Script_RemoveTint
 	fadeinbgm 9
 	warpsilent MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_2F, 8, 6
 	waitstate
 	end
 
-RightFour:
+WR6:
 	walk_right
 	walk_right
 	walk_right

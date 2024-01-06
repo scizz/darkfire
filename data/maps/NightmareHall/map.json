@@ -2,8 +2,8 @@
   "id": "MAP_NIGHTMARE_HALL",
   "name": "NightmareHall",
   "layout": "LAYOUT_NIGHTMARE_HALL",
-  "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "music": "MUS_DREAMWORLD",
+  "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -80,7 +80,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SANDSLASH",
+      "graphics_id": "OBJ_EVENT_GFX_WARTORTLE",
       "x": 18,
       "y": 5,
       "elevation": 3,
@@ -93,7 +93,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 17,
       "y": 5,
       "elevation": 3,
@@ -160,7 +160,7 @@
       "x": 11,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
       "script": "NightmareHall_CutSceneTrigger"
     },
@@ -169,7 +169,7 @@
       "x": 11,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
       "script": "NightmareHall_CutSceneTrigger"
     },
@@ -178,7 +178,7 @@
       "x": 11,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STORYLINE_STATE",
       "var_value": "0",
       "script": "NightmareHall_CutSceneTrigger"
     }

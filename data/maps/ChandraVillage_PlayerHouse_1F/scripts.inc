@@ -22,16 +22,20 @@ ChandraVillage_PlayerHouse_1F_Mother::
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_AUTOCLOSE
+	hideface 1
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_STORYLINE_STATE, 3
 	releaseall
 	end
 
 ChandraVillage_PlayerHouse_1F_MotherTalkedTo::
+	lockall
+	faceplayer
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_PlayerHouse_1F_Text_MotherTalkedTo, MSGBOX_NPC
-	speakername 0
+	msgbox ChandraVillage_PlayerHouse_1F_Text_MotherTalkedTo, MSGBOX_AUTOCLOSE
+	hideface 1
+	releaseall
 	end
 
 ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
@@ -48,6 +52,7 @@ ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
 	goto ChandraVillage_Playerhouse_1F_Mother_No
+	end
 
 ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	lockall
@@ -63,6 +68,7 @@ ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
 	goto ChandraVillage_Playerhouse_1F_Mother_No
+	end
 
 ChandraVillage_PlayerHouse_1F_Mother_Rest::
 	closemessage

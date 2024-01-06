@@ -23,4 +23,9 @@
 #define RGB_CYAN       RGB(0, 31, 31)
 #define RGB_WHITEALPHA (RGB_WHITE | RGB_ALPHA)
 
+// gGlobalFieldTintMode
+#define GLOBAL_FIELD_TINT_NONE              0
+#define GLOBAL_FIELD_TINT_GRAYSCALE         1
+#define GLOBAL_FIELD_TINT_SEPIA             2
+
 #endif // GUARD_RGB_H

@@ -794,20 +794,14 @@ PetalburgCity_EventScript_FollowMove::
 GiveQuest::
 	lock
 	faceplayer
-	msgbox GiveQuest_Text, MSGBOX_DEFAULT
-	giveitem ITEM_MACH_BIKE, 1
-	giveitem ITEM_OLD_ROD, 1
-	giveitem ITEM_POKEBLOCK_CASE, 1
-	giveitem ITEM_QUEST_BOOK, 1
-	setflag FLAG_SYS_QUEST_MENU_GET
+	call Script_SetGrayscaleTint
 	release
 	end
 
 SetQuest::
 	lock
 	faceplayer
-	msgbox ActiveQuest_Text, MSGBOX_DEFAULT
-	questmenu QUEST_MENU_SET_ACTIVE QUEST_1
+	call Script_RemoveTint
 	release
 	end
 

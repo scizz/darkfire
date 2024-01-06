@@ -787,10 +787,30 @@ void FieldEffectScript_LoadTiles(u8 **script)
     (*script) += 4;
 }
 
+void ApplyGlobalFieldPaletteTint(u8 paletteIdx)
+{
+    switch (gGlobalFieldTintMode)
+    {
+    case GLOBAL_FIELD_TINT_NONE:
+        return;
+    case GLOBAL_FIELD_TINT_GRAYSCALE:
+        TintPalette_GrayScale(&gPlttBufferUnfaded[(paletteIdx + 16) * 16], 0x10);
+        break;
+    case GLOBAL_FIELD_TINT_SEPIA:
+        TintPalette_SepiaTone(&gPlttBufferUnfaded[(paletteIdx + 16) * 16], 0x10);
+        break;
+    default:
+        return;
+    }
+    CpuFastCopy(&gPlttBufferUnfaded[(paletteIdx + 16) * 16], &gPlttBufferFaded[(paletteIdx + 16) * 16], 0x20);
+}
+
 void FieldEffectScript_LoadFadedPalette(u8 **script)
 {
     struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
     LoadSpritePalette(palette);
+    if (IndexOfSpritePaletteTag(palette->tag == 0xFF))
+        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(palette->tag));
     UpdatePaletteGammaType(IndexOfSpritePaletteTag(palette->tag), GAMMA_NORMAL);
     UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag));
     (*script) += 4;
@@ -800,6 +820,8 @@ void FieldEffectScript_LoadPalette(u8 **script)
 {
     struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
     LoadSpritePalette(palette);
+    if (IndexOfSpritePaletteTag(palette->tag != 0xFF))
+        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(palette->tag));
     (*script) += 4;
 }
 

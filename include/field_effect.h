@@ -27,6 +27,7 @@ void FieldEffectActiveListRemove(u8 id);
 void MultiplyInvertedPaletteRGBComponents(u16 i, u8 r, u8 g, u8 b);
 void FieldEffectActiveListAdd(u8 id);
 void FieldEffectScript_LoadTiles(u8 **script);
+void ApplyGlobalFieldPaletteTint(u8 paletteIdx);
 void FieldEffectScript_LoadFadedPalette(u8 **script);
 void FieldEffectScript_LoadPalette(u8 **script);
 void FieldEffectScript_CallNative(u8 **script, u32 *val);
