@@ -1,5 +1,80 @@
+.set LOCALID_TYLER, 2
+
 PinleafTown_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PinleafTown_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_OnTransition
 	.byte 0
+
+PinleafTown_OnFrame:
+	map_script_2 VAR_STORYLINE_STATE, 1, PinleafTown_TylerBattle
+	.2byte 0
+
+PinleafTown_OnTransition:
+	compare VAR_STORYLINE_STATE, 0
+	goto_if_eq PinleafTown_HideTyler
+	compare VAR_STORYLINE_STATE, 2
+	goto_if_ge PinleafTown_HideTyler
+	call PinleafTown_ShowTyler
+	end
+
+PinleafTown_HideTyler::
+	removeobject LOCALID_TYLER
+	setflag FLAG_HIDE_PINLEAF_TOWN_TYLER
+	end
+
+PinleafTown_ShowTyler::
+	clearflag FLAG_HIDE_PINLEAF_TOWN_TYLER
+	addobject LOCALID_TYLER
+	return
+
+PinleafTown_TylerBattle::
+	lock
+	applymovement LOCALID_TYLER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_SHOCKED, 1, 1
+	msgbox PinleafTown_Text_WoahHeyNoWayPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_TYLER, WR3
+	waitmovement 0
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_NORMAL, 1, 1
+	msgbox PinleafTown_Text_WellWellLookWhoItIs, MSGBOX_AUTOCLOSE
+	hideface 1
+	goto_if_set FLAG_TAKEN_PIKACHU, PinleafTown_TylerBattle_Eevee
+	trainerbattle_single TRAINER_CRISTIN, Route9_Text_CristinIntro, Route9_Text_CristinDefeated
+	goto PinleafTown_TylerBattle_End
+	end
+
+PinleafTown_TylerBattle_Eevee::
+	trainerbattle_single TRAINER_CRISTIN, Route9_Text_CristinIntro, Route9_Text_CristinDefeated
+	goto PinleafTown_TylerBattle_End
+	end
+
+PinleafTown_TylerBattle_End::
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_HAPPY, 1, 1
+	msgbox PinleafTown_Text_WellPlayerYouCertainly, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_TYLER, WR4D5
+	waitmovement 0
+	removeobject LOCALID_TYLER
+	setflag FLAG_HIDE_PINLEAF_TOWN_TYLER
+	setvar VAR_STORYLINE_STATE, 2
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
 
 PinleafTown_Sign::
 	msgbox PinleafTown_Text_Sign, MSGBOX_SIGN
@@ -86,6 +161,24 @@ PinleafTown_Old_Lady::
 PinleafTown_Son::
 	msgbox PinleafTown_Text_Son, MSGBOX_NPC
 	end
+
+WR3:
+	walk_right
+	walk_right
+	walk_right
+	step_end
+	
+WR4D5:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 PinleafTown_Text_Sign:
 	.string "Pinleaf Town\n"
@@ -204,3 +297,50 @@ PinleafTown_Text_Old_Lady:
 
 PinleafTown_Text_Son:
 	.string "{COLOR}{BLUE}Placeholder.$"
+
+PinleafTown_Text_WoahHeyNoWayPlayer:
+	.string "{COLOR}{BLUE}Woah! Hey! No way!\n"
+	.string "{PLAYER}!$"
+
+PinleafTown_Text_WellWellLookWhoItIs:
+	.string "{COLOR}{BLUE}Well, well - look who it is!\n"
+	.string "It's been a long time, {PLAYER}!\p"
+	.string "I saw you on the TV earlier!\p"
+	.string "You're really the Northstar City\n"
+	.string "Champion? That's pretty neat!\p"
+	.string "While you've been getting all the\n"
+	.string "attention, I've been stalking these\l"
+	.string "SUBO guys.\p"
+	.string "They followed a Goverment Official up\n"
+	.string "north and then set sail with him!\p"
+	.string "How can people not see that the\n"
+	.string "Government and the SUBO are allies?!\p"
+	.string "Anyway, {PLAYER}, I followed the\n"
+	.string "SUBO into Mayhem City.\p"
+	.string "I gotta say, there's some terrible\n"
+	.string "things happening there!\p"
+	.string "They seem to have some blueprint of\n"
+	.string "some sort…\l"
+	.string "I couldn't quite see from afar…\p"
+	.string "But, there was a Scientist-looking guy\n"
+	.string "engineering a weird machine…\p"
+	.string "…\n"
+	.string "…\p"
+	.string "…\n"
+	.string "I'm blabbing on, aren't I?\l"
+	.string "I always do that! Ha!\p"
+	.string "Well, I will continue to do my bit.\n"
+	.string "I'll get to the bottom of this!\p"
+	.string "In the meantime, you know what time\n"
+	.string "it is, {PLAYER}!\l"
+	.string "Prepare to battle!$"
+
+PinleafTown_Text_WellPlayerYouCertainly:
+	.string "{COLOR}{BLUE}Well, {PLAYER}!\n"
+	.string "You certainly know how to battle.\p"
+	.string "I will continue to get stronger…\p"
+	.string "I'm gonna need it if I'm going to\n"
+	.string "take down the SUBO!\p"
+	.string "Take care and watch your back.\n"
+	.string "We will cross paths again soon!$"
+

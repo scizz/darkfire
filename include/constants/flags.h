@@ -1249,8 +1249,8 @@
 #define FLAG_STARTER_DOME_TORCHIC                                   0x4AA // Darkfire Flag
 
 #define FLAG_HIDE_ROUTE_3_LARVITAR                                  0x4AB // Darkfire Flag
+#define FLAG_HIDE_PINLEAF_TOWN_TYLER                                0x4AC // Darkfire Flag
 
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
