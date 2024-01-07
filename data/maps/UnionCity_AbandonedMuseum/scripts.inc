@@ -425,6 +425,23 @@ UnionCity_AbandonedMuseum_HoOhRainbowFeather::
 	msgbox UnionCity_AbandonedMuseum_Text_HoOhRainbowFeather, MSGBOX_NPC
 	end
 
+UnionCity_AbandonedMuseum_Male_SUBO::
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox UnionCity_AbandonedMuseum_Text_HeyYouShouldntBeHere, MSGBOX_AUTOCLOSE
+	hideface 1
+	warp MAP_MUDDY_UNDERPASS, 71, 7
+	waitstate
+	end
+
+UnionCity_AbandonedMuseum_Female_SUBO::
+	speakername CommonName_Text_SuboGrunt
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox UnionCity_AbandonedMuseum_Text_HeyYouArentAMember, MSGBOX_AUTOCLOSE
+	hideface 1
+	warp MAP_MUDDY_UNDERPASS, 71, 7
+	waitstate
+	end
 
 WFU5:
 	walk_fast_up
@@ -924,3 +941,11 @@ UnionCity_AbandonedMuseum_Text_HoOhRainbowFeather:
 	.string "light, representing the promise of\l"
 	.string "eternal happiness to those who witness\l"
 	.string "the rainbow created by Ho-Oh's wings.$"
+
+UnionCity_AbandonedMuseum_Text_HeyYouShouldntBeHere:
+	.string "{COLOR}{BLUE}Hey! You shouldn't be here!\n"
+	.string "It's time for you to leave!$"
+
+UnionCity_AbandonedMuseum_Text_HeyYouArentAMember:
+	.string "{COLOR}{RED}Hey! You aren't a member of the SUBO!\n"
+	.string "Get out, right now!$"
