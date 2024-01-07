@@ -9,8 +9,14 @@
 .set LOCALID_MUDKIP, 16
 
 Route9_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route9_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, Route9_OnLoad
 	.byte 0
+
+Route9_OnFrame:
+	map_script_2 VAR_STORYLINE_STATE, 0, Route9_DazBattle
+	map_script_2 VAR_STORYLINE_STATE, 1, Route9_DazLost
+	.2byte 0
 
 Route9_OnLoad:
 	call_if_set FLAG_ROUTE_9_SNORLAX, Route9_ClearPath
@@ -279,6 +285,70 @@ Route9_Snorlax_WakeUp_Yes::
 	release
 	end
 
+Route9_DazBattle::
+	lock
+	setvar VAR_STORYLINE_STATE, 1
+	applymovement LOCALID_DAZ_2, WU5
+	applymovement LOCALID_MUDKIP, WU5
+	waitmovement 0
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
+	msgbox Route9_Text_PlayerIWasWaitingForYou, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
+	msgbox Route9_Text_LookWhatIGot, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_MUDKIP, Common_Movement_JumpInPlaceUp
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	applymovement LOCALID_MUDKIP, Common_Movement_JumpInPlaceUp
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	playmoncry SPECIES_MUDKIP, 0
+	speakername CommonName_Text_Mudkip
+	msgbox Route9_Text_Mudkip, MSGBOX_AUTOCLOSE
+	delay 20
+	applymovement LOCALID_MUDKIP, HeartEmote
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
+	msgbox Route9_Text_HahaILoveItAlready, MSGBOX_AUTOCLOSE
+	hideface 1
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	removeobject LOCALID_MUDKIP
+	setflag FLAG_HIDE_DAZ_2_MUDKIP
+	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route9_Text_ILostButIllRememberThat, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DAZ_2, WD5
+	waitmovement 0
+	removeobject LOCALID_DAZ_2
+	setvar VAR_STORYLINE_STATE, 2
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
+
+Route9_DazLost::
+	removeobject LOCALID_MUDKIP
+	removeobject LOCALID_DAZ_2
+	setflag FLAG_HIDE_DAZ_2_MUDKIP
+	setvar VAR_STORYLINE_STATE, 2
+	end
+	
 WR2U:
 	walk_right
 	walk_right
@@ -454,3 +524,28 @@ Route9_Text_ThePokemonWokeUp:
 
 Route9_Text_YouLeftThePokemonSleep:
 	.string "You left the Pokémon sleep in peace.$"
+
+Route9_Text_PlayerIWasWaitingForYou:
+	.string "{COLOR}{BLUE}{PLAYER}!\p"
+	.string "I was waiting for you!\p"
+	.string "You done catching that Pokémon?\n"
+	.string "Sweet!$"
+
+Route9_Text_LookWhatIGot:
+	.string "{COLOR}{BLUE}Look what I got!\n"
+	.string "A Mudkip!$"
+
+Route9_Text_Mudkip:
+	.string "Muddd-kiiipp!!$"
+
+Route9_Text_HahaILoveItAlready:
+	.string "{COLOR}{BLUE}Haha!\n"
+	.string "I love it already!\p"
+	.string "Alright, {PLAYER}!\n"
+	.string "You know what time it is!\p"
+	.string "Let's put our Pokémon to the test!$"
+
+Route9_Text_ILostButIllRememberThat:
+	.string "{COLOR}{BLUE}I lost, but I'll remember that.\p"
+	.string "We'll meet again, {PLAYER}.\n"
+	.string "You better be ready!$"

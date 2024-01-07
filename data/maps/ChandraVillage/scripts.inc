@@ -6,7 +6,7 @@ ChandraVillage_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_OnFrame
 	.byte 0
 
-ChandraVillage_OnFrame::
+ChandraVillage_OnFrame:
 	map_script_2 VAR_STORYLINE_STATE, 3, ChandraVillage_Intro
 	map_script_2 VAR_STORYLINE_STATE, 7, ChandraVillage_LabDone
 	.2byte 0

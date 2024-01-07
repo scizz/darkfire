@@ -184,3 +184,7 @@ Common_Movement_ShrinkPokemon:
 Common_Movement_JumpInPlaceDown:
 	jump_in_place_down
 	step_end
+
+Common_Movement_JumpInPlaceUp:
+	jump_in_place_up
+	step_end
