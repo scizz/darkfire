@@ -12,6 +12,8 @@ NightmareHall_InitRoomObjects::
 	end
 
 NightmareHall_CutSceneTrigger::
+	lock
+	createvobject OBJ_EVENT_GFX_NINJA_BOY, 11, 9, 4, 3, DIR_SOUTH
 	applymovement OBJ_EVENT_ID_PLAYER, WR4
 	waitmovement 0
 	applymovement 10, FaceLeftQuestionMark

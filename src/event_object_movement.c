@@ -8864,6 +8864,9 @@ static void UpdateObjectEventOffscreen(struct ObjectEvent *objectEvent, struct S
 
     if ((s16)y >= DISPLAY_HEIGHT + 16 || (s16)y2 < -16)
         objectEvent->offScreen = TRUE;
+
+    if (FlagGet(FLAG_FORCE_LOAD_OFFSCREEN_OBJEV))
+        objectEvent->offScreen = FALSE;
 }
 
 static void UpdateObjectEventSpriteVisibility(struct ObjectEvent *objectEvent, struct Sprite *sprite)

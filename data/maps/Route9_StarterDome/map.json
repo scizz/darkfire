@@ -297,8 +297,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Bulbasaur",
+      "flag": "FLAG_STARTER_DOME_BULBASAUR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TREECKO",
@@ -310,8 +310,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Treecko",
+      "flag": "FLAG_STARTER_DOME_TREECKO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHIKORITA",
@@ -323,8 +323,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Chikorita",
+      "flag": "FLAG_STARTER_DOME_CHIKORITA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TORCHIC",
@@ -336,8 +336,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Torchic",
+      "flag": "FLAG_STARTER_DOME_TORCHIC"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHARMANDER",
@@ -349,8 +349,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Charmander",
+      "flag": "FLAG_STARTER_DOME_CHARMANDER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL",
@@ -362,8 +362,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Cyndaquil",
+      "flag": "FLAG_STARTER_DOME_CYNDAQUIL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TOTODILE",
@@ -375,8 +375,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Totodile",
+      "flag": "FLAG_STARTER_DOME_TOTODILE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE",
@@ -388,21 +388,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Squirtle",
+      "flag": "FLAG_STARTER_DOME_SQUIRTLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MUDKIP",
-      "x": 28,
-      "y": 10,
+      "x": 22,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route9_StarterDome_Mudkip",
+      "flag": "FLAG_STARTER_DOME_MUDKIP"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
