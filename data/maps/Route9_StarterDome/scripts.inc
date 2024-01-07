@@ -6,6 +6,15 @@
 .set LOCALID_DAZ_2, 14
 .set LOCALID_LITTLE_GIRL_2, 20
 .set LOCALID_DAZ_1, 15
+.set LOCALID_BULBASAUR, 22
+.set LOCALID_TREECKO, 23
+.set LOCALID_CHIKORITA, 24
+.set LOCALID_TORCHIC, 25
+.set LOCALID_CHARMANDER, 26
+.set LOCALID_CYNDAQUIL, 27
+.set LOCALID_TOTODILE, 28
+.set LOCALID_SQUIRTLE, 29
+.set LOCALID_MUDKIP, 30
 
 Route9_StarterDome_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route9_StarterDome_OnTransition
@@ -531,6 +540,578 @@ Route9_StarterDome_EventEnd::
 	setflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
 	clearflag FLAG_HIDE_STARTER_DOME_TRAINERS_2 @addobject 2, 3, 8, 9
 	setvar VAR_STORYLINE_STATE, 2
+	end
+
+Route9_StarterDome_Bulbasaur::
+	lockall
+	showmonpic SPECIES_BULBASAUR, 10, 3
+	playmoncry SPECIES_BULBASAUR, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickBulbasaur, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickBulbasaur
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickBulbasaur::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_BULBASAUR
+	givemon SPECIES_BULBASAUR, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendBulbasaurParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendBulbasaurPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendBulbasaurParty::
+	call Route9_StarterDome_ReceivedBulbasaurFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedBulbasaur
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedBulbasaur
+	end
+
+Route9_StarterDome_SendBulbasaurPC::
+	call Route9_StarterDome_ReceivedBulbasaurFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_BulbasaurTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_BulbasaurTransferredToPC
+	end
+
+Route9_StarterDome_BulbasaurTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedBulbasaur
+	end
+
+Route9_StarterDome_ReceivedBulbasaurFanfare::
+	bufferspeciesname 1, SPECIES_BULBASAUR
+	removeobject LOCALID_BULBASAUR
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedBulbasaur
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_BULBASAUR
+	return
+
+Route9_StarterDome_ReceivedBulbasaur::
+	setflag FLAG_STARTER_DOME_BULBASAUR
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Chikorita::
+	lockall
+	showmonpic SPECIES_CHIKORITA, 10, 3
+	playmoncry SPECIES_CHIKORITA, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickChikorita, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickChikorita
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickChikorita::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_CHIKORITA
+	givemon SPECIES_CHIKORITA, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendChikoritaParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendChikoritaPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendChikoritaParty::
+	call Route9_StarterDome_ReceivedChikoritaFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedChikorita
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedChikorita
+	end
+
+Route9_StarterDome_SendChikoritaPC::
+	call Route9_StarterDome_ReceivedChikoritaFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ChikoritaTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_ChikoritaTransferredToPC
+	end
+
+Route9_StarterDome_ChikoritaTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedChikorita
+	end
+
+Route9_StarterDome_ReceivedChikoritaFanfare::
+	bufferspeciesname 1, SPECIES_CHIKORITA
+	removeobject LOCALID_CHIKORITA
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedChikorita
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_CHIKORITA
+	return
+
+Route9_StarterDome_ReceivedChikorita::
+	setflag FLAG_STARTER_DOME_CHIKORITA
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Treecko::
+	lockall
+	showmonpic SPECIES_TREECKO, 10, 3
+	playmoncry SPECIES_TREECKO, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickTreecko, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickTreecko
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickTreecko::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_TREECKO
+	givemon SPECIES_TREECKO, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendTreeckoParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendTreeckoPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendTreeckoParty::
+	call Route9_StarterDome_ReceivedTreeckoFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedTreecko
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedTreecko
+	end
+
+Route9_StarterDome_SendTreeckoPC::
+	call Route9_StarterDome_ReceivedTreeckoFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_TreeckoTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_TreeckoTransferredToPC
+	end
+
+Route9_StarterDome_TreeckoTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedTreecko
+	end
+
+Route9_StarterDome_ReceivedTreeckoFanfare::
+	bufferspeciesname 1, SPECIES_TREECKO
+	removeobject LOCALID_TREECKO
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedTreecko
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_TREECKO
+	return
+
+Route9_StarterDome_ReceivedTreecko::
+	setflag FLAG_STARTER_DOME_TREECKO
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Squirtle::
+	lockall
+	showmonpic SPECIES_SQUIRTLE, 10, 3
+	playmoncry SPECIES_SQUIRTLE, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickSquirtle, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickSquirtle
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickSquirtle::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_SQUIRTLE
+	givemon SPECIES_SQUIRTLE, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendSquirtleParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendSquirtlePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendSquirtleParty::
+	call Route9_StarterDome_ReceivedSquirtleFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedSquirtle
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedSquirtle
+	end
+
+Route9_StarterDome_SendSquirtlePC::
+	call Route9_StarterDome_ReceivedSquirtleFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_SquirtleTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_SquirtleTransferredToPC
+	end
+
+Route9_StarterDome_SquirtleTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedSquirtle
+	end
+
+Route9_StarterDome_ReceivedSquirtleFanfare::
+	bufferspeciesname 1, SPECIES_SQUIRTLE
+	removeobject LOCALID_SQUIRTLE
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedSquirtle
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_SQUIRTLE
+	return
+
+Route9_StarterDome_ReceivedSquirtle::
+	setflag FLAG_STARTER_DOME_SQUIRTLE
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Totodile::
+	lockall
+	showmonpic SPECIES_TOTODILE, 10, 3
+	playmoncry SPECIES_TOTODILE, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickTotodile, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickTotodile
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickTotodile::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_TOTODILE
+	givemon SPECIES_TOTODILE, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendTotodileParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendTotodilePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendTotodileParty::
+	call Route9_StarterDome_ReceivedTotodileFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedTotodile
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedTotodile
+	end
+
+Route9_StarterDome_SendTotodilePC::
+	call Route9_StarterDome_ReceivedTotodileFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_TotodileTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_TotodileTransferredToPC
+	end
+
+Route9_StarterDome_TotodileTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedTotodile
+	end
+
+Route9_StarterDome_ReceivedTotodileFanfare::
+	bufferspeciesname 1, SPECIES_TOTODILE
+	removeobject LOCALID_TOTODILE
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedTotodile
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_TOTODILE
+	return
+
+Route9_StarterDome_ReceivedTotodile::
+	setflag FLAG_STARTER_DOME_TOTODILE
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Mudkip::
+	lockall
+	showmonpic SPECIES_MUDKIP, 10, 3
+	playmoncry SPECIES_MUDKIP, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickMudkip, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickMudkip
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickMudkip::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_MUDKIP
+	givemon SPECIES_MUDKIP, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendMudkipParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendMudkipPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendMudkipParty::
+	call Route9_StarterDome_ReceivedMudkipFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedMudkip
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedMudkip
+	end
+
+Route9_StarterDome_SendMudkipPC::
+	call Route9_StarterDome_ReceivedMudkipFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_MudkipTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_MudkipTransferredToPC
+	end
+
+Route9_StarterDome_MudkipTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedMudkip
+	end
+
+Route9_StarterDome_ReceivedMudkipFanfare::
+	bufferspeciesname 1, SPECIES_MUDKIP
+	removeobject LOCALID_MUDKIP
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedMudkip
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_MUDKIP
+	return
+
+Route9_StarterDome_ReceivedMudkip::
+	setflag FLAG_STARTER_DOME_MUDKIP
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Charmander::
+	lockall
+	showmonpic SPECIES_CHARMANDER, 10, 3
+	playmoncry SPECIES_CHARMANDER, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickCharmander, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickCharmander
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickCharmander::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_CHARMANDER
+	givemon SPECIES_CHARMANDER, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendCharmanderParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendCharmanderPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendCharmanderParty::
+	call Route9_StarterDome_ReceivedCharmanderFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedCharmander
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedCharmander
+	end
+
+Route9_StarterDome_SendCharmanderPC::
+	call Route9_StarterDome_ReceivedCharmanderFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_CharmanderTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_CharmanderTransferredToPC
+	end
+
+Route9_StarterDome_CharmanderTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedCharmander
+	end
+
+Route9_StarterDome_ReceivedCharmanderFanfare::
+	bufferspeciesname 1, SPECIES_CHARMANDER
+	removeobject LOCALID_CHARMANDER
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedCharmander
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_CHARMANDER
+	return
+
+Route9_StarterDome_ReceivedCharmander::
+	setflag FLAG_STARTER_DOME_CHARMANDER
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Cyndaquil::
+	lockall
+	showmonpic SPECIES_CYNDAQUIL, 10, 3
+	playmoncry SPECIES_CYNDAQUIL, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickCyndaquil, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickCyndaquil
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickCyndaquil::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_CYNDAQUIL
+	givemon SPECIES_CYNDAQUIL, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendCyndaquilParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendCyndaquilPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendCyndaquilParty::
+	call Route9_StarterDome_ReceivedCyndaquilFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedCyndaquil
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedCyndaquil
+	end
+
+Route9_StarterDome_SendCyndaquilPC::
+	call Route9_StarterDome_ReceivedCyndaquilFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_CyndaquilTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_CyndaquilTransferredToPC
+	end
+
+Route9_StarterDome_CyndaquilTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedCyndaquil
+	end
+
+Route9_StarterDome_ReceivedCyndaquilFanfare::
+	bufferspeciesname 1, SPECIES_CYNDAQUIL
+	removeobject LOCALID_CYNDAQUIL
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedCyndaquil
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_CYNDAQUIL
+	return
+
+Route9_StarterDome_ReceivedCyndaquil::
+	setflag FLAG_STARTER_DOME_CYNDAQUIL
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_Torchic::
+	lockall
+	showmonpic SPECIES_TORCHIC, 10, 3
+	playmoncry SPECIES_TORCHIC, 0
+	waitmoncry
+	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	msgbox Route9_StarterDome_Text_PickTorchic, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route9_StarterDome_PickTorchic
+	goto Route9_StarterDome_HideMonPic
+	end
+
+Route9_StarterDome_PickTorchic::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_TORCHIC
+	givemon SPECIES_TORCHIC, 10, ITEM_ORAN_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq Route9_StarterDome_SendTorchicParty
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_StarterDome_SendTorchicPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+Route9_StarterDome_SendTorchicParty::
+	call Route9_StarterDome_ReceivedTorchicFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_ReceivedTorchic
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route9_StarterDome_ReceivedTorchic
+	end
+
+Route9_StarterDome_SendTorchicPC::
+	call Route9_StarterDome_ReceivedTorchicFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route9_StarterDome_TorchicTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route9_StarterDome_TorchicTransferredToPC
+	end
+
+Route9_StarterDome_TorchicTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route9_StarterDome_ReceivedTorchic
+	end
+
+Route9_StarterDome_ReceivedTorchicFanfare::
+	bufferspeciesname 1, SPECIES_TORCHIC
+	removeobject LOCALID_TORCHIC
+	playfanfare MUS_OBTAIN_ITEM
+	message Route9_StarterDome_Text_ObtainedTorchic
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_TORCHIC
+	return
+
+Route9_StarterDome_ReceivedTorchic::
+	setflag FLAG_STARTER_DOME_TORCHIC
+	setvar VAR_STARTER_DOME_STATE, 1
+	releaseall
+	end
+
+Route9_StarterDome_HideMonPic::
+	hidemonpic
+	releaseall
 	end
 
 WDFFU:
@@ -1281,3 +1862,66 @@ Route9_StarterDome_Text_ExcellentIAmCertain:
 Route9_StarterDome_Text_WellPlayer:
 	.string "Well, {PLAYER},\n"
 	.string "I'll see you around!$"
+
+Route9_StarterDome_Text_PickBulbasaur:
+	.string "Do you want the {COLOR}{GREEN}Seed Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Bulbasaur?$"
+
+Route9_StarterDome_Text_ObtainedBulbasaur:
+	.string "{PLAYER} received a Bulbasaur!$"
+
+Route9_StarterDome_Text_PickChikorita:
+	.string "Do you want the {COLOR}{GREEN}Leaf Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Chikorita?$"
+
+Route9_StarterDome_Text_ObtainedChikorita:
+	.string "{PLAYER} received a Chikorita!$"
+
+Route9_StarterDome_Text_PickTreecko:
+	.string "Do you want the {COLOR}{GREEN}Wood Gecko Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Treecko?$"
+
+Route9_StarterDome_Text_ObtainedTreecko:
+	.string "{PLAYER} received a Treecko!$"
+
+Route9_StarterDome_Text_PickSquirtle:
+	.string "Do you want the {COLOR}{BLUE}Tiny Turtle Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Squirtle?$"
+
+Route9_StarterDome_Text_ObtainedSquirtle:
+	.string "{PLAYER} received a Squirtle!$"
+
+Route9_StarterDome_Text_PickTotodile:
+	.string "Do you want the {COLOR}{BLUE}Big Jaw Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Totodile?$"
+
+Route9_StarterDome_Text_ObtainedTotodile:
+	.string "{PLAYER} received a Totodile!$"
+
+Route9_StarterDome_Text_PickMudkip:
+	.string "Do you want the {COLOR}{BLUE}Mud Fish Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Mudkip?$"
+
+Route9_StarterDome_Text_ObtainedMudkip:
+	.string "{PLAYER} received a Mudkip!$"
+
+Route9_StarterDome_Text_PickCharmander:
+	.string "Do you want the {COLOR}{RED}Lizard Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Charmander?$"
+
+Route9_StarterDome_Text_ObtainedCharmander:
+	.string "{PLAYER} received a Charmander!$"
+
+Route9_StarterDome_Text_PickCyndaquil:
+	.string "Do you want the {COLOR}{RED}Fire Mouse Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Cyndaquil?$"
+
+Route9_StarterDome_Text_ObtainedCyndaquil:
+	.string "{PLAYER} received a Cyndaquil!$"
+
+Route9_StarterDome_Text_PickTorchic:
+	.string "Do you want the {COLOR}{RED}Chick Pokémon{COLOR}{DARK_GRAY},\n"
+	.string "Torchic?$"
+
+Route9_StarterDome_Text_ObtainedTorchic:
+	.string "{PLAYER} received a Torchic!$"

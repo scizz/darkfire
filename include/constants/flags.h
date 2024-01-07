@@ -43,9 +43,9 @@
 
 #define FLAG_UNUSED_0x020            0x20 // Currently used for follower activation
 #define FLAG_FOLLOWER_IN_BUILDING    0x21 // Used for speeding up follower exiting a door
-#define FLAG_PREVENT_BATTLE_FLEE     0x22 // Unused Flag
+#define FLAG_PREVENT_BATTLE_FLEE     0x22 // Prevent running from wild battles
+#define FLAG_FORCE_LOAD_OFFSCREEN_OBJEV    0x23 // Force load objects out of player view
 
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
@@ -1238,15 +1238,16 @@
 #define FLAG_HIDE_LAVERIA_CITY_SAILOR_3                             0x4A0 // Darkfire Flag
 #define FLAG_ROUTE_6_STEEP_RAVINE_CLEARED                           0x4A1 // Darkfire Flag
 
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
+#define FLAG_STARTER_DOME_BULBASAUR                                 0x4A2 // Darkfire Flag
+#define FLAG_STARTER_DOME_SQUIRTLE                                  0x4A3 // Darkfire Flag
+#define FLAG_STARTER_DOME_CHARMANDER                                0x4A4 // Darkfire Flag
+#define FLAG_STARTER_DOME_CHIKORITA                                 0x4A5 // Darkfire Flag
+#define FLAG_STARTER_DOME_TOTODILE                                  0x4A6 // Darkfire Flag
+#define FLAG_STARTER_DOME_CYNDAQUIL                                 0x4A7 // Darkfire Flag
+#define FLAG_STARTER_DOME_TREECKO                                   0x4A8 // Darkfire Flag
+#define FLAG_STARTER_DOME_MUDKIP                                    0x4A9 // Darkfire Flag
+#define FLAG_STARTER_DOME_TORCHIC                                   0x4AA // Darkfire Flag
+
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
