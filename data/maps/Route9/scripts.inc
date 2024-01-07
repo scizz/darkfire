@@ -5,10 +5,21 @@
 .set LOCALID_YOUNGSTER, 10
 .set LOCALID_PROF, 6
 .set LOCALID_DAZ_2, 12
+.set LOCALID_SNORLAX, 13
 .set LOCALID_MUDKIP, 16
 
 Route9_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Route9_OnLoad
 	.byte 0
+
+Route9_OnLoad:
+	call_if_set FLAG_ROUTE_9_SNORLAX, Route9_ClearPath
+	end
+
+Route9_ClearPath::
+	setmetatile 34, 60, 1, 0
+	setmetatile 35, 60, 1, 0
+	return
 
 Route9_Sign::
 	msgbox Route9_Text_Sign, MSGBOX_SIGN
@@ -229,6 +240,45 @@ Route9_EventScript_Joseph::
 	msgbox Route9_Text_JosephPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route9_Snorlax::
+	lock
+	checkitem ITEM_POKE_FLUTE, 1
+	compare VAR_RESULT, 1
+	goto_if_eq Route9_Snorlax_WakeUp
+	msgbox Route9_Text_ASleepingPokemonBlocksTheWay, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route9_Snorlax_WakeUp:
+	msgbox Route9_Text_FluteASleepingPokemonBlocksTheWay, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_Snorlax_WakeUp_Yes
+	msgbox Route9_Text_YouLeftThePokemonSleep, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route9_Snorlax_WakeUp_Yes::
+	msgbox Route9_Text_PlayerPlayedThePokeFlute, MSGBOX_DEFAULT
+	playfanfare MUS_RG_POKE_FLUTE
+	waitfanfare
+	closemessage
+	delay 10
+	playmoncry SPECIES_SNORLAX, 0
+	waitmoncry
+	delay 10
+	msgbox Route9_Text_ThePokemonWokeUp, MSGBOX_AUTOCLOSE
+	setwildbattle SPECIES_SNORLAX, 20, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_SNORLAX, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject LOCALID_SNORLAX
+	setflag FLAG_ROUTE_9_SNORLAX
+	fadescreen 0
+	release
+	end
+
 WR2U:
 	walk_right
 	walk_right
@@ -387,3 +437,20 @@ Route9_Text_MommyMommy:
 
 Route9_Text_LetsGoPlayer:
 	.string "{COLOR}{BLUE}Let's go, {PLAYER}!$"
+
+Route9_Text_ASleepingPokemonBlocksTheWay:
+	.string "A sleeping Pokémon blocks the way…$"
+
+Route9_Text_FluteASleepingPokemonBlocksTheWay:
+	.string "A sleeping Pokémon blocks the way…\n"
+	.string "Would you like to use the Poké Flute?$"
+
+Route9_Text_PlayerPlayedThePokeFlute:
+	.string "{PLAYER} played the Poké Flute…$"
+
+Route9_Text_ThePokemonWokeUp:
+	.string "The Pokémon woke up!\n"
+	.string "It attacked in a grumpy rage!$"
+
+Route9_Text_YouLeftThePokemonSleep:
+	.string "You left the Pokémon sleep in peace.$"

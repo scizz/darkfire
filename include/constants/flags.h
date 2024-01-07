@@ -1188,7 +1188,7 @@
 #define FLAG_ITEM_ROUTE_4_SUPER_REPEL                               0x46F // Darkfire Flag
 #define FLAG_ROUTE_3_MIRACLE_SEED                                   0x470 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_2_POKE_BALL                                 0x471 // Darkfire Flag
-#define FLAG_ROUTE_3_LARVITAR_BATTLE_WON                            0x472 // UNUSED
+#define FLAG_ROUTE_9_SNORLAX                                        0x472 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_4_PP_UP                                     0x473 // Darkfire Flag
 #define FLAG_ROUTE_3_LARVITAR_BATTLE_POTION_GIVEN                   0x474 // Darkfire Flag
 #define FLAG_ITEM_PINLEAF_TOWN_MAX_REVIVE                           0x475 // Darkfire Flag
