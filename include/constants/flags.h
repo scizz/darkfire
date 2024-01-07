@@ -1237,7 +1237,6 @@
 #define FLAG_LAVERIA_CITY_AWAKENING_QUEST_STARTED                   0x49F // Darkfire Flag
 #define FLAG_HIDE_LAVERIA_CITY_SAILOR_3                             0x4A0 // Darkfire Flag
 #define FLAG_ROUTE_6_STEEP_RAVINE_CLEARED                           0x4A1 // Darkfire Flag
-
 #define FLAG_STARTER_DOME_BULBASAUR                                 0x4A2 // Darkfire Flag
 #define FLAG_STARTER_DOME_SQUIRTLE                                  0x4A3 // Darkfire Flag
 #define FLAG_STARTER_DOME_CHARMANDER                                0x4A4 // Darkfire Flag
@@ -1247,12 +1246,11 @@
 #define FLAG_STARTER_DOME_TREECKO                                   0x4A8 // Darkfire Flag
 #define FLAG_STARTER_DOME_MUDKIP                                    0x4A9 // Darkfire Flag
 #define FLAG_STARTER_DOME_TORCHIC                                   0x4AA // Darkfire Flag
-
 #define FLAG_HIDE_ROUTE_3_LARVITAR                                  0x4AB // Darkfire Flag
 #define FLAG_HIDE_PINLEAF_TOWN_TYLER                                0x4AC // Darkfire Flag
+#define FLAG_SNOWDRIFT_FOREST_OWL                                   0x4AD // Darkfire Flag
+#define FLAG_SNOWDRIFT_FOREST_SHINY_NOCTOWL                         0x4AE // Darkfire Flag
 
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
 #define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag

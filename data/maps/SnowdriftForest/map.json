@@ -5,7 +5,7 @@
   "music": "MUS_SNOWDRIFT_FOREST",
   "region_map_section": "MAPSEC_SNOWDRIFT_FOREST",
   "requires_flash": false,
-  "weather": "WEATHER_SNOW",
+  "weather": "WEATHER_VOLCANIC_ASH",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -119,19 +119,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 6,
-      "y": 48,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 35,
       "y": 22,
@@ -142,19 +129,6 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "SnowdriftForest_EventScript_Angelina",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 12,
-      "y": 21,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
       "flag": "0"
     },
     {
@@ -174,19 +148,19 @@
       "graphics_id": "OBJ_EVENT_GFX_ICE_NEST",
       "x": 4,
       "y": 17,
-      "elevation": 0,
+      "elevation": -1,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SnowdriftForest_IceNest",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NOCTOWL_SHINY",
       "x": 4,
-      "y": 11,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -194,12 +168,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_SNOWDRIFT_FOREST_OWL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HOOTHOOT",
       "x": 4,
-      "y": 11,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -207,7 +181,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_SNOWDRIFT_FOREST_OWL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NOCTOWL",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_SNOWDRIFT_FOREST_OWL"
     }
   ],
   "warp_events": [
