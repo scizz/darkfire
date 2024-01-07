@@ -2,7 +2,7 @@
   "id": "MAP_HIGHWIND_VILLAGE_HOUSE1",
   "name": "HighwindVillage_House1",
   "layout": "LAYOUT_HIGHWIND_VILLAGE_HOUSE1",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_HIGHWIND_VILLAGE",
   "region_map_section": "MAPSEC_HIGHWIND_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

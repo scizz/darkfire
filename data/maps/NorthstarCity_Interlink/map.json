@@ -2,7 +2,7 @@
   "id": "MAP_NORTHSTAR_CITY_INTERLINK",
   "name": "NorthstarCity_Interlink",
   "layout": "LAYOUT_NORTHSTAR_CITY_INTERLINK",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ROUTE_7_8",
   "region_map_section": "MAPSEC_NORTHSTAR_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_ANHEIM_FOREST_HOUSE1",
   "name": "AnheimForest_House1",
   "layout": "LAYOUT_ANHEIM_FOREST_HOUSE1",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ANHEIM_FOREST",
   "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

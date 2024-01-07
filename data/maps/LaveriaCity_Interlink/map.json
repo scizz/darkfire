@@ -2,7 +2,7 @@
   "id": "MAP_LAVERIA_CITY_INTERLINK",
   "name": "LaveriaCity_Interlink",
   "layout": "LAYOUT_LAVERIA_CITY_INTERLINK",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_LAVERIA_CITY",
   "region_map_section": "MAPSEC_LAVERIA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

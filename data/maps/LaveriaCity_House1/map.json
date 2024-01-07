@@ -2,7 +2,7 @@
   "id": "MAP_LAVERIA_CITY_HOUSE1",
   "name": "LaveriaCity_House1",
   "layout": "LAYOUT_LAVERIA_CITY_HOUSE1",
-  "music": "MUS_ABNORMAL_WEATHER",
+  "music": "MUS_LAVERIA_CITY",
   "region_map_section": "MAPSEC_LAVERIA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

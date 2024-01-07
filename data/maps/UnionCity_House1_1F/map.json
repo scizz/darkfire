@@ -2,7 +2,7 @@
   "id": "MAP_UNION_CITY_HOUSE1_1F",
   "name": "UnionCity_House1_1F",
   "layout": "LAYOUT_UNION_CITY_HOUSE1_1F",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_UNION_CITY",
   "region_map_section": "MAPSEC_UNION_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

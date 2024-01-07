@@ -2,7 +2,7 @@
   "id": "MAP_PINLEAF_TOWN_HOUSE3",
   "name": "PinleafTown_House3",
   "layout": "LAYOUT_PINLEAF_TOWN_HOUSE3",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_GREENDALE_VILLAGE",
   "region_map_section": "MAPSEC_PINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

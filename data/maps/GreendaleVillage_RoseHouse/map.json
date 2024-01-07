@@ -2,7 +2,7 @@
   "id": "MAP_GREENDALE_VILLAGE_ROSE_HOUSE",
   "name": "GreendaleVillage_RoseHouse",
   "layout": "LAYOUT_GREENDALE_VILLAGE_ROSE_HOUSE",
-  "music": "MUS_OLDALE",
+  "music": "MUS_GREENDALE_VILLAGE",
   "region_map_section": "MAPSEC_GREENDALE_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

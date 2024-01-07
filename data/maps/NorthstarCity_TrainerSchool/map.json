@@ -2,7 +2,7 @@
   "id": "MAP_NORTHSTAR_CITY_TRAINER_SCHOOL",
   "name": "NorthstarCity_TrainerSchool",
   "layout": "LAYOUT_NORTHSTAR_CITY_TRAINER_SCHOOL",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_SCHOOL",
   "region_map_section": "MAPSEC_NORTHSTAR_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

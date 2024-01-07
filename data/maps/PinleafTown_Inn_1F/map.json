@@ -2,7 +2,7 @@
   "id": "MAP_PINLEAF_TOWN_INN_1F",
   "name": "PinleafTown_Inn_1F",
   "layout": "LAYOUT_PINLEAF_TOWN_INN_1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_GREENDALE_VILLAGE",
   "region_map_section": "MAPSEC_PINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

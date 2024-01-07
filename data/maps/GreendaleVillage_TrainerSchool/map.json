@@ -2,7 +2,7 @@
   "id": "MAP_GREENDALE_VILLAGE_TRAINER_SCHOOL",
   "name": "GreendaleVillage_TrainerSchool",
   "layout": "LAYOUT_GREENDALE_VILLAGE_TRAINER_SCHOOL",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_SCHOOL",
   "region_map_section": "MAPSEC_GREENDALE_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

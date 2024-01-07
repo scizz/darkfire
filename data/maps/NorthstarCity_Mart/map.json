@@ -2,7 +2,7 @@
   "id": "MAP_NORTHSTAR_CITY_MART",
   "name": "NorthstarCity_Mart",
   "layout": "LAYOUT_NORTHSTAR_CITY_MART",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_NORTHSTAR_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

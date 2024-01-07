@@ -2,7 +2,7 @@
   "id": "MAP_NORTHSTAR_CITY_POKEMON_CENTER_1F",
   "name": "NorthstarCity_PokemonCenter_1F",
   "layout": "LAYOUT_NORTHSTAR_CITY_POKEMON_CENTER_1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_NORTHSTAR_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_PINLEAF_TOWN_STORAGE_FACILITY",
   "name": "PinleafTown_StorageFacility",
   "layout": "LAYOUT_PINLEAF_TOWN_STORAGE_FACILITY",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_GREENDALE_VILLAGE",
   "region_map_section": "MAPSEC_PINLEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
