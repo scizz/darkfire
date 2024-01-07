@@ -11339,3 +11339,9 @@ bool8 PlayerIsUnderWaterfall(struct ObjectEvent *objectEvent)
 
     return FALSE;
 }
+
+u8 Script_GetObjectFacingDirection(void)
+{
+    u8 objId = GetObjectEventIdByLocalId(VarGet(VAR_TEMP_1));
+    return gObjectEvents[objId].facingDirection;
+}
