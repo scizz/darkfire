@@ -1,3 +1,6 @@
+.set LOCALID_LARVITAR, 5
+.set LOCALID_SCHOOL_KID, 6
+
 Route3_MapScripts::
 	.byte 0
 
@@ -41,7 +44,7 @@ Route3_Larvitar::
 Route3_Nerd::
 	lock
 	faceplayer
-	goto_if_set FLAG_ROUTE_3_LARVITAR_BATTLE_WON, Route3_LarvitarBattleWon
+	goto_if_set FLAG_HIDE_ROUTE_3_LARVITAR, Route3_LarvitarBattleWon
 	msgbox Route3_Text_NerdBeforeBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -58,6 +61,114 @@ Route3_PotionReceived::
 	msgbox Route3_Text_ReceivedPotion, MSGBOX_DEFAULT
 	release
 	end
+
+Route3_DoubleBattle::
+	lockall
+	delay 10
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_SOUTH
+	goto_if_eq VAR_RESULT, DIR_SOUTH, Route3_DoubleBattle_South
+	compare VAR_RESULT, DIR_NORTH
+	call_if_eq VAR_RESULT, DIR_NORTH, Route3_DoubleBattle_North
+	compare VAR_RESULT, DIR_EAST
+	call_if_eq VAR_RESULT, DIR_EAST, Route3_DoubleBattle_East
+	goto Route3_DoubleBattle_West
+	end
+
+Route3_DoubleBattle_North::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkDown
+	waitmovement 0
+	goto Route3_DoubleBattle_MoveCamera
+	end
+
+Route3_DoubleBattle_South::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, WLD2RD
+	waitmovement 0
+	goto Route3_DoubleBattle_MoveCamera
+	end
+
+Route3_DoubleBattle_East::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDRD
+	waitmovement 0
+	goto Route3_DoubleBattle_MoveCamera
+	end
+
+Route3_DoubleBattle_West::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDLD
+	waitmovement 0
+	goto Route3_DoubleBattle_MoveCamera
+	end
+
+Route3_DoubleBattle_MoveCamera::
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WD2
+	waitmovement 0
+	goto Route3_DoubleBattle_GetPartySize
+	end
+
+Route3_DoubleBattle_GetPartySize::
+	getpartysize
+	compare VAR_RESULT, 2
+	goto_if_ge Route3_DoubleBattle_Start
+	goto Route3_DoubleBattle_NotReady
+	end
+
+Route3_DoubleBattle_NotReady::
+	applymovement LOCALID_SCHOOL_KID, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route3_Text_HmmNoYouAreNotYetReady, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, WU2
+	waitmovement 0
+	special RemoveCameraObject
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+Route3_DoubleBattle_Start::
+	applymovement LOCALID_SCHOOL_KID, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route3_Text_WhatsThatYouWishToBattleMe, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	removeobject LOCALID_LARVITAR
+	setflag FLAG_HIDE_ROUTE_3_LARVITAR
+	applymovement LOCALID_SCHOOL_KID, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_SCHOOL_KID, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	msgbox Route3_Text_HowDidYouBeatMe, MSGBOX_AUTOCLOSE
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WU2
+	waitmovement 0
+	special RemoveCameraObject
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	waitmovement 0
+	setvar VAR_ROUTE_3_DOUBLE_BATTLE, 1
+	releaseall
+	end
+
+WDRD:
+	walk_down
+	walk_right
+	walk_down
+	step_end
+
+WLD2RD:
+	walk_left
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	step_end
 
 Route3_Text_Sign:
 	.string "Route 3\n"
@@ -103,3 +214,21 @@ Route3_Text_GivePotion:
 Route3_Text_ReceivedPotion:
 	.string "You're gonna need that Potion at\n"
 	.string "some point… Trust me, you will!$"
+
+Route3_Text_HmmNoYouAreNotYetReady:
+	.string "Hmm…\p"
+	.string "No…\n"
+	.string "You are not yet ready…\p"
+	.string "Come back when you have more than one\n"
+	.string "Pokémon…$"
+
+Route3_Text_WhatsThatYouWishToBattleMe:
+	.string "What's that?\n"
+	.string "You wish to battle me?\p"
+	.string "Very well!\n"
+	.string "Bring your best Pokémon!$"
+
+Route3_Text_HowDidYouBeatMe:
+	.string "How did you beat me…\p"
+	.string "Fine…\n"
+	.string "Come and get your reward.$"

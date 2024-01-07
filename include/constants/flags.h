@@ -1188,7 +1188,7 @@
 #define FLAG_ITEM_ROUTE_4_SUPER_REPEL                               0x46F // Darkfire Flag
 #define FLAG_ROUTE_3_MIRACLE_SEED                                   0x470 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_2_POKE_BALL                                 0x471 // Darkfire Flag
-#define FLAG_ROUTE_3_LARVITAR_BATTLE_WON                            0x472 // Darkfire Flag
+#define FLAG_ROUTE_3_LARVITAR_BATTLE_WON                            0x472 // UNUSED
 #define FLAG_ITEM_ROUTE_4_PP_UP                                     0x473 // Darkfire Flag
 #define FLAG_ROUTE_3_LARVITAR_BATTLE_POTION_GIVEN                   0x474 // Darkfire Flag
 #define FLAG_ITEM_PINLEAF_TOWN_MAX_REVIVE                           0x475 // Darkfire Flag
@@ -1248,7 +1248,8 @@
 #define FLAG_STARTER_DOME_MUDKIP                                    0x4A9 // Darkfire Flag
 #define FLAG_STARTER_DOME_TORCHIC                                   0x4AA // Darkfire Flag
 
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
+#define FLAG_HIDE_ROUTE_3_LARVITAR                                  0x4AB // Darkfire Flag
+
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
