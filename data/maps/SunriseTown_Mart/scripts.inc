@@ -11,7 +11,7 @@ SunriseTown_Mart_Boy::
 
 SunriseTown_Mart_Text_Girl:
 	.string "{COLOR}{RED}I can't buy any Poké Balls.\n"
-	.string "The clerk says they're all sold out.$"
+	.string "I ran out of money…$"
 
 SunriseTown_Mart_Text_Boy:
 	.string "{COLOR}{BLUE}If a Pokémon gets hurt and loses its HP\n"
