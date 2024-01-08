@@ -88,6 +88,9 @@ CommonName_Text_Noctowl:
 CommonName_Text_HootHoot:
 	.string "HootHoot$"
 
+CommonName_Text_Pidgey:
+	.string "Pidgey$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
