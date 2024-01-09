@@ -40,6 +40,7 @@ ChandraVillage_PlayerHouse_2F_Intro::
 	playse SE_UNLOCK
 	waitse
 	delay 30
+	speakername CommonName_Text_Mom
 	msgbox ChandraVillage_PlayerHouse_2F_Text_WakeUp, MSGBOX_DEFAULT
 	setvar VAR_STORYLINE_STATE, 1
 	releaseall
@@ -62,8 +63,11 @@ ChandraVillage_PlayerHouse_2F_Storyline_State_1::
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_2F_Text_KnockingOnDoor, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	delay 30
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -71,8 +75,11 @@ ChandraVillage_PlayerHouse_2F_Storyline_State_1::
 	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_2F_Text_YouLookFlustered, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	applymovement LOCALID_MOM, Common_Movement_FaceLeft
 	waitmovement 0
 	delay 20
@@ -82,7 +89,10 @@ ChandraVillage_PlayerHouse_2F_Storyline_State_1::
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	delay 20
+	speakername CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_2F_Text_TylerLooking, MSGBOX_DEFAULT
+	hideface 1
 	closemessage
 	delay 10
 	applymovement LOCALID_MOM, Common_Movement_FaceDown

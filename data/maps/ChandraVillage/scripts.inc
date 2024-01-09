@@ -506,7 +506,7 @@ ChandraVillage_Text_PokedexDesc:
 	.string "You should find him and try battling\n"
 	.string "in the real world!\l"
 	.string "There is a lot to learn out there.\p"
-	.string "Well, I must return to the lab and get\n"
+	.string "Well, I must return to the ab and get\n"
 	.string "back to work.\p"
 	.string "Thanks again, {PLAYER}!$"
 
@@ -519,7 +519,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "a Poké Flute to wake you up!\p"
 	.string "Anyway… Listen, {PLAYER}.\p"
 	.string "There's an infestation of Pokémon in\n"
-	.string "the Professor's lab.\p"
+	.string "the Professor's Lab.\p"
 	.string "We need to go and sort the problem!\p"
 	.string "If we don't show the Professor what we\n"
 	.string "are capable of, I fear he will never\l"
@@ -527,7 +527,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "Let's go there and show him how real\n"
 	.string "Pokémon Trainers fight!\p"
 	.string "Haha!\n"
-	.string "Meet me by the Professor's lab!$"
+	.string "Meet me by the Professor's Lab!$"
 
 ChandraVillage_Hoenn:
 	.string "{COLOR}{RED}My family and I moved to Tenjo from\n"
@@ -574,11 +574,11 @@ ChandraVillage_Text_Mail:
 
 ChandraVillage_Text_Town_Sign:
 	.string "Chandra Village\n"
-	.string "{FONT_SMALL}“The Place to Call Home”$"
+	.string "{FONT_SMALL}“A Place to Call Home”$"
 
 ChandraVillage_Text_Prof:
 	.string "{PLAYER}…\p"
-	.string "Enter the lab and help get rid of the\n"
+	.string "Enter the Lab and help get rid of the\n"
 	.string "Rattata!$"
 
 ChandraVillage_Text_Facility:

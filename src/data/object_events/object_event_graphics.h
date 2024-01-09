@@ -1519,3 +1519,7 @@ const u32 gObjectEventPic_IceNest[] = INCBIN_U32("graphics/object_events/pics/mi
 const u32 gObjectEventPic_RattataOW[] = INCBIN_U32("graphics/object_events/pics/pokemon/followers/rattata_ow.4bpp");
 const u32 gObjectEventPic_NoctowlShiny[] = INCBIN_U32("graphics/object_events/pics/pokemon/noctowl_shiny.4bpp");
 const u16 gObjectEventPal_NoctowlShiny[] = INCBIN_U16("graphics/object_events/palettes/noctowl_shiny.gbapal");
+const u16 gObjectEventPal_Greyscale[] = INCBIN_U16("graphics/object_events/palettes/greyscale.gbapal");
+const u16 gObjectEventPal_GreyscaleF[] = INCBIN_U16("graphics/object_events/palettes/greyscale_f.gbapal");
+const u16 gObjectEventPal_GreyscaleH[] = INCBIN_U16("graphics/object_events/palettes/greyscale_h.gbapal");
+const u16 gObjectEventPal_GreyscaleI[] = INCBIN_U16("graphics/object_events/palettes/greyscale_i.gbapal");

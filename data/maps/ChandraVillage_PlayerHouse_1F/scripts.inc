@@ -12,6 +12,7 @@ ChandraVillage_PlayerHouse_1F_Mother::
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_OhAlmostForgot, MSGBOX_AUTOCLOSE
+	hideface 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	playfanfare MUS_OBTAIN_ITEM
@@ -113,7 +114,7 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_AlmostForgot, MSGBOX_DEFAULT
-	speakername 0
+	hideface 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	playfanfare MUS_OBTAIN_ITEM

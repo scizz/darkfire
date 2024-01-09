@@ -874,6 +874,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kojiro;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IceNest;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RattataOW;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NoctowlShiny;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreyscaleAquaMemberM;
+
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1714,6 +1716,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ICE_NEST] =                 &gObjectEventGraphicsInfo_IceNest,
     [OBJ_EVENT_GFX_RATTATA_OW] =               &gObjectEventGraphicsInfo_RattataOW,
     [OBJ_EVENT_GFX_NOCTOWL_SHINY] =            &gObjectEventGraphicsInfo_NoctowlShiny,
+    [OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO] =      &gObjectEventGraphicsInfo_GreyscaleAquaMemberM,
+    [OBJ_EVENT_GFX_GREYSCALE_FEMALE_SUBO] =    &gObjectEventGraphicsInfo_GreyscaleAquaMemberF,
+    [OBJ_EVENT_GFX_GREYSCALE_ZAGAN] =          &gObjectEventGraphicsInfo_GreyscaleArchie,
+    [OBJ_EVENT_GFX_GREYSCALE_FERALIGATR] =     &gObjectEventGraphicsInfo_GreyscaleFeraligatr,
+    [OBJ_EVENT_GFX_GREYSCALE_HOUNDOOM] =       &gObjectEventGraphicsInfo_GreyscaleHoundoom,
+    [OBJ_EVENT_GFX_GREYSCALE_POKE_BALL] =      &gObjectEventGraphicsInfo_GreyscaleItemBall,
+    
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

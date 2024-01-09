@@ -984,6 +984,10 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_KOJIRO                  0xF9C
 #define OBJ_EVENT_PAL_TAG_ICE_NEST                0xF9B
 #define OBJ_EVENT_PAL_TAG_NOCTOWL_SHINY           0xF9A
+#define OBJ_EVENT_PAL_TAG_GREYSCALE               0xF8F
+#define OBJ_EVENT_PAL_TAG_GREYSCALE_F             0xF8E
+#define OBJ_EVENT_PAL_TAG_GREYSCALE_H             0xF8D
+#define OBJ_EVENT_PAL_TAG_GREYSCALE_I             0xF8C
 
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
@@ -1024,6 +1028,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Kojiro,                OBJ_EVENT_PAL_TAG_KOJIRO},
     {gObjectEventPal_IceNest,               OBJ_EVENT_PAL_TAG_ICE_NEST},
     {gObjectEventPal_NoctowlShiny,          OBJ_EVENT_PAL_TAG_NOCTOWL_SHINY},
+    {gObjectEventPal_Greyscale,             OBJ_EVENT_PAL_TAG_GREYSCALE},
+    {gObjectEventPal_GreyscaleF,            OBJ_EVENT_PAL_TAG_GREYSCALE_F},
+    {gObjectEventPal_GreyscaleH,            OBJ_EVENT_PAL_TAG_GREYSCALE_H},
+    {gObjectEventPal_GreyscaleI,            OBJ_EVENT_PAL_TAG_GREYSCALE_I},
     {gObjectEventPal_Plates,                OBJ_EVENT_PAL_TAG_PLATES},
     {gObjectEventPal_Graffiti,              OBJ_EVENT_PAL_TAG_GRAFFITI},
     {gObjectEventPal_ParkingLot,            OBJ_EVENT_PAL_TAG_PARKING_LOT},
