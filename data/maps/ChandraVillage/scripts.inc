@@ -118,7 +118,10 @@ ChandraVillage_LabDone::
 	speakername CommonName_Text_Prof
 	call_if_set FLAG_TAKEN_PIKACHU, ChandraVillage_GivePikachu
 	call_if_unset FLAG_TAKEN_PIKACHU, ChandraVillage_GiveEevee
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_DEFAULT
+	hideface 1
 	playfanfare SE_DEX_SEARCH
 	hideface 1
 	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_DEFAULT
@@ -228,10 +231,13 @@ ChandraVillage_Town_Sign::
 	end
 
 ChandraVillage_Prof::
+	lock
+	faceplayer
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_WORRIED, 1, 1
-	msgbox ChandraVillage_Text_Prof, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Text_Prof, MSGBOX_AUTOCLOSE
 	hideface 1
+	release
 	end
 
 ChandraVillage_Joker::
@@ -266,8 +272,21 @@ ChandraVillage_Facility_Sign::
 
 ChandraVillage_Storyline_State_4::
 	lockall
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 43
+	goto_if_eq ChandraVillage_Storyline_State_4_Right
 	applymovement OBJ_EVENT_ID_PLAYER, WU2FL
 	waitmovement 0
+	goto ChandraVillage_Storyline_State_4_Next
+	end
+
+ChandraVillage_Storyline_State_4_Right::
+	applymovement OBJ_EVENT_ID_PLAYER, WLU2FL
+	waitmovement 0
+	goto ChandraVillage_Storyline_State_4_Next
+	end
+	
+ChandraVillage_Storyline_State_4_Next::
 	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -277,7 +296,7 @@ ChandraVillage_Storyline_State_4::
 	msgbox ChandraVillage_Storyline_State_4_ButProf, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_WORRIED, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_TylerWithout, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -304,7 +323,7 @@ ChandraVillage_Storyline_State_4::
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_WillYouHelp, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
@@ -347,7 +366,7 @@ ChandraVillage_Storyline_State_4_Part_2::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_VeryWell, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -369,7 +388,7 @@ ChandraVillage_Storyline_State_4_Part_2::
 	hideface 1
 	applymovement LOCALID_PROF, WDFR
 	waitmovement 0
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_FollowTyler, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -437,6 +456,13 @@ WUFR:
 WLFU:
 	walk_left
 	face_up
+	step_end
+
+WLU2FL:
+	walk_up
+	walk_left
+	walk_up
+	face_left
 	step_end
 
 ChandraVillage_Text_ExitNorth:

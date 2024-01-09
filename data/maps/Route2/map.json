@@ -245,21 +245,21 @@
       "x": 41,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE2",
+      "dest_map": "MAP_UNION_CITY",
       "dest_warp_id": "16"
     },
     {
       "x": 42,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE2",
+      "dest_map": "MAP_UNION_CITY",
       "dest_warp_id": "17"
     },
     {
       "x": 43,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE2",
+      "dest_map": "MAP_UNION_CITY",
       "dest_warp_id": "18"
     }
   ],
