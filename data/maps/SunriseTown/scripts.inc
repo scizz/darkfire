@@ -2,7 +2,7 @@ SunriseTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SunriseTown_OnTransition
 	.byte 0
 
-SunriseTown_OnTransition::
+SunriseTown_OnTransition:
 	goto_if_set FLAG_SUNRISE_TOWN_TUBER_KIDS_BEFORE, SunriseTown_End
 	removeobject 8
 	removeobject 9
@@ -36,6 +36,7 @@ SunriseTown_Little_Boy_Before::
 	waitmovement 0
 	msgbox SunriseTown_Little_Boy_Play, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
 	applymovement 7, RunRight8
 	applymovement 6, RunRight8
 	waitmovement 0
@@ -63,9 +64,11 @@ SunriseTown_Little_Girl_Before::
 	waitse
 	waitmovement 0
 	msgbox SunriseTown_Little_Girl_Play, MSGBOX_NPC
-	getplayerxy VAR_0x8000 VAR_0x8001
-	compare VAR_0x8000 39
-	call_if_eq SunriseTown_Player_Block
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 18
+	call_if_eq SunriseTown_Little_Girl_Before_MovePlayerFollowerDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
 	applymovement 7, RunRight9
 	applymovement 6, RunRight9
 	waitmovement 0
@@ -77,6 +80,12 @@ SunriseTown_Little_Girl_Before::
 	showobjectat 9, MAP_SUNRISE_TOWN
 	release
 	end
+
+SunriseTown_Little_Girl_Before_MovePlayerFollowerDown::
+	applymovement OBJ_EVENT_ID_PLAYER, WDF
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDF
+	waitmovement 0
+	return
 
 SunriseTown_Little_Boy_After::
 	msgbox SunriseTown_Little_Boy_After_Text, MSGBOX_NPC
@@ -97,11 +106,6 @@ SunriseTown_Little_Girl_Given::
 	msgbox SunriseTown_Little_Girl_Given_Text, MSGBOX_DEFAULT
 	release
 	end
-
-SunriseTown_Player_Block::
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerMove
-	waitmovement 0
-	return
 
 SunriseTown_Little_Boy_Before_Main::
 	msgbox SunriseTown_Little_Boy_Text, MSGBOX_NPC
@@ -144,6 +148,7 @@ SunriseTown_Cook_Talked_To::
 	waitmovement 0
 	msgbox SunriseTown_Fat_Guy_Run_Away, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, StepAside
+	applymovement OBJ_EVENT_ID_FOLLOWER, StepAsideFollower
 	applymovement 4, RunAway
 	waitmovement 0
 	removeobject 4
@@ -154,7 +159,8 @@ SunriseTown_Cook_Talked_To::
 SunriseTown_Krabby_1::
 	lockall
 	playmoncry SPECIES_KRABBY, 0
-	msgbox SunriseTown_Krabby_Text, MSGBOX_DEFAULT
+	speakername CommonName_Text_Krabby
+	msgbox SunriseTown_Krabby_Text1, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_KRABBY, 4, ITEM_NONE
 	dowildbattle
@@ -171,7 +177,8 @@ SunriseTown_Krabby_1::
 SunriseTown_Krabby_2::
 	lockall
 	playmoncry SPECIES_KRABBY, 0
-	msgbox SunriseTown_Krabby_Text, MSGBOX_DEFAULT
+	speakername CommonName_Text_Krabby
+	msgbox SunriseTown_Krabby_Text2, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_KRABBY, 4, ITEM_NONE
 	dowildbattle
@@ -188,7 +195,8 @@ SunriseTown_Krabby_2::
 SunriseTown_Krabby_3::
 	lockall
 	playmoncry SPECIES_KRABBY, 0
-	msgbox SunriseTown_Krabby_Text, MSGBOX_DEFAULT
+	speakername CommonName_Text_Krabby
+	msgbox SunriseTown_Krabby_Text3, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_KRABBY, 5, ITEM_NONE
 	dowildbattle
@@ -292,8 +300,18 @@ SunriseTown_Fat_Guy_Run_Away:
 	.string "The food at the hotel is ready?!\p"
 	.string "Hold on - I'm coming!$"
 
-SunriseTown_Krabby_Text:
-	.string "Krabby: Krab-krab!$"
+SunriseTown_Krabby_Text1:
+	.string "Krab-krab!$"
+
+SunriseTown_Krabby_Text2:
+	.string "Krabb!$"
+
+SunriseTown_Krabby_Text3:
+	.string "Krib!$"
+
+WDF:
+	walk_fast_down
+	step_end
 
 RunRight8:
 	walk_fast_right
@@ -318,14 +336,14 @@ RunRight9:
 	walk_fast_right
 	step_end
 
-PlayerMove:
-	walk_up
-	face_right
-	step_end
-
 StepAside:
 	walk_fast_left
 	face_right
+	step_end
+
+StepAsideFollower:
+	walk_fast_left
+	follower_face_right
 	step_end
 
 RunAway:

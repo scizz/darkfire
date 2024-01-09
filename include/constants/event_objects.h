@@ -842,8 +842,14 @@
 #define OBJ_EVENT_GFX_RATTATA_OW                 835
 #define OBJ_EVENT_GFX_NOCTOWL_SHINY              836
 #define OBJ_EVENT_GFX_BURIED_ITEM_BALL           837
+#define OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO        838
+#define OBJ_EVENT_GFX_GREYSCALE_FEMALE_SUBO      839
+#define OBJ_EVENT_GFX_GREYSCALE_ZAGAN            840
+#define OBJ_EVENT_GFX_GREYSCALE_FERALIGATR       841
+#define OBJ_EVENT_GFX_GREYSCALE_HOUNDOOM         842
+#define OBJ_EVENT_GFX_GREYSCALE_POKE_BALL        843
 
-#define NUM_OBJ_EVENT_GFX                        838
+#define NUM_OBJ_EVENT_GFX                        844
 
 
 // These are dynamic object gfx ids.

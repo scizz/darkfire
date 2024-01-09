@@ -493,7 +493,7 @@
       "x": 10,
       "y": 37,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -653,6 +653,27 @@
       "elevation": 3,
       "dest_map": "MAP_UNION_CITY_INTERLINK",
       "dest_warp_id": "8"
+    },
+    {
+      "x": 89,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 90,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 91,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

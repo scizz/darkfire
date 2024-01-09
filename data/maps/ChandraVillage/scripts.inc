@@ -118,7 +118,10 @@ ChandraVillage_LabDone::
 	speakername CommonName_Text_Prof
 	call_if_set FLAG_TAKEN_PIKACHU, ChandraVillage_GivePikachu
 	call_if_unset FLAG_TAKEN_PIKACHU, ChandraVillage_GiveEevee
+	speakername CommonName_Text_Prof
+	showface FS_PROF, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_DEFAULT
+	hideface 1
 	playfanfare SE_DEX_SEARCH
 	hideface 1
 	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_DEFAULT
@@ -228,10 +231,13 @@ ChandraVillage_Town_Sign::
 	end
 
 ChandraVillage_Prof::
+	lock
+	faceplayer
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_WORRIED, 1, 1
-	msgbox ChandraVillage_Text_Prof, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Text_Prof, MSGBOX_AUTOCLOSE
 	hideface 1
+	release
 	end
 
 ChandraVillage_Joker::
@@ -266,8 +272,21 @@ ChandraVillage_Facility_Sign::
 
 ChandraVillage_Storyline_State_4::
 	lockall
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 43
+	goto_if_eq ChandraVillage_Storyline_State_4_Right
 	applymovement OBJ_EVENT_ID_PLAYER, WU2FL
 	waitmovement 0
+	goto ChandraVillage_Storyline_State_4_Next
+	end
+
+ChandraVillage_Storyline_State_4_Right::
+	applymovement OBJ_EVENT_ID_PLAYER, WLU2FL
+	waitmovement 0
+	goto ChandraVillage_Storyline_State_4_Next
+	end
+	
+ChandraVillage_Storyline_State_4_Next::
 	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -277,7 +296,7 @@ ChandraVillage_Storyline_State_4::
 	msgbox ChandraVillage_Storyline_State_4_ButProf, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_WORRIED, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_TylerWithout, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -304,7 +323,7 @@ ChandraVillage_Storyline_State_4::
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_WillYouHelp, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
@@ -347,7 +366,7 @@ ChandraVillage_Storyline_State_4_Part_2::
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_VeryWell, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -369,7 +388,7 @@ ChandraVillage_Storyline_State_4_Part_2::
 	hideface 1
 	applymovement LOCALID_PROF, WDFR
 	waitmovement 0
-	speakername CommonName_Text_Prof
+	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_FollowTyler, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -439,6 +458,13 @@ WLFU:
 	face_up
 	step_end
 
+WLU2FL:
+	walk_up
+	walk_left
+	walk_up
+	face_left
+	step_end
+
 ChandraVillage_Text_ExitNorth:
 	.string "{COLOR}{BLUE}Hey, kid!\p"
 	.string "What do you get when you mix a Pikachu\n"
@@ -506,7 +532,7 @@ ChandraVillage_Text_PokedexDesc:
 	.string "You should find him and try battling\n"
 	.string "in the real world!\l"
 	.string "There is a lot to learn out there.\p"
-	.string "Well, I must return to the lab and get\n"
+	.string "Well, I must return to the ab and get\n"
 	.string "back to work.\p"
 	.string "Thanks again, {PLAYER}!$"
 
@@ -519,7 +545,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "a Poké Flute to wake you up!\p"
 	.string "Anyway… Listen, {PLAYER}.\p"
 	.string "There's an infestation of Pokémon in\n"
-	.string "the Professor's lab.\p"
+	.string "the Professor's Lab.\p"
 	.string "We need to go and sort the problem!\p"
 	.string "If we don't show the Professor what we\n"
 	.string "are capable of, I fear he will never\l"
@@ -527,7 +553,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "Let's go there and show him how real\n"
 	.string "Pokémon Trainers fight!\p"
 	.string "Haha!\n"
-	.string "Meet me by the Professor's lab!$"
+	.string "Meet me by the Professor's Lab!$"
 
 ChandraVillage_Hoenn:
 	.string "{COLOR}{RED}My family and I moved to Tenjo from\n"
@@ -574,11 +600,11 @@ ChandraVillage_Text_Mail:
 
 ChandraVillage_Text_Town_Sign:
 	.string "Chandra Village\n"
-	.string "{FONT_SMALL}“The Place to Call Home”$"
+	.string "{FONT_SMALL}“A Place to Call Home”$"
 
 ChandraVillage_Text_Prof:
 	.string "{PLAYER}…\p"
-	.string "Enter the lab and help get rid of the\n"
+	.string "Enter the Lab and help get rid of the\n"
 	.string "Rattata!$"
 
 ChandraVillage_Text_Facility:

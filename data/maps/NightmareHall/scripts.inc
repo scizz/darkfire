@@ -12,8 +12,6 @@ NightmareHall_InitRoomObjects::
 	end
 
 NightmareHall_CutSceneTrigger::
-	lock
-	createvobject OBJ_EVENT_GFX_NINJA_BOY, 11, 9, 4, 3, DIR_SOUTH
 	applymovement OBJ_EVENT_ID_PLAYER, WR4
 	waitmovement 0
 	applymovement 10, FaceLeftQuestionMark
@@ -67,6 +65,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRightSlow
 	waitmovement 0
 	delay 30
+
 	applymovement 8, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement 2, Common_Movement_FaceUp
@@ -270,12 +269,14 @@ NightmareHall_CutSceneTrigger::
 	waitse
 	playse SE_UNLOCK
 	waitse
+	speakername SpeakerName_Text_QuestionMark
 	msgbox NightmareHall_Text_Player, MSGBOX_AUTOCLOSE
 	delay 30
 	playse SE_UNLOCK
 	waitse
 	playse SE_UNLOCK
 	waitse
+	speakername SpeakerName_Text_QuestionMark
 	msgbox NightmareHall_Text_OpenDoor, MSGBOX_AUTOCLOSE
 	setvar VAR_TEMP_0, 1
 	applymovement OBJ_EVENT_ID_PLAYER, RunDownTwelve
@@ -355,42 +356,44 @@ NightmareHall_Text_SeeThis:
 	.string "do not leave this place immediately…$"
 
 NightmareHall_Text_DraculOne:
-	.string "{COLOR}{BLUE}Dracul…$"
+	.string "Dracul…$"
 
 NightmareHall_Text_YesBoss:
 	.string "{COLOR}{BLUE}Yes, boss?$"
 
 NightmareHall_Text_Spectate:
-	.string "{COLOR}{BLUE}Let the kid spectate.$"
+	.string "Let the kid spectate.$"
 
 NightmareHall_Text_YesBossTwo:
 	.string "{COLOR}{BLUE}Yes, boss…$"
 
 NightmareHall_Text_Sandslash:
-	.string "{COLOR}{BLUE}Sandslash!\n"
+	.string "{COLOR}{BLUE}Feraligatr!\n"
 	.string "Use Leer!$"
 
 NightmareHall_Text_Houndour:
-	.string "{COLOR}{BLUE}Houndour!\n"
-	.string "Use Ember!$"
+	.string "{COLOR}{BLUE}Houndoom!\n"
+	.string "Use Fire Blast!$"
 
 NightmareHall_Text_Sandslash_Hurt:
-	.string "{COLOR}{BLUE}Sandslash!\n"
+	.string "{COLOR}{BLUE}Feraligatr!\n"
 	.string "No!$"
 
 NightmareHall_Text_Houndour_Final:
-	.string "{COLOR}{BLUE}Houndour!\n"
+	.string "{COLOR}{BLUE}Houndoom!\n"
 	.string "It's burned! Finish it!$"
 
 NightmareHall_Text_Sandslash_Fainted:
-	.string "{COLOR}{BLUE}No! My Sandslash!\n"
-	.string "How did you defeat it with Ember?!\p"
-	.string "You… You've burned it to ashes!\n"
+	.string "{COLOR}{BLUE}No! My Feraligatr!\n"
+	.string "How did you defeat it with fire?!\p"
+	.string "You've… You've vaporized it!\n"
+	.string "You… You've burned it to ashes!\l"
 	.string "It won't go back in its Poké Ball!\p"
 	.string "… What?\n"
 	.string "You've completely destroyed it!\p"
-	.string "It can't be…\p"
-	.string "It's… It's not alive…\n"
+	.string "It can't be…\n"
+	.string "How can your Pokémon be this strong?\l"
+	.string "My Feraligatr… It's gone…\l"
 	.string "Someone… Anyone…\n"
 	.string "Please help me!$"
 
@@ -430,16 +433,16 @@ NightmareHall_Text_SeeThisKid:
 	.string "fight to the death.$"
 
 NightmareHall_Text_DraculTwo:
-	.string "{COLOR}{BLUE}Dracul…$"
+	.string "Dracul…$"
 
 NightmareHall_Text_SeenTooMuch:
-	.string "{COLOR}{BLUE}The kid has seen too much.$"
+	.string "The kid has seen too much.$"
 
 NightmareHall_Text_WhatShouldWeDo:
 	.string "{COLOR}{BLUE}What should we do to the kid, boss?$"
 
 NightmareHall_Text_Pinsir:
-	.string "{COLOR}{BLUE}Where's my Pinsir?\n"
+	.string "Where's my Pinsir?\n"
 	.string "It just learned Guillotine…$"
 
 NightmareHall_Text_GetTheKid:

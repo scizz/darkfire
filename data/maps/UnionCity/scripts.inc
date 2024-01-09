@@ -62,7 +62,7 @@ UnionCity_TylerPresidentIntro_President::
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	speakername CommonName_Text_President
+	speakername2 CommonName_Text_President
 	showface FS_PRESIDENT, FSE_NORMAL, 0, 0
 	msgbox UnionCity_Text_OhGoodHeavens, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -90,7 +90,7 @@ UnionCity_TylerPresidentIntro_PresidentYes::
 	hideface 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	speakername CommonName_Text_President
+	speakername2 CommonName_Text_President
 	showface FS_PRESIDENT, FSE_NORMAL, 0, 0
 	msgbox UnionCity_Text_PlayerYes, MSGBOX_DEFAULT
 	closemessage
@@ -103,7 +103,7 @@ UnionCity_TylerPresidentIntro_PresidentNo::
 	hideface 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	speakername CommonName_Text_President
+	speakername2 CommonName_Text_President
 	showface FS_PRESIDENT, FSE_NORMAL, 0, 0
 	msgbox UnionCity_Text_PlayerNo, MSGBOX_DEFAULT
 	closemessage
@@ -436,7 +436,7 @@ UnionCity_Text_WelcomeToUnion::
 	.string "Later!$"
 
 UnionCity_Text_OhGoodHeavens:
-	.string "President: Oh, good heavens!\n"
+	.string "Oh, good heavens!\n"
 	.string "I am so sorry, I didn't see you!\p"
 	.string "Current events in the city have me\n"
 	.string "running around on a wild goose chase!\p"
@@ -448,14 +448,14 @@ UnionCity_Text_OhGoodHeavens:
 	.string "Village, yes?$"
 
 UnionCity_Text_PlayerYes:
-	.string "President: Oh, how wonderful!\p"
+	.string "Oh, how wonderful!\p"
 	.string "Well, Trainer, be sure to pay me a\n"
 	.string "visit in my office when things are a\l"
 	.string "little less crazy around here.\p"
 	.string "Gotta run!$"
 
 UnionCity_Text_PlayerNo:
-	.string "President: … No?\p"
+	.string "… No?\p"
 	.string "Well, Trainer, be sure to pay me a\n"
 	.string "visit in my office when things are a\l"
 	.string "little less crazy around here.\p"

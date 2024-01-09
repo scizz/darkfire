@@ -91,6 +91,12 @@ CommonName_Text_HootHoot:
 CommonName_Text_Pidgey:
 	.string "Pidgey$"
 
+CommonName_Text_Krabby:
+	.string "Krabby$"
+
+CommonName_Text_Zigzagoon:
+	.string "Zigzagoon$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

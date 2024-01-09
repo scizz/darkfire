@@ -1,8 +1,33 @@
-.set LOCALID_PIDGEY, 5
-.set LOCALID_TYLER, 6
+.set LOCALID_PIDGEY, 8
+.set LOCALID_TYLER, 5
 
 Route1_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, Route1_OnLoad
 	.byte 0
+
+Route1_OnTransition:
+	call_if_set FLAG_HIDE_UNION_CITY_PRESIDENT, Route1_HideTruck
+	end
+
+Route1_OnLoad:
+	call_if_set FLAG_HIDE_UNION_CITY_PRESIDENT, Route1_ClearPath
+	end
+
+Route1_ClearPath::
+	setmetatile 8, 13, 337, 0
+	setmetatile 9, 13, 337, 0
+	setmetatile 10, 13, 337, 0
+	setmetatile 8, 14, 337, 0
+	setmetatile 9, 14, 337, 0
+	setmetatile 10, 14, 337, 0
+	return
+
+Route1_HideTruck::
+	removeobject 6
+	removeobject 7
+	setflag FLAG_HIDE_ROUTE_1_TRUCK
+	end
 
 Route1_Storyline_State9::
 	lock
@@ -322,6 +347,7 @@ Route1_Jump_Event::
 	waitmovement 0
 	msgbox Route1_Jump_Text_4, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, StepLeftFaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, StepLeftFaceRight
 	applymovement 2, StepLeftUpFaceDown
 	waitmovement 0
 	setflag FLAG_ROUTE_1_POND_JUMP
@@ -684,7 +710,7 @@ Speaker_Text_Pidgey:
 	.string "Pidgey$"
 
 Route1_PidgeyIntro_Pidgey:
-	.string "Pidgey: Gaaarr!$"
+	.string "Gaaarr!$"
 
 Route1_PidgeyIntro_Text_PlayerFoundSomething:
 	.string "{COLOR}{BLUE}What's that, {PLAYER}?\n"
@@ -764,7 +790,7 @@ Route1_Boy_Text:
 
 Route1_Location_Sign_Text:
 	.string "Route 1\n"
-	.string "The Route of New Beginnings!$"
+	.string "{FONT_SMALL}“The Path to New Adventures”$"
 
 JumpDown:
 	jump_2_down

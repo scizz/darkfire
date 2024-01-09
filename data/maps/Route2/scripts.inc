@@ -50,6 +50,7 @@ Route2_EventScript_Ricky::
 Route2_Zigzagoon::
 	lockall
 	playmoncry SPECIES_ZIGZAGOON, 0
+	speakername CommonName_Text_Zigzagoon
 	msgbox Route2_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_ZIGZAGOON, 5, ITEM_ORAN_BERRY
@@ -103,4 +104,4 @@ Route2_Text_Old_Woman:
 	.string "longer with me…$"
 
 Route2_Text_Zigzagoon:
-	.string "Zigzagoon: Zigg!$"
+	.string "Zigg!$"

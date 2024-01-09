@@ -63,7 +63,8 @@ ChandraVillage_Lab_PickPokemon::
 	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Lab_Text_DoYouThink, MSGBOX_DEFAULT
 	hideface 1
-	giveitem ITEM_POKE_BALL, 0
+	giveitem ITEM_POKE_BALL, 1
+	removeitem ITEM_POKE_BALL, 1
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_HAPPY 1, 1
 	msgbox ChandraVillage_Lab_Text_DontHoldInHand, MSGBOX_DEFAULT
@@ -604,7 +605,7 @@ WD7:
 ChandraVillage_Lab_Text_ListenUp:
 	.string "{COLOR}{BLUE}OK, {PLAYER}, listen up!\p"
 	.string "Professor Hawthorne left a couple of\n"
-	.string "Pokémon at the back of the lab.\p"
+	.string "Pokémon at the back of the Lab.\p"
 	.string "They look pretty tame to me.\n"
 	.string "Let's go check them out!$"
 
@@ -760,6 +761,6 @@ ChandraVillage_Lab_Text_ComeBack:
 
 ChandraVillage_Lab_Text_Prof:
 	.string "Hi, {PLAYER}.\n"
-	.string "Thanks again for saving the lab.\p"
+	.string "Thanks again for saving the Lab.\p"
 	.string "I hope the Pokémon and Pokédex I gave\n"
 	.string "you helps you in your journey.$"
