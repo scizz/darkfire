@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_SUNNY_CLOUDS",
   "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -198,7 +201,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_FOLLOWER",
-      "x": 42,
+      "x": 41,
       "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -328,7 +331,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 42,
+      "x": 41,
       "y": 9,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -337,7 +340,7 @@
     },
     {
       "type": "trigger",
-      "x": 43,
+      "x": 42,
       "y": 9,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -414,8 +417,5 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ChandraVillage_Facility_Sign"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
