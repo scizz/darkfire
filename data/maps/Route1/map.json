@@ -106,7 +106,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ChandraVillage_Idle_Truck",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE_1_TRUCK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
@@ -119,7 +119,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ChandraVillage_Truck_Boy",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE_1_TRUCK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
