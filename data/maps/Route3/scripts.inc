@@ -8,11 +8,15 @@ Route3_Sign::
 	msgbox Route3_Text_Sign, MSGBOX_SIGN
 	end
 
+Route3_LeftSign::
+	msgbox Route3_Text_LeftSign, MSGBOX_SIGN
+	end
+
 Route3_EventScript_MiracleSeed::
 	lockall
 	faceplayer
 	goto_if_set FLAG_ROUTE_3_MIRACLE_SEED, Route3_MiracleSeed_Received
-	msgbox Route3_Text_MiracleSeedOne, MSGBOX_YESNO
+	msgbox Route3_Text_MiracleSeedOne, MSGBOX_DEFAULT
 	giveitem ITEM_MIRACLE_SEED, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
@@ -35,9 +39,13 @@ Route3_Girl::
 
 Route3_Larvitar::
 	lock
+	faceplayer
+	speakername CommonName_Text_Larvitar
 	playmoncry SPECIES_LARVITAR, 0
-	msgbox Route3_Text_Larvitar, MSGBOX_DEFAULT
+	msgbox Route3_Text_Larvitar, MSGBOX_AUTOCLOSE
 	waitmoncry
+	applymovement LOCALID_LARVITAR, Common_Movement_FaceUp
+	waitmovement 0
 	release
 	end
 
@@ -146,6 +154,7 @@ Route3_DoubleBattle_Start::
 	applymovement LOCALID_SCHOOL_KID, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	msgbox Route3_Text_HowDidYouBeatMe, MSGBOX_AUTOCLOSE
+	special RemoveCameraObject
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, WU2
 	waitmovement 0
@@ -172,7 +181,11 @@ WLD2RD:
 
 Route3_Text_Sign:
 	.string "Route 3\n"
-	.string "{LEFT_ARROW} Anheim Forest"
+	.string "{UP_ARROW} Anheim Forest$"
+
+Route3_Text_LeftSign:
+	.string "Route 3\n"
+	.string "{LEFT_ARROW} Anheim Forest$"
 
 Route3_Text_Guitarist:
 	.string "{COLOR}{BLUE}I've got one piece of advice…\p"
@@ -195,11 +208,11 @@ Route3_Text_MiracleSeedOne:
 
 Route3_Text_MiracleSeedTwo:
 	.string "{COLOR}{BLUE}Miracle Seed boosts Grass-type moves\n"
-	.string "when held by a Pokémon.\p"
+	.string "when held by a Pokémon.\l"
 	.string "Give it a try!$"
 
 Route3_Text_Larvitar:
-	.string "Larvitar: Grra!$"
+	.string "Grra!$"
 
 Route3_Text_NerdBeforeBattle:
 	.string "I just got done training my Larvitar\n"

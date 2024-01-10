@@ -98,8 +98,8 @@ Route6_EventScript_ItemFullHeal::
 	finditem ITEM_FULL_HEAL
 	end
 
-Route114_EventScript_ItemEnergyPowder:: @ 8290E1D
-	finditem ITEM_ENERGY_POWDER
+Route3_EventScript_ItemLuxuryBall::
+	finditem ITEM_LUXURY_BALL
 	end
 
 Route6_EventScript_ItemTimerBall::

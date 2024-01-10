@@ -410,7 +410,7 @@ SpeakerName_Text_Paul:
 
 Route5_Text_Sign:
 	.string "Route 5\n"
-	.string "The Route of Legends$"
+	.string "{FONT_SMALL}“The Path of Legends”$"
 
 Route5_Text_Myth:
 	.string "The one destin'd to awaken the\n"

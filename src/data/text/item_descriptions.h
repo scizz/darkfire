@@ -3670,9 +3670,9 @@ static const u8 sOldSeaMapDesc[] = _(
     "to a certain island.");
 
 static const u8 sLetterDesc[] = _(
-    "A letter to Steven\n"
-    "from the President\n"
-    "of the Devon Corp.");
+    "A letter to be\n"
+    "delivered to\n"
+    "Greendale Village.");
 
 static const u8 sDevonPartsDesc[] = _(
     "A package that\n"

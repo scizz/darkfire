@@ -64,7 +64,7 @@ Route3_House1_Man_Text_No:
 
 Route3_House1_Text_Man_1:
 	.string "{COLOR}{BLUE}Howdy!\n"
-	.string "You're a Pokémon trainer, right?$"
+	.string "You're a Pokémon Trainer, right?$"
 
 Route3_House1_Text_Man_2:
 	.string "{COLOR}{BLUE}Phew! That's great!\n"

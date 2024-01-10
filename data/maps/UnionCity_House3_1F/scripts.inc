@@ -6,17 +6,18 @@ UnionCity_House3_1F_Ace_Trainer_M::
 	end
 
 UnionCity_House3_1F_Woman::
-	lockall
+	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_POKE_BALL_UNION_CITY, UnionCity_House3_1F_Woman_Given
-	msgbox UnionCity_House3_1F_Text_Woman, MSGBOX_NPC
+	msgbox UnionCity_House3_1F_Text_Woman, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 1
 	setflag FLAG_RECEIVED_POKE_BALL_UNION_CITY
 	goto UnionCity_House3_1F_Woman_Given
+	end
 
 UnionCity_House3_1F_Woman_Given::
 	msgbox UnionCity_House3_1F_Text_Woman_Given, MSGBOX_DEFAULT
-	releaseall
+	release
 	end
 
 UnionCity_House3_1F_Text_Ace_Trainer_M:
