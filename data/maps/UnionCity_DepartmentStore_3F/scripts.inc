@@ -12,7 +12,7 @@ UnionCity_DepartmentStore_3F_Boy::
 UnionCity_DepartmentStore_3F_Text_Girl:
 	.string "{COLOR}{RED}I gave a Carbos to my Pokémon,\n"
 	.string "and its Speed went up.\p"
-	.string "Then I gave an HP-Up to my Pokémon,"
+	.string "Then I gave an HP-Up to my Pokémon,\n"
 	.string "and, well, it's self-explanatory…$"
 
 UnionCity_DepartmentStore_3F_Text_Boy:

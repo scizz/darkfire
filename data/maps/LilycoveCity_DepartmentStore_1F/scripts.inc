@@ -1,4 +1,4 @@
-.set LOCALID_LOTTERY_CLERK, 2
+.set LOCALID_LOTTERY_CLERK, 4
 
 LilycoveCity_DepartmentStore_1F_MapScripts:: @ 821F692
 	.byte 0
@@ -27,10 +27,10 @@ LilycoveCity_DepartmentStore_1F_EventScript_LotteryClerk:: @ 821F69C
 	applymovement LOCALID_LOTTERY_CLERK, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	playse SE_PC_ON
-	special DoLotteryCornerComputerEffect
+	@special DoLotteryCornerComputerEffect
 	special PickLotteryCornerTicket
 	delay 220
-	special EndLotteryCornerComputerEffect
+	@special EndLotteryCornerComputerEffect
 	delay 10
 	applymovement LOCALID_LOTTERY_CLERK, Common_Movement_FacePlayer
 	waitmovement 0
@@ -168,7 +168,7 @@ LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill: @ 821F92B
 	.string "as a reward for winning a CONTEST.$"
 
 LilycoveCity_DepartmentStore_1F_Text_Azumarill: @ 821F974
-	.string "AZUMARILL: Maririroo!$"
+	.string "Maririroo!$"
 
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign: @ 821F98A
 	.string "1F: SERVICE COUNTER\n"
