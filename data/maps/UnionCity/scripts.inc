@@ -462,8 +462,8 @@ UnionCity_Text_PlayerNo:
 	.string "Gotta run!$"
 
 UnionCity_Text_Sign:
-	.string "Union City\p"
-	.string "{FONT_SMALL}“Progress Illuminates the Urban Skyline”$"
+	.string "Union City\n"
+	.string "{FONT_SMALL}“Progress Illuminates”$"
 
 UnionCity_Text_Museum_Sign:
 	.string "No ball games!$"
