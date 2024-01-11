@@ -196,16 +196,16 @@ ChandraVillage_Old_Man::
 	lockall
 	faceplayer
 	msgbox ChandraVillage_Structure, MSGBOX_NPC
-	applymovement 8, Common_Movement_FaceUp
+	applymovement 6, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	delay 60
-	applymovement 8, Common_Movement_WalkInPlaceSlowLeft
+	applymovement 6, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox ChandraVillage_Dusclops, MSGBOX_NPC
-	applymovement 8, Common_Movement_FaceUp
+	applymovement 6, Common_Movement_FaceUp
 	waitmovement 0
 	releaseall
 	end

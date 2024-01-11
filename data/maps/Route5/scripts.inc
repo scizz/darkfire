@@ -319,7 +319,12 @@ Route5_Girl::
 	end
 
 Route5_Camper::
-	msgbox Route5_Text_Camper, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox Route5_Text_Camper, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceUp
+	waitmovement 0
+	release
 	end
 
 Route5_EventScript_Pete::

@@ -1075,13 +1075,28 @@ static const struct InGameTrade sIngameTrades[] =
         .abilityNum = 0,
         .otId = 25698,
         .conditions = {5, 5, 5, 30, 5},
-        .personality = 0x8B,
+        .personality = 0x01,
         .heldItem = ITEM_ORAN_BERRY,
         .mailNum = -1,
         .otName = _("Ria"),
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_ZIGZAGOON
+    },
+    {
+        .nickname = _("Hedwig"),
+        .species = SPECIES_HOOTHOOT,
+        .ivs = {7, 6, 7, 6, 5, 5},
+        .abilityNum = 0,
+        .otId = 32284,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x01,
+        .heldItem = ITEM_SHEENY_SEED,
+        .mailNum = -1,
+        .otName = _("Harold"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_SWINUB
     }
 };
 

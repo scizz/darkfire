@@ -1314,9 +1314,9 @@
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 
 // Darkfire Trades
+#define FLAG_COMPLETE_TRADE_HOOTHOOT                                0x4EE // Highwind Village House 2
 #define FLAG_COMPLETE_TRADE_NIDORAN_F                               0x4EF // Union City House 2
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
