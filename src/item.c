@@ -199,7 +199,7 @@ bool8 CheckBagHasSpace(u16 itemId, u16 count)
     if (pocket != BERRIES_POCKET)
         slotCapacity = MAX_BAG_ITEM_CAPACITY;
     else
-        slotCapacity = MAX_BERRY_CAPACITY;
+        slotCapacity = MAX_BAG_ITEM_CAPACITY;
 
     // Check space in any existing item slots that already contain this item
     for (i = 0; i < gBagPockets[pocket].capacity; i++)
@@ -271,7 +271,7 @@ bool8 AddBagItem(u16 itemId, u16 count)
         if (pocket != BERRIES_POCKET)
             slotCapacity = MAX_BAG_ITEM_CAPACITY;
         else
-            slotCapacity = MAX_BERRY_CAPACITY;
+            slotCapacity = MAX_BAG_ITEM_CAPACITY;
 
         for (i = 0; i < itemPocket->capacity; i++)
         {
@@ -700,7 +700,11 @@ static bool8 CheckPyramidBagHasItem(u16 itemId, u16 count)
 {
     u8 i;
     u16 *items = gSaveBlock2Ptr->frontier.pyramidBag.itemId[gSaveBlock2Ptr->frontier.lvlMode];
+    #if MAX_PYRAMID_BAG_ITEM_CAPACITY > 255
+    u16 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    #else
     u8 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    #endif
 
     for (i = 0; i < PYRAMID_BAG_ITEMS_COUNT; i++)
     {
@@ -722,16 +726,20 @@ static bool8 CheckPyramidBagHasSpace(u16 itemId, u16 count)
 {
     u8 i;
     u16 *items = gSaveBlock2Ptr->frontier.pyramidBag.itemId[gSaveBlock2Ptr->frontier.lvlMode];
+    #if MAX_PYRAMID_BAG_ITEM_CAPACITY > 255
+    u16 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    #else
     u8 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    #endif
 
     for (i = 0; i < PYRAMID_BAG_ITEMS_COUNT; i++)
     {
         if (items[i] == itemId || items[i] == ITEM_NONE)
         {
-            if (quantities[i] + count <= MAX_BAG_ITEM_CAPACITY)
+            if (quantities[i] + count <= MAX_PYRAMID_BAG_ITEM_CAPACITY)
                 return TRUE;
 
-            count = (quantities[i] + count) - MAX_BAG_ITEM_CAPACITY;
+            count = (quantities[i] + count) - MAX_PYRAMID_BAG_ITEM_CAPACITY;
             if (count == 0)
                 return TRUE;
         }
@@ -745,23 +753,29 @@ bool8 AddPyramidBagItem(u16 itemId, u16 count)
     u16 i;
 
     u16 *items = gSaveBlock2Ptr->frontier.pyramidBag.itemId[gSaveBlock2Ptr->frontier.lvlMode];
-    u8 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
 
     u16 *newItems = Alloc(PYRAMID_BAG_ITEMS_COUNT * sizeof(*newItems));
+
+    #if MAX_PYRAMID_BAG_ITEM_CAPACITY > 255
+    u16 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    u16 *newQuantities = Alloc(PYRAMID_BAG_ITEMS_COUNT * sizeof(*newQuantities));
+    #else
+    u8 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
     u8 *newQuantities = Alloc(PYRAMID_BAG_ITEMS_COUNT * sizeof(*newQuantities));
+    #endif
 
     memcpy(newItems, items, PYRAMID_BAG_ITEMS_COUNT * sizeof(*newItems));
     memcpy(newQuantities, quantities, PYRAMID_BAG_ITEMS_COUNT * sizeof(*newQuantities));
 
     for (i = 0; i < PYRAMID_BAG_ITEMS_COUNT; i++)
     {
-        if (newItems[i] == itemId && newQuantities[i] < MAX_BAG_ITEM_CAPACITY)
+        if (newItems[i] == itemId && newQuantities[i] < MAX_PYRAMID_BAG_ITEM_CAPACITY)
         {
             newQuantities[i] += count;
-            if (newQuantities[i] > MAX_BAG_ITEM_CAPACITY)
+            if (newQuantities[i] > MAX_PYRAMID_BAG_ITEM_CAPACITY)
             {
-                count = newQuantities[i] - MAX_BAG_ITEM_CAPACITY;
-                newQuantities[i] = MAX_BAG_ITEM_CAPACITY;
+                count = newQuantities[i] - MAX_PYRAMID_BAG_ITEM_CAPACITY;
+                newQuantities[i] = MAX_PYRAMID_BAG_ITEM_CAPACITY;
             }
             else
             {
@@ -781,10 +795,10 @@ bool8 AddPyramidBagItem(u16 itemId, u16 count)
             {
                 newItems[i] = itemId;
                 newQuantities[i] = count;
-                if (newQuantities[i] > MAX_BAG_ITEM_CAPACITY)
+                if (newQuantities[i] > MAX_PYRAMID_BAG_ITEM_CAPACITY)
                 {
-                    count = newQuantities[i] - MAX_BAG_ITEM_CAPACITY;
-                    newQuantities[i] = MAX_BAG_ITEM_CAPACITY;
+                    count = newQuantities[i] - MAX_PYRAMID_BAG_ITEM_CAPACITY;
+                    newQuantities[i] = MAX_PYRAMID_BAG_ITEM_CAPACITY;
                 }
                 else
                 {
@@ -818,7 +832,11 @@ bool8 RemovePyramidBagItem(u16 itemId, u16 count)
     u16 i;
 
     u16 *items = gSaveBlock2Ptr->frontier.pyramidBag.itemId[gSaveBlock2Ptr->frontier.lvlMode];
+    #if MAX_PYRAMID_BAG_ITEM_CAPACITY > 255
+    u16 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    #else
     u8 *quantities = gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode];
+    #endif
 
     i = gPyramidBagMenuState.cursorPosition + gPyramidBagMenuState.scrollPosition;
     if (items[i] == itemId && quantities[i] >= count)
@@ -831,7 +849,11 @@ bool8 RemovePyramidBagItem(u16 itemId, u16 count)
     else
     {
         u16 *newItems = Alloc(PYRAMID_BAG_ITEMS_COUNT * sizeof(*newItems));
+        #if MAX_PYRAMID_BAG_ITEM_CAPACITY > 255
+        u16 *newQuantities = Alloc(PYRAMID_BAG_ITEMS_COUNT * sizeof(*newQuantities));
+        #else
         u8 *newQuantities = Alloc(PYRAMID_BAG_ITEMS_COUNT * sizeof(*newQuantities));
+        #endif
 
         memcpy(newItems, items, PYRAMID_BAG_ITEMS_COUNT * sizeof(*newItems));
         memcpy(newQuantities, quantities, PYRAMID_BAG_ITEMS_COUNT * sizeof(*newQuantities));
