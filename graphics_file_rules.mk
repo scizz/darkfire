@@ -150,7 +150,7 @@ $(TILESETGFXDIR)/secondary/battle_frontier_outside_east/tiles.4bpp: %.4bpp: %.pn
 	$(GFX) $< $@ -num_tiles 508 -Wnum_tiles
 
 $(TILESETGFXDIR)/primary/building/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 502 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/shop/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 502 -Wnum_tiles
