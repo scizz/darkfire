@@ -4,7 +4,16 @@
 
 ChandraVillage_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChandraVillage_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, ChandraVillage_OnTransition
 	.byte 0
+
+ChandraVillage_OnTransition:
+	call_if_ge VAR_STORYLINE_STATE, 3, ChandraVillage_SetFlag
+	end
+
+ChandraVillage_SetFlag::
+	setflag FLAG_HIDE_MAP_NAME_POPUP
+	return
 
 ChandraVillage_OnFrame:
 	map_script_2 VAR_STORYLINE_STATE, 3, ChandraVillage_Intro
