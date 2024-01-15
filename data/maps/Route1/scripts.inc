@@ -31,6 +31,7 @@ Route1_HideTruck::
 
 Route1_Storyline_State9::
 	lock
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	call Common_EventScript_GetPlayerPos
@@ -236,6 +237,7 @@ Route1_PidgeyBattle::
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	setflag FLAG_PREVENT_BATTLE_FLEE
 	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -255,6 +257,7 @@ Route1_PidgeyBattle::
 	delay 60
 	removeobject LOCALID_PIDGEY
 	setflag FLAG_HIDE_ROUTE_1_PIDGEY
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	fadescreen 0
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 35
