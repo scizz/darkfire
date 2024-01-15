@@ -239,11 +239,6 @@ Route1_PidgeyBattle::
 	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
-	applymovement 3, Common_Movement_FaceLeft
-	waitmovement 0
-	applymovement 3, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitse
 	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
 	waitmovement 0
@@ -299,10 +294,13 @@ Route1_PidgeyFinal::
 	end
 
 Route1_Tyler::
+	lock
+	faceplayer
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_NORMAL, 1, 1
-	msgbox Route1_Text_Tyler, MSGBOX_DEFAULT
+	msgbox Route1_Text_Tyler, MSGBOX_AUTOCLOSE
 	hideface 1
+	release
 	end
 
 Route1_Jump_Event::

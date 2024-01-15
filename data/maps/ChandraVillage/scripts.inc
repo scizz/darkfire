@@ -123,17 +123,16 @@ ChandraVillage_LabDone::
 	waitmovement 0
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_LAUGHING, 1, 1
-	msgbox ChandraVillage_Text_WowPlayer, MSGBOX_DEFAULT
-	speakername CommonName_Text_Prof
+	msgbox ChandraVillage_Text_WowPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	call_if_set FLAG_TAKEN_PIKACHU, ChandraVillage_GivePikachu
 	call_if_unset FLAG_TAKEN_PIKACHU, ChandraVillage_GiveEevee
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_AUTOCLOSE
 	hideface 1
 	playfanfare SE_DEX_SEARCH
-	hideface 1
-	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_AUTOCLOSE
 	waitfanfare
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 1, 1
@@ -143,12 +142,12 @@ ChandraVillage_LabDone::
 	applymovement OBJ_EVENT_ID_PLAYER, WRFL
 	applymovement LOCALID_PROF, WRFU
 	waitmovement 0
-	opendoor 39, 6
+	opendoor 37, 6
 	waitdooranim
 	applymovement LOCALID_PROF, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject LOCALID_PROF
-	closedoor 39, 6
+	closedoor 37, 6
 	waitdooranim
 	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF
 	setflag FLAG_SYS_POKEDEX_GET
@@ -403,12 +402,12 @@ ChandraVillage_Storyline_State_4_Part_2::
 	hideface 0
 	applymovement LOCALID_TYLER_LAB, WLFU
 	waitmovement 0
-	opendoor 39, 6
+	opendoor 37, 6
 	waitdooranim
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject LOCALID_TYLER_LAB
-	closedoor 39, 6
+	closedoor 37, 6
 	waitdooranim
 	setflag FLAG_HIDE_CHANDRA_VILLAGE_TYLER_2
 	setvar VAR_STORYLINE_STATE, 5
@@ -541,7 +540,7 @@ ChandraVillage_Text_PokedexDesc:
 	.string "You should find him and try battling\n"
 	.string "in the real world!\l"
 	.string "There is a lot to learn out there.\p"
-	.string "Well, I must return to the ab and get\n"
+	.string "Well, I must return to the Lab and get\n"
 	.string "back to work.\p"
 	.string "Thanks again, {PLAYER}!$"
 
