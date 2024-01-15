@@ -875,6 +875,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IceNest;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RattataOW;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NoctowlShiny;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreyscaleAquaMemberM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PidgeyOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WingullOW;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -1722,7 +1724,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GREYSCALE_FERALIGATR] =     &gObjectEventGraphicsInfo_GreyscaleFeraligatr,
     [OBJ_EVENT_GFX_GREYSCALE_HOUNDOOM] =       &gObjectEventGraphicsInfo_GreyscaleHoundoom,
     [OBJ_EVENT_GFX_GREYSCALE_POKE_BALL] =      &gObjectEventGraphicsInfo_GreyscaleItemBall,
-    
+    [OBJ_EVENT_GFX_PIDGEY_OW] =                &gObjectEventGraphicsInfo_PidgeyOW,
+    [OBJ_EVENT_GFX_WINGULL_OW] =               &gObjectEventGraphicsInfo_WingullOW,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

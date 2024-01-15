@@ -1523,3 +1523,6 @@ const u16 gObjectEventPal_Greyscale[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPal_GreyscaleF[] = INCBIN_U16("graphics/object_events/palettes/greyscale_f.gbapal");
 const u16 gObjectEventPal_GreyscaleH[] = INCBIN_U16("graphics/object_events/palettes/greyscale_h.gbapal");
 const u16 gObjectEventPal_GreyscaleI[] = INCBIN_U16("graphics/object_events/palettes/greyscale_i.gbapal");
+const u16 gObjectEventPal_PidgeyOW[] = INCBIN_U16("graphics/object_events/palettes/pidgey.gbapal");
+const u32 gObjectEventPic_PidgeyOW[] = INCBIN_U32("graphics/object_events/pics/misc/pidgey.4bpp");
+const u32 gObjectEventPic_WingullOW[] = INCBIN_U32("graphics/object_events/pics/misc/wingull.4bpp");

@@ -848,8 +848,10 @@
 #define OBJ_EVENT_GFX_GREYSCALE_FERALIGATR       841
 #define OBJ_EVENT_GFX_GREYSCALE_HOUNDOOM         842
 #define OBJ_EVENT_GFX_GREYSCALE_POKE_BALL        843
+#define OBJ_EVENT_GFX_PIDGEY_OW                  844
+#define OBJ_EVENT_GFX_WINGULL_OW                 845
 
-#define NUM_OBJ_EVENT_GFX                        844
+#define NUM_OBJ_EVENT_GFX                        846
 
 
 // These are dynamic object gfx ids.

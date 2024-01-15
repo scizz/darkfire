@@ -988,7 +988,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_GREYSCALE_F             0xF8E
 #define OBJ_EVENT_PAL_TAG_GREYSCALE_H             0xF8D
 #define OBJ_EVENT_PAL_TAG_GREYSCALE_I             0xF8C
-
+#define OBJ_EVENT_PAL_TAG_PIDGEY_OW               0xF8B
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
@@ -1028,6 +1028,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Kojiro,                OBJ_EVENT_PAL_TAG_KOJIRO},
     {gObjectEventPal_IceNest,               OBJ_EVENT_PAL_TAG_ICE_NEST},
     {gObjectEventPal_NoctowlShiny,          OBJ_EVENT_PAL_TAG_NOCTOWL_SHINY},
+    {gObjectEventPal_PidgeyOW,              OBJ_EVENT_PAL_TAG_PIDGEY_OW},
     {gObjectEventPal_Greyscale,             OBJ_EVENT_PAL_TAG_GREYSCALE},
     {gObjectEventPal_GreyscaleF,            OBJ_EVENT_PAL_TAG_GREYSCALE_F},
     {gObjectEventPal_GreyscaleH,            OBJ_EVENT_PAL_TAG_GREYSCALE_H},
