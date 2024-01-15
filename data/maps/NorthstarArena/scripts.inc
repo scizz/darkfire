@@ -55,7 +55,7 @@ NorthstarArena_PsychicBattle::
 	waitmovement 0
 	applymovement LOCALID_PSYCHIC, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_BlackBelt
+	speakername CommonName_Text_Psychic
 	msgbox NorthstarArena_Text_IDidntGetAllTheWay, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	delay 30

@@ -207,7 +207,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "NorthstarCity_Tournament_1F_SUBOEnd"
     },
     {
@@ -216,7 +216,7 @@
       "y": 3,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "NorthstarCity_Tournament_1F_SUBOEnd"
     }
   ],
