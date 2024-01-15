@@ -7,9 +7,11 @@ SunriseTown_OnTransition:
 	removeobject 8
 	removeobject 9
 	setflag FLAG_SUNRISE_TOWN_TUBER_KIDS_AFTER
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	end
 
 SunriseTown_End::
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	end
 
 SunriseTown_Sign::
@@ -158,6 +160,8 @@ SunriseTown_Cook_Talked_To::
 
 SunriseTown_Krabby_1::
 	lockall
+	setrespawn HEAL_LOCATION_SUNRISE_TOWN
+	setflag FLAG_PREVENT_BATTLE_FLEE
 	playmoncry SPECIES_KRABBY, 0
 	speakername CommonName_Text_Krabby
 	msgbox SunriseTown_Krabby_Text1, MSGBOX_DEFAULT
@@ -170,12 +174,15 @@ SunriseTown_Krabby_1::
 	delay 60
 	removeobject 10
 	setflag FLAG_SUNRISE_TOWN_KRABBY_1
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	fadescreen 0
 	releaseall
 	end
 
 SunriseTown_Krabby_2::
 	lockall
+	setrespawn HEAL_LOCATION_SUNRISE_TOWN
+	setflag FLAG_PREVENT_BATTLE_FLEE
 	playmoncry SPECIES_KRABBY, 0
 	speakername CommonName_Text_Krabby
 	msgbox SunriseTown_Krabby_Text2, MSGBOX_DEFAULT
@@ -188,12 +195,15 @@ SunriseTown_Krabby_2::
 	delay 60
 	removeobject 11
 	setflag FLAG_SUNRISE_TOWN_KRABBY_2
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	fadescreen 0
 	releaseall
 	end
 
 SunriseTown_Krabby_3::
 	lockall
+	setrespawn HEAL_LOCATION_SUNRISE_TOWN
+	setflag FLAG_PREVENT_BATTLE_FLEE
 	playmoncry SPECIES_KRABBY, 0
 	speakername CommonName_Text_Krabby
 	msgbox SunriseTown_Krabby_Text3, MSGBOX_DEFAULT
@@ -206,6 +216,7 @@ SunriseTown_Krabby_3::
 	delay 60
 	removeobject 12
 	setflag FLAG_SUNRISE_TOWN_KRABBY_3
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	fadescreen 0
 	releaseall
 	end
