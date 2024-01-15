@@ -13677,7 +13677,7 @@
           "map": "MAP_SUNRISE_TOWN",
           "base_label": "gSunriseTown",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 13,
             "mons": [
               {
                 "min_level": 2,

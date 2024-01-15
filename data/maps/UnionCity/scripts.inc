@@ -3,11 +3,16 @@
 
 UnionCity_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, UnionCity_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, UnionCity_OnTransition
 	.byte 0
 
-UnionCity_OnFrame::
+UnionCity_OnFrame:
 	map_script_2 VAR_STORYLINE_STATE, 10, UnionCity_TylerPresidentIntro
 	.2byte 0
+
+UnionCity_OnTransition:
+	clearflag FLAG_PREVENT_BATTLE_FLEE
+	end
 
 UnionCity_TylerPresidentIntro::
 	lock

@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "UnionCity_House1_1F_Spinarak",
+      "flag": "FLAG_HIDE_UNION_CITY_HOUSE_1_1F_SPINARAK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
@@ -37,21 +37,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "UnionCity_House1_1F_OldLady2",
+      "flag": "FLAG_HIDE_UNION_CITY_HOUSE_1_1F_OLD_LADY_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 1,
-      "y": 6,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "UnionCity_House1_1F_OldLady",
+      "flag": "FLAG_HIDE_UNION_CITY_HOUSE_1_1F_OLD_LADY_1"
     }
   ],
   "warp_events": [
@@ -83,18 +83,18 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_UNION_CITY_HOUSE_1_1F_OLD_LADY_STATE",
+      "var_value": "1",
+      "script": "UnionCity_House1_1F_OldLadyState"
     },
     {
       "type": "trigger",
       "x": 4,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_UNION_CITY_HOUSE_1_1F_OLD_LADY_STATE",
+      "var_value": "1",
+      "script": "UnionCity_House1_1F_OldLadyState"
     }
   ],
   "bg_events": [

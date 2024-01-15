@@ -11,19 +11,21 @@ SunriseTown_House1_Man::
 	end
 
 SunriseTown_House1_Little_Girl::
-	lockall
+	lock
 	faceplayer
 	goto_if_set FLAG_TEMP_1, SunriseTown_House1_Little_Girl_Two
 	bufferleadmonspeciesname 0
-	msgbox SunriseTown_House1_Text_Little_Girl, MSGBOX_DEFAULT
+	msgbox SunriseTown_House1_Text_Little_Girl, MSGBOX_AUTOCLOSE
 	setflag FLAG_TEMP_1
-	releaseall
+	release
 	end
 
 SunriseTown_House1_Little_Girl_Two::
+	lock
+	faceplayer
 	bufferleadmonspeciesname 0
-	msgbox SunriseTown_House1_Text_Little_Girl_Two, MSGBOX_DEFAULT
-	releaseall
+	msgbox SunriseTown_House1_Text_Little_Girl_Two, MSGBOX_AUTOCLOSE
+	release
 	end
 
 SunriseTown_House1_Text_Man:
@@ -39,5 +41,4 @@ SunriseTown_House1_Text_Little_Girl:
 	.string "I wish I had my own Pokémon…$"
 
 SunriseTown_House1_Text_Little_Girl_Two:
-	.string "{COLOR}{RED}Aww!\n"
-	.string "Your {STR_VAR_1} is so cute!$"
+	.string "{COLOR}{RED}Your {STR_VAR_1} is adorable!$"

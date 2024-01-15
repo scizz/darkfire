@@ -1250,10 +1250,10 @@
 #define FLAG_HIDE_PINLEAF_TOWN_TYLER                                0x4AC // Darkfire Flag
 #define FLAG_SNOWDRIFT_FOREST_OWL                                   0x4AD // Darkfire Flag
 #define FLAG_SNOWDRIFT_FOREST_SHINY_NOCTOWL                         0x4AE // Darkfire Flag
+#define FLAG_HIDE_UNION_CITY_HOUSE_1_1F_OLD_LADY_1                  0x4AF // Darkfire Flag
+#define FLAG_HIDE_UNION_CITY_HOUSE_1_1F_OLD_LADY_2                  0x4B0 // Darkfire Flag
+#define FLAG_HIDE_UNION_CITY_HOUSE_1_1F_SPINARAK                    0x4B1 // Darkfire Flag
 
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
 #define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
 #define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag

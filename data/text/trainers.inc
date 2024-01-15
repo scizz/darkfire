@@ -97,6 +97,9 @@ CommonName_Text_Krabby:
 CommonName_Text_Zigzagoon:
 	.string "Zigzagoon$"
 
+CommonName_Text_Spinarak:
+	.string "Spinarak$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
