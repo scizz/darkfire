@@ -1,6 +1,10 @@
 UnionCity_DepartmentStore_3F_MapScripts::
 	.byte 0
 
+UnionCity_DepartmentStore_3F_Sign::
+	msgbox UnionCity_DepartmentStore_3F_Text_Sign, MSGBOX_SIGN
+	end
+
 UnionCity_DepartmentStore_3F_Girl::
 	msgbox UnionCity_DepartmentStore_3F_Text_Girl, MSGBOX_NPC
 	end
@@ -8,6 +12,9 @@ UnionCity_DepartmentStore_3F_Girl::
 UnionCity_DepartmentStore_3F_Boy::
 	msgbox UnionCity_DepartmentStore_3F_Text_Boy, MSGBOX_NPC
 	end
+
+UnionCity_DepartmentStore_3F_Text_Sign:
+	.string "TMs can be used infinitely.$"
 
 UnionCity_DepartmentStore_3F_Text_Girl:
 	.string "{COLOR}{RED}I gave a Carbos to my Pokémon,\n"

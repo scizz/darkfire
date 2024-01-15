@@ -203,7 +203,7 @@ ChandraVillage_Fat_Guy::
 ChandraVillage_Old_Man::
 	lockall
 	faceplayer
-	msgbox ChandraVillage_Structure, MSGBOX_NPC
+	msgbox ChandraVillage_Structure, MSGBOX_AUTOCLOSE
 	applymovement 6, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -212,7 +212,7 @@ ChandraVillage_Old_Man::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox ChandraVillage_Dusclops, MSGBOX_NPC
+	msgbox ChandraVillage_Dusclops, MSGBOX_AUTOCLOSE
 	applymovement 6, Common_Movement_FaceUp
 	waitmovement 0
 	releaseall
@@ -232,6 +232,14 @@ ChandraVillage_Jokers_Wife::
 
 ChandraVillage_Letterbox::
 	msgbox ChandraVillage_Text_Mail, MSGBOX_SIGN
+	end
+
+ChandraVillage_PlayersHouse::
+	msgbox ChandraVillage_Text_PlayersHouse, MSGBOX_SIGN
+	end
+
+ChandraVillage_TylersHouse::
+	msgbox ChandraVillage_Text_TylersHouse, MSGBOX_SIGN
 	end
 
 ChandraVillage_Town_Sign::
@@ -281,7 +289,7 @@ ChandraVillage_Facility_Sign::
 ChandraVillage_Storyline_State_4::
 	lockall
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 43
+	compare VAR_TEMP_0, 42
 	goto_if_eq ChandraVillage_Storyline_State_4_Right
 	applymovement OBJ_EVENT_ID_PLAYER, WU2FL
 	waitmovement 0
@@ -601,6 +609,12 @@ ChandraVillage_Dusclops:
 ChandraVillage_Truck:
 	.string "A truck blocks the way…\n"
 	.string "Maybe you should come back later.$"
+
+ChandraVillage_Text_PlayersHouse:
+	.string "{PLAYER}'s House$"
+
+ChandraVillage_Text_TylersHouse:
+	.string "Tyler's House$"
 
 ChandraVillage_Text_Mail:
 	.string "There's mail in here!\n"

@@ -1,6 +1,10 @@
 UnionCity_DepartmentStore_2F_MapScripts::
 	.byte 0
 
+UnionCity_DepartmentStore_2F_Sign::
+	msgbox UnionCity_DepartmentStore_2F_Text_Sign, MSGBOX_SIGN
+	end
+
 UnionCity_DepartmentStore_2F_Sailor::
 	msgbox UnionCity_DepartmentStore_2F_Text_Sailor, MSGBOX_NPC
 	end
@@ -12,6 +16,12 @@ UnionCity_DepartmentStore_2F_Chef::
 UnionCity_DepartmentStore_2F_Woman::
 	msgbox UnionCity_DepartmentStore_2F_Text_Woman, MSGBOX_NPC
 	end
+
+UnionCity_DepartmentStore_2F_Text_Sign:
+	.string "If you want to stop a Pokémon from\n"
+	.string "evolving, press the B Button while it\l"
+	.string "is trying to evolve.\p"
+	.string "This is called an evolution cancel.$"
 
 UnionCity_DepartmentStore_2F_Text_Sailor:
 	.string "{COLOR}{BLUE}I'm stocking up on Antidotes for\n"

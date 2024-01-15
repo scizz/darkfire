@@ -1,6 +1,10 @@
 UnionCity_DepartmentStore_4F_MapScripts::
 	.byte 0
 
+UnionCity_DepartmentStore_4F_Sign::
+	msgbox UnionCity_DepartmentStore_4F_Text_Sign, MSGBOX_SIGN
+	end
+
 UnionCity_DepartmentStore_4F_Woman::
 	msgbox UnionCity_DepartmentStore_4F_Text_Woman, MSGBOX_NPC
 	end
@@ -12,6 +16,10 @@ UnionCity_DepartmentStore_4F_Old_Man::
 UnionCity_DepartmentStore_4F_Bug_Catcher::
 	msgbox UnionCity_DepartmentStore_4F_Text_Bug_Catcher, MSGBOX_NPC
 	end
+
+UnionCity_DepartmentStore_4F_Text_Sign:
+	.string "You can purchase your own property in\n"
+	.string "the Tenjo region, but it costs a lot!$"
 
 UnionCity_DepartmentStore_4F_Text_Woman:
 	.string "{COLOR}{RED}A catalog I read said there are fifty\n"

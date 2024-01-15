@@ -329,6 +329,8 @@ UnionCity_Gambler_Yes::
 
 UnionCity_EventScript_Rattata::
 	lockall
+	setrespawn HEAL_LOCATION_UNION_CITY
+	setflag FLAG_PREVENT_BATTLE_FLEE
 	playmoncry SPECIES_RATTATA, 0
 	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_DEFAULT
 	waitmoncry
@@ -340,6 +342,7 @@ UnionCity_EventScript_Rattata::
 	delay 60
 	removeobject 37
 	setflag FLAG_UNION_CITY_RATTATA
+	clearflag FLAG_PREVENT_BATTLE_FLEE
 	fadescreen 0
 	releaseall
 	end
@@ -496,7 +499,7 @@ UnionCity_Text_Boy:
 	.string "Offices are located.$"
 
 UnionCity_Text_Grunt:
-	.string "{COLOR}{BLUE}Mumble, mumble…\p"
+	.string "{COLOR}{RED}Mumble, mumble…\p"
 	.string "Of course I'm the one stuck on lookout\n"
 	.string "duty… Laaame!$"
 

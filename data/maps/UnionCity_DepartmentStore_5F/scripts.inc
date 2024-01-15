@@ -1,6 +1,10 @@
 UnionCity_DepartmentStore_5F_MapScripts::
 	.byte 0
 
+UnionCity_DepartmentStore_5F_Sign::
+	msgbox UnionCity_DepartmentStore_5F_Text_Sign, MSGBOX_SIGN
+	end
+
 UnionCity_DepartmentStore_5F_Aroma_Lady::
 	msgbox UnionCity_DepartmentStore_5F_Text_Aroma_Lady, MSGBOX_NPC
 	end
@@ -8,6 +12,10 @@ UnionCity_DepartmentStore_5F_Aroma_Lady::
 UnionCity_DepartmentStore_5F_Woman::
 	msgbox UnionCity_DepartmentStore_5F_Text_Woman, MSGBOX_NPC
 	end
+
+UnionCity_DepartmentStore_5F_Text_Sign:
+	.string "Sometimes you'll encounter two Pokémon\n"
+	.string "in a battle. Be prepared!$"
 
 UnionCity_DepartmentStore_5F_Little_Girl::
 	msgbox UnionCity_DepartmentStore_5F_Text_Little_Girl, MSGBOX_NPC
