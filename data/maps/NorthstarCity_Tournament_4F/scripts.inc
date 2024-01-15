@@ -475,7 +475,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitse
 	waitmovement 0
 	speakername CommonName_Text_Announcer
-	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
+	showface FS_ANNOUNCER, FSE_WORRIED, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_What, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 60
@@ -484,7 +484,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitse
 	waitmovement 0
 	speakername CommonName_Text_Announcer
-	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
+	showface FS_ANNOUNCER, FSE_WORRIED, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_ComeAgainCentral, MSGBOX_AUTOCLOSE
 	hideface 1
 	playbgm MUS_SUBO_THEME, TRUE
