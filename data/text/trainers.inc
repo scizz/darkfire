@@ -100,6 +100,12 @@ CommonName_Text_Zigzagoon:
 CommonName_Text_Spinarak:
 	.string "Spinarak$"
 
+CommonName_Text_Kakuna:
+	.string "Kakuna$"
+
+CommonName_Text_Beedrill:
+	.string "Beedrill$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

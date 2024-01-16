@@ -1255,12 +1255,12 @@
 #define FLAG_HIDE_UNION_CITY_HOUSE_1_1F_SPINARAK                    0x4B1 // Darkfire Flag
 #define FLAG_RECEIVED_UNION_CITY_HOUSE_1_2F_NEST_BALL               0x4B2 // Darkfire Flag
 #define FLAG_HIDE_UNION_CITY_GOV_OFFICE_3F_PRESIDENT                0x4B3 // Darkfire Flag
+#define FLAG_HIDE_ANHEIM_FOREST_KAKUNA_1                            0x4B4 // Darkfire Flag
+#define FLAG_HIDE_ANHEIM_FOREST_KAKUNA_2                            0x4B5 // Darkfire Flag
+#define FLAG_HIDE_ANHEIM_FOREST_KAKUNA_3                            0x4B6 // Darkfire Flag
+#define FLAG_HIDE_ANHEIM_FOREST_DOOR                                0x4B7 // Darkfire Flag
+#define FLAG_HIDE_ANHEIM_FOREST_SPINARAK                            0x4B8 // Darkfire Flag
 
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
 #define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag

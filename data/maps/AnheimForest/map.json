@@ -89,8 +89,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AnheimForest_EventScript_Kakuna_2",
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_KAKUNA_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KAKUNA",
@@ -102,8 +102,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AnheimForest_EventScript_Kakuna_3",
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_KAKUNA_3"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -272,7 +272,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_SPINARAK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPINARAK",
@@ -285,7 +285,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_SPINARAK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPINARAK",
@@ -298,7 +298,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_SPINARAK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KAKUNA",
@@ -310,13 +310,13 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AnheimForest_EventScript_Kakuna_1",
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_KAKUNA_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 31,
-      "y": 44,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -324,7 +324,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_SUBO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
@@ -362,7 +362,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "AnheimForest_EventScript_Beedrill",
       "flag": "FLAG_HIDE_ANHEIM_FOREST_BEEDRILL"
     },
     {
@@ -494,6 +494,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AZUMARILL",
+      "x": 31,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AnheimForest_Door",
+      "flag": "FLAG_HIDE_ANHEIM_FOREST_DOOR"
     }
   ],
   "warp_events": [

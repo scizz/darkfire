@@ -2,7 +2,36 @@
 .set LOCALID_TYLER, 19
 
 AnheimForest_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AnheimForest_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, AnheimForest_OnLoad
 	.byte 0
+
+AnheimForest_OnTransition:
+	call_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, AnheimForest_HideSpinarak
+	removeobject 24
+	setflag FLAG_HIDE_ANHEIM_FOREST_SUBO
+	call_if_ge VAR_STORYLINE_STATE, 13, AnheimForest_HideLockedDoor
+	end
+
+AnheimForest_HideSpinarak::
+	removeobject 20
+	removeobject 21
+	removeobject 22
+	setflag FLAG_HIDE_ANHEIM_FOREST_SPINARAK
+	return
+
+AnheimForest_HideLockedDoor::
+	removeobject 38
+	setflag FLAG_HIDE_ANHEIM_FOREST_DOOR
+	return
+
+AnheimForest_OnLoad:
+	call_if_set FLAG_BADGE01_GET, AnheimForest_ClearDoor
+	end
+
+AnheimForest_ClearDoor::
+	setmetatile 31, 45, 965, 1
+	return
 
 AnheimForest_SUBO::
 	lock
@@ -305,6 +334,83 @@ AnheimForest_Tyler_Encounter_PostMatch::
 	release
 	end
 
+AnheimForest_EventScript_Kakuna_1::
+	lockall
+	playmoncry SPECIES_KAKUNA, 0
+	speakername CommonName_Text_Kakuna
+	msgbox AnheimForest_Text_Kakuna1, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_KAKUNA, 7, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_KAKUNA, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 23
+	setflag FLAG_HIDE_ANHEIM_FOREST_KAKUNA_1
+	fadescreen 0
+	releaseall
+	end
+
+AnheimForest_EventScript_Kakuna_2::
+	lockall
+	playmoncry SPECIES_KAKUNA, 0
+	speakername CommonName_Text_Kakuna
+	msgbox AnheimForest_Text_Kakuna2, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_KAKUNA, 8, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_KAKUNA, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 6
+	setflag FLAG_HIDE_ANHEIM_FOREST_KAKUNA_2
+	fadescreen 0
+	releaseall
+	end
+
+AnheimForest_EventScript_Kakuna_3::
+	lockall
+	playmoncry SPECIES_KAKUNA, 0
+	speakername CommonName_Text_Kakuna
+	msgbox AnheimForest_Text_Kakuna3, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_KAKUNA, 9, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_KAKUNA, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 7
+	setflag FLAG_HIDE_ANHEIM_FOREST_KAKUNA_3
+	fadescreen 0
+	releaseall
+	end
+
+AnheimForest_EventScript_Beedrill::
+	lockall
+	faceplayer
+	playmoncry SPECIES_BEEDRILL, 0
+	speakername CommonName_Text_Beedrill
+	msgbox AnheimForest_Text_Beedrill, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_BEEDRILL, 10, ITEM_NONE
+	dowildbattle
+	playmoncry SPECIES_BEEDRILL, 1
+	waitmoncry
+	fadescreen 1
+	delay 60
+	removeobject 27
+	setflag FLAG_HIDE_ANHEIM_FOREST_BEEDRILL
+	fadescreen 0
+	releaseall
+	end
+
+AnheimForest_Door::
+	msgbox AnheimForest_Door_Text_ItsLocked, MSGBOX_NPC
+	end
+
 WL5:
 	walk_left
 	walk_left
@@ -460,9 +566,6 @@ AnheimForest_Text_FatherRareCandy:
 	.string "thank you for all of your help!\p"
 	.string "We wish you the best!$"
 
-AnheimForest_Text_Beedrill:
-	.string "Beedrill: Bzzzr!!$"
-
 AnheimForest_Text_Lucy:
 	.string "{COLOR}{RED}Hey…\p"
 	.string "…\p"
@@ -532,3 +635,18 @@ AnheimForest_Text_ThatWasSomeBattle:
 	.string "stop me from exposing the truth!\p"
 	.string "Keep your eyes peeled, {PLAYER}.\p"
 	.string "See ya!$"
+
+AnheimForest_Text_Kakuna1:
+	.string "Ksttchhh!$"
+
+AnheimForest_Text_Kakuna2:
+	.string "Kshh!$"
+
+AnheimForest_Text_Kakuna3:
+	.string "Ksssshh!$"
+
+AnheimForest_Door_Text_ItsLocked:
+	.string "The door appears to be locked…$"
+
+AnheimForest_Text_Beedrill:
+	.string "Bzzzzrrr!$"
