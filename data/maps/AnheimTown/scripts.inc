@@ -61,7 +61,7 @@ AnheimTown_Story_Time2::
 	msgbox AnheimTown_Text_Little_Girl_Story, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq AnheimTown_Little_Girl_Yes
-	msgbox AnheimTown_Text_Little_Girl_No, MSGBOX_DEFAULT
+	msgbox AnheimTown_Text_Little_Girl_No, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -102,8 +102,7 @@ AnheimTown_Little_Girl_Top::
 	end
 
 AnheimTown_Little_Girl_Main::
-	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
@@ -153,39 +152,33 @@ Little_Girl_MainStep::
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	msgbox AnheimTown_Text_Little_Girl_Story_One, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_Story_One, MSGBOX_AUTOCLOSE
 	applymovement 3, GirlPhaseTwo
 	waitmovement 0
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	msgbox AnheimTown_Text_Little_Girl_Story_Two, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_Story_Two, MSGBOX_AUTOCLOSE
 	applymovement 3, GirlPhaseThree
 	applymovement OBJ_EVENT_ID_PLAYER, FollowGirl
 	waitmovement 0
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	msgbox AnheimTown_Text_Little_Girl_Story_Three, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_Story_Three, MSGBOX_AUTOCLOSE
 	applymovement 3, GirlFirstRock
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox AnheimTown_Text_Little_Girl_First_Rock, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_First_Rock, MSGBOX_AUTOCLOSE
 	applymovement 3, GirlSecondRock
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox AnheimTown_Text_Little_Girl_Second_Rock, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_Second_Rock, MSGBOX_AUTOCLOSE
 	applymovement 3, GirlToPlayer
 	waitmovement 0
-	msgbox AnheimTown_Text_Little_Girl_To_Player, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimTown_Text_Little_Girl_To_Player, MSGBOX_AUTOCLOSE
 	applymovement 3, GirlToPosition
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
