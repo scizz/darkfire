@@ -1254,8 +1254,8 @@
 #define FLAG_HIDE_UNION_CITY_HOUSE_1_1F_OLD_LADY_2                  0x4B0 // Darkfire Flag
 #define FLAG_HIDE_UNION_CITY_HOUSE_1_1F_SPINARAK                    0x4B1 // Darkfire Flag
 #define FLAG_RECEIVED_UNION_CITY_HOUSE_1_2F_NEST_BALL               0x4B2 // Darkfire Flag
+#define FLAG_HIDE_UNION_CITY_GOV_OFFICE_3F_PRESIDENT                0x4B3 // Darkfire Flag
 
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
 #define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
 #define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag

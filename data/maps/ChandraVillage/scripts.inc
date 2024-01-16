@@ -8,7 +8,7 @@ ChandraVillage_MapScripts::
 	.byte 0
 
 ChandraVillage_OnTransition:
-	call_if_ge VAR_STORYLINE_STATE, 3, ChandraVillage_SetFlag
+	call_if_eq VAR_STORYLINE_STATE, 3, ChandraVillage_SetFlag
 	end
 
 ChandraVillage_SetFlag::
