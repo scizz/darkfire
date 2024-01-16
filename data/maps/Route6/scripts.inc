@@ -7,6 +7,10 @@ Route6_Sign::
 	msgbox Route6_Text_Sign, MSGBOX_SIGN
 	end
 
+Route6_LeftSign::
+	msgbox Route6_Text_LeftSign, MSGBOX_SIGN
+	end
+
 Route6_Sign_West::
 	msgbox Route6_Text_Sign_West, MSGBOX_SIGN
 	end
@@ -192,6 +196,10 @@ WR2D:
 	walk_right
 	walk_down
 	step_end
+
+Route6_Text_LeftSign:
+	.string "Route 6\n"
+	.string "{LEFT_ARROW} Laveria City$"
 
 Route6_Text_OkayOneTwoThree:
 	.string "{COLOR}{BLUE}Okay…\n"

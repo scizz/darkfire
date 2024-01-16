@@ -347,8 +347,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TREE",
-      "x": 25,
-      "y": 45,
+      "x": 30,
+      "y": 64,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
