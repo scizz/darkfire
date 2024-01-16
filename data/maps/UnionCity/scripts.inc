@@ -499,8 +499,8 @@ UnionCity_Text_Boy:
 	.string "Offices are located.$"
 
 UnionCity_Text_Grunt:
-	.string "{COLOR}{RED}Mumble, mumble…\p"
-	.string "Of course I'm the one stuck on lookout\n"
+	.string "{COLOR}{RED}{FONT_SMALL}Mumble, mumble…\p"
+	.string "{FONT_NORMAL}Of course I'm the one stuck on lookout\n"
 	.string "duty… Laaame!$"
 
 UnionCity_Text_Old_Woman:
