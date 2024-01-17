@@ -48,7 +48,7 @@ Route2_EventScript_Ricky::
 	end
 
 Route2_Zigzagoon::
-	lockall
+	lock
 	playmoncry SPECIES_ZIGZAGOON, 0
 	speakername CommonName_Text_Zigzagoon
 	msgbox Route2_Text_Zigzagoon, MSGBOX_DEFAULT
@@ -62,7 +62,7 @@ Route2_Zigzagoon::
 	removeobject 5
 	setflag FLAG_HIDE_ROUTE_2_ZIGZAGOON
 	fadescreen 0
-	releaseall
+	release
 	end
 
 Route2_Text_Sign:

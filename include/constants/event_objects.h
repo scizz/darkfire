@@ -850,8 +850,23 @@
 #define OBJ_EVENT_GFX_GREYSCALE_POKE_BALL        843
 #define OBJ_EVENT_GFX_PIDGEY_OW                  844
 #define OBJ_EVENT_GFX_WINGULL_OW                 845
+#define OBJ_EVENT_GFX_ZIGZAGOON_OW               846
+#define OBJ_EVENT_GFX_BEEDRILL_OW                847
+#define OBJ_EVENT_GFX_MAREEP_OW                  848
+#define OBJ_EVENT_GFX_EEVEE_OW                   849
+#define OBJ_EVENT_GFX_LARVITAR_OW                850
+#define OBJ_EVENT_GFX_HERACROSS_OW               851
+#define OBJ_EVENT_GFX_BULBASAUR_OW               852
+#define OBJ_EVENT_GFX_SQUIRTLE_OW                853
+#define OBJ_EVENT_GFX_CHARMANDER_OW              854
+#define OBJ_EVENT_GFX_CHIKORITA_OW               855
+#define OBJ_EVENT_GFX_TOTODILE_OW                856
+#define OBJ_EVENT_GFX_CYNDAQUIL_OW               857
+#define OBJ_EVENT_GFX_TREECKO_OW                 858
+#define OBJ_EVENT_GFX_MUDKIP_OW                  859
+#define OBJ_EVENT_GFX_TORCHIC_OW                 860
 
-#define NUM_OBJ_EVENT_GFX                        846
+#define NUM_OBJ_EVENT_GFX                        861
 
 
 // These are dynamic object gfx ids.

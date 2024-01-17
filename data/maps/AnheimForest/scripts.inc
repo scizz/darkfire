@@ -449,8 +449,8 @@ WU3L3U3:
 	step_end
 
 AnheimForest_Text_Sign:
-	.string "Welcome to Anheim Forest.\n"
-	.string "{FONT_SMALL}Please do not litter.$"
+	.string "Anheim Forest\n"
+	.string "{FONT_SMALL}Please do not litter!$"
 
 AnheimForest_Text_Sign_Route_4:
 	.string "Anheim Forest\n"

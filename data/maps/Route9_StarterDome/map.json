@@ -288,7 +288,7 @@
       "flag": "FLAG_ROUTE_9_STARTER_DOME_COMPLETE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BULBASAUR",
+      "graphics_id": "OBJ_EVENT_GFX_BULBASAUR_OW",
       "x": 15,
       "y": 24,
       "elevation": 3,
@@ -301,7 +301,7 @@
       "flag": "FLAG_STARTER_DOME_BULBASAUR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TREECKO",
+      "graphics_id": "OBJ_EVENT_GFX_TREECKO_OW",
       "x": 25,
       "y": 21,
       "elevation": 3,
@@ -314,7 +314,7 @@
       "flag": "FLAG_STARTER_DOME_TREECKO"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHIKORITA",
+      "graphics_id": "OBJ_EVENT_GFX_CHIKORITA_OW",
       "x": 22,
       "y": 23,
       "elevation": 3,
@@ -327,7 +327,7 @@
       "flag": "FLAG_STARTER_DOME_CHIKORITA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TORCHIC",
+      "graphics_id": "OBJ_EVENT_GFX_TORCHIC_OW",
       "x": 12,
       "y": 12,
       "elevation": 3,
@@ -340,7 +340,7 @@
       "flag": "FLAG_STARTER_DOME_TORCHIC"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHARMANDER",
+      "graphics_id": "OBJ_EVENT_GFX_CHARMANDER_OW",
       "x": 10,
       "y": 9,
       "elevation": 3,
@@ -353,7 +353,7 @@
       "flag": "FLAG_STARTER_DOME_CHARMANDER"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL",
+      "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL_OW",
       "x": 5,
       "y": 9,
       "elevation": 3,
@@ -366,7 +366,7 @@
       "flag": "FLAG_STARTER_DOME_CYNDAQUIL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TOTODILE",
+      "graphics_id": "OBJ_EVENT_GFX_TOTODILE_OW",
       "x": 32,
       "y": 8,
       "elevation": 3,
@@ -379,7 +379,7 @@
       "flag": "FLAG_STARTER_DOME_TOTODILE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE",
+      "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE_OW",
       "x": 21,
       "y": 11,
       "elevation": 3,
@@ -392,7 +392,7 @@
       "flag": "FLAG_STARTER_DOME_SQUIRTLE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MUDKIP",
+      "graphics_id": "OBJ_EVENT_GFX_MUDKIP_OW",
       "x": 22,
       "y": 14,
       "elevation": 3,

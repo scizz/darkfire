@@ -54,7 +54,7 @@
       "flag": "FLAG_HIDE_ROCKFALL_CAVE_B1F_RANGER"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LARVITAR",
+      "graphics_id": "OBJ_EVENT_GFX_LARVITAR_OW",
       "x": 6,
       "y": 9,
       "elevation": 3,
