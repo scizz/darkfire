@@ -182,11 +182,11 @@ Route9_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
 	end
 
-Route119_EventScript_ItemHyperPotion2:: @ 8290F2E
-	finditem ITEM_HYPER_POTION
+RockfallCaveInterlink_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
 	end
 
-Route119_EventScript_ItemElixir2:: @ 8290F3B
+PinleafTown_EventScript_ItemElixir::
 	finditem ITEM_ELIXIR
 	end
 
@@ -534,7 +534,7 @@ AquaHideout_B2F_EventScript_ItemMasterBall:: @ 829138C
 	finditem ITEM_MASTER_BALL      // Unused
 	end
 
-Route119_EventScript_ItemNugget:: @ 8291399
+LaveriaCity_EventScript_ItemNugget::
 	finditem ITEM_NUGGET
 	end
 
