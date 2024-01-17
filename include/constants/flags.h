@@ -1156,7 +1156,7 @@
 #define FLAG_ITEM_ROUTE_121_CARBOS                                  0x44F
 #define FLAG_ITEM_ROUTE_123_ULTRA_BALL                              0x450
 #define FLAG_ITEM_ROUTE_126_GREEN_SHARD                             0x451
-#define FLAG_ITEM_ROUTE_119_HYPER_POTION_2                          0x452
+#define FLAG_ITEM_ROCKFALL_CAVE_INTERLINK_SUPER_POTION              0x452
 #define FLAG_ITEM_ROUTE_120_HYPER_POTION                            0x453
 #define FLAG_ITEM_ROUTE_120_NEST_BALL                               0x454
 #define FLAG_ITEM_ROUTE_123_ELIXIR                                  0x455
@@ -1184,7 +1184,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET                           0x46C
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
-#define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
+#define FLAG_ITEM_LAVERIA_CITY_NUGGET                               0x46E
 #define FLAG_ITEM_ROUTE_4_SUPER_REPEL                               0x46F // Darkfire Flag
 #define FLAG_ROUTE_3_MIRACLE_SEED                                   0x470 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_2_POKE_BALL                                 0x471 // Darkfire Flag
@@ -1197,7 +1197,7 @@
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
 #define FLAG_HIDE_DAZ_2_MUDKIP                                      0x479 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
-#define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
+#define FLAG_ITEM_PINLEAF_TOWN_ELIXIR                               0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C
 #define FLAG_ITEM_ROUTE_121_REVIVE                                  0x47D
 #define FLAG_ITEM_ROUTE_121_ZINC                                    0x47E

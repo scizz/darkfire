@@ -47,7 +47,7 @@
       "flag": "FLAG_ITEM_ROUTE_4_X_ACCURACY"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 67,
       "y": 56,
       "elevation": 3,
@@ -60,7 +60,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 68,
       "y": 60,
       "elevation": 3,
@@ -138,7 +138,7 @@
       "flag": "FLAG_ITEM_ROUTE_4_POTION"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 50,
       "y": 30,
       "elevation": 3,
@@ -164,7 +164,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 44,
       "y": 21,
       "elevation": 3,
@@ -242,7 +242,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 63,
       "y": 32,
       "elevation": 3,
@@ -294,7 +294,7 @@
       "flag": "FLAG_ITEM_ROUTE_4_SUPER_REPEL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 23,
       "y": 59,
       "elevation": 3,
@@ -307,7 +307,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 24,
       "y": 56,
       "elevation": 3,
@@ -320,7 +320,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 21,
       "y": 55,
       "elevation": 3,

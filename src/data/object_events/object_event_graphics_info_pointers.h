@@ -877,7 +877,21 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NoctowlShiny;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreyscaleAquaMemberM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PidgeyOW;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WingullOW;
-
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ZigzagoonOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BeedrillOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MareepOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EeveeOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LarvitarOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HeracrossOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BulbasaurOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SquirtleOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CharmanderOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChikoritaOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TotodileOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CynadaquilOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TreeckoOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MudkipOW;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TorchicOW;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1726,6 +1740,21 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GREYSCALE_POKE_BALL] =      &gObjectEventGraphicsInfo_GreyscaleItemBall,
     [OBJ_EVENT_GFX_PIDGEY_OW] =                &gObjectEventGraphicsInfo_PidgeyOW,
     [OBJ_EVENT_GFX_WINGULL_OW] =               &gObjectEventGraphicsInfo_WingullOW,
+    [OBJ_EVENT_GFX_ZIGZAGOON_OW] =             &gObjectEventGraphicsInfo_ZigzagoonOW,
+    [OBJ_EVENT_GFX_BEEDRILL_OW] =              &gObjectEventGraphicsInfo_BeedrillOW,
+    [OBJ_EVENT_GFX_MAREEP_OW] =                &gObjectEventGraphicsInfo_MareepOW,
+    [OBJ_EVENT_GFX_EEVEE_OW] =                 &gObjectEventGraphicsInfo_EeveeOW,
+    [OBJ_EVENT_GFX_LARVITAR_OW] =              &gObjectEventGraphicsInfo_LarvitarOW,
+    [OBJ_EVENT_GFX_HERACROSS_OW] =             &gObjectEventGraphicsInfo_HeracrossOW,
+    [OBJ_EVENT_GFX_BULBASAUR_OW] =             &gObjectEventGraphicsInfo_BulbasaurOW,
+    [OBJ_EVENT_GFX_SQUIRTLE_OW] =              &gObjectEventGraphicsInfo_SquirtleOW,
+    [OBJ_EVENT_GFX_CHARMANDER_OW] =            &gObjectEventGraphicsInfo_CharmanderOW,
+    [OBJ_EVENT_GFX_CHIKORITA_OW] =             &gObjectEventGraphicsInfo_ChikoritaOW,
+    [OBJ_EVENT_GFX_TOTODILE_OW] =              &gObjectEventGraphicsInfo_TotodileOW,
+    [OBJ_EVENT_GFX_CYNDAQUIL_OW] =             &gObjectEventGraphicsInfo_CyndaquilOW,
+    [OBJ_EVENT_GFX_TREECKO_OW] =               &gObjectEventGraphicsInfo_TreeckoOW,
+    [OBJ_EVENT_GFX_MUDKIP_OW] =                &gObjectEventGraphicsInfo_MudkipOW,
+    [OBJ_EVENT_GFX_TORCHIC_OW] =               &gObjectEventGraphicsInfo_TorchicOW,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
