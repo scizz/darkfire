@@ -66,6 +66,16 @@ static void QueueAnimTiles_General_WeedNT(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
+static void QueueAnimTiles_Slateport_Water0(u16);
+static void QueueAnimTiles_Slateport_Water1(u16);
+static void QueueAnimTiles_Slateport_Water2(u16);
+static void QueueAnimTiles_Slateport_Water3(u16);
+static void QueueAnimTiles_Slateport_Water4(u16);
+static void QueueAnimTiles_Slateport_Water5(u16);
+static void QueueAnimTiles_Slateport_Water6(u16);
+static void QueueAnimTiles_Slateport_Water7(u16);
+static void QueueAnimTiles_Slateport_Water8(u16);
+static void QueueAnimTiles_Slateport_Water9(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
 static void QueueAnimTiles_GenericBuilding_SunBeams(u16);
@@ -1158,6 +1168,116 @@ const u16 *const gTilesetAnims_Slateport_Balloons[] = {
     gTilesetAnims_Slateport_Balloons_Frame3
 };
 
+const u16 gTilesetAnims_Slateport_Water0_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water0_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water0_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water0[] = {
+    gTilesetAnims_Slateport_Water0_Frame0,
+    gTilesetAnims_Slateport_Water0_Frame1,
+    gTilesetAnims_Slateport_Water0_Frame2,
+    gTilesetAnims_Slateport_Water0_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water1_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/1/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water1_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/1/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water1_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/1/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water1[] = {
+    gTilesetAnims_Slateport_Water1_Frame0,
+    gTilesetAnims_Slateport_Water1_Frame1,
+    gTilesetAnims_Slateport_Water1_Frame2,
+    gTilesetAnims_Slateport_Water1_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water2_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/2/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water2_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/2/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water2_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/2/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water2[] = {
+    gTilesetAnims_Slateport_Water2_Frame0,
+    gTilesetAnims_Slateport_Water2_Frame1,
+    gTilesetAnims_Slateport_Water2_Frame2,
+    gTilesetAnims_Slateport_Water2_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water3_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/3/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water3_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/3/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water3_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/3/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water3[] = {
+    gTilesetAnims_Slateport_Water3_Frame0,
+    gTilesetAnims_Slateport_Water3_Frame1,
+    gTilesetAnims_Slateport_Water3_Frame2,
+    gTilesetAnims_Slateport_Water3_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water4_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/4/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water4_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/4/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water4_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/4/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water4[] = {
+    gTilesetAnims_Slateport_Water4_Frame0,
+    gTilesetAnims_Slateport_Water4_Frame1,
+    gTilesetAnims_Slateport_Water4_Frame2,
+    gTilesetAnims_Slateport_Water4_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water5_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/5/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water5_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/5/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water5_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/5/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water5[] = {
+    gTilesetAnims_Slateport_Water5_Frame0,
+    gTilesetAnims_Slateport_Water5_Frame1,
+    gTilesetAnims_Slateport_Water5_Frame2,
+    gTilesetAnims_Slateport_Water5_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water6_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/6/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water6_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/6/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water6_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/6/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water6[] = {
+    gTilesetAnims_Slateport_Water6_Frame0,
+    gTilesetAnims_Slateport_Water6_Frame1,
+    gTilesetAnims_Slateport_Water6_Frame2,
+    gTilesetAnims_Slateport_Water6_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water7_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/7/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water7_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/7/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water7_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/7/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water7[] = {
+    gTilesetAnims_Slateport_Water7_Frame0,
+    gTilesetAnims_Slateport_Water7_Frame1,
+    gTilesetAnims_Slateport_Water7_Frame2,
+    gTilesetAnims_Slateport_Water7_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water8_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/8/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water8_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/8/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water8_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/8/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water8[] = {
+    gTilesetAnims_Slateport_Water8_Frame0,
+    gTilesetAnims_Slateport_Water8_Frame1,
+    gTilesetAnims_Slateport_Water8_Frame2,
+    gTilesetAnims_Slateport_Water8_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_Water9_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/9/0.4bpp");
+const u16 gTilesetAnims_Slateport_Water9_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/9/1.4bpp");
+const u16 gTilesetAnims_Slateport_Water9_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/9/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Water9[] = {
+    gTilesetAnims_Slateport_Water9_Frame0,
+    gTilesetAnims_Slateport_Water9_Frame1,
+    gTilesetAnims_Slateport_Water9_Frame2,
+    gTilesetAnims_Slateport_Water9_Frame1
+};
+
 const u16 gTilesetAnims_Building_TvTurnedOn_Frame0[] = INCBIN_U16("data/tilesets/primary/building/anim/tv_turned_on/0.4bpp");
 const u16 gTilesetAnims_Building_TvTurnedOn_Frame1[] = INCBIN_U16("data/tilesets/primary/building/anim/tv_turned_on/1.4bpp");
 
@@ -1682,8 +1802,20 @@ static void TilesetAnim_Dewford(u16 timer)
 
 static void TilesetAnim_Slateport(u16 timer)
 {
-    /*if (timer % 16 == 0)
-        QueueAnimTiles_Slateport_Balloons(timer / 16);*/
+    if (timer % 8 == 0)
+    {
+        //QueueAnimTiles_Slateport_Balloons(timer / 16);*/
+        QueueAnimTiles_Slateport_Water0(timer >> 5);
+        QueueAnimTiles_Slateport_Water1(timer >> 5);
+        QueueAnimTiles_Slateport_Water2(timer >> 5);
+        QueueAnimTiles_Slateport_Water3(timer >> 5);
+        QueueAnimTiles_Slateport_Water4(timer >> 5);
+        QueueAnimTiles_Slateport_Water5(timer >> 5);
+        QueueAnimTiles_Slateport_Water6(timer >> 5);
+        QueueAnimTiles_Slateport_Water7(timer >> 5);
+        QueueAnimTiles_Slateport_Water8(timer >> 5);
+        QueueAnimTiles_Slateport_Water9(timer >> 5);
+    }
 }
 
 static void TilesetAnim_Mauville(u16 timer)
@@ -2022,6 +2154,67 @@ static void QueueAnimTiles_Slateport_Balloons(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Balloons);
     AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Balloons[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 224)), 4 * TILE_SIZE_4BPP);
+}
+
+
+static void QueueAnimTiles_Slateport_Water0(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water0);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water0[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 69)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water1(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water1);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water1[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 85)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water2(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water2);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water2[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 101)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water3(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water3);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 117)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water4(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water4);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water4[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 133)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water5(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water5);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water5[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 134)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water6(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water6);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water6[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 135)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water7(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water7);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water7[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 70)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water8(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water8);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water8[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 86)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_Water9(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water9);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 87)), 1 * TILE_SIZE_4BPP);
 }
 
 /*static void TilesetAnim_MauvilleGym(u16 timer)
