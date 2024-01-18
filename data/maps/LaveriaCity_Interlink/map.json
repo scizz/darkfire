@@ -129,30 +129,30 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 2,
+      "x": 1,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ROUTE_7_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "LaveriaCity_Route7_State"
     },
     {
       "type": "trigger",
-      "x": 2,
+      "x": 1,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ROUTE_7_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "LaveriaCity_Route7_State"
     },
     {
       "type": "trigger",
-      "x": 2,
+      "x": 1,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ROUTE_7_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "LaveriaCity_Route7_State"
     }
   ],
   "bg_events": [

@@ -1682,8 +1682,8 @@ static void TilesetAnim_Dewford(u16 timer)
 
 static void TilesetAnim_Slateport(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Slateport_Balloons(timer / 16);
+    /*if (timer % 16 == 0)
+        QueueAnimTiles_Slateport_Balloons(timer / 16);*/
 }
 
 static void TilesetAnim_Mauville(u16 timer)

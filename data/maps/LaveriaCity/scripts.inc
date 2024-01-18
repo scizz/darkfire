@@ -471,6 +471,7 @@ LaveriaCity_Kojiro_End::
 	delay 30
 	removeobject LOCALID_KOJIRO
 	setflag FLAG_BADGE02_GET
+	setvar VAR_ROUTE_7_STATE, 1
 	setvar VAR_STORYLINE_STATE, 19
 	fadescreen 0
 	savebgm MUS_DUMMY

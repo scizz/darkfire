@@ -152,7 +152,7 @@ HighwindVillage_Text_Sign:
 
 HighwindVillage_Text_Sign_Rangers_Lodge:
 	.string "Rangers' Federation Lodge\n"
-	.string "Members only.$"
+	.string "{FONT_SMALL}Members only.$"
 
 HighwindVillage_Text_Grandma:
 	.string "This village is the quietest in all of\n"
