@@ -43,7 +43,7 @@ AnheimTown_Man::
 	lock
 	faceplayer
 	msgbox AnheimTown_Text_Man, MSGBOX_AUTOCLOSE
-	applymovement 16, Common_Movement_FaceDown
+	applymovement 15, Common_Movement_FaceDown
 	waitmovement 0
 	release
 	end
@@ -306,7 +306,7 @@ AnheimTown_Text_Old_Man:
 
 AnheimTown_Text_Man:
 	.string "{COLOR}{BLUE}The bond between people and Pokémon\n"
-	.string "is like the ripples of this pond…\p"
+	.string "is like the ripples of this pond…\l"
 	.string "Ever-expanding and connecting us all.\p"
 	.string "Meditate here with your Pokémon, and\n"
 	.string "you too may discover hidden strengths.$"
