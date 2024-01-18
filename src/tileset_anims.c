@@ -76,6 +76,8 @@ static void QueueAnimTiles_Slateport_Water6(u16);
 static void QueueAnimTiles_Slateport_Water7(u16);
 static void QueueAnimTiles_Slateport_Water8(u16);
 static void QueueAnimTiles_Slateport_Water9(u16);
+static void QueueAnimTiles_Slateport_SmallRockTop(u16);
+static void QueueAnimTiles_Slateport_SmallRockBottom(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
 static void QueueAnimTiles_GenericBuilding_SunBeams(u16);
@@ -1278,6 +1280,25 @@ const u16 *const gTilesetAnims_Slateport_Water9[] = {
     gTilesetAnims_Slateport_Water9_Frame1
 };
 
+const u16 gTilesetAnims_Slateport_SmallRockTop_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_top/0.4bpp");
+const u16 gTilesetAnims_Slateport_SmallRockTop_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_top/1.4bpp");
+const u16 gTilesetAnims_Slateport_SmallRockTop_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_top/2.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_SmallRockTop[] = {
+    gTilesetAnims_Slateport_SmallRockTop_Frame0,
+    gTilesetAnims_Slateport_SmallRockTop_Frame1,
+    gTilesetAnims_Slateport_SmallRockTop_Frame2,
+    gTilesetAnims_Slateport_SmallRockTop_Frame1
+};
+
+const u16 gTilesetAnims_Slateport_SmallRockBottom_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_bottom/0.4bpp");
+const u16 gTilesetAnims_Slateport_SmallRockBottom_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/small_rock_bottom/1.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_SmallRockBottom[] = {
+    gTilesetAnims_Slateport_SmallRockBottom_Frame0,
+    gTilesetAnims_Slateport_SmallRockBottom_Frame1
+};
+
 const u16 gTilesetAnims_Building_TvTurnedOn_Frame0[] = INCBIN_U16("data/tilesets/primary/building/anim/tv_turned_on/0.4bpp");
 const u16 gTilesetAnims_Building_TvTurnedOn_Frame1[] = INCBIN_U16("data/tilesets/primary/building/anim/tv_turned_on/1.4bpp");
 
@@ -1816,6 +1837,11 @@ static void TilesetAnim_Slateport(u16 timer)
         QueueAnimTiles_Slateport_Water8(timer >> 5);
         QueueAnimTiles_Slateport_Water9(timer >> 5);
     }
+    if (timer % 8 == 1)
+    {
+        QueueAnimTiles_Slateport_SmallRockTop(timer >> 4);
+        QueueAnimTiles_Slateport_SmallRockBottom(timer >> 4);
+    }
 }
 
 static void TilesetAnim_Mauville(u16 timer)
@@ -2215,6 +2241,18 @@ static void QueueAnimTiles_Slateport_Water9(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Water9);
     AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Water9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 87)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_SmallRockTop(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_SmallRockTop);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_SmallRockTop[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 182)), 2 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Slateport_SmallRockBottom(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_SmallRockBottom);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_SmallRockBottom[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 198)), 2 * TILE_SIZE_4BPP);
 }
 
 /*static void TilesetAnim_MauvilleGym(u16 timer)
