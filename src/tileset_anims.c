@@ -45,6 +45,7 @@ static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_GenericBuilding(u16);
 static void TilesetAnim_RustboroGym(u16);
+static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_PokemonCenter(u16);
 static void TilesetAnim_Lilycove(u16);
 static void TilesetAnim_Fallarbor(u16);
@@ -107,6 +108,7 @@ static void QueueAnimTiles_EverGrande_Flowers(u16, u8);
 static void QueueAnimTiles_Pacifidlog_LogBridges(u8);
 static void QueueAnimTiles_Pacifidlog_WaterCurrents(u8);
 static void QueueAnimTiles_Petalburg_Chimney_Smoke(u16);
+static void QueueAnimTiles_Rustboro_Chimney_Smoke(u16);
 static void QueueAnimTiles_Petalburg_Watermill1(u16);
 static void QueueAnimTiles_Petalburg_Watermill2(u16);
 static void QueueAnimTiles_Petalburg_Watermill3(u16);
@@ -708,6 +710,16 @@ const u16 *const gTilesetAnims_Petalburg_Chimney_Smoke[] = {
     gTilesetAnims_Petalburg_Chimney_Smoke_Frame0,
     gTilesetAnims_Petalburg_Chimney_Smoke_Frame1,
     gTilesetAnims_Petalburg_Chimney_Smoke_Frame2
+};
+
+const u16 gTilesetAnims_Rustboro_Chimney_Smoke_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/chimney_smoke/0.4bpp");
+const u16 gTilesetAnims_Rustboro_Chimney_Smoke_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/chimney_smoke/1.4bpp");
+const u16 gTilesetAnims_Rustboro_Chimney_Smoke_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/chimney_smoke/2.4bpp");
+
+const u16 *const gTilesetAnims_Rustboro_Chimney_Smoke[] = {
+    gTilesetAnims_Rustboro_Chimney_Smoke_Frame0,
+    gTilesetAnims_Rustboro_Chimney_Smoke_Frame1,
+    gTilesetAnims_Rustboro_Chimney_Smoke_Frame2
 };
 
 const u16 *const gTilesetAnims_Fallarbor_Campfire[] = {
@@ -1630,6 +1642,13 @@ void InitTilesetAnim_GenericBuilding(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_GenericBuilding;
 }
 
+void InitTilesetAnim_Rustboro(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Rustboro;
+}
+
 void InitTilesetAnim_RustboroGym(void)
 {
     sSecondaryTilesetAnimCounter = 0;
@@ -1663,8 +1682,8 @@ static void TilesetAnim_Dewford(u16 timer)
 
 static void TilesetAnim_Slateport(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Slateport_Balloons(timer / 16);
+    /*if (timer % 16 == 0)
+        QueueAnimTiles_Slateport_Balloons(timer / 16);*/
 }
 
 static void TilesetAnim_Mauville(u16 timer)
@@ -1749,6 +1768,12 @@ static void TilesetAnim_Petalburg(u16 timer)
         QueueAnimTiles_Petalburg_Watermill10(timer >> 4);
 }
 
+static void TilesetAnim_Rustboro(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_Rustboro_Chimney_Smoke(timer >> 4);
+}
+
 static void TilesetAnim_Sootopolis(u16 timer)
 {
     if (timer % 16 == 0)
@@ -1804,6 +1829,12 @@ static void QueueAnimTiles_Petalburg_Chimney_Smoke(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Petalburg_Chimney_Smoke);
     AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Chimney_Smoke[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 374)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Rustboro_Chimney_Smoke(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Rustboro_Chimney_Smoke);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_Chimney_Smoke[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 220)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Petalburg_Watermill1(u16 timer)

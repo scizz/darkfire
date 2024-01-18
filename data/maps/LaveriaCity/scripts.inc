@@ -192,6 +192,7 @@ LaveriaCity_SailToIsland::
 	waitmovement 0
 	waitse
 	delay 30
+	release
 	playbgm MUS_SURFING, TRUE
 	applymovement LOCALID_BOAT_1, SailToIsland
 	applymovement OBJ_EVENT_ID_PLAYER, SailToIsland
@@ -225,7 +226,6 @@ LaveriaCity_SailToIsland::
 	waitmovement 0
 	msgbox LaveriaCity_Text_HereWeAreFeastYourEyes, MSGBOX_AUTOCLOSE
 	setflag FLAG_TEMP_4
-	release
 	end
 
 LaveriaCity_SailorTwo::
@@ -297,6 +297,7 @@ LaveriaCity_SailorTwo_SailBackToLaveria::
 	waitmovement 0
 	waitse
 	delay 30
+	release
 	playbgm MUS_SURFING, TRUE
 	applymovement LOCALID_BOAT_2, SailToCity
 	applymovement OBJ_EVENT_ID_PLAYER, SailToCity
@@ -330,7 +331,6 @@ LaveriaCity_SailorTwo_SailBackToLaveria::
 	waitmovement 0
 	applymovement LOCALID_SAILOR_1, Common_Movement_FaceDown
 	waitmovement 0
-	release
 	end
 
 LaveriaCity_Sign::
@@ -471,6 +471,7 @@ LaveriaCity_Kojiro_End::
 	delay 30
 	removeobject LOCALID_KOJIRO
 	setflag FLAG_BADGE02_GET
+	setvar VAR_ROUTE_7_STATE, 1
 	setvar VAR_STORYLINE_STATE, 19
 	fadescreen 0
 	savebgm MUS_DUMMY

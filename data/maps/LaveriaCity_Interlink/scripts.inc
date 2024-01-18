@@ -1,5 +1,27 @@
+.set LOCALID_HIKER, 1
+
 LaveriaCity_Interlink_MapScripts::
 	.byte 0
+
+LaveriaCity_Route7_State::
+	lock
+	applymovement LOCALID_HIKER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_HIKER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_HIKER, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox LaveriaCity_Route7_Text_HeyYou, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_HIKER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
+	waitmovement 0
+	release
+	end
 
 LaveriaCity_Interlink_Hiker::
 	lockall
@@ -54,3 +76,15 @@ LaveriaCity_Text_Interlink_Girl:
 	.string "Starter Dome…\p"
 	.string "In fact, the Starter Dome is where I\n"
 	.string "got my very first Pokémon, hehe.$"
+
+LaveriaCity_Route7_Text_HeyYou:
+	.string "Hey, you!\n"
+	.string "Wait right there!\p"
+	.string "No one is allowed to enter Mt. Tamarok\n"
+	.string "without the sufficient credentials -\l"
+	.string "it's far too dangerous out there!\p"
+	.string "Once you can defeat the Champion of\n"
+	.string "Laveria City I will consider letting\l"
+	.string "you through…\p"
+	.string "If you can get to him, of course!\n"
+	.string "Hahaha!$"
