@@ -13,13 +13,14 @@ ChandraVillage_Lab_MapScripts::
 	.byte 0
 
 ChandraVillage_Lab_OnTransition:
-	call_if_set FLAG_SYS_POKEDEX_GET, ChandraVillage_Lab_ShowProf
+	goto_if_set FLAG_SYS_POKEDEX_GET, ChandraVillage_Lab_ShowProf
+	setflag FLAG_PREVENT_BATTLE_FLEE
 	end
 
 ChandraVillage_Lab_ShowProf::
 	clearflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF
 	addobject LOCALID_PROF
-	return
+	end
 
 ChandraVillage_Lab_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 5, ChandraVillage_Lab_PickPokemon
@@ -61,13 +62,13 @@ ChandraVillage_Lab_PickPokemon::
 	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_ANGRY, 1, 1
-	msgbox ChandraVillage_Lab_Text_DoYouThink, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_DoYouThink, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_POKE_BALL, 1
 	removeitem ITEM_POKE_BALL, 1
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_HAPPY 1, 1
-	msgbox ChandraVillage_Lab_Text_DontHoldInHand, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_DontHoldInHand, MSGBOX_AUTOCLOSE
 	hideface 1
 	setvar VAR_STORYLINE_STATE, 6
 	release
@@ -86,7 +87,7 @@ ChandraVillage_Lab_TryAgain::
 	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_Lab_Text_BattleThePokemon, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_BattleThePokemon, MSGBOX_AUTOCLOSE
 	hideface 1
 	setvar VAR_STORYLINE_STATE, 6
 	release
@@ -101,7 +102,7 @@ ChandraVillage_Lab_Pikachu::
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_Lab_Pikachu_Yes
 	hidemonpic
-	msgbox ChandraVillage_Lab_Text_ChooseCarefully, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_ChooseCarefully, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
@@ -156,7 +157,7 @@ ChandraVillage_Lab_Eevee::
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_Lab_Eevee_Yes
 	hidemonpic
-	msgbox ChandraVillage_Lab_Text_ChooseCarefully, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_ChooseCarefully, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
@@ -292,7 +293,7 @@ ChandraVillage_Lab_Tyler_Pick_Pikachu::
 ChandraVillage_Lab_Tyler_End::
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_Lab_Text_FightRattata, MSGBOX_DEFAULT
+	msgbox ChandraVillage_Lab_Text_FightRattata, MSGBOX_AUTOCLOSE
 	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceDown
@@ -363,8 +364,10 @@ ChandraVillage_Lab_Rattata1::
 	lock
 	faceplayer
 	playmoncry SPECIES_RATTATA, 0
+	speakername SpeakerName_Text_Rattata
 	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_AUTOCLOSE
 	waitmoncry
+	goto_if_unset FLAG_SYS_POKEMON_GET, ChandraVillage_Lab_RattataNoBattle
 	setwildbattle SPECIES_RATTATA, 2, ITEM_NONE
 	dowildbattle
 	playmoncry SPECIES_RATTATA, 1
@@ -381,8 +384,10 @@ ChandraVillage_Lab_Rattata2::
 	lock
 	faceplayer
 	playmoncry SPECIES_RATTATA, 0
+	speakername SpeakerName_Text_Rattata
 	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_DEFAULT
 	waitmoncry
+	goto_if_unset FLAG_SYS_POKEMON_GET, ChandraVillage_Lab_RattataNoBattle
 	setwildbattle SPECIES_RATTATA, 3, ITEM_NONE
 	dowildbattle
 	playmoncry SPECIES_RATTATA, 1
@@ -392,6 +397,11 @@ ChandraVillage_Lab_Rattata2::
 	removeobject LOCALID_RATTATA_TWO
 	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_RATTATA_2
 	fadescreen 0
+	release
+	end
+
+ChandraVillage_Lab_RattataNoBattle::
+	closemessage
 	release
 	end
 

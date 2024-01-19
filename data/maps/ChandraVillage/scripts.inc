@@ -309,7 +309,10 @@ ChandraVillage_Storyline_State_4_Next::
 	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_Tyler
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_ButProf, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
@@ -561,7 +564,7 @@ ChandraVillage_Text_TylerIntro_HeySnorlax:
 	.string "a Poké Flute to wake you up!\p"
 	.string "Anyway… Listen, {PLAYER}.\p"
 	.string "There's an infestation of Pokémon in\n"
-	.string "the Professor's Lab.\p"
+	.string "the Professor's Lab.\l"
 	.string "We need to go and sort the problem!\p"
 	.string "If we don't show the Professor what we\n"
 	.string "are capable of, I fear he will never\l"

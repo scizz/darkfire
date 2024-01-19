@@ -41,7 +41,7 @@ ChandraVillage_PlayerHouse_2F_Intro::
 	waitse
 	delay 30
 	speakername CommonName_Text_Mom
-	msgbox ChandraVillage_PlayerHouse_2F_Text_WakeUp, MSGBOX_DEFAULT
+	msgbox ChandraVillage_PlayerHouse_2F_Text_WakeUp, MSGBOX_AUTOCLOSE
 	setvar VAR_STORYLINE_STATE, 1
 	releaseall
 	end
@@ -107,8 +107,8 @@ ChandraVillage_PlayerHouse_2F_Storyline_State_1::
 
 ChandraVillage_PlayerHouse_2F_Storyline_State_2::
 	lockall
-	msgbox ChandraVillage_PlayerHouse_2F_Text_ComeDownstairs, MSGBOX_DEFAULT
-	closemessage
+	speakername CommonName_Text_Mom
+	msgbox ChandraVillage_PlayerHouse_2F_Text_ComeDownstairs, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	releaseall
