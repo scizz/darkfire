@@ -243,6 +243,12 @@ const u16 gShadowVerticalOffsets[] = {
     16
 };
 
+// Sprite data for FLDEFF_SHADOW
+#define sLocalId  data[0]
+#define sMapNum   data[1]
+#define sMapGroup data[2]
+#define sYOffset  data[3]
+
 u32 FldEff_Shadow(void)
 {
     u8 objectEventId;
@@ -275,32 +281,35 @@ u32 FldEff_Shadow(void)
 void UpdateShadowFieldEffect(struct Sprite *sprite)
 {
     u8 objectEventId;
-    struct ObjectEvent *objectEvent;
-    struct Sprite *linkedSprite;
 
-    if (TryGetObjectEventIdByLocalIdAndMap(sprite->data[0], sprite->data[1], sprite->data[2], &objectEventId))
+    if (TryGetObjectEventIdByLocalIdAndMap(sprite->sLocalId, sprite->sMapNum, sprite->sMapGroup, &objectEventId))
     {
         FieldEffectStop(sprite, FLDEFF_SHADOW);
     }
     else
     {
-        objectEvent = &gObjectEvents[objectEventId];
-        linkedSprite = &gSprites[objectEvent->spriteId];
+        struct ObjectEvent *objectEvent = &gObjectEvents[objectEventId];
+        struct Sprite *linkedSprite = &gSprites[objectEvent->spriteId];
         sprite->oam.priority = linkedSprite->oam.priority;
         sprite->x = linkedSprite->x;
-        sprite->y = linkedSprite->y + sprite->data[3];
-        if (!objectEvent->active || !objectEvent->hasShadow
+        sprite->y = linkedSprite->y + sprite->sYOffset;
+        sprite->invisible = linkedSprite->invisible;
+        if (!objectEvent->active
+         || objectEvent->inHotSprings
+         || objectEvent->inSandPile
          || MetatileBehavior_IsPokeGrass(objectEvent->currentMetatileBehavior)
-         || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->currentMetatileBehavior)
-         || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->previousMetatileBehavior)
-         || MetatileBehavior_IsDoor(objectEvent->currentMetatileBehavior))
-        // || MetatileBehavior_IsReflective(objectEvent->currentMetatileBehavior)
-        // || MetatileBehavior_IsReflective(objectEvent->previousMetatileBehavior))
+         || MetatileBehavior_IsDoor(objectEvent->currentMetatileBehavior)
+         || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->currentMetatileBehavior))
         {
             FieldEffectStop(sprite, FLDEFF_SHADOW);
         }
     }
 }
+
+#undef sLocalId
+#undef sMapNum
+#undef sMapGroup
+#undef sYOffset
 
 // Sprite data for FLDEFF_TALL_GRASS and FLDEFF_LONG_GRASS
 #define sElevation   data[0]
