@@ -59,12 +59,13 @@ Route4_EventScript_Joshua::
 	end
 
 Route4_Mareep::
-	lockall
+	lock
 	faceplayer
 	playmoncry SPECIES_MAREEP, 0
-	msgbox Route4_Text_Mareep, MSGBOX_DEFAULT
+	speakername CommonName_Text_Mareep
+	msgbox Route4_Text_Mareep, MSGBOX_AUTOCLOSE
 	waitmoncry
-	releaseall
+	release
 	end
 
 Route4_Given::
@@ -90,4 +91,4 @@ Route4_Text_Given:
 	.string "Though, once it's gone, it's gone!$"
 
 Route4_Text_Mareep:
-	.string "Mareep: Meep!$"
+	.string "Meep!$"
