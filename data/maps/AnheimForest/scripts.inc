@@ -188,59 +188,59 @@ AnheimForest_LucyEventEnd::
 	end
 
 AnheimForest_Beedrill::
-	lock
+	lockall
 	faceplayer
+	setobjectmovementtype 26, MOVEMENT_TYPE_FACE_LEFT
+	setobjectxyperm 26, 30, 59
+	removeobject 26
+	addobject 26
 	playmoncry SPECIES_BEEDRILL, 0
+	speakername CommonName_Text_Beedrill
 	msgbox AnheimForest_Text_Beedrill, MSGBOX_AUTOCLOSE
 	waitmoncry
 	setwildbattle SPECIES_BEEDRILL, 7, ITEM_NONE
 	dowildbattle
 	playmoncry SPECIES_BEEDRILL, 1
 	waitmoncry
-	fadescreen 1
+	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
 	removeobject 27
 	setflag FLAG_HIDE_ANHEIM_FOREST_BEEDRILL
-	setobjectmovementtype 26, MOVEMENT_TYPE_FACE_LEFT
-	fadescreen 0
-	release
+	fadescreenswapbuffers FADE_FROM_BLACK
+	releaseall
 	end
 
 AnheimForest_Lucy::
 	lock
 	faceplayer
-	speakername CommonName_Text_Rose
+	speakername SpeakerName_Text_QuestionMark
 	showface FS_ROSE, FSE_NORMAL, 1, 1
-	msgbox AnheimForest_Text_Lucy, MSGBOX_DEFAULT
+	msgbox AnheimForest_Text_Lucy, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
-	speakername CommonName_Text_Rose
+	speakername SpeakerName_Text_QuestionMark
 	showface FS_ROSE, FSE_NORMAL, 1, 1
-	msgbox AnheimForest_Text_Dots, MSGBOX_DEFAULT
+	msgbox AnheimForest_Text_Dots, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
-	speakername CommonName_Text_Rose
+	speakername SpeakerName_Text_QuestionMark
 	showface FS_ROSE, FSE_ANGRY, 1, 1
-	msgbox AnheimForest_Text_PleaseMove, MSGBOX_DEFAULT
+	msgbox AnheimForest_Text_PleaseMove, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceDown
 	waitmovement 0
 	applymovement 26, WL5
 	waitmovement 0
-	applymovement 27, Common_Movement_FaceRight
+	applymovement 26, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
-	waitmovement 0
-	speakername CommonName_Text_Rose
+	speakername SpeakerName_Text_QuestionMark
 	showface FS_ROSE, FSE_NORMAL, 1, 1
-	msgbox AnheimForest_Text_Thanks, MSGBOX_DEFAULT
-	closemessage
+	msgbox AnheimForest_Text_Thanks, MSGBOX_AUTOCLOSE
 	hideface 1
 	applymovement 26, WDL4
 	waitmovement 0
@@ -344,11 +344,11 @@ AnheimForest_EventScript_Kakuna_1::
 	dowildbattle
 	playmoncry SPECIES_KAKUNA, 1
 	waitmoncry
-	fadescreen 1
+	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
 	removeobject 23
 	setflag FLAG_HIDE_ANHEIM_FOREST_KAKUNA_1
-	fadescreen 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
@@ -362,11 +362,11 @@ AnheimForest_EventScript_Kakuna_2::
 	dowildbattle
 	playmoncry SPECIES_KAKUNA, 1
 	waitmoncry
-	fadescreen 1
+	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
 	removeobject 6
 	setflag FLAG_HIDE_ANHEIM_FOREST_KAKUNA_2
-	fadescreen 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
@@ -380,30 +380,11 @@ AnheimForest_EventScript_Kakuna_3::
 	dowildbattle
 	playmoncry SPECIES_KAKUNA, 1
 	waitmoncry
-	fadescreen 1
+	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
 	removeobject 7
 	setflag FLAG_HIDE_ANHEIM_FOREST_KAKUNA_3
-	fadescreen 0
-	releaseall
-	end
-
-AnheimForest_EventScript_Beedrill::
-	lockall
-	faceplayer
-	playmoncry SPECIES_BEEDRILL, 0
-	speakername CommonName_Text_Beedrill
-	msgbox AnheimForest_Text_Beedrill, MSGBOX_AUTOCLOSE
-	waitmoncry
-	setwildbattle SPECIES_BEEDRILL, 10, ITEM_NONE
-	dowildbattle
-	playmoncry SPECIES_BEEDRILL, 1
-	waitmoncry
-	fadescreen 1
-	delay 60
-	removeobject 27
-	setflag FLAG_HIDE_ANHEIM_FOREST_BEEDRILL
-	fadescreen 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
@@ -523,8 +504,8 @@ AnheimForest_Text_FatherRecap:
 AnheimForest_Text_MotherLucySaved:
 	.string "{COLOR}{RED}Thank you so much for finding our\n"
 	.string "daughter!\p"
-	.string "She has rushed to the Pokémon Center to\n"
-	.string "have her Pokémon healed…\p"
+	.string "She has rushed to the Pokémon Center\n"
+	.string "to have her Pokémon healed…\p"
 	.string "That Beedrill seemed to have shook\n"
 	.string "her up quite a bit!\p"
 	.string "Please take this as a token of our\n"
@@ -539,15 +520,14 @@ AnheimForest_Text_MotherRareCandy:
 	.string "…\p"
 	.string "{PLAYER}?\n"
 	.string "That's a nice name!\p"
-	.string "Well, {PLAYER},\n"
-	.string "thank you for all of your help!\p"
-	.string "We wish you the best!$"
+	.string "Well, {PLAYER}, thank you for all of\n"
+	.string "your help! We wish you the best!$"
 
 AnheimForest_Text_FatherLucySaved:
 	.string "{COLOR}{BLUE}Thank you so much for finding our\n"
 	.string "daughter!\p"
-	.string "She has rushed to the Pokémon Center to\n"
-	.string "have her Pokémon healed…\p"
+	.string "She has rushed to the Pokémon Center\n"
+	.string "to have her Pokémon healed…\p"
 	.string "That Beedrill seemed to have shook\n"
 	.string "her up quite a bit!\p"
 	.string "Please take this as a token of our\n"
@@ -562,9 +542,8 @@ AnheimForest_Text_FatherRareCandy:
 	.string "…\p"
 	.string "{PLAYER}?\n"
 	.string "That's a nice name!\p"
-	.string "Well, {PLAYER},\n"
-	.string "thank you for all of your help!\p"
-	.string "We wish you the best!$"
+	.string "Well, {PLAYER}, thank you for all of\n"
+	.string "your help! We wish you the best!$"
 
 AnheimForest_Text_Lucy:
 	.string "{COLOR}{RED}Hey…\p"

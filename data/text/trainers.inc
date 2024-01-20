@@ -106,6 +106,9 @@ CommonName_Text_Kakuna:
 CommonName_Text_Beedrill:
 	.string "Beedrill$"
 
+CommonName_Text_Mareep:
+	.string "Mareep$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

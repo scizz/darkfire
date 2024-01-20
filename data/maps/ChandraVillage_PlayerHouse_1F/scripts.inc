@@ -99,8 +99,7 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	waitmovement 0
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_PlayerHouse_1F_Text_OhPlayer, MSGBOX_DEFAULT
-	closemessage
+	msgbox ChandraVillage_PlayerHouse_1F_Text_OhPlayer, MSGBOX_AUTOCLOSE
 	hideface 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -112,7 +111,7 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	waitmovement 0
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_PlayerHouse_1F_Text_AlmostForgot, MSGBOX_DEFAULT
+	msgbox ChandraVillage_PlayerHouse_1F_Text_AlmostForgot, MSGBOX_AUTOCLOSE
 	hideface 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -125,9 +124,8 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	waitmovement 0
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
-	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_DEFAULT
+	msgbox ChandraVillage_PlayerHouse_1F_Text_TheyLookGreat, MSGBOX_AUTOCLOSE
 	hideface 1
-	closemessage
 	applymovement LOCALID_MOM, WalkURRUFL
 	waitmovement 0
 	setvar VAR_STORYLINE_STATE, 3
