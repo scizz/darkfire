@@ -107,6 +107,7 @@ static void QueueAnimTiles_RustboroGym_Water6(u16);
 static void QueueAnimTiles_RustboroGym_Water7(u16);
 static void QueueAnimTiles_RustboroGym_Water8(u16);
 static void QueueAnimTiles_RustboroGym_Water9(u16);
+static void QueueAnimTiles_RustboroGym_GreenBeams(u16);
 static void QueueAnimTiles_PokemonCenter_Map(u16);
 static void QueueAnimTiles_PokemonCenter_Stripe(u16);
 static void QueueAnimTiles_Lilycove_Flag(u16);
@@ -629,6 +630,24 @@ const u16 *const gTilesetAnims_RustboroGym_Water9[] = {
     gTilesetAnims_RustboroGym_Water9_Frame1,
     gTilesetAnims_RustboroGym_Water9_Frame2,
     gTilesetAnims_RustboroGym_Water9_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/1.4bpp");
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/2.4bpp");
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/3.4bpp");
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/4.4bpp");
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/5.4bpp");
+const u16 gTilesetAnims_RustboroGym_GreenBeams_Frame6[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/green_beams/6.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_GreenBeams[] = {
+    gTilesetAnims_RustboroGym_GreenBeams_Frame0,
+    gTilesetAnims_RustboroGym_GreenBeams_Frame1,
+    //gTilesetAnims_RustboroGym_GreenBeams_Frame2,
+    gTilesetAnims_RustboroGym_GreenBeams_Frame3,
+    gTilesetAnims_RustboroGym_GreenBeams_Frame4,
+    gTilesetAnims_RustboroGym_GreenBeams_Frame5,
+    gTilesetAnims_RustboroGym_GreenBeams_Frame6
 };
 
 const u16 gTilesetAnims_PokemonCenter_Map_Frame0[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/map/0.4bpp");
@@ -2333,6 +2352,8 @@ static void TilesetAnim_RustboroGym(u16 timer)
         QueueAnimTiles_RustboroGym_Water8(timer >> 5);
         QueueAnimTiles_RustboroGym_Water9(timer >> 5);
     }
+    if (timer % 16 == 1)
+        QueueAnimTiles_RustboroGym_GreenBeams(timer >> 6);
 }
 
 static void TilesetAnim_PokemonCenter(u16 timer)
@@ -2572,6 +2593,12 @@ static void QueueAnimTiles_RustboroGym_Water9(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Water9);
     AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Water9[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 63)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_GreenBeams(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_GreenBeams);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_GreenBeams[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 5)), 9 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_PokemonCenter_Map(u16 timer)
