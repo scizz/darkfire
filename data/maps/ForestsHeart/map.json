@@ -2,7 +2,7 @@
   "id": "MAP_FORESTS_HEART",
   "name": "ForestsHeart",
   "layout": "LAYOUT_FORESTS_HEART",
-  "music": "MUS_ANHEIM_FOREST",
+  "music": "MUS_ANHEIM_TOWN",
   "region_map_section": "MAPSEC_ANHEIM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
