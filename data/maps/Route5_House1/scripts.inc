@@ -23,14 +23,13 @@ Route5_House1_Girl::
 	end
 
 Route5_House1_Pidgey::
-	lockall
+	lock
 	faceplayer
-	playmoncry SPECIES_PIDGEY, 0
-	speakername CommonName_Text_Pidgey
-	msgbox Route5_House1_Text_Pidgey, MSGBOX_DEFAULT
+	playmoncry SPECIES_BULBASAUR, 0
+	speakername CommonName_Text_Bulbasaur
+	msgbox Route5_House1_Text_Pidgey, MSGBOX_AUTOCLOSE
 	waitmoncry
-	closemessage
-	releaseall
+	release
 	end
 
 Route5_House1_Text_ATiredTrainerNoWorries:
@@ -52,11 +51,11 @@ Route5_House1_Text_ThereWeAre:
 	.string "Feel free to stay as long as you like!$"
 
 Route5_House1_Text_Girl:
-	.string "{COLOR}{RED}My Pidgey and I came here for a rest\n"
+	.string "{COLOR}{RED}My Bulbasaur and I came here to rest\n"
 	.string "after climbing Route 5 together.\p"
 	.string "The Trainers looked more interested in\n"
 	.string "looking at the stone tablets rather\l"
 	.string "than battling us! Hehehe!$"
 
 Route5_House1_Text_Pidgey:
-	.string "Pidgeyy!$"
+	.string "Bulbaa!$"

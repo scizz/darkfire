@@ -109,6 +109,9 @@ CommonName_Text_Beedrill:
 CommonName_Text_Mareep:
 	.string "Mareep$"
 
+CommonName_Text_Bulbasaur:
+	.string "Bulbasaur$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
