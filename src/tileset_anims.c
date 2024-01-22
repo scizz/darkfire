@@ -2622,7 +2622,7 @@ static void QueueAnimTiles_RustboroGym_GreenBeams(u16 timer)
 static void QueueAnimTiles_RustboroGym_GreyBeams(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_GreyBeams);
-    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_GreyBeams[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 5)), 9 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_GreyBeams[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 21)), 9 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_PokemonCenter_Map(u16 timer)
