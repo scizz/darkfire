@@ -658,11 +658,8 @@ const u16 gTilesetAnims_RustboroGym_GreyBeams_Frame2[] = INCBIN_U16("data/tilese
 const u16 *const gTilesetAnims_RustboroGym_GreyBeams[] = {
     gTilesetAnims_RustboroGym_GreyBeams_Frame0,
     gTilesetAnims_RustboroGym_GreyBeams_Frame1,
-    gTilesetAnims_RustboroGym_GreyBeams_Frame1,
-    gTilesetAnims_RustboroGym_GreyBeams_Frame2,
-    gTilesetAnims_RustboroGym_GreyBeams_Frame1,
-    gTilesetAnims_RustboroGym_GreyBeams_Frame1,
-    gTilesetAnims_RustboroGym_GreyBeams_Frame0
+    gTilesetAnims_RustboroGym_GreyBeams_Frame0,
+    gTilesetAnims_RustboroGym_GreyBeams_Frame2
 };
 
 const u16 gTilesetAnims_PokemonCenter_Map_Frame0[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/map/0.4bpp");

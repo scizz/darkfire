@@ -227,7 +227,7 @@ AnheimTown_Text_Gentleman:
 	.string "I'll never forget what he told me.\p"
 	.string "He said: “If an egg is broken by an\n"
 	.string "outside force, life ends.\p"
-	.string "If however an egg is broken by an\n"
+	.string "If, however, an egg is broken by an\n"
 	.string "inside force, life begins.”\p"
 	.string "Great things always begin from the\n"
 	.string "inside.$"
