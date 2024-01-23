@@ -95,6 +95,7 @@ static void QueueAnimTiles_GenericBuilding_BigRock(u16);
 static void QueueAnimTiles_GenericBuilding_SmallRockTop(u16);
 static void QueueAnimTiles_GenericBuilding_SmallRockBottom(u16);
 static void QueueAnimTiles_GenericBuilding_Wood(u16);
+static void QueueAnimTiles_GenericBuilding_Rapid(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void QueueAnimTiles_RustboroGym_Water0(u16);
@@ -110,6 +111,7 @@ static void QueueAnimTiles_RustboroGym_Water9(u16);
 static void QueueAnimTiles_RustboroGym_GreenBeams(u16);
 static void QueueAnimTiles_RustboroGym_GreyBeams(u16);
 static void QueueAnimTiles_RustboroGym_Weed(u16);
+static void QueueAnimTiles_RustboroGym_Rapid(u16);
 static void QueueAnimTiles_PokemonCenter_Map(u16);
 static void QueueAnimTiles_PokemonCenter_Stripe(u16);
 static void QueueAnimTiles_Lilycove_Flag(u16);
@@ -524,6 +526,14 @@ const u16 *const gTilesetAnims_GenericBuilding_Wood[] = {
     gTilesetAnims_GenericBuilding_Wood_Frame1
 };
 
+const u16 gTilesetAnims_GenericBuilding_Rapid_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/rapid/0.4bpp");
+const u16 gTilesetAnims_GenericBuilding_Rapid_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/rapid/1.4bpp");
+
+const u16 *const gTilesetAnims_GenericBuilding_Rapid[] = {
+    gTilesetAnims_GenericBuilding_Rapid_Frame0,
+    gTilesetAnims_GenericBuilding_Rapid_Frame1
+};
+
 const u16 gTilesetAnims_RustboroGym_Water0_Frame0[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/0.4bpp");
 const u16 gTilesetAnims_RustboroGym_Water0_Frame1[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/1.4bpp");
 const u16 gTilesetAnims_RustboroGym_Water0_Frame2[] = INCBIN_U16("data/tilesets/secondary/generic_building/anim/water/0/2.4bpp");
@@ -672,6 +682,14 @@ const u16 *const gTilesetAnims_RustboroGym_Weed[] = {
     gTilesetAnims_RustboroGym_Weed_Frame1,
     gTilesetAnims_RustboroGym_Weed_Frame2,
     gTilesetAnims_RustboroGym_Weed_Frame1
+};
+
+const u16 gTilesetAnims_RustboroGym_Rapid_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/rapid/0.4bpp");
+const u16 gTilesetAnims_RustboroGym_Rapid_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/anim/rapid/1.4bpp");
+
+const u16 *const gTilesetAnims_RustboroGym_Rapid[] = {
+    gTilesetAnims_RustboroGym_Rapid_Frame0,
+    gTilesetAnims_RustboroGym_Rapid_Frame1
 };
 
 const u16 gTilesetAnims_PokemonCenter_Map_Frame0[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/anim/map/0.4bpp");
@@ -2340,6 +2358,7 @@ static void TilesetAnim_GenericBuilding(u16 timer)
         QueueAnimTiles_GenericBuilding_Water7(timer >> 5);
         QueueAnimTiles_GenericBuilding_Water8(timer >> 5);
         QueueAnimTiles_GenericBuilding_Water9(timer >> 5);
+        QueueAnimTiles_GenericBuilding_Rapid(timer >> 5);
     }
     if (timer % 8 == 2)
         QueueAnimTiles_GenericBuilding_BigRock(timer >> 4);
@@ -2375,6 +2394,7 @@ static void TilesetAnim_RustboroGym(u16 timer)
         QueueAnimTiles_RustboroGym_Water7(timer >> 5);
         QueueAnimTiles_RustboroGym_Water8(timer >> 5);
         QueueAnimTiles_RustboroGym_Water9(timer >> 5);
+        QueueAnimTiles_RustboroGym_Rapid(timer >> 5);
     }
     if (timer % 16 == 1)
     {
@@ -2543,7 +2563,13 @@ static void QueueAnimTiles_GenericBuilding_SmallRockBottom(u16 timer)
 static void QueueAnimTiles_GenericBuilding_Wood(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_Wood);
-    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_Wood[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 188)), 2 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_Wood[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 206)), 2 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_GenericBuilding_Rapid(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_GenericBuilding_Rapid);
+    AppendTilesetAnimToBuffer(gTilesetAnims_GenericBuilding_Rapid[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 188)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Sootopolis_StormyWater(u16 timer)
@@ -2640,6 +2666,12 @@ static void QueueAnimTiles_RustboroGym_Weed(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Weed);
     AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Weed[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 231)), 1 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_RustboroGym_Rapid(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_RustboroGym_Rapid);
+    AppendTilesetAnimToBuffer(gTilesetAnims_RustboroGym_Rapid[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 171)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_PokemonCenter_Map(u16 timer)
