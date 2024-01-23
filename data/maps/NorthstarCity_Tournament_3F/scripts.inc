@@ -31,14 +31,14 @@ NorthstarCity_Tournament_3F_Text_Psychic:
 	.string "the horizon of the Tenjo region…\p"
 	.string "You don't believe me?\p"
 	.string "I suppose you do not sense it, like I\n"
-	.string "do.$"
+	.string "do…$"
 
 NorthstarCity_Tournament_3F_Text_Fat_Guy:
-	.string "{COLOR}{BLUE}I work for the station's camera crew -\n"
-	.string "couldn't find a better job even if I\l"
+	.string "{COLOR}{BLUE}I work for the station's camera crew.\p"
+	.string "Couldn't find a better job even if I\n"
 	.string "was the almighty President.\p"
 	.string "I get paid to see hot Pokémon battles\n"
-	.string "first-hand - how cool is that?!$"
+	.string "first-hand! How cool is that?!$"
 
 NorthstarCity_Tournament_3F_Text_SUBO_Door:
 	.string "{COLOR}{RED}Forget it, kid! I ain't movin'!\n"
