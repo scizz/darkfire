@@ -42,7 +42,7 @@ NorthstarCity_Tournament_3F_Text_Fat_Guy:
 
 NorthstarCity_Tournament_3F_Text_SUBO_Door:
 	.string "{COLOR}{RED}Forget it, kid! I ain't movin'!\n"
-	.string "Nope!\p"
+	.string "Nope!\l"
 	.string "You ain't getting out of this one!$"
 
 NorthstarCity_Tournament_3F_Text_WelcomeTrainer:
