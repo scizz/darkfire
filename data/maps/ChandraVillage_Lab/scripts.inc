@@ -352,12 +352,20 @@ ChandraVillage_Lab_Catch_Eevee::
 	return
 
 ChandraVillage_Lab_Aide::
+	lock
+	faceplayer
 	goto_if_set FLAG_SYS_POKEDEX_GET, ChandraVillage_Lab_Aide_Dex
-	msgbox ChandraVillage_Lab_Text_Aide, MSGBOX_NPC
+	msgbox ChandraVillage_Lab_Text_Aide, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceRight
+	waitmovement 0
+	release
 	end
 
 ChandraVillage_Lab_Aide_Dex::
-	msgbox ChandraVillage_Lab_Text_Aide_Dex, MSGBOX_NPC
+	msgbox ChandraVillage_Lab_Text_Aide_Dex, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceRight
+	waitmovement 0
+	release
 	end
 
 ChandraVillage_Lab_Rattata1::

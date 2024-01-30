@@ -1,3 +1,8 @@
+.set LOCALID_ROSE, 4
+.set LOCALID_SUBO, 7
+.set LOCALID_RAKAZ, 8
+.set LOCALID_DIRECTOR, 9
+
 NorthstarCity_Tournament_3F_MapScripts::
 	.byte 0
 	end
@@ -25,6 +30,20 @@ NorthstarCity_Tournament_3F_Hide4FObjects::
 	setvar VAR_STORYLINE_STATE, 1
 	release
 	end
+
+Northstar_Tournament_3F_SUBOBattle::
+	lock
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WD2
+	waitmovement 0
+	special RemoveCameraObject
+	playbgm MUS_SUBO_THEME, TRUE
+	speakername2 CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 0, 0
+	msgbox NorthstarCity_Tournament_3F_Text_GiveItUp, MSGBOX_AUTOCLOSE
+	hideface 0
+	delay 30
+
 
 NorthstarCity_Tournament_3F_Text_Psychic:
 	.string "Something very sinister is brewing in\n"
