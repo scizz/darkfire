@@ -9279,10 +9279,20 @@ static void SetObjectEventSpriteOamTableForLongGrass(struct ObjectEvent *objEven
     if (!MetatileBehavior_IsLongGrass(objEvent->previousMetatileBehavior))
         return;
 
-    sprite->subspriteTableNum = 4;
+    // If the follower is facing east/west, change the follower sprite's priority to have it hide behind the long grass sprite.
+    if(gSaveBlock2Ptr->follower.inProgress &&
+       objEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId] &&
+       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST))
+    {
+        sprite->oam.priority = 3;
+    }
+    else
+    {
+        sprite->subspriteTableNum = 4;
 
     if (ElevationToPriority(objEvent->previousElevation) == 1)
-        sprite->subspriteTableNum = 5;
+            sprite->subspriteTableNum = 5;
+    }
 }
 
 bool8 IsElevationMismatchAt(u8 elevation, s16 x, s16 y)
