@@ -4362,6 +4362,10 @@ void FollowerPokeballSparkle(void)
             case DIR_NORTH:
                 SetSpritePosToOffsetMapCoords(&x, &y, 8, 0);
                 gSprites[follower->spriteId].y = y;
+
+                // Check to see if the bike-bump glitch has occured
+                if(gSaveBlock2Ptr->follower.flags & 0x200)
+                    y += 4; 
                 break;
             case DIR_EAST:
             case DIR_WEST:

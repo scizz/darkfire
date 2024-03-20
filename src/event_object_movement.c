@@ -11145,8 +11145,8 @@ u8 MovementAction_FollowingPokemon_Grow_Step1(struct ObjectEvent *objectEvent, s
 {
     sprite->data[7]--;
 
-    if (sprite->data[7] == 10)
-        gObjectEvents[gSaveBlock2Ptr->follower.objId].invisible = FALSE;
+    if (sprite->data[7] == 10 && !(gSaveBlock2Ptr->follower.flags & 0x200))
+        objectEvent->invisible = FALSE;
 
     switch(gObjectEvents[gPlayerAvatar.objectEventId].facingDirection)
     {
@@ -11218,6 +11218,27 @@ u8 MovementAction_FollowingPokemon_Grow_Step1(struct ObjectEvent *objectEvent, s
 
     if (sprite->data[7] <= 1)
     {
+        // In case of bump glitch
+        if(gSaveBlock2Ptr->follower.flags & 0x200)
+        {
+            objectEvent->invisible = FALSE;
+            gSaveBlock2Ptr->follower.flags &= ~0x200;
+        }
+
+        switch(objectEvent->facingDirection)
+        {
+            case DIR_SOUTH:
+            case DIR_NORTH:
+                sprite->x2 = 0;
+                break;
+            case DIR_WEST:
+                sprite->x2 = 8;
+                break;
+            case DIR_EAST:
+                sprite->x2 = -8;
+                break;
+        }
+
         // Set y2 of the 64x64 sprites back to 0, and compensate with y.
         if (IsBigSprite(objectEvent->graphicsId))
         {
