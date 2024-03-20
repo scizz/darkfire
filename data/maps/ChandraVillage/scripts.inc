@@ -177,6 +177,7 @@ ChandraVillage_Tyler_Debug::
 	givemon SPECIES_JOLTEON, 35, ITEM_NONE
 	givemon SPECIES_RALTS, 35, ITEM_NONE
 	givemon SPECIES_DRAGONITE, 35, ITEM_NONE
+	giveitem ITEM_MACH_BIKE, 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_DEXNAV_GET

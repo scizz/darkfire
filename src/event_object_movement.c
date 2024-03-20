@@ -9279,20 +9279,10 @@ static void SetObjectEventSpriteOamTableForLongGrass(struct ObjectEvent *objEven
     if (!MetatileBehavior_IsLongGrass(objEvent->previousMetatileBehavior))
         return;
 
-    // If the follower is facing east/west, change the follower sprite's priority to have it hide behind the long grass sprite.
-    if(gSaveBlock2Ptr->follower.inProgress &&
-       objEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId] &&
-       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST))
-    {
-        sprite->oam.priority = 3;
-    }
-    else
-    {
-        sprite->subspriteTableNum = 4;
+    sprite->subspriteTableNum = 4;
 
     if (ElevationToPriority(objEvent->previousElevation) == 1)
-            sprite->subspriteTableNum = 5;
-    }
+        sprite->subspriteTableNum = 5;
 }
 
 bool8 IsElevationMismatchAt(u8 elevation, s16 x, s16 y)
@@ -11107,7 +11097,7 @@ u8 MovementAction_FollowingPokemon_Shrink_Step1(struct ObjectEvent *objectEvent,
     if (sprite->data[7] >= 11)
     {
         FreeSpriteOamMatrix(sprite);
-        //gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = FALSE;
+        gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = FALSE;
         UnlockPlayerFieldControls();
         objectEvent->invisible = TRUE;
         sprite->data[2]++;
