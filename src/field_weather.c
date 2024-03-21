@@ -301,7 +301,7 @@ static void Task_WeatherMain(u8 taskId)
 
 static void None_Init(void)
 {
-    Weather_SetBlendCoeffs(8, 12); // Indoor shadows
+    Weather_SetBlendCoeffs(8, 13); // Indoor shadows
     //gWeatherPtr->noShadows = FALSE;
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 0;
@@ -437,7 +437,7 @@ static void FadeInScreenWithWeather(void)
     case WEATHER_SHADE:
         if (FadeInScreen_RainShowShade() == FALSE)
         {
-            Weather_SetBlendCoeffs(8, 12); // Indoor shadows
+            Weather_SetBlendCoeffs(8, 13); // Indoor shadows
             gWeatherPtr->colorMapIndex = 3;
             gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
         }
@@ -445,7 +445,7 @@ static void FadeInScreenWithWeather(void)
     case WEATHER_DROUGHT:
         if (FadeInScreen_Drought() == FALSE)
         {
-            Weather_SetBlendCoeffs(8, 12); // Indoor shadows
+            Weather_SetBlendCoeffs(8, 13); // Indoor shadows
             gWeatherPtr->colorMapIndex = -6;
             gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
         }
@@ -454,7 +454,7 @@ static void FadeInScreenWithWeather(void)
     case WEATHER_SNOW:
         if (FadeInScreen_FogHorizontal() == FALSE)
         {
-            Weather_SetBlendCoeffs(8, 12); // Indoor shadows
+            Weather_SetBlendCoeffs(8, 13); // Indoor shadows
             gWeatherPtr->colorMapIndex = 0;
             gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
         }
@@ -463,7 +463,7 @@ static void FadeInScreenWithWeather(void)
     //case WEATHER_SUNNY_CLOUDS:
         if (FadeInScreen_FogHorizontal() == FALSE)
         {
-            Weather_SetBlendCoeffs(8, 12); // Indoor shadows
+            Weather_SetBlendCoeffs(8, 13); // Indoor shadows
             gWeatherPtr->colorMapIndex = 0;
             gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
         }

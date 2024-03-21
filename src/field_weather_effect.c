@@ -103,7 +103,7 @@ void Clouds_InitVars(void)
     //gWeatherPtr->noShadows = FALSE;
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 20;
-    Weather_SetBlendCoeffs(8, 12);
+    Weather_SetBlendCoeffs(8, 13);
     gWeatherPtr->weatherGfxLoaded = FALSE;
     gWeatherPtr->initStep = 0;
     //if (gWeatherPtr->cloudSpritesCreated == FALSE)
@@ -162,7 +162,7 @@ void Sunny_InitVars(void)
 {
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 20;
-    Weather_SetBlendCoeffs(8, 12);
+    Weather_SetBlendCoeffs(8, 13);
     // gWeatherPtr->noShadows = FALSE;
 }
 
@@ -489,7 +489,7 @@ void Rain_InitVars(void)
     gWeatherPtr->targetColorMapIndex = 3;
     gWeatherPtr->colorMapStepDelay = 20;
     SetRainStrengthFromSoundEffect(SE_RAIN);
-    Weather_SetBlendCoeffs(8, 12); // preserve shadow darkness
+    Weather_SetBlendCoeffs(8, 13); // preserve shadow darkness
     //gWeatherPtr->noShadows = FALSE;
 }
 
@@ -784,7 +784,7 @@ void Snow_InitVars(void)
     gWeatherPtr->colorMapStepDelay = 20;
     gWeatherPtr->targetSnowflakeSpriteCount = 16;
     gWeatherPtr->snowflakeVisibleCounter = 0;
-    Weather_SetBlendCoeffs(8, 12); // preserve shadow darkness
+    Weather_SetBlendCoeffs(8, 13); // preserve shadow darkness
     //gWeatherPtr->noShadows = FALSE;
 }
 
@@ -1035,7 +1035,7 @@ void Thunderstorm_InitVars(void)
     gWeatherPtr->weatherGfxLoaded = FALSE;  // duplicate assignment
     gWeatherPtr->thunderEnqueued = FALSE;
     SetRainStrengthFromSoundEffect(SE_THUNDERSTORM);
-    Weather_SetBlendCoeffs(8, 12); // preserve shadow darkness
+    Weather_SetBlendCoeffs(8, 13); // preserve shadow darkness
     //gWeatherPtr->noShadows = FALSE;
 }
 
@@ -1065,7 +1065,7 @@ void Downpour_InitVars(void)
     gWeatherPtr->colorMapStepDelay = 20;
     gWeatherPtr->weatherGfxLoaded = FALSE;  // duplicate assignment
     SetRainStrengthFromSoundEffect(SE_DOWNPOUR);
-    Weather_SetBlendCoeffs(8, 12); // preserve shadow darkness
+    Weather_SetBlendCoeffs(8, 13); // preserve shadow darkness
     //gWeatherPtr->noShadows = FALSE;
 }
 
@@ -1312,7 +1312,7 @@ static const union AnimCmd sAnim_FogH_3[] =
 
 static const union AnimCmd sAnim_FogH_4[] =
 {
-    ANIMCMD_FRAME(128, 16),
+    ANIMCMD_FRAME(128, 13),
     ANIMCMD_END,
 };
 
@@ -1390,7 +1390,7 @@ void FogHorizontal_InitVars(void)
         gWeatherPtr->fogHScrollCounter = 0;
         gWeatherPtr->fogHScrollOffset = 0;
         gWeatherPtr->fogHScrollPosX = 0;
-        Weather_SetBlendCoeffs(8, 12);
+        Weather_SetBlendCoeffs(8, 13);
     }
 }
 
@@ -1765,7 +1765,7 @@ void FogDiagonal_InitVars(void)
         gWeatherPtr->fogDYOffset = 0;
         gWeatherPtr->fogDBaseSpritesX = 0;
         gWeatherPtr->fogDPosY = 0;
-        Weather_SetBlendCoeffs(8, 12);
+        Weather_SetBlendCoeffs(8, 13);
     }
     //gWeatherPtr->noShadows = TRUE;
 }
@@ -1980,7 +1980,7 @@ void Sandstorm_InitVars(void)
         if (gWeatherPtr->sandstormWaveIndex >= 0x80 - MIN_SANDSTORM_WAVE_INDEX)
             gWeatherPtr->sandstormWaveIndex = 0x80 - gWeatherPtr->sandstormWaveIndex;
 
-        Weather_SetBlendCoeffs(8, 12);
+        Weather_SetBlendCoeffs(8, 13);
     }
     //gWeatherPtr->noShadows = FALSE;
 }
@@ -2271,7 +2271,7 @@ void Shade_InitVars(void)
     gWeatherPtr->initStep = 0;
     gWeatherPtr->targetColorMapIndex = 3;
     gWeatherPtr->colorMapStepDelay = 20;
-    Weather_SetBlendCoeffs(8, 12); // preserve shadow darkness
+    Weather_SetBlendCoeffs(8, 13); // preserve shadow darkness
     //gWeatherPtr->noShadows = FALSE;
 }
 
