@@ -10814,7 +10814,7 @@ u8 MovementAction_FollowingPokemon_Shrink_Step0(struct ObjectEvent *objectEvent,
     else if (y < gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y) // If follower is north of player
     {
         SetSpritePosToOffsetMapCoords(&x, &y, 8, 4);
-        playerPriority = TRUE;
+        playerPriority = FALSE;
     }
     else // If follower is south of player
     {
@@ -10909,19 +10909,18 @@ u8 MovementAction_FollowingPokemon_Shrink_Step0(struct ObjectEvent *objectEvent,
     if (spriteId != MAX_SPRITES)
     {
         gSprites[spriteId].coordOffsetEnabled = TRUE;
-        gSprites[spriteId].oam.priority = 2;
         gSprites[spriteId].data[0] = 0;
+		if (gObjectEvents[gPlayerAvatar.objectEventId].facingDirection == DIR_NORTH)
+			gSprites[spriteId].oam.priority = 0;
+        else
+			gSprites[spriteId].oam.priority = 2;
     }
 
-    if (playerPriority)
-    {
-        gSprites[gPlayerAvatar.spriteId].oam.priority = 1;
-        gSprites[gPlayerAvatar.spriteId].subpriority = 1;
-        gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = TRUE;
-    }
+	gSprites[gPlayerAvatar.spriteId].subpriority = 1;
+	gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = TRUE;
 
-    sprite->oam.priority = 1;
-    sprite->subpriority = 1;
+    sprite->oam.priority = 3;
+    sprite->subpriority = 3;
 
     sprite->data[2]++;
     objectEvent->hasShadow = FALSE;
@@ -11107,7 +11106,7 @@ u8 MovementAction_FollowingPokemon_Shrink_Step1(struct ObjectEvent *objectEvent,
     if (sprite->data[7] >= 11)
     {
         FreeSpriteOamMatrix(sprite);
-        gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = FALSE;
+        gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = TRUE;
         UnlockPlayerFieldControls();
         objectEvent->invisible = TRUE;
         sprite->data[2]++;
