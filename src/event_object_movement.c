@@ -10916,8 +10916,8 @@ u8 MovementAction_FollowingPokemon_Shrink_Step0(struct ObjectEvent *objectEvent,
 			gSprites[spriteId].oam.priority = 2;
     }
 
-	gSprites[gPlayerAvatar.spriteId].subpriority = 1;
-	gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = TRUE;
+    gSprites[gPlayerAvatar.spriteId].subpriority = 1;
+    gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = TRUE;
 
     sprite->oam.priority = 3;
     sprite->subpriority = 3;

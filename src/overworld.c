@@ -4462,6 +4462,9 @@ void FollowerPokeballSparkle(void)
         if (spriteId != MAX_SPRITES)
         {
             gSprites[spriteId].coordOffsetEnabled = TRUE;
+            if (gObjectEvents[gPlayerAvatar.objectEventId].facingDirection == DIR_NORTH || gObjectEvents[gPlayerAvatar.objectEventId].facingDirection == DIR_SOUTH)
+                gSprites[spriteId].oam.priority = 3;
+            else
             gSprites[spriteId].oam.priority = 2;
             gSprites[spriteId].data[0] = 0;
         }
@@ -4474,17 +4477,17 @@ void FollowerPokeballSparkle(void)
 
         if (player->facingDirection == DIR_NORTH)
         {
-            gSprites[follower->spriteId].oam.priority = 0;
-            gSprites[follower->spriteId].subpriority = 0;
-            gSprites[gPlayerAvatar.spriteId].oam.priority = 1;
-            gSprites[gPlayerAvatar.spriteId].subpriority = 1; 
+            gSprites[follower->spriteId].oam.priority = 2;
+            gSprites[follower->spriteId].subpriority = 2;
+            gSprites[gPlayerAvatar.spriteId].oam.priority = 2;
+            gSprites[gPlayerAvatar.spriteId].subpriority = 2; 
         }
         else
         {
-            gSprites[follower->spriteId].oam.priority = 1;
-            gSprites[follower->spriteId].subpriority = 1;
-            gSprites[gPlayerAvatar.spriteId].oam.priority = 0;
-            gSprites[gPlayerAvatar.spriteId].subpriority = 0; 
+            gSprites[follower->spriteId].oam.priority = 3;
+            gSprites[follower->spriteId].subpriority = 3;
+            gSprites[gPlayerAvatar.spriteId].oam.priority = 2;
+            gSprites[gPlayerAvatar.spriteId].subpriority = 2; 
         }
         player->fixedPriority = TRUE;
         LockPlayerFieldControls();
