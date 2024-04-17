@@ -10911,7 +10911,7 @@ u8 MovementAction_FollowingPokemon_Shrink_Step0(struct ObjectEvent *objectEvent,
         gSprites[spriteId].coordOffsetEnabled = TRUE;
         gSprites[spriteId].data[0] = 0;
 		if (gObjectEvents[gPlayerAvatar.objectEventId].facingDirection == DIR_NORTH)
-			gSprites[spriteId].oam.priority = 0;
+			gSprites[spriteId].oam.priority = 2;
         else
 			gSprites[spriteId].oam.priority = 2;
     }
