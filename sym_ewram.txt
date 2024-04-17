@@ -151,3 +151,4 @@
 	.include "src/debug.o"
 	.include "src/dexnav.o"
 	.include "src/quests.o"
+                  .include "src/ui_main_menu.o"
