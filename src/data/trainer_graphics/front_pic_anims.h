@@ -370,6 +370,10 @@ static const union AnimCmd *const sAnims_SuboM[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_SuboF[] ={
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_RubySapphireBrendan[] ={
     sAnim_GeneralFrame0,
 };
@@ -473,6 +477,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_LEAF] = sAnims_Leaf,
     [TRAINER_PIC_KOJIRO] = sAnims_Kojiro,
     [TRAINER_PIC_SUBO_M] = sAnims_SuboM,
+    [TRAINER_PIC_SUBO_F] = sAnims_SuboF,
     [TRAINER_PIC_RS_BRENDAN] = sAnims_RubySapphireBrendan,
     [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
 };

@@ -294,3 +294,6 @@ const u32 gTrainerPalette_Kojiro[] = INCBIN_U32("graphics/trainers/front_pics/ko
 
 const u32 gTrainerFrontPic_SuboM[] = INCBIN_U32("graphics/trainers/front_pics/subo_m.4bpp.lz");
 const u32 gTrainerPalette_SuboM[] = INCBIN_U32("graphics/trainers/front_pics/subo_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_SuboF[] = INCBIN_U32("graphics/trainers/front_pics/subo_f.4bpp.lz");
+const u32 gTrainerPalette_SuboF[] = INCBIN_U32("graphics/trainers/front_pics/subo_f.gbapal.lz");
