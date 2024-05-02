@@ -858,6 +858,20 @@ SnowdriftForest_Text_NobPostBattle:
 	.string "Your style of battling is commendable.\n"
 	.string "You know all about harsh!$"
 
+NorthstarTournament2F_Text_DustyIntro:
+	.string "{COLOR}{BLUE}Hey, hey, hey, where do you think\n"
+	.string "you're going?\p"
+	.string "This is SUBO territory, now, friend!$"
+
+NorthstarTournament2F_Text_DustyDefeated:
+	.string "I guess I was mistaken…$"
+
+NorthstarTournament2F_Text_DustyPostBattle:
+	.string "{COLOR}{BLUE}You're the one who beat everybody\n"
+	.string "upstairs?!\p"
+	.string "There was no way I could stand up to\n"
+	.string "you. Nope.$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513

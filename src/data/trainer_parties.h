@@ -516,10 +516,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rose5[] = {
 
 static const struct TrainerMonNoItemCustomMoves sParty_Dusty1[] = {
     {
-    .iv = 50,
-    .lvl = 23,
+    .iv = 20,
+    .lvl = 22,
     .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
+    .moves = {MOVE_ACID, MOVE_SCREECH, MOVE_GLARE, MOVE_BITE}
     }
 };
 

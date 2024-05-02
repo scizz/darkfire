@@ -37,6 +37,11 @@ NorthstarCity_Tournament_2F_SUBO_Given::
 	releaseall
 	end
 
+NorthstarCity_Tournament_2F_Dusty::
+	trainerbattle_single TRAINER_DUSTY_1, NorthstarTournament2F_Text_DustyIntro, NorthstarTournament2F_Text_DustyDefeated
+	msgbox NorthstarTournament2F_Text_DustyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 NorthstarCity_Tournament_2F_Text_Girl_1:
 	.string "{COLOR}{RED}It's thanks to the Northstar TV\n"
 	.string "Station's special attention to\l"

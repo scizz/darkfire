@@ -531,10 +531,10 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DUSTY_1] =
     {
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Dusty"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,

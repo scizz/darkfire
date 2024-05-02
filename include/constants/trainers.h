@@ -111,6 +111,7 @@
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_KOJIRO                93
+#define TRAINER_PIC_SUBO_M                94
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
