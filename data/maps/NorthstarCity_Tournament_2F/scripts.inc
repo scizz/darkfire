@@ -36,7 +36,7 @@ NorthstarCity_Tournament_2F_SUBO_Given::
 	msgbox NorthstarCity_Tournament_2F_Text_SUBO_Given, MSGBOX_DEFAULT
 	releaseall
 	end
-
+	
 NorthstarCity_Tournament_2F_Dusty::
 	trainerbattle_single TRAINER_DUSTY_1, NorthstarTournament2F_Text_DustyIntro, NorthstarTournament2F_Text_DustyDefeated
 	msgbox NorthstarTournament2F_Text_DustyPostBattle, MSGBOX_AUTOCLOSE

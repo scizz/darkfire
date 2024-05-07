@@ -518,7 +518,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Dusty1[] = {
     {
     .iv = 20,
     .lvl = 22,
-    .species = SPECIES_SANDSLASH,
+    .species = SPECIES_ARBOK,
     .moves = {MOVE_ACID, MOVE_SCREECH, MOVE_GLARE, MOVE_BITE}
     }
 };
