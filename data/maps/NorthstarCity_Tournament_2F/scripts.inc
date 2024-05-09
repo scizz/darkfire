@@ -42,6 +42,11 @@ NorthstarCity_Tournament_2F_Dusty::
 	msgbox NorthstarTournament2F_Text_DustyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+NorthstarCity_Tournament_2F_Skye::
+	trainerbattle_single TRAINER_SUBO_THUG_SKYE, NorthstarTournament2F_Text_SkyeIntro, NorthstarTournament2F_Text_SkyeDefeated
+	msgbox NorthstarTournament2F_Text_SkyePostBattle, MSGBOX_AUTOCLOSE
+	end
+
 NorthstarCity_Tournament_2F_Text_Girl_1:
 	.string "{COLOR}{RED}It's thanks to the Northstar TV\n"
 	.string "Station's special attention to\l"

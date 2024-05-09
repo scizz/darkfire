@@ -81,11 +81,6 @@ AquaHideout_B1F_EventScript_DefeatedElectrode2:: @ 8233A7C
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-AquaHideout_B1F_EventScript_Grunt2:: @ 8233A85
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_2, AquaHideout_B1F_Text_Grunt2Intro, AquaHideout_B1F_Text_Grunt2Defeat, AquaHideout_B1F_EventScript_Grunt2Defeated
-	msgbox AquaHideout_B1F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 AquaHideout_B1F_EventScript_Grunt2Defeated:: @ 8233AA0
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0

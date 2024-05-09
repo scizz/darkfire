@@ -872,6 +872,18 @@ NorthstarTournament2F_Text_DustyPostBattle:
 	.string "There was no way I could stand up to\n"
 	.string "you. Nope.$"
 
+NorthstarTournament2F_Text_SkyeIntro:
+	.string "{COLOR}{RED}Hey! I saw you by the lighthouse!\n"
+	.string "Shoulda known you're meddlin' around!$"
+
+NorthstarTournament2F_Text_SkyeDefeated:
+	.string "Grr!\n"
+	.string "You stupid kid!$"
+
+NorthstarTournament2F_Text_SkyePostBattle:
+	.string "{COLOR}{RED}One day, you're gonna be meddlin'\n"
+	.string "in the wrong business, kiddo!$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513
