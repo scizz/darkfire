@@ -942,30 +942,37 @@ Kojiro1_Text_Defeated:
 	.string "Hmh…\n"
 	.string "Not to worry… We press on.$"
 
-Kojiro2_Text_Defeated
+Kojiro2_Text_Defeated:
 	.string "My instinct was correct…\n"
 	.string "You are the new Champion.$"
 
 PsychicSteve_Text_Defeated:
-	.string "My head hurts…\nHow can it be?$"
+	.string "My head hurts…\n"
+	.string "How can it be?$"
 
 RangerMarta_Text_Defeated:
-	.string "No… That can't be…\nTurn the cameras off!$"
+	.string "No… That can't be…\n"
+	.string "Turn the cameras off!$"
 
 BlackBeltDawson_Text_Defeated:
-	.string "Urk… No amount of training had me\nready for that whoopin'…$"
+	.string "Urk… No amount of training had me\n."
+	.string "ready for that whoopin'…$"
 
 OldManAlfred_Text_Defeated:
-	.string "How on Earth was that possible?\nYou kids are nothing but punks!$"
+	.string "How on Earth was that possible?\n"
+	.string "You kids are nothing but punks!$"
 
 SailorMiguel_Text_Defeated:
-	.string "Hah!\nWe lost control of that ship!$"
+	.string "Hah!\n"
+	.string "We lost control of that ship!$"
 
 AceTrainerFalter_Text_Defeated:
-	.string "No fair! Why do I have to battle a\nTournament winner?!$"
+	.string "No fair! Why do I have to battle a\n"
+	.string "Tournament Champion?!$"
 
 Tyler1_Text_Defeated:
-	.string "Woah!\nYou're strong, {PLAYER}!$"
+	.string "Woah!\n"
+	.string "You're strong, {PLAYER}!$"
 
 Tyler2_Text_Defeated:
 	.string "You're unbelievable…$"
