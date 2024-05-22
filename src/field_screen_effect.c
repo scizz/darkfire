@@ -432,7 +432,13 @@ static void Task_ExitNonDoor(u8 taskId)
             
             // Account for follower exiting pokeball after scripted warp
             if (gSaveBlock2Ptr->follower.createSurfBlob != 2)
-                gSaveBlock2Ptr->follower.comeOutDoorStairs = 2;
+            {
+                // Account for if the player was on a bike when they saved
+                if(gSpecialVar_Unused_0x8014 == 2)
+                    gSpecialVar_Unused_0x8014 = 0;
+                else
+                    gSaveBlock2Ptr->follower.comeOutDoorStairs = 2; 
+            }
             
             DestroyTask(taskId);
         }

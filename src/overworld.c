@@ -2455,6 +2455,10 @@ void CB2_ContinueSavedGame(void)
     else
     {
         TryPutTodaysRivalTrainerOnAir();
+
+        // Account for if the player was on a bike when they saved.
+        gSpecialVar_Unused_0x8014 = 2;
+        
         gFieldCallback = FieldCB_FadeTryShowMapPopup;
         SetMainCallback1(CB1_Overworld);
         CB2_ReturnToField();
