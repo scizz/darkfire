@@ -717,25 +717,25 @@
 #define TRAINER_KAI                         713
 #define TRAINER_CHARLOTTE                   714
 #define TRAINER_JOSHUA_1                    715
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_1       716
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_2       717
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_3       718
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_4       719
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_5       720
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_6       721
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_7       722
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_8       723
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_9       724
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_10      725
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_11      726
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_12      727
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_13      728
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_14      729
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_15      730
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_16      731
-#define TRAINER_TABITHA_MAGMA_HIDEOUT       732
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_1       716 // Greendale Bug Catcher
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_2       717 // Greendale Ranger
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_3       718 // Greendale Ace Trainer
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_4       719 // Greendale Rose
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_5       720 // Laveria Kojiro 1
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_6       721 // Laveria Kojiro 2
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_7       722 // Northstar Psychic
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_8       723 // Northstar Ranger
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_9       724 // Northstar Old Man
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_10      725 // Northstar Black Belt
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_11      726 // Northstar Ace Trainer
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_12      727 // Northstar Sailor
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_13      728 // Tyler Chandra Village 1
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_14      729 // Tyler Chandra Village 2
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_15      730 // Tyler Anheim Forest 1
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_16      731 // Tyler Anheim Forest 2
+#define TRAINER_TABITHA_MAGMA_HIDEOUT       732 // Tyler Pinleaf 1
 #define TRAINER_DARCY                       733 // Darkfire Trainer
-#define TRAINER_MAXIE_MOSSDEEP              734
+#define TRAINER_MAXIE_MOSSDEEP              734 // Tyler Pinleaf 2
 #define TRAINER_PETE                        735
 #define TRAINER_ISABELLE                    736
 #define TRAINER_ANDRES_1                    737

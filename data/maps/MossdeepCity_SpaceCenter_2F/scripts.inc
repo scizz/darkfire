@@ -348,7 +348,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerWest:: @ 8224152
 	return
 
 MossdeepCity_SpaceCenter_2F_EventScript_MaxieTrainer:: @ 8224157
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MAXIE_MOSSDEEP, 0, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_PETE, 0, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand
 	end
 
 MossdeepCity_SpaceCenter_2F_EventScript_TabithaTrainer:: @ 8224166
