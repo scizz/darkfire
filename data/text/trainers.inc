@@ -872,6 +872,18 @@ NorthstarTournament2F_Text_DustyPostBattle:
 	.string "There was no way I could stand up to\n"
 	.string "you. Nope.$"
 
+NorthstarTournament2F_Text_LilyIntro:
+	.string "{COLOR}{RED}If you're giving chase to Rakaz,\n"
+	.string "forget it…\l"
+	.string "He's long gone!$"
+
+NorthstarTournament2F_Text_LilyDefeated:
+	.string "Now I am long gone!$"
+
+NorthstarTournament2F_Text_LilyPostBattle:
+	.string "{COLOR}{RED}While you're wasting your time here,\n"
+	.string "we're taking down Farmond City!$"
+
 NorthstarTournament2F_Text_SkyeIntro:
 	.string "{COLOR}{RED}Hey! I saw you by the lighthouse!\n"
 	.string "Shoulda known you're meddlin' around!$"

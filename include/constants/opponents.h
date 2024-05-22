@@ -3,7 +3,7 @@
 
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
+#define TRAINER_SUBO_THUG_LILY                2
 #define TRAINER_SUBO_THUG_SKYE                3
 #define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
 #define TRAINER_GRUNT_AQUA_HIDEOUT_4          5

@@ -6,11 +6,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugLily[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 23,
+    .species = SPECIES_LOUDRED,
     }
 };
 
