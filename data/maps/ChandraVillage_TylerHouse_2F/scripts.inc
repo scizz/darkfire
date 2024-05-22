@@ -132,12 +132,12 @@ ChandraVillage_TylerHouse_2F_Right:
 	end
 
 ChandraVillage_TylerHouse_2F_TylerTeamEevee::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_TYLER_2, Tyler1_Text_Defeated
 	goto ChandraVillage_TylerHouse_2F_TylerPostMatch
 	end
 
 ChandraVillage_TylerHouse_2F_TylerTeamPikachu::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_TYLER_1, Tyler1_Text_Defeated
 	goto ChandraVillage_TylerHouse_2F_TylerPostMatch
 	end
 

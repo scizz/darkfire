@@ -57,7 +57,7 @@ NorthstarArena_PsychicBattle::
 	waitmovement 0
 	speakername CommonName_Text_Psychic
 	msgbox NorthstarArena_Text_IDidntGetAllTheWay, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_PSYCHIC_STEVE, PsychicSteve_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 3
 	goto NorthstarArena_NextRound
@@ -77,7 +77,7 @@ NorthstarArena_RangerBattle::
 	waitmovement 0
 	speakername CommonName_Text_Ranger
 	msgbox NorthstarArena_Text_SoYoureTheNewTrainer, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_RANGER_MARTA, RangerMarta_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 3
 	goto NorthstarArena_NextRound
@@ -96,7 +96,7 @@ NorthstarArena_BlackBeltBattle::
 	waitmovement 0
 	speakername CommonName_Text_BlackBelt
 	msgbox NorthstarArena_Text_WellMetTrainer, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_BLACK_BELT_DAWSON, BlackBeltDawson_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 5
 	goto NorthstarArena_NextRound
@@ -115,7 +115,7 @@ NorthstarArena_OldManBattle::
 	waitmovement 0
 	speakername CommonName_Text_Gentleman
 	msgbox NorthstarArena_Text_TheChildrenOfToday, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_OLD_MAN_ALFRED, OldManAlfred_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 5
 	goto NorthstarArena_NextRound
@@ -134,7 +134,7 @@ NorthstarArena_SailorBattle::
 	waitmovement 0
 	speakername CommonName_Text_Sailor
 	msgbox NorthstarArena_Text_IfYouDontKnow, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SAILOR_MIGUEL, SailorMiguel_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 7
 	goto NorthstarArena_NextRound
@@ -153,7 +153,7 @@ NorthstarArena_AceTrainerBattle::
 	waitmovement 0
 	speakername CommonName_Text_AceTrainer
 	msgbox NorthstarArena_Text_YoYoureTheOne, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_ACE_TRAINER_FALTER, AceTrainerFalter_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 7
 	goto NorthstarArena_NextRound

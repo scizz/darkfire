@@ -922,6 +922,58 @@ NorthstarTournament3F_Text_LeiPostBattle:
 	.string "{COLOR}{BLUE}You may have defeated me, but we\n"
 	.string "ain't gonna let you outta here easily!$"
 
+GreendaleDavis_Text_Defeated:
+	.string "No fair!\n"
+	.string "I couldn't focus properly!$"
+
+GreendaleSophia_Text_Defeated:
+	.string "Great battle.\n"
+	.string "It looks like I have to train harder.$"
+
+GreendaleJonathan_Text_Defeated:
+	.string "You're quite fierce.\n"
+	.string "Thank you for humbling me.$"
+
+GreendaleChampionRose_Text_Defeated:
+	.string "Huh.\n"
+	.string "You're actually quite strong.$"
+
+Kojiro1_Text_Defeated:
+	.string "Hmh…\n"
+	.string "Not to worry… We press on.$"
+
+Kojiro2_Text_Defeated
+	.string "My instinct was correct…\n"
+	.string "You are the new Champion.$"
+
+PsychicSteve_Text_Defeated:
+	.string "My head hurts…\nHow can it be?$"
+
+RangerMarta_Text_Defeated:
+	.string "No… That can't be…\nTurn the cameras off!$"
+
+BlackBeltDawson_Text_Defeated:
+	.string "Urk… No amount of training had me\nready for that whoopin'…$"
+
+OldManAlfred_Text_Defeated:
+	.string "How on Earth was that possible?\nYou kids are nothing but punks!$"
+
+SailorMiguel_Text_Defeated:
+	.string "Hah!\nWe lost control of that ship!$"
+
+AceTrainerFalter_Text_Defeated:
+	.string "No fair! Why do I have to battle a\nTournament winner?!$"
+
+Tyler1_Text_Defeated:
+	.string "Woah!\nYou're strong, {PLAYER}!$"
+
+Tyler2_Text_Defeated:
+	.string "You're unbelievable…$"
+
+Tyler3_Text_Defeated:
+	.string "Kudos, {PLAYER}\n"
+	.string "You beat me again!$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513

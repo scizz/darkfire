@@ -309,12 +309,12 @@ AnheimForest_Tyler_Encounter_Main::
 	end
 
 AnheimForest_Tyler_Encounter_Eevee::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_TYLER_4, Tyler2_Text_Defeated
 	goto AnheimForest_Tyler_Encounter_PostMatch
 	end
 
 AnheimForest_Tyler_Encounter_Pikachu::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_TYLER_3, Tyler2_Text_Defeated
 	goto AnheimForest_Tyler_Encounter_PostMatch
 	end
 

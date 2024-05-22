@@ -49,12 +49,12 @@ PinleafTown_TylerBattle::
 	msgbox PinleafTown_Text_WellWellLookWhoItIs, MSGBOX_AUTOCLOSE
 	hideface 1
 	goto_if_set FLAG_TAKEN_PIKACHU, PinleafTown_TylerBattle_Eevee
-	trainerbattle_single TRAINER_CRISTIN, Route9_Text_CristinIntro, Route9_Text_CristinDefeated
+	trainerbattle_no_intro TRAINER_TYLER_6, Tyler3_Text_Defeated
 	goto PinleafTown_TylerBattle_End
 	end
 
 PinleafTown_TylerBattle_Eevee::
-	trainerbattle_single TRAINER_CRISTIN, Route9_Text_CristinIntro, Route9_Text_CristinDefeated
+	trainerbattle_no_intro TRAINER_TYLER_5, Tyler3_Text_Defeated
 	goto PinleafTown_TylerBattle_End
 	end
 

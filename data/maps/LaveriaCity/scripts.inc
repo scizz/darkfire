@@ -425,14 +425,14 @@ LaveriaCity_Kojiro_Battle::
 	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_DotDotNo, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_KOJIRO_1, Kojiro1_Text_Defeated
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Kojiro
 	showface FS_KOJIRO, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Text_DotDotYou, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_KOJIRO_2, Kojiro2_Text_Defeated
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
 	msgbox LaveriaCity_Text_PlayerDefeatedKojiro, MSGBOX_DEFAULT

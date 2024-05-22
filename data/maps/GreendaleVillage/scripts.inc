@@ -152,7 +152,7 @@ Greendale_Tournament_Battle::
 	waitmovement 0
 	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_IDidntSleep, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_GREENDALE_DAVIS, GreendaleDavis_Text_Defeated
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_BugCatcher
@@ -237,7 +237,7 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	waitmovement 0
 	speakername SpeakerName_Text_Ranger
 	msgbox GreendaleVillage_Text_ImGoingToMoveUp, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_GREENDALE_SOPHIA, GreendaleSophia_Text_Defeated
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_RANGER, WD6
 	waitmovement 0
@@ -303,7 +303,7 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	waitmovement 0
 	speakername SpeakerName_Text_AceTrainer
 	msgbox GreendaleVillage_Text_ThatTrainerWasWeak, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_JONATHAN, GreendaleJonathan_Text_Defeated
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_COOLTRAINER, WD6
 	waitmovement 0
@@ -394,7 +394,7 @@ GreendaleVillage_Tournament_Rose::
 	end
 
 GreendaleVillage_Tournament_Rose_Battle::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_GREENDALE_CHAMPION_ROSE, GreendaleChampionRose_Text_Defeated
 	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Rose
