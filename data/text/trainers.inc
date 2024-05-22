@@ -896,6 +896,32 @@ NorthstarTournament2F_Text_SkyePostBattle:
 	.string "{COLOR}{RED}One day, you're gonna be meddlin'\n"
 	.string "in the wrong business, kiddo!$"
 
+NorthstarTournament3F_Text_ReissIntro:
+	.string "{COLOR}{BLUE}Subduing the TV Station was rather\n"
+	.string "easy.\p"
+	.string "Well, of course!\n"
+	.string "We have Rakaz by our side!\p"
+	.string "We're unstoppable!$"
+
+NorthstarTournament3F_Text_ReissDefeated:
+	.string "N-no!\n"
+	.string "Rakaz will have my head…$"
+
+NorthstarTournament3F_Text_ReissPostBattle:
+	.string "{COLOR}{BLUE}Rakaz has many talents, but I guess\n"
+	.string "he can't be everywhere at once…$"
+
+NorthstarTournament3F_Text_LeiIntro:
+	.string "{COLOR}{BLUE}Well, well, what do we have here?!\n"
+	.string "Fresh meat, hahaha!$"
+
+NorthstarTournament3F_Text_LeiDefeated:
+	.string "You sliced and diced me…$"
+
+NorthstarTournament3F_Text_LeiPostBattle:
+	.string "{COLOR}{BLUE}You may have defeated me, but we\n"
+	.string "ain't gonna let you outta here easily!$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513

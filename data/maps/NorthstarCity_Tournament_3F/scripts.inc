@@ -44,6 +44,15 @@ Northstar_Tournament_3F_SUBOBattle::
 	hideface 0
 	delay 30
 
+NorthstarCity_Tournament_3F_Reiss::
+	trainerbattle_single TRAINER_SUBO_THUG_REISS, NorthstarTournament3F_Text_ReissIntro, NorthstarTournament3F_Text_ReissDefeated
+	msgbox NorthstarTournament3F_Text_ReissPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+NorthstarCity_Tournament_3F_Lei::
+	trainerbattle_single TRAINER_SUBO_THUG_LEI, NorthstarTournament3F_Text_LeiIntro, NorthstarTournament3F_Text_LeiDefeated
+	msgbox NorthstarTournament3F_Text_LeiPostBattle, MSGBOX_AUTOCLOSE
+	end
 
 NorthstarCity_Tournament_3F_Text_Psychic:
 	.string "Something very sinister is brewing in\n"

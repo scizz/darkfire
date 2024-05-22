@@ -32,19 +32,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugSkye[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugReiss[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 24,
+    .species = SPECIES_GRIMER,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugLei[] = {
     {
     .iv = 0,
     .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .species = SPECIES_KOFFING,
+    },
+    {
+    .iv = 0,
+    .lvl = 32,
+    .species = SPECIES_HOUNDOUR,
     }
 };
 

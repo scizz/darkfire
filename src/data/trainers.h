@@ -41,7 +41,7 @@ const struct Trainer gTrainers[] = {
     {
         .trainerClass = TRAINER_CLASS_TEAM_AQUA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
+        .trainerPic = TRAINER_PIC_SUBO_F,
         .trainerName = _("Skye"),
         .items = {},
         .doubleBattle = FALSE,
@@ -49,28 +49,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugSkye),
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_3] =
+    [TRAINER_SUBO_THUG_REISS] =
     {
         .trainerClass = TRAINER_CLASS_TEAM_AQUA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Reiss"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntAquaHideout3),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugReiss),
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_4] =
+    [TRAINER_SUBO_THUG_LEI] =
     {
         .trainerClass = TRAINER_CLASS_TEAM_AQUA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Lei"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntAquaHideout4),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugLei),
     },
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_1] =

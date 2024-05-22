@@ -45,6 +45,7 @@ NorthstarCity_Tournament_2F_Dusty::
 NorthstarCity_Tournament_2F_Lily::
 	trainerbattle_single TRAINER_SUBO_THUG_LILY, NorthstarTournament2F_Text_LilyIntro, NorthstarTournament2F_Text_LilyDefeated
 	msgbox NorthstarTournament2F_Text_LilyPostBattle, MSGBOX_AUTOCLOSE
+	end
 
 NorthstarCity_Tournament_2F_Skye::
 	trainerbattle_single TRAINER_SUBO_THUG_SKYE, NorthstarTournament2F_Text_SkyeIntro, NorthstarTournament2F_Text_SkyeDefeated

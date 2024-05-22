@@ -5,8 +5,8 @@
 #define TRAINER_SAWYER_1                      1
 #define TRAINER_SUBO_THUG_LILY                2
 #define TRAINER_SUBO_THUG_SKYE                3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
+#define TRAINER_SUBO_THUG_REISS               4
+#define TRAINER_SUBO_THUG_LEI                 5
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8

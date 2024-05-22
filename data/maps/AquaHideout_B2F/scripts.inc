@@ -69,16 +69,6 @@ AquaHideout_B2F_Movement_SumbarineDepartRight: @ 8233E85
 	walk_right
 	step_end
 
-AquaHideout_B2F_EventScript_Grunt4:: @ 8233E8A
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_4, AquaHideout_B2F_Text_Grunt4Intro, AquaHideout_B2F_Text_Grunt4Defeat, AquaHideout_B2F_EventScript_Grunt4Defeated
-	msgbox AquaHideout_B2F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-AquaHideout_B2F_EventScript_Grunt4Defeated:: @ 8233EA5
-	msgbox AquaHideout_B2F_Text_Grunt4PostBattle, MSGBOX_DEFAULT
-	release
-	end
-
 AquaHideout_B2F_EventScript_Grunt6:: @ 8233EAF
 	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_6, AquaHideout_B2F_Text_Grunt6Intro, AquaHideout_B2F_Text_Grunt6Defeat
 	msgbox AquaHideout_B2F_Text_Grunt6PostBattle, MSGBOX_AUTOCLOSE
@@ -117,18 +107,6 @@ AquaHideout_B2F_Text_MattPostBattle: @ 8233FF2
 	.string "LILYCOVE.\p"
 	.string "But will you find it then?\n"
 	.string "Hehehe!$"
-
-AquaHideout_B2F_Text_Grunt4Intro: @ 82340B4
-	.string "Wahahah, I grew weary of waiting!\n"
-	.string "You owe me a battle, too!$"
-
-AquaHideout_B2F_Text_Grunt4Defeat: @ 82340F0
-	.string "Tired of waiting…\n"
-	.string "Lost and dazed…$"
-
-AquaHideout_B2F_Text_Grunt4PostBattle: @ 8234112
-	.string "BOSS…\n"
-	.string "Is this good enough?$"
 
 AquaHideout_B2F_Text_Grunt6Intro: @ 823412D
 	.string "Warp panels, the HIDEOUT's pride\n"
