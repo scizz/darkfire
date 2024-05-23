@@ -81,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 13,
+      "x": 15,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -164,8 +164,8 @@
       "y": 8,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "8",
-      "script": "NULL"
+      "var_value": "0",
+      "script": "NorthstarCity_Tournament_3F_SUBOBattle"
     },
     {
       "type": "trigger",
@@ -173,8 +173,8 @@
       "y": 8,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "8",
-      "script": "NULL"
+      "var_value": "0",
+      "script": "NorthstarCity_Tournament_3F_SUBOBattle"
     }
   ],
   "bg_events": [

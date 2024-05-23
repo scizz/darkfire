@@ -31,7 +31,7 @@ NorthstarCity_Tournament_3F_Hide4FObjects::
 	release
 	end
 
-Northstar_Tournament_3F_SUBOBattle::
+NorthstarCity_Tournament_3F_SUBOBattle::
 	lock
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, WD2
@@ -43,6 +43,117 @@ Northstar_Tournament_3F_SUBOBattle::
 	msgbox NorthstarCity_Tournament_3F_Text_GiveItUp, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
+	applymovement LOCALID_SUBO, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattle_Male
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO_GRUNT, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_BossShesHere, MSGBOX_AUTOCLOSE
+	hideface 1
+	goto NorthstarCity_Tournament_3F_SUBOBattleNext
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattle_Male::
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO_GRUNT, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_BossHesHere, MSGBOX_AUTOCLOSE
+	hideface 1
+	goto NorthstarCity_Tournament_3F_SUBOBattleNext
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNext::
+	applymovement LOCALID_RAKAZ, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername2 CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 0, 0
+	msgbox NorthstarCity_Tournament_3F_Text_WhatInTheWorld, MSGBOX_AUTOCLOSE
+	hideface 0
+	applymovement LOCALID_DIRECTOR, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_DIRECTOR, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	speakername CommonName_Text_Director
+	showface FS_DIRECTOR, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_PlayerYourNameIsPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
+	delay 30
+	applymovement LOCALID_SUBO, Common_Movement_WalkUpFast
+	waitmovement 0
+	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO_GRUNT, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_ThisIsIt, MSGBOX_AUTOCLOSE
+	hideface 1
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	addobject LOCALID_ROSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 3
+	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattleNextLeft
+	goto NorthstarCity_Tournament_3F_SUBOBattleNextRight
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNextLeft::
+	applymovement LOCALID_ROSE, MoveToRight
+	waitmovement 0
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNextRight::
+	applymovement LOCALID_ROSE, MoveToLeft
+	waitmovement 0
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle
+	end
+
+NorthstarCity_Tournament_3F_SUBORoseBattle::
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq NorthstarCity_Tournament_3F_SUBORoseBattle_Male
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle_Female
+	end
+
+NorthstarCity_Tournament_3F_SUBORoseBattle_Male::
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_ANGRY, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_HeIsNotAlone, MSGBOX_AUTOCLOSE
+	hideface 1
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle_Begin
+	end
+
+NorthstarCity_Tournament_3F_SUBORoseBattle_Female::
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_ANGRY, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_SheIsNotAlone, MSGBOX_AUTOCLOSE
+	hideface 1
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle_Begin
+	end
+
+NorthstarCity_Tournament_3F_SUBORoseBattle_Begin::
+	applymovement LOCALID_RAKAZ, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername2 CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 0, 0
+	end
 
 NorthstarCity_Tournament_3F_Reiss::
 	trainerbattle_single TRAINER_SUBO_THUG_REISS, NorthstarTournament3F_Text_ReissIntro, NorthstarTournament3F_Text_ReissDefeated
