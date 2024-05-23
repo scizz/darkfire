@@ -92,6 +92,10 @@ Common_Movement_WalkInPlaceRight: @ 82725B8
 	walk_in_place_right
 	step_end
 
+Common_Movement_WalkInPlaceUp:
+	walk_in_place_up
+	step_end
+
 Common_Movement_WalkInPlaceSlowDown:
 	walk_in_place_slow_down
 	step_end
@@ -122,6 +126,10 @@ Common_Movement_WalkLeftFaster:
 
 Common_Movement_WalkRightFaster:
 	walk_faster_right
+	step_end
+
+Common_Movement_WalkUpFast:
+	walk_fast_up
 	step_end
 
 Common_Movement_WalkRightSlow:

@@ -201,6 +201,21 @@ NorthstarCity_PokeFan_M::
 	msgbox NorthstarCity_Text_PokeFan_M, MSGBOX_NPC
 	end
 
+NorthstarCity_GuitaristViktor::
+	trainerbattle_single TRAINER_GUITARIST_VIKTOR, NorthstarCity_Text_GuitaristViktorIntro, NorthstarCity_Text_GuitaristViktorDefeated
+	msgbox NorthstarCity_Text_GuitaristViktorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+NorthstarCity_PsychicBlake::
+	trainerbattle_single TRAINER_PSYCHIC_BLAKE, NorthstarCity_Text_PsychicBlakeIntro, NorthstarCity_Text_PsychicBlakeDefeated
+	msgbox NorthstarCity_Text_PsychicBlakePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+NorthstarCity_GuitaristMarcus::
+	trainerbattle_single TRAINER_GUITARIST_MARCUS, NorthstarCity_Text_GuitaristMarcusIntro, NorthstarCity_Text_GuitaristMarcusDefeated
+	msgbox NorthstarCity_Text_GuitaristMarcusPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 NorthstarCity_Storyline_SUBO::
 	lock
 	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
@@ -840,3 +855,46 @@ NorthstarCity_Text_Sailor_NoWorries:
 NorthstarCity_Text_Sailor_PerfectLetsGo:
 	.string "{COLOR}{BLUE}No worries!\n"
 	.string "Just let me know when you wanna sail!$"
+
+NorthstarCity_Text_GuitaristMarcusIntro:
+	.string "{COLOR}{BLUE}You've some nerve coming here, but me\n"
+	.string "and my buddies will straighten you up!$"
+
+NorthstarCity_Text_GuitaristMarcusDefeated:
+	.string "Darn!\n"
+	.string "I almost had it!$"
+
+NorthstarCity_Text_GuitaristMarcusPostBattle:
+	.string "{COLOR}{BLUE}This is our favorite corner to hang\n"
+	.string "in.\p"
+	.string "Nobody who can't keep up with us can\n"
+	.string "roll here!$"
+
+NorthstarCity_Text_GuitaristViktorIntro:
+	.string "{COLOR}{BLUE}I told my pops a million times,\n"
+	.string "working the docks ain't for me.\p"
+	.string "I'd rather earn credit by beating up\n"
+	.string "punks like you.\l"
+	.string "That's always enough to get by! Hah!$"
+
+NorthstarCity_Text_GuitaristViktorDefeated:
+	.string "Now I ended up losin' my money…$"
+
+NorthstarCity_Text_GuitaristViktorPostBattle:
+	.string "{COLOR}{BLUE}I can't ever give up hanging out with\n"
+	.string "my homies here.\p"
+	.string "My pops' wasting his time trying to\n"
+	.string "get me that job at the docks.$"
+
+NorthstarCity_Text_PsychicBlakeIntro:
+	.string "{COLOR}{BLUE}You're on our turf, yo!\n"
+	.string "And that means trouble!\p"
+	.string "You think you're ready for this?$"
+
+NorthstarCity_Text_PsychicBlakeDefeated:
+	.string "I'm sorry, homies, I couldn't…$"
+
+NorthstarCity_Text_PsychicBlakePostBattle:
+	.string "{COLOR}{BLUE}I may have lost to you, but my\n"
+	.string "girlfriend thinks I'm hot stuff,\l"
+	.string "and that's all that matters to me!"

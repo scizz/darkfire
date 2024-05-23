@@ -53,7 +53,7 @@ NorthstarCity_Tournament_3F_SUBOBattle::
 	compare VAR_RESULT, MALE
 	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattle_Male
 	speakername CommonName_Text_SuboGrunt
-	showface FS_MALE_SUBO_GRUNT, FSE_NORMAL, 1, 1
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_BossShesHere, MSGBOX_AUTOCLOSE
 	hideface 1
 	goto NorthstarCity_Tournament_3F_SUBOBattleNext
@@ -61,7 +61,7 @@ NorthstarCity_Tournament_3F_SUBOBattle::
 
 NorthstarCity_Tournament_3F_SUBOBattle_Male::
 	speakername CommonName_Text_SuboGrunt
-	showface FS_MALE_SUBO_GRUNT, FSE_NORMAL, 1, 1
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_BossHesHere, MSGBOX_AUTOCLOSE
 	hideface 1
 	goto NorthstarCity_Tournament_3F_SUBOBattleNext
@@ -86,8 +86,8 @@ NorthstarCity_Tournament_3F_SUBOBattleNext::
 	waitmovement 0
 	applymovement LOCALID_DIRECTOR, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Director
-	showface FS_DIRECTOR, FSE_NORMAL, 1, 1
+	speakername CommonName_Text_Rakaz @DIRECTOR
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1 @DIRECTOR
 	msgbox NorthstarCity_Tournament_3F_Text_PlayerYourNameIsPlayer, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
@@ -96,7 +96,7 @@ NorthstarCity_Tournament_3F_SUBOBattleNext::
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
-	showface FS_MALE_SUBO_GRUNT, FSE_NORMAL, 1, 1
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_ThisIsIt, MSGBOX_AUTOCLOSE
 	hideface 1
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
@@ -108,14 +108,14 @@ NorthstarCity_Tournament_3F_SUBOBattleNext::
 	end
 
 NorthstarCity_Tournament_3F_SUBOBattleNextLeft::
-	applymovement LOCALID_ROSE, MoveToRight
-	waitmovement 0
+	@applymovement LOCALID_ROSE, MoveToRight
+	@waitmovement 0
 	goto NorthstarCity_Tournament_3F_SUBORoseBattle
 	end
 
 NorthstarCity_Tournament_3F_SUBOBattleNextRight::
-	applymovement LOCALID_ROSE, MoveToLeft
-	waitmovement 0
+	@applymovement LOCALID_ROSE, MoveToLeft
+	@waitmovement 0
 	goto NorthstarCity_Tournament_3F_SUBORoseBattle
 	end
 
