@@ -613,7 +613,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_YouKnowWhyImHere, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_ARIK_2, SuboThugArik2_Text_Defeated
 	applymovement LOCALID_SUBO_CROWD, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse

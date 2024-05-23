@@ -297,3 +297,6 @@ const u32 gTrainerPalette_SuboM[] = INCBIN_U32("graphics/trainers/front_pics/sub
 
 const u32 gTrainerFrontPic_SuboF[] = INCBIN_U32("graphics/trainers/front_pics/subo_f.4bpp.lz");
 const u32 gTrainerPalette_SuboF[] = INCBIN_U32("graphics/trainers/front_pics/subo_f.gbapal.lz");
+
+const u32 gTrainerFrontPic_DazRegular[] = INCBIN_U32("graphics/trainers/front_pics/daz.4bpp.lz");
+const u32 gTrainerPalette_DazRegular[] = INCBIN_U32("graphics/trainers/front_pics/daz.gbapal.lz");

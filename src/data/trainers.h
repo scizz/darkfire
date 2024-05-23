@@ -6241,28 +6241,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_CUSTOM_MOVES(sParty_WallyVR1),
     },
 
-    [TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
+    [TRAINER_SUBO_THUG_GEORGE] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("George"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute103Mudkip),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugGeorge),
     },
 
-    [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
+    [TRAINER_SUBO_THUG_ARIK_2] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Arik"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute110Mudkip),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugArik2),
     },
 
     [TRAINER_BRENDAN_ROUTE_119_MUDKIP] =
@@ -6277,28 +6277,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute119Mudkip),
     },
 
-    [TRAINER_BRENDAN_ROUTE_103_TREECKO] =
+    [TRAINER_SUBO_THUG_PAUL] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Paul"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute103Treecko),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugPaul),
     },
 
-    [TRAINER_BRENDAN_ROUTE_110_TREECKO] =
+    [TRAINER_PSYCHIC_BLAKE] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+        .trainerName = _("Blake"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute110Treecko),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PsychicBlake),
     },
 
     [TRAINER_BRENDAN_ROUTE_119_TREECKO] =
@@ -6313,28 +6313,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute119Treecko),
     },
 
-    [TRAINER_BRENDAN_ROUTE_103_TORCHIC] =
+    [TRAINER_DAZ_1] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_DAZ_REGULAR,
+        .trainerName = _("Daz"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute103Torchic),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Daz1),
     },
 
-    [TRAINER_BRENDAN_ROUTE_110_TORCHIC] =
+    [TRAINER_GUITARIST_MARCUS] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerClass = TRAINER_CLASS_GUITARIST,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_GUITARIST,
+        .trainerName = _("Marcus"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute110Torchic),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_GuitaristMarcus),
     },
 
     [TRAINER_BRENDAN_ROUTE_119_TORCHIC] =
@@ -6349,28 +6349,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BrendanRoute119Torchic),
     },
 
-    [TRAINER_MAY_ROUTE_103_MUDKIP] =
+    [TRAINER_SUBO_THUG_JAMES] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("James"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute103Mudkip),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugJames),
     },
 
-    [TRAINER_MAY_ROUTE_110_MUDKIP] =
+    [TRAINER_GUITARIST_VIKTOR] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .trainerClass = TRAINER_CLASS_GUITARIST,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_GUITARIST,
+        .trainerName = _("Viktor"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute110Mudkip),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_GuitaristViktor),
     },
 
     [TRAINER_MAY_ROUTE_119_MUDKIP] =
@@ -6385,28 +6385,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute119Mudkip),
     },
 
-    [TRAINER_MAY_ROUTE_103_TREECKO] =
+    [TRAINER_SUBO_THUG_ARIK_1] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Arik"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute103Treecko),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugArik1),
     },
 
-    [TRAINER_MAY_ROUTE_110_TREECKO] =
+    [TRAINER_PSYCHIC_TONY] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+        .trainerName = _("Tony"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute110Treecko),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PsychicTony),
     },
 
     [TRAINER_MAY_ROUTE_119_TREECKO] =
@@ -6421,28 +6421,28 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute119Treecko),
     },
 
-    [TRAINER_MAY_ROUTE_103_TORCHIC] =
+    [TRAINER_SUBO_THUG_REX] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Rex"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute103Torchic),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugRex),
     },
 
-    [TRAINER_MAY_ROUTE_110_TORCHIC] =
+    [TRAINER_ROUTE_3_GORDON] =
     {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .trainerClass = TRAINER_CLASS_SCHOOL_KID,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_M,
+        .trainerName = _("Gordon"),
         .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MayRoute110Torchic),
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Route3Gordon),
     },
 
     [TRAINER_MAY_ROUTE_119_TORCHIC] =

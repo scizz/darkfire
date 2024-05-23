@@ -521,23 +521,23 @@
 #define TRAINER_EDWIN_4                     517
 #define TRAINER_EDWIN_5                     518
 #define TRAINER_WALLY_VR_1                  519
-#define TRAINER_BRENDAN_ROUTE_103_MUDKIP    520
-#define TRAINER_BRENDAN_ROUTE_110_MUDKIP    521
+#define TRAINER_SUBO_THUG_GEORGE            520 // SUBO George
+#define TRAINER_SUBO_THUG_ARIK_2            521 // SUBO Arik 2
 #define TRAINER_BRENDAN_ROUTE_119_MUDKIP    522
-#define TRAINER_BRENDAN_ROUTE_103_TREECKO   523
-#define TRAINER_BRENDAN_ROUTE_110_TREECKO   524
+#define TRAINER_SUBO_THUG_PAUL              523 // SUBO Paul
+#define TRAINER_PSYCHIC_BLAKE               524 // Psychic Blake
 #define TRAINER_BRENDAN_ROUTE_119_TREECKO   525
-#define TRAINER_BRENDAN_ROUTE_103_TORCHIC   526
-#define TRAINER_BRENDAN_ROUTE_110_TORCHIC   527
+#define TRAINER_DAZ_1                       526 // Daz 1
+#define TRAINER_GUITARIST_MARCUS            527 // Guitarist Marcus
 #define TRAINER_BRENDAN_ROUTE_119_TORCHIC   528
-#define TRAINER_MAY_ROUTE_103_MUDKIP        529
-#define TRAINER_MAY_ROUTE_110_MUDKIP        530
+#define TRAINER_SUBO_THUG_JAMES             529 // SUBO James
+#define TRAINER_GUITARIST_VIKTOR            530 // Guitarist Viktor
 #define TRAINER_MAY_ROUTE_119_MUDKIP        531
-#define TRAINER_MAY_ROUTE_103_TREECKO       532
-#define TRAINER_MAY_ROUTE_110_TREECKO       533
+#define TRAINER_SUBO_THUG_ARIK_1            532 // SUBO Arik 1
+#define TRAINER_PSYCHIC_TONY                533 // Psychic Tony
 #define TRAINER_MAY_ROUTE_119_TREECKO       534
-#define TRAINER_MAY_ROUTE_103_TORCHIC       535
-#define TRAINER_MAY_ROUTE_110_TORCHIC       536
+#define TRAINER_SUBO_THUG_REX               535 // SUBO Rex
+#define TRAINER_ROUTE_3_GORDON              536 // Route 3 Gordon
 #define TRAINER_MAY_ROUTE_119_TORCHIC       537
 #define TRAINER_ISAAC_1                     538
 #define TRAINER_DAVIS                       539 // Darkfire Trainer

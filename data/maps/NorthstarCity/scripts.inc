@@ -304,7 +304,7 @@ NorthstarCity_Storyline_SUBO_Battle::
 	waitmovement 0
 	playbgm MUS_SUBO_THEME, TRUE
 	msgbox Northstar_City_Text_YoullStandUp, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_REX, SuboThugRex_Text_Defeated
 	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -346,7 +346,7 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom::
 
 NorthstarCity_Storyline_SUBO_Battle2::
 	msgbox Northstar_City_Text_SayGoodbye, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_ARIK_1, SuboThugArik1_Text_Defeated
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 26
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop

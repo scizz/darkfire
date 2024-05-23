@@ -99,7 +99,7 @@ Route5_SUBO_Left::
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_YouThinkYouGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_PAUL, SuboThugPaul_Text_Defeated
 	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -129,7 +129,7 @@ Route5_SUBO_Left::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1 
 	msgbox Route5_Text_IllShowYouGeorge, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_GEORGE, SuboThugGeorge_Text_Defeated
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername SpeakerName_Text_George
@@ -222,7 +222,7 @@ Route5_SUBO_Right::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1 
 	msgbox Route5_Text_YouThinkYouPaul, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_GEORGE, SuboThugGeorge_Text_Defeated
 	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -254,7 +254,7 @@ Route5_SUBO_Right::
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_IllShowYouPaul, MSGBOX_AUTOCLOSE
 	hideface 0
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_PAUL, SuboThugPaul_Text_Defeated
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername SpeakerName_Text_George

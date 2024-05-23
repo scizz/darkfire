@@ -981,6 +981,46 @@ Tyler3_Text_Defeated:
 	.string "Kudos, {PLAYER}\n"
 	.string "You beat me again!$"
 
+SuboThugGeorge_Text_Defeated:
+	.string "Grr!\nYou stupid kid!$"
+
+SuboThugPaul_Text_Defeated:
+	.string "What…\nHow did I lose?$"
+
+Daz1_Text_Defeated:
+	.string "Figures! You're the Greendale Village\n"
+	.string "Champion, after all!$"
+
+SuboThugJames_Text_Defeated:
+	.string "Hahaha!\n"
+	.string "Slowed you down!$"
+
+SuboThugArik1_Text_Defeated:
+	.string "This is such a huge mess…$"
+
+SuboThugRex_Text_Defeated:
+	.string "Hah… Hah… The trek through the\n"
+	.string "snow has sapped all my strength…$"
+
+SuboThugArik2_Text_Defeated:
+	.string "N-no!\n"
+	.string "Not again!$"
+
+PsychicBlake_Text_Defeated:
+	.string "I'm sorry, homies, I couldn't…$"
+
+GuitaristMarcus_Text_Defeated:
+	.string "Darn!\nI almost had it!$"
+
+GuitaristViktor_Text_Defeated:
+	.string "Now I ended up losin' my money…$"
+
+PsychicTony_Text_Defeated:
+	.string "You radiate confidence…$"
+
+Route3Gordon_Text_Defeated:
+	.string "Your battling skills are remarkable…$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513

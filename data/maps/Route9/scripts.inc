@@ -326,7 +326,7 @@ Route9_DazBattle::
 	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox Route9_Text_HahaILoveItAlready, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_DAZ_1, Daz1_Text_Defeated
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	removeobject LOCALID_MUDKIP
 	setflag FLAG_HIDE_DAZ_2_MUDKIP

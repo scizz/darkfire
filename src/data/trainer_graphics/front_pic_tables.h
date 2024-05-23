@@ -94,6 +94,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_KOJIRO] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_SUBO_M] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_SUBO_F] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_DAZ_REGULAR] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_RS_BRENDAN] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_RS_MAY] = {.size = 8, .y_offset = 1},
 };
@@ -196,6 +197,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(KOJIRO, gTrainerFrontPic_Kojiro, 0x800),
     TRAINER_SPRITE(SUBO_M, gTrainerFrontPic_SuboM, 0x800),
     TRAINER_SPRITE(SUBO_F, gTrainerFrontPic_SuboF, 0x800),
+    TRAINER_SPRITE(DAZ_REGULAR, gTrainerFrontPic_DazRegular, 0x800),
     TRAINER_SPRITE(RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, 0x800),
     TRAINER_SPRITE(RS_MAY, gTrainerFrontPic_RubySapphireMay, 0x800),
 };
@@ -298,6 +300,7 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(KOJIRO, gTrainerPalette_Kojiro),
     TRAINER_PAL(SUBO_M, gTrainerPalette_SuboM),
     TRAINER_PAL(SUBO_F, gTrainerPalette_SuboF),
+    TRAINER_PAL(DAZ_REGULAR, gTrainerPalette_DazRegular),
     TRAINER_PAL(RS_BRENDAN, gTrainerPalette_RubySapphireBrendan),
     TRAINER_PAL(RS_MAY, gTrainerPalette_RubySapphireMay),
 };

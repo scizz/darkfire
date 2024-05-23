@@ -144,7 +144,7 @@ Route3_DoubleBattle_Start::
 	applymovement LOCALID_SCHOOL_KID, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	msgbox Route3_Text_WhatsThatYouWishToBattleMe, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_ROUTE_3_GORDON, Route3Gordon_Text_Defeated
 	removeobject LOCALID_LARVITAR
 	setflag FLAG_HIDE_ROUTE_3_LARVITAR
 	applymovement LOCALID_SCHOOL_KID, Common_Movement_ExclamationMark

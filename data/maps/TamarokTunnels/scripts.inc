@@ -138,7 +138,7 @@ TamarokTunnels_SUBO::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_WellItLooksLike, MSGBOX_AUTOCLOSE
 	hideface 1
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_SUBO_THUG_JAMES, SuboThugJames_Text_Defeated
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_SuboGrunt
