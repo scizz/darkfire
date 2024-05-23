@@ -226,6 +226,7 @@ TamarokTunnels_SUBO::
 	playse SE_PIN
 	setvar VAR_STORYLINE_STATE, 20
 	savebgm MUS_DUMMY
+	special RemoveCameraObject
 	fadedefaultbgm
 	release
 	end
