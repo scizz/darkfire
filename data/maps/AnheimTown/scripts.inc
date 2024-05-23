@@ -49,13 +49,6 @@ AnheimTown_Man::
 	end
 
 AnheimTown_Story_Time::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
-	waitmovement 0
-	end
-
-AnheimTown_Story_Time2::
 	lock
 	faceplayer
 	msgbox AnheimTown_Text_Little_Girl_Story, MSGBOX_YESNO
@@ -80,111 +73,217 @@ AnheimTown_Little_Girl_Yes::
 AnheimTown_Little_Girl_Bottom::
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	goto AnheimTown_Little_Girl_Main
+	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_AUTOCLOSE
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	goto Little_Girl_MainStep
 	end
 
 AnheimTown_Little_Girl_Left::
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	goto AnheimTown_Little_Girl_Main
+	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_AUTOCLOSE
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
+	waitmovement 0
+	goto Little_Girl_MainStep
 	end
 
 AnheimTown_Little_Girl_Right::
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	goto AnheimTown_Little_Girl_Main
+	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_AUTOCLOSE
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
+	goto Little_Girl_MainStepRight
 	end
 
 AnheimTown_Little_Girl_Top::
 	applymovement LOCALID_LITTLE_GIRL, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	goto AnheimTown_Little_Girl_Main
-	end
-
-AnheimTown_Little_Girl_Main::
 	msgbox AnheimTown_Text_Little_Girl_Story_Yes, MSGBOX_AUTOCLOSE
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkLeft
 	waitmovement 0
-	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_1, 41
-	goto_if_eq AnheimTown_Little_Girl_MainBottom
-	compare VAR_TEMP_0, 39
-	goto_if_eq AnheimTown_Little_Girl_MainLeft
-	compare VAR_TEMP_0, 41
-	goto_if_eq AnheimTown_Little_Girl_MainRight
-	goto AnheimTown_Little_Girl_MainTop
-	end
-
-AnheimTown_Little_Girl_MainTop::
-	applymovement OBJ_EVENT_ID_PLAYER, WLFR
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
 	goto Little_Girl_MainStep
 	end
 
-AnheimTown_Little_Girl_MainBottom::
-	applymovement OBJ_EVENT_ID_PLAYER, WLFR
-	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
-	waitmovement 0
-	goto Little_Girl_MainStep
-	end
-
-AnheimTown_Little_Girl_MainLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, WLFR
-	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
-	waitmovement 0
-	goto Little_Girl_MainStep
-	end
-
-AnheimTown_Little_Girl_MainRight::
-	applymovement OBJ_EVENT_ID_PLAYER, WLFR
-	applymovement OBJ_EVENT_ID_FOLLOWER, WLFFR
-	waitmovement 0
-	goto Little_Girl_MainStep
-	end
-
-Little_Girl_MainStep::
+Little_Girl_MainStepRight::
+	applymovement OBJ_EVENT_ID_CAMERA, GirlPhaseOne
 	applymovement 3, GirlPhaseOne
+	applymovement OBJ_EVENT_ID_PLAYER, WL2
+	applymovement OBJ_EVENT_ID_FOLLOWER, WL2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	msgbox AnheimTown_Text_Little_Girl_Story_One, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, GirlPhaseTwo
 	applymovement 3, GirlPhaseTwo
 	waitmovement 0
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox AnheimTown_Text_Little_Girl_Story_Two, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlPhaseThree
 	applymovement 3, GirlPhaseThree
-	applymovement OBJ_EVENT_ID_PLAYER, FollowGirl
 	waitmovement 0
 	delay 10
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox AnheimTown_Text_Little_Girl_Story_Three, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlFirstRock
 	applymovement 3, GirlFirstRock
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
+	compare VAR_TEMP_1, 39
+	call_if_eq AnheimTown_Little_Girl_TurnRight
+	compare VAR_TEMP_0, 41
+	call_if_eq AnheimTown_Little_Girl_TurnRight
+	compare VAR_TEMP_0, 39
+	call_if_eq AnheimTown_Little_Girl_TurnRight
 	msgbox AnheimTown_Text_Little_Girl_First_Rock, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlSecondRock
 	applymovement 3, GirlSecondRock
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-	waitmovement 0
+	compare VAR_TEMP_1, 39
+	call_if_eq AnheimTown_Little_Girl_TurnUp
+	compare VAR_TEMP_0, 41
+	call_if_eq AnheimTown_Little_Girl_TurnUp
+	compare VAR_TEMP_0, 39
+	call_if_eq AnheimTown_Little_Girl_TurnUp
 	msgbox AnheimTown_Text_Little_Girl_Second_Rock, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlToPlayer
 	applymovement 3, GirlToPlayer
 	waitmovement 0
+	applymovement 3, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	waitmovement 0
 	msgbox AnheimTown_Text_Little_Girl_To_Player, MSGBOX_AUTOCLOSE
-	applymovement 3, GirlToPosition
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
+	special RemoveCameraObject
 	release
 	end
+
+Little_Girl_MainStep::
+	applymovement OBJ_EVENT_ID_CAMERA, GirlPhaseOne
+	applymovement 3, GirlPhaseOne
+	waitmovement 0
+	delay 10
+	applymovement 3, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	msgbox AnheimTown_Text_Little_Girl_Story_One, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, GirlPhaseTwo
+	applymovement 3, GirlPhaseTwo
+	waitmovement 0
+	delay 10
+	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox AnheimTown_Text_Little_Girl_Story_Two, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlPhaseThree
+	applymovement 3, GirlPhaseThree
+	waitmovement 0
+	delay 10
+	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	msgbox AnheimTown_Text_Little_Girl_Story_Three, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlFirstRock
+	applymovement 3, GirlFirstRock
+	waitmovement 0
+	compare VAR_TEMP_1, 39
+	call_if_eq AnheimTown_Little_Girl_TurnRight
+	compare VAR_TEMP_0, 41
+	call_if_eq AnheimTown_Little_Girl_TurnRight
+	compare VAR_TEMP_0, 39
+	call_if_eq AnheimTown_Little_Girl_TurnRight
+	msgbox AnheimTown_Text_Little_Girl_First_Rock, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, GirlSecondRock
+	applymovement 3, GirlSecondRock
+	waitmovement 0
+	compare VAR_TEMP_1, 39
+	call_if_eq AnheimTown_Little_Girl_TurnUp
+	compare VAR_TEMP_0, 41
+	call_if_eq AnheimTown_Little_Girl_TurnUp
+	compare VAR_TEMP_0, 39
+	call_if_eq AnheimTown_Little_Girl_TurnUp
+	msgbox AnheimTown_Text_Little_Girl_Second_Rock, MSGBOX_AUTOCLOSE
+	compare VAR_TEMP_1, 39
+	goto_if_eq AnheimTown_Little_Girl_GirlToUp
+	applymovement OBJ_EVENT_ID_CAMERA, GirlToPlayer
+	applymovement 3, GirlToPlayer
+	waitmovement 0
+	compare VAR_TEMP_0, 39
+	goto_if_eq AnheimTown_Girl_TurnLeft
+	msgbox AnheimTown_Text_Little_Girl_To_Player, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
+	release
+	end
+
+AnheimTown_Little_Girl_GirlToUp::
+	applymovement OBJ_EVENT_ID_CAMERA, GirlToPlayerUp
+	applymovement 3, GirlToPlayerUp
+	waitmovement 0
+	applymovement 3, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	waitmovement 0
+	msgbox AnheimTown_Text_Little_Girl_To_Player, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 3, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
+	release
+	end
+
+AnheimTown_Girl_TurnLeft::
+	applymovement 3, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	waitmovement 0
+	msgbox AnheimTown_Text_Little_Girl_To_Player, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 3, Common_Movement_FaceDown
+	waitmovement 0
+	special RemoveCameraObject
+	release
+	end
+
+AnheimTown_Little_Girl_TurnRight::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	waitmovement 0
+	return
+
+AnheimTown_Little_Girl_TurnUp::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	return
 
 AnheimTown_Old_Man::
 	msgbox AnheimTown_Text_Old_Man, MSGBOX_NPC
@@ -325,16 +424,9 @@ GirlPhaseTwo:
 
 GirlPhaseThree:
 	walk_up
-	walk_fast_left
-	walk_up
-	face_left
-	step_end
-
-FollowGirl:
-	walk_up
-	walk_up
 	walk_left
 	walk_up
+	face_left
 	step_end
 
 GirlFirstRock:
@@ -361,11 +453,21 @@ GirlSecondRock:
 GirlToPlayer:
 	walk_down
 	walk_left
+	walk_down
+	walk_down
 	step_end
 
-GirlToPosition:
+GirlToPlayerUp:
 	walk_down
+	walk_left
 	walk_down
+	step_end
+
+WalkToPlayerTop:
+	walk_down
+	walk_left
+	walk_down
+	face_left
 	step_end
 
 WLFFR:
