@@ -1021,6 +1021,10 @@ PsychicTony_Text_Defeated:
 Route3Gordon_Text_Defeated:
 	.string "Your battling skills are remarkable…$"
 
+SuboThugRyan_Text_Defeated:
+	.string "Argh!\n"
+	.string "You're gonna regret this!$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513

@@ -7028,6 +7028,14 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route3Gordon[] = {
     }
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugRyan[] = {
+    {
+    .iv = 100,
+    .lvl = 24,
+    .species = SPECIES_SEVIPER,
+    }
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Torchic[] = {
     {
     .iv = 100,

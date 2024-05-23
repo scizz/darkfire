@@ -6445,6 +6445,18 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Route3Gordon),
     },
 
+    [TRAINER_SUBO_THUG_RYAN] =
+    {
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_SUBO_M,
+        .trainerName = _("Ryan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuboThugRyan),
+    },
+
     [TRAINER_MAY_ROUTE_119_TORCHIC] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,

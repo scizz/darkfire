@@ -564,7 +564,7 @@
 #define TRAINER_LIANA                       560 // Darkfire Trainer
 #define TRAINER_JENNY                       561 // Darkfire Trainer
 #define TRAINER_CRISTIN                     562 // Darkfire Trainer
-#define TRAINER_UNUSED_563                  563 // UNUSED
+#define TRAINER_SUBO_THUG_RYAN              563 // Northstar 3F
 #define TRAINER_UNUSED_564                  564 // UNUSED
 #define TRAINER_UNUSED_565                  565 // UNUSED
 #define TRAINER_CAMRON                      566 // Darkfire Trainer
