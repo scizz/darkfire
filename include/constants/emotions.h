@@ -40,6 +40,7 @@
 #define FS_SCIENTIST_SUBO 12
 #define FS_MALE_RANGER 13
 #define FS_FEMALE_RANGER 14
+#define FS_DIRECTOR 15
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
