@@ -1,3 +1,5 @@
+.set LOCALID_OLD_MAN, 1
+
 NorthstarCity_Lighthouse_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NorthstarCity_Lighthouse_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NorthstarCity_Lighthouse_OnWarp
@@ -12,48 +14,49 @@ NorthstarCity_Lighthouse_OnWarp:
 	.2byte 0
 
 NorthstarCity_Lighthouse_InitRoomObjects::
-	updatefollowerpokemongraphic
-	applymovement OBJ_EVENT_ID_FOLLOWER, WDFFU
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	showfollower
+	setobjectxy LOCALID_OLD_MAN, 36, 5
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_OLD_MAN, DIR_NORTH
 	end
 
 NorthstarCity_Lighthouse_TelescopeAfter::
 	lock
-	applymovement 3, Common_Movement_QuestionMark
+	applymovement 1, Common_Movement_QuestionMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement 3, Common_Movement_WalkInPlaceSlowRight
+	applymovement 1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox NorthstarCity_Lighthouse_Text_TrainerAreYouOkay, MSGBOX_AUTOCLOSE
 	delay 30
-	applymovement 3, Common_Movement_ExclamationMark
+	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	msgbox NorthstarCity_Lighthouse_Text_OhThisIs, MSGBOX_AUTOCLOSE
-	setvar VAR_STORYLINE_STATE, 2
+	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
+	setvar VAR_STORYLINE_STATE, 3
 	release
 	end
 
 NorthstarCity_Lighthouse_Old_Man::
 	lock
-	goto_if_eq FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE, NorthstarCity_Lighthouse_Old_Man_Complete
-	applymovement 2, Common_Movement_WalkInPlaceSlowRight
+	goto_if_set FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE, NorthstarCity_Lighthouse_Old_Man_Complete
+	applymovement 1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	delay 30
 	msgbox NorthstarCity_Lighthouse_Text_NotNow, MSGBOX_AUTOCLOSE
+	delay 30
 	faceplayer
-	applymovement 2, Common_Movement_ExclamationMark
+	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	msgbox NorthstarCity_Lighthouse_Text_OhATrainer, MSGBOX_AUTOCLOSE
 	delay 30
-	applymovement 2, Common_Movement_FaceRight
+	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
 	msgbox NorthstarCity_Lighthouse_Text_IHaveTriedToTrack, MSGBOX_AUTOCLOSE
@@ -81,13 +84,13 @@ NorthstarCity_Lighthouse_Old_Man_Move::
 	goto_if_eq NorthstarCity_Lighthouse_Old_Man_MovePlayerTop
 	compare VAR_TEMP_0, 4
 	goto_if_eq NorthstarCity_Lighthouse_Old_Man_MovePlayerMiddle
-	goto_if_eq NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom
+	goto NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom
 	end
 
 NorthstarCity_Lighthouse_Old_Man_MovePlayerTop::
-	applymovement 2, Common_Movement_WalkLeftSlow
+	applymovement 1, Common_Movement_WalkLeftSlow
 	waitmovement 0
-	applymovement 2, Common_Movement_FaceRight
+	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
@@ -96,9 +99,9 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerTop::
 	end
 
 NorthstarCity_Lighthouse_Old_Man_MovePlayerMiddle::
-	applymovement 2, Common_Movement_WalkUpSlow
+	applymovement 1, Common_Movement_WalkUpSlow
 	waitmovement 0
-	applymovement 2, Common_Movement_FaceDown
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
@@ -106,9 +109,9 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerMiddle::
 	end
 
 NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom::
-	applymovement 2, Common_Movement_WalkLeftSlow
+	applymovement 1, Common_Movement_WalkLeftSlow
 	waitmovement 0
-	applymovement 2, Common_Movement_FaceRight
+	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
@@ -118,12 +121,15 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom::
 NorthstarCity_Lighthouse_Old_Man_UseTelescope::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 8
+	special HealPlayerParty
+	setfollowerwarppos DIR_NORTH
+	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 6
+	waitstate
 	end
 
 NorthstarCity_Lighthouse_Old_Man_Complete::
 	faceplayer
-	msgbox NorthstarCity_Lighthouse_Text_IWonderIfTheBoat, MSGBOX_DEFAULT
+	msgbox NorthstarCity_Lighthouse_Text_IWonderIfTheBoat, MSGBOX_AUTOCLOSE
 	release
 	end
 

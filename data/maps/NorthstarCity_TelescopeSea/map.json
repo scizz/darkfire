@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 33,
+      "x": 32,
       "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 32,
+      "x": 31,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 34,
+      "x": 33,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -96,7 +96,7 @@
   "warp_events": [
     {
       "x": 10,
-      "y": 8,
+      "y": 6,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_TELESCOPE_SEA",
       "dest_warp_id": "0"
@@ -228,42 +228,6 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "NorthstarCity_TelescopeSea_SUBO"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_STORYLINE_STATE",
-      "var_value": "1",
-      "script": "NorthstarSea_HideFollower"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_STORYLINE_STATE",
-      "var_value": "1",
-      "script": "NorthstarSea_HideFollower"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 9,
-      "elevation": 0,
-      "var": "VAR_STORYLINE_STATE",
-      "var_value": "1",
-      "script": "NorthstarSea_HideFollower"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_STORYLINE_STATE",
-      "var_value": "1",
-      "script": "NorthstarSea_HideFollower"
     }
   ],
   "bg_events": [

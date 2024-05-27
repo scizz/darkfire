@@ -8,7 +8,7 @@ NorthstarCity_TelescopeSea_MapScripts::
 	.byte 0
 
 NorthstarCity_TelescopeSea_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 0, NorthstarCity_TelescopeSea_Hide
+	map_script_2 VAR_TEMP_2, 0, NorthstarCity_TelescopeSea_Hide
 	.2byte 0
 
 NorthstarCity_TelescopeSea_OnTransition:
@@ -18,23 +18,13 @@ NorthstarCity_TelescopeSea_OnTransition:
 NorthstarCity_TelescopeSea_Hide::
 	applymovement OBJ_EVENT_ID_PLAYER, SetInvisible
 	waitmovement 0
-	showfollower
-	applymovement OBJ_EVENT_ID_FOLLOWER, SetInvisible
-	waitmovement 0
 	hidefollower
-	setflag FLAG_UNUSED_0x020
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_TEMP_2, 1
 	end
 
 NorthstarCity_TelescopeSea_SetFlashLevel::
-	setflashlevel 2
+	setflashlevel 1
 	return
-
-NorthstarSea_HideFollower::
-	hidefollower
-	applymovement OBJ_EVENT_ID_FOLLOWER, SetInvisible
-	setvar VAR_STORYLINE_STATE, 2
-	end
 
 NorthstarCity_TelescopeSea_SUBO::
 	lock
@@ -47,23 +37,23 @@ NorthstarCity_TelescopeSea_SUBO::
 	goto_if_eq NorthstarCity_TelescopeSea_L2
 	compare VAR_TEMP_1, 23
 	goto_if_eq NorthstarCity_TelescopeSea_L3
-	compare VAR_TEMP_0, 42
+	compare VAR_TEMP_0, 26
 	goto_if_eq NorthstarCity_TelescopeSea_T0
-	compare VAR_TEMP_0, 43
+	compare VAR_TEMP_0, 27
 	goto_if_eq NorthstarCity_TelescopeSea_T1
-	compare VAR_TEMP_0, 44
+	compare VAR_TEMP_0, 28
 	goto_if_eq NorthstarCity_TelescopeSea_T2
-	compare VAR_TEMP_0, 45
+	compare VAR_TEMP_0, 29
 	goto_if_eq NorthstarCity_TelescopeSea_T3
-	compare VAR_TEMP_0, 46
+	compare VAR_TEMP_0, 30
 	goto_if_eq NorthstarCity_TelescopeSea_T4
-	compare VAR_TEMP_0, 47
+	compare VAR_TEMP_0, 31
 	goto_if_eq NorthstarCity_TelescopeSea_T5
-	compare VAR_TEMP_0, 48
+	compare VAR_TEMP_0, 32
 	goto_if_eq NorthstarCity_TelescopeSea_T6
-	compare VAR_TEMP_0, 49
+	compare VAR_TEMP_0, 33
 	goto_if_eq NorthstarCity_TelescopeSea_T7
-	compare VAR_TEMP_0, 50
+	compare VAR_TEMP_0, 34
 	goto_if_eq NorthstarCity_TelescopeSea_T8
 	goto NorthstarCity_TelescopeSea_T9
 	end
@@ -173,7 +163,9 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	delay 30
 	setvar VAR_STORYLINE_STATE, 1
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
+	setfollowerwarppos DIR_WEST
 	warpsilent MAP_NORTHSTAR_CITY_LIGHTHOUSE, 36, 4
+	waitstate
 	end
 
 SetInvisible:
