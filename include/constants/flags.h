@@ -1178,7 +1178,7 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
+#define FLAG_NORTHSTAR_CITY_ZINC                                    0x468 // Darkfire Flag
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
@@ -1260,8 +1260,8 @@
 #define FLAG_HIDE_ANHEIM_FOREST_KAKUNA_3                            0x4B6 // Darkfire Flag
 #define FLAG_HIDE_ANHEIM_FOREST_DOOR                                0x4B7 // Darkfire Flag
 #define FLAG_HIDE_ANHEIM_FOREST_SPINARAK                            0x4B8 // Darkfire Flag
+#define FLAG_HIDE_NORTHSTAR_CITY_THUGS                              0x4B9 // Darkfire Flag
 
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag

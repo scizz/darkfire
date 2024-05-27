@@ -54,6 +54,10 @@ Route4_EventScript_ItemXAccuracy::
 	finditem ITEM_X_ACCURACY
 	end
 
+NorthstarCity_EventScript_Zinc::
+	finditem ITEM_ZINC
+	end
+
 PinleafTown_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
