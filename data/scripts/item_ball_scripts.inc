@@ -54,6 +54,10 @@ Route4_EventScript_ItemXAccuracy::
 	finditem ITEM_X_ACCURACY
 	end
 
+NorthstarCity_EventScript_Zinc::
+	finditem ITEM_ZINC
+	end
+
 PinleafTown_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
@@ -330,8 +334,8 @@ SnowdriftForest_EventScript_ItemTimerBall::
 	finditem ITEM_TIMER_BALL
 	end
 
-PetalburgWoods_EventScript_ItemXAttack:: @ 8291102
-	finditem ITEM_X_ATTACK
+NorthstarCity_EventScript_ItemShoalShell::
+	finditem ITEM_SHOAL_SHELL
 	end
 
 PetalburgWoods_EventScript_ItemGreatBall:: @ 829110F

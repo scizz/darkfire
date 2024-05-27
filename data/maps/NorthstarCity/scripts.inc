@@ -12,6 +12,25 @@ NorthstarCity_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_AfterTournament
 	.2byte 0
 
+NorthstarCity_OnTransition:
+	call_if_unset FLAG_BADGE03_GET, NorthstarCity_HideSailors
+	call_if_set FLAG_BADGE03_GET, NorthstarCity_ShowSailor
+	end
+
+NorthstarCity_HideSailors::
+	removeobject 14
+	removeobject 27
+	removeobject 28
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
+	return
+
+NorthstarCity_ShowSailor::
+	clearflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
+	addobject 27
+	addobject 28
+	return
+
 NorthstarCity_AfterTournament::
 	applymovement LOCALID_SAILOR_ONE, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -216,6 +235,87 @@ NorthstarCity_GuitaristMarcus::
 	msgbox NorthstarCity_Text_GuitaristMarcusPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+NorthstarCity_PsychicTony::
+	lock
+	faceplayer
+	goto_if_not_defeated TRAINER_GUITARIST_VIKTOR, NorthstarCity_PsychicTonyNotDefeated
+	goto_if_not_defeated TRAINER_GUITARIST_VIKTOR, NorthstarCity_PsychicTonyNotDefeated
+	goto_if_not_defeated TRAINER_GUITARIST_VIKTOR, NorthstarCity_PsychicTonyNotDefeated
+	msgbox NorthstarCity_Text_PsychicTony1, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_PSYCHIC_TONY, PsychicTony_Text_Defeated
+	msgbox NorthstarCity_Text_PsychicTony2, MSGBOX_AUTOCLOSE
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 35
+	goto_if_eq NorthstarCity_PsychicTonyPlayerLeft
+	goto NorthstarCity_PsychicTonyPlayerBelow
+	end
+
+NorthstarCity_PsychicTonyNotDefeated::
+	msgbox NorthstarCity_Text_PsychicTony, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_PsychicTonyPlayerLeft::
+	applymovement 7, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement 7, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement 7, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement 4, Common_Movement_FaceUp
+	delay 5
+	applymovement 5, Common_Movement_FaceUp
+	applymovement 6, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox NorthstarCity_Text_PsychicTony3, MSGBOX_AUTOCLOSE
+	applymovement 7, WD6
+	delay 5
+	applymovement 5, WD6
+	delay 5
+	applymovement 6, WD6
+	applymovement 4, WD6
+	waitmovement 0
+	removeobject 4
+	removeobject 5
+	removeobject 6
+	removeobject 7
+	setflag FLAG_HIDE_NORTHSTAR_CITY_THUGS
+	release
+	end
+
+NorthstarCity_PsychicTonyPlayerBelow::
+	applymovement 7, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement 7, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	applymovement 7, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_FaceUp
+	delay 5
+	applymovement 5, Common_Movement_FaceUp
+	applymovement 6, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox NorthstarCity_Text_PsychicTony3, MSGBOX_AUTOCLOSE
+	applymovement 5, WD6
+	delay 5
+	applymovement 6, WD6
+	delay 5
+	applymovement 4, WD6
+	applymovement 7, WL2D7
+	delay 5
+	waitmovement 0
+	removeobject 4
+	removeobject 5
+	removeobject 6
+	removeobject 7
+	setflag FLAG_HIDE_NORTHSTAR_CITY_THUGS
+	release
+	end
+
 NorthstarCity_Storyline_SUBO::
 	lock
 	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
@@ -338,7 +438,7 @@ NorthstarCity_Storyline_SUBO_Battle::
 NorthstarCity_Storyline_SUBO_MoveSUBO2Top::
 	applymovement LOCALID_SUBO_1, WL2DL2FU
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowUp
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -346,7 +446,7 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Top::
 NorthstarCity_Storyline_SUBO_MoveSUBO2Middle::
 	applymovement LOCALID_SUBO_1, WL4FD
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -354,7 +454,7 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Middle::
 NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom::
 	applymovement LOCALID_SUBO_1, WL2DL2FD
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -399,8 +499,8 @@ NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop::
 	end
 
 NorthstarCity_Storyline_SUBO_ClearSUBO::
-	applymovement LOCALID_SUBO_1, WL8
-	applymovement LOCALID_SUBO_2, WL8
+	applymovement LOCALID_SUBO_1, WL9
+	applymovement LOCALID_SUBO_2, WL9
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -488,6 +588,18 @@ WR8:
 	walk_right
 	step_end
 
+WL9:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 FLExc:
 	face_left
 	emote_exclamation_mark
@@ -566,6 +678,18 @@ WL2DL2FD:
 	walk_left
 	walk_left
 	face_down
+	step_end
+
+WL2D7:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 NorthstarCity_Text_OhTrainer:
@@ -897,4 +1021,26 @@ NorthstarCity_Text_PsychicBlakeDefeated:
 NorthstarCity_Text_PsychicBlakePostBattle:
 	.string "{COLOR}{BLUE}I may have lost to you, but my\n"
 	.string "girlfriend thinks I'm hot stuff,\l"
-	.string "and that's all that matters to me!"
+	.string "and that's all that matters to me!$"
+
+NorthstarCity_Text_PsychicTony:
+	.string "{COLOR}{BLUE}Whaddya lookin' at, kid?\n"
+	.string "We ain't movin' an inch!\p"
+	.string "How can you expect us to budge when\n"
+	.string "you can't even beat my boys in battle?$"
+
+NorthstarCity_Text_PsychicTony1:
+	.string "{COLOR}{BLUE}All right.\p"
+	.string "So you beat my boys.\n"
+	.string "Good for you.\p"
+	.string "Truth is, they aren't all that strong\n"
+	.string "anyway… But I am!\p"
+	.string "Here I come!$"
+
+NorthstarCity_Text_PsychicTony2:
+	.string "{COLOR}{BLUE}You fought well, kid.\n"
+	.string "I guess this is your spot now.$"
+
+NorthstarCity_Text_PsychicTony3:
+	.string "{COLOR}{BLUE}Come on, boys.\n"
+	.string "Let's get outta here.$"

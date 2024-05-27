@@ -64,11 +64,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "NorthstarCity_GuitaristViktor",
-      "flag": "0"
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_THUGS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 36,
+      "x": 35,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -77,11 +77,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "NorthstarCity_GuitaristMarcus",
-      "flag": "0"
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_THUGS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 34,
+      "x": 33,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -90,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "NorthstarCity_PsychicBlake",
-      "flag": "0"
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_THUGS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
@@ -100,10 +100,10 @@
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "NorthstarCity_PsychicTony",
+      "flag": "FLAG_HIDE_NORTHSTAR_CITY_THUGS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
@@ -129,7 +129,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_SUBO_1",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_REST"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
@@ -168,7 +168,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_SUBO_2",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_REST"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
@@ -207,7 +207,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Ace_Trainer",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_REST"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
@@ -245,8 +245,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "NorthstarCity_EventScript_ItemShoalShell",
+      "flag": "FLAG_ITEM_NORTHSTAR_CITY_SHOAL_SHELL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
@@ -428,7 +428,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_SUBO_3",
-      "flag": "0"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_REST"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
@@ -492,8 +492,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "NorthstarCity_EventScript_Zinc",
+      "flag": "FLAG_NORTHSTAR_CITY_ZINC"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LIGHTHOUSE_1",

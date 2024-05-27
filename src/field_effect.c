@@ -4098,6 +4098,11 @@ static const u32 sMugshotImg_MaleRangerNormal[] = INCBIN_U32("graphics/mugshots/
 static const u32 sMugshotImg_FemaleRangerNormal[] = INCBIN_U32("graphics/mugshots/female_ranger/normal.4bpp.lz");
 static const u16 sMugshotPal_Ranger[] = INCBIN_U16("graphics/mugshots/male_ranger/pal.gbapal");
 
+// Director
+static const u32 sMugshotImg_DirectorNormal[] = INCBIN_U32("graphics/mugshots/director/normal.4bpp.lz");
+static const u16 sMugshotPal_Director[] = INCBIN_U16("graphics/mugshots/director/pal.gbapal");
+
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4158,6 +4163,9 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     },
     [FS_FEMALE_RANGER] = {
         [FSE_NORMAL]     = {sMugshotImg_FemaleRangerNormal, sMugshotPal_Ranger},
+    },
+    [FS_DIRECTOR] = {
+        [FSE_NORMAL]     = {sMugshotImg_DirectorNormal, sMugshotPal_Director},
     }
 };
 
