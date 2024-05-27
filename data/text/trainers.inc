@@ -112,6 +112,12 @@ CommonName_Text_Mareep:
 CommonName_Text_Bulbasaur:
 	.string "Bulbasaur$"
 
+CommonName_Text_Director:
+	.string "Director$"
+
+CommonName_Text_ProfAide:
+	.string "Politician$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

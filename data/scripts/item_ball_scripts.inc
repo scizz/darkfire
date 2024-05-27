@@ -334,8 +334,8 @@ SnowdriftForest_EventScript_ItemTimerBall::
 	finditem ITEM_TIMER_BALL
 	end
 
-NorthstarCity_EventScript_ItemShoalShell::
-	finditem ITEM_SHOAL_SHELL
+NorthstarCity_EventScript_ItemMaxRepel::
+	finditem ITEM_MAX_REPEL
 	end
 
 PetalburgWoods_EventScript_ItemGreatBall:: @ 829110F

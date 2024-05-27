@@ -5,6 +5,7 @@
 .set LOCALID_SAILOR_ONE, 14
 
 NorthstarCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NorthstarCity_OnFrame
 	.byte 0
 
@@ -140,14 +141,15 @@ NorthstarCity_Fat_Man::
 NorthstarCity_SUBO_2::
 	lockall
 	msgbox NorthstarCity_Text_SUBO_2, MSGBOX_DEFAULT
-	applymovement 13, Common_Movement_FacePlayer
+	closemessage
+	applymovement 12, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement 13, Common_Movement_ExclamationMark
+	applymovement 12, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	msgbox NorthstarCity_Text_SUBO_2_Caught, MSGBOX_DEFAULT
-	applymovement 13, Common_Movement_FaceRight
+	applymovement 12, Common_Movement_FaceRight
 	waitmovement 0
 	releaseall
 	end
@@ -326,13 +328,17 @@ NorthstarCity_Storyline_SUBO::
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_FaceDown
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_ThatsIt, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_ProfAide
 	msgbox Northstar_City_Text_Never, MSGBOX_AUTOCLOSE
 	delay 30
 	applymovement LOCALID_GOV, FLExc
@@ -347,11 +353,12 @@ NorthstarCity_Storyline_SUBO::
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_ProfAide
 	msgbox Northstar_City_Text_OhATrainer, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 26
+	compare VAR_TEMP_1, 26
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveGovTop
-	compare VAR_TEMP_0, 27
+	compare VAR_TEMP_1, 27
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveGovMiddle
 	goto NorthstarCity_Storyline_SUBO_MoveGovBottom
 	end
@@ -378,9 +385,12 @@ NorthstarCity_Storyline_SUBO_BattleSetUp::
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
+	speakername CommonName_Text_ProfAide
 	msgbox Northstar_City_Text_TrainerPlease, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -388,10 +398,13 @@ NorthstarCity_Storyline_SUBO_BattleSetUp::
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_SoThisIsHow, MSGBOX_AUTOCLOSE
-	compare VAR_TEMP_0, 26
+	hideface 1
+	compare VAR_TEMP_1, 26
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOTop
-	compare VAR_TEMP_0, 27
+	compare VAR_TEMP_1, 27
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOMiddle
 	goto NorthstarCity_Storyline_SUBO_MoveSUBOBottom
 	end
@@ -418,7 +431,10 @@ NorthstarCity_Storyline_SUBO_Battle::
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	playbgm MUS_SUBO_THEME, TRUE
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_YoullStandUp, MSGBOX_AUTOCLOSE
+	hideface 1
 	trainerbattle_no_intro TRAINER_SUBO_THUG_REX, SuboThugRex_Text_Defeated
 	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -426,11 +442,14 @@ NorthstarCity_Storyline_SUBO_Battle::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_NoWorries, MSGBOX_AUTOCLOSE
+	hideface 1
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 26
+	compare VAR_TEMP_1, 26
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBO2Top
-	compare VAR_TEMP_0, 27
+	compare VAR_TEMP_1, 27
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBO2Middle
 	goto NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom
 	end
@@ -440,6 +459,8 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Top::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
 
@@ -447,6 +468,8 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Middle::
 	applymovement LOCALID_SUBO_1, WL4FD
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -456,26 +479,37 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
 
 NorthstarCity_Storyline_SUBO_Battle2::
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_SayGoodbye, MSGBOX_AUTOCLOSE
+	hideface 1
 	trainerbattle_no_intro TRAINER_SUBO_THUG_ARIK_1, SuboThugArik1_Text_Defeated
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 26
+	compare VAR_TEMP_1, 26
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_FaceUp
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_IDidntStand, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_ThereAreMore, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkUp
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_ClearSUBO
@@ -486,13 +520,19 @@ NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop::
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_FaceDown
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_IDidntStand, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_ThereAreMore, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkDown
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_ClearSUBO
@@ -509,7 +549,9 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
+	speakername CommonName_Text_ProfAide
 	msgbox Northstar_City_Text_ThankYou, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_GOV, WL6
 	waitmovement 0
@@ -517,21 +559,24 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	removeobject LOCALID_GOV
 	removeobject LOCALID_SUBO_2
 	setflag FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_STORYLINE_STATE, 2
 	release
 	end
 
 NorthstarCity_Sailor_Boat::
 	lock
 	faceplayer
+	speakername CommonName_Text_Sailor
 	msgbox NorthstarCity_Text_Sailor_DoYouWantToSail, MSGBOX_YESNO
-	compare VAR_RESULT, 1
+	compare VAR_RESULT, TRUE
 	goto_if_eq NorthstarCity_Sailor_Yes
+	speakername CommonName_Text_Sailor
 	msgbox NorthstarCity_Text_Sailor_NoWorries, MSGBOX_AUTOCLOSE
 	release
 	end
 
 NorthstarCity_Sailor_Yes::
+	speakername CommonName_Text_Sailor
 	msgbox NorthstarCity_Text_Sailor_PerfectLetsGo, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_SAILOR_BOAT, Common_Movement_FaceRight
 	waitmovement 0
@@ -612,6 +657,7 @@ WFL6UFR:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
+	walk_fast_left
 	walk_fast_up
 	face_right
 	step_end
@@ -624,11 +670,13 @@ WFL3DL3UFR:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
+	walk_fast_left
 	walk_fast_up
 	face_right
 	step_end
 
 WFL6DFR:
+	walk_fast_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
@@ -951,7 +999,7 @@ Northstar_City_Text_ThankYou:
 	.string "…\n"
 	.string "…\p"
 	.string "{PLAYER}?\n"
-	.string "The Laveria City tournament champion?!\p"
+	.string "The Laveria City Champion?!\p"
 	.string "Holy smokes… Talk about being in\n"
 	.string "the right place at the right time!\p"
 	.string "The SUBO stole a boat from these docks\n"
@@ -972,11 +1020,11 @@ NorthstarCity_Text_Sailor_DoYouWantToSail:
 	.string "Do you want to sail back to Laveria\n"
 	.string "City?$"
 
-NorthstarCity_Text_Sailor_NoWorries:
+NorthstarCity_Text_Sailor_PerfectLetsGo:
 	.string "{COLOR}{BLUE}Perfect!\n"
 	.string "Let's go!$"
 
-NorthstarCity_Text_Sailor_PerfectLetsGo:
+NorthstarCity_Text_Sailor_NoWorries:
 	.string "{COLOR}{BLUE}No worries!\n"
 	.string "Just let me know when you wanna sail!$"
 

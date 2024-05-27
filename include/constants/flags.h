@@ -1104,7 +1104,7 @@
 #define FLAG_ITEM_TAMAROK_TUNNELS_TM_07                             0x41C // Darkfire Flag
 #define FLAG_ITEM_ROCKFALL_CAVE_B1F_ESCAPE_ROPE                     0x41D // Darkfire Flag
 #define FLAG_ITEM_ROCKFALL_CAVE_B1F_TM_31                           0x41E // Darkfire Flag
-#define FLAG_ITEM_NORTHSTAR_CITY_SHOAL_SHELL                        0x41F // Darkfire Flag
+#define FLAG_ITEM_NORTHSTAR_CITY_MAX_REPEL                          0x41F // Darkfire Flag
 
 #define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
 #define FLAG_ITEM_UNION_CITY_POKE_BALL                              0x421 // Darkfire Flag
