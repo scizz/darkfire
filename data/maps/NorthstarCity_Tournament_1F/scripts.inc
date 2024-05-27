@@ -18,6 +18,7 @@ NorthstarCity_Tournament_1F_HideSUBO::
 
 NorthstarCity_Tournament_1F_SUBOEnd::
 	lock
+	special HealPlayerParty
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
@@ -360,11 +361,11 @@ NorthstarCity_Tournament_1F_Text_Receptionist_1:
 	.string "regretted it, we apologize. No refunds!$"
 
 NorthstarCity_Tournament_1F_Text_Receptionist_1_Badge:
-	.string "{COLOR}{RED}Welcome to the Northstar TV Station.\n"
+	.string "{COLOR}{RED}Welcome to the Northstar TV Station.\p"
 	.string "Thank you for saving us from the SUBO!$"
 
 NorthstarCity_Tournament_1F_Text_Receptionist_2:
-	.string "{COLOR}{RED}Welcome to the Northstar TV Station.\n"
+	.string "{COLOR}{RED}Welcome to the Northstar TV Station.\p"
 	.string "You are here for the tournament?\p"
 	.string "Please, go to the top floor and\n"
 	.string "inquire with our staff there.$"

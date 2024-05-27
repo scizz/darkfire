@@ -12,6 +12,25 @@ NorthstarCity_OnFrame::
 	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_AfterTournament
 	.2byte 0
 
+NorthstarCity_OnTransition:
+	call_if_unset FLAG_BADGE03_GET, NorthstarCity_HideSailors
+	call_if_set FLAG_BADGE03_GET, NorthstarCity_ShowSailor
+	end
+
+NorthstarCity_HideSailors::
+	removeobject 14
+	removeobject 27
+	removeobject 28
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
+	return
+
+NorthstarCity_ShowSailor::
+	clearflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
+	addobject 27
+	addobject 28
+	return
+
 NorthstarCity_AfterTournament::
 	applymovement LOCALID_SAILOR_ONE, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -419,7 +438,7 @@ NorthstarCity_Storyline_SUBO_Battle::
 NorthstarCity_Storyline_SUBO_MoveSUBO2Top::
 	applymovement LOCALID_SUBO_1, WL2DL2FU
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowUp
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -427,7 +446,7 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Top::
 NorthstarCity_Storyline_SUBO_MoveSUBO2Middle::
 	applymovement LOCALID_SUBO_1, WL4FD
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -435,7 +454,7 @@ NorthstarCity_Storyline_SUBO_MoveSUBO2Middle::
 NorthstarCity_Storyline_SUBO_MoveSUBO2Bottom::
 	applymovement LOCALID_SUBO_1, WL2DL2FD
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	goto NorthstarCity_Storyline_SUBO_Battle2
 	end
@@ -480,8 +499,8 @@ NorthstarCity_Storyline_SUBO_MoveSUBOAfterBattleTop::
 	end
 
 NorthstarCity_Storyline_SUBO_ClearSUBO::
-	applymovement LOCALID_SUBO_1, WL8
-	applymovement LOCALID_SUBO_2, WL8
+	applymovement LOCALID_SUBO_1, WL9
+	applymovement LOCALID_SUBO_2, WL9
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -567,6 +586,18 @@ WR8:
 	walk_right
 	walk_right
 	walk_right
+	step_end
+
+WL9:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 FLExc:

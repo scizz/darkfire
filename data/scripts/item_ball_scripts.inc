@@ -334,8 +334,8 @@ SnowdriftForest_EventScript_ItemTimerBall::
 	finditem ITEM_TIMER_BALL
 	end
 
-PetalburgWoods_EventScript_ItemXAttack:: @ 8291102
-	finditem ITEM_X_ATTACK
+NorthstarCity_EventScript_ItemShoalShell::
+	finditem ITEM_SHOAL_SHELL
 	end
 
 PetalburgWoods_EventScript_ItemGreatBall:: @ 829110F
