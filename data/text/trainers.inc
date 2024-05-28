@@ -118,6 +118,9 @@ CommonName_Text_Director:
 CommonName_Text_ProfAide:
 	.string "Politician$"
 
+CommonName_Text_GovOfficial:
+	.string "Gov. Official$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

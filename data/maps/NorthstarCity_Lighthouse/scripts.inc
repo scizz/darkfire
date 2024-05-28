@@ -82,38 +82,40 @@ NorthstarCity_Lighthouse_Old_Man_Move::
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 3
 	goto_if_eq NorthstarCity_Lighthouse_Old_Man_MovePlayerTop
-	compare VAR_TEMP_0, 4
+	compare VAR_TEMP_1, 4
 	goto_if_eq NorthstarCity_Lighthouse_Old_Man_MovePlayerMiddle
 	goto NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom
 	end
 
 NorthstarCity_Lighthouse_Old_Man_MovePlayerTop::
-	applymovement 1, Common_Movement_WalkLeftSlow
+	applymovement 1, Common_Movement_WalkDownSlow
 	waitmovement 0
-	applymovement 1, Common_Movement_FaceRight
+	applymovement 1, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkDown
 	waitmovement 0 
 	goto NorthstarCity_Lighthouse_Old_Man_UseTelescope
 	end
 
 NorthstarCity_Lighthouse_Old_Man_MovePlayerMiddle::
-	applymovement 1, Common_Movement_WalkUpSlow
+	applymovement 1, WU2S
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
 	waitmovement 0
 	goto NorthstarCity_Lighthouse_Old_Man_UseTelescope
 	end
 
 NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom::
-	applymovement 1, Common_Movement_WalkLeftSlow
+	applymovement 1, Common_Movement_WalkUpSlow
 	waitmovement 0
-	applymovement 1, Common_Movement_FaceRight
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
 	waitmovement 0
 	goto NorthstarCity_Lighthouse_Old_Man_UseTelescope
 	end
@@ -123,7 +125,7 @@ NorthstarCity_Lighthouse_Old_Man_UseTelescope::
 	waitmovement 0
 	special HealPlayerParty
 	setfollowerwarppos DIR_NORTH
-	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 6
+	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 8
 	waitstate
 	end
 
@@ -132,6 +134,11 @@ NorthstarCity_Lighthouse_Old_Man_Complete::
 	msgbox NorthstarCity_Lighthouse_Text_IWonderIfTheBoat, MSGBOX_AUTOCLOSE
 	release
 	end
+
+WU2S:
+	walk_slow_up
+	walk_slow_up
+	step_end
 
 NorthstarCity_Lighthouse_Text_TrainerAreYouOkay:
 	.string "Trainer? Are you okay?\n"

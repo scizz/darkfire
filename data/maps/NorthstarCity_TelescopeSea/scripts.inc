@@ -130,6 +130,8 @@ NorthstarCity_TelescopeSea_T9::
 
 NorthstarCity_TelescopeSea_SUBO_Main::
 	waitmovement 0
+	animateflash 0
+	setflashlevel 0
 	applymovement LOCALID_GOVOFF, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
@@ -137,28 +139,40 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	playbgm MUS_SUBO_THEME, 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_TelescopeSea_Text_Hahaha, MSGBOX_AUTOCLOSE
+	hideface 1
+	speakername CommonName_Text_GovOfficial
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	msgbox NorthstarCity_TelescopeSea_Text_OhDear, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 CommonName_Text_SuboGrunt
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox NorthstarCity_TelescopeSea_Text_WeKnow, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_GOVOFF, Common_Movement_FaceLeft
 	waitmovement 0
 	delay 30
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_GovOfficial
 	msgbox NorthstarCity_TelescopeSea_Text_ItSeems, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_TelescopeSea_Text_IHope, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_GOVOFF, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_GovOfficial
 	msgbox NorthstarCity_TelescopeSea_Text_FineFine, MSGBOX_AUTOCLOSE
 	delay 30
 	setvar VAR_STORYLINE_STATE, 1
