@@ -142,23 +142,27 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_TelescopeSea_Text_Hahaha, MSGBOX_AUTOCLOSE
 	hideface 1
-	speakername CommonName_Text_GovOfficial
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
+	hideface 0
 	waitmovement 0
 	msgbox NorthstarCity_TelescopeSea_Text_OhDear, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	speakername2 CommonName_Text_SuboGrunt
-	showface FS_FEMALE_SUBO, FSE_NORMAL, 0, 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_TelescopeSea_Text_WeKnow, MSGBOX_AUTOCLOSE
-	hideface 0
+	hideface 1
 	applymovement LOCALID_GOVOFF, Common_Movement_FaceLeft
 	waitmovement 0
 	delay 30
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	speakername CommonName_Text_GovOfficial
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox NorthstarCity_TelescopeSea_Text_ItSeems, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
@@ -171,8 +175,10 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	waitmovement 0
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_GovOfficial
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox NorthstarCity_TelescopeSea_Text_FineFine, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 30
 	setvar VAR_STORYLINE_STATE, 1
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
@@ -301,7 +307,7 @@ NorthstarCity_TelescopeSea_Text_OhDear:
 	.string "What am I to do now?$"
 
 NorthstarCity_TelescopeSea_Text_WeKnow:
-	.string "{COLOR}{BLUE}We know you're all outta Pokémon,\n"
+	.string "{COLOR}{RED}We know you're all outta Pokémon,\n"
 	.string "so tell you what.\p"
 	.string "Hand over those papers peacefully and\n"
 	.string "we won't make a huge fuss about it.\p"

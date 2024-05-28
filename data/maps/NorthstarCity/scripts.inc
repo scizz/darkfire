@@ -338,8 +338,10 @@ NorthstarCity_Storyline_SUBO::
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername CommonName_Text_ProfAide
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox Northstar_City_Text_Never, MSGBOX_AUTOCLOSE
+	hideface 0
 	delay 30
 	applymovement LOCALID_GOV, FLExc
 	playse SE_PIN
@@ -353,8 +355,10 @@ NorthstarCity_Storyline_SUBO::
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	speakername CommonName_Text_ProfAide
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox Northstar_City_Text_OhATrainer, MSGBOX_AUTOCLOSE
+	hideface 0
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 26
 	goto_if_eq NorthstarCity_Storyline_SUBO_MoveGovTop
@@ -387,8 +391,10 @@ NorthstarCity_Storyline_SUBO_BattleSetUp::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
-	speakername CommonName_Text_ProfAide
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox Northstar_City_Text_TrainerPlease, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
@@ -551,8 +557,10 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
-	speakername CommonName_Text_ProfAide
+	speakername2 CommonName_Text_GovOfficial
+	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox Northstar_City_Text_ThankYou, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_GOV, WL6
 	waitmovement 0
 	removeobject LOCALID_SUBO_1
