@@ -443,3 +443,12 @@ u8 (*const gMovementTypeFuncs_Invisible[])(struct ObjectEvent *, struct Sprite *
     MovementType_Invisible_Step1,
     MovementType_Invisible_Step2,
 };
+
+const u8 gDownUpLeftDirections[] = {DIR_SOUTH, DIR_NORTH, DIR_WEST, DIR_SOUTH, DIR_NORTH};
+
+u8 (*const gMovementTypeFuncs_FaceDownUpLeft[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementType_FaceDownUpLeft_Step0,
+    MovementType_FaceDownUpLeft_Step1,
+    MovementType_FaceDownUpLeft_Step2,
+    MovementType_FaceDownUpLeft_Step3,
+};

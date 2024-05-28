@@ -278,6 +278,7 @@ void MovementType_RunInPlace(struct Sprite *);
 void MovementType_Invisible(struct Sprite *);
 void MovementType_WalkSlowlyInPlace(struct Sprite *);
 void MovementType_FollowingPokemon(struct Sprite *);
+void MovementType_FaceSequenceDownUpLeft(struct Sprite *);
 u8 GetSlideMovementAction(u32);
 u8 GetJumpMovementAction(u32);
 u8 GetJump2MovementAction(u32);
@@ -442,6 +443,10 @@ u8 MovementType_FollowingPokemon_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_FollowingPokemon_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_FollowingPokemon_Step2(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_FollowingPokemon_Step3(struct ObjectEvent *, struct Sprite *);
+u8 MovementType_FaceDownUpLeft_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementType_FaceDownUpLeft_Step1(struct ObjectEvent *, struct Sprite *);
+u8 MovementType_FaceDownUpLeft_Step2(struct ObjectEvent *, struct Sprite *);
+u8 MovementType_FaceDownUpLeft_Step3(struct ObjectEvent *, struct Sprite *);
 
 u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 z, u8 direction);
 void TurnVirtualObject(u8 virtualObjId, u8 direction);

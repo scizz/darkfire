@@ -285,6 +285,7 @@ static void (*const sMovementTypeCallbacks[])(struct Sprite *) =
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT] = MovementType_WalkSlowlyInPlace,
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = MovementType_WalkSlowlyInPlace,
     [MOVEMENT_TYPE_FOLLOWING_POKEMON] = MovementType_FollowingPokemon,
+    [MOVEMENT_TYPE_FACE_SEQUENCE_DOWN_UP_LEFT] = MovementType_FaceSequenceDownUpLeft,
 };
 
 static const bool8 sMovementTypeHasRange[NUM_MOVEMENT_TYPES] = {
@@ -415,6 +416,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT] = DIR_WEST,
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = DIR_EAST,
     [MOVEMENT_TYPE_FOLLOWING_POKEMON] = DIR_SOUTH,
+    [MOVEMENT_TYPE_FACE_SEQUENCE_DOWN_UP_LEFT] = DIR_SOUTH,
 };
 
 #define OBJ_EVENT_PAL_TAG_BRENDAN                 0x1100
@@ -11347,6 +11349,46 @@ bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct S
         return TRUE;
     }
     return FALSE;
+}
+
+movement_type_def(MovementType_FaceSequenceDownUpLeft, gMovementTypeFuncs_FaceDownUpLeft)
+
+bool8 MovementType_FaceDownUpLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    ClearObjectEventMovement(objectEvent, sprite);
+    ObjectEventSetSingleMovement(objectEvent, sprite, GetFaceDirectionMovementAction(objectEvent->facingDirection));
+    sprite->sTypeFuncId = 1;
+    return TRUE;
+}
+
+bool8 MovementType_FaceDownUpLeft_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (ObjectEventExecSingleMovementAction(objectEvent, sprite))
+    {
+        SetMovementDelay(sprite, 32);
+        sprite->sTypeFuncId = 2;
+    }
+    return FALSE;
+}
+
+bool8 MovementType_FaceDownUpLeft_Step2(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (WaitForMovementDelay(sprite))
+        sprite->sTypeFuncId = 3;
+    return FALSE;
+}
+
+bool8 MovementType_FaceDownUpLeft_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    u8 direction;
+    u8 directions[5];
+    memcpy(directions, gDownUpLeftDirections, sizeof gDownUpLeftDirections);
+    direction = TryGetTrainerEncounterDirection(objectEvent, RUNFOLLOW_ANY);
+    if (direction == DIR_NONE)
+        direction = directions[objectEvent->facingDirection];
+    SetObjectEventDirection(objectEvent, direction);
+    sprite->sTypeFuncId = 0;
+    return TRUE;
 }
 
 // trainer custom scripts

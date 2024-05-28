@@ -96,12 +96,12 @@ NorthstarCity_Old_Man::
 	lockall
 	faceplayer
 	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Old_Man_Badge
-	msgbox NorthstarCity_Text_Old_Man, MSGBOX_DEFAULT
+	msgbox NorthstarCity_Text_Old_Man, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
 NorthstarCity_Old_Man_Badge::
-	msgbox NorthstarCity_Text_Old_Man_Badge, MSGBOX_DEFAULT
+	msgbox NorthstarCity_Text_Old_Man_Badge, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
