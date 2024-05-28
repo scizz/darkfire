@@ -142,12 +142,12 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_TelescopeSea_Text_Hahaha, MSGBOX_AUTOCLOSE
 	hideface 1
+	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
 	speakername2 CommonName_Text_GovOfficial
 	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
-	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
-	hideface 0
-	waitmovement 0
 	msgbox NorthstarCity_TelescopeSea_Text_OhDear, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
