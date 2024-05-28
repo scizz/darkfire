@@ -27,7 +27,6 @@ NorthstarCity_TelescopeSea_SetFlashLevel::
 	return
 
 NorthstarCity_TelescopeSea_SUBO::
-	lock
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 20
 	goto_if_eq NorthstarCity_TelescopeSea_L0
