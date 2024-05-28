@@ -123,6 +123,7 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom::
 NorthstarCity_Lighthouse_Old_Man_UseTelescope::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
+	setflag FLAG_SYS_TELESCOPE_USE
 	special HealPlayerParty
 	setfollowerwarppos DIR_NORTH
 	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 8

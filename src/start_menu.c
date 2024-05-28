@@ -233,6 +233,7 @@ static void BuildSafariZoneStartMenu(void);
 static void BuildLinkModeStartMenu(void);
 static void BuildUnionRoomStartMenu(void);
 static void BuildBattlePikeStartMenu(void);
+static void BuildTelescopeStartMenu(void);
 static void BuildBattlePyramidStartMenu(void);
 static void BuildMultiPartnerRoomStartMenu(void);
 static void ShowSafariBallsWindow(void);
@@ -293,6 +294,10 @@ static void BuildStartMenuActions(void)
     else if (InMultiPartnerRoom())
     {
         BuildMultiPartnerRoomStartMenu();
+    }
+    else if (FlagGet(FLAG_SYS_TELESCOPE_USE) == TRUE)
+    {
+    BuildTelescopeStartMenu();
     }
     else
     {
@@ -396,6 +401,12 @@ static void BuildBattlePikeStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PLAYER);
+    AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_EXIT);
+}
+
+static void BuildTelescopeStartMenu(void)
+{
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
