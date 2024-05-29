@@ -771,7 +771,7 @@ bool8 MetatileBehavior_IsAshGrass(u8 metatileBehavior)
 bool8 MetatileBehavior_IsFootprints(u8 metatileBehavior)
 {
     // MB_FOOTPRINTS is not used by any metatiles.
-    if (metatileBehavior == MB_FOOTPRINTS)
+    if (metatileBehavior == MB_FOOTPRINTS || metatileBehavior == MB_SNOW)
         return TRUE;
     else
         return FALSE;

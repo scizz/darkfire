@@ -22,6 +22,7 @@ extern const struct SpriteTemplate gFieldEffectObjectTemplate_WaterSurfacing;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_ReflectionDistortion;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_Sparkle;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_DeepSandFootprints;
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_SnowFootprints;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_TreeDisguise;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_MountainDisguise;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_Bird;
@@ -82,4 +83,5 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_TRACKS_SPOT]           = &gFieldEffectObjectTemplate_SpotTracks,
     [FLDEFFOBJ_TRACKS_BUG]            = &gFieldEffectObjectTemplate_BugTracks,
     [FLDEFFOBJ_CAVE_DUST]             = &gFieldEffectObjectTemplate_CaveDust,
+    [FLDEFFOBJ_SNOW_FOOTPRINTS]       = &gFieldEffectObjectTemplate_SnowFootprints,
 };
