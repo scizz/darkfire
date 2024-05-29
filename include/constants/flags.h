@@ -1105,9 +1105,9 @@
 #define FLAG_ITEM_ROCKFALL_CAVE_B1F_ESCAPE_ROPE                     0x41D // Darkfire Flag
 #define FLAG_ITEM_ROCKFALL_CAVE_B1F_TM_31                           0x41E // Darkfire Flag
 #define FLAG_ITEM_NORTHSTAR_CITY_MAX_REPEL                          0x41F // Darkfire Flag
-
-#define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
+#define FLAG_ITEM_NORTHSTAR_CITY_TOXIC                              0x420 // Darkfire Flag
 #define FLAG_ITEM_UNION_CITY_POKE_BALL                              0x421 // Darkfire Flag
+
 #define FLAG_ITEM_PETALBURG_WOODS_ETHER                             0x422
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_3R_ECAPE_ROPE                    0x423
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_ORANGE_MAIL                  0x424
@@ -1262,9 +1262,9 @@
 #define FLAG_HIDE_ANHEIM_FOREST_SPINARAK                            0x4B8 // Darkfire Flag
 #define FLAG_HIDE_NORTHSTAR_CITY_THUGS                              0x4B9 // Darkfire Flag
 #define FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO                         0x49D // Darkfire Flag
+#define FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F                           0x4BB // Darkfire Flag
+#define FLAG_NORTHSTAR_TOURNAMENT_ROSE_1F                           0x4BC // Darkfire Flag
 
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
 #define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
 #define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag

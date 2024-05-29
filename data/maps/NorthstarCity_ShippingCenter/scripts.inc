@@ -41,7 +41,7 @@ NorthstarCity_ShippingCenter_Boy::
 	lockall
 	faceplayer
 	goto_if_set FLAG_RECEIVED_NORTHSTAR_SHIPPING_SUPER_POTION, NorthstarCity_ShippingCenter_Boy_Given
-	msgbox NorthstarCity_ShippingCenter_Text_Boy, MSGBOX_NPC
+	msgbox NorthstarCity_ShippingCenter_Text_Boy, MSGBOX_DEFAULT
 	giveitem ITEM_SUPER_POTION, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull

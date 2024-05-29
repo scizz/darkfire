@@ -206,8 +206,9 @@ NorthstarCity_Apartments_Text_Hiker:
 	.string "just a large doll, lodged in the snow.\p"
 	.string "Today, I still wonder who would place\n"
 	.string "such a thing there…\p"
-	.string "All I know is that you gotta protect"
-	.string "yourself out there!\l"
+	.string "You gotta protect yourself out there,\n"
+	.string "kid!\p"
+	.string "I know…\n"
 	.string "Take this!$"
 
 NorthstarCity_Apartments_Text_MistReceived:
@@ -222,7 +223,7 @@ NorthstarCity_Apartments_Text_OhHeyTherePlayer:
 	.string "Noctowl for years, you know.\l"
 	.string "Fascinating creatures, really!\p"
 	.string "I'm on a quest to gather some Sheeny\n"
-	.string "Seeds that Hoothoot often carry.\p"
+	.string "Seeds, that Hoothoot often carry.\p"
 	.string "If you happen to come across any\n"
 	.string "during your travels, I'd be willing\l"
 	.string "to trade with you!\p"

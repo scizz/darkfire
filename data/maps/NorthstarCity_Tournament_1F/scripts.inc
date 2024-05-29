@@ -13,7 +13,9 @@ NorthstarCity_Tournament_1F_OnTransition:
 NorthstarCity_Tournament_1F_HideSUBO::
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
+	setflag FLAG_ITEM_NORTHSTAR_CITY_TOXIC
 	end
 
 NorthstarCity_Tournament_1F_SUBOEnd::
@@ -72,13 +74,7 @@ NorthstarCity_Tournament_1F_SUBOEndDialogue::
 	msgbox NorthstarCity_Tournament_1F_Text_Roger, MSGBOX_AUTOCLOSE
 	playse SE_PIN
 	waitse
-	clearflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
-	addobject LOCALID_JIGGLYPUFF
-	applymovement LOCALID_JIGGLYPUFF, Common_Movement_JumpInPlaceDown
-	playse SE_LEDGE
-	waitse
-	waitmovement 0
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 14
 	goto_if_eq NorthstarCity_Tournament_1F_JigglypuffLeft
 	goto NorthstarCity_Tournament_1F_JigglypuffDown
@@ -91,6 +87,20 @@ NorthstarCity_Tournament_1F_JigglypuffLeft::
 	end
 
 NorthstarCity_Tournament_1F_JigglypuffDown::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkLeftFaster
+	addobject LOCALID_JIGGLYPUFF
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	applymovement LOCALID_JIGGLYPUFF, Common_Movement_JumpInPlaceDown
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 14
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
@@ -161,12 +171,20 @@ NorthstarCity_Tournament_1F_RoseLookUp::
 	applymovement LOCALID_ROSE, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUpFaster
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
+	waitmovement 0
 	goto NorthstarCity_Tournament_1F_SUBOEndRose
 	end
 
 NorthstarCity_Tournament_1F_RoseLookRight::
 	applymovement LOCALID_ROSE, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRightFaster
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceDown
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_SUBOEndRose
 	end
@@ -183,7 +201,6 @@ NorthstarCity_Tournament_1F_SUBOEndRose::
 	msgbox NorthstarCity_Tournament_1F_Text_AlsoIManaged, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_POKE_FLUTE, 1
-	delay 30
 	speakername CommonName_Text_Rose
 	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_1F_Text_TakeItEasy, MSGBOX_AUTOCLOSE
@@ -193,9 +210,12 @@ NorthstarCity_Tournament_1F_SUBOEndRose::
 	waitmovement 0
 	removeobject LOCALID_ROSE
 	removeobject LOCALID_SUBO
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
-	setvar VAR_STORYLINE_STATE, 1
+	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE_1F
+	setvar VAR_STORYLINE_STATE, 10
 	end
 
 NorthstarCity_Tournament_1F_Woman::

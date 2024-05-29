@@ -4,7 +4,19 @@
 .set LOCALID_DIRECTOR, 9
 
 NorthstarCity_Tournament_3F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_Tournament_3F_OnTransition
 	.byte 0
+
+NorthstarCity_Tournament_3F_OnTransition:
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_SUBO, NorthstarCity_Tournament_3F_MoveRose
+	end
+
+NorthstarCity_Tournament_3F_MoveRose::
+	goto_if_unset FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F, NorthstarCity_Tournament_3F_MoveRose2
+	end
+
+NorthstarCity_Tournament_3F_MoveRose2::
+	setobjectxyperm LOCALID_ROSE, 1, 10
 	end
 
 NorthstarCity_Tournament_3F_Psychic::
@@ -34,14 +46,15 @@ NorthstarCity_Tournament_3F_Hide4FObjects::
 NorthstarCity_Tournament_3F_SUBOBattle::
 	lock
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, WD2
+	applymovement OBJ_EVENT_ID_CAMERA, WD3
 	waitmovement 0
-	special RemoveCameraObject
 	playbgm MUS_SUBO_THEME, TRUE
-	speakername2 CommonName_Text_Rakaz
-	showface FS_RAKAZ, FSE_NORMAL, 0, 0
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	speakername CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_GiveItUp, MSGBOX_AUTOCLOSE
-	hideface 0
+	hideface 1
 	delay 30
 	applymovement LOCALID_SUBO, Common_Movement_FaceUp
 	waitmovement 0
@@ -70,27 +83,28 @@ NorthstarCity_Tournament_3F_SUBOBattle_Male::
 NorthstarCity_Tournament_3F_SUBOBattleNext::
 	applymovement LOCALID_RAKAZ, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_RAKAZ, Common_Movement_ExclamationMark
+	applymovement LOCALID_RAKAZ, Common_Movement_QuestionMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	speakername2 CommonName_Text_Rakaz
-	showface FS_RAKAZ, FSE_NORMAL, 0, 0
+	speakername CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_WhatInTheWorld, MSGBOX_AUTOCLOSE
-	hideface 0
+	hideface 1
 	applymovement LOCALID_DIRECTOR, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement LOCALID_DIRECTOR, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Rakaz @DIRECTOR
-	showface FS_RAKAZ, FSE_NORMAL, 1, 1 @DIRECTOR
+	speakername2 CommonName_Text_Director
+	showface FS_DIRECTOR, FSE_NORMAL, 0, 0
 	msgbox NorthstarCity_Tournament_3F_Text_PlayerYourNameIsPlayer, MSGBOX_AUTOCLOSE
-	hideface 1
+	hideface 0
 	delay 30
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUpFast
 	applymovement LOCALID_SUBO, Common_Movement_WalkUpFast
 	waitmovement 0
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceUp
@@ -108,14 +122,18 @@ NorthstarCity_Tournament_3F_SUBOBattleNext::
 	end
 
 NorthstarCity_Tournament_3F_SUBOBattleNextLeft::
-	@applymovement LOCALID_ROSE, MoveToRight
-	@waitmovement 0
+	applymovement LOCALID_ROSE, WFL8D2
+	waitmovement 0
+	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
 	goto NorthstarCity_Tournament_3F_SUBORoseBattle
 	end
 
 NorthstarCity_Tournament_3F_SUBOBattleNextRight::
-	@applymovement LOCALID_ROSE, MoveToLeft
-	@waitmovement 0
+	applymovement LOCALID_ROSE, WFL9D2
+	waitmovement 0
+	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowDown
+	waitmovement 0
 	goto NorthstarCity_Tournament_3F_SUBORoseBattle
 	end
 
@@ -147,12 +165,122 @@ NorthstarCity_Tournament_3F_SUBORoseBattle_Begin::
 	playse SE_PIN
 	waitse
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	speakername2 CommonName_Text_Rakaz
-	showface FS_RAKAZ, FSE_NORMAL, 0, 0
+	speakername CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_ICanHardlyBelieve, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_SUBO, Common_Movement_WalkUpFast
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUpFast
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkUpFast
+	applymovement LOCALID_ROSE, Common_Movement_WalkDownFast
+	waitmovement 0
+	special RemoveCameraObject
+	trainerbattle_no_intro TRAINER_SUBO_THUG_RYAN, SuboThugRyan_Text_Defeated
+	playbgm MUS_SUBO_THEME, TRUE
+	applymovement LOCALID_ROSE, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_HowDidILose, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_HehYoureAnIdiot, MSGBOX_AUTOCLOSE
+	hideface 1
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 3
+	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattleNextLeftRakaz
+	goto NorthstarCity_Tournament_3F_SUBOBattleNextRightRakaz
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNextLeftRakaz::
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowLeft
+	waitmovement 0
+	goto NorthstarCity_Tournament_3F_RakazDepart
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNextRightRakaz::
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowRight
+	waitmovement 0
+	goto NorthstarCity_Tournament_3F_RakazDepart
+	end
+
+NorthstarCity_Tournament_3F_RakazDepart::
+	speakername CommonName_Text_Rakaz
+	showface FS_RAKAZ, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_AndYouPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
+	fadescreen 1
+	removeobject LOCALID_SUBO
+	removeobject LOCALID_RAKAZ
+	removeobject 2
+	removeobject 3
+	removeobject 6
+	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
+	applymovement LOCALID_ROSE, WLFU
+	waitmovement 0
+	delay 60
+	fadescreen 0
+	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowUp
+	waitmovement 0
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_PlayerIAmGoingToStay, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_ROSE, WDL2FD
+	waitmovement 0
+	setobjectxyperm LOCALID_ROSE, 1, 10
+	setvar VAR_STORYLINE_STATE, 9
+	release
+	end
+
+NorthstarCity_Tournament_3F_Rose::
+	lock
+	faceplayer
+	speakername CommonName_Text_Rose
+	showface FS_ROSE, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_PlayerIAmGoingToStay, MSGBOX_AUTOCLOSE
+	hideface 1
+	applymovement LOCALID_ROSE, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+NorthstarCity_Tournament_3F_Director::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Tournament_3F_DirectorB3
+	speakername CommonName_Text_Director
+	showface FS_DIRECTOR, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_WelcomeTrainer, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
+NorthstarCity_Tournament_3F_DirectorB3::
+	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F, NorthstarCity_Tournament_3F_DirectorB3D
+	speakername CommonName_Text_Director
+	showface FS_DIRECTOR, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_PlayerPleaseGetTheseThugs, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
+NorthstarCity_Tournament_3F_DirectorB3D::
+	speakername CommonName_Text_Director
+	showface FS_DIRECTOR, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_3F_Text_PlayerItIsGoodToSeeYou, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 NorthstarCity_Tournament_3F_Reiss::
@@ -164,6 +292,40 @@ NorthstarCity_Tournament_3F_Lei::
 	trainerbattle_single TRAINER_SUBO_THUG_LEI, NorthstarTournament3F_Text_LeiIntro, NorthstarTournament3F_Text_LeiDefeated
 	msgbox NorthstarTournament3F_Text_LeiPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+WFL8D2:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+WFL9D2:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+WDL2FD:
+	walk_down
+	walk_left
+	walk_left
+	face_down
+	step_end
 
 NorthstarCity_Tournament_3F_Text_Psychic:
 	.string "Something very sinister is brewing in\n"

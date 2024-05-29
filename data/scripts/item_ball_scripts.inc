@@ -338,8 +338,8 @@ NorthstarCity_EventScript_ItemMaxRepel::
 	finditem ITEM_MAX_REPEL
 	end
 
-PetalburgWoods_EventScript_ItemGreatBall:: @ 829110F
-	finditem ITEM_GREAT_BALL
+NorthstarCity_Tournament_3F_EventScript_Toxic::
+	finditem ITEM_TM06
 	end
 
 PetalburgWoods_EventScript_ItemEther:: @ 829111C

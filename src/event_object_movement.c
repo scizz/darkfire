@@ -8990,10 +8990,8 @@ static void GetGroundEffectFlags_Tracks(struct ObjectEvent *objEvent, u32 *flags
 
     if (MetatileBehavior_IsDeepSand(objEvent->previousMetatileBehavior))
         *flags |= GROUND_EFFECT_FLAG_DEEP_SAND;
-    else if (MetatileBehavior_IsSandOrDeepSand(objEvent->previousMetatileBehavior))
+    else if (MetatileBehavior_IsSandOrDeepSand(objEvent->previousMetatileBehavior) || (MetatileBehavior_IsFootprints(objEvent->previousMetatileBehavior)))
         *flags |= GROUND_EFFECT_FLAG_SAND;
-    else if (MetatileBehavior_IsFootprints(objEvent->previousMetatileBehavior))
-        *flags |= GROUND_EFFECT_FLAG_SNOW;
 }
 
 static void GetGroundEffectFlags_SandHeap(struct ObjectEvent *objEvent, u32 *flags)
@@ -11119,7 +11117,7 @@ u8 MovementAction_FollowingPokemon_Shrink_Step1(struct ObjectEvent *objectEvent,
     if (sprite->data[7] >= 11)
     {
         FreeSpriteOamMatrix(sprite);
-        gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = TRUE;
+        gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = FALSE;
         UnlockPlayerFieldControls();
         objectEvent->invisible = TRUE;
         sprite->data[2]++;

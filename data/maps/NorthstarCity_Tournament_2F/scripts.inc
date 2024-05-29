@@ -26,14 +26,19 @@ NorthstarCity_Tournament_2F_SUBO::
 	lockall
 	faceplayer
 	goto_if_set FLAG_NORTHSTAR_TOURNAMENT_NUGGET, NorthstarCity_Tournament_2F_SUBO_Given
-	msgbox NorthstarCity_Tournament_2F_Text_SUBO, MSGBOX_DEFAULT
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_2F_Text_SUBO, MSGBOX_AUTOCLOSE
+	hideface 1
 	giveitem ITEM_NUGGET, 1
 	setflag FLAG_NORTHSTAR_TOURNAMENT_NUGGET
-	closemessage
 	goto NorthstarCity_Tournament_2F_SUBO_Given
 
 NorthstarCity_Tournament_2F_SUBO_Given::
-	msgbox NorthstarCity_Tournament_2F_Text_SUBO_Given, MSGBOX_DEFAULT
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_2F_Text_SUBO_Given, MSGBOX_AUTOCLOSE
+	hideface 1
 	releaseall
 	end
 	

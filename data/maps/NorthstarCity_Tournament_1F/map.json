@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_NORTHSTAR_TOURNAMENT_ROSE"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LUCY",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_NORTHSTAR_TOURNAMENT_ROSE"
+      "flag": "FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
@@ -207,7 +207,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "1",
+      "var_value": "9",
       "script": "NorthstarCity_Tournament_1F_SUBOEnd"
     },
     {
@@ -216,7 +216,7 @@
       "y": 3,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "1",
+      "var_value": "9",
       "script": "NorthstarCity_Tournament_1F_SUBOEnd"
     }
   ],
