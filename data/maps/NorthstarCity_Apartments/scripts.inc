@@ -13,10 +13,6 @@ NorthstarCity_Apartments_Lass::
 	msgbox NorthstarCity_Apartments_Text_Lass, MSGBOX_NPC
 	end
 
-NorthstarCity_Apartments_Meowth::
-	msgbox NorthstarCity_Apartments_Text_Meowth, MSGBOX_NPC
-	end
-
 NorthstarCity_Apartments_Picnicker::
 	msgbox NorthstarCity_Apartments_Text_Picnicker, MSGBOX_NPC
 	end
@@ -122,6 +118,7 @@ NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade::
 
 NorthstarCity_Apartments_Meowth::
 	lock
+	pokemonfaceplayer 3
 	playmoncry SPECIES_MEOWTH, 0
 	speakername CommonName_Text_Meowth
 	msgbox NorthstarCity_Apartments_Text_Meowth, MSGBOX_AUTOCLOSE
@@ -132,7 +129,7 @@ NorthstarCity_Apartments_Meowth::
 CommonName_Text_Meowth:
 	.string "Meowth$"
 
-NorthstarCity_Apartments_Text_Meowth::
+NorthstarCity_Apartments_Text_Meowth:
 	.string "Meow, meowth!$"
 
 NorthstarCity_Apartments_Text_Little_Boy:
@@ -153,8 +150,6 @@ NorthstarCity_Apartments_Text_Lass:
 	.string "{COLOR}{RED}I love my Meowth.\n"
 	.string "She always keeps me company.\p"
 	.string "I expect to grow old with her!$"
-
-NorthstarCity_Apartments_Text_Meowth:
 
 NorthstarCity_Apartments_Text_Picnicker:
 	.string "{COLOR}{RED}I have a huge fear of bugs…\p"

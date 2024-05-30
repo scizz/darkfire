@@ -13,6 +13,15 @@ AnheimForest_OnTransition:
 	call_if_ge VAR_STORYLINE_STATE, 13, AnheimForest_HideLockedDoor
 	end
 
+AnheimForest_Spinarak::
+	lock
+	faceplayer
+	playmoncry SPECIES_SPINARAK, 0
+	msgbox AnheimForest_Text_Spinarak, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
 AnheimForest_HideSpinarak::
 	removeobject 20
 	removeobject 21
@@ -428,6 +437,10 @@ WU3L3U3:
 	walk_up
 	walk_up
 	step_end
+
+AnheimForest_Text_Spinarak:
+	.string "Wild Spinarak are laying eggs!\n"
+	.string "Best not disturb them$"
 
 AnheimForest_Text_Sign:
 	.string "Anheim Forest\n"

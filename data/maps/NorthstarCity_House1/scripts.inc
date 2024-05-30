@@ -18,7 +18,7 @@ NorthstarCity_House1_Bulbasaur::
 	release
 	end
 
-NorthstarCity_House1_Text_Bulbasaur::
+NorthstarCity_House1_Text_Bulbasaur:
 	.string "Bulba, sauuurr!$"
 
 NorthstarCity_House1_Text_Boy:

@@ -362,8 +362,8 @@ PinleafTown_Text_WellPlayerYouCertainly:
 	.string "Take care and watch your back.\n"
 	.string "We will cross paths again soon!$"
 
-PinleafTown_Text_Natu::
+PinleafTown_Text_Natu:
 	.string "Natuu!$"
 
-PinleafTown_Text_Sudowoodo::
+PinleafTown_Text_Sudowoodo:
 	.string "Sudo, sudoo!$"

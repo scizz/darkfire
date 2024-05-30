@@ -92,7 +92,7 @@ UnionCity_House2_Squirtle::
 CommonName_Text_Squirtle:
 	.string "Squirtle$"
 
-UnionCity_House2_Text_Squirtle::
+UnionCity_House2_Text_Squirtle:
 	.string "Squirtle, squirt!$"
  
 UnionCity_House2_TradeCompleted_Text:
