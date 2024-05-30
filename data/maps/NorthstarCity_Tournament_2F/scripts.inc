@@ -10,7 +10,9 @@ NorthstarCity_Tournament_2F_Girl_2::
 	end
 
 NorthstarCity_Tournament_2F_Camper::
-	msgbox NorthstarCity_Tournament_2F_Text_Camper, MSGBOX_NPC
+	lock
+	msgbox NorthstarCity_Tournament_2F_Text_Camper, MSGBOX_AUTOCLOSE
+	release
 	end
 
 NorthstarCity_Tournament_2F_Receptionist::

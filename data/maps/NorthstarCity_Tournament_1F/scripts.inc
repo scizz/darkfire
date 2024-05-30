@@ -81,6 +81,18 @@ NorthstarCity_Tournament_1F_SUBOEndDialogue::
 	end
 
 NorthstarCity_Tournament_1F_JigglypuffLeft::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkDownFaster
+	addobject LOCALID_JIGGLYPUFF
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	applymovement LOCALID_JIGGLYPUFF, Common_Movement_JumpInPlaceDown
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
@@ -99,8 +111,6 @@ NorthstarCity_Tournament_1F_JigglypuffDown::
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 14
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
@@ -125,7 +135,7 @@ NorthstarCity_Tournament_1F_JigglypuffSleep::
 	hideface 1
 	applymovement LOCALID_SUBO, WD6
 	waitmovement 0
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 14
 	goto_if_eq NorthstarCity_Tournament_1F_JigglypuffLeftTwo
 	goto NorthstarCity_Tournament_1F_JigglypuffDownTwo
@@ -161,7 +171,7 @@ NorthstarCity_Tournament_1F_JigglypuffSleepNow::
 	delay 30
 	waitse
 	addobject LOCALID_ROSE
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 14
 	goto_if_eq NorthstarCity_Tournament_1F_RoseLookUp
 	goto NorthstarCity_Tournament_1F_RoseLookRight
@@ -260,11 +270,15 @@ NorthstarCity_Tournament_1F_Receptionist_2::
 	end
 
 NorthstarCity_Tournament_1F_Man::
-	msgbox NorthstarCity_Tournament_1F_Text_Man, MSGBOX_NPC
+	lock
+	msgbox NorthstarCity_Tournament_1F_Text_Man, MSGBOX_AUTOCLOSE
+	release
 	end
 
 NorthstarCity_Tournament_1F_Little_Girl::
-	msgbox NorthstarCity_Tournament_1F_Text_Little_Girl, MSGBOX_NPC
+	lock
+	msgbox NorthstarCity_Tournament_1F_Text_Little_Girl, MSGBOX_AUTOCLOSE
+	release
 	end
 
 WLU6:
@@ -326,7 +340,12 @@ NorthstarCity_Tournament_1F_Text_AlsoIManaged:
 	.string "one of the SUBO Grunts… Here.$"
 
 NorthstarCity_Tournament_1F_Text_TakeItEasy:
-	.string "{COLOR}{RED}Take it easy, okay?$"
+	.string "{COLOR}{RED}You can use that to wake up sleeping\n"
+	.string "Pokémon, whether they are in battle,\l"
+	.string "or blocking your path.\p"
+	.string "…\n"
+	.string "…\p"
+	.string "Take it easy, okay?$"
 
 NorthstarCity_Tournament_1F_Text_Woman:
 	.string "{COLOR}{RED}I just made it to the city in time for\n"

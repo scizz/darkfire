@@ -41,7 +41,7 @@ NorthstarCity_AfterTournament::
 	waitmovement 0
 	msgbox NorthstarCity_Text_OhTrainer, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_1, 68
+	compare VAR_TEMP_0, 68
 	goto_if_eq NorthstarCity_AfterTournament_Left
 	goto NorthstarCity_AfterTournament_Right
 	end
@@ -63,7 +63,7 @@ NorthstarCity_AfterTournamentEnd::
 	waitmovement 0
 	msgbox Northstar_City_Text_WhatANiceSurprise, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_1, 68
+	compare VAR_TEMP_0, 68
 	goto_if_eq NorthstarCity_AfterTournament_EndLeft
 	goto NorthstarCity_AfterTournament_EndRight
 	end
@@ -760,9 +760,11 @@ Northstar_City_Text_WhatANiceSurprise:
 	.string "Laveria City!\p"
 	.string "…\n"
 	.string "…\p"
-	.string "I must say, I expected ya to be coming\n"
-	.string "out of the tournament after what ya\l"
-	.string "did to Kojiro in Laveria City!\p"
+	.string "I must say, I totally expected you to\n"
+	.string "become Northstar City Champion!\p"
+	.string "Especially after what ya did to Kojiro\n"
+	.string "in Laveria City!\l"
+	.string "Congratulations!\p"
 	.string "Anyway, my boat is over at the docks.\n"
 	.string "I'm sailin' back to Laveria soon.\p"
 	.string "If ya fancy comin' back with me, come\n"
