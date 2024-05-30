@@ -1,8 +1,6 @@
 NorthstarCity_House1_MapScripts::
 	.byte 0
-
-@:NorthstarCity_House1_Bulbasaur::
-
+	
 NorthstarCity_House1_Boy::
 	msgbox NorthstarCity_House1_Text_Boy, MSGBOX_NPC
 	end
@@ -10,6 +8,18 @@ NorthstarCity_House1_Boy::
 NorthstarCity_House1_Woman::
 	msgbox NorthstarCity_House1_Text_Woman, MSGBOX_NPC
 	end
+
+NorthstarCity_House1_Bulbasaur::
+	lock
+	playmoncry SPECIES_BULBASAUR, 0
+	speakername CommonName_Text_Bulbasaur
+	msgbox NorthstarCity_House1_Text_Bulbasaur, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+NorthstarCity_House1_Text_Bulbasaur::
+	.string "Bulba, sauuurr!$"
 
 NorthstarCity_House1_Text_Boy:
 	.string "{COLOR}{BLUE}My older brother is a bully.\p"

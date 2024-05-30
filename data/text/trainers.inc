@@ -109,6 +109,12 @@ CommonName_Text_Beedrill:
 CommonName_Text_Mareep:
 	.string "Mareep$"
 
+CommonName_Text_Sudowoodo:
+	.string "Sudowoodo$"
+
+CommonName_Text_Natu:
+	.string "Natu$"
+
 CommonName_Text_Bulbasaur:
 	.string "Bulbasaur$"
 

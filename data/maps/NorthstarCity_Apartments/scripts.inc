@@ -120,6 +120,21 @@ NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade::
 	release
 	end
 
+NorthstarCity_Apartments_Meowth::
+	lock
+	playmoncry SPECIES_MEOWTH, 0
+	speakername CommonName_Text_Meowth
+	msgbox NorthstarCity_Apartments_Text_Meowth, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+CommonName_Text_Meowth:
+	.string "Meowth$"
+
+NorthstarCity_Apartments_Text_Meowth::
+	.string "Meow, meowth!$"
+
 NorthstarCity_Apartments_Text_Little_Boy:
 	.string "{COLOR}{BLUE}I spend a lot of time studying because\n"
 	.string "it's snowing all the time outside.\p"

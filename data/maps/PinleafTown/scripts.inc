@@ -162,6 +162,24 @@ PinleafTown_Son::
 	msgbox PinleafTown_Text_Son, MSGBOX_NPC
 	end
 
+PinleafTown_Natu::
+	lock
+	playmoncry SPECIES_NATU, 0
+	speakername CommonName_Text_Natu
+	msgbox PinleafTown_Text_Natu, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+PinleafTown_Sudowoodo::
+	lock
+	playmoncry SPECIES_SUDOWOODO, 0
+	speakername CommonName_Text_Sudowoodo
+	msgbox PinleafTown_Text_Sudowoodo, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
 WR3:
 	walk_right
 	walk_right
@@ -344,3 +362,8 @@ PinleafTown_Text_WellPlayerYouCertainly:
 	.string "Take care and watch your back.\n"
 	.string "We will cross paths again soon!$"
 
+PinleafTown_Text_Natu::
+	.string "Natuu!$"
+
+PinleafTown_Text_Sudowoodo::
+	.string "Sudo, sudoo!$"

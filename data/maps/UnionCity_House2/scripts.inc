@@ -78,6 +78,22 @@ UnionCity_House2_TradeCompleted::
 	msgbox UnionCity_House2_TradeCompleted_Text, MSGBOX_DEFAULT
 	release
 	end
+
+UnionCity_House2_Squirtle::
+	lock
+	faceplayer
+	playmoncry SPECIES_SQUIRTLE, 0
+	speakername CommonName_Text_Squirtle
+	msgbox UnionCity_House2_Text_Squirtle, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+CommonName_Text_Squirtle:
+	.string "Squirtle$"
+
+UnionCity_House2_Text_Squirtle::
+	.string "Squirtle, squirt!$"
  
 UnionCity_House2_TradeCompleted_Text:
 	.string "{COLOR}{RED}Hey!\n"
