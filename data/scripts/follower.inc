@@ -67,7 +67,9 @@ EventScript_FollowerLovesYou::
 	applymovement OBJ_EVENT_ID_FOLLOWER, ContestHall_Movement_Heart
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitmoncry
+	showborderlesspic 20, 8
 	msgbox gText_FollowerLovesYou, MSGBOX_DEFAULT
+	hidemonpic
 	return
 
 @ Message address must be loaded into bank 0
@@ -76,9 +78,11 @@ EventScript_FollowerGeneric:: @ similar to Std_MsgboxDefault
 	releaseall
 EventScript_FollowerGenericSkipFace:
 	waitfieldeffect FLDEFF_EMOTE
+	showborderlesspic 20, 8
 	message 0x0
 	waitmessage
 	waitbuttonpress
+	hidemonpic
 	pokemonfaceplayer
 	releaseall
 	return
@@ -87,9 +91,11 @@ EventScript_FollowerJump::
 	applymovement OBJ_EVENT_ID_FOLLOWER, FollowerSplashMovement
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitfieldeffect FLDEFF_EMOTE
+	showborderlesspic 20, 8
 	message 0x0
 	waitmessage
 	waitbuttonpress
+	hidemonpic
 	pokemonfaceplayer
 	releaseall
 	return

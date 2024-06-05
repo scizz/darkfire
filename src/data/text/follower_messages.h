@@ -122,7 +122,7 @@ const struct FollowerMsgInfo gFollowerSadMessages[] = {
 // Unconditional upset messages
 static const u8 sUpsetMsg00[] = _("{STR_VAR_1} seems unhappy somehow…");
 static const u8 sUpsetMsg01[] = _("{STR_VAR_1} is making an unhappy\nface.");
-static const u8 sUpsetMsg02[] = _("…Your Pokémon seems a little\ncold.");
+static const u8 sUpsetMsg02[] = _("Your Pokémon seems a little impatient.");
 // Conditional messages, index 3
 static const u8 sUpsetMsg03[] = _("{STR_VAR_1} is taking shelter in the\ngrass from the rain.");
 
