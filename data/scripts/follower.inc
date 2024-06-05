@@ -27,6 +27,14 @@ callfunc ScrFunc_emote
 
 EventScript_Follower::
 	lockall
+	compare VAR_FACING, DIR_NORTH
+	call_if_eq FollowerFaceSouth
+	compare VAR_FACING, DIR_SOUTH
+	call_if_eq FollowerFaceNorth
+	compare VAR_FACING, DIR_WEST
+	call_if_eq FollowerFaceEast
+	compare VAR_FACING, DIR_EAST
+	call_if_eq FollowerFaceWest
 	bufferlivemonnickname 0
 	playfirstmoncry
 	callfunc ScrFunc_getfolloweraction
@@ -34,6 +42,26 @@ EventScript_FollowerEnd::
 	waitfieldeffect FLDEFF_EMOTE
 	releaseall
 	end
+
+FollowerFaceNorth::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
+	waitmovement 0
+	return
+
+FollowerFaceSouth::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceDown
+	waitmovement 0
+	return
+
+FollowerFaceEast::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
+	waitmovement 0
+	return
+
+FollowerFaceWest::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
+	waitmovement 0
+	return
 
 EventScript_FollowerLovesYou::
 	applymovement OBJ_EVENT_ID_FOLLOWER, ContestHall_Movement_Heart
@@ -45,21 +73,25 @@ EventScript_FollowerLovesYou::
 @ Message address must be loaded into bank 0
 EventScript_FollowerGeneric:: @ similar to Std_MsgboxDefault
 	pokemonfaceplayer
+	releaseall
 EventScript_FollowerGenericSkipFace:
 	waitfieldeffect FLDEFF_EMOTE
 	message 0x0
 	waitmessage
 	waitbuttonpress
+	pokemonfaceplayer
+	releaseall
 	return
 
 EventScript_FollowerJump::
-	pokemonfaceplayer
 	applymovement OBJ_EVENT_ID_FOLLOWER, FollowerSplashMovement
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitfieldeffect FLDEFF_EMOTE
 	message 0x0
 	waitmessage
 	waitbuttonpress
+	pokemonfaceplayer
+	releaseall
 	return
 
 EnterPokeballMovement:
@@ -69,44 +101,43 @@ EnterPokeballMovement:
 @ Movement scripts below, movements are defined in movement.inc
 
 FollowerSplashMovement:
+	follower_face_down
 	jump_in_place_down
 	delay_4
 	jump_in_place_down
-	pokemonfaceplayer
 	step_end
 
 FollowerShiverVerticalMovement:
 	lock_facing_direction
-	slide_left
-	slide_right
-	slide_right
-	slide_left
+	follower_face_down
+	jump_in_place_down
 	unlock_facing_direction
 	step_end
 
 FollowerShiverHorizontalMovement:
 	lock_facing_direction
-	slide_up
-	slide_down
-	slide_down
-	slide_up
+	follower_face_down
+	jump_in_place_down
 	unlock_facing_direction
 	step_end
 
 FollowerNostalgiaMovement:
 	follower_face_right
 	lock_facing_direction
+	follower_face_down
 	jump_in_place_down
 	jump_in_place_down
 	jump_in_place_down
 	unlock_facing_direction
 	pokemonfaceplayer
+	follower_face_down
 	lock_facing_direction
 	jump_in_place_down
 	unlock_facing_direction
 	step_end
 
 FollowerSkippingMovement:
+	follower_face_down
 	lock_facing_direction
 	jump_in_place_down
 	delay_4
@@ -115,32 +146,40 @@ FollowerSkippingMovement:
 	step_end
 
 FollowerJumpOnPlayerNorth:
+	follower_face_up
 	jump_up
 	delay_4
+	follower_face_down
 	lock_facing_direction
 	walk_fast_down
 	unlock_facing_direction
 	step_end
 
 FollowerJumpOnPlayerSouth:
+	follower_face_down
 	jump_down
 	delay_4
+	follower_face_up
 	lock_facing_direction
 	walk_fast_up
 	unlock_facing_direction
 	step_end
 
 FollowerJumpOnPlayerEast:
+	follower_face_right
 	jump_right
 	delay_4
+	follower_face_left
 	lock_facing_direction
 	walk_fast_left
 	unlock_facing_direction
 	step_end
 
 FollowerJumpOnPlayerWest:
+	follower_face_left
 	jump_left
 	delay_4
+	follower_face_right
 	lock_facing_direction
 	walk_fast_right
 	unlock_facing_direction
@@ -148,126 +187,149 @@ FollowerJumpOnPlayerWest:
 
 FollowerCuddlingNorth:
 	follower_face_left
+	follower_face_up
 	lock_facing_direction
 	walk_up
+	follower_face_left
 	walk_in_place_left
 	walk_in_place_left
 	unlock_facing_direction
+	follower_face_down
 	walk_down
-	pokemonfaceplayer
 	step_end
 
 FollowerCuddlingSouth:
 	follower_face_right
+	follower_face_down
 	lock_facing_direction
 	walk_down
+	follower_face_right
 	walk_in_place_right
 	walk_in_place_right
 	unlock_facing_direction
+	follower_face_up
 	walk_up
-	pokemonfaceplayer
 	step_end
 
 FollowerCuddlingEast:
 	follower_face_down
+	follower_face_right
 	lock_facing_direction
 	walk_right
+	follower_face_down
 	walk_in_place_down
 	walk_in_place_down
 	unlock_facing_direction
+	follower_face_left
 	walk_left
-	pokemonfaceplayer
 	step_end
 
 FollowerCuddlingWest:
 	follower_face_down
+	follower_face_left
 	lock_facing_direction
 	walk_left
+	follower_face_down
 	walk_in_place_down
 	walk_in_place_down
 	unlock_facing_direction
+	follower_face_right
 	walk_right
-	pokemonfaceplayer
 	step_end
 
 FollowerGetCloserNorth:
+	follower_face_up
 	walk_up
 	delay_16
+	follower_face_down
 	lock_facing_direction
 	walk_down
 	unlock_facing_direction
 	step_end
 
 FollowerGetCloserSouth:
+	follower_face_down
 	walk_down
 	delay_16
+	follower_face_up
 	lock_facing_direction
 	walk_up
 	unlock_facing_direction
 	step_end
 
 FollowerGetCloserEast:
+	follower_face_right
 	walk_right
 	delay_16
+	follower_face_left
 	lock_facing_direction
 	walk_left
 	unlock_facing_direction
 	step_end
 
 FollowerGetCloserWest:
+	follower_face_left
 	walk_left
 	delay_16
+	follower_face_right
 	lock_facing_direction
 	walk_right
 	unlock_facing_direction
 	step_end
 
 FollowerPokeNorth:
+	follower_face_up
 	walk_faster_up
 	delay_8
-	lock_facing_direction
+	follower_face_down
 	walk_faster_down
 	delay_4
+	follower_face_up
 	walk_faster_up
 	delay_4
+	follower_face_down
 	walk_faster_down
-	unlock_facing_direction
 	step_end
 
 FollowerPokeSouth:
 	walk_faster_down
 	delay_8
-	lock_facing_direction
+	follower_face_up
 	walk_faster_up
 	delay_4
+	follower_face_down
 	walk_faster_down
 	delay_4
+	follower_face_up
 	walk_faster_up
-	unlock_facing_direction
 	step_end
 
 FollowerPokeEast:
+	follower_face_right
 	walk_faster_right
 	delay_8
-	lock_facing_direction
+	follower_face_left
 	walk_faster_left
 	delay_4
+	follower_face_right
 	walk_faster_right
 	delay_4
+	follower_face_left
 	walk_faster_left
-	unlock_facing_direction
 	step_end
 
 FollowerPokeWest:
+	follower_face_left
 	walk_faster_left
 	delay_8
-	lock_facing_direction
+	follower_face_right
 	walk_faster_right
 	delay_4
+	follower_face_left
 	walk_faster_left
 	delay_4
+	follower_face_right
 	walk_faster_right
-	unlock_facing_direction
 	step_end
 
 FollowerLookAround:
@@ -293,49 +355,51 @@ FollowerLookAway:
 
 FollowerLookAwayBark:
 	follower_face_up
-	lock_facing_direction
+	follower_face_down
 	jump_in_place_down
 	jump_in_place_down
-	unlock_facing_direction
 	step_end
 
 FollowerLookAwayPokeG:
 	follower_face_up
-	lock_facing_direction
+	follower_face_down
 	walk_in_place_down
 	walk_in_place_down
 	walk_in_place_down
-	unlock_facing_direction
 	step_end
 
 FollowerPokeGround:
-	lock_facing_direction
+	follower_face_down
 	walk_in_place_down
 	walk_in_place_down
 	walk_in_place_down
-	unlock_facing_direction
 	step_end
 
 FollowerStartled:
 	follower_face_up
-	lock_facing_direction
+	follower_face_down
 	jump_in_place_down
-	unlock_facing_direction
-	pokemonfaceplayer
 	step_end
 
 FollowerHopFast:
+	follower_face_up
 	jump_in_place_up
+	follower_face_down
 	jump_in_place_down
+	follower_face_left
 	jump_in_place_left
+	follower_face_right
 	jump_in_place_right
-	pokemonfaceplayer
 	step_end
 
 FollowerDizzy:
+	follower_face_left
 	walk_in_place_left
+	follower_face_right
 	walk_in_place_fast_right
+	follower_face_up
 	walk_in_place_slow_up
+	follower_face_down
 	walk_in_place_fast_down
 	delay_4
 	follower_face_up
@@ -358,31 +422,30 @@ FollowerLookAroundScared:
 	delay_16
 	follower_face_right
 	delay_16
-	pokemonfaceplayer
 	step_end
 
 FollowerDance:
-	lock_facing_direction
+	follower_face_up
 	jump_in_place_up
-	unlock_facing_direction
-	walk_in_place_fast_up
-	walk_in_place_fast_left
-	walk_in_place_fast_down
-	walk_in_place_fast_right
-	walk_in_place_fast_up
-	walk_in_place_fast_left
-	walk_in_place_fast_down
-	walk_in_place_fast_right
+	follower_face_up
+	follower_face_left
+	follower_face_down
+	follower_face_right
+	follower_face_up
+	follower_face_left
+	follower_face_down
+	follower_face_right
+	follower_face_up
 	jump_in_place_up
+	follower_face_down
 	jump_in_place_down
+	follower_face_up
 	jump_in_place_up
-	pokemonfaceplayer
 	step_end
 
 @ Movement scripts
 
 EventScript_FollowerIsShivering::
-	pokemonfaceplayer
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq ShiverVertical
 	compare VAR_FACING, DIR_SOUTH
@@ -409,7 +472,6 @@ EventScript_FollowerNostalgia::
 	goto EventScript_FollowerGeneric
 
 EventScript_FollowerHopping::
-	pokemonfaceplayer
 	applymovement OBJ_EVENT_ID_FOLLOWER, FollowerSkippingMovement
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto EventScript_FollowerGeneric
@@ -435,7 +497,6 @@ JumpOnW:
 	return
 
 EventScript_FollowerJumpOnPlayer::
-	pokemonfaceplayer
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq JumpOnS
 	compare VAR_FACING, DIR_SOUTH
@@ -467,7 +528,6 @@ CuddleW:
 	return
 
 EventScript_FollowerCuddling:: @ similar to Std_MsgboxDefault
-	pokemonfaceplayer
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq CuddleS
 	compare VAR_FACING, DIR_SOUTH
@@ -507,7 +567,6 @@ ShCuddleW:
 	return
 
 EventScript_FollowerShiverCuddling::
-	pokemonfaceplayer
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq ShCuddleS
 	compare VAR_FACING, DIR_SOUTH
@@ -539,7 +598,6 @@ CreepCloserW:
 	return
 
 EventScript_FollowerGetCloser::
-	pokemonfaceplayer
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq CreepCloserS
 	compare VAR_FACING, DIR_SOUTH
@@ -571,7 +629,6 @@ PokePlayerW:
 	return
 
 EventScript_FollowerPokingPlayer::
-	pokemonfaceplayer
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq PokePlayerS
 	compare VAR_FACING, DIR_SOUTH
@@ -603,7 +660,6 @@ EventScript_FollowerLookAwayPoke::
 	goto EventScript_FollowerGenericSkipFace
 
 EventScript_FollowerPokeGround::
-	pokemonfaceplayer
 	applymovement OBJ_EVENT_ID_FOLLOWER, FollowerPokeGround
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto EventScript_FollowerGeneric
@@ -629,13 +685,12 @@ EventScript_FollowerLookAroundScared::
 	goto EventScript_FollowerGeneric
 
 EventScript_FollowerDance::
-	pokemonfaceplayer
 	applymovement OBJ_EVENT_ID_FOLLOWER, FollowerDance
 	waitmovement 0
 	goto EventScript_FollowerGenericSkipFace
 
 EventScript_FollowerFaceUp::
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceUp
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto EventScript_FollowerGenericSkipFace
 
@@ -648,16 +703,16 @@ EventScript_FollowerFaceResult:: @ Face towards direction in VAR_RESULT
 	goto EventScript_FollowerGeneric
 
 EventScript_FollowerFaceDown:
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceDown
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto EventScript_FollowerGenericSkipFace
 
 EventScript_FollowerFaceLeft:
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto EventScript_FollowerGenericSkipFace
 
 EventScript_FollowerFaceRight:
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto EventScript_FollowerGenericSkipFace

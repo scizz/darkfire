@@ -293,8 +293,7 @@ const struct FollowerMsgInfo gFollowerMusicMessages[] = {
     {sMusicMsg14}
 };
 
-
-static const u8 sPoisonedMsg00[] = _("{STR_VAR_1} is shivering with the\neffects of being poisoned.");
+static const u8 sPoisonedMsg00[] = _("{STR_VAR_1} is struggling with the\neffects of being poisoned.");
 
 const struct FollowerMsgInfo gFollowerPoisonedMessages[] = {
     {sPoisonedMsg00, EventScript_FollowerIsShivering},
