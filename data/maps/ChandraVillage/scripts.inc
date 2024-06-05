@@ -171,21 +171,15 @@ ChandraVillage_GiveEevee::
 
 ChandraVillage_Tyler_Debug::
 	lockall
-	givemon SPECIES_UMBREON, 35, ITEM_NONE
+	givemon SPECIES_PIKACHU, 35, ITEM_NONE
 	givemon SPECIES_ESPEON, 35, ITEM_NONE
-	givemon SPECIES_VAPOREON, 35, ITEM_NONE
-	givemon SPECIES_WAILORD, 35, ITEM_NONE
-	givemon SPECIES_RALTS, 35, ITEM_NONE
-	givemon SPECIES_DRAGONITE, 35, ITEM_NONE
-	giveitem ITEM_MACH_BIKE, 1
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
-	addobject 24
-	setfollower 24, 0x7E
+	addobject 9
+	setfollower 9, 0x0
 	updatefollowerpokemongraphic
-	showfollower
 	releaseall
 	end
 

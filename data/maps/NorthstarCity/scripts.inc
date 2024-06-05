@@ -392,7 +392,7 @@ NorthstarCity_Storyline_SUBO_BattleSetUp::
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FollowerFaceLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
 	speakername2 CommonName_Text_GovOfficial
 	showface FS_OFFICIAL, FSE_NORMAL, 0, 0

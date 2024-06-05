@@ -3977,7 +3977,8 @@ void UpdateFollowerPokemonGraphic(void)
             RemoveObjectEvent(&gObjectEvents[gSaveBlock2Ptr->follower.objId]);
 
             clone = *GetObjectEventTemplateByLocalIdAndMap(gSaveBlock2Ptr->follower.map.id, gSaveBlock2Ptr->follower.map.number, gSaveBlock2Ptr->follower.map.group);
-            clone.graphicsId = gSaveBlock2Ptr->follower.graphicsId;;
+            clone.graphicsId = gSaveBlock2Ptr->follower.graphicsId;
+            clone.localId = 254;
             gSaveBlock2Ptr->follower.objId = TrySpawnObjectEventTemplate(&clone, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, clone.x, clone.y);
 
             follower = &gObjectEvents[gSaveBlock2Ptr->follower.objId];

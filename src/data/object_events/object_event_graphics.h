@@ -1543,3 +1543,4 @@ const u32 gObjectEventPic_TreeckoOW[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_MudkipOW[] = INCBIN_U32("graphics/object_events/pics/pokemon/ow/mudkip.4bpp");
 const u32 gObjectEventPic_TorchicOW[] = INCBIN_U32("graphics/object_events/pics/pokemon/ow/torchic.4bpp");
 const u16 gObjectEventPal_President[] = INCBIN_U16("graphics/object_events/palettes/president.gbapal");
+const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
