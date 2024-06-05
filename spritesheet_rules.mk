@@ -2285,6 +2285,9 @@ $(OBJEVENTGFXDIR)/misc/traffic_lights.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/trash.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(MISCGFXDIR)/emotes.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
 $(OBJEVENTGFXDIR)/misc/northstar_boat.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 

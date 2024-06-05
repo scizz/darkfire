@@ -15,6 +15,7 @@
 #include "field_effect.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
+#include "event_scripts.h"
 #include "field_message_box.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
@@ -141,6 +142,12 @@ bool8 ScrCmd_callnative(struct ScriptContext *ctx)
 
     func();
     return FALSE;
+}
+
+bool8 ScrCmd_callfunc(struct ScriptContext *ctx)
+{
+    u32 func = ScriptReadWord(ctx);
+    return ((ScrCmdFunc) func)(ctx);
 }
 
 bool8 ScrCmd_waitstate(struct ScriptContext *ctx)
@@ -1595,6 +1602,15 @@ bool8 ScrCmd_bufferleadmonspeciesname(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrFunc_bufferlivemonnickname(struct ScriptContext *ctx)
+{
+    u8 stringVarIndex = ScriptReadByte(ctx);
+
+    GetMonData(GetFirstLiveMon(), MON_DATA_NICKNAME, sScriptStringVars[stringVarIndex]);
+    StringGet_Nickname(sScriptStringVars[stringVarIndex]);
+    return FALSE;
+}
+
 bool8 ScrCmd_bufferpartymonnick(struct ScriptContext *ctx)
 {
     u8 stringVarIndex = ScriptReadByte(ctx);
@@ -2069,6 +2085,13 @@ bool8 ScrCmd_playmoncry(struct ScriptContext *ctx)
     u16 mode = VarGet(ScriptReadHalfword(ctx));
 
     PlayCry_Script(species, mode);
+    return FALSE;
+}
+
+bool8 ScrFunc_playfirstmoncry(struct ScriptContext *ctx)
+{
+    u16 species = GetMonData(GetFirstLiveMon(), MON_DATA_SPECIES);
+    PlayCry_Script(species, 0);
     return FALSE;
 }
 
