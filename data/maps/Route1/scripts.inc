@@ -105,10 +105,9 @@ Route1_WestExitPrevention::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Tyler
@@ -136,10 +135,9 @@ Route1_PidgeyIntro::
 	delay 10
 	applymovement LOCALID_TYLER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_TYLER, Common_Movement_QuestionMark
+	emote LOCALID_TYLER 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 35
 	goto_if_eq Route1_PidgeyIntro_Left
@@ -170,10 +168,9 @@ Route1_PidgeyIntro_Right::
 
 Route1_PidgeyMain::
 	delay 30
-	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	delay 10
 	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
 	waitmovement 0
@@ -187,10 +184,9 @@ Route1_PidgeyMain::
 	applymovement LOCALID_PIDGEY, Levitate
 	waitmovement 0
 	delay 30
-	applymovement LOCALID_PIDGEY, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername Speaker_Text_Pidgey
 	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
 	closemessage
@@ -238,10 +234,9 @@ Route1_PidgeyBattle::
 	waitse
 	waitmovement 0
 	setflag FLAG_PREVENT_BATTLE_FLEE
-	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	emote LOCALID_PIDGEY 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_FacePlayer
 	waitmovement 0
 	speakername CommonName_Text_Tyler
@@ -310,7 +305,7 @@ Route1_Jump_Event::
 	lock
 	faceplayer
 	goto_if_set FLAG_ROUTE_1_POND_JUMP, Route1_Jump_Event_Complete
-	msgbox Route1_Jump_Text, MSGBOX_NPC
+	msgbox Route1_Jump_Text, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
@@ -319,16 +314,15 @@ Route1_Jump_Event::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Route1_Jump_Text_2, MSGBOX_NPC
+	msgbox Route1_Jump_Text_2, MSGBOX_AUTOCLOSE
 	applymovement 2, WalkRightFaceDown
 	waitmovement 0
 	applymovement 2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	applymovement 2, Common_Movement_ExclamationMark
+	emote 2 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
-	msgbox Route1_Jump_Text_3, MSGBOX_NPC
+	msgbox Route1_Jump_Text_3, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
@@ -346,7 +340,7 @@ Route1_Jump_Event::
 	waitmovement 0
 	applymovement 2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	msgbox Route1_Jump_Text_4, MSGBOX_NPC
+	msgbox Route1_Jump_Text_4, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, StepLeftFaceRight
 	applymovement OBJ_EVENT_ID_FOLLOWER, StepLeftFollowerFaceRight
 	applymovement 2, StepLeftUpFaceDown
@@ -356,7 +350,7 @@ Route1_Jump_Event::
 	end
 
 Route1_Jump_Event_Complete::
-	msgbox Route1_Jump_Text_5, MSGBOX_NPC
+	msgbox Route1_Jump_Text_5, MSGBOX_AUTOCLOSE
 	end
 
 Route1_Old_Man::
