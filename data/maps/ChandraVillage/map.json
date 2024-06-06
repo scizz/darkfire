@@ -837,9 +837,9 @@
       "flag": "FLAG_CHANDRA_VILLAGE_VAR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_UXIE",
-      "x": 23,
-      "y": 34,
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 0,
+      "y": 49,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 0,
@@ -854,7 +854,7 @@
       "x": 39,
       "y": 7,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",

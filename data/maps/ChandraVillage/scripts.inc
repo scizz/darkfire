@@ -157,6 +157,7 @@ ChandraVillage_LabDone::
 	addobject 64
 	setfollower 64, 0x0
 	updatefollowerpokemongraphic
+	hidefollower
 	setvar VAR_STORYLINE_STATE, 8
 	releaseall
 	end
