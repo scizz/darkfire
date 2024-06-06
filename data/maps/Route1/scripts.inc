@@ -348,7 +348,7 @@ Route1_Jump_Event::
 	waitmovement 0
 	msgbox Route1_Jump_Text_4, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, StepLeftFaceRight
-	applymovement OBJ_EVENT_ID_FOLLOWER, StepLeftFaceRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, StepLeftFollowerFaceRight
 	applymovement 2, StepLeftUpFaceDown
 	waitmovement 0
 	setflag FLAG_ROUTE_1_POND_JUMP
@@ -816,4 +816,9 @@ StepLeftUpFaceDown:
 	walk_left
 	walk_up
 	face_down
+	step_end
+
+StepLeftFollowerFaceRight:
+	walk_left
+	follower_face_right
 	step_end

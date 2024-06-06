@@ -12,6 +12,9 @@ ChandraVillage_OnTransition:
 	end
 
 ChandraVillage_SetFlag::
+	removeobject 64
+	setflag FLAG_CHANDRA_VILLAGE_VAR
+	setflag FLAG_UNUSED_0x020
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	return
 
@@ -151,6 +154,9 @@ ChandraVillage_LabDone::
 	waitdooranim
 	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF
 	setflag FLAG_SYS_POKEDEX_GET
+	addobject 64
+	setfollower 64, 0x0
+	updatefollowerpokemongraphic
 	setvar VAR_STORYLINE_STATE, 8
 	releaseall
 	end

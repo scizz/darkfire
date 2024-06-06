@@ -2691,7 +2691,7 @@ struct ObjectEvent *GetFollowerObject(void)
     u32 i;
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
-        if (gObjectEvents[i].localId == 9 && gObjectEvents[i].active)
+        if (gObjectEvents[i].localId == 64 && gObjectEvents[i].active)
             return &gObjectEvents[i];
     }
     return NULL;

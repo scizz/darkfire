@@ -86,6 +86,8 @@ static const u8 sNeutralMsg10[] = _("{STR_VAR_1} is very eager.");
 static const u8 sNeutralMsg11[] = _("{STR_VAR_1} is staring intently into\nthe distance.");
 static const u8 sNeutralMsg12[] = _("{STR_VAR_1} is on the lookout!");
 static const u8 sNeutralMsg13[] = _("{STR_VAR_1} looked off into the\ndistance and barked!");
+static const u8 sNeutralMsg14[] = _("{STR_VAR_1} stands by your side,\nappearing content.");
+static const u8 sNeutralMsg15[] = _("{STR_VAR_1} gives you a brief nod,\nacknowledging your presence.");
 
 const struct FollowerMsgInfo gFollowerNeutralMessages[] = {
     {sNeutralMsg00, EventScript_FollowerPokeGround},
@@ -100,6 +102,7 @@ const struct FollowerMsgInfo gFollowerNeutralMessages[] = {
     {sNeutralMsg11, EventScript_FollowerLookAway},
     {sNeutralMsg12},
     {sNeutralMsg13, EventScript_FollowerLookAwayBark},
+    {sNeutralMsg14}, {sNeutralMsg15},
 };
 
 // Unconditional sad messages

@@ -1264,8 +1264,8 @@
 #define FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO                         0x49D // Darkfire Flag
 #define FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F                           0x4BB // Darkfire Flag
 #define FLAG_NORTHSTAR_TOURNAMENT_ROSE_1F                           0x4BC // Darkfire Flag
+#define FLAG_CHANDRA_VILLAGE_VAR                                    0x4BD // Darkfire Flag
 
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
 #define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
