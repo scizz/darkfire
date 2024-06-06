@@ -474,10 +474,13 @@ ChandraVillage_Lab_Exit::
 	end
 
 ChandraVillage_Lab_Prof::
+	lock
+	faceplayer
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Lab_Text_Prof, MSGBOX_AUTOCLOSE
 	hideface 1
+	release
 	end
 
 WU6:
