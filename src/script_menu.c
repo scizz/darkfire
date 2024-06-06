@@ -722,7 +722,7 @@ bool8 ScriptMenu_ShowBorderlessPic(u8 x, u8 y)
         gSprites[spriteId].oam.priority = 1;
         ScheduleBgCopyTilemapToVram(0);
         
-        PlayCryInternal(species, 0, CRY_VOLUME, CRY_PRIORITY_NORMAL, CRY_MODE_NORMAL);
+        //PlayCryInternal(species, 0, CRY_VOLUME, CRY_PRIORITY_NORMAL, CRY_MODE_NORMAL);
         return TRUE;
     }
 }
