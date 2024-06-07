@@ -1844,7 +1844,7 @@ const u16 gTilesetPalettes_Zorya[][16] =
 
 const u32 gTilesetTiles_Zorya[] = INCBIN_U32("data/tilesets/secondary/zorya/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_gTileset_Darkspace1[][16] =
+const u16 gTilesetPalettes_Darkspace1[][16] =
 {
     INCBIN_U16("data/tilesets/primary/darkspace_1/palettes/00.gbapal"),
     INCBIN_U16("data/tilesets/primary/darkspace_1/palettes/01.gbapal"),
@@ -1861,9 +1861,9 @@ const u16 gTilesetPalettes_gTileset_Darkspace1[][16] =
     INCBIN_U16("data/tilesets/primary/darkspace_1/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_gTileset_Darkspace1[] = INCBIN_U32("data/tilesets/primary/darkspace_1/tiles.4bpp.lz");
+const u32 gTilesetTiles_Darkspace1[] = INCBIN_U32("data/tilesets/primary/darkspace_1/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_gTileset_Darkspace2[][16] =
+const u16 gTilesetPalettes_Darkspace2[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/darkspace_2/palettes/00.gbapal"),
     INCBIN_U16("data/tilesets/secondary/darkspace_2/palettes/01.gbapal"),
@@ -1880,4 +1880,4 @@ const u16 gTilesetPalettes_gTileset_Darkspace2[][16] =
     INCBIN_U16("data/tilesets/secondary/darkspace_2/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_gTileset_Darkspace2[] = INCBIN_U32("data/tilesets/secondary/darkspace_2/tiles.4bpp.lz");
+const u32 gTilesetTiles_Darkspace2[] = INCBIN_U32("data/tilesets/secondary/darkspace_2/tiles.4bpp.lz");

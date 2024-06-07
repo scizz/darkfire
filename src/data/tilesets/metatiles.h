@@ -241,8 +241,8 @@ const u16 gMetatileAttributes_Grotto1[] = INCBIN_U16("data/tilesets/secondary/gr
 const u16 gMetatiles_Zorya[] = INCBIN_U16("data/tilesets/secondary/zorya/metatiles.bin");
 const u16 gMetatileAttributes_Zorya[] = INCBIN_U16("data/tilesets/secondary/zorya/metatile_attributes.bin");
 
-const u16 gMetatiles_gTileset_Darkspace1[] = INCBIN_U16("data/tilesets/primary/darkspace_1/metatiles.bin");
-const u16 gMetatileAttributes_gTileset_Darkspace1[] = INCBIN_U16("data/tilesets/primary/darkspace_1/metatile_attributes.bin");
+const u16 gMetatiles_Darkspace1[] = INCBIN_U16("data/tilesets/primary/darkspace_1/metatiles.bin");
+const u16 gMetatileAttributes_Darkspace1[] = INCBIN_U16("data/tilesets/primary/darkspace_1/metatile_attributes.bin");
 
-const u16 gMetatiles_gTileset_Darkspace2[] = INCBIN_U16("data/tilesets/secondary/darkspace_2/metatiles.bin");
-const u16 gMetatileAttributes_gTileset_Darkspace2[] = INCBIN_U16("data/tilesets/secondary/darkspace_2/metatile_attributes.bin");
+const u16 gMetatiles_Darkspace2[] = INCBIN_U16("data/tilesets/secondary/darkspace_2/metatiles.bin");
+const u16 gMetatileAttributes_Darkspace2[] = INCBIN_U16("data/tilesets/secondary/darkspace_2/metatile_attributes.bin");

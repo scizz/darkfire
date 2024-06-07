@@ -947,24 +947,24 @@ const struct Tileset gTileset_Zorya =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_gTileset_Darkspace1 =
+const struct Tileset gTileset_Darkspace1 =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_gTileset_Darkspace1,
-    .palettes = gTilesetPalettes_gTileset_Darkspace1,
-    .metatiles = gMetatiles_gTileset_Darkspace1,
-    .metatileAttributes = gMetatileAttributes_gTileset_Darkspace1,
+    .tiles = gTilesetTiles_Darkspace1,
+    .palettes = gTilesetPalettes_Darkspace1,
+    .metatiles = gMetatiles_Darkspace1,
+    .metatileAttributes = gMetatileAttributes_Darkspace1,
     .callback = NULL,
 };
 
-const struct Tileset gTileset_gTileset_Darkspace2 =
+const struct Tileset gTileset_Darkspace2 =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_gTileset_Darkspace2,
-    .palettes = gTilesetPalettes_gTileset_Darkspace2,
-    .metatiles = gMetatiles_gTileset_Darkspace2,
-    .metatileAttributes = gMetatileAttributes_gTileset_Darkspace2,
+    .tiles = gTilesetTiles_Darkspace2,
+    .palettes = gTilesetPalettes_Darkspace2,
+    .metatiles = gMetatiles_Darkspace2,
+    .metatileAttributes = gMetatileAttributes_Darkspace2,
     .callback = NULL,
 };
