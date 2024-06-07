@@ -45,7 +45,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement 9, WalkDownFaceLeft
 	waitmovement 0
 	msgbox NightmareHall_Text_DraculOne, MSGBOX_AUTOCLOSE
-	applymovement 8, Common_Movement_QuestionMark
+	applymovement 8, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -208,7 +208,7 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	delay 10
 	msgbox NightmareHall_Text_DraculTwo, MSGBOX_AUTOCLOSE
-	applymovement 8, Common_Movement_QuestionMark
+	applymovement 8, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -232,7 +232,7 @@ NightmareHall_CutSceneTrigger::
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement 2, Common_Movement_QuestionMark
+	applymovement 2, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitse
 	waitmovement 0
