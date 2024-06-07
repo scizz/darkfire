@@ -283,13 +283,13 @@ AnheimForest_Tyler_Encounter::
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 21
 	goto_if_eq AnheimForest_Tyler_Encounter_Up
-	applymovement LOCALID_TYLER, WR4UR
+	applymovement LOCALID_TYLER, WR5
 	waitmovement 0
 	goto AnheimForest_Tyler_Encounter_Main
 	end
 
 AnheimForest_Tyler_Encounter_Up::
-	applymovement LOCALID_TYLER, WR5
+	applymovement LOCALID_TYLER, WR4UR
 	waitmovement 0
 	goto AnheimForest_Tyler_Encounter_Main
 	end

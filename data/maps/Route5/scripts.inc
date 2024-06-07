@@ -11,7 +11,7 @@ Route5_SUBO::
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	delay 10
-	speakername SpeakerName_Text_SuboGrunt
+	speakername2 SpeakerName_Text_SuboGrunt
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox Route5_Text_LookGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -32,7 +32,7 @@ Route5_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox Route5_Text_HeyYou, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -68,7 +68,7 @@ Route5_SUBO_Left::
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_IThinkWeAreGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -87,7 +87,7 @@ Route5_SUBO_Left::
 	applymovement LOCALID_SUBO_2, Common_Movement_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_NoDontWorryGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -95,7 +95,7 @@ Route5_SUBO_Left::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_YouThinkYouGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -106,7 +106,7 @@ Route5_SUBO_Left::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_ThisOneIsStrongGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -144,14 +144,14 @@ Route5_SUBO_Left::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_HeyGeorgeWait, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_YouWontGetAway, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -174,7 +174,7 @@ Route5_SUBO_Right::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	playbgm MUS_SUBO_THEME, TRUE
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_YoureATrainer, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -183,7 +183,7 @@ Route5_SUBO_Right::
 	delay 30
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_WhatsTheMatter, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -201,7 +201,7 @@ Route5_SUBO_Right::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_IsThatTruePaul, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -244,13 +244,13 @@ Route5_SUBO_Right::
 	msgbox Route5_Text_ThisOneIsStrongGeorge, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 10
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_GrrGetTheHeckPaul, MSGBOX_AUTOCLOSE
 	hideface 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_IllShowYouPaul, MSGBOX_AUTOCLOSE
 	hideface 0
@@ -269,14 +269,14 @@ Route5_SUBO_Right::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_HeyGeorgeWait, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername SpeakerName_Text_Paul
+	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
 	msgbox Route5_Text_YouWontGetAway, MSGBOX_AUTOCLOSE
 	hideface 0

@@ -9797,8 +9797,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tyler3[] = {
     .species = SPECIES_TAILLOW,
     },
     {
-    .iv = 12,
-    .lvl = 29,
+    .iv = 10,
+    .lvl = 12,
     .species = SPECIES_HOUNDOUR,
     },
     {
@@ -9815,8 +9815,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tyler4[] = {
     .species = SPECIES_TAILLOW,
     },
     {
-    .iv = 12,
-    .lvl = 29,
+    .iv = 10,
+    .lvl = 12,
     .species = SPECIES_HOUNDOUR,
     },
     {

@@ -24,7 +24,7 @@ Route9_StarterDome_MapScripts::
 	.byte 0
 
 Route9_StarterDome_OnTransition:
-	compare VAR_STORYLINE_STATE, 1
+	compare VAR_STORYLINE_STATE, 17
 	goto_if_ne Route9_StarterDome_HideLittleGirlDaz1
 	call Route9_StarterDome_HideLittleGirlDaz2
 	end
@@ -347,7 +347,7 @@ Route9_StarterDome_Main::
 	msgbox Route9_StarterDome_Text_LetsGetBack, MSGBOX_AUTOCLOSE
 	hideface 0
 	clearflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_STORYLINE_STATE, 18
 	warpsilent MAP_ROUTE9_STARTER_DOME, 18, 34
 	waitstate
 	end
@@ -539,7 +539,7 @@ Route9_StarterDome_EventEnd::
 	setflag FLAG_ROUTE_9_STARTER_DOME_COMPLETE
 	setflag FLAG_HIDE_STARTER_DOME_DAZ_LITTLE_GIRL
 	clearflag FLAG_HIDE_STARTER_DOME_TRAINERS_2 @addobject 2, 3, 8, 9
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 19
 	end
 
 Route9_StarterDome_Bulbasaur::
@@ -601,7 +601,7 @@ Route9_StarterDome_ReceivedBulbasaurFanfare::
 
 Route9_StarterDome_ReceivedBulbasaur::
 	setflag FLAG_STARTER_DOME_BULBASAUR
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -664,7 +664,7 @@ Route9_StarterDome_ReceivedChikoritaFanfare::
 
 Route9_StarterDome_ReceivedChikorita::
 	setflag FLAG_STARTER_DOME_CHIKORITA
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -727,7 +727,7 @@ Route9_StarterDome_ReceivedTreeckoFanfare::
 
 Route9_StarterDome_ReceivedTreecko::
 	setflag FLAG_STARTER_DOME_TREECKO
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -790,7 +790,7 @@ Route9_StarterDome_ReceivedSquirtleFanfare::
 
 Route9_StarterDome_ReceivedSquirtle::
 	setflag FLAG_STARTER_DOME_SQUIRTLE
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -853,7 +853,7 @@ Route9_StarterDome_ReceivedTotodileFanfare::
 
 Route9_StarterDome_ReceivedTotodile::
 	setflag FLAG_STARTER_DOME_TOTODILE
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -916,7 +916,7 @@ Route9_StarterDome_ReceivedMudkipFanfare::
 
 Route9_StarterDome_ReceivedMudkip::
 	setflag FLAG_STARTER_DOME_MUDKIP
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -979,7 +979,7 @@ Route9_StarterDome_ReceivedCharmanderFanfare::
 
 Route9_StarterDome_ReceivedCharmander::
 	setflag FLAG_STARTER_DOME_CHARMANDER
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -1042,7 +1042,7 @@ Route9_StarterDome_ReceivedCyndaquilFanfare::
 
 Route9_StarterDome_ReceivedCyndaquil::
 	setflag FLAG_STARTER_DOME_CYNDAQUIL
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 19
 	releaseall
 	end
 
@@ -1105,7 +1105,7 @@ Route9_StarterDome_ReceivedTorchicFanfare::
 
 Route9_StarterDome_ReceivedTorchic::
 	setflag FLAG_STARTER_DOME_TORCHIC
-	setvar VAR_STARTER_DOME_STATE, 1
+	setvar VAR_STARTER_DOME_STATE, 199
 	releaseall
 	end
 

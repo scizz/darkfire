@@ -173,6 +173,7 @@ UnionCity_Zigzagoon::
 	lock
 	faceplayer
 	playmoncry SPECIES_ZIGZAGOON, 0
+	speakername CommonName_Text_Zigzagoon
 	msgbox UnionCity_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
@@ -263,13 +264,13 @@ UnionCity_Eevee::
 	lock
 	faceplayer
 	playmoncry SPECIES_EEVEE, 0
+	speakername CommonName_Text_Eevee
 	msgbox UnionCity_Text_Eevee, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	applymovement 3, HeartEmote
+	emote 3 6
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	release
 	end
 
@@ -426,8 +427,7 @@ UnionCity_Text_WelcomeToUnion::
 	.string "{COLOR}{BLUE}Hey, {PLAYER}!\n"
 	.string "Welcome to Union City!\p"
 	.string "I just came from the Government's\n"
-	.string "Office, but the President isn't home\l"
-	.string "right now…\p"
+	.string "Office, but the President isn't home…\p"
 	.string "It's a shame, really, because I had\n"
 	.string "some important questions for him.\p"
 	.string "Especially about this SUBO gang\n"
@@ -517,7 +517,7 @@ UnionCity_Text_Old_Man:
 	.string "end of the land and top of the sky.$"
 
 UnionCity_Text_Zigzagoon:
-	.string "Zigzagoon: Grraa!$"
+	.string "Grraa!$"
 
 UnionCity_Text_Triathlete:
 	.string "{COLOR}{BLUE}I just got done wiping the floor with\n"
@@ -611,7 +611,7 @@ UnionCity_Text_Ninja_Boy:
 	.string "around here…$"
 
 UnionCity_Text_Eevee:
-	.string "Eevee: Eve!$"
+	.string "Evee!$"
 
 UnionCity_Text_Gambler:
 	.string "{COLOR}{BLUE}I kept winning all the time in the\n"

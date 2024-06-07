@@ -14,8 +14,8 @@ Route9_MapScripts::
 	.byte 0
 
 Route9_OnFrame:
-	map_script_2 VAR_STORYLINE_STATE, 7, Route9_DazBattle
-	map_script_2 VAR_STORYLINE_STATE, 8, Route9_DazLost
+	map_script_2 VAR_STORYLINE_STATE, 19, Route9_DazBattle
+	map_script_2 VAR_STORYLINE_STATE, 20, Route9_DazLost
 	.2byte 0
 
 Route9_OnLoad:

@@ -118,6 +118,9 @@ CommonName_Text_Natu:
 CommonName_Text_Bulbasaur:
 	.string "Bulbasaur$"
 
+CommonName_Text_Eevee:
+	.string "Eevee$"
+
 CommonName_Text_Director:
 	.string "Director$"
 

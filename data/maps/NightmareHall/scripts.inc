@@ -86,7 +86,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement 6, Common_Movement_WalkRightFaster
 	applymovement 4, Common_Movement_WalkLeftFaster
 	waitmovement 0
-	playse SE_M_LEER
+	playse SE_M_BITE
 	waitse
 	applymovement 3, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -95,7 +95,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox NightmareHall_Text_Houndour, MSGBOX_AUTOCLOSE
-	playmoncry SPECIES_HOUNDOUR, 0
+	playmoncry SPECIES_HOUNDOOM, 0
 	waitmoncry
 	delay 30
 	playse SE_M_EMBER
@@ -127,7 +127,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement 3, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox NightmareHall_Text_Houndour_Final, MSGBOX_AUTOCLOSE
-	playmoncry SPECIES_HOUNDOUR, 0
+	playmoncry SPECIES_HOUNDOOM, 0
 	waitmoncry
 	delay 30
 	applymovement 4, Common_Movement_WalkLeftFaster
@@ -369,7 +369,7 @@ NightmareHall_Text_YesBossTwo:
 
 NightmareHall_Text_Sandslash:
 	.string "{COLOR}{BLUE}Feraligatr!\n"
-	.string "Use Leer!$"
+	.string "Use Bite!$"
 
 NightmareHall_Text_Houndour:
 	.string "{COLOR}{BLUE}Houndoom!\n"
@@ -398,7 +398,7 @@ NightmareHall_Text_Sandslash_Fainted:
 	.string "Please help me!$"
 
 NightmareHall_Text_Houndour_Return:
-	.string "{COLOR}{BLUE}Houndour, return.$"
+	.string "{COLOR}{BLUE}Houndoom, return.$"
 
 NightmareHall_Text_Pathetic:
 	.string "{COLOR}{BLUE}Hmph…\n"

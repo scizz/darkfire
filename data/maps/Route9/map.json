@@ -337,7 +337,7 @@
       "y": 46,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "10",
+      "var_value": "16",
       "script": "Route9_StarterDome"
     },
     {
@@ -346,7 +346,7 @@
       "y": 47,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "10",
+      "var_value": "16",
       "script": "Route9_StarterDome"
     }
   ],
