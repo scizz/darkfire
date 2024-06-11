@@ -235,7 +235,7 @@ Route9_StarterDome_End::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_SetInvisible
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
-	setvar VAR_STORYLINE_STATE, 21
+	setvar VAR_STORYLINE_STATE, 17
 	warp MAP_ROUTE9_STARTER_DOME, 18, 36
 	waitstate
 	release

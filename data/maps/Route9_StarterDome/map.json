@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route9_StarterDome_Youngster",
+      "script": "Route9_StarterDome_Fat_Guy",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route9_StarterDome_Fat_Guy",
+      "script": "Route9_StarterDome_Youngster",
       "flag": "FLAG_HIDE_STARTER_DOME_TRAINERS_2"
     },
     {

@@ -42,8 +42,8 @@ Route9_StarterDome_HideLittleGirlDaz2::
 	return
 
 Route9_StarterDome_OnFrame:
-	map_script_2 VAR_STORYLINE_STATE, 0, Route9_StarterDome_Intro
-	map_script_2 VAR_STORYLINE_STATE, 1, Route9_StarterDome_BackToEntrance
+	map_script_2 VAR_STORYLINE_STATE, 17, Route9_StarterDome_Intro
+	map_script_2 VAR_STORYLINE_STATE, 18, Route9_StarterDome_BackToEntrance
 	.2byte 0
 
 Route9_StarterDome_OnLoad:
