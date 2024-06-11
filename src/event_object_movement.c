@@ -10977,6 +10977,24 @@ void RecreateObjectEvent(struct ObjectEvent *objectEvent, struct Sprite *sprite)
     struct ObjectEvent backupObject = *objectEvent;
     backupObject.graphicsId = objectEvent->graphicsId;
     DestroySprite(sprite);
+
+    // If object has a reflection, remove the reflection sprite
+    if(objectEvent->hasReflection)
+    {
+        u8 i;
+
+        objectEvent->hasReflection = FALSE;
+
+        for(i = 0; i < MAX_SPRITES; i++)
+        {
+            if(gSprites[i].data[0] == gSaveBlock2Ptr->follower.objId)
+            {
+                gSprites[i].inUse = FALSE;
+                break;
+            }
+        }
+    }
+
     RemoveObjectEvent(objectEvent);
 
     clone = *GetObjectEventTemplateByLocalIdAndMap(objectEvent->localId, objectEvent->mapNum, objectEvent->mapGroup);
