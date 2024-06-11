@@ -4,8 +4,8 @@
 .set LOCALID_GYM_BOY, 8
 
 PetalburgCity_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
+	@map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
+	@map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
 	@map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_OnWarp
 	.byte 0
 
@@ -20,15 +20,36 @@ PetalburgCity_InitRoomObjects::
 	end
 
 PetalburgCity_OnTransition: @ 81DC2D7
-	setflag FLAG_VISITED_SUNRISE_TOWN
-	compare VAR_PETALBURG_CITY_STATE, 0
-	call_if_eq PetalburgCity_EventScript_MoveGymBoyToWestEntrance
-	compare VAR_PETALBURG_CITY_STATE, 2
-	call_if_eq PetalburgCity_EventScript_DisableMapNameAndMusic
-	compare VAR_PETALBURG_CITY_STATE, 4
-	call_if_eq PetalburgCity_EventScript_DisableMapNameAndMusic
-	compare VAR_PETALBURG_GYM_STATE, 8
-	call_if_eq PetalburgCity_EventScript_SetGymDoorsUnlocked
+	@setflag FLAG_VISITED_SUNRISE_TOWN
+	@compare VAR_PETALBURG_CITY_STATE, 0
+	@call_if_eq PetalburgCity_EventScript_MoveGymBoyToWestEntrance
+	@compare VAR_PETALBURG_CITY_STATE, 2
+	@call_if_eq PetalburgCity_EventScript_DisableMapNameAndMusic
+	@compare VAR_PETALBURG_CITY_STATE, 4
+	@call_if_eq PetalburgCity_EventScript_DisableMapNameAndMusic
+	@compare VAR_PETALBURG_GYM_STATE, 8
+	@call_if_eq PetalburgCity_EventScript_SetGymDoorsUnlocked
+	call_if_eq VAR_STORYLINE_STATE, 0, Petalburg_SetFlag
+	end
+
+Petalburg_SetFlag::
+	setflag FLAG_UNUSED_0x020
+	setvar VAR_STORYLINE_STATE, 1
+	end
+
+Follower_Debug::
+	lockall
+	givemon SPECIES_CELEBI, 60, ITEM_MASTER_BALL
+	givemon SPECIES_PIKACHU, 35, ITEM_NONE
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_DEXNAV_GET
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	addobject 9
+	setfollower 9, 0x0
+	updatefollowerpokemongraphic
+	hidefollower
+	releaseall
 	end
 
 PetalburgCity_EventScript_MoveGymBoyToWestEntrance:: @ 81DC307

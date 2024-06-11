@@ -178,13 +178,13 @@ ChandraVillage_GiveEevee::
 
 ChandraVillage_Tyler_Debug::
 	lockall
+	givemon SPECIES_CELEBI, 60, ITEM_MASTER_BALL
 	givemon SPECIES_PIKACHU, 35, ITEM_NONE
-	givemon SPECIES_ESPEON, 35, ITEM_NONE
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
-	addobject 9
+	@addobject 9
 	setfollower 9, 0x0
 	updatefollowerpokemongraphic
 	releaseall
