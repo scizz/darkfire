@@ -122,9 +122,9 @@ Route1_WestExitPrevention::
 	end
 
 Route1_PidgeyIntro::
-	setobjectmovementtype LOCALID_PIDGEY, MOVEMENT_TYPE_NONE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	emote LOCALID_PIDGEY, 7
 	playse SE_PIN
 	waitse
 	playmoncry SPECIES_PIDGEY, 0
@@ -132,6 +132,7 @@ Route1_PidgeyIntro::
 	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
+	setobjectmovementtype LOCALID_PIDGEY, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
 	delay 10
 	applymovement LOCALID_TYLER, Common_Movement_FaceUp
 	waitmovement 0
@@ -184,7 +185,7 @@ Route1_PidgeyMain::
 	applymovement LOCALID_PIDGEY, Levitate
 	waitmovement 0
 	delay 30
-	emote LOCALID_TYLER 7
+	emote LOCALID_PIDGEY 7
 	playse SE_PIN
 	waitse
 	speakername Speaker_Text_Pidgey
@@ -234,7 +235,7 @@ Route1_PidgeyBattle::
 	waitse
 	waitmovement 0
 	setflag FLAG_PREVENT_BATTLE_FLEE
-	emote LOCALID_PIDGEY 7
+	emote LOCALID_PIDGEY, 7
 	playse SE_PIN
 	waitse
 	applymovement LOCALID_TYLER, Common_Movement_FacePlayer

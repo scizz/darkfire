@@ -210,7 +210,7 @@
     },
     {
       "type": "trigger",
-      "x": 1,
+      "x": 0,
       "y": 12,
       "elevation": 3,
       "var": "VAR_PETALBURG_CITY_STATE",

@@ -33,10 +33,9 @@ ChandraVillage_ExitNorth::
 	waitmovement 0
 	applymovement 11, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 11, Common_Movement_ExclamationMark
+	emote 11, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -68,10 +67,9 @@ ChandraVillage_Intro::
 	lockall
 	applymovement LOCALID_TYLER, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Tyler
@@ -106,10 +104,9 @@ ChandraVillage_LabDone::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
+	emote LOCALID_PROF, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Prof
@@ -118,10 +115,9 @@ ChandraVillage_LabDone::
 	closemessage
 	hideface 1
 	delay 60
-	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
+	emote LOCALID_PROF, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Prof
@@ -175,20 +171,6 @@ ChandraVillage_GiveEevee::
 	waitfanfare
 	closemessage
 	return
-
-ChandraVillage_Tyler_Debug::
-	lockall
-	givemon SPECIES_CELEBI, 60, ITEM_MASTER_BALL
-	givemon SPECIES_PIKACHU, 35, ITEM_NONE
-	setflag FLAG_SYS_B_DASH
-	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_SYS_DEXNAV_GET
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-	@addobject 9
-	setfollower 9, 0x0
-	updatefollowerpokemongraphic
-	releaseall
-	end
 
 ChandraVillage_Hoenn_Girl::
 	msgbox ChandraVillage_Hoenn, MSGBOX_NPC
@@ -305,10 +287,9 @@ ChandraVillage_Storyline_State_4_Right::
 	end
 	
 ChandraVillage_Storyline_State_4_Next::
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Tyler
@@ -324,10 +305,9 @@ ChandraVillage_Storyline_State_4_Next::
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	delay 10
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_Player, MSGBOX_AUTOCLOSE
@@ -391,10 +371,9 @@ ChandraVillage_Storyline_State_4_Part_2::
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_VeryWell, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Tyler

@@ -122,11 +122,11 @@
       "flag": "FLAG_HIDE_ROUTE_1_TRUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
+      "graphics_id": "OBJ_EVENT_GFX_PIDGEY_OW",
       "x": 34,
       "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
