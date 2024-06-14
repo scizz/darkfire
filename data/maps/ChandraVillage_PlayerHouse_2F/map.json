@@ -173,6 +173,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ChandraVillage_PlayerHouse_2F_Sign_Flowers"
+    },
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LittlerootTown_BrendansHouse_2F_EventScript_PC"
     }
   ]
 }

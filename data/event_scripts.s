@@ -858,7 +858,7 @@ gText_MomOrDadMightLikeThisProgram::
 	.string "Better get going!$"
 
 gText_WhichFloorWouldYouLike::
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.\p"
+	.string "Welcome to Union Department Store.\p"
 	.string "Which floor would you like?$"
 
 gText_SandstormIsVicious::
@@ -870,13 +870,10 @@ gText_SelectWithoutRegisteredItem::
 	.string "registered to Select for easy use.$"
 
 gText_PokemonTrainerSchoolEmail::
-	.string "There's an e-mail from  Trainer\n"
-	.string "SCHOOL.\p"
+	.string "{PLAYER} booted up Tyler's PC.\p"
+	.string "There's an e-mail from Trainer School…\p"
 	.string "… … … … … …\p"
-	.string "A  may learn up to four moves.\p"
-	.string "A Trainer's expertise is tested on the\n"
-	.string "move sets chosen for .\p"
-	.string "… … … … … …$"
+	.string "Better get going.$"
 
 gText_PlayerHouseBootPC::
 	.string "{PLAYER} booted up the PC.$"

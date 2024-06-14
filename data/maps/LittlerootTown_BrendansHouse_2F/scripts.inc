@@ -237,9 +237,9 @@ LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanEast:
 
 LittlerootTown_BrendansHouse_2F_EventScript_PC::
 	lockall
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC
-	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_BrendansHouse_2F_EventScript_CheckRivalsPC
+	@checkplayergender
+	goto LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC
+	@goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_BrendansHouse_2F_EventScript_CheckRivalsPC
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC::
@@ -260,7 +260,14 @@ LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC::
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_CheckRivalsPC::
+	lockall
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
+	special DoPCTurnOnEffect
+	playse SE_PC_ON
 	msgbox gText_PokemonTrainerSchoolEmail, MSGBOX_DEFAULT
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
+	playse SE_PC_OFF
+	special DoPCTurnOffEffect
 	releaseall
 	end
 

@@ -10989,12 +10989,12 @@ void RecreateObjectEvent(struct ObjectEvent *objectEvent, struct Sprite *sprite)
         {
             if(gSprites[i].data[0] == gSaveBlock2Ptr->follower.objId)
             {
-                gSprites[i].inUse = FALSE;
+                DestroySprite(&gSprites[i]);
                 break;
             }
         }
     }
-
+    
     RemoveObjectEvent(objectEvent);
 
     clone = *GetObjectEventTemplateByLocalIdAndMap(objectEvent->localId, objectEvent->mapNum, objectEvent->mapGroup);
