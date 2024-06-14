@@ -17,6 +17,48 @@ UnionCity_Interlink_Grandma::
 	msgbox UnionCity_Interlink_Text_Grandma, MSGBOX_NPC
 	end
 
+UnionCity_Interlink_Aide::
+	lock
+	faceplayer
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, ScriptGetPokedexInfo
+	copyvar VAR_0x8008, VAR_0x8005
+	copyvar VAR_0x8009, VAR_0x8006
+	copyvar VAR_0x800A, VAR_RESULT
+	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
+	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox UnionCity_Interlink_Text_Aide_HelloImProfessor, MSGBOX_AUTOCLOSE
+	hideface 1
+	compare VAR_0x8009, 10
+	goto_if_ge UnionCity_Interlink_AideGiveEverstone
+	emote 5, 2
+	playse SE_PIN
+	waitse
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox UnionCity_Interlink_Text_Aide_CatchMoreMons, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
+UnionCity_Interlink_AideGiveEverstone::
+	emote 5, 1
+	playse SE_PIN
+	waitse
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
+	hideface 1
+	giveitem ITEM_EVERSTONE, 1
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox UnionCity_Interlink_Text_Aide_TheEverstonePrevents, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
 UnionCity_Interlink_Text_Little_Girl:
 	.string "{COLOR}{RED}I'm tired of playing in Union City, but\n"
 	.string "this is as far as Mom lets me go…\p"
@@ -42,3 +84,33 @@ UnionCity_Interlink_Text_Grandma:
 	.string "It seems like you're all starting your\n"
 	.string "journeys at a younger age nowadays!\l"
 	.string "Be careful out there!$"
+
+UnionCity_Interlink_Text_Aide_HelloImProfessor::
+	.string "Hello, there.\n"
+	.string "I'm Professor Hawthorne's Aide.\p"
+	.string "I am here to reward Trainers who are\n"
+	.string "working on their Pokédex.\p"
+	.string "If you've caught 10 or more Pokémon,\n"
+	.string "you'll win a fabulous prize!\p"
+	.string "Here, let me take a look at your\n"
+	.string "Pokédex…\p"
+	.string "… … …\n"
+	.string "… … …\p"
+	.string "Hmhm…\p"
+	.string "So, you've seen {STR_VAR_1} Pokémon,\n"
+	.string "and you've caught {STR_VAR_2} Pokémon…$"
+
+UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward::
+	.string "Congratulations, Trainer!\p"
+	.string "Here's your reward!$"
+
+UnionCity_Interlink_Text_Aide_TheEverstonePrevents::
+	.string "The Everstone is a held item that\n"
+	.string "prevents a Pokémon from evolving!\p"
+	.string "I hope this helps you in your journey!$"
+
+UnionCity_Interlink_Text_Aide_CatchMoreMons::
+	.string "I'm sorry…\n"
+	.string "That's not quite 10…\p"
+	.string "Come back when you have caught 10 or\n"
+	.string "more Pokémon.$"
