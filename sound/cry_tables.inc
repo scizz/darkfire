@@ -397,22 +397,22 @@ gCryTable::
 	cry Cry_Articuno 
 	cry Cry_Zapdos 
 	cry Cry_Moltres 
-	cry Cry_Mewtwo 
-	cry Cry_Mew 
 	cry Cry_Raikou 
-	cry Cry_Entei 
+	cry Cry_Entei
 	cry Cry_Suicune 
-	cry Cry_Lugia 
-	cry Cry_HoOh 
-	cry Cry_Celebi 
 	cry Cry_Regirock 
 	cry Cry_Regice 
 	cry Cry_Registeel 
 	cry Cry_Regigigas 
+	cry Cry_Lugia 
+	cry Cry_HoOh 
 	cry Cry_Latias 
 	cry Cry_Latios 
 	cry Cry_Kyogre 
 	cry Cry_Groudon 
+	cry Cry_Mewtwo 
+	cry Cry_Mew 
+	cry Cry_Celebi 
 	cry Cry_Rayquaza 
 	cry Cry_Jirachi 
 	cry Cry_Deoxys
