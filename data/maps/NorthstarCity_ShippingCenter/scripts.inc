@@ -130,11 +130,11 @@ NorthstarCity_ShippingCenter_Text_Nerd_2:
 NorthstarCity_ShippingCenter_Text_Boy:
 	.string "{COLOR}{BLUE}I love collecting things!\p"
 	.string "I just found an item on the docks\n"
-	.string "while using my trusty Itemfinder.\p"
+	.string "while using my Dowsing Machine.\p"
 	.string "I don't have any Pokémon, though, so\n"
 	.string "you can have it!$"
 
 NorthstarCity_ShippingCenter_Text_Boy_Given:
-	.string "{COLOR}{BLUE}If you have an Itemfinder, use it in\n"
-	.string "urban areas, like in Northstar City.\p"
+	.string "{COLOR}{BLUE}If you have a Dowsing Machine, use it\n"
+	.string "in urban areas, like Northstar City.\p"
 	.string "You'll be surprised what you can find!$"

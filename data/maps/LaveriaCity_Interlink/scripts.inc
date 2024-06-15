@@ -103,14 +103,13 @@ LaveriaCity_Interlink_Text_Hiker_Received:
 	.string "Good luck - you'll need it! Hahaha.$"
 
 LaveriaCity_Text_Interlink_Woman:
-	.string "{COLOR}{RED}I dropped my Itemfinder down into the\n"
+	.string "{COLOR}{RED}I dropped some items down into the\n"
 	.string "Steep Ravine…\p"
 	.string "I would abseil down there to retreive\n"
-	.string "it, but the rope doesn't feel safe.\p"
+	.string "them, but the rope doesn't feel safe.\p"
 	.string "Oh, well…\p"
-	.string "I'll leave it for someone else to\ndiscover.\p"
-	.string "Heck, even you can take it, if you\n"
-	.string "like.$"
+	.string "I'll leave them for someone else to\n"
+	.string "discover…$"
 
 LaveriaCity_Text_Interlink_Girl:
 	.string "{COLOR}{RED}The Pokémon in Route 9 aren't all\n"
