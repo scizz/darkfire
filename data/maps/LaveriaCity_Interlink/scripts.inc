@@ -44,6 +44,48 @@ LaveriaCity_Interlink_Girl::
 	msgbox LaveriaCity_Text_Interlink_Girl, MSGBOX_NPC
 	end
 
+LaveriaCity_Interlink_Aide::
+	lock
+	faceplayer
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, ScriptGetPokedexInfo
+	copyvar VAR_0x8008, VAR_0x8005
+	copyvar VAR_0x8009, VAR_0x8006
+	copyvar VAR_0x800A, VAR_RESULT
+	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
+	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox LaveriaCity_Interlink_Text_Aide_HelloImProfessor, MSGBOX_AUTOCLOSE
+	hideface 1
+	compare VAR_0x8009, 20
+	goto_if_ge LaveriaCity_Interlink_AideGiveDowsingMachine
+	emote 4, 2
+	playse SE_PIN
+	waitse
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox LaveriaCity_Interlink_Text_Aide_CatchMoreMons, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
+LaveriaCity_Interlink_AideGiveDowsingMachine::
+	emote 4, 1
+	playse SE_PIN
+	waitse
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
+	hideface 1
+	giveitem ITEM_DOWSING_MACHINE, 1
+	speakername CommonName_Text_Aide
+	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	msgbox LaveriaCity_Interlink_Text_Aide_TheDowsingMachine, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
 LaveriaCity_Interlink_Text_Hiker:
 	.string "I'm on strict orders to deny any\n"
 	.string "rookie Trainers passin' by here!\p"
@@ -88,3 +130,28 @@ LaveriaCity_Route7_Text_HeyYou:
 	.string "you through…\p"
 	.string "If you can get to him, of course!\n"
 	.string "Hahaha!$"
+
+LaveriaCity_Interlink_Text_Aide_HelloImProfessor:
+	.string "Hello, there.\n"
+	.string "I'm Professor Hawthorne's Aide.\p"
+	.string "I am here to reward Trainers who are\n"
+	.string "working on their Pokédex.\p"
+	.string "If you have caught 20 or more Pokémon,\n"
+	.string "you will win a fabulous prize!\p"
+	.string "Here, let me take a look at your\n"
+	.string "Pokédex…\p"
+	.string "… … …\n"
+	.string "… … …\p"
+	.string "Hmhm…\p"
+	.string "So, you've seen {STR_VAR_1} Pokémon,\n"
+	.string "and you've caught {STR_VAR_2} Pokémon…$"
+
+LaveriaCity_Interlink_Text_Aide_TheDowsingMachine:
+	.string "The Dowsing Machine is used to locate\n"
+	.string "hidden or buried items.\p"
+	.string "I hope it helps you in your journey!$"
+
+LaveriaCity_Interlink_Text_Aide_CatchMoreMons:
+	.string "I'm sorry…\n"
+	.string "That's not quite 20 Pokémon…\p"
+	.string "Come back when you have caught more.$"

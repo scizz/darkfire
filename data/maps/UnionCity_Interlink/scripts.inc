@@ -85,13 +85,13 @@ UnionCity_Interlink_Text_Grandma:
 	.string "journeys at a younger age nowadays!\l"
 	.string "Be careful out there!$"
 
-UnionCity_Interlink_Text_Aide_HelloImProfessor::
+UnionCity_Interlink_Text_Aide_HelloImProfessor:
 	.string "Hello, there.\n"
 	.string "I'm Professor Hawthorne's Aide.\p"
 	.string "I am here to reward Trainers who are\n"
 	.string "working on their Pokédex.\p"
-	.string "If you've caught 10 or more Pokémon,\n"
-	.string "you'll win a fabulous prize!\p"
+	.string "If you have caught 10 or more Pokémon,\n"
+	.string "you will win a fabulous prize!\p"
 	.string "Here, let me take a look at your\n"
 	.string "Pokédex…\p"
 	.string "… … …\n"
@@ -100,17 +100,16 @@ UnionCity_Interlink_Text_Aide_HelloImProfessor::
 	.string "So, you've seen {STR_VAR_1} Pokémon,\n"
 	.string "and you've caught {STR_VAR_2} Pokémon…$"
 
-UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward::
-	.string "Congratulations, Trainer!\p"
+UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward:
+	.string "Congratulations!\p"
 	.string "Here's your reward!$"
 
-UnionCity_Interlink_Text_Aide_TheEverstonePrevents::
+UnionCity_Interlink_Text_Aide_TheEverstonePrevents:
 	.string "The Everstone is a held item that\n"
-	.string "prevents a Pokémon from evolving!\p"
-	.string "I hope this helps you in your journey!$"
+	.string "prevents a Pokémon from evolving.\p"
+	.string "I hope it helps you in your journey!$"
 
-UnionCity_Interlink_Text_Aide_CatchMoreMons::
+UnionCity_Interlink_Text_Aide_CatchMoreMons:
 	.string "I'm sorry…\n"
-	.string "That's not quite 10…\p"
-	.string "Come back when you have caught 10 or\n"
-	.string "more Pokémon.$"
+	.string "That's not quite 10 Pokémon…\p"
+	.string "Come back when you have caught more.$"
