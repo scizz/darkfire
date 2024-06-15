@@ -5416,8 +5416,8 @@
       "name": "NightmareHall_Layout",
       "width": 27,
       "height": 39,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFrontierRankingHall",
+      "primary_tileset": "gTileset_Darkspace1",
+      "secondary_tileset": "gTileset_Darkspace2",
       "border_filepath": "data/layouts/NightmareHall/border.bin",
       "blockdata_filepath": "data/layouts/NightmareHall/map.bin"
     },
