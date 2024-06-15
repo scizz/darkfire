@@ -82,9 +82,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE_OW",
       "x": 59,
-      "y": 5,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",

@@ -2,20 +2,20 @@ UnionCity_House1_2F_MapScripts::
 	.byte 0
 
 UnionCity_House1_2F_NestBall::
-	lock
+	lockall
 	faceplayer
 	goto_if_set FLAG_RECEIVED_UNION_CITY_HOUSE_1_2F_NEST_BALL, UnionCity_House1_2F_NestBall_Given
-	msgbox UnionCity_House1_2F_Text_ThisBallIsUgly, MSGBOX_AUTOCLOSE
+	msgbox UnionCity_House1_2F_Text_ThisBallIsUgly, MSGBOX_DEFAULT
 	giveitem ITEM_NEST_BALL, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_UNION_CITY_HOUSE_1_2F_NEST_BALL
-	goto UnionCity_House1_1F_OldLadyGiven
+	goto UnionCity_House1_2F_NestBall_Given
 	end
 
 UnionCity_House1_2F_NestBall_Given::
 	msgbox UnionCity_House1_2F_Text_MyGrandpaSaysThereAre27, MSGBOX_AUTOCLOSE
-	release
+	releaseall
 	end
 
 UnionCity_House1_2F_OldMan::

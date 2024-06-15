@@ -177,6 +177,9 @@ UnionCity_Zigzagoon::
 	msgbox UnionCity_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
+	emote 16, 3
+	playse SE_PIN
+	waitse
 	release
 	end
 

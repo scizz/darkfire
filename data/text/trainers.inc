@@ -133,6 +133,9 @@ CommonName_Text_GovOfficial:
 CommonName_Text_Aide:
 	.string "Prof. Aide$"
 
+CommonName_Text_Azumarill:
+	.string "Azumarill$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

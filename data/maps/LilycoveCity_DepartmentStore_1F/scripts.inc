@@ -139,9 +139,10 @@ LilycoveCity_DepartmentStore_1F_EventScript_PokefanM:: @ 821F841
 
 LilycoveCity_DepartmentStore_1F_EventScript_Azumarill:: @ 821F84A
 	lock
-	faceplayer
+	pokemonfaceplayer 1
 	waitse
 	playmoncry SPECIES_AZUMARILL, 0
+	speakername CommonName_Text_Azumarill
 	msgbox LilycoveCity_DepartmentStore_1F_Text_Azumarill, MSGBOX_DEFAULT
 	waitmoncry
 	release
