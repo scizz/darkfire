@@ -55,7 +55,7 @@ LaveriaCity_Interlink_Aide::
 	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
 	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Interlink_Text_Aide_HelloImProfessor, MSGBOX_AUTOCLOSE
 	hideface 1
 	compare VAR_0x8009, 20
@@ -63,8 +63,9 @@ LaveriaCity_Interlink_Aide::
 	emote 4, 2
 	playse SE_PIN
 	waitse
+	delay 60
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Interlink_Text_Aide_CatchMoreMons, MSGBOX_AUTOCLOSE
 	hideface 1
 	release
@@ -74,13 +75,14 @@ LaveriaCity_Interlink_AideGiveDowsingMachine::
 	emote 4, 1
 	playse SE_PIN
 	waitse
+	delay 60
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_DOWSING_MACHINE, 1
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Interlink_Text_Aide_TheDowsingMachine, MSGBOX_AUTOCLOSE
 	hideface 1
 	release

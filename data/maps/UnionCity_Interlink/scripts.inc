@@ -28,7 +28,7 @@ UnionCity_Interlink_Aide::
 	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
 	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_HelloImProfessor, MSGBOX_AUTOCLOSE
 	hideface 1
 	compare VAR_0x8009, 10
@@ -36,8 +36,9 @@ UnionCity_Interlink_Aide::
 	emote 5, 2
 	playse SE_PIN
 	waitse
+	delay 60
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_CatchMoreMons, MSGBOX_AUTOCLOSE
 	hideface 1
 	release
@@ -47,13 +48,14 @@ UnionCity_Interlink_AideGiveEverstone::
 	emote 5, 1
 	playse SE_PIN
 	waitse
+	delay 60
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_EVERSTONE, 1
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_TheEverstonePrevents, MSGBOX_AUTOCLOSE
 	hideface 1
 	release

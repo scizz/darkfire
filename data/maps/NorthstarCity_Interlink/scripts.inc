@@ -20,7 +20,7 @@ NorthstarCity_Interlink_Aide::
 	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
 	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Interlink_Text_Aide_HelloImProfessor, MSGBOX_AUTOCLOSE
 	hideface 1
 	compare VAR_0x8009, 30
@@ -28,8 +28,9 @@ NorthstarCity_Interlink_Aide::
 	emote 3, 2
 	playse SE_PIN
 	waitse
+	delay 60
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Interlink_Text_Aide_CatchMoreMons, MSGBOX_AUTOCLOSE
 	hideface 1
 	release
@@ -39,13 +40,14 @@ NorthstarCity_Interlink_AideGiveExpShare::
 	emote 3, 1
 	playse SE_PIN
 	waitse
+	delay 60
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_EXP_SHARE, 1
 	speakername CommonName_Text_Aide
-	showface FS_OFFICIAL, FSE_NORMAL, 1, 1
+	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Interlink_Text_Aide_TheExpShare, MSGBOX_AUTOCLOSE
 	hideface 1
 	release
@@ -82,7 +84,7 @@ NorthstarCity_Interlink_Text_Aide_HelloImProfessor:
 	.string "and you've caught {STR_VAR_2} Pokémon…$"
 
 NorthstarCity_Interlink_Text_Aide_TheExpShare:
-	.string "The Exp. Share awards a Pokémon\n"
+	.string "The Exp. Share awards your Pokémon\n"
 	.string "experience from a battle, even if\l"
 	.string "they don't directly participate in it.\p"
 	.string "I hope it helps you in your journey!$"

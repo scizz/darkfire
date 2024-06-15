@@ -42,6 +42,7 @@
 #define FS_FEMALE_RANGER 14
 #define FS_DIRECTOR 15
 #define FS_OFFICIAL 16
+#define FS_SCIENTIST 17
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE
