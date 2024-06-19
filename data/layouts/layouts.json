@@ -5414,8 +5414,8 @@
     {
       "id": "LAYOUT_NIGHTMARE_HALL",
       "name": "NightmareHall_Layout",
-      "width": 27,
-      "height": 39,
+      "width": 40,
+      "height": 40,
       "primary_tileset": "gTileset_Darkspace1",
       "secondary_tileset": "gTileset_Darkspace2",
       "border_filepath": "data/layouts/NightmareHall/border.bin",
