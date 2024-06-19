@@ -481,7 +481,7 @@ UnionCity_Text_Museum_Sign:
 
 UnionCity_Text_Gov_Sign:
 	.string "Tenjo Government Offices\n"
-	.string "“Together We Are Free.”$"
+	.string "{FONT_SMALL}“Together We Are Free.”$"
 
 UnionCity_Text_Trash_Bones:
 	.string "There is nothing in here but smelly\n"

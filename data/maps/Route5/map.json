@@ -82,7 +82,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route5_EventScript_ItemEXPShare",
+      "script": "Route5_EventScript_ItemPokeBall",
       "flag": "FLAG_ITEM_ROUTE_5_EXP_SHARE"
     },
     {
@@ -454,7 +454,7 @@
       "y": 51,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route5_Sign_Rocks"
     },
     {
       "type": "sign",

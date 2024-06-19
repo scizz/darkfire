@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_GYM",
   "connections": [
@@ -24,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
-      "x": 71,
+      "x": 70,
       "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -129,7 +132,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 47,
-      "y": 48,
+      "y": 47,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -141,7 +144,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 50,
+      "x": 49,
       "y": 50,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -154,12 +157,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 61,
+      "x": 59,
       "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
       "movement_range_x": 5,
-      "movement_range_y": 11,
+      "movement_range_y": 9,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -167,7 +170,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUTTERFREE",
-      "x": 55,
+      "x": 53,
       "y": 48,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -180,7 +183,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BEEDRILL",
-      "x": 58,
+      "x": 56,
       "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -437,7 +440,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 47,
+      "x": 46,
       "y": 46,
       "elevation": 3,
       "dest_map": "MAP_PINLEAF_TOWN_FARM_HOUSE",
@@ -503,13 +506,10 @@
     {
       "type": "sign",
       "x": 66,
-      "y": 58,
+      "y": 57,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PinleafTown_Sign_Letterbox"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }

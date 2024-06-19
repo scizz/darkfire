@@ -38,8 +38,8 @@ UnionCity_BikeShop_Owner_Given::
 UnionCity_BikeShop_Owner_Text_Intro:
 	.string "{COLOR}{BLUE}Those Running Shoes…\n"
 	.string "They're looking awfully filthy!\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "I'll tell ya what!\p"
 	.string "I'm looking to get some Smoke Balls for\n"
 	.string "my friend's birthday party.\p"

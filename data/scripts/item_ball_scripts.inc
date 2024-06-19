@@ -62,8 +62,8 @@ PinleafTown_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
 
-Route5_EventScript_ItemEXPShare::
-	finditem ITEM_EXP_SHARE
+Route5_EventScript_ItemPokeBall::
+	finditem ITEM_POKE_BALL
 	end
 
 Route5_EventScript_ItemGreatBall::
