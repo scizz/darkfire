@@ -1007,6 +1007,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PIDGEY_OW               0xF8B
 #define OBJ_EVENT_PAL_TAG_PRESIDENT               0xF8A
 #define OBJ_EVENT_PAL_TAG_EMOTES                  0xF89
+#define OBJ_EVENT_PAL_TAG_GRASS_PAL               0xF88
+#define OBJ_EVENT_PAL_TAG_FIRE_PAL                0xF87
+#define OBJ_EVENT_PAL_TAG_WATER_PAL               0xF86
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
@@ -1588,6 +1591,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Arceus_Steel,          OBJ_EVENT_PAL_TAG_ARCEUS_STEEL},
     {gObjectEventPal_Arceus_Water,          OBJ_EVENT_PAL_TAG_ARCEUS_WATER},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
+    {gObjectEventPaletteGrassPal,           OBJ_EVENT_PAL_TAG_GRASS_PAL},
+    {gObjectEventPaletteFirePal,            OBJ_EVENT_PAL_TAG_FIRE_PAL},
+    {gObjectEventPaletteWaterPal,           OBJ_EVENT_PAL_TAG_WATER_PAL},
     {},
 };
 
