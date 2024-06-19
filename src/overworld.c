@@ -3974,23 +3974,6 @@ void UpdateFollowerPokemonGraphic(void)
             struct ObjectEvent backupFollower = *follower;
             backupFollower.graphicsId = gSaveBlock2Ptr->follower.graphicsId;
             DestroySprite(&gSprites[gObjectEvents[gSaveBlock2Ptr->follower.objId].spriteId]);
-
-            // If follower has a reflection, remove the reflection sprite
-            if(follower->hasReflection)
-            {
-                u8 i;
-
-                follower->hasReflection = FALSE;
-
-                for(i = 0; i < MAX_SPRITES; i++)
-                {
-                    if(gSprites[i].data[0] == gSaveBlock2Ptr->follower.objId)
-                    {
-                        DestroySprite(&gSprites[i]);
-                        break;
-                    }
-                }
-            }
             
             RemoveObjectEvent(&gObjectEvents[gSaveBlock2Ptr->follower.objId]);
 
