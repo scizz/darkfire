@@ -9,22 +9,36 @@
 .set LOCALID_MUDKIP, 16
 
 Route9_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route9_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route9_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, Route9_OnLoad
 	.byte 0
 
 Route9_OnFrame:
-	map_script_2 VAR_STORYLINE_STATE, 19, Route9_DazBattle
-	map_script_2 VAR_STORYLINE_STATE, 20, Route9_DazLost
+	map_script_2 VAR_STORYLINE_STATE, 20, Route9_DazBattle
+	map_script_2 VAR_STORYLINE_STATE, 21, Route9_DazLost
 	.2byte 0
 
 Route9_OnLoad:
 	call_if_set FLAG_ROUTE_9_SNORLAX, Route9_ClearPath
 	end
 
+Route9_OnTransition:
+	compare VAR_STORYLINE_STATE, 20
+	call_if_lt Route9_HideDaz2
+	compare VAR_STORYLINE_STATE, 21
+	call_if_eq Route9_HideDaz2
+	end
+
 Route9_ClearPath::
 	setmetatile 34, 60, 1, 0
 	setmetatile 35, 60, 1, 0
+	return
+
+Route9_HideDaz2::
+	removeobject LOCALID_DAZ_2
+	removeobject LOCALID_MUDKIP
+	setflag FLAG_HIDE_DAZ_2_MUDKIP
 	return
 
 Route9_Sign::
@@ -287,7 +301,10 @@ Route9_Snorlax_WakeUp_Yes::
 
 Route9_DazBattle::
 	lock
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_STORYLINE_STATE, 21
+	clearflag FLAG_HIDE_DAZ_2_MUDKIP
+	addobject LOCALID_DAZ_2
+	addobject LOCALID_MUDKIP
 	applymovement LOCALID_DAZ_2, WU5
 	applymovement LOCALID_MUDKIP, WU5
 	waitmovement 0
@@ -316,10 +333,10 @@ Route9_DazBattle::
 	speakername CommonName_Text_Mudkip
 	msgbox Route9_Text_Mudkip, MSGBOX_AUTOCLOSE
 	delay 20
-	applymovement LOCALID_MUDKIP, HeartEmote
+	emote LOCALID_MUDKIP, 6
 	playse SE_PIN
 	waitse
-	waitmovement 0
+	delay 60
 	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Daz
@@ -336,7 +353,7 @@ Route9_DazBattle::
 	applymovement LOCALID_DAZ_2, WD5
 	waitmovement 0
 	removeobject LOCALID_DAZ_2
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 22
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	release
@@ -346,7 +363,7 @@ Route9_DazLost::
 	removeobject LOCALID_MUDKIP
 	removeobject LOCALID_DAZ_2
 	setflag FLAG_HIDE_DAZ_2_MUDKIP
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 22
 	end
 	
 WR2U:
@@ -370,13 +387,11 @@ WU3WIPSD:
 
 WRU2:
 	walk_right
-	walk_right
 	walk_up
 	walk_up
 	step_end
 
 WLU2:
-	walk_left
 	walk_left
 	walk_up
 	walk_up
@@ -443,7 +458,7 @@ Route9_Text_Sign:
 
 Route9_Text_Sign_Dome:
 	.string "Starter Dome\n"
-	.string "Get your starter Pokémon here!$"
+	.string "{FONT_SMALL}Get your starter Pokémon here!$"
 
 Route9_Text_Old_Man:
 	.string "And there a brave Charizard stood…\p"

@@ -82,6 +82,7 @@ LaveriaCity_Sailor_GiveAwakening::
 	delay 30
 	msgbox LaveriaCity_Text_AnAwakening, MSGBOX_AUTOCLOSE
 	setflag FLAG_LAVERIA_CITY_AWAKENING_GIVEN
+	setvar VAR_STORYLINE_STATE, 22
 	goto LaveriaCity_SailToLaveriaIsland
 	end
 

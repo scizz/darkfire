@@ -368,7 +368,7 @@
       "y": 12,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "18",
+      "var_value": "22",
       "script": "LaveriaCity_Kojiro"
     },
     {
@@ -377,7 +377,7 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "18",
+      "var_value": "22",
       "script": "LaveriaCity_Kojiro"
     }
   ],

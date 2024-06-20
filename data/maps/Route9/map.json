@@ -168,7 +168,7 @@
       "x": 28,
       "y": 51,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -220,7 +220,7 @@
       "x": 28,
       "y": 52,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -357,7 +357,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route9_Sign"
     },
     {
       "type": "sign",
@@ -365,7 +365,7 @@
       "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route9_Sign_Dome"
     },
     {
       "type": "sign",

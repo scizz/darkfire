@@ -6,6 +6,7 @@
 .set LOCALID_DAZ_2, 14
 .set LOCALID_LITTLE_GIRL_2, 20
 .set LOCALID_DAZ_1, 15
+
 .set LOCALID_BULBASAUR, 22
 .set LOCALID_TREECKO, 23
 .set LOCALID_CHIKORITA, 24
@@ -25,7 +26,7 @@ Route9_StarterDome_MapScripts::
 
 Route9_StarterDome_OnTransition:
 	compare VAR_STORYLINE_STATE, 17
-	goto_if_ne Route9_StarterDome_HideLittleGirlDaz1
+	goto_if_eq Route9_StarterDome_HideLittleGirlDaz1
 	call Route9_StarterDome_HideLittleGirlDaz2
 	end
 
@@ -58,7 +59,7 @@ Route9_StarterDome_OpenStarterDoor::
 	return
 
 Route9_StarterDome_OnWarp:
-	map_script_2 VAR_STORYLINE_STATE, 1, Route9_StarterDome_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 18, Route9_StarterDome_InitRoomObjects
 	.2byte 0
 
 Route9_StarterDome_InitRoomObjects::
@@ -208,6 +209,7 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSD3
 	waitmovement 0
+	delay 30
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
@@ -247,6 +249,7 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSL3
 	waitmovement 0
+	delay 30
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
@@ -277,6 +280,7 @@ Route9_StarterDome_Intro::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, WSR3
 	waitmovement 0
+	delay 30
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
@@ -369,14 +373,14 @@ Route9_StarterDome_BackToEntrance::
 	setmetatile 19, 30, 530, 0
 	setmetatile 18, 29, 637, 0
 	setmetatile 19, 29, 638, 0
-	playse SE_PIN
+	playse SE_BANG
 	special DrawWholeMapView
-	delay 10
+	delay 30
 	setmetatile 18, 29, 528, 0
 	setmetatile 19, 29, 528, 0
-	playse SE_PIN
+	playse SE_BANG
 	special DrawWholeMapView
-	delay 10
+	delay 30
 	waitse
 	applymovement LOCALID_PROF, WLFR
 	waitmovement 0
@@ -461,9 +465,10 @@ Route9_StarterDome_BackToEntranceNext::
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
-	message Route9_StarterDome_Text_OhPlayerIAlmostForgot
+	msgbox Route9_StarterDome_Text_OhPlayerIAlmostForgot, MSGBOX_AUTOCLOSE
+	message Route9_StarterDome_Text_WhichEvolutionaryStone
 	waitmessage
-	multichoice 21, 8, MULTI_CHOOSE_STONE, TRUE
+	multichoice 21, 0, MULTI_CHOOSE_STONE, TRUE
 	switch VAR_RESULT
 	case 0, Route9_StarterDome_GiveThunderStone
 	case 1, Route9_StarterDome_GiveFireStone
@@ -476,36 +481,42 @@ Route9_StarterDome_BackToEntranceNext::
 Route9_StarterDome_GiveThunderStone::
 	hideface 0
 	giveitem ITEM_THUNDER_STONE, 1
+	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveFireStone::
 	hideface 0
 	giveitem ITEM_FIRE_STONE, 1
+	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveWaterStone::
 	hideface 0
 	giveitem ITEM_WATER_STONE, 1
+	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveLeafStone::
 	hideface 0
 	giveitem ITEM_LEAF_STONE, 1
+	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveMoonStone::
 	hideface 0
 	giveitem ITEM_MOON_STONE, 1
+	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
 Route9_StarterDome_GiveSunStone::
 	hideface 0
 	giveitem ITEM_SUN_STONE, 1
+	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
@@ -547,7 +558,7 @@ Route9_StarterDome_Bulbasaur::
 	showmonpic SPECIES_BULBASAUR, 10, 3
 	playmoncry SPECIES_BULBASAUR, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickBulbasaur, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickBulbasaur
@@ -601,7 +612,7 @@ Route9_StarterDome_ReceivedBulbasaurFanfare::
 
 Route9_StarterDome_ReceivedBulbasaur::
 	setflag FLAG_STARTER_DOME_BULBASAUR
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -610,7 +621,7 @@ Route9_StarterDome_Chikorita::
 	showmonpic SPECIES_CHIKORITA, 10, 3
 	playmoncry SPECIES_CHIKORITA, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickChikorita, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickChikorita
@@ -664,7 +675,7 @@ Route9_StarterDome_ReceivedChikoritaFanfare::
 
 Route9_StarterDome_ReceivedChikorita::
 	setflag FLAG_STARTER_DOME_CHIKORITA
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -673,7 +684,7 @@ Route9_StarterDome_Treecko::
 	showmonpic SPECIES_TREECKO, 10, 3
 	playmoncry SPECIES_TREECKO, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickTreecko, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickTreecko
@@ -727,7 +738,7 @@ Route9_StarterDome_ReceivedTreeckoFanfare::
 
 Route9_StarterDome_ReceivedTreecko::
 	setflag FLAG_STARTER_DOME_TREECKO
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -736,7 +747,7 @@ Route9_StarterDome_Squirtle::
 	showmonpic SPECIES_SQUIRTLE, 10, 3
 	playmoncry SPECIES_SQUIRTLE, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickSquirtle, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickSquirtle
@@ -790,7 +801,7 @@ Route9_StarterDome_ReceivedSquirtleFanfare::
 
 Route9_StarterDome_ReceivedSquirtle::
 	setflag FLAG_STARTER_DOME_SQUIRTLE
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -799,7 +810,7 @@ Route9_StarterDome_Totodile::
 	showmonpic SPECIES_TOTODILE, 10, 3
 	playmoncry SPECIES_TOTODILE, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickTotodile, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickTotodile
@@ -853,7 +864,7 @@ Route9_StarterDome_ReceivedTotodileFanfare::
 
 Route9_StarterDome_ReceivedTotodile::
 	setflag FLAG_STARTER_DOME_TOTODILE
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -862,7 +873,7 @@ Route9_StarterDome_Mudkip::
 	showmonpic SPECIES_MUDKIP, 10, 3
 	playmoncry SPECIES_MUDKIP, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickMudkip, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickMudkip
@@ -916,7 +927,7 @@ Route9_StarterDome_ReceivedMudkipFanfare::
 
 Route9_StarterDome_ReceivedMudkip::
 	setflag FLAG_STARTER_DOME_MUDKIP
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -925,7 +936,7 @@ Route9_StarterDome_Charmander::
 	showmonpic SPECIES_CHARMANDER, 10, 3
 	playmoncry SPECIES_CHARMANDER, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickCharmander, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickCharmander
@@ -979,7 +990,7 @@ Route9_StarterDome_ReceivedCharmanderFanfare::
 
 Route9_StarterDome_ReceivedCharmander::
 	setflag FLAG_STARTER_DOME_CHARMANDER
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -988,7 +999,7 @@ Route9_StarterDome_Cyndaquil::
 	showmonpic SPECIES_CYNDAQUIL, 10, 3
 	playmoncry SPECIES_CYNDAQUIL, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickCyndaquil, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickCyndaquil
@@ -1042,7 +1053,7 @@ Route9_StarterDome_ReceivedCyndaquilFanfare::
 
 Route9_StarterDome_ReceivedCyndaquil::
 	setflag FLAG_STARTER_DOME_CYNDAQUIL
-	setvar VAR_STARTER_DOME_STATE, 19
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
 	end
 
@@ -1051,7 +1062,7 @@ Route9_StarterDome_Torchic::
 	showmonpic SPECIES_TORCHIC, 10, 3
 	playmoncry SPECIES_TORCHIC, 0
 	waitmoncry
-	goto_if_eq VAR_STARTER_DOME_STATE, 1, Route9_StarterDome_HideMonPic
+	goto_if_ge VAR_STORYLINE_STATE, 20, Route9_StarterDome_HideMonPic
 	msgbox Route9_StarterDome_Text_PickTorchic, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route9_StarterDome_PickTorchic
@@ -1105,8 +1116,17 @@ Route9_StarterDome_ReceivedTorchicFanfare::
 
 Route9_StarterDome_ReceivedTorchic::
 	setflag FLAG_STARTER_DOME_TORCHIC
-	setvar VAR_STARTER_DOME_STATE, 199
+	setvar VAR_STORYLINE_STATE, 20
 	releaseall
+	end
+
+Route9_StarterDome_PreventLeave::
+	lock
+	msgbox Route9_StarterDome_Text_PreventLeave, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
+	waitmovement 0
+	release
 	end
 
 Route9_StarterDome_HideMonPic::
@@ -1420,7 +1440,6 @@ D10WU2L8U14R7FD:
 	walk_right
 	walk_right
 	walk_right
-	follower_face_down
 	step_end
 
 WU6FL:
@@ -1822,7 +1841,9 @@ Route9_StarterDome_Text_OhPlayerIAlmostForgot:
 	.string "They came in the mail as a special\n"
 	.string "package from Union City.\p"
 	.string "As a reward for coming this far in your\n"
-	.string "journey, I'll let you choose one!\p"
+	.string "journey, I'll let you choose one!$"
+
+Route9_StarterDome_Text_WhichEvolutionaryStone:
 	.string "Which evolutionary stone would you\n"
 	.string "like, {PLAYER}?$"
 
@@ -1925,3 +1946,8 @@ Route9_StarterDome_Text_PickTorchic:
 
 Route9_StarterDome_Text_ObtainedTorchic:
 	.string "{PLAYER} received a Torchic!$"
+
+Route9_StarterDome_Text_PreventLeave:
+	.string "Wait!\p"
+	.string "You should pick a Pokémon before\n"
+	.string "leaving…$"
