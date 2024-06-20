@@ -405,6 +405,7 @@ LaveriaCity_Kojiro::
 	end
 
 LaveriaCity_Kojiro_Battle::
+	special HealPlayerParty
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Kojiro
@@ -419,8 +420,13 @@ LaveriaCity_Kojiro_Battle::
 	showface FS_KOJIRO, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Text_WhatsThat, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement OBJ_EVENT_ID_CAMERA, WSL3
-	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 12
+	goto_if_eq LaveriaCity_Kojiro_Top
+	goto LaveriaCity_Kojiro_Bottom
+	end
+
+LaveriaCity_Kojiro_Battle_2::
 	special RemoveCameraObject
 	speakername CommonName_Text_Kojiro
 	showface FS_KOJIRO, FSE_SAD, 1, 1
@@ -445,24 +451,6 @@ LaveriaCity_Kojiro_Battle::
 	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_YouDidGood, MSGBOX_AUTOCLOSE
 	hideface 1
-	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_1, 12
-	goto_if_eq LaveriaCity_Kojiro_Top
-	goto LaveriaCity_Kojiro_Bottom
-	end
-
-LaveriaCity_Kojiro_Top::
-	applymovement LOCALID_KOJIRO, WL4
-	waitmovement 0
-	goto LaveriaCity_Kojiro_End
-
-LaveriaCity_Kojiro_Bottom::
-	applymovement LOCALID_KOJIRO, WL2DL2
-	waitmovement 0
-	goto LaveriaCity_Kojiro_End
-	end
-
-LaveriaCity_Kojiro_End::
 	giveitem ITEM_HM04, 1
 	speakername CommonName_Text_Kojiro
 	showface FS_KOJIRO, FSE_SAD, 1, 1
@@ -473,11 +461,25 @@ LaveriaCity_Kojiro_End::
 	removeobject LOCALID_KOJIRO
 	setflag FLAG_BADGE02_GET
 	setvar VAR_ROUTE_7_STATE, 1
-	setvar VAR_STORYLINE_STATE, 19
+	setvar VAR_STORYLINE_STATE, 23
 	fadescreen 0
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	release
+	end
+
+LaveriaCity_Kojiro_Top::
+	applymovement OBJ_EVENT_ID_CAMERA, WL3
+	applymovement LOCALID_KOJIRO, WL4
+	waitmovement 0
+	goto LaveriaCity_Kojiro_Battle_2
+	end
+
+LaveriaCity_Kojiro_Bottom::
+	applymovement OBJ_EVENT_ID_CAMERA, WL3
+	applymovement LOCALID_KOJIRO, WL2DL2
+	waitmovement 0
+	goto LaveriaCity_Kojiro_Battle_2
 	end
 
 SailToIsland:
@@ -758,16 +760,16 @@ LaveriaCity_Text_NoIHaveNoTime:
 LaveriaCity_Text_IfYouAreHere:
 	.string "If you are here for Laveria City's\n"
 	.string "Tournament, you're late, Trainer.\p"
-	.string "I became the Champion… Again."
+	.string "I became the Champion… Again.$"
 
 LaveriaCity_Text_WhatsThat:
 	.string "What's that?\p"
 	.string "You really dare challenge me?\n"
-	.string "On my home turf?"
+	.string "On my home turf?$"
 
 LaveriaCity_Text_DotDotNo:
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "No, you aren't like the others…\n"
 	.string "Power emanates through you.\p"
 	.string "Yes, you intrigued me right away when\n"
@@ -775,11 +777,12 @@ LaveriaCity_Text_DotDotNo:
 	.string "…\n"
 	.string "Very well. I accept your challenge.\p"
 	.string "If you can beat me twice, I will\n"
-	.string "consider you as a Champion.\pLet's go!"
+	.string "consider you as a Champion.\p"
+	.string "Let's go!$"
 
 LaveriaCity_Text_HmhNotToWorry:
 	.string "Hmh…\n"
-	.string "Not to worry… We press on."
+	.string "Not to worry… We press on.$"
 
 LaveriaCity_Text_DotDotYou:
 	.string "…\n"
@@ -787,14 +790,14 @@ LaveriaCity_Text_DotDotYou:
 	.string "You are more than meets the eye.\n"
 	.string "A real Trainer, indeed.\p"
 	.string "But how will you do in a Single Battle?\n"
-	.string "Prepare yourself!"
+	.string "Prepare yourself!$"
 
 LaveriaCity_Text_MyInstinctWasCorrect:
 	.string "My instinct was correct…\n"
-	.string "You are the new Champion."
+	.string "You are the new Champion.$"
 
 LaveriaCity_Text_PlayerDefeatedKojiro:
-	.string "{PLAYER} defeated Kojiro!"
+	.string "{PLAYER} defeated Kojiro!$"
 
 LaveriaCity_Text_YouDidGood:
 	.string "You did good, Trainer.\p"
@@ -803,9 +806,9 @@ LaveriaCity_Text_YouDidGood:
 	.string "…\p"
 	.string "{PLAYER}.\p"
 	.string "Well, {PLAYER}.\n"
-	.string "Please take this for your victory."
+	.string "Please take this for your victory.$"
 
 LaveriaCity_Text_YouWillNeedThis:
 	.string "You will need this if you are to\n"
 	.string "take on Mt. Tamarok, ahead.\p"
-	.string "Good luck, {PLAYER}…"
+	.string "Good luck, {PLAYER}…$"
