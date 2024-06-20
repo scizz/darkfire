@@ -1098,7 +1098,7 @@
 #define FLAG_ITEM_STEEP_RAVINE_PP_UP                                0x416 // Darkfire Flag
 #define FLAG_ITEM_STEEP_RAVINE_HP_UP                                0x417 // Darkfire Flag
 #define FLAG_ITEM_TAMAROK_TUNNELS_X_ATTACK                          0x418 // Darkfire Flag
-#define FLAG_ITEM_TAMAROK_TUNNELS_TM_06                             0x419 // Darkfire Flag
+#define FLAG_ITEM_TAMAROK_TUNNELS_MAX_REVIVE                        0x419 // Darkfire Flag
 #define FLAG_ITEM_TAMAROK_TUNNELS_REVIVE                            0x41A // Darkfire Flag
 #define FLAG_ITEM_TAMAROK_TUNNELS_NEVERMELTICE                      0x41B // Darkfire Flag
 #define FLAG_ITEM_TAMAROK_TUNNELS_TM_07                             0x41C // Darkfire Flag
@@ -1265,8 +1265,8 @@
 #define FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F                           0x4BB // Darkfire Flag
 #define FLAG_NORTHSTAR_TOURNAMENT_ROSE_1F                           0x4BC // Darkfire Flag
 #define FLAG_CHANDRA_VILLAGE_VAR                                    0x4BD // Darkfire Flag
+#define FLAG_TAMAROK_TUNNELS_SUBO                                   0x4BE // Darkfire Flag
 
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
 #define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
 #define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag

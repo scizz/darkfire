@@ -168,6 +168,7 @@ TamarokTunnels_SUBO::
 	applymovement OBJ_EVENT_ID_FOLLOWER, LFDWFR
 	playse SE_PIN
 	applymovement LOCALID_SUBO_M, WFL5U2FD
+	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, RL5FL
 	applymovement OBJ_EVENT_ID_FOLLOWER, WFL5
@@ -175,6 +176,7 @@ TamarokTunnels_SUBO::
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceUp
 	waitmovement 0
 	removeobject LOCALID_SUBO_M
+	setflag FLAG_TAMAROK_TUNNELS_SUBO
 	playse SE_EXIT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitse
@@ -224,7 +226,7 @@ TamarokTunnels_SUBO::
 	setmetatile 9, 10, 630, 1
 	special DrawWholeMapView
 	playse SE_PIN
-	setvar VAR_STORYLINE_STATE, 20
+	setvar VAR_STORYLINE_STATE, 24
 	savebgm MUS_DUMMY
 	special RemoveCameraObject
 	fadedefaultbgm
@@ -250,28 +252,29 @@ WR2WIPSR:
 	step_end
 
 WFLU:
-	walk_faster_left
-	walk_faster_up
+	walk_fast_left
+	walk_fast_up
 	step_end
 
 WFU2:
-	walk_faster_up
-	walk_faster_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 LFDWFR:
 	lock_facing_direction
-	walk_faster_right
+	walk_fast_right
+	unlock_facing_direction
 	step_end
 
 WFL5U2FD:
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_up
-	walk_faster_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
 	face_down
 	step_end
 
@@ -285,11 +288,11 @@ RL5FL:
 	step_end	
 
 WFL5:
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 TamarokTunnels_Text_HahahaGoodWork:

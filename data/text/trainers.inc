@@ -452,7 +452,7 @@ Route7_Text_TiaPostBattle:
 
 Route7_Text_IreneIntro:
 	.string "{COLOR}{RED}The ice here is extremely slippery.\p"
-	.string "Be careful, otherwise you might end up\l"
+	.string "Be careful, otherwise you might end up\n"
 	.string "sliding face-first into a wall!$"
 
 Route7_Text_IreneDefeated:
@@ -520,7 +520,9 @@ Route7_Text_LawrenceDefeated:
 	.string "We got beaten cleanly…$"
 
 Route7_Text_LawrencePostBattle:
-	.string "{COLOR}{BLUE}Do you wanna build a snowman?$"
+	.string "{COLOR}{BLUE}I need to do something to keep myself\n"
+	.string "warm!\p"
+	.string "Maybe I'll build a snowman…$"
 
 Route7_Text_EdgarIntro:
 	.string "{COLOR}{BLUE}As someone who climbs Mt. Tamarok\n"
@@ -2619,32 +2621,30 @@ Route113_Text_LungPostBattle: @ 829A219
 	.string "It's lonely if no one comes along.$"
 
 Route113_Text_ToriIntro: @ 829A261
-	.string "TORI: Both of us, we collect ashes.\n"
-	.string "We battle POKéMON, too.$"
+	.string "Both of us, we love the snow.\n"
+	.string "We battle Pokémon, too.$"
 
 Route113_Text_ToriDefeat: @ 829A29D
-	.string "TORI: We lost… It's boring, so I'm going\n"
-	.string "to get some more ashes.$"
+	.string "We lost… It's boring, so I'm going\n"
+	.string "to play in the snow.$"
 
 Route113_Text_ToriPostBattle: @ 829A2DE
-	.string "TORI: How much ash do we have?\n"
-	.string "Enough for a WHITE FLUTE, I hope.$"
+	.string "Can you play as good as you battle?$"
 
 Route113_Text_ToriNotEnoughMons: @ 829A31F
-	.string "TORI: We want to battle 2-on-2.\n"
+	.string "We want to battle 2-on-2.\n"
 	.string "If we didn't, we would lose!$"
 
 Route113_Text_TiaIntro: @ 829A35C
-	.string "TIA: Both of us, we collect ashes.\n"
-	.string "We battle POKéMON, too.$"
+	.string "Both of us, we love the snow.\n"
+	.string "We battle Pokémon, too.$"
 
 Route113_Text_TiaDefeat: @ 829A397
-	.string "TIA: We couldn't win… It's boring,\n"
-	.string "so I'm getting some more ashes.$"
+	.string "We couldn't win… It's boring,\n"
+	.string "so I'm going to play in the snow.$"
 
 Route113_Text_TiaPostBattle: @ 829A3DA
-	.string "TIA: We have a lot of ashes!\n"
-	.string "I think enough for a WHITE FLUTE!$"
+	.string "You battle well, but we play better!$"
 
 Route113_Text_TiaNotEnoughMons: @ 829A419
 	.string "TIA: We want to battle 2-on-2.\n"

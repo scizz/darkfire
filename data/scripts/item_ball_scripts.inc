@@ -354,8 +354,8 @@ TamarokTunnels_EventScript_ItemXAttack::
 	finditem ITEM_X_ATTACK
 	end
 
-TamarokTunnels_EventScript_ItemTM06::
-	finditem ITEM_TM06
+TamarokTunnels_EventScript_MaxRevive::
+	finditem ITEM_MAX_REVIVE
 	end
 
 TamarokTunnels_EventScript_ItemRevive::

@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -47,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TamarokTunnels_EventScript_ItemTM06",
-      "flag": "FLAG_ITEM_TAMAROK_TUNNELS_TM_06"
+      "script": "TamarokTunnels_EventScript_MaxRevive",
+      "flag": "FLAG_ITEM_TAMAROK_TUNNELS_MAX_REVIVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
@@ -65,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 16,
-      "y": 11,
+      "x": 14,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -87,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_TAMAROK_TUNNELS_SUBO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -100,7 +103,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_TAMAROK_TUNNELS_SUBO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAXIE",
@@ -113,7 +116,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_TAMAROK_TUNNELS_SUBO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
@@ -326,14 +329,11 @@
       "y": 12,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "19",
+      "var_value": "23",
       "script": "TamarokTunnels_SUBO"
     }
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": true,
-  "allow_running": true
+  ]
 }
