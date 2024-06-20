@@ -163,12 +163,14 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	removeobject LOCALID_SUBO_F
 	playse SE_EXIT
+	setflag FLAG_TAMAROK_TUNNELS_SUBO
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	applymovement OBJ_EVENT_ID_PLAYER, FRJSRFL
 	applymovement OBJ_EVENT_ID_FOLLOWER, LFDWFR
 	playse SE_PIN
-	applymovement LOCALID_SUBO_M, WFL5U2FD
+	waitse
 	waitmovement 0
+	applymovement LOCALID_SUBO_M, WFL5U2FD
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, RL5FL
 	applymovement OBJ_EVENT_ID_FOLLOWER, WFL5
@@ -176,7 +178,6 @@ TamarokTunnels_SUBO::
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceUp
 	waitmovement 0
 	removeobject LOCALID_SUBO_M
-	setflag FLAG_TAMAROK_TUNNELS_SUBO
 	playse SE_EXIT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitse
@@ -231,6 +232,77 @@ TamarokTunnels_SUBO::
 	special RemoveCameraObject
 	fadedefaultbgm
 	release
+	end
+
+TamarokTunnels_Magby::
+	lockall
+	goto_if_set FLAG_RECEIVED_TAMAROK_TUNNELS_MAGBY, TamarokTunnels_Bag
+	showmonpic SPECIES_MAGBY, 10, 3
+	playmoncry SPECIES_MAGBY, 0
+	waitmoncry
+	msgbox TamarokTunnels_Text_PickMagby, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq TamarokTunnels_PickMagby
+	goto TamarokTunnels_HideMonPic
+	end
+
+TamarokTunnels_PickMagby::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_MAGBY
+	givemon SPECIES_MAGBY, 14, ITEM_NONE
+	compare VAR_RESULT, 0
+	goto_if_eq TamarokTunnels_SendMagbyParty
+	compare VAR_RESULT, 1
+	goto_if_eq TamarokTunnels_SendMagbyPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+TamarokTunnels_SendMagbyParty::
+	call TamarokTunnels_ReceivedMagbyFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq TamarokTunnels_ReceivedMagby
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto TamarokTunnels_ReceivedMagby
+	end
+
+TamarokTunnels_SendMagbyPC::
+	call TamarokTunnels_ReceivedMagbyFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq TamarokTunnels_MagbyTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto TamarokTunnels_MagbyTransferredToPC
+	end
+
+TamarokTunnels_MagbyTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto TamarokTunnels_ReceivedMagby
+	end
+
+TamarokTunnels_ReceivedMagbyFanfare::
+	bufferspeciesname 1, SPECIES_MAGBY
+	playfanfare MUS_OBTAIN_ITEM
+	message TamarokTunnels_Text_ObtainedMagby
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_MAGBY
+	return
+
+TamarokTunnels_ReceivedMagby::
+	setflag FLAG_RECEIVED_TAMAROK_TUNNELS_MAGBY
+	releaseall
+	end
+
+TamarokTunnels_HideMonPic::
+	hidemonpic
+	releaseall
+	end
+
+TamarokTunnels_Bag::
+	msgbox TamarokTunnels_Text_Bag, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 WUR:
@@ -294,6 +366,17 @@ WFL5:
 	walk_fast_left
 	walk_fast_left
 	step_end
+
+TamarokTunnels_Text_PickMagby:
+	.string "Huh? It's a Magby!\n"
+	.string "It gently whimpers in the cold.\p"
+	.string "Adopt the Magby?$"
+
+TamarokTunnels_Text_ObtainedMagby:
+	.string "{PLAYER} received a Magby!$"
+
+TamarokTunnels_Text_Bag:
+	.string "The Bag is empty.$"
 
 TamarokTunnels_Text_HahahaGoodWork:
 	.string "{COLOR}{BLUE}Hahaha!\nGood work, man!\p"
