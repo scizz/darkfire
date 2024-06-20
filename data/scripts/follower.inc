@@ -27,26 +27,19 @@ callfunc ScrFunc_emote
 
 EventScript_Follower::
 	lockall
-	@compare VAR_FACING, DIR_NORTH
-	call FollowerFaceSouth @_if_eq FollowerFaceSouth
-	delay 60
-	@compare VAR_FACING, DIR_SOUTH
-	call FollowerFaceNorth @_if_eq FollowerFaceNorth
-	delay 60
-	@compare VAR_FACING, DIR_WEST
-	call FollowerFaceEast @_if_eq FollowerFaceEast
-	delay 60
-	@compare VAR_FACING, DIR_EAST
-	call FollowerFaceWest @_if_eq FollowerFaceWest
-	@applymovement OBJ_EVENT_ID_FOLLOWER, FollowerDance
-	@waitmovement 0
-	@bufferlivemonnickname 0
-	@playfirstmoncry
-	@callfunc ScrFunc_getfolloweraction
-	releaseall @remove after test
-	end @remove after test
+	compare VAR_FACING, DIR_NORTH
+	call_if_eq FollowerFaceSouth
+	compare VAR_FACING, DIR_SOUTH
+	call_if_eq FollowerFaceNorth
+	compare VAR_FACING, DIR_WEST
+	call_if_eq FollowerFaceEast
+	compare VAR_FACING, DIR_EAST
+	call_if_eq FollowerFaceWest
+	bufferlivemonnickname 0
+	playfirstmoncry
+	callfunc ScrFunc_getfolloweraction
 EventScript_FollowerEnd::
-	@waitfieldeffect FLDEFF_EMOTE
+	waitfieldeffect FLDEFF_EMOTE
 	releaseall
 	end
 

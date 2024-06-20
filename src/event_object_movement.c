@@ -1007,6 +1007,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PIDGEY_OW               0xF8B
 #define OBJ_EVENT_PAL_TAG_PRESIDENT               0xF8A
 #define OBJ_EVENT_PAL_TAG_EMOTES                  0xF89
+#define OBJ_EVENT_PAL_TAG_GRASS_PAL               0xF88
+#define OBJ_EVENT_PAL_TAG_FIRE_PAL                0xF87
+#define OBJ_EVENT_PAL_TAG_WATER_PAL               0xF86
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
@@ -1588,6 +1591,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Arceus_Steel,          OBJ_EVENT_PAL_TAG_ARCEUS_STEEL},
     {gObjectEventPal_Arceus_Water,          OBJ_EVENT_PAL_TAG_ARCEUS_WATER},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
+    {gObjectEventPaletteGrassPal,           OBJ_EVENT_PAL_TAG_GRASS_PAL},
+    {gObjectEventPaletteFirePal,            OBJ_EVENT_PAL_TAG_FIRE_PAL},
+    {gObjectEventPaletteWaterPal,           OBJ_EVENT_PAL_TAG_WATER_PAL},
     {},
 };
 
@@ -10977,23 +10983,6 @@ void RecreateObjectEvent(struct ObjectEvent *objectEvent, struct Sprite *sprite)
     struct ObjectEvent backupObject = *objectEvent;
     backupObject.graphicsId = objectEvent->graphicsId;
     DestroySprite(sprite);
-
-    // If object has a reflection, remove the reflection sprite
-    if(objectEvent->hasReflection)
-    {
-        u8 i;
-
-        objectEvent->hasReflection = FALSE;
-
-        for(i = 0; i < MAX_SPRITES; i++)
-        {
-            if(gSprites[i].data[0] == gSaveBlock2Ptr->follower.objId)
-            {
-                DestroySprite(&gSprites[i]);
-                break;
-            }
-        }
-    }
     
     RemoveObjectEvent(objectEvent);
 
@@ -11016,6 +11005,8 @@ u8 MovementAction_FollowingPokemon_FaceSouth_Step0(struct ObjectEvent *objectEve
     sprite->animNum = 0;
     sprite->x2 = 0;
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
+    objectEvent->triggerGroundEffectsOnMove = FALSE;
+    objectEvent->hasReflection = TRUE;
     sprite->data[2]++;
     return FALSE;
 }
@@ -11027,6 +11018,8 @@ u8 MovementAction_FollowingPokemon_FaceNorth_Step0(struct ObjectEvent *objectEve
     sprite->animNum = 1;
     sprite->x2 = 0;
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
+    objectEvent->triggerGroundEffectsOnMove = FALSE;
+    objectEvent->hasReflection = TRUE;
     sprite->data[2]++;
     return FALSE;
 }
@@ -11038,6 +11031,8 @@ u8 MovementAction_FollowingPokemon_FaceWest_Step0(struct ObjectEvent *objectEven
     sprite->animNum = 2;
     sprite->x2 = 8;
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
+    objectEvent->triggerGroundEffectsOnMove = FALSE;
+    objectEvent->hasReflection = TRUE;
     sprite->data[2]++;
     return FALSE;
 }
@@ -11049,6 +11044,8 @@ u8 MovementAction_FollowingPokemon_FaceEast_Step0(struct ObjectEvent *objectEven
     sprite->animNum = 3;
     sprite->x2 = -8;
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
+    objectEvent->triggerGroundEffectsOnMove = FALSE;
+    objectEvent->hasReflection = TRUE;
     sprite->data[2]++;
     return FALSE;
 }

@@ -1674,7 +1674,7 @@ Route9_StarterDome_Text_Girl:
 
 Route9_StarterDome_Text_Fat_Guy:
 	.string "{COLOR}{BLUE}I can feel the heat of those Fire-type\n"
-	.string "Pokémon even through the glass!\p"
+	.string "Pokémon, even through the glass!\p"
 	.string "Pokémon are such amazing creatures.$"
 
 Route9_StarterDome_Text_Youngster:
