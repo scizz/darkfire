@@ -4384,7 +4384,7 @@
     {
       "id": "LAYOUT_PINLEAF_TOWN",
       "name": "PinleafTown_Layout",
-      "width": 80,
+      "width": 82,
       "height": 72,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_MossdeepGym",
