@@ -163,12 +163,14 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	removeobject LOCALID_SUBO_F
 	playse SE_EXIT
+	setflag FLAG_TAMAROK_TUNNELS_SUBO
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	applymovement OBJ_EVENT_ID_PLAYER, FRJSRFL
 	applymovement OBJ_EVENT_ID_FOLLOWER, LFDWFR
 	playse SE_PIN
-	applymovement LOCALID_SUBO_M, WFL5U2FD
+	waitse
 	waitmovement 0
+	applymovement LOCALID_SUBO_M, WFL5U2FD
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, RL5FL
 	applymovement OBJ_EVENT_ID_FOLLOWER, WFL5
@@ -176,7 +178,6 @@ TamarokTunnels_SUBO::
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceUp
 	waitmovement 0
 	removeobject LOCALID_SUBO_M
-	setflag FLAG_TAMAROK_TUNNELS_SUBO
 	playse SE_EXIT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitse
