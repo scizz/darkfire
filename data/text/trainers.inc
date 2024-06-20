@@ -136,6 +136,12 @@ CommonName_Text_Aide:
 CommonName_Text_Azumarill:
 	.string "Azumarill$"
 
+CommonName_Text_RangerAlex:
+	.string "Ranger Alex$"
+
+CommonName_Text_RangerMia:
+	.string "Ranger Mia$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
