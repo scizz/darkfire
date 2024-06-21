@@ -184,7 +184,7 @@
       "y": 20,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "0",
+      "var_value": "24",
       "script": "HighwindVillage_Daz"
     },
     {
@@ -193,7 +193,7 @@
       "y": 20,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "0",
+      "var_value": "24",
       "script": "HighwindVillage_Daz"
     }
   ],

@@ -6,7 +6,7 @@ HighwindVillage_RangersLodge_MapScripts::
 	.byte 0
 
 HighwindVillage_RangersLodge_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 0, HighwindVillage_RangersLodge_RangerIntro
+	map_script_2 VAR_RANGER_LODGE_STATE, 0, HighwindVillage_RangersLodge_RangerIntro
 	.2byte 0
 
 HighwindVillage_RangersLodge_RangerIntro::
@@ -23,10 +23,16 @@ HighwindVillage_RangersLodge_RangerIntro::
 	waitmovement 0
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_Ranger
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_HeyThereYouMustBePlayer, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername2 CommonName_Text_RangerAlex
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_OhAndThisHereIsRangerMia, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_FEMALE_RANGER, WD2FR
 	waitmovement 0
 	applymovement LOCALID_FEMALE_RANGER, Common_Movement_WalkInPlaceSlowRight
@@ -34,17 +40,26 @@ HighwindVillage_RangersLodge_RangerIntro::
 	applymovement LOCALID_MALE_RANGER, Common_Movement_FaceDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername CommonName_Text_RangerMia
+	showface FS_FEMALE_RANGER, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_RangersLodge_Text_HiPlayerWeveBeenKeeping, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	speakername2 CommonName_Text_RangerAlex
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_WeveBeenThinking, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_FEMALE_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername CommonName_Text_RangerMia
+	showface FS_FEMALE_RANGER, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_RangersLodge_Text_AbsolutelyWeveSeenALot, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -53,34 +68,53 @@ HighwindVillage_RangersLodge_RangerIntro::
 	end
 
 HighwindVillage_RangersLodge_Intro_Question::
+	speakername2 CommonName_Text_RangerAlex
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_SoWhatDoYouThink, MSGBOX_YESNO
+	hideface 0
+	closemessage
 	compare VAR_RESULT, TRUE
 	goto_if_eq HighwindVillage_RangersLodge_Intro_Yes
+	speakername2 CommonName_Text_RangerAlex
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_AwComeOn, MSGBOX_AUTOCLOSE
-	delay 30
+	hideface 0
 	goto HighwindVillage_RangersLodge_Intro_Question
 	end
 
 HighwindVillage_RangersLodge_Intro_Yes::
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername2 CommonName_Text_RangerAlex
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_ExcellentWereHonored, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_FEMALE_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername CommonName_Text_RangerMia
+	showface FS_FEMALE_RANGER, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_RangersLodge_Text_ThisHereIsYourVeryOwn, MSGBOX_AUTOCLOSE
+	hideface 1
 	giveitem ITEM_QUEST_BOOK, 1
+	closemessage
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	speakername2 CommonName_Text_RangerAlex
+	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox HighwindVillage_RangersLodge_Text_WellWedLoveToStayAndChat, MSGBOX_AUTOCLOSE
+	hideface 0
 	applymovement LOCALID_FEMALE_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	speakername CommonName_Text_RangerMia
+	showface FS_FEMALE_RANGER, FSE_NORMAL, 1, 1
 	msgbox HighwindVillage_RangersLodge_Text_SeeYouAroundPlayer, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_FEMALE_RANGER, Common_Movement_FaceDown
 	waitmovement 0
 	removeobject LOCALID_FEMALE_RANGER
@@ -92,7 +126,7 @@ HighwindVillage_RangersLodge_Intro_Yes::
 	playse SE_EXIT
 	waitse
 	setflag FLAG_HIDE_RANGER_LODGE_RANGERS
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_RANGER_LODGE_STATE, 1
 	releaseall
 	end
 
@@ -128,7 +162,7 @@ HighwindVillage_RangersLodge_Ranger_5::
 
 HighwindVillage_RangersLodge_Text_HeyThereYouMustBePlayer:
 	.string "{COLOR}{BLUE}Hey there!\n"
-	.string "You must be Axel, right?\p"
+	.string "You must be {PLAYER}, right?\p"
 	.string "I caught your battles in the Greendale\n"
 	.string "Village and Laveria City tournaments\l"
 	.string "on TV - seriously impressive stuff!\p"
