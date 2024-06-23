@@ -49,10 +49,9 @@ NorthstarCity_Tournament_1F_SUBOEndDialogue::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_1F_Text_HeyYouYouveCausedUs, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
@@ -89,10 +88,9 @@ NorthstarCity_Tournament_1F_JigglypuffLeft::
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ExclamationMark
+	emote OBJ_EVENT_ID_FOLLOWER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
@@ -107,24 +105,21 @@ NorthstarCity_Tournament_1F_JigglypuffDown::
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ExclamationMark
+	emote OBJ_EVENT_ID_FOLLOWER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
 	end
 
 NorthstarCity_Tournament_1F_JigglypuffSleep::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	emote OBJ_EVENT_ID_PLAYER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
-	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO, 1
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown

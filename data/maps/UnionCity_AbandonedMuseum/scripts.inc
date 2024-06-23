@@ -42,7 +42,7 @@ UnionCity_SUBO_Event_Right::
 	end
 
 UnionCity_SUBO_QuestionMark::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	emote OBJ_EVENT_ID_PLAYER, 8
 	playse SE_PIN
 	applymovement LOCALID_NERD, WFU4L7
 	waitse
@@ -84,10 +84,9 @@ UnionCity_SUBO_Event_Main::
 	waitmovement 0
 	special RemoveCameraObject
 	delay 30
-	applymovement LOCALID_SUBO_L, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_L, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 SpeakerName_Text_QuestionMark
@@ -107,10 +106,9 @@ UnionCity_SUBO_Event_Main::
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement LOCALID_PRESIDENT, Common_Movement_ExclamationMark
+	emote LOCALID_PRESIDENT, 2
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_President
@@ -154,10 +152,9 @@ UnionCity_SUBO_Event_Main::
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement LOCALID_PRESIDENT, Common_Movement_ExclamationMark
+	emote LOCALID_PRESIDENT, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_President
@@ -197,10 +194,9 @@ UnionCity_SUBO_Event_Main::
 	waitse
 	waitmovement 0
 	delay 10
-	applymovement LOCALID_SUBO_L, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_L, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 SpeakerName_Text_QuestionMark
@@ -240,10 +236,9 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_PlayerRight, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 10
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	emote OBJ_EVENT_ID_PLAYER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername2 SpeakerName_Text_QuestionMark

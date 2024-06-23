@@ -57,7 +57,7 @@ UnionCity_TylerPresidentIntro_President::
 	compare VAR_TEMP_0, 56
 	call_if_eq UnionCity_TylerPresidentIntro_PresRight
 	applymovement LOCALID_PRESIDENT, JSR
-	playse SE_PIN
+	playse SE_WALL_HIT
 	waitse
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
@@ -213,13 +213,11 @@ UnionCity_Employee::
 
 UnionCity_Grunt_Gov::
 	lock
-	msgbox UnionCity_Text_Grunt_Gov, MSGBOX_DEFAULT
+	msgbox UnionCity_Text_Grunt_Gov, MSGBOX_AUTOCLOSE
 	delay 20
 	faceplayer
 	delay 10
-	applymovement 21, Common_Movement_WalkInPlaceSlowDown
-	waitmovement 0
-	msgbox UnionCity_Second_Text_Grunt_Gov, MSGBOX_DEFAULT
+	msgbox UnionCity_Second_Text_Grunt_Gov, MSGBOX_AUTOCLOSE
 	applymovement 21, Common_Movement_FaceRight
 	waitmovement 0
 	release
@@ -371,7 +369,9 @@ WL8:
 	step_end
 
 JSR:
-	jump_special_right
+	lock_facing_direction
+	jump_right
+	unlock_facing_direction
 	step_end
 
 DDFL:
@@ -439,20 +439,21 @@ UnionCity_Text_WelcomeToUnion::
 	.string "Maybe he is up to bigger and better\n"
 	.string "things.\p"
 	.string "Anyway, {PLAYER}, someone told me to\n"
-	.string "stock up on items for Anheim Forest,\l"
+	.string "stock up on items for Anheim Forest.\p"
+	.string "You can get there by leaving the exit\n"
 	.string "to the west of the city…\p"
 	.string "Bugs aren't a problem for me, but they\n"
 	.string "might be for you, so I'm passing on\l"
 	.string "the advice!\p"
-	.string "Later!$"
+	.string "See ya!$"
 
 UnionCity_Text_OhGoodHeavens:
 	.string "Oh, good heavens!\n"
 	.string "I am so sorry, I didn't see you!\p"
 	.string "Current events in the city have me\n"
 	.string "running around on a wild goose chase!\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "You look like a Trainer!\n"
 	.string "A new Trainer!\p"
 	.string "You must have come from Chandra\n"

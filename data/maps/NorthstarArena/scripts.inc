@@ -49,10 +49,9 @@ NorthstarArena_PsychicBattle::
 	msgbox NorthstarArena_Text_TheArenaHasBeenSet, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
-	applymovement LOCALID_PSYCHIC, Common_Movement_ExclamationMark
+	emote LOCALID_PSYCHIC, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_PSYCHIC, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Psychic
@@ -69,10 +68,9 @@ NorthstarArena_RangerBattle::
 	msgbox NorthstarArena_Text_TheArenaHasBeenSet, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
-	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_RANGER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Ranger
@@ -88,10 +86,9 @@ NorthstarArena_BlackBeltBattle::
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_TheArenaIsReady, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_BLACKBELT, Common_Movement_ExclamationMark
+	emote LOCALID_BLACKBELT, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_BLACKBELT, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_BlackBelt
@@ -107,10 +104,9 @@ NorthstarArena_OldManBattle::
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_TheArenaIsReady, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_GENTLEMAN, Common_Movement_ExclamationMark
+	emote LOCALID_GENTLEMAN, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_GENTLEMAN, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Gentleman
@@ -126,10 +122,9 @@ NorthstarArena_SailorBattle::
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_BraceYourselves, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_SAILOR, Common_Movement_ExclamationMark
+	emote LOCALID_SAILOR, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SAILOR, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Sailor
@@ -145,10 +140,9 @@ NorthstarArena_AceTrainerBattle::
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarArena_Text_BraceYourselves, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_ACE_TRAINER, Common_Movement_ExclamationMark
+	emote LOCALID_ACE_TRAINER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_ACE_TRAINER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_AceTrainer

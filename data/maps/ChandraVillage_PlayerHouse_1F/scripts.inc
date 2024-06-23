@@ -93,10 +93,9 @@ ChandraVillage_Playerhouse_1F_Storyline_State_3_Running_Shoes::
 	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	emote LOCALID_MOM, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_1F_Text_OhPlayer, MSGBOX_AUTOCLOSE

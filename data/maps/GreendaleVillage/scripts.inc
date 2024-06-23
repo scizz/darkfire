@@ -66,10 +66,9 @@ GreendaleVillage_Tournament_Main::
 	delay 30
 	applymovement LOCALID_YOUNGSTER, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement LOCALID_YOUNGSTER, Common_Movement_ExclamationMark
+	emote LOCALID_YOUNGSTER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername SpeakerName_Text_BugCatcher
@@ -82,10 +81,9 @@ GreendaleVillage_Tournament_Main::
 	speakername SpeakerName_Text_BugCatcher
 	msgbox GreendaleVillage_Text_HeyYou, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_YOUNGSTER, WL3FR
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	emote OBJ_EVENT_ID_PLAYER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	goto GreendaleVillage_Tournament_ToPos
 	end
 
@@ -134,20 +132,18 @@ Greendale_Tournament_Battle::
 	applymovement OBJ_EVENT_ID_FOLLOWER, WL2
 	waitmovement 0
 	delay 10
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_GoodLuckToEveryone, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_YOUNGSTER, Common_Movement_ExclamationMark
+	emote LOCALID_YOUNGSTER, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_YOUNGSTER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_BugCatcher
@@ -163,10 +159,9 @@ Greendale_Tournament_Battle::
 	applymovement LOCALID_RANGER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 30
-	applymovement LOCALID_RANGER, Common_Movement_QuestionMark
+	emote LOCALID_RANGER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	random 2
 	switch VAR_RESULT
 	case 0, GreendaleVillage_Tournament_Battle_Ranger
@@ -188,10 +183,9 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	applymovement OBJ_EVENT_ID_PLAYER, WUFL
 	applymovement OBJ_EVENT_ID_FOLLOWER, WUFFL
 	waitmovement 0
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Announcer
@@ -223,10 +217,9 @@ GreendaleVillage_Tournament_Battle_Ranger::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement LOCALID_RANGER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Announcer
@@ -257,10 +250,9 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	applymovement OBJ_EVENT_ID_PLAYER, WUFL
 	applymovement OBJ_EVENT_ID_FOLLOWER, WUFFL
 	waitmovement 0
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox GreendaleVillage_Text_AndThatsTheEnd, MSGBOX_AUTOCLOSE
@@ -289,10 +281,9 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement LOCALID_COOLTRAINER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Announcer
@@ -316,10 +307,9 @@ GreendaleVillage_Tournament_Rose::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Announcer
@@ -407,10 +397,9 @@ GreendaleVillage_Tournament_Rose_Battle::
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
 	applymovement OBJ_EVENT_ID_PLAYER, WRFU
 	waitmovement 0
-	applymovement LOCALID_HOST, Common_Movement_ExclamationMark
+	emote LOCALID_HOST, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	playfanfare MUS_OBTAIN_SYMBOL

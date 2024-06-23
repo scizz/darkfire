@@ -544,7 +544,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_7_CHARCOAL                    (FLAG_HIDDEN_ITEMS_START + 0x09) // Darkfire Flag
 #define FLAG_HIDDEN_ITEM_ROUTE_7_TM_23                       (FLAG_HIDDEN_ITEMS_START + 0x0A) // Darkfire Flag
 #define FLAG_HIDDEN_ITEM_ROUTE_8_RARE_CANDY                  (FLAG_HIDDEN_ITEMS_START + 0x0B) // Darkfire Flag
-#define FLAG_HIDDEN_ITEM_LAVERIA_CITY_RARE_CANDY             (FLAG_HIDDEN_ITEMS_START + 0x0D) // Darkfire Flag
+#define FLAG_HIDDEN_ITEM_LAVERIA_CITY_ETHER                  (FLAG_HIDDEN_ITEMS_START + 0x0D) // Darkfire Flag
 #define FLAG_HIDDEN_ITEM_PINLEAF_TOWN_INN_2F_RARE_CANDY      (FLAG_HIDDEN_ITEMS_START + 0x24) // Darkfire Flag
 #define FLAG_HIDDEN_ITEM_STEEP_RAVINE_CARBOS                 (FLAG_HIDDEN_ITEMS_START + 0x26) // Darkfire Flag
 #define FLAG_HIDDEN_ITEM_STEEP_RAVINE_IRON                   (FLAG_HIDDEN_ITEMS_START + 0x0E) // Darkfire Flag

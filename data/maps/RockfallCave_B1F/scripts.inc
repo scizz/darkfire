@@ -12,10 +12,9 @@ RockfallCave_B1F_RangerEvent1Main::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	playmoncry SPECIES_CHARMANDER, 0
 	waitmoncry
 	msgbox RockfallCave_B1F_Text_TheRangersCharmanderUsedFlash, MSGBOX_DEFAULT
@@ -32,10 +31,9 @@ RockfallCave_B1F_RangerEvent1Main::
 	delay 30
 	applymovement LOCALID_RANGER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_RANGER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 1, 1
 	msgbox RockfallCave_B1F_Text_OhTrainerYouMadeIt, MSGBOX_AUTOCLOSE
@@ -57,10 +55,9 @@ RockfallCave_B1F_RangerEvent1Main::
 	playse SE_BANG
 	special ShakeCamera
 	waitse
-	applymovement LOCALID_RANGER, Common_Movement_QuestionMark
+	emote LOCALID_RANGER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername CommonName_Text_Ranger
@@ -73,10 +70,9 @@ RockfallCave_B1F_RangerEvent1Main::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement 7, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_RANGER, Common_Movement_QuestionMark
+	emote LOCALID_RANGER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, WU2
 	waitmovement 0
@@ -85,10 +81,9 @@ RockfallCave_B1F_RangerEvent1Main::
 	waitse
 	playmoncry SPECIES_LARVITAR, 0
 	waitmoncry
-	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_RANGER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft

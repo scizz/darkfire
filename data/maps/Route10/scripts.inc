@@ -50,10 +50,9 @@ Route10_SUBO_2::
 	closemessage
 	applymovement 16, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 16, Common_Movement_ExclamationMark
+	emote 16, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 15, Common_Movement_FaceRight
 	applymovement 16, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
@@ -67,8 +66,8 @@ Route10_SUBO_2::
 	applymovement 15, Common_Movement_FaceUp
 	applymovement 16, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 15, Common_Movement_ExclamationMark
-	applymovement 16, Common_Movement_ExclamationMark
+	emote 15, 7
+	emote 16, 3
 	playse SE_PIN
 	waitse
 	waitmovement 0

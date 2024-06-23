@@ -14,10 +14,9 @@ RockfallCave_1F_RangerEvent1SetBack::
 
 RockfallCave_1F_RangerEvent1Start::
 	lockall
-	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_RANGER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight

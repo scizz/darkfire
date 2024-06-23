@@ -74,10 +74,9 @@ HighwindVillage_Daz::
 	applymovement LOCALID_DAZ, Common_Movement_WalkUp
 	waitmovement 0
 	delay 30
-	applymovement LOCALID_DAZ, Common_Movement_ExclamationMark
+	emote LOCALID_DAZ, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_DAZ, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Daz

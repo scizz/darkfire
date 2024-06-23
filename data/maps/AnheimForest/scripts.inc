@@ -65,10 +65,9 @@ AnheimForest_SUBO::
 	delay 30
 	applymovement LOCALID_SUBO, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO, Common_Movement_FaceUp
 	waitmovement 0
 	opendoor 31, 45
@@ -271,7 +270,7 @@ AnheimForest_Tyler_Encounter::
 	delay 30
 	applymovement LOCALID_TYLER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0

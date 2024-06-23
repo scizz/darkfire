@@ -13,10 +13,9 @@ HighwindVillage_RangersLodge_RangerIntro::
 	lockall
 	applymovement LOCALID_MALE_RANGER, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement LOCALID_MALE_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_MALE_RANGER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_FEMALE_RANGER, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement LOCALID_MALE_RANGER, Common_Movement_WalkDown

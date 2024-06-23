@@ -11,10 +11,9 @@ GreendaleVillage_House1_Woman::
 	end
 
 GreendaleVillage_House1_Woman_Quest_Started::
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	checkitem ITEM_LETTER, 1
 	compare VAR_RESULT, 1
 	goto_if_ge GreendaleVillage_House1_Woman_Quest_Got_Letter
@@ -28,10 +27,9 @@ GreendaleVillage_House1_Woman_Quest_Got_Letter::
 	msgbox Action_Letter_Handover, MSGBOX_DEFAULT
 	removeitem ITEM_LETTER, 1
 	delay 30
-	applymovement 1, Common_Movement_Heart
+	emote 1, 6
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox GreendaleVillage_House1_Text_Woman_5, MSGBOX_DEFAULT
 	setflag FLAG_ROUTE_3_QUEST_COMPLETED
 	releaseall

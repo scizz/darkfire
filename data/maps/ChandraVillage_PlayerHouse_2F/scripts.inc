@@ -59,20 +59,18 @@ ChandraVillage_PlayerHouse_2F_Storyline_State_1::
 	addobject LOCALID_MOM, MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_2F
 	playse SE_EXIT
 	waitse
-	applymovement LOCALID_MOM, Common_Movement_QuestionMark
+	emote LOCALID_MOM, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_PlayerHouse_2F_Text_KnockingOnDoor, MSGBOX_DEFAULT
 	closemessage
 	hideface 1
 	delay 30
-	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	emote LOCALID_MOM, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Mom

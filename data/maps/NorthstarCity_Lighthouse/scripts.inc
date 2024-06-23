@@ -22,20 +22,18 @@ NorthstarCity_Lighthouse_InitRoomObjects::
 
 NorthstarCity_Lighthouse_TelescopeAfter::
 	lock
-	applymovement 1, Common_Movement_QuestionMark
+	emote 1, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox NorthstarCity_Lighthouse_Text_TrainerAreYouOkay, MSGBOX_AUTOCLOSE
 	delay 30
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox NorthstarCity_Lighthouse_Text_OhThisIs, MSGBOX_AUTOCLOSE
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
 	setvar VAR_STORYLINE_STATE, 3
@@ -50,10 +48,9 @@ NorthstarCity_Lighthouse_Old_Man::
 	msgbox NorthstarCity_Lighthouse_Text_NotNow, MSGBOX_AUTOCLOSE
 	delay 30
 	faceplayer
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox NorthstarCity_Lighthouse_Text_OhATrainer, MSGBOX_AUTOCLOSE
 	delay 30
 	applymovement 1, Common_Movement_FaceRight

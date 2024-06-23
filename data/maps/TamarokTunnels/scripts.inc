@@ -69,10 +69,9 @@ TamarokTunnels_SUBO::
 	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_NowAnotherScout, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_SUBO_F, Common_Movement_QuestionMark
+	emote LOCALID_SUBO_F, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername2 SpeakerName_Text_SuboGrunt
@@ -82,10 +81,9 @@ TamarokTunnels_SUBO::
 	delay 10
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_SUBO_M, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_M, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowUp
@@ -118,10 +116,9 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_SUBO_M, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_M, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
@@ -145,10 +142,9 @@ TamarokTunnels_SUBO::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox TamarokTunnels_Text_HahaSoNaive, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	emote OBJ_EVENT_ID_PLAYER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_SuboGrunt
