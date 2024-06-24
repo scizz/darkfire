@@ -117,6 +117,7 @@ RockfallCave_B1F_RangerEvent1Finish::
 	waitmovement 0
 	removeobject LOCALID_RANGER
 	removeobject 7
+	completequest QUEST_1
 	setflag FLAG_HIDE_ROCKFALL_CAVE_B1F_RANGER
 	setvar VAR_RANGER_EVENT_1, 4
 	release
@@ -134,6 +135,7 @@ RockfallCave_B1F_Ranger::
 
 RockfallCave_B1F_Larvitar::
 	lockall
+	faceplayer
 	playmoncry SPECIES_LARVITAR, 0
 	speakername CommonName_Text_Larvitar
 	msgbox RockfallCave_B1F_Text_Larvitar, MSGBOX_DEFAULT

@@ -9,6 +9,10 @@ HighwindVillage_RangersLodge_OnFrame::
 	map_script_2 VAR_RANGER_LODGE_STATE, 0, HighwindVillage_RangersLodge_RangerIntro
 	.2byte 0
 
+HighwindVillage_RangersLodge_SignCalendar::
+	msgbox HighwindVillage_RangersLodge_Text_SignCalendar, MSGBOX_SIGN
+	end
+
 HighwindVillage_RangersLodge_RangerIntro::
 	lockall
 	applymovement LOCALID_MALE_RANGER, Common_Movement_FaceDown
@@ -158,6 +162,10 @@ HighwindVillage_RangersLodge_Receptionist::
 HighwindVillage_RangersLodge_Ranger_5::
 	msgbox HighwindVillage_RangersLodge_Text_HeyThereTrainer, MSGBOX_NPC
 	end
+
+HighwindVillage_RangersLodge_Text_SignCalendar:
+	.string "The calendar is heavily marked with\n"
+	.string "various Ranger operations.$"
 
 HighwindVillage_RangersLodge_Text_HeyThereYouMustBePlayer:
 	.string "{COLOR}{BLUE}Hey there!\n"

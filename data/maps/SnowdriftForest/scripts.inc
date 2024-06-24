@@ -59,6 +59,8 @@ SnowdriftForest_EventScript_Nob::
 
 SnowdriftForest_IceNest::
 	lock
+	questmenu QUEST_MENU_CHECK_ACTIVE QUEST_2
+	goto_if_eq VAR_RESULT, FALSE, SnowdriftForest_IceNest_QuestNotStarted
 	msgbox SnowdriftForest_Text_ItsAnEmpty, MSGBOX_AUTOCLOSE
 	checkitem ITEM_SHEENY_SEED, 1
 	compare VAR_RESULT, 1
@@ -66,6 +68,11 @@ SnowdriftForest_IceNest::
 	checkitem ITEM_GLEAMING_SEED, 1
 	compare VAR_RESULT, 1
 	goto_if_ge SnowdriftForest_IceNest_PlantSeed
+	release
+	end
+
+SnowdriftForest_IceNest_QuestNotStarted::
+	msgbox SnowdriftForest_Text_ItsAnEmpty, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -152,12 +159,19 @@ SnowdriftForest_IceNest_PlantedGleamingSeed::
 	fadescreen 1
 	delay 60
 	removeobject LOCALID_SHINY_NOCTOWL
+	questmenu QUEST_MENU_CHECK_COMPLETE QUEST_2
+	call_if_eq VAR_RESULT, FALSE, SnowdriftForest_IceNest_CompleteQuest
 	setflag FLAG_SNOWDRIFT_FOREST_SHINY_NOCTOWL
 	setflag FLAG_SNOWDRIFT_FOREST_OWL
 	clearflag FLAG_SHINY_CREATION
 	fadescreen 0
 	release
 	end
+
+SnowdriftForest_IceNest_CompleteQuest::
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_2, SUB_QUEST_2
+	completequest QUEST_2
+	return
 
 SnowdriftForest_IceNest_SpawnNoctowl::
 	clearflag FLAG_SNOWDRIFT_FOREST_OWL
