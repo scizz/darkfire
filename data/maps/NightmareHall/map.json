@@ -13,8 +13,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_FEMALE_SUBO",
-      "x": 20,
-      "y": 8,
+      "x": 22,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -27,7 +27,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 18,
-      "y": 7,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -40,7 +40,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 22,
-      "y": 5,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -53,7 +53,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_HOUNDOOM",
       "x": 21,
-      "y": 5,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
       "movement_range_x": 0,
@@ -66,7 +66,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_POKE_BALL",
       "x": 24,
-      "y": 5,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -79,7 +79,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_FERALIGATR",
       "x": 18,
-      "y": 5,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -92,7 +92,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 17,
-      "y": 5,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -104,8 +104,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
-      "x": 19,
-      "y": 3,
+      "x": 21,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -117,8 +117,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_ZAGAN",
-      "x": 20,
-      "y": 3,
+      "x": 22,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -130,8 +130,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_FEMALE_SUBO",
-      "x": 17,
-      "y": 3,
+      "x": 18,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
