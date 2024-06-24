@@ -14,10 +14,9 @@ RockfallCave_1F_RangerEvent1SetBack::
 
 RockfallCave_1F_RangerEvent1Start::
 	lockall
-	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_RANGER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RANGER, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
@@ -50,6 +49,7 @@ RockfallCave_1F_RangerEvent1StartYes::
 	applymovement LOCALID_RANGER, WD4L2D3
 	waitmovement 0
 	removeobject 1
+	startquest QUEST_1
 	setflag FLAG_HIDE_ROCKFALL_CAVE_RANGER
 	setvar VAR_RANGER_EVENT_1, 1
 	releaseall
@@ -104,8 +104,8 @@ RockfallCave_1F_Text_HaltTrainer:
 	.string "Federation to deal with it.$"
 
 RockfallCave_1F_Text_DotDotDot:
-	.string "{COLOR}{BLUE}…\n"
-	.string "…$"
+	.string "{COLOR}{BLUE}… … …\n"
+	.string "… … …$"
 
 RockfallCave_1F_Text_SayYouLookStrong:
 	.string "{COLOR}{BLUE}Say… You look strong!\n"

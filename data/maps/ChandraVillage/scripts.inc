@@ -36,8 +36,6 @@ ChandraVillage_ExitNorth::
 	emote 11, 7
 	playse SE_PIN
 	waitse
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceDown
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement 11, Common_Movement_WalkInPlaceSlowUp

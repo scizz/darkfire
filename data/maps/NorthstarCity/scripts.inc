@@ -35,10 +35,9 @@ NorthstarCity_ShowSailor::
 NorthstarCity_AfterTournament::
 	applymovement LOCALID_SAILOR_ONE, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_SAILOR_ONE, Common_Movement_ExclamationMark
+	emote LOCALID_SAILOR_ONE, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox NorthstarCity_Text_OhTrainer, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 68
@@ -147,10 +146,9 @@ NorthstarCity_SUBO_2::
 	closemessage
 	applymovement 12, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement 12, Common_Movement_ExclamationMark
+	emote 12, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox NorthstarCity_Text_SUBO_2_Caught, MSGBOX_DEFAULT
 	applymovement 12, Common_Movement_FaceRight
 	waitmovement 0
@@ -263,10 +261,9 @@ NorthstarCity_PsychicTonyNotDefeated::
 NorthstarCity_PsychicTonyPlayerLeft::
 	applymovement 7, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 7, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceUp
@@ -293,10 +290,9 @@ NorthstarCity_PsychicTonyPlayerLeft::
 NorthstarCity_PsychicTonyPlayerBelow::
 	applymovement 7, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 7, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceUp
@@ -323,10 +319,9 @@ NorthstarCity_PsychicTonyPlayerBelow::
 
 NorthstarCity_Storyline_SUBO::
 	lock
-	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_2, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_FaceDown
@@ -335,10 +330,9 @@ NorthstarCity_Storyline_SUBO::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Northstar_City_Text_ThatsIt, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
+	emote LOCALID_GOV, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 CommonName_Text_GovOfficial
@@ -346,16 +340,18 @@ NorthstarCity_Storyline_SUBO::
 	msgbox Northstar_City_Text_Never, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
-	applymovement LOCALID_GOV, FLExc
+	applymovement LOCALID_GOV, Common_Movement_FaceLeft
+	emote LOCALID_GOV, 7
 	playse SE_PIN
 	delay 5
-	applymovement LOCALID_SUBO_1, FLExc
+	applymovement LOCALID_SUBO_1, Common_Movement_FaceLeft
+	emote LOCALID_SUBO_1, 7
 	playse SE_PIN
 	delay 10
-	applymovement LOCALID_SUBO_2, FLExc
+	applymovement LOCALID_SUBO_2, Common_Movement_FaceLeft
+	emote LOCALID_SUBO_2, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername2 CommonName_Text_GovOfficial
@@ -401,10 +397,9 @@ NorthstarCity_Storyline_SUBO_BattleSetUp::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
-	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_2, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
@@ -445,10 +440,9 @@ NorthstarCity_Storyline_SUBO_Battle::
 	msgbox Northstar_City_Text_YoullStandUp, MSGBOX_AUTOCLOSE
 	hideface 1
 	trainerbattle_no_intro TRAINER_SUBO_THUG_REX, SuboThugRex_Text_Defeated
-	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
@@ -551,10 +545,9 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	applymovement LOCALID_SUBO_1, WL9
 	applymovement LOCALID_SUBO_2, WL9
 	waitmovement 0
-	applymovement LOCALID_GOV, Common_Movement_ExclamationMark
+	emote LOCALID_GOV, 2
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
@@ -654,11 +647,6 @@ WL9:
 	walk_left
 	walk_left
 	walk_left
-	step_end
-
-FLExc:
-	face_left
-	emote_exclamation_mark
 	step_end
 
 WFL6UFR:

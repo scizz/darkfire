@@ -84,8 +84,14 @@ NorthstarCity_Apartments_SheenySeedCollector::
 NorthstarCity_Apartments_SheenySeedCollector_Yes::
 	setflag FLAG_SHEENY_SEED_QUEST_START
 	msgbox NorthstarCity_Apartments_Text_FantasticIllBeHere, MSGBOX_AUTOCLOSE
+	questmenu QUEST_MENU_CHECK_COMPLETE QUEST_2
+	call_if_eq VAR_RESULT, FALSE, NorthstarCity_Apartments_SheenySeedCollector_StartQuest
 	release
 	end
+
+NorthstarCity_Apartments_SheenySeedCollector_StartQuest::
+	startquest QUEST_2
+	return
 
 NorthstarCity_Apartments_SheenySeedCollector_QuestStarted::
 	msgbox NorthstarCity_Apartments_Text_AhYoureBack, MSGBOX_YESNO
@@ -112,6 +118,7 @@ NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade::
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	removeitem ITEM_SHEENY_SEED, 10
 	clearflag FLAG_SHEENY_SEED_QUEST_START
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_2, SUB_QUEST_1
 	msgbox NorthstarCity_Apartments_Text_GleamingSeedsAreSaid, MSGBOX_AUTOCLOSE
 	release
 	end

@@ -49,10 +49,9 @@ NorthstarCity_Tournament_4F_InitRoomObjects::
 NorthstarCity_Tournament_4F_EventStart::
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_RECEPTIONIST, Common_Movement_ExclamationMark
+	emote LOCALID_RECEPTIONIST, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RECEPTIONIST, WU2L
 	waitmovement 0
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_WalkInPlaceSlowLeft
@@ -127,10 +126,9 @@ NorthstarCity_Tournament_Started::
 	msgbox NorthstarCity_Tournament_4F_Text_AreWeLiveYet, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceDown
 	waitmovement 0
 	delay 10
@@ -196,10 +194,9 @@ NorthstarCity_Tournament_RangerOpponent::
 	end
 
 NorthstarCity_Tournament_DirectorMagic::
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_ANNOUNCER, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_Announcer
@@ -226,7 +223,7 @@ NorthstarCity_Tournament_4F_CameraPanRight::
 
 NorthstarCity_Tournament_4F_FirstRoundComplete::
 	call NorthstarCity_Tournament_4F_CameraPan
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 0
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -236,7 +233,7 @@ NorthstarCity_Tournament_4F_FirstRoundComplete::
 
 NorthstarCity_Tournament_4F_SecondRoundComplete::
 	call NorthstarCity_Tournament_4F_CameraPan
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 0
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -246,7 +243,7 @@ NorthstarCity_Tournament_4F_SecondRoundComplete::
 
 NorthstarCity_Tournament_4F_ThirdRoundComplete::
 	call NorthstarCity_Tournament_4F_CameraPan
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 0
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -470,31 +467,29 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitse
 	applymovement LOCALID_ANNOUNCER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_ANNOUNCER, Common_Movement_QuestionMark
+	emote LOCALID_ANNOUNCER, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_WORRIED, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_What, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 60
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 2
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_WORRIED, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_ComeAgainCentral, MSGBOX_AUTOCLOSE
 	hideface 1
 	playbgm MUS_SUBO_THEME, TRUE
-	applymovement 4, Common_Movement_QuestionMark
+	emote 4, 7
 	playse SE_PIN
 	delay 10
-	applymovement 3, Common_Movement_QuestionMark
+	emote 3, 7
 	playse SE_PIN
 	delay 5
-	applymovement 2, Common_Movement_QuestionMark
+	emote 2, 7
 	playse SE_PIN
 	delay 5
 	applymovement 4, Common_Movement_FaceRight
@@ -515,17 +510,20 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	addobject LOCALID_RAKAZ
 	applymovement LOCALID_RAKAZ, WL4
 	waitmovement 0
-	applymovement LOCALID_ANNOUNCER, Common_Movement_QuestionMark
-	applymovement OBJ_EVENT_ID_PLAYER, FRQM
+	emote LOCALID_ANNOUNCER, 8
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	emote OBJ_EVENT_ID_PLAYER, 8
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_EAST
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_QuestionMark
+	emote OBJ_EVENT_ID_FOLLOWER, 8
 	playse SE_PIN
 	delay 5
-	applymovement LOCALID_CAMERA_RIGHT, FRQM
+	applymovement LOCALID_CAMERA_RIGHT, Common_Movement_FaceRight
 	playse SE_PIN
 	delay 5
-	applymovement LOCALID_CAMERA_BOTTOM, FRQM
-	applymovement LOCALID_CAMERA_LEFT, FRQM
+	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_FaceRight
+	applymovement LOCALID_CAMERA_LEFT, Common_Movement_FaceRight
+	emote LOCALID_CAMERA_BOTTOM, 8
+	emote LOCALID_CAMERA_LEFT, 8
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -568,13 +566,13 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	showface FS_RAKAZ, FSE_HAPPY, 0, 0
 	msgbox NorthstarCity_Tournament_4F_Text_HelloHelloTenjo, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement 4, Common_Movement_ExclamationMark
+	emote 4, 7
 	playse SE_PIN
 	delay 5
-	applymovement LOCALID_ANNOUNCER, Common_Movement_ExclamationMark
+	emote LOCALID_ANNOUNCER, 7
 	playse SE_PIN
 	delay 5
-	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_ExclamationMark
+	emote LOCALID_CAMERA_BOTTOM, 7
 	waitse
 	waitmovement 0
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
@@ -583,20 +581,18 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	showface FS_RAKAZ, FSE_HAPPY, 0, 0
 	msgbox NorthstarCity_Tournament_4F_Text_AsSuchWeAreNow, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement LOCALID_SUBO_CROWD, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_CROWD, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_CROWD, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_YeahItsPaybackTime, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_ExclamationMark
+	emote LOCALID_CAMERA_BOTTOM, 2
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Cameraman
 	msgbox NorthstarCity_Tournament_4F_Text_NoThisCantBe, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
@@ -614,7 +610,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	msgbox NorthstarCity_Tournament_4F_Text_YouKnowWhyImHere, MSGBOX_AUTOCLOSE
 	hideface 1
 	trainerbattle_no_intro TRAINER_SUBO_THUG_ARIK_2, SuboThugArik2_Text_Defeated
-	applymovement LOCALID_SUBO_CROWD, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_CROWD, 3
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -665,10 +661,9 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	applymovement LOCALID_RAKAZ, Common_Movement_FaceRight
 	applymovement LOCALID_SUBO_DOOR, WFL8
 	waitmovement 0
-	applymovement LOCALID_RAKAZ, Common_Movement_QuestionMark
+	emote LOCALID_RAKAZ, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_DOOR, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_SuboGrunt
@@ -812,16 +807,6 @@ WL9DL2FR:
 	walk_left
 	walk_left
 	face_right
-	step_end
-
-FRQM:
-	face_right
-	emote_question_mark
-	step_end
-
-FFRQM:
-	follower_face_right
-	emote_question_mark
 	step_end
 
 WLD3R2:

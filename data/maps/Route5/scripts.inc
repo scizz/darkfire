@@ -25,11 +25,10 @@ Route5_SUBO::
 	applymovement LOCALID_SUBO_1, Common_Movement_FaceDown
 	applymovement LOCALID_SUBO_2, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
-	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_1, 7
+	emote LOCALID_SUBO_2, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 SpeakerName_Text_Paul
@@ -100,10 +99,9 @@ Route5_SUBO_Left::
 	msgbox Route5_Text_YouThinkYouGeorge, MSGBOX_AUTOCLOSE
 	hideface 0
 	trainerbattle_no_intro TRAINER_SUBO_THUG_PAUL, SuboThugPaul_Text_Defeated
-	applymovement LOCALID_SUBO_1, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 SpeakerName_Text_Paul
@@ -223,10 +221,9 @@ Route5_SUBO_Right::
 	msgbox Route5_Text_YouThinkYouPaul, MSGBOX_AUTOCLOSE
 	hideface 1
 	trainerbattle_no_intro TRAINER_SUBO_THUG_GEORGE, SuboThugGeorge_Text_Defeated
-	applymovement LOCALID_SUBO_2, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO_2, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	delay 10

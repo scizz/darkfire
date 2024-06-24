@@ -31,10 +31,9 @@ PinleafTown_TylerBattle::
 	lock
 	applymovement LOCALID_TYLER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_TYLER, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_SHOCKED, 1, 1
 	msgbox PinleafTown_Text_WoahHeyNoWayPlayer, MSGBOX_AUTOCLOSE

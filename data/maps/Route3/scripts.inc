@@ -147,10 +147,9 @@ Route3_DoubleBattle_Start::
 	trainerbattle_no_intro TRAINER_ROUTE_3_GORDON, Route3Gordon_Text_Defeated
 	removeobject LOCALID_LARVITAR
 	setflag FLAG_HIDE_ROUTE_3_LARVITAR
-	applymovement LOCALID_SCHOOL_KID, Common_Movement_ExclamationMark
+	emote LOCALID_SCHOOL_KID, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SCHOOL_KID, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	msgbox Route3_Text_HowDidYouBeatMe, MSGBOX_AUTOCLOSE

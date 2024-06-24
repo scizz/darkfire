@@ -315,10 +315,9 @@ Route9_StarterDome_Intro::
 	hideface 0
 	applymovement LOCALID_DAZ_1, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement LOCALID_DAZ_1, Common_Movement_ExclamationMark
+	emote LOCALID_DAZ_1, 1
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 CommonName_Text_Daz
@@ -357,10 +356,9 @@ Route9_StarterDome_Main::
 	end
 
 Route9_StarterDome_BackToEntrance::
-	applymovement LOCALID_PROF, Common_Movement_ExclamationMark
+	emote LOCALID_PROF, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
@@ -404,10 +402,9 @@ Route9_StarterDome_BackToEntrance::
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_PlayerIAmSoGlad, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement LOCALID_DAZ_2, Common_Movement_ExclamationMark
+	emote LOCALID_DAZ_2, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_FaceLeft

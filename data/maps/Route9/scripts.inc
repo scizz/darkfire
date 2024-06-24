@@ -80,10 +80,9 @@ Route9_StarterDome::
 	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_DAZ_1, Common_Movement_ExclamationMark
+	emote LOCALID_DAZ_1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_DAZ_1, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_QuestionMark

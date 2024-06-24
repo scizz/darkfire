@@ -2995,3 +2995,928 @@ ContestLadyShow_Text_LostBadly::
 	.string "MC: Uh… Uh-oh…\p"
 	.string "Uh… That's all the time we have today!\n"
 	.string "Thanks for tuning in!$"
+
+@@@ DARKFIRE TV @@@
+
+YouPickedUpTheTVRemote:
+	.string "You picked up the TV remote.$"
+
+PleaseSelectAChannel:
+	.string "Please select a channel…$"
+
+TodayOnTenNewsShouldChildren:
+	.string "Today on TEN News…\n"
+	.string "Should children be allowed to gamble?$"
+
+ThanksForTuningInToPokeTalk1:
+	.string "Host: Thanks for tuning in to Poké\n"
+	.string "Talk.\l"
+	.string "The show about everything Pokémon!\p"
+	.string "Today, we have Lydia in Route 4 and\n"
+	.string "Marcus in Route 6, where we will learn\l"
+	.string "what rare Pokémon can be found today!$"
+
+YoureListeningToTheDrowzeePodcast1:
+	.string "Random Deep Voice Guy: You're\n"
+	.string "listening to the Drowzee Podcast.\l"
+	.string "The podcast that's hypnotically cool.\p"
+	.string "Like wearing sunglasses indoors…\n"
+	.string "That kinda cool.$"
+
+YouPutDownTheTvRemote:
+	.string "You put down the TV remote.$"
+
+TodayOnTenNewsBreakingNews:
+	.string "Today on TEN News…\p"
+	.string "BREAKING NEWS: The SUBO infiltrated\n"
+	.string "the Abandoned Museum in Union City.$"
+
+YoureWatchingPokeTalkTamarokTunnels:
+	.string "Host: You're watching Poké Talk!\n"
+	.string "The show about everything Pokémon!\p"
+	.string "On today's news: A loud explosion in\n"
+	.string "Tamarok Tunnels!\l"
+	.string "We have Hugo the Hiker on the line…\p"
+	.string "Also: Meet the Rangers' Federation!\p"
+	.string "Ranger Erin will be live in Highwind\n"
+	.string "Village discussing what the Rangers'\l"
+	.string "Federation is, and what good they can\l"
+	.string "give to the beautiful region of Tenjo!$"
+
+WelcomeToTrainerWatch1:
+	.string "Welcome to Trainer Watch!\n"
+	.string "We find the best-of-the-best Trainers!\p"
+	.string "On today's radar: Two new hotshot\n"
+	.string "Trainers have caught our eye!\p"
+	.string "Join us to find out more about Ranger\n"
+	.string "Jenny and Trainer {PLAYER}!$"
+
+YoureListeningToTheDrowzeePodcast2:
+	.string "Random Deep Voice Guy: You're\n"
+	.string "listening to the Drowzee Podcast.\l"
+	.string "The podcast that's hypnotically fun.\p"
+	.string "Like being hit by a pebble in a\n"
+	.string "snowball… That kinda fun.$"
+
+OurCorrespondentWillBeLiveInUnionCity:
+	.string "Our correspondent will be live in\n"
+	.string "Union City discussing the controversy\l"
+	.string "around child Game Corner gamblers.\p"
+	.string "Also, what proposals are set to be made\n"
+	.string "to the Tenjo Government regarding new\l"
+	.string "legislation to prevent this growing\l"
+	.string "epidemic? Find out soon on TEN News.$"
+
+LetsDiveRightInLydia:
+	.string "Host: Let's dive right in!\n"
+	.string "Lydia - you're on the air!$"
+
+HelloPokeTalkLydia:
+	.string "{COLOR}{RED}Lydia: Hello, Poké Talk!\p"
+	.string "I am coming to you live from Route 4,\n"
+	.string "also known as the Farmlands!\p"
+	.string "If there are any Trainers coming\n"
+	.string "through this route today, please be\l"
+	.string "very careful!\p"
+	.string "Some of the wild Mareep around here\n"
+	.string "are very aggressive and have been\l"
+	.string "attacking Trainers!$"
+
+ThankYouLydia:
+	.string "Host: Thank you, Lydia.\p"
+	.string "If you are a Trainer and you are\n"
+	.string "visiting Route 4 today, please be\l"
+	.string "careful and refrain from approaching\l"
+	.string "the wild Mareep!$"
+
+EricHeyJohn:
+	.string "…\n"
+	.string "…\p"
+	.string "Eric: Hey, John?$"
+
+JohnHuh:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricYouEverThink:
+	.string "Eric: You ever think if you have a\n"
+	.string "shiny Spinda, you truly have the one\l"
+	.string "unique Spinda?$"
+
+JohnDotHuh:
+	.string "{COLOR}{BLUE}John: …\n"
+	.string "… Huh?$"
+
+EricThinkAboutIt:
+	.string "Eric: Think about it…\p"
+	.string "You have 4,294,967,296 total patterns\n"
+	.string "of Spinda.$"
+
+JohnGoOn:
+	.string "{COLOR}{BLUE}John: Go on…$"
+
+EricYeahItsPrettyRare:
+	.string "Eric: Yeah…\n"
+	.string "It's pretty rare.$"
+
+JohnDotDotDot:
+	.string "{COLOR}{BLUE}John: …\n"
+	.string "…$"
+
+EricSpindasCoolMan:
+	.string "Eric: Spinda's cool, man.$"
+
+JohnYeah:
+	.string "{COLOR}{BLUE}John: Yeah…$"
+
+TodayOnTenNewsALoudExplosion:
+	.string "Today on TEN News…\n"
+	.string "A loud explosion in Mt. Tamarok!$"
+
+YoureWatchingPokeTalkAWildSnorlax:
+	.string "Host: You're watching Poké Talk!\n"
+	.string "The show about everything Pokémon!\p"
+	.string "On today's episode: A wild Snorlax has\n"
+	.string "been spotted in Route 9!\p"
+	.string "We have David reporting live from the\n"
+	.string "outside the Route 9 Starter Dome.\p"
+	.string "Also, a shiny Noctowl has been seen\n"
+	.string "flying around inside Snowdrift Forest!\p"
+	.string "Ranger Ted will be breaking down this\n"
+	.string "event and sharing the stories of the\l"
+	.string "witnesses whom claim to have seen it.\p"
+	.string "All that, and much more, right here\n"
+	.string "on Poké Talk!$"
+
+WelcomeBackToTrainerWatch:
+	.string "Welcome back to Trainer Watch!  The\n"
+	.string "search for the best Trainers in Tenjo!\p"
+	.string "Coming up: Skier Marcus and SUBO\n"
+	.string "Grunt James have caught our eye\l"
+	.string "in this episode of Trainer Watch!$"
+
+YoureListeningToTheDrowzeePodcast3:
+	.string "Random Deep Voice Guy: You're\n"
+	.string "listening to the Drowzee Podcast.\l"
+	.string "The podcast that's hypnotically dope.\p"
+	.string "Like teaming up with a Slowpoke on\n"
+	.string "a gameshow quiz. That kinda dope.$"
+
+OfAllPlacesItWasAnAbandonedMuseum:
+	.string "Of all places, it was an Abandoned\n"
+	.string "Museum in Union City where the SUBO\l"
+	.string "decided to execute their evil plans.\p"
+	.string "The Tenjo President is currently\n"
+	.string "receiving first aid treatment for mild\l"
+	.string "injuries after being rescued by an\l"
+	.string "anonymous Trainer earlier today.\p"
+	.string "The reason why the new-found gang\n"
+	.string "kidnapped the President of Tenjo\l"
+	.string "remains a mystery…$"
+
+HugoYoureOnPokeTalk:
+	.string "Host: Hugo! You're on Poké Talk!\n"
+	.string "Can you hear me?$"
+
+LoudAnClearGerald:
+	.string "{COLOR}{BLUE}Hugo: Loud an' clear, Gerald!$"
+
+WeveReceivedSomeReports:
+	.string "Host: We've received some reports of a\n"
+	.string "loud explosion around Mt. Tamarok…\l"
+	.string "What information can you give us?$"
+
+WelpImSittinHere:
+	.string "{COLOR}{BLUE}Hugo: Welp, I'm sittin' here by my\n"
+	.string "campfire, when all of a sudden I hear\l"
+	.string "a loud crash in the Tamarok Tunnels!$"
+
+ThatsTheCaveComplex:
+	.string "Host: That's the cave complex of Mt.\n"
+	.string "Tamarok, correct?$"
+
+HugoYeaYea:
+	.string "{COLOR}{BLUE}Hugo: Yea! Yea!$"
+
+WhatDoYouThinkCausedTheExplosion:
+	.string "Host: What do you think caused the\n"
+	.string "explosion, Hugo?$"
+
+WelpTheresLotsOfStories:
+	.string "{COLOR}{BLUE}Hugo: Welp, there's a lot of stories\n"
+	.string "'bout wild Onix wreakin' havoc in the\l"
+	.string "caves - so it's probably that!$"
+
+ThankYouHugo:
+	.string "Host: Thank you, Hugo!\n"
+	.string "You heard it here first, Hikers!\p"
+	.string "Watch out for wild Onix if you're\n"
+	.string "climbing Mt. Tamarok today!$"
+
+AlthoughThereAreFewGenerationalPhenomenons:
+	.string "Although there are few generational\n"
+	.string "phenomenons when it comes to talented\l"
+	.string "Trainers, there are plenty of\l"
+	.string "up-and-coming prospects who have the\l"
+	.string "potential to become the leaders of the\l"
+	.string "next generation!\p"
+	.string "Ranger Jenny has recently caused the\n"
+	.string "eye of Trainer Watch, and is currently\l"
+	.string "on a long winning streak.\p"
+	.string "She can be spotted training non-stop\n"
+	.string "in the Route 6 mountains, surviving on\l"
+	.string "nothing but water and bananas!\p"
+	.string "Armed with a powerful Clefairy and a\n"
+	.string "battle setup tough for even seasoned\l"
+	.string "Trainers to handle, Ranger Jenny has\l"
+	.string "quickly been branded as “Top Banana”!$"
+
+EricHeyJohn2:
+	.string "Eric: Hey, John.$"
+
+JohnHuh2:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricIHadABadDream:
+	.string "Eric: I had a bad dream last night.$"
+
+NextUpPokemonTheft:
+	.string "Next up: Pokémon theft.\p"
+	.string "A new group of thugs, who refer to\n"
+	.string "themselves as the Secret Underground\l"
+	.string "Battling Organization, or SUBO, have\l"
+	.string "been caught on CCTV stealing Pokémon.\p"
+	.string "Pokémon are being stolen from front\n"
+	.string "yards, shopping malls, and even Poké\l"
+	.string "Centers.\p"
+	.string "We believe these stolen Pokémon are\n"
+	.string "being used in brutal, illegal\l"
+	.string "underground battling activities.\p"
+	.string "We urge all Trainers to take care when\n"
+	.string "out in the field.\p"
+	.string "If you see any suspicious activity,\n"
+	.string "report it immediately.$"
+
+NextUpIHaveMarcus:
+	.string "Host: Next up, I have Marcus\n"
+	.string "stationed in Route 6…\p"
+	.string "Marcus!\n"
+	.string "You're on the air!$"
+
+ThankYouGeraldHelloPokeTalkViewers:
+	.string "{COLOR}{BLUE}Marcus: Thank you, Gerald.\n"
+	.string "Hello, Poké Talk viewers!\p"
+	.string "I am currently standing next to the\n"
+	.string "Charred Summit in Route 6, where the\l"
+	.string "road has recently been closed off due\l"
+	.string "to some dangerous activity happening\l"
+	.string "on the grounds above.\p"
+	.string "The Rangers' Federation are currently\n"
+	.string "investigating the activity.\p"
+	.string "The roads should be open again to the\n"
+	.string "public very shortly!$"
+
+ThankYouMarcus:
+	.string "Host: Thank you, Marcus.\p"
+	.string "Have you seen any rare Pokémon around\n"
+	.string "Route 6?$"
+
+ISawASeviperSlitheringAround:
+	.string "{COLOR}{BLUE}Marcus: I saw a Seviper slithering\n"
+	.string "around in the Steep Ravine, but there\l"
+	.string "is no way I am going down there! Haha!$"
+
+HahaVeryWiseIndeedThankYou:
+	.string "Host: Haha! Very wise, indeed.\n"
+	.string "Thank you for your time.$"
+
+EricDoYouThinkIceTypeIsBad:
+	.string "Eric: Do you think Ice-type is bad?$"
+
+JohnHuh3:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricThinkAboutItIceOnlyResistsIce:
+	.string "Eric: Think about it…\p"
+	.string "Ice only resists Ice.\n"
+	.string "Ice moves rarely freeze.\p"
+	.string "In fact, it may be the rarest status\n"
+	.string "condition…$"
+
+JohnYeahYouCouldBeRight:
+	.string "{COLOR}{BLUE}John: Yeah…\n"
+	.string "You could be right there, Eric.$"
+
+EricYeahDoWeHaveAnyListenersRightNow:
+	.string "Eric: Yeah…\n"
+	.string "…\p"
+	.string "Do we have any listeners right now…?$"
+
+JohnLetsGoForLunch:
+	.string "{COLOR}{BLUE}John: Let's go for lunch.$"
+
+EricNextUpIsGastly:
+	.string "Eric: Next up: Is Gastly just a dead\n"
+	.string "Koffing?$"
+
+YoureListeningToTheDrowzeePodcast4:
+	.string "Random Deep Voice Guy: You're\n"
+	.string "listening to Drowzee Podcast.\p"
+	.string "The podcast that, well, is kinda\n"
+	.string "whatever…\p"
+	.string "We'll be right back.$"
+
+TodayOnTenNewsTheSubo:
+	.string "Today on TEN News…\n"
+	.string "The SUBO stealing headlines again.$"
+
+YoureWatchingPokeTalkASudowoodoEpidemic:
+	.string "Host: You're watching Poké Talk!\n"
+	.string "The show about everything Pokémon!\p"
+	.string "On today's episode: A Sudowoodo\n"
+	.string "epidemic!\p"
+	.string "Old Man Jackson will be with us\n"
+	.string "discussing the recent explosion in the\l"
+	.string "amount of Sudowoodo in Pinleaf Town,\l"
+	.string "which is now beginning to cause chaos.\p"
+	.string "Coming up - right here on Poké Talk!$"
+
+WelcomeBackToTrainerWatchRakazRosePlayer:
+	.string "Welcome back to Trainer Watch! The\n"
+	.string "search for the best Trainers in Tenjo!\p"
+	.string "Coming up on today's episode, our team\n"
+	.string "has spotted three Trainers!\p"
+	.string "They go by the names of Rakaz, Rose,\n"
+	.string "and {PLAYER}…\p"
+	.string "Let's get started!$"
+
+YoureListeningToTheDrowzeePodcast5:
+	.string "Random Deep Voice Guy: You're\n"
+	.string "listening to the Drowzee Podcast.\l"
+	.string "The podcast that's hypnotically lit.\p"
+	.string "Like a blazing fire, ravaging its way\n"
+	.string "through acres of forestry…\l"
+	.string "That kinda lit.$"
+
+OurReporterWillBeLiveInLaveriaCity:
+	.string "Our reporter will be live in Laveria\n"
+	.string "City after a loud explosion was heard\l"
+	.string "coming from Mt. Tamarok.\p"
+	.string "It has been confirmed the explosion\n"
+	.string "was caused by an amateur-made bomb,\l"
+	.string "created by the SUBO.\p"
+	.string "The explosion completely destroyed one\n"
+	.string "of the cave routes, leaving nothing\l"
+	.string "but a pile of rocky debris.\p"
+	.string "As a result, Hikers are now stranded,\n"
+	.string "unable to return to their homes.$"
+
+LetsDiveRightInRoute9:
+	.string "Host: Let's dive right in to Route 9,\n"
+	.string "where our correspondent, David, is\l"
+	.string "reporting live from outside the\l"
+	.string "Starter Dome.\p"
+	.string "You're live on Poké Talk, David!\n"
+	.string "Can you hear us?$"
+
+DavidCrystalClearGerald:
+	.string "{COLOR}{BLUE}David: Crystal clear, Gerald!$"
+
+WonderfulStuffDavid:
+	.string "Host: Wonderful stuff!\p"
+	.string "David, can you tell us more about this\n"
+	.string "Snorlax?\p"
+	.string "What kind of problems is it causing\n"
+	.string "for Trainers?$"
+
+EarlierTodayAWildSnorlax:
+	.string "{COLOR}{BLUE}David: Earlier today, a wild Snorlax\n"
+	.string "decided to lay down and take a nap in\l"
+	.string "the road leading to Route 10!\p"
+	.string "At this moment in time, the sleepy\n"
+	.string "giant is causing a real block in the\l"
+	.string "road, sending many Trainers back north\l"
+	.string "to Laveria City!$"
+
+HahaWellThatIsCertainlyNotThePlace:
+	.string "Host: Haha!\p"
+	.string "Well, that is certainly not the place\n"
+	.string "for an afternoon snooze, David!$"
+
+VeryMuchSoGeraldIHaveSeen:
+	.string "{COLOR}{BLUE}David: Very much so, Gerald!\p"
+	.string "I have seen a few Trainers try to\n"
+	.string "nudge it awake, but every effort has\l"
+	.string "been in vain.\p"
+	.string "I think we'll need a Poké Flute to\n"
+	.string "get this one awake!$"
+
+APokeFluteWellIfAnyTrainer:
+	.string "Host: A Poké Flute, hey?\p"
+	.string "Well, if any Trainer with a Poké Flute\n"
+	.string "is watching right now and would like\l"
+	.string "to be today's hero, get yourself down\l"
+	.string "to Route 9 and tackle this creature!\p"
+	.string "Thank you for your time, David.$"
+
+SureThingGerald:
+	.string "{COLOR}{BLUE}David: Sure thing, Gerald!$"
+
+FancyATreacherousHikeThrough:
+	.string "Fancy a treacherous hike through a\n"
+	.string "blistering snowstorm?\p"
+	.string "Want to slip and slide on cold, harsh\n"
+	.string "terrain while being pelted in the face\l"
+	.string "by stinging hail?\p"
+	.string "No?\p"
+	.string "How about all of the above, and then\n"
+	.string "coming across a fierce Skier looking\l"
+	.string "to battle?\p"
+	.string "If that isn't enough to send chills\n"
+	.string "to your core, the Skier's team of\l"
+	.string "Azurill, Marill and Azumarill will\l"
+	.string "certainly do the job!\p"
+	.string "Don't let their cute looks fool you!\p"
+	.string "Skier Marcus has been a real halt in\n"
+	.string "Route 8 for many Trainers making their\l"
+	.string "way to Northstar City.\p"
+	.string "He has been sending the majority of\n"
+	.string "Trainers back to the Poké Center!\p"
+	.string "Rumor has it that his Pokémon are\n"
+	.string "holding some cool items…\p"
+	.string "Now!\n"
+	.string "On to next powerhouse on Trainer Watch!$"
+
+EricHeyJohn3:
+	.string "Eric: Hey, John.$"
+
+JohnHuh4:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricItWasQuiteTheJourney:
+	.string "Eric: It was quite the journey making\n"
+	.string "my way into the studio today.$"
+
+InOtherNewsGlobalWarming:
+	.string "In other news…\n"
+	.string "Global warming and its sheer sequel.\p"
+	.string "While things have been heating up in\n"
+	.string "Union City, Laveria City is beginning\l"
+	.string "to freeze over with no prior warning.\p"
+	.string "Snowstorms, freezing lakes, and\n"
+	.string "frost bite have been reported in the\l"
+	.string "northern areas of the region.\p"
+	.string "Weather professionals are baffled as\n"
+	.string "the winter weather was not predicted.$"
+
+NextUpRangerErin:
+	.string "Host: Next up - Ranger Erin!\n"
+	.string "Say hello! You're live on Poké Talk!$"
+
+HelloTenjoRangerErinHere:
+	.string "{COLOR}{RED}Erin: Hello, Tenjo! Ranger Erin here\n"
+	.string "from the Rangers' Federation Lodge!$"
+
+WhatExactlyIsTheRangersFederation:
+	.string "Host: What exactly is the Rangers'\n"
+	.string "Federation, Erin?$"
+
+WeAreAGroupOfLikeminded:
+	.string "{COLOR}{RED}Erin: We are a group of like-minded\n"
+	.string "individuals who are keen to bring a\l"
+	.string "higher level of peace to Tenjo!$"
+
+ButDontWeHaveThatKindOfThing:
+	.string "Host: But, don't we have that kind of\n"
+	.string "thing with the Tenjo Government?$"
+
+TheTenjoGovernmentAreSlowInTheirActions:
+	.string "{COLOR}{RED}Erin: The Tenjo Government are slow in\n"
+	.string "their actions, and some things require\l"
+	.string "immediate action, Gerald!\p"
+	.string "Things like a dangerous Pokémon on the\n"
+	.string "loose, or a Trainer in trouble, we are\l"
+	.string "here to assist with that!$"
+
+VeryGoodWhereCanPeopleFindYou:
+	.string "Host: Very good.\n"
+	.string "Where can people find you?$"
+
+YouCanFindUsAllAroundTheRegion:
+	.string "{COLOR}{RED}Erin: You can find us all around the\n"
+	.string "region!\p"
+	.string "Our member count is rising every day,\n"
+	.string "so keep an eye out for us.\p"
+	.string "We will always be wearing our red\n"
+	.string "uniform!$"
+
+ThankYouForYourServiceErin:
+	.string "Host: Thank you for your service,\n"
+	.string "Erin!\p"
+	.string "I will be sure to say hello if I\n"
+	.string "see a Ranger on my daily commute.$"
+
+ThankYouGeraldGoodbyePokeTalk:
+	.string "{COLOR}{RED}Erin: Thank you, Gerald!\n"
+	.string "Goodbye, Poké Talk!$"
+
+ButJennyIsntTheOnlyTrainer:
+	.string "But, Jenny isn't the only Trainer on\n"
+	.string "our radar…\p"
+	.string "A Trainer from Chandra Village by the\n"
+	.string "name of {PLAYER} has been\l"
+	.string "in the news lately…\p"
+	.string "{PLAYER} thwarted the SUBO's\n"
+	.string "attempt to kidnap the Tenjo President,\l"
+	.string "rescued the Champion of Greendale\l"
+	.string "Village from a Beedrill, and then,\l"
+	.string "get this, beat her in a tournament!\p"
+	.string "Yes, you heard that right!\p"
+	.string "{PLAYER} has been the word on\n"
+	.string "everyone's minds this week after these\l"
+	.string "incredible feats!\p"
+	.string "If anyone crosses paths with either\n"
+	.string "of these Trainers, don't underestimate\l"
+	.string "their skill!\p"
+	.string "If they challenge you to battle, battle\n"
+	.string "them with grit and determination!\p"
+	.string "They will surely love it.$"
+
+JohnOhDotDot:
+	.string "{COLOR}{BLUE}John: Oh…$"
+
+EricYeahIFoundAMasterBall:
+	.string "Eric: Yeah…\n"
+	.string "I found a Master Ball in the dream.$"
+
+JohnHuhDoesntSoundLikeABadDream:
+	.string "{COLOR}{BLUE}John: Huh?\n"
+	.string "Doesn't sound like a bad dream, Eric.$"
+
+EricItGetsWorse:
+	.string "Eric: It gets worse, John.$"
+
+JohnHuh5:
+	.string "{COLOR}{BLUE}John: Huh? $"
+
+EricIGaveItToMyShuckle:
+	.string "Eric: I gave it to my Shuckle to hold.\n"
+	.string "I didn't want to accidentally use it.$"
+
+JohnYeahDotDot:
+	.string "{COLOR}{BLUE}John: Yeah…$"
+
+EricYeahThenIGotIntoABattleWithAWildAbra:
+	.string "Eric: Yeah… Then I got into a battle\n"
+	.string "with a wild Abra.$"
+
+JohnNice:
+	.string "{COLOR}{BLUE}John: Nice…$"
+
+EricNotNiceJohn:
+	.string "Eric: Not nice, John…\n"
+	.string "What move did it use? TRICK.$"
+
+JohnOhNo:
+	.string "{COLOR}{BLUE}John: Oh, no…$"
+
+EricItSwappedMyMasterBall:
+	.string "Eric: It swapped my Master Ball for\n"
+	.string "an Awakening!$"
+
+JohnIThinkItWasTryingToTellYou:
+	.string "{COLOR}{BLUE}John: I think it was trying to tell\n"
+	.string "you to wake up, Eric.$"
+
+ButJohnWhatMoveFollowed:
+	.string "Eric: But, John, what move followed\n"
+	.string "after? TELEPORT.$"
+
+JohnHa:
+	.string "{COLOR}{BLUE}John: Ha…$"
+
+EricYeahItWasPrettyWild:
+	.string "Eric: Yeah…\n"
+	.string "It was pretty wild, man.$"
+
+JohnSeemsLikeIt:
+	.string "{COLOR}{BLUE}John: Seems like it…$"
+
+EricDidYouHaveAnyWildDreams:
+	.string "Eric: Did you have any wild dreams\n"
+	.string "last night?$"
+
+JohnIDreamtAboutKickingAPsyduck:
+	.string "{COLOR}{BLUE}John: I dreamt about kicking a Psyduck\n"
+	.string "up the backside.$"
+
+TheSameGroupOfSuboThugs:
+	.string "The same group of SUBO thugs who\n"
+	.string "vandalized Tamarok Tunnels have now\l"
+	.string "stolen a boat from Northstar City.\p"
+	.string "The stolen boat was last seen sailing\n"
+	.string "east in pursuit of a Government worker\l"
+	.string "before disappearing over the horizon.\p"
+	.string "The Government worker seemed to be in\n"
+	.string "a panic-stricken state prior to the\l"
+	.string "SUBO's arrival.\p"
+	.string "The reason for this aggressive cat and\n"
+	.string "mouse game remains a mystery.$"
+
+ICurrentlyHaveOldManJackson:
+	.string "Host: I currently have Old Man Jackson\n"
+	.string "on the line from Pinleaf Town, where\l"
+	.string "there's been a sudden influx of\l"
+	.string "Sudowoodo, seemingly out of nowhere!\p"
+	.string "Can you tell us more about this\n"
+	.string "situation, Jackson?$"
+
+HelloGeraldYesIBloodyWellCan:
+	.string "{COLOR}{BLUE}Jackson: Hello, Gerald!\n"
+	.string "Yes, I bloody-well can!\p"
+	.string "These darn things are a real pain!\p"
+	.string "I can't collect my daily Lemonade from\n"
+	.string "the west farm because every possible\l"
+	.string "path is blocked by these things!$"
+
+HowTragicWhereDidTheyComeFrom:
+	.string "Host: How tragic…\n"
+	.string "Where did they come from, Jackson?$"
+
+WhoKnowsItMustBeMatingSeasonOrSomething:
+	.string "{COLOR}{BLUE}Jackson: Who knows!\n"
+	.string "It must be mating season or something!\p"
+	.string "I have no idea how to get rid of the\n"
+	.string "buggers! I need Lemonade! Argh!$"
+
+WellGetYourLemondadeJackson:
+	.string "Host: We'll get your Lemonade,\n"
+	.string "Jackson.\p"
+	.string "If anyone from Pinleaf Town or Farmond\n"
+	.string "City is watching, let's band together\l"
+	.string "and get Jackson his Lemonade!\p"
+	.string "Where can we find you, Jackson?$"
+
+GrrhhHmphIllBeInThePinleafTownInn:
+	.string "{COLOR}{BLUE}Jackson: Grrhh… Hmph…\n"
+	.string "I'll be in the Pinleaf Town Inn…$"
+
+YouHeardThatEverybodyLetsGetJackson:
+	.string "Host: You heard that, everybody!\n"
+	.string "Let's get Jackson some Lemonade!\p"
+	.string "In the meantime, if anyone can deal\n"
+	.string "with the Sudowoodo, please get down\l"
+	.string "to Pinleaf Town!$"
+
+NorthstarCityItIsThePlaceOfTheGrandTournament:
+	.string "Northstar City…  It is the place of\n"
+	.string "the grand Tournament.\p"
+	.string "Millions of viewers from all around\n"
+	.string "the world tuned in to watch this\l"
+	.string "year's action-packed thriller!\p"
+	.string "However, this year, it isn't a usual\n"
+	.string "Tournament participant whom has caught\l"
+	.string "our eye; it is a SUBO member by the\l"
+	.string "name of Rakaz who features today's\l"
+	.string "episode of Trainer Watch!\p"
+	.string "While we absolutely do not condone\n"
+	.string "the actions of the SUBO, Rakaz has\l"
+	.string "proven to be a Trainer to be feared\l"
+	.string "throughout the region.\p"
+	.string "After all, he single-handedly took\n"
+	.string "down the TV Tower and captured the\l"
+	.string "Director of the Tournament!\p"
+	.string "For this reason, Rakaz is definitely\n"
+	.string "one to watch - albeit maybe not for\l"
+	.string "the right reasons…$"
+
+EricHeyJohn4:
+	.string "Eric: Hey, John.$"
+
+JohnHuh6:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricImFeelingPunny:
+	.string "Eric: I'm feeling punny today.$"
+
+NextUpAPokemonTheftEpidemic:
+	.string "Next up: A Pokémon theft epidemic.\p"
+	.string "There have been dozens of reports of\n"
+	.string "Pokémon being stolen in the past day.\p"
+	.string "The reports have been coming in from\n"
+	.string "Trainers and Day-Care Centers all\l"
+	.string "around the region.\p"
+	.string "It has now been confimed that up to\n"
+	.string "90% of stolen Pokémon are being used\l"
+	.string "in brutal underground battling venues.\p"
+	.string "These Pokémon are being used to battle\n"
+	.string "beyond their capabilities, with many\l"
+	.string "being rushed to Poké Centers after\l"
+	.string "being found injured and abandoned.\p"
+	.string "We urge everyone watching to stay\n"
+	.string "vigilant and immediately report any\l"
+	.string "suspicious activity in your area.$"
+
+NextUpWeHaveRangerTed:
+	.string "Host: Next up, we have Ranger Ted on\n"
+	.string "the line from Snowdrift Forest.\p"
+	.string "A shiny Noctowl was seen just moments\n"
+	.string "ago!\p"
+	.string "You're live on air, Ted!$"
+
+TedBreakingUp1:
+	.string "{COLOR}{BLUE}Ted: H…h… … ello? …\n"
+	.string "…$"
+
+HelloTed:
+	.string "Host: Hello? Ted?$"
+
+TedBreakingUp2:
+	.string "{COLOR}{BLUE}Ted: C… yo… hear… m…\n"
+	.string "…$"
+
+TedWeCantHearYou:
+	.string "Host: Ted, we can't hear you! The\n"
+	.string "service in the forest must be terrible!$"
+
+TedBreakingUp3:
+	.string "{COLOR}{BLUE}Ted: … …\n"
+	.string "…$"
+
+AndWeveLostHimWellTrainersAndShinyHunters:
+	.string "Host: …\n"
+	.string "And we've lost him…\p"
+	.string "Well… Trainers and Shiny Hunters!\n"
+	.string "You heard it here first!\p"
+	.string "A shiny Noctowl may be flying around\n"
+	.string "in Snowdrift Forest! Beware!$"
+
+OhTheClassicEnduranceBattle:
+	.string "Oh…\n"
+	.string "The classic endurance battle.\p"
+	.string "While a brunt for many Trainers, new\n"
+	.string "and old, endurance certainly holds its\l"
+	.string "place as a sure-fire strategy in the\l"
+	.string "word of battling.\p"
+	.string "SUBO Thug James, armed with Chansey,\n"
+	.string "comes across as a real tanky Trainer,\l"
+	.string "if you have the misfortune to stumble\l"
+	.string "across his path…\p"
+	.string "If you lock eyes with the evil Grunt,\n"
+	.string "be prepared - perhaps with an Ether in\l"
+	.string "hand - for a battle of many turns…\p"
+	.string "Zzz…$"
+
+JohnWhy:
+	.string "{COLOR}{BLUE}John: Why?$"
+
+EricISawAYoungGirl:
+	.string "Eric: I saw a young girl getting\n"
+	.string "chased by a grown man, dude.$"
+
+JohnHuh7:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricYeahILeftMyHouse:
+	.string "Eric: Yeah…\p"
+	.string "I left my house, turned a corner, and\n"
+	.string "suddenly heard loud screams coming\l"
+	.string "from the road ahead.$"
+
+JohnWow:
+	.string "{COLOR}{BLUE}John: Wow…$"
+
+EricYeahAPoorYoungGirlScurriedPastMe:
+	.string "Eric: Yeah…\p"
+	.string "A poor, young girl scurried past me,\n"
+	.string "breathing and crying heavily.\l"
+	.string "She looked terrified.$"
+
+JohnOhNo2:
+	.string "{COLOR}{BLUE}John: Oh, no…$"
+
+EricYeahRightAfterThat:
+	.string "Eric: Yeah…\p"
+	.string "Right after that, the ground shook to\n"
+	.string "a beat beneath my boots as a Hiker\l"
+	.string "appeared, stomping and yelling at her!$"
+
+JohnTerrible:
+	.string "{COLOR}{BLUE}John: Terrible…$"
+
+EricYeahItWasWild:
+	.string "Eric: Yeah, it was wild.$"
+
+JohnYeahSoWhatWasHeYelling:
+	.string "{COLOR}{BLUE}John: Yeah…\n"
+	.string "… So, what was he yelling?$"
+
+EricTheresNoRunning:
+	.string "Eric: “There's no running from a\n"
+	.string "Trainer battle!”$"
+
+JohnHa2:
+	.string "{COLOR}{BLUE}John: Ha…$"
+
+InOtherNewsFarmondCity:
+	.string "In other news…\n"
+	.string "Farmond City is now “Mayhem City”?\p"
+	.string "Our news correspondent will be coming\n"
+	.string "to you live from Route 10 where the\l"
+	.string "SUBO have taken over Farmond City,\l"
+	.string "forcing the residents out.\p"
+	.string "The city has been turned upside down\n"
+	.string "with the sound of destruction crying\l"
+	.string "out from inside the city's walls.\p"
+	.string "This time around, it seems that the\n"
+	.string "SUBO, armed with graffiti canisters,\l"
+	.string "are interested in the city's Factory.\p"
+	.string "Many believe the Factory to be their\n"
+	.string "new venue for more brutal battling.\p"
+	.string "More news to come shortly.$"
+
+InLighterNewsPlayer:
+	.string "In lighter news… \p"
+	.string "{PLAYER} is this year's\n"
+	.string "Northstar City Tournament victor!\p"
+	.string "{PLAYER} fearlessly finessed\n"
+	.string "every opponent with a heroic flair,\l"
+	.string "and comfortably took the No. 1 spot as\l"
+	.string "the new Northstar City Champion!\p"
+	.string "Not only that, but {PLAYER},\n"
+	.string "aided by the previous Greendale\l"
+	.string "Village Champion, Rose, rescued the TV\l"
+	.string "Tower's Director from the tight grip\l"
+	.string "of Rakaz and the SUBO.\p"
+	.string "Together, the dazzling duo forced the\n"
+	.string "evil group out of the building that\l"
+	.string "was taken over during the Tournament.\p"
+	.string "We owe {PLAYER} and Rose a\l"
+	.string "massive thanks at Trainer Watch.\p"
+	.string "We hope this bold act sends out a\n"
+	.string "clear warning to the SUBO that,\l"
+	.string "together, we will not stand for their\l"
+	.string "foul behavior!$"
+
+JohnOhNo3:
+	.string "{COLOR}{BLUE}John: Oh, no…$"
+
+EricOhYesPrepare:
+	.string "Eric: Oh, yes…\n"
+	.string "Prepare to be a-Mew-sed!$"
+
+JohnNo:
+	.string "{COLOR}{BLUE}John: No…$"
+
+EricWhatPokemonDoesDracula:
+	.string "Eric: What Pokémon does Dracula like\n"
+	.string "most?$"
+
+JohnHuh8:
+	.string "{COLOR}{BLUE}John: Huh?$"
+
+EricKoffin:
+	.string "Eric: Koffin'$"
+
+JohnUgh:
+	.string "{COLOR}{BLUE}John: …\n"
+	.string "Ugh…$"
+
+EricWhatDoYouCallALowFatPokemon:
+	.string "Eric: What do you call a low-fat\n"
+	.string "Pokémon?$"
+
+JohnWhatEric:
+	.string "{COLOR}{BLUE}John: …\n"
+	.string "What, Eric?$"
+
+EricButterfree:
+	.string "Eric: Butterfree!$"
+
+JohnHeh:
+	.string "{COLOR}{BLUE}John: Heh…$"
+
+EricDoYouBayleaf:
+	.string "Eric: Do you Bayleaf in life after\n"
+	.string "love?$"
+
+JohnThatWasUnexpected:
+	.string "{COLOR}{BLUE}John: That was unexpected…$"
+
+EricYouMeanOnixpected:
+	.string "Eric: You mean ONIX-pected?$"
+
+JohnKeepYourMouthShutPlease:
+	.string "{COLOR}{BLUE}John: Keep your mouth shut, please…$"
+
+EricYouMeanMyMeowthShut:
+	.string "Eric: You mean keep my MEOWTH shut?$"
+
+JohnDotDotDot2:
+	.string "{COLOR}{BLUE}John: …\n"
+	.string "…$"
+
+EricIPikachuInTheShower:
+	.string "Eric: I Pikachu in the shower.$"
+
+JohnBye:
+	.string "{COLOR}{BLUE}John: Bye…$"

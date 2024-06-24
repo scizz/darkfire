@@ -58,10 +58,9 @@ NorthstarCity_Tournament_3F_SUBOBattle::
 	delay 30
 	applymovement LOCALID_SUBO, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_SUBO, Common_Movement_ExclamationMark
+	emote LOCALID_SUBO, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattle_Male
@@ -83,20 +82,18 @@ NorthstarCity_Tournament_3F_SUBOBattle_Male::
 NorthstarCity_Tournament_3F_SUBOBattleNext::
 	applymovement LOCALID_RAKAZ, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_RAKAZ, Common_Movement_QuestionMark
+	emote LOCALID_RAKAZ, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Rakaz
 	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_WhatInTheWorld, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_DIRECTOR, Common_Movement_ExclamationMark
+	emote LOCALID_DIRECTOR, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_DIRECTOR, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 CommonName_Text_Director
@@ -161,10 +158,9 @@ NorthstarCity_Tournament_3F_SUBORoseBattle_Female::
 	end
 
 NorthstarCity_Tournament_3F_SUBORoseBattle_Begin::
-	applymovement LOCALID_RAKAZ, Common_Movement_ExclamationMark
+	emote LOCALID_RAKAZ, 5
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkUp
 	waitmovement 0
@@ -182,10 +178,9 @@ NorthstarCity_Tournament_3F_SUBORoseBattle_Begin::
 	special RemoveCameraObject
 	trainerbattle_no_intro TRAINER_SUBO_THUG_RYAN, SuboThugRyan_Text_Defeated
 	playbgm MUS_SUBO_THEME, TRUE
-	applymovement LOCALID_ROSE, Common_Movement_QuestionMark
+	emote LOCALID_ROSE, 5
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Rose
 	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_HowDidILose, MSGBOX_AUTOCLOSE

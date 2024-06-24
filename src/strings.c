@@ -1831,13 +1831,13 @@ const u8 gText_Berries[] = _("Berries");
 
 //// side quest data
 //generic strings
-const u8 gText_QuestAnnounce[] = _("The quest '{STR_VAR_1}'\nis now {STR_VAR_2}.");
+const u8 gText_QuestAnnounce[] = _("The quest “{STR_VAR_1}”\nis now {STR_VAR_2}.");
 const u8 gText_QuestComplete[] =_("complete");
 const u8 gText_QuestActive[] =_("active");
 
 //names
 const u8 gText_SideQuestName_1[] = _("Rocky Rumpus");
-const u8 gText_SideQuestName_2[] = _("Owl You Need is a Little Shine");
+const u8 gText_SideQuestName_2[] = _("Owl The Seedy Shenanigans");
 const u8 gText_SideQuestName_3[] = _("Not All Heras Wear Capes");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
 const u8 gText_SideQuestName_5[] = _("Side Quest 5");
@@ -1869,7 +1869,7 @@ const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
 const u8 gText_SideQuestDesc_1[] = _("Rescue Larvitar from the dark depths\nof Rockfall Cave.");
-const u8 gText_SideQuestDesc_2[] = _("Find the shiny Noctowl of Snowdrift\nForest.");
+const u8 gText_SideQuestDesc_2[] = _("Collect 10 Sheeny Seeds and discover\nthe secret of the Gleaming Seed.$");
 const u8 gText_SideQuestDesc_3[] = _("Tame the wild Heracross that's been\nattacking Trainers!");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
 const u8 gText_SideQuestDesc_5[] = _("Description 5");
@@ -1935,7 +1935,7 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 const u8 gText_SideQuestMap1[] = _("Rockfall Cave");
 const u8 gText_SideQuestMap2[] = _("Snowdrift Forest");
 const u8 gText_SideQuestMap3[] = _("Route 10");
-const u8 gText_SideQuestMap4[] = _("???");
+const u8 gText_SideQuestMap4[] = _("Northstar City");
 const u8 gText_SideQuestMap5[] = _("???");
 const u8 gText_SideQuestMap6[] = _("???");
 const u8 gText_SideQuestMap7[] = _("???");
@@ -1964,8 +1964,8 @@ const u8 gText_SideQuestMap29[] = _("???");
 const u8 gText_SideQuestMap30[] = _("???");
 
 //subquests
-const u8 gText_SubQuest1_Name1[] = _("Part 1");
-const u8 gText_SubQuest1_Name2[] = _("Part 2");
+const u8 gText_SubQuest1_Name1[] = _("Sheeny Student");
+const u8 gText_SubQuest1_Name2[] = _("Gleaming Genius");
 const u8 gText_SubQuest1_Name3[] = _("Part 3");
 const u8 gText_SubQuest1_Name4[] = _("Part 4");
 const u8 gText_SubQuest1_Name5[] = _("Part 5");
@@ -1996,8 +1996,8 @@ const u8 gText_SubQuest2_Name18[] = _("Part 18");
 const u8 gText_SubQuest2_Name19[] = _("Part 19");
 const u8 gText_SubQuest2_Name20[] = _("Part 20");
 
-const u8 gText_SubQuest1_Desc1[] = _("Description Sub 1");
-const u8 gText_SubQuest1_Desc2[] = _("Description Sub 2");
+const u8 gText_SubQuest1_Desc1[] = _("Collected 10 Sheeny Seeds and\ntraded with the Owl Fanatic.");
+const u8 gText_SubQuest1_Desc2[] = _("Discovered the secret of the\nGleaming Seed!");
 const u8 gText_SubQuest1_Desc3[] = _("Description Sub 3");
 const u8 gText_SubQuest1_Desc4[] = _("Description Sub 4");
 const u8 gText_SubQuest1_Desc5[] = _("Description Sub 5");

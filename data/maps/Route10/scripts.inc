@@ -13,6 +13,10 @@ Route10_Girl::
 	msgbox Route10_Text_Girl, MSGBOX_NPC
 	end
 
+Route10_Ranger::
+	msgbox Route10_Text_Ranger, MSGBOX_NPC
+	end
+
 Route10_Little_Girl::
 	lockall
 	msgbox Route10_Text_Little_Girl, MSGBOX_DEFAULT
@@ -50,10 +54,9 @@ Route10_SUBO_2::
 	closemessage
 	applymovement 16, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 16, Common_Movement_ExclamationMark
+	emote 16, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 15, Common_Movement_FaceRight
 	applymovement 16, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
@@ -67,8 +70,8 @@ Route10_SUBO_2::
 	applymovement 15, Common_Movement_FaceUp
 	applymovement 16, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 15, Common_Movement_ExclamationMark
-	applymovement 16, Common_Movement_ExclamationMark
+	emote 15, 7
+	emote 16, 3
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -224,6 +227,17 @@ Route10_Text_SUBO_4:
 	.string "{COLOR}{BLUE}Guard duty is sooo boring…\p"
 	.string "I wish I could be in Mayhem City right\n"
 	.string "now, smashing some stuff up!$"
+
+Route10_Text_Ranger:
+	.string "{COLOR}{RED}Oof! Trainer!\p"
+	.string "There's a mean, mean Pokémon up this\n"
+	.string "path! I just chased it here.\p"
+	.string "It's been causing trouble on the\n"
+	.string "road by attacking passersby!\p"
+	.string "Attacking wild Pokémon for food I can\n"
+	.string "understand…\p"
+	.string "But, if it's a danger to us humans?\n"
+	.string "It must be tamed, or taught a lesson!$"
 
 Route10_Text_Heracross:
 	.string "Heracross: Heraa!$"

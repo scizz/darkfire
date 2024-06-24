@@ -101,10 +101,9 @@ Route6_Ranger::
 	hideface 0
 	delay 30
 	faceplayer
-	applymovement LOCALID_RANGER, Common_Movement_ExclamationMark
+	emote LOCALID_RANGER, 1
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername2 CommonName_Text_Ranger
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox Route6_Text_OhATrainer, MSGBOX_YESNO
