@@ -111,3 +111,15 @@ AncientTomb_Braille_ShineInTheMiddle: @ 82A6D06
 	.braille "INHERIT OUR\n"
 	.braille "WILL, SHINE\n"
 	.braille "IN THE MIDDLE.$"
+
+PalaceOfIce_Entrance_Braille_HereLiesThe:
+	brailleformat 4, 6, 26, 13, 7, 9
+	.braille "HERE LIES THE$"
+
+PalaceOfIce_Entrance_Braille_IcyHeartOf:
+	brailleformat 4, 6, 26, 13, 7, 9
+	.braille "ICY HEART OF$"
+
+PalaceOfIce_Entrance_Braille_TheMountain:
+	brailleformat 4, 6, 26, 13, 7, 9
+	.braille "THE MOUNTAIN$"

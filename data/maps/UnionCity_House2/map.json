@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_3",
-      "x": 45,
+      "x": 44,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -82,7 +82,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE_OW",
       "x": 59,
-      "y": 6,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,

@@ -22,7 +22,7 @@
       "y": 22,
       "elevation": 3,
       "dest_map": "MAP_TAMAROK_PEAK",
-      "dest_warp_id": "1"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -35,7 +35,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "PalaceOfIce_Entrance_EntranceLeftSide"
     },
     {
       "type": "sign",
@@ -43,7 +43,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "PalaceOfIce_Entrance_EntranceMiddle"
     },
     {
       "type": "sign",
@@ -51,7 +51,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "PalaceOfIce_Entrance_EntranceRightSide"
     },
     {
       "type": "sign",
