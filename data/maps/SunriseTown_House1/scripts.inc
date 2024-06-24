@@ -28,6 +28,10 @@ SunriseTown_House1_Little_Girl_Two::
 	release
 	end
 
+SunriseTown_House1_TV::
+	msgbox SunriseTown_House1_TV_Text, MSGBOX_SIGN
+	end
+
 SunriseTown_House1_Text_Man:
 	.string "{COLOR}{BLUE}Have you seen the news? Have you?\n"
 	.string "Just disastrous!\p"
@@ -42,3 +46,14 @@ SunriseTown_House1_Text_Little_Girl:
 
 SunriseTown_House1_Text_Little_Girl_Two:
 	.string "{COLOR}{RED}Your {STR_VAR_1} is adorable!$"
+
+SunriseTown_House1_TV_Text:
+	.string "There is a man on the TV broadcasting\n"
+	.string "the current state of public affairs.\p"
+	.string "“The SUBO, or Secret Underground\n"
+	.string "Battling Organization are to be taken\l"
+	.string "very seriously.\p"
+	.string "Not only are they terrorizing Tenjo\n"
+	.string "by stealing Pokémon, but they are also\l"
+	.string "threatening the people and government.\p"
+	.string "Back over to you at the TEN Studio.”$"

@@ -32,10 +32,9 @@ SunriseTown_Little_Boy_Before::
 	applymovement 7, Common_Movement_FaceLeft
 	applymovement 6, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	applymovement 6, Common_Movement_ExclamationMark
+	emote 6, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox SunriseTown_Little_Boy_Play, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -61,10 +60,9 @@ SunriseTown_Little_Girl_Before::
 	applymovement 6, Common_Movement_FaceRight
 	applymovement 7, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox SunriseTown_Little_Girl_Play, MSGBOX_NPC
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_1, 18
@@ -142,10 +140,9 @@ SunriseTown_Cook_Talked_To::
 	msgbox SunriseTown_Fat_Guy_Awaken, MSGBOX_NPC
 	applymovement 4, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	applymovement 4, Common_Movement_ExclamationMark
+	emote 4, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 4, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox SunriseTown_Fat_Guy_Run_Away, MSGBOX_NPC

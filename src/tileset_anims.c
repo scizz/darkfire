@@ -43,6 +43,7 @@ static void TilesetAnim_EliteFour(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_BattleTent(u16);
 static void TilesetAnim_GenericBuilding(u16);
 static void TilesetAnim_RustboroGym(u16);
 static void TilesetAnim_Rustboro(u16);
@@ -150,6 +151,7 @@ static void QueueAnimTiles_Underwater_Seaweed(u8);
 //static void QueueAnimTiles_Cave_Lava(u16);
 static void QueueAnimTiles_BattleFrontierOutsideWest_Flag(u16);
 static void QueueAnimTiles_BattleFrontierOutsideEast_Flag(u16);
+static void QueueAnimTiles_BattleTent_Tv_Ten(u16);
 //static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
@@ -1485,6 +1487,14 @@ static const u16 *const sTilesetAnims_BattleDomeFloorLightPals[] = {
     gTilesetAnims_BattleDomePals0_3,
 };
 
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/0.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/1.4bpp");
+
+const u16 *const gTilesetAnims_BattleTent_Tv_Ten[] = {
+    gTilesetAnims_BattleTent_Tv_Ten_Frame0,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame1
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -1781,6 +1791,13 @@ void InitTilesetAnim_BattleFrontierOutsideEast(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleFrontierOutsideEast;
 }
 
+void InitTilesetAnim_BattleTent(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_BattleTent;
+}
+
 void InitTilesetAnim_Underwater(void)
 {
     sSecondaryTilesetAnimCounter = 0;
@@ -2021,6 +2038,12 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_BattleFrontierOutsideEast_Flag(timer / 8);
+}
+
+static void TilesetAnim_BattleTent(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_BattleTent_Tv_Ten(timer / 8);
 }
 
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
@@ -2588,6 +2611,12 @@ static void QueueAnimTiles_BattlePyramid_StatueShadow(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattlePyramid_StatueShadow);
     AppendTilesetAnimToBuffer(gTilesetAnims_BattlePyramid_StatueShadow[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 135)), 8 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_BattleTent_Tv_Ten(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattleTent_Tv_Ten);
+    AppendTilesetAnimToBuffer(gTilesetAnims_BattleTent_Tv_Ten[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 148)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_RustboroGym_Water0(u16 timer)

@@ -801,7 +801,7 @@ const struct Tileset gTileset_BattleTent =
     .palettes = gTilesetPalettes_BattleTent,
     .metatiles = gMetatiles_BattleTent,
     .metatileAttributes = gMetatileAttributes_BattleTent,
-    .callback = NULL,
+    .callback = InitTilesetAnim_BattleTent,
 };
 
 const struct Tileset gTileset_MysteryEventsHouse =
