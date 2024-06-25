@@ -163,6 +163,11 @@ HighwindVillage_RangersLodge_Ranger_5::
 	msgbox HighwindVillage_RangersLodge_Text_HeyThereTrainer, MSGBOX_NPC
 	end
 
+QuestBookScript::
+	msgbox HighwindVillage_RangersLodge_Text_PlayerTookALook, MSGBOX_DEFAULT
+	openquestmenu
+	end
+
 HighwindVillage_RangersLodge_Text_SignCalendar:
 	.string "The calendar is heavily marked with\n"
 	.string "various Ranger operations.$"
@@ -307,3 +312,7 @@ HighwindVillage_RangersLodge_Text_HeyThereTrainer:
 	.string "follow the trail of Gleaming Seeds.\p"
 	.string "That's some free Ranger knowledge!\n"
 	.string "Hehehe.$"
+
+HighwindVillage_RangersLodge_Text_PlayerTookALook:
+	.string "{PLAYER} took a closer look at the\n"
+	.string "Quest board.$"
