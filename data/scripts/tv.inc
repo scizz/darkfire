@@ -83,3 +83,28 @@ EventScript_DoInSearchOfTrainers::
 	goto_if_eq VAR_RESULT, 0, EventScript_DoInSearchOfTrainers
 	goto EventScript_TurnOffTV
 	end
+
+TV::
+	msgbox PlayerPickedUpTheTVRemote, MSGBOX_AUTOCLOSE
+	message PleaseSelectAChannel
+	waitmessage
+	multichoice 0, 0, MULTI_TV_SELECT_CHANNEL, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TryTenNews
+	case 1, EventScript_TryPokeTalk
+	case 2, EventScript_TryCliffShow
+	case 3, EventScript_TryDrowzeePodcast
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TryTenNews::
+	end
+
+EventScript_TryPokeTalk::
+	end
+
+EventScript_TryCliffShow::
+	end
+
+EventScript_TryDrowzeePodcast::
+	end

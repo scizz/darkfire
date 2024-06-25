@@ -2998,8 +2998,8 @@ ContestLadyShow_Text_LostBadly::
 
 @@@ DARKFIRE TV @@@
 
-YouPickedUpTheTVRemote:
-	.string "You picked up the TV remote.$"
+PlayerPickedUpTheTVRemote:
+	.string "{PLAYER} picked up the TV remote.$"
 
 PleaseSelectAChannel:
 	.string "Please select a channel…$"
@@ -3023,8 +3023,8 @@ YoureListeningToTheDrowzeePodcast1:
 	.string "Like wearing sunglasses indoors…\n"
 	.string "That kinda cool.$"
 
-YouPutDownTheTvRemote:
-	.string "You put down the TV remote.$"
+PlayerPutDownTheTvRemote:
+	.string "{PLAYER} put down the TV remote.$"
 
 TodayOnTenNewsBreakingNews:
 	.string "Today on TEN News…\p"

@@ -1310,6 +1310,11 @@ extern const u8 gText_TrainerHill2F[];
 extern const u8 gText_TrainerHill3F[];
 extern const u8 gText_TrainerHill4F[];
 
+extern const u8 gText_TenNews[];
+extern const u8 gText_PokeTalk[];
+extern const u8 gText_CliffShow[];
+extern const u8 gText_DrowzeePodcast[];
+
 // Cable Club multichoice text
 extern const u8 CableClub_Text_TradeUsingLinkCable[];
 extern const u8 CableClub_Text_BattleUsingLinkCable[];

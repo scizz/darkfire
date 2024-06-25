@@ -48,8 +48,8 @@ SunriseTown_House1_Text_Little_Girl_Two:
 	.string "{COLOR}{RED}Your {STR_VAR_1} is adorable!$"
 
 SunriseTown_House1_TV_Text:
-	.string "There is a man on the TV broadcasting\n"
-	.string "the current state of public affairs.\p"
+	.string "There is a TV reporter describing the\n"
+	.string "current state of public affairs.\p"
 	.string "“The SUBO, or Secret Underground\n"
 	.string "Battling Organization are to be taken\l"
 	.string "very seriously.\p"

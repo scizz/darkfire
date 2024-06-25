@@ -290,7 +290,16 @@ static const struct MenuAction MultichoiceList_GameCornerCoins[] =
 static const struct MenuAction MultichoiceList_HowsFishing[] =
 {
     {gText_Excellent2},
-    {gText_NotSoGood},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_TvSelectAChannel[] =
+{
+    {gText_TenNews},
+    {gText_PokeTalk},
+    {gText_CliffShow},
+    {gText_DrowzeePodcast},
+    {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_SSTidalSlateportWithBF[] =
@@ -840,7 +849,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_DOLLS]          = MULTICHOICE(MultichoiceList_GameCornerDolls),
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),
     [MULTI_HOWS_FISHING]               = MULTICHOICE(MultichoiceList_HowsFishing),
-    [MULTI_UNUSED_51]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_TV_SELECT_CHANNEL]          = MULTICHOICE(MultichoiceList_TvSelectAChannel),
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),
     [MULTI_SSTIDAL_BATTLE_FRONTIER]    = MULTICHOICE(MultichoiceList_SSTidalBattleFrontier),
     [MULTI_RIGHTLEFT]                  = MULTICHOICE(MultichoiceList_RightLeft),
