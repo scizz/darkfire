@@ -247,6 +247,7 @@
 #define METATILE_General_YellowCaveOpen        0x196
 
 // gTileset_GenericBuilding
+#define METATILE_GenericBuilding_Door                    0x35E
 #define METATILE_GenericBuilding_TableEdge               0x2F1
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B
 #define METATILE_GenericBuilding_TrickHouse_Stairs_Down  0x219
@@ -367,11 +368,12 @@
 #define METATILE_MossdeepGameCorner_Door                  0x394
 
 // gTileset_MossdeepGym
+#define METATILE_MossdeepGym_Door               0x24E
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
 
 // gTileset_Mossdeep
-#define METATILE_Mossdeep_Door              0x2A1
-#define METATILE_Mossdeep_Door_SpaceCenter  0x2ED
+#define METATILE_Mossdeep_Door              0x2ED
+#define METATILE_Mossdeep_Door_SpaceCenter  0x26B
 
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A

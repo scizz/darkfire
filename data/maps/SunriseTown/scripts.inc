@@ -223,8 +223,8 @@ SunriseTown_Sign_Text:
 	.string "{FONT_SMALL}“Where Waves and Pokémon Shine Bright”$"
 
 SunriseTown_Hotel_Text:
-	.string "Welcome to Oritania Hotel.\n"
-	.string "Enjoy your stay!$"
+	.string "Oritania Hotel\n"
+	.string "{FONT_SMALL}Sleep amongst the clouds!$"
 
 SunriseTown_Little_Girl_Text:
 	.string "{COLOR}{RED}My brother is angry because of the wild\n"
