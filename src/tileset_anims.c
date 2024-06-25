@@ -1492,10 +1492,22 @@ static const u16 *const sTilesetAnims_BattleDomeFloorLightPals[] = {
 
 const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/0.4bpp");
 const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/1.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame2[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/2.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame3[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/3.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame4[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/4.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame5[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/5.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame6[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/6.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Ten_Frame7[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/ten/7.4bpp");
 
 const u16 *const gTilesetAnims_BattleTent_Tv_Ten[] = {
     gTilesetAnims_BattleTent_Tv_Ten_Frame0,
-    gTilesetAnims_BattleTent_Tv_Ten_Frame1
+    gTilesetAnims_BattleTent_Tv_Ten_Frame1,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame2,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame3,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame4,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame5,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame6,
+    gTilesetAnims_BattleTent_Tv_Ten_Frame7
 };
 
 const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/0.4bpp");
