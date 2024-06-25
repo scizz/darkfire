@@ -5175,7 +5175,7 @@
       "id": "LAYOUT_PINLEAF_TOWN_INN_2F",
       "name": "PinleafTown_Inn_2F_Layout",
       "width": 12,
-      "height": 11,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/PinleafTown_Inn_2F/border.bin",
