@@ -1512,10 +1512,22 @@ const u16 *const gTilesetAnims_BattleTent_Tv_Ten[] = {
 
 const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/0.4bpp");
 const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/1.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame2[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/2.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame3[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/3.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame4[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/4.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame5[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/5.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame6[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/6.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Poke_Frame7[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/poke/7.4bpp");
 
 const u16 *const gTilesetAnims_BattleTent_Tv_Poke[] = {
     gTilesetAnims_BattleTent_Tv_Poke_Frame0,
-    gTilesetAnims_BattleTent_Tv_Poke_Frame1
+    gTilesetAnims_BattleTent_Tv_Poke_Frame1,
+    gTilesetAnims_BattleTent_Tv_Poke_Frame2,
+    gTilesetAnims_BattleTent_Tv_Poke_Frame3,
+    gTilesetAnims_BattleTent_Tv_Poke_Frame4,
+    gTilesetAnims_BattleTent_Tv_Poke_Frame5,
+    gTilesetAnims_BattleTent_Tv_Poke_Frame6,
+    gTilesetAnims_BattleTent_Tv_Poke_Frame7
 };
 
 const u16 gTilesetAnims_BattleTent_Tv_Drowzee_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/drowzee/0.4bpp");
