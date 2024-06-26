@@ -131,10 +131,9 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	waitmovement 0
 	animateflash 0
 	setflashlevel 0
-	applymovement LOCALID_GOVOFF, Common_Movement_ExclamationMark
+	emote LOCALID_GOVOFF, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	playbgm MUS_SUBO_THEME, 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
@@ -169,10 +168,9 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_TelescopeSea_Text_IHope, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_GOVOFF, Common_Movement_ExclamationMark
+	emote LOCALID_GOVOFF, 2
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_GOVOFF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 CommonName_Text_GovOfficial

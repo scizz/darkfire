@@ -11,6 +11,7 @@ NorthstarCity_House1_Woman::
 
 NorthstarCity_House1_Bulbasaur::
 	lock
+	faceplayer
 	playmoncry SPECIES_BULBASAUR, 0
 	speakername CommonName_Text_Bulbasaur
 	msgbox NorthstarCity_House1_Text_Bulbasaur, MSGBOX_AUTOCLOSE
