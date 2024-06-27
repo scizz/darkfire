@@ -424,6 +424,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route7_Sign_Door"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 41,
+      "elevation": 0,
+      "item": "ITEM_ETHER",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_PROTEIN"
     }
   ]
 }
