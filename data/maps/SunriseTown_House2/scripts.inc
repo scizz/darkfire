@@ -1,5 +1,10 @@
 SunriseTown_House2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SunriseTown_House2_OnTransition
 	.byte 0
+
+SunriseTown_House2_OnTransition::
+	setvar VAR_TEMP_B, 1
+	end
 
 SunriseTown_House2_Woman::
 	msgbox SunriseTown_House2_Text_Woman, MSGBOX_NPC

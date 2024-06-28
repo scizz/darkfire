@@ -86,36 +86,120 @@ EventScript_DoInSearchOfTrainers::
 
 TV::
 	msgbox PlayerPickedUpTheTVRemote, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+TV_SelectAChannel::
 	message PleaseSelectAChannel
 	waitmessage
 	multichoice 0, 0, MULTI_TV_SELECT_CHANNEL, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_TryTenNews
-	case 1, EventScript_TryPokeTalk
-	case 2, EventScript_TryCliffShow
-	case 3, EventScript_TryDrowzeePodcast
+	case 0, EventScript_TV_TryTenNews
+	case 1, EventScript_TV_TryPokeTalk
+	case 2, EventScript_TV_TryCliffShow
+	case 3, EventScript_TV_TryDrowzeePodcast
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_TryTenNews::
-	goto_if_set FLAG_BADGE03_GET, EventScript_TenNewsEp1
-	goto_if_set FLAG_BADGE02_GET, EventScript_TenNewsEp2
-	goto_if_set FLAG_BADGE01_GET, EventScript_TenNewsEp3
-
+EventScript_TV_TryTenNews::
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp3
+	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_TenNewsEp2
+	goto_if_set FLAG_BADGE01_GET, EventScript_TV_TenNewsEp1
+	goto EventScript_TV_TenNewsEp1
 	end
 
-EventScript_TryPokeTalk::
+EventScript_TV_TryPokeTalk::
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
+	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_PokeTalkEp2
+	goto_if_set FLAG_BADGE01_GET, EventScript_TV_PokeTalkEp1
+	goto EventScript_TV_PokeTalkEp1
 	end
 
-EventScript_TryCliffShow::
+EventScript_TV_TryCliffShow::
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_CliffShowEp3
+	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_CliffShowEp2
+	goto_if_set FLAG_BADGE01_GET, EventScript_TV_CliffShowEp1
+	goto EventScript_TV_CliffShowEp1
 	end
 
-EventScript_TryDrowzeePodcast::
+EventScript_TV_TryDrowzeePodcast::
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_DrowzeePodcastEp3
+	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_DrowzeePodcastEp2
+	goto_if_set FLAG_BADGE01_GET, EventScript_TV_DrowzeePodcastEp1
+	goto EventScript_TV_DrowzeePodcastEp1
 	end
 
-EventScript_TenNewsEp1::
-	call EventScript_GetTVPos
+EventScript_TV_TenNewsEp1::
+	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownTN
+	special DrawWholeMapView
+	msgbox TodayOnTenNewsShouldChildren, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
 
-EventScript_GetTVPos::
-	call EventScript_GetBuilding
+EventScript_TV_PokeTalkEp1::
+	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownPT
+	special DrawWholeMapView
+	msgbox ThanksForTuningInToPokeTalk1, MSGBOX_AUTOCLOSE
+	msgbox LetsDiveRightInLydia, MSGBOX_AUTOCLOSE
+	msgbox HelloPokeTalkLydia, MSGBOX_AUTOCLOSE
+	msgbox ThankYouLydia, MSGBOX_AUTOCLOSE
+	msgbox NextUpIHaveMarcus, MSGBOX_AUTOCLOSE
+	msgbox ThankYouGeraldHelloPokeTalkViewers, MSGBOX_AUTOCLOSE
+	msgbox ThankYouMarcus, MSGBOX_AUTOCLOSE
+	msgbox ISawASeviperSlitheringAround, MSGBOX_AUTOCLOSE
+	msgbox HahaVeryWiseIndeedThankYou, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
 
+EventScript_TV_CliffShowEp1::
+	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownCS
+	special DrawWholeMapView
+	msgbox TodayOnTenNewsShouldChildren, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_DrowzeePodcastEp1::
+	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownDP
+	special DrawWholeMapView
+	msgbox YoureListeningToTheDrowzeePodcast1, MSGBOX_AUTOCLOSE
+	msgbox EricHeyJohn, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh, MSGBOX_AUTOCLOSE
+	msgbox EricYouEverThink, MSGBOX_AUTOCLOSE
+	msgbox JohnDotHuh, MSGBOX_AUTOCLOSE
+	msgbox EricThinkAboutIt, MSGBOX_AUTOCLOSE
+	msgbox JohnGoOn, MSGBOX_AUTOCLOSE
+	msgbox EricYeahItsPrettyRare, MSGBOX_AUTOCLOSE
+	msgbox JohnDotDotDot, MSGBOX_AUTOCLOSE
+	msgbox EricSpindasCoolMan, MSGBOX_AUTOCLOSE
+	msgbox JohnYeah, MSGBOX_AUTOCLOSE
+	@ continue
+	msgbox EricDoYouThinkIceTypeIsBad, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh3, MSGBOX_AUTOCLOSE
+	msgbox EricThinkAboutItIceOnlyResistsIce, MSGBOX_AUTOCLOSE
+	msgbox JohnYeahYouCouldBeRight, MSGBOX_AUTOCLOSE
+	msgbox EricYeahDoWeHaveAnyListenersRightNow, MSGBOX_AUTOCLOSE
+	msgbox JohnLetsGoForLunch, MSGBOX_AUTOCLOSE
+	msgbox EricNextUpIsGastly, MSGBOX_AUTOCLOSE
+	msgbox YoureListeningToTheDrowzeePodcast4, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_SunriseTownTN::
+	setmetatile 4, 1, 406, 0
+	setmetatile 5, 1, 407, 0
+	return
+
+EventScript_TV_SunriseTownPT::
+	setmetatile 4, 1, 422, 0
+	setmetatile 5, 1, 423, 0
+	return
+
+EventScript_TV_SunriseTownCS::
+	setmetatile 4, 1, 454, 0
+	setmetatile 5, 1, 455, 0
+	return
+
+EventScript_TV_SunriseTownDP::
+	setmetatile 4, 1, 438, 0
+	setmetatile 5, 1, 439, 0
+	return
