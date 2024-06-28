@@ -98,6 +98,10 @@ TV::
 	end
 
 EventScript_TryTenNews::
+	goto_if_set FLAG_BADGE03_GET, EventScript_TenNewsEp1
+	goto_if_set FLAG_BADGE02_GET, EventScript_TenNewsEp2
+	goto_if_set FLAG_BADGE01_GET, EventScript_TenNewsEp3
+
 	end
 
 EventScript_TryPokeTalk::
@@ -108,3 +112,10 @@ EventScript_TryCliffShow::
 
 EventScript_TryDrowzeePodcast::
 	end
+
+EventScript_TenNewsEp1::
+	call EventScript_GetTVPos
+
+EventScript_GetTVPos::
+	call EventScript_GetBuilding
+
