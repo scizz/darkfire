@@ -8,7 +8,6 @@ NightmareHall_OnWarp:
 
 NightmareHall_InitRoomObjects::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	call Script_SetGrayscaleTint
 	end
 
 NightmareHall_CutSceneTrigger::
