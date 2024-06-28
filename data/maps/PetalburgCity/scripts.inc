@@ -43,6 +43,7 @@ Follower_Debug::
 	givemon SPECIES_PIKACHU, 35, ITEM_NONE
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	addobject 9
