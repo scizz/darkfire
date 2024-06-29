@@ -262,6 +262,13 @@ static const struct MenuAction MultichoiceList_LaveriaNorthstarSail[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_TVGuide[] =
+{
+    {gText_Continue},
+    {gText_TVGuide},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_GameCornerDolls[] =
 {
     {gText_TreeckoDollAndPrice},
@@ -290,7 +297,7 @@ static const struct MenuAction MultichoiceList_GameCornerCoins[] =
 static const struct MenuAction MultichoiceList_HowsFishing[] =
 {
     {gText_Excellent2},
-    {gText_Exit},
+    {gText_NotSoGood},
 };
 
 static const struct MenuAction MultichoiceList_TvSelectAChannel[] =
@@ -808,7 +815,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_LAVERIA_NORTHSTAR_SAIL]     = MULTICHOICE(MultichoiceList_LaveriaNorthstarSail),
-    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_TV_GUIDE]                   = MULTICHOICE(MultichoiceList_TVGuide),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),

@@ -1316,6 +1316,8 @@ extern const u8 gText_TenNews[];
 extern const u8 gText_PokeTalk[];
 extern const u8 gText_CliffShow[];
 extern const u8 gText_DrowzeePodcast[];
+extern const u8 gText_Continue[];
+extern const u8 gText_TVGuide[];
 
 // Cable Club multichoice text
 extern const u8 CableClub_Text_TradeUsingLinkCable[];

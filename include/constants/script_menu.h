@@ -18,7 +18,7 @@
 #define MULTI_REGISTER_MENU                7
 #define MULTI_SSTIDAL_LILYCOVE             8 // Exit only, populated by CreateLilycoveSSTidalMultichoice
 #define MULTI_LAVERIA_NORTHSTAR_SAIL       9
-#define MULTI_UNUSED_10                    10
+#define MULTI_TV_GUIDE                     10
 #define MULTI_FRONTIER_PASS_INFO           11
 #define MULTI_BIKE                         12
 #define MULTI_STATUS_INFO                  13
