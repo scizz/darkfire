@@ -142,7 +142,17 @@ EventScript_TV_PokeTalkEp1::
 	msgbox ThanksForTuningInToPokeTalk1, MSGBOX_AUTOCLOSE
 	msgbox LetsDiveRightInLydia, MSGBOX_AUTOCLOSE
 	msgbox HelloPokeTalkLydia, MSGBOX_AUTOCLOSE
-	msgbox ThankYouLydia, MSGBOX_AUTOCLOSE
+	message ThankYouLydia
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_PokeTalkEp1Pt2
+	case 1, TV_SelectAChannel
+	case 2, PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_PokeTalkEp1Pt2::
 	msgbox NextUpIHaveMarcus, MSGBOX_AUTOCLOSE
 	msgbox ThankYouGeraldHelloPokeTalkViewers, MSGBOX_AUTOCLOSE
 	msgbox ThankYouMarcus, MSGBOX_AUTOCLOSE
@@ -171,8 +181,17 @@ EventScript_TV_DrowzeePodcastEp1::
 	msgbox EricYeahItsPrettyRare, MSGBOX_AUTOCLOSE
 	msgbox JohnDotDotDot, MSGBOX_AUTOCLOSE
 	msgbox EricSpindasCoolMan, MSGBOX_AUTOCLOSE
-	msgbox JohnYeah, MSGBOX_AUTOCLOSE
-	@ continue
+	message JohnYeah
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_DrowzeePodcastEp1Pt2
+	case 1, TV_SelectAChannel
+	case 2, PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_DrowzeePodcastEp1Pt2::
 	msgbox EricDoYouThinkIceTypeIsBad, MSGBOX_AUTOCLOSE
 	msgbox JohnHuh3, MSGBOX_AUTOCLOSE
 	msgbox EricThinkAboutItIceOnlyResistsIce, MSGBOX_AUTOCLOSE
