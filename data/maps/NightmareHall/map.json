@@ -5,17 +5,14 @@
   "music": "MUS_DREAMWORLD",
   "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
-  "weather": "WEATHER_SHADE",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_FEMALE_SUBO",
       "x": 22,
       "y": 12,
       "elevation": 3,
@@ -28,7 +25,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 18,
       "y": 12,
       "elevation": 3,
@@ -41,7 +38,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 22,
       "y": 10,
       "elevation": 3,
@@ -54,7 +51,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HOUNDOOM",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_HOUNDOOM",
       "x": 21,
       "y": 10,
       "elevation": 3,
@@ -69,9 +66,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_POKE_BALL",
       "x": 24,
-      "y": 10,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLEv",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -80,7 +77,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FERALIGATR",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_FERALIGATR",
       "x": 18,
       "y": 10,
       "elevation": 3,
@@ -93,7 +90,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 17,
       "y": 10,
       "elevation": 3,
@@ -106,7 +103,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_MALE_SUBO",
       "x": 21,
       "y": 7,
       "elevation": 3,
@@ -119,7 +116,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_ZAGAN",
       "x": 22,
       "y": 7,
       "elevation": 3,
@@ -132,7 +129,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "graphics_id": "OBJ_EVENT_GFX_GREYSCALE_FEMALE_SUBO",
       "x": 18,
       "y": 7,
       "elevation": 3,
@@ -147,8 +144,8 @@
   ],
   "warp_events": [
     {
-      "x": 20,
-      "y": 33,
+      "x": 1,
+      "y": 34,
       "elevation": 3,
       "dest_map": "MAP_NIGHTMARE_HALL",
       "dest_warp_id": "0"
@@ -185,5 +182,8 @@
   ],
   "bg_events": [
 
-  ]
+  ],
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false
 }
