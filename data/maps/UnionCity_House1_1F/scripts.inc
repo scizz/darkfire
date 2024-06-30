@@ -3,6 +3,7 @@ UnionCity_House1_1F_MapScripts::
 	.byte 0
 
 UnionCity_House1_1F_OnTransition:
+	setvar VAR_TEMP_B, 2
 	goto_if_eq VAR_UNION_CITY_HOUSE_1_1F_OLD_LADY_STATE, 0, UnionCity_House1_1F_HideOldLady2
 	end
 

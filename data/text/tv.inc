@@ -2998,6 +2998,9 @@ ContestLadyShow_Text_LostBadly::
 
 @@@ DARKFIRE TV @@@
 
+TheTVIsSwitchedOff:
+	.string "The TV is switched off.$"
+
 PlayerPickedUpTheTVRemote:
 	.string "{PLAYER} picked up the TV remote.$"
 
@@ -3006,7 +3009,48 @@ PleaseSelectAChannel:
 
 TodayOnTenNewsShouldChildren:
 	.string "Today on TEN News…\n"
-	.string "Should children be allowed to gamble?$"
+	.string "Should children be allowed to gamble?\p"
+	.string "Our correspondent will be live in\n"
+	.string "Union City discussing the controversy\l"
+	.string "around child Game Corner gamblers.\p"
+	.string "Also, what proposals are set to be made\n"
+	.string "to the Tenjo Government regarding new\l"
+	.string "legislation to prevent this growing\l"
+	.string "epidemic? Find out soon on TEN News.$"
+
+NextUpPokemonTheft:
+	.string "Next up: Pokémon theft.\p"
+	.string "A new group of thugs, who refer to\n"
+	.string "themselves as the Secret Underground\l"
+	.string "Battling Organization, or SUBO, have\l"
+	.string "been caught on CCTV stealing Pokémon.\p"
+	.string "Pokémon are being stolen from front\n"
+	.string "yards, shopping malls, and even Poké\l"
+	.string "Centers.\p"
+	.string "We believe these stolen Pokémon are\n"
+	.string "being used in brutal, illegal\l"
+	.string "underground battling activities.\p"
+	.string "We urge all Trainers to take care when\n"
+	.string "out in the field.\p"
+	.string "If you see any suspicious activity,\n"
+	.string "report it immediately.$"
+
+TodayOnTenNewsBreakingNews:
+	.string "Today on TEN News…\p"
+	.string "BREAKING NEWS: The SUBO infiltrated\n"
+	.string "the Abandoned Museum in Union City.$"
+
+OfAllPlacesItWasAnAbandonedMuseum:
+	.string "Of all places, it was an Abandoned\n"
+	.string "Museum in Union City where the SUBO\l"
+	.string "decided to execute their evil plans.\p"
+	.string "The Tenjo President is currently\n"
+	.string "receiving first aid treatment for mild\l"
+	.string "injuries after being rescued by an\l"
+	.string "anonymous Trainer earlier today.\p"
+	.string "The reason why the new-found gang\n"
+	.string "kidnapped the President of Tenjo\l"
+	.string "remains a mystery…$"
 
 ThanksForTuningInToPokeTalk1:
 	.string "Host: Thanks for tuning in to Poké\n"
@@ -3025,11 +3069,6 @@ YoureListeningToTheDrowzeePodcast1:
 
 PlayerPutDownTheTvRemote:
 	.string "{PLAYER} put down the TV remote.$"
-
-TodayOnTenNewsBreakingNews:
-	.string "Today on TEN News…\p"
-	.string "BREAKING NEWS: The SUBO infiltrated\n"
-	.string "the Abandoned Museum in Union City.$"
 
 YoureWatchingPokeTalkTamarokTunnels:
 	.string "Host: You're watching Poké Talk!\n"
@@ -3057,15 +3096,6 @@ YoureListeningToTheDrowzeePodcast2:
 	.string "The podcast that's hypnotically fun.\p"
 	.string "Like being hit by a pebble in a\n"
 	.string "snowball… That kinda fun.$"
-
-OurCorrespondentWillBeLiveInUnionCity:
-	.string "Our correspondent will be live in\n"
-	.string "Union City discussing the controversy\l"
-	.string "around child Game Corner gamblers.\p"
-	.string "Also, what proposals are set to be made\n"
-	.string "to the Tenjo Government regarding new\l"
-	.string "legislation to prevent this growing\l"
-	.string "epidemic? Find out soon on TEN News.$"
 
 LetsDiveRightInLydia:
 	.string "Host: Let's dive right in!\n"
@@ -3148,7 +3178,7 @@ YoureWatchingPokeTalkAWildSnorlax:
 	.string "on Poké Talk!$"
 
 WelcomeBackToTrainerWatch:
-	.string "Welcome back to Trainer Watch!  The\n"
+	.string "Welcome back to Trainer Watch! The\n"
 	.string "search for the best Trainers in Tenjo!\p"
 	.string "Coming up: Skier Marcus and SUBO\n"
 	.string "Grunt James have caught our eye\l"
@@ -3160,18 +3190,6 @@ YoureListeningToTheDrowzeePodcast3:
 	.string "The podcast that's hypnotically dope.\p"
 	.string "Like teaming up with a Slowpoke on\n"
 	.string "a gameshow quiz. That kinda dope.$"
-
-OfAllPlacesItWasAnAbandonedMuseum:
-	.string "Of all places, it was an Abandoned\n"
-	.string "Museum in Union City where the SUBO\l"
-	.string "decided to execute their evil plans.\p"
-	.string "The Tenjo President is currently\n"
-	.string "receiving first aid treatment for mild\l"
-	.string "injuries after being rescued by an\l"
-	.string "anonymous Trainer earlier today.\p"
-	.string "The reason why the new-found gang\n"
-	.string "kidnapped the President of Tenjo\l"
-	.string "remains a mystery…$"
 
 HugoYoureOnPokeTalk:
 	.string "Host: Hugo! You're on Poké Talk!\n"
@@ -3238,23 +3256,6 @@ JohnHuh2:
 
 EricIHadABadDream:
 	.string "Eric: I had a bad dream last night.$"
-
-NextUpPokemonTheft:
-	.string "Next up: Pokémon theft.\p"
-	.string "A new group of thugs, who refer to\n"
-	.string "themselves as the Secret Underground\l"
-	.string "Battling Organization, or SUBO, have\l"
-	.string "been caught on CCTV stealing Pokémon.\p"
-	.string "Pokémon are being stolen from front\n"
-	.string "yards, shopping malls, and even Poké\l"
-	.string "Centers.\p"
-	.string "We believe these stolen Pokémon are\n"
-	.string "being used in brutal, illegal\l"
-	.string "underground battling activities.\p"
-	.string "We urge all Trainers to take care when\n"
-	.string "out in the field.\p"
-	.string "If you see any suspicious activity,\n"
-	.string "report it immediately.$"
 
 NextUpIHaveMarcus:
 	.string "Host: Next up, I have Marcus\n"

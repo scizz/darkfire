@@ -1,5 +1,10 @@
 AnheimTown_House1_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AnheimTown_House1_OnTransition
 	.byte 0
+
+AnheimTown_House1_OnTransition:
+	setvar VAR_TEMP_B, 3
+	end
 
 AnheimTown_House1_Man::
 	msgbox AnheimTown_House1_Text_Man, MSGBOX_NPC

@@ -1,5 +1,10 @@
 AnheimTown_House3_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AnheimTown_House3_OnTransition
 	.byte 0
+
+AnheimTown_House3_OnTransition:
+	setvar VAR_TEMP_B, 3
+	end
 
 AnheimTown_House3_Woman::
 	lock
