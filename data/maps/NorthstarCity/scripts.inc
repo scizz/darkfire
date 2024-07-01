@@ -167,16 +167,16 @@ NorthstarCity_Old_Man_2_Male::
 	end
 
 NorthstarCity_Ace_Trainer::
-	lockall
+	lock
 	faceplayer
 	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Ace_Trainer_Badge
 	msgbox NorthstarCity_Text_Ace_Trainer, MSGBOX_DEFAULT
-	releaseall
+	release
 	end
 
 NorthstarCity_Ace_Trainer_Badge::
 	msgbox NorthstarCity_Text_Ace_Trainer_Badge, MSGBOX_DEFAULT
-	releaseall
+	release
 	end
 
 NorthstarCity_Woman_3::
@@ -221,6 +221,10 @@ NorthstarCity_Fisherman::
 
 NorthstarCity_PokeFan_M::
 	msgbox NorthstarCity_Text_PokeFan_M, MSGBOX_NPC
+	end
+
+NorthstarCity_Receptionist::
+	msgbox NorthstarCity_Text_Receptionist, MSGBOX_NPC
 	end
 
 NorthstarCity_GuitaristViktor::
@@ -563,7 +567,7 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	removeobject LOCALID_GOV
 	removeobject LOCALID_SUBO_2
 	setflag FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 26
 	release
 	end
 
@@ -849,13 +853,13 @@ NorthstarCity_Text_SUBO_2_Caught:
 	.string "temper!$"
 
 NorthstarCity_Text_Old_Man_2_Female:
-	.string "One of these SUBO people almost knocked\n"
+	.string "One of these SUBO people almost pushed\n"
 	.string "me over earlier… The nerve of them!\p"
 	.string "Young lady… Will you teach them a\n"
 	.string "lesson for me?$"
 
 NorthstarCity_Text_Old_Man_2_Male:
-	.string "One of these SUBO people almost knocked\n"
+	.string "One of these SUBO people almost pushed\n"
 	.string "me over earlier… The nerve of them!\p"
 	.string "Young man… Will you teach them a\n"
 	.string "lesson for me?$"
@@ -1093,3 +1097,8 @@ NorthstarCity_Text_PsychicTony2:
 NorthstarCity_Text_PsychicTony3:
 	.string "{COLOR}{BLUE}Come on, boys.\n"
 	.string "Let's get outta here.$"
+
+NorthstarCity_Text_Receptionist:
+	.string "We're getting a few things cleaned\n"
+	.string "in preparation for the tournament.\p"
+	.string "Please check back later.$"

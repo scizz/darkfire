@@ -67,7 +67,7 @@ EventScript_FollowerLovesYou::
 	applymovement OBJ_EVENT_ID_FOLLOWER, ContestHall_Movement_Heart
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitmoncry
-	showborderlesspic 20, 8
+	showborderlesspic 20, 7
 	msgbox gText_FollowerLovesYou, MSGBOX_DEFAULT
 	hidemonpic
 	return
@@ -78,7 +78,7 @@ EventScript_FollowerGeneric:: @ similar to Std_MsgboxDefault
 	releaseall
 EventScript_FollowerGenericSkipFace:
 	waitfieldeffect FLDEFF_EMOTE
-	showborderlesspic 20, 8
+	showborderlesspic 20, 7
 	message 0x0
 	waitmessage
 	waitbuttonpress
@@ -91,7 +91,7 @@ EventScript_FollowerJump::
 	applymovement OBJ_EVENT_ID_FOLLOWER, FollowerSplashMovement
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitfieldeffect FLDEFF_EMOTE
-	showborderlesspic 20, 8
+	showborderlesspic 20, 7
 	message 0x0
 	waitmessage
 	waitbuttonpress

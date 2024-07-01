@@ -6687,9 +6687,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_HASSAN] =
     {
-        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+        .trainerClass = TRAINER_CLASS_SKIER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
+        .trainerPic = TRAINER_PIC_SKIER,
         .trainerName = _("Hassan"),
         .items = {},
         .doubleBattle = FALSE,
@@ -6699,9 +6699,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_MARCUS] =
     {
-        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+        .trainerClass = TRAINER_CLASS_SKIER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
+        .trainerPic = TRAINER_PIC_SKIER,
         .trainerName = _("Marcus"),
         .items = {},
         .doubleBattle = FALSE,
@@ -6711,9 +6711,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_NATHAN] =
     {
-        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+        .trainerClass = TRAINER_CLASS_SKIER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
+        .trainerPic = TRAINER_PIC_SKIER,
         .trainerName = _("Nathan"),
         .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
@@ -8540,9 +8540,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ANGELINA] =
     {
-        .trainerClass = TRAINER_CLASS_PICNICKER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_POKEMON_RANGER_F,
         .trainerName = _("Angelina"),
         .items = {},
         .doubleBattle = FALSE,

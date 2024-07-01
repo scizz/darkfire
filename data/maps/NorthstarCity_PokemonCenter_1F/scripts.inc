@@ -25,6 +25,7 @@ NorthstarCity_PokemonCenter_1F_Boy_Dig_TM::
 	lockall
 	goto_if_set FLAG_RECEIVED_DIG_TM, NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Given
 	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_1, MSGBOX_DEFAULT
+	closemessage
 	delay 10
 	faceplayer
 	applymovement 1, Common_Movement_ExclamationMark

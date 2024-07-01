@@ -59,10 +59,9 @@ HighwindVillage_Daz::
 	waitmovement 0
 	playmoncry SPECIES_MUDKIP, 0
 	waitmoncry
-	applymovement LOCALID_MUDKIP, Common_Movement_Heart
+	emote LOCALID_MUDKIP, 6
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	delay 10
 	applymovement LOCALID_DAZ, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
@@ -103,7 +102,7 @@ HighwindVillage_Daz::
 	removeobject LOCALID_DAZ
 	removeobject LOCALID_MUDKIP
 	setflag FLAG_HIDE_HIGHWIND_VILLAGE_DAZ_MUDKIP
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_STORYLINE_STATE, 25
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	release

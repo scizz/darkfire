@@ -168,8 +168,12 @@ HighwindVillage_RangersLodge_Ranger_5::
 	msgbox HighwindVillage_RangersLodge_Text_HeyThereTrainer, MSGBOX_NPC
 	end
 
-QuestBookScript::
+QuestBoardScript::
 	msgbox HighwindVillage_RangersLodge_Text_PlayerTookALook, MSGBOX_DEFAULT
+	openquestmenu
+	end
+	
+QuestBookScript::
 	openquestmenu
 	end
 
