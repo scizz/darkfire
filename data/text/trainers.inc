@@ -312,8 +312,9 @@ Route5_Text_MarcPostBattle:
 	.string "Hikin' is my strong suit!$"
 
 Route5_Text_TrevIntro:
-	.string "{COLOR}{BLUE}Woop! Looks like I ran into somebody!\n"
-	.string "It's battling time!$"
+	.string "{COLOR}{BLUE}{PLAYER}?\n"
+	.string "Is that you?\p"
+	.string "I saw you on TV!$"
 
 Route5_Text_TrevDefeated:
 	.string "I thought you'd be too startled to\n"

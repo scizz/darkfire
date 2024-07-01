@@ -3552,8 +3552,8 @@ YouHeardThatEverybodyLetsGetJackson:
 	.string "Host: You heard that, everybody!\n"
 	.string "Let's get Jackson some Lemonade!\p"
 	.string "In the meantime, if anyone can deal\n"
-	.string "with the Sudowoodo, please get down\l"
-	.string "to Pinleaf Town!$"
+	.string "with the Sudowoodo, please get to\l"
+	.string "Pinleaf Town!$"
 
 @ Trainer Watch
 @ Episode 1
