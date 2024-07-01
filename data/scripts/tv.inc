@@ -310,6 +310,112 @@ EventScript_TV_PokeTalkEp1Pt2::
 	goto TV_SelectAChannel
 	end
 
+EventScript_TV_PokeTalkEp2::
+	message YoureWatchingPokeTalkTamarokTunnels
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_PokeTalkEp2Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_PokeTalkEp2Pt1::
+	msgbox HugoYoureOnPokeTalk, MSGBOX_AUTOCLOSE
+	msgbox LoudAnClearGerald, MSGBOX_AUTOCLOSE
+	msgbox WeveReceivedSomeReports, MSGBOX_AUTOCLOSE
+	msgbox WelpImSittinHere, MSGBOX_AUTOCLOSE
+	msgbox ThatsTheCaveComplex, MSGBOX_AUTOCLOSE
+	msgbox HugoYeaYea, MSGBOX_AUTOCLOSE
+	msgbox WhatDoYouThinkCausedTheExplosion, MSGBOX_AUTOCLOSE
+	msgbox WelpTheresLotsOfStories, MSGBOX_AUTOCLOSE
+	message ThankYouHugo
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_PokeTalkEp2Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_PokeTalkEp2Pt2::
+	msgbox NextUpRangerErin, MSGBOX_AUTOCLOSE
+	msgbox HelloTenjoRangerErinHere, MSGBOX_AUTOCLOSE
+	msgbox WhatExactlyIsTheRangersFederation, MSGBOX_AUTOCLOSE
+	msgbox WeAreAGroupOfLikeminded, MSGBOX_AUTOCLOSE
+	msgbox ButDontWeHaveThatKindOfThing, MSGBOX_AUTOCLOSE
+	msgbox TheTenjoGovernmentAreSlowInTheirActions, MSGBOX_AUTOCLOSE
+	msgbox VeryGoodWhereCanPeopleFindYou, MSGBOX_AUTOCLOSE
+	msgbox YouCanFindUsAllAroundTheRegion, MSGBOX_AUTOCLOSE
+	msgbox ThankYouForYourServiceErin, MSGBOX_AUTOCLOSE
+	msgbox ThankYouGeraldGoodbyePokeTalk, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_PokeTalkEp3::
+	message YoureWatchingPokeTalkAWildSnorlax
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_PokeTalkEp3Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_PokeTalkEp3Pt1::
+	msgbox LetsDiveRightInRoute9, MSGBOX_AUTOCLOSE
+	msgbox DavidCrystalClearGerald, MSGBOX_AUTOCLOSE
+	msgbox WonderfulStuffDavid, MSGBOX_AUTOCLOSE
+	msgbox EarlierTodayAWildSnorlax, MSGBOX_AUTOCLOSE
+	msgbox HahaWellThatIsCertainlyNotThePlace, MSGBOX_AUTOCLOSE
+	msgbox VeryMuchSoGeraldIHaveSeen, MSGBOX_AUTOCLOSE
+	msgbox APokeFluteWellIfAnyTrainer, MSGBOX_AUTOCLOSE
+	message SureThingGerald
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_PokeTalkEp3Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_PokeTalkEp3Pt2::
+	msgbox NextUpWeHaveRangerTed, MSGBOX_AUTOCLOSE
+	msgbox TedBreakingUp1, MSGBOX_AUTOCLOSE
+	msgbox HelloTed, MSGBOX_AUTOCLOSE
+	msgbox TedBreakingUp2, MSGBOX_AUTOCLOSE
+	msgbox TedWeCantHearYou, MSGBOX_AUTOCLOSE
+	msgbox TedBreakingUp3, MSGBOX_AUTOCLOSE
+	msgbox AndWeveLostHimWellTrainersAndShinyHunters, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_PokeTalkEp4::
+	message YoureWatchingPokeTalkASudowoodoEpidemic
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_PokeTalkEp4Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_PokeTalkEp4Pt1::
+	msgbox ICurrentlyHaveOldManJackson, MSGBOX_AUTOCLOSE
+	msgbox HelloGeraldYesIBloodyWellCan, MSGBOX_AUTOCLOSE
+	msgbox HowTragicWhereDidTheyComeFrom, MSGBOX_AUTOCLOSE
+	msgbox WhoKnowsItMustBeMatingSeasonOrSomething, MSGBOX_AUTOCLOSE
+	msgbox WellGetYourLemondadeJackson, MSGBOX_AUTOCLOSE
+	msgbox GrrhhHmphIllBeInThePinleafTownInn, MSGBOX_AUTOCLOSE
+	msgbox YouHeardThatEverybodyLetsGetJackson, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
 @ Trainer Watch
 
 EventScript_TV_TrainerWatchEp1::
