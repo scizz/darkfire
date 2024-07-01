@@ -142,8 +142,8 @@ EventScript_TV_TryPokeTalk::
 EventScript_TV_TryTrainerWatch::
 	call EventScript_TV_TrainerWatchSetScreen
 	special DrawWholeMapView
-	goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
-	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
+	goto_if_set FLAG_BADGE03_GET, EventScript_TV_TrainerWatchEp3
+	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_TrainerWatchEp2
 	goto EventScript_TV_TrainerWatchEp1
 	end
 
