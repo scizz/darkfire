@@ -76,7 +76,8 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_TracksBug                 @ FLDEFF_TRACKS_BUG
 	.4byte gFieldEffectScript_TracksSpot                @ FLDEFF_TRACKS_SPOT
     .4byte gFieldEffectScript_CaveDust                  @ FLDEFF_CAVE_DUST
-	.4byte gFieldEffectScript_SnowFootprints            @ FLDEFF_SNOW_FOOTPRINTS
+	.4byte gFieldEffectScript_ForestTallGrass           @ FLDEFF_FOREST_TALL_GRASS
+	.4byte gFieldEffectScript_JumpForestTallGrass       @ FLDEFF_JUMP_FOREST_TALL_GRASS
     
 gFieldEffectScript_ExclamationMarkIcon1::
 	field_eff_callnative FldEff_ExclamationMarkIcon
@@ -365,6 +366,10 @@ gFieldEffectScript_CaveDust::
     field_eff_loadfadedpal_callnative gSpritePalette_CaveDust FldEff_CaveDust
     field_eff_end
 
-gFieldEffectScript_SnowFootprints::
-	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_SnowFootprints
+gFieldEffectScript_ForestTallGrass::
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_ForestTallGrass
+	field_eff_end
+
+gFieldEffectScript_JumpForestTallGrass::
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_JumpForestTallGrass
 	field_eff_end

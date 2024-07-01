@@ -76,6 +76,7 @@ bool8 MetatileBehavior_IsPlayerRoomPCOn(u8);
 bool8 MetatileBehavior_HasRipples(u8);
 bool8 MetatileBehavior_IsPuddle(u8);
 bool8 MetatileBehavior_IsTallGrass(u8);
+bool8 MetatileBehavior_IsForestTallGrass(u8);
 bool8 MetatileBehavior_IsLongGrass(u8);
 bool8 MetatileBehavior_IsBerryTreeSoil(u8);
 bool8 MetatileBehavior_IsAshGrass(u8);

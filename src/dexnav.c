@@ -730,6 +730,8 @@ static bool8 TryStartHiddenMonFieldEffect(u8 environment, u8 xSize, u8 ySize, bo
             {
                 if (MetatileBehavior_IsTallGrass(metatileBehaviour)) //Grass in cave
                     fldEffId = FLDEFF_SHAKING_GRASS;
+                else if (MetatileBehavior_IsForestTallGrass(metatileBehaviour)) //Grass in cave
+                    fldEffId = FLDEFF_SHAKING_GRASS;
                 else if (MetatileBehavior_IsLongGrass(metatileBehaviour)) //Really tall grass
                     fldEffId = FLDEFF_SHAKING_LONG_GRASS;
                 else if (MetatileBehavior_IsSandOrDeepSand(metatileBehaviour))
@@ -740,6 +742,8 @@ static bool8 TryStartHiddenMonFieldEffect(u8 environment, u8 xSize, u8 ySize, bo
             else //outdoor, underwater
             {
                 if (MetatileBehavior_IsTallGrass(metatileBehaviour)) //Regular grass
+                    fldEffId = FLDEFF_SHAKING_GRASS;
+                else if (MetatileBehavior_IsForestTallGrass(metatileBehaviour)) //Regular grass
                     fldEffId = FLDEFF_SHAKING_GRASS;
                 else if (MetatileBehavior_IsLongGrass(metatileBehaviour)) //Really tall grass
                     fldEffId = FLDEFF_SHAKING_LONG_GRASS;
