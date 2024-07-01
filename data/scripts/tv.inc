@@ -698,13 +698,13 @@ EventScript_TV_PokeTalkSetScreen::
 	return
 
 EventScript_TV_TrainerWatchSetScreen::
-	@call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownTW
-	@call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityTW
-	@call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownTW
-	@call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityTW
-	@call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageTW
-	@call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityTW
-	@call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownTW
+	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownTW
+	call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityTW
+	call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownTW
+	call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityTW
+	call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageTW
+	call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityTW
+	call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownTW
 	return
 
 EventScript_TV_CliffShowSetScreen::
@@ -737,6 +737,11 @@ EventScript_TV_SunriseTownPT::
 	setmetatile 5, 1, 423, 1
 	return
 
+EventScript_TV_SunriseTownTW::
+	setmetatile 4, 1, 470, 1
+	setmetatile 5, 1, 471, 1
+	return
+
 EventScript_TV_SunriseTownCS::
 	setmetatile 4, 1, 454, 1
 	setmetatile 5, 1, 455, 1
@@ -755,6 +760,11 @@ EventScript_TV_UnionCityTN::
 EventScript_TV_UnionCityPT::
 	setmetatile 7, 1, 424, 1
 	setmetatile 8, 1, 425, 1
+	return
+
+EventScript_TV_UnionCityTW::
+	setmetatile 7, 1, 472, 1
+	setmetatile 8, 1, 473, 1
 	return
 
 EventScript_TV_UnionCityCS::
@@ -777,6 +787,11 @@ EventScript_TV_AnheimTownPT::
 	setmetatile 6, 1, 429, 1
 	return
 
+EventScript_TV_AnheimTownTW::
+	setmetatile 5, 1, 476, 1
+	setmetatile 6, 1, 477, 1
+	return
+
 EventScript_TV_AnheimTownCS::
 	setmetatile 5, 1, 460, 1
 	setmetatile 6, 1, 461, 1
@@ -795,6 +810,11 @@ EventScript_TV_LaveriaCityTN::
 EventScript_TV_LaveriaCityPT::
 	setmetatile 3, 1, 426, 1
 	setmetatile 4, 1, 427, 1
+	return
+
+EventScript_TV_LaveriaCityTW::
+	setmetatile 3, 1, 474, 1
+	setmetatile 4, 1, 475, 1
 	return
 
 EventScript_TV_LaveriaCityCS::
@@ -817,6 +837,11 @@ EventScript_TV_HighwindVillagePT::
 	setmetatile 3, 1, 429, 1
 	return
 
+EventScript_TV_HighwindVillageTW::
+	setmetatile 2, 1, 476, 1
+	setmetatile 3, 1, 477, 1
+	return
+
 EventScript_TV_HighwindVillageCS::
 	setmetatile 2, 1, 460, 1
 	setmetatile 3, 1, 461, 1
@@ -837,6 +862,11 @@ EventScript_TV_NorthstarCityPT::
 	setmetatile 4, 1, 425, 1
 	return
 
+EventScript_TV_NorthstarCityTW::
+	setmetatile 3, 1, 472, 1
+	setmetatile 4, 1, 473, 1
+	return
+
 EventScript_TV_NorthstarCityCS::
 	setmetatile 3, 1, 456, 1
 	setmetatile 4, 1, 457, 1
@@ -855,6 +885,11 @@ EventScript_TV_PinleafTownTN::
 EventScript_TV_PinleafTownPT::
 	setmetatile 4, 1, 428, 1
 	setmetatile 5, 1, 429, 1
+	return
+
+EventScript_TV_PinleafTownTW::
+	setmetatile 4, 1, 476, 1
+	setmetatile 5, 1, 477, 1
 	return
 
 EventScript_TV_PinleafTownCS::
