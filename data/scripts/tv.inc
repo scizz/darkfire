@@ -568,6 +568,113 @@ EventScript_TV_DrowzeePodcastEp1Pt2::
 	goto TV_SelectAChannel
 	end
 
+EventScript_TV_DrowzeePodcastEp2::
+	message YoureListeningToTheDrowzeePodcast2
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_DrowzeePodcastEp2Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_DrowzeePodcastEp2Pt1::
+	msgbox EricHeyJohn2, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh2, MSGBOX_AUTOCLOSE
+	msgbox EricIHadABadDream, MSGBOX_AUTOCLOSE
+	msgbox JohnOhDotDot, MSGBOX_AUTOCLOSE
+	msgbox EricYeahIFoundAMasterBall, MSGBOX_AUTOCLOSE
+	msgbox JohnHuhDoesntSoundLikeABadDream, MSGBOX_AUTOCLOSE
+	msgbox EricItGetsWorse, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh5, MSGBOX_AUTOCLOSE
+	msgbox EricIGaveItToMyShuckle, MSGBOX_AUTOCLOSE
+	msgbox JohnYeahDotDot, MSGBOX_AUTOCLOSE
+	msgbox EricYeahThenIGotIntoABattleWithAWildAbra, MSGBOX_AUTOCLOSE
+	msgbox JohnNice, MSGBOX_AUTOCLOSE
+	msgbox EricNotNiceJohn, MSGBOX_AUTOCLOSE
+	msgbox JohnOhNo, MSGBOX_AUTOCLOSE
+	msgbox EricItSwappedMyMasterBall, MSGBOX_AUTOCLOSE
+	msgbox JohnIThinkItWasTryingToTellYou, MSGBOX_AUTOCLOSE
+	msgbox ButJohnWhatMoveFollowed, MSGBOX_AUTOCLOSE
+	msgbox JohnHa, MSGBOX_AUTOCLOSE
+	msgbox EricYeahItWasPrettyWild, MSGBOX_AUTOCLOSE
+	msgbox JohnSeemsLikeIt, MSGBOX_AUTOCLOSE
+	msgbox EricDidYouHaveAnyWildDreams, MSGBOX_AUTOCLOSE
+	msgbox JohnIDreamtAboutKickingAPsyduck, MSGBOX_AUTOCLOSE
+	msgbox YoureListeningToTheDrowzeePodcast3, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_DrowzeePodcastEp3::
+	message YoureListeningToTheDrowzeePodcast5
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_DrowzeePodcastEp3Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_DrowzeePodcastEp3Pt1::
+	msgbox EricHeyJohn3, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh4, MSGBOX_AUTOCLOSE
+	msgbox EricItWasQuiteTheJourney, MSGBOX_AUTOCLOSE
+	msgbox JohnWhy, MSGBOX_AUTOCLOSE
+	msgbox EricISawAYoungGirl, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh7, MSGBOX_AUTOCLOSE
+	msgbox EricYeahILeftMyHouse, MSGBOX_AUTOCLOSE
+	msgbox JohnWow, MSGBOX_AUTOCLOSE
+	msgbox EricYeahAPoorYoungGirlScurriedPastMe, MSGBOX_AUTOCLOSE
+	msgbox JohnOhNo2, MSGBOX_AUTOCLOSE
+	msgbox EricYeahRightAfterThat, MSGBOX_AUTOCLOSE
+	msgbox JohnTerrible, MSGBOX_AUTOCLOSE
+	msgbox EricYeahItWasWild, MSGBOX_AUTOCLOSE
+	msgbox JohnYeahSoWhatWasHeYelling, MSGBOX_AUTOCLOSE
+	msgbox EricTheresNoRunning, MSGBOX_AUTOCLOSE
+	msgbox YoureListeningToTheDrowzeePodcast4
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_DrowzeePodcastEp4::
+	message YoureListeningToTheDrowzeePodcast3
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_DrowzeePodcastEp4Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_DrowzeePodcastEp4Pt1::
+	msgbox EricHeyJohn4, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh6, MSGBOX_AUTOCLOSE
+	msgbox EricImFeelingPunny, MSGBOX_AUTOCLOSE
+	msgbox JohnOhNo3, MSGBOX_AUTOCLOSE
+	msgbox EricOhYesPrepare, MSGBOX_AUTOCLOSE
+	msgbox JohnNo, MSGBOX_AUTOCLOSE
+	msgbox EricWhatPokemonDoesDracula, MSGBOX_AUTOCLOSE
+	msgbox JohnHuh8, MSGBOX_AUTOCLOSE
+	msgbox EricKoffin, MSGBOX_AUTOCLOSE
+	msgbox JohnUgh, MSGBOX_AUTOCLOSE
+	msgbox EricWhatDoYouCallALowFatPokemon, MSGBOX_AUTOCLOSE
+	msgbox JohnWhatEric, MSGBOX_AUTOCLOSE
+	msgbox EricButterfree, MSGBOX_AUTOCLOSE
+	msgbox JohnHeh, MSGBOX_AUTOCLOSE
+	msgbox EricDoYouBayleaf, MSGBOX_AUTOCLOSE
+	msgbox JohnThatWasUnexpected, MSGBOX_AUTOCLOSE
+	msgbox EricYouMeanOnixpected, MSGBOX_AUTOCLOSE
+	msgbox JohnKeepYourMouthShutPlease, MSGBOX_AUTOCLOSE
+	msgbox EricYouMeanMyMeowthShut, MSGBOX_AUTOCLOSE
+	msgbox JohnDotDotDot2, MSGBOX_AUTOCLOSE
+	msgbox EricIPikachuInTheShower, MSGBOX_AUTOCLOSE
+	msgbox JohnBye, MSGBOX_AUTOCLOSE
+	msgbox YoureListeningToTheDrowzeePodcast4
+	goto TV_SelectAChannel
+	end
+
 @ Set Screens
 
 EventScript_TV_TenNewsSetScreen::
