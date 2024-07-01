@@ -3009,7 +3009,9 @@ PleaseSelectAChannel:
 
 TodayOnTenNewsShouldChildren:
 	.string "Today on TEN News…\n"
-	.string "Should children be allowed to gamble?\p"
+	.string "Should children be allowed to gamble?$"
+
+OurCorrespondentWillBeLive:
 	.string "Our correspondent will be live in\n"
 	.string "Union City discussing the controversy\l"
 	.string "around child Game Corner gamblers.\p"
@@ -3034,6 +3036,42 @@ NextUpPokemonTheft:
 	.string "out in the field.\p"
 	.string "If you see any suspicious activity,\n"
 	.string "report it immediately.$"
+
+WelcomeOneWelcomeAll:
+	.string "{COLOR}{BLUE}Welcome one, welcome all to the Cliff\n"
+	.string "Show!\p"
+	.string "Today, I'm out here in the Tenjo"
+	.string "desert looking for artifacts in these\l"
+	.string "old ruins.$"
+
+IfYouTakeALookAround:
+	.string "{COLOR}{BLUE}If you take a quick look around,\n"
+	.string "you'll soon realize that this was a\l"
+	.string "home of the ancient peoples that lived\l"
+	.string "in this area.\p"
+	.string "Oh, here! An artifact!\n"
+	.string "It appears to be a clay pot.\p"
+	.string "There's all sorts of ancient letters\n"
+	.string "and drawings on it. Let me just--$"
+
+Crash:
+	.string "Crash!$"
+
+OopsItBrokeCutCutThat:
+	.string "{COLOR}{BLUE}Oops.\n"
+	.string "It broke.\l"
+	.string "Cut! Cut that!\p"
+	.string "Oh, what's that?\n"
+	.string "We're live?\l"
+	.string "Oh, for the love of--$"
+
+AndThatWasItForTheFieldSegment:
+	.string "And that was it for the field segment\n"
+	.string "of the show!\p"
+	.string "Now, on to the Explorer Pun of the\n"
+	.string "day!\p"
+	.string "Mountain climbers do so much climbing.\n"
+	.string "Don't they… Everest?$"
 
 TodayOnTenNewsBreakingNews:
 	.string "Today on TEN News…\p"

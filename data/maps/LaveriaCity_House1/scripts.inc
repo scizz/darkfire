@@ -1,5 +1,10 @@
 LaveriaCity_House1_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LaveriaCity_House1_OnTransition
 	.byte 0
+
+LaveriaCity_House1_OnTransition:
+	setvar VAR_TEMP_B, 4
+	end
 
 LaveriaCity_House1_Maniac::
 	msgbox LaveriaCity_House1_Text_Maniac, MSGBOX_NPC

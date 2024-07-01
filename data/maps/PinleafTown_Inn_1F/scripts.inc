@@ -27,7 +27,7 @@ PinleafTown_Inn_1F_Text_Girl:
 	.string "{COLOR}{RED}The fresh air here in the countryside\n"
 	.string "is just something else.\p"
 	.string "I may just quit as a Trainer and work\n"
-	.string "here in the Flower Shop!$"
+	.string "in the Pinleaf Flower Shop!$"
 
 PinleafTown_Inn_1F_Text_Man_1:
 	.string "{COLOR}{BLUE}My luck is just the worst…\p"

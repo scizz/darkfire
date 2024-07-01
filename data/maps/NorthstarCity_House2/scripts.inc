@@ -1,5 +1,10 @@
 NorthstarCity_House2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NorthstarCity_House2_OnTransition
 	.byte 0
+
+NorthstarCity_House2_OnTransition:
+	setvar VAR_TEMP_B, 6
+	end
 
 NorthstarCity_House2_Boy::
 	msgbox NorthstarCity_House2_Text_Boy, MSGBOX_NPC
