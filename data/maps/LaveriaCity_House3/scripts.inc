@@ -1,5 +1,10 @@
 LaveriaCity_House3_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LaveriaCity_House3_OnTransition
 	.byte 0
+
+LaveriaCity_House3_OnTransition:
+	setvar VAR_TEMP_B, 4
+	end
 
 LaveriaCity_House3_Woman::
 	lock

@@ -1,5 +1,10 @@
 PinleafTown_House2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_House2_OnTransition
 	.byte 0
+
+PinleafTown_House2_OnTransition:
+	setvar VAR_TEMP_B, 7
+	end
 
 PinleafTown_House2_Man::
 	msgbox PinleafTown_House2_Text_Man, MSGBOX_NPC

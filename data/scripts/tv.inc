@@ -105,6 +105,10 @@ TV_SelectAChannel::
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
+TV_PlayerPutDownTheTvRemote::
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
 EventScript_TV_TryTenNews::
 	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp3
 	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_TenNewsEp2
@@ -142,11 +146,22 @@ EventScript_TV_TenNewsEp1::
 	switch VAR_RESULT
 	case 0, EventScript_TV_TenNewsEp1Pt1
 	case 1, TV_SelectAChannel
-	case 2, PlayerPutDownTheTvRemote
+	case 2, TV_PlayerPutDownTheTvRemote
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_TV_TenNewsEp1Pt1::
+	message OurCorrespondentWillBeLive
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp1Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp1Pt2::
 	msgbox NextUpPokemonTheft, MSGBOX_AUTOCLOSE
 	goto TV_SelectAChannel
 	end
@@ -160,7 +175,7 @@ EventScript_TV_PokeTalkEp1::
 	switch VAR_RESULT
 	case 0, EventScript_TV_PokeTalkEp1Pt1
 	case 1, TV_SelectAChannel
-	case 2, PlayerPutDownTheTvRemote
+	case 2, TV_PlayerPutDownTheTvRemote
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
@@ -173,7 +188,7 @@ EventScript_TV_PokeTalkEp1Pt1::
 	switch VAR_RESULT
 	case 0, EventScript_TV_PokeTalkEp1Pt2
 	case 1, TV_SelectAChannel
-	case 2, PlayerPutDownTheTvRemote
+	case 2, TV_PlayerPutDownTheTvRemote
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
@@ -189,14 +204,41 @@ EventScript_TV_PokeTalkEp1Pt2::
 EventScript_TV_CliffShowEp1::
 	call EventScript_TV_CliffShowSetScreen
 	special DrawWholeMapView
-	msgbox TodayOnTenNewsShouldChildren, MSGBOX_AUTOCLOSE
+	message WelcomeOneWelcomeAll
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_CliffShowEp1Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_CliffShowEp1Pt1::
+	msgbox IfYouTakeALookAround, MSGBOX_AUTOCLOSE
+	playse SE_M_ROCK_THROW
+	msgbox Crash, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	msgbox OopsItBrokeCutCutThat, MSGBOX_AUTOCLOSE
+	msgbox AndThatWasItForTheFieldSegment, MSGBOX_AUTOCLOSE
 	goto TV_SelectAChannel
 	end
 
 EventScript_TV_DrowzeePodcastEp1::
 	call EventScript_TV_DrowzeePodcastSetScreen
 	special DrawWholeMapView
-	msgbox YoureListeningToTheDrowzeePodcast1, MSGBOX_AUTOCLOSE
+	message YoureListeningToTheDrowzeePodcast1
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_DrowzeePodcastEp1Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_DrowzeePodcastEp1Pt1::
 	msgbox EricHeyJohn, MSGBOX_AUTOCLOSE
 	msgbox JohnHuh, MSGBOX_AUTOCLOSE
 	msgbox EricYouEverThink, MSGBOX_AUTOCLOSE
@@ -210,13 +252,13 @@ EventScript_TV_DrowzeePodcastEp1::
 	waitmessage
 	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_TV_DrowzeePodcastEp1Pt1
+	case 0, EventScript_TV_DrowzeePodcastEp1Pt2
 	case 1, TV_SelectAChannel
-	case 2, PlayerPutDownTheTvRemote
+	case 2, TV_PlayerPutDownTheTvRemote
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
-EventScript_TV_DrowzeePodcastEp1Pt1::
+EventScript_TV_DrowzeePodcastEp1Pt2::
 	msgbox EricDoYouThinkIceTypeIsBad, MSGBOX_AUTOCLOSE
 	msgbox JohnHuh3, MSGBOX_AUTOCLOSE
 	msgbox EricThinkAboutItIceOnlyResistsIce, MSGBOX_AUTOCLOSE
@@ -232,40 +274,40 @@ EventScript_TV_TenNewsSetScreen::
 	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownTN
 	call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityTN
 	call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownTN
-	@call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityTN
-	@call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageTN
-	@call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityTN
-	@call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownTN
+	call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityTN
+	call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageTN
+	call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityTN
+	call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownTN
 	return
 
 EventScript_TV_PokeTalkSetScreen::
 	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownPT
 	call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityPT
 	call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownPT
-	@call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityPT
-	@call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillagePT
-	@call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityPT
-	@call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownPT
+	call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityPT
+	call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillagePT
+	call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityPT
+	call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownPT
 	return
 
 EventScript_TV_CliffShowSetScreen::
 	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownCS
 	call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityCS
 	call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownCS
-	@call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityCS
-	@call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageCS
-	@call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityCS
-	@call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownCS
+	call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityCS
+	call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageCS
+	call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityCS
+	call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownCS
 	return
 
 EventScript_TV_DrowzeePodcastSetScreen::
 	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownDP
 	call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityDP
 	call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownDP
-	@call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityDP
-	@call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageDP
-	@call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityDP
-	@call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownDP
+	call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityDP
+	call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageDP
+	call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityDP
+	call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownDP
 	return
 
 EventScript_TV_SunriseTownTN::
@@ -326,4 +368,84 @@ EventScript_TV_AnheimTownCS::
 EventScript_TV_AnheimTownDP::
 	setmetatile 5, 1, 444, 1
 	setmetatile 6, 1, 445, 1
+	return
+
+EventScript_TV_LaveriaCityTN::
+	setmetatile 3, 1, 410, 1
+	setmetatile 4, 1, 411, 1
+	return
+
+EventScript_TV_LaveriaCityPT::
+	setmetatile 3, 1, 426, 1
+	setmetatile 4, 1, 427, 1
+	return
+
+EventScript_TV_LaveriaCityCS::
+	setmetatile 3, 1, 458, 1
+	setmetatile 4, 1, 459, 1
+	return
+
+EventScript_TV_LaveriaCityDP::
+	setmetatile 3, 1, 442, 1
+	setmetatile 4, 1, 443, 1
+	return
+
+EventScript_TV_HighwindVillageTN::
+	setmetatile 2, 1, 412, 1
+	setmetatile 3, 1, 413, 1
+	return
+
+EventScript_TV_HighwindVillagePT::
+	setmetatile 2, 1, 428, 1
+	setmetatile 3, 1, 429, 1
+	return
+
+EventScript_TV_HighwindVillageCS::
+	setmetatile 2, 1, 460, 1
+	setmetatile 3, 1, 461, 1
+	return
+
+EventScript_TV_HighwindVillageDP::
+	setmetatile 2, 1, 444, 1
+	setmetatile 3, 1, 445, 1
+	return
+
+EventScript_TV_NorthstarCityTN::
+	setmetatile 3, 1, 408, 1
+	setmetatile 4, 1, 409, 1
+	return
+
+EventScript_TV_NorthstarCityPT::
+	setmetatile 3, 1, 424, 1
+	setmetatile 4, 1, 425, 1
+	return
+
+EventScript_TV_NorthstarCityCS::
+	setmetatile 3, 1, 456, 1
+	setmetatile 4, 1, 457, 1
+	return
+
+EventScript_TV_NorthstarCityDP::
+	setmetatile 3, 1, 440, 1
+	setmetatile 4, 1, 441, 1
+	return
+
+EventScript_TV_PinleafTownTN::
+	setmetatile 4, 1, 412, 1
+	setmetatile 5, 1, 413, 1
+	return
+
+EventScript_TV_PinleafTownPT::
+	setmetatile 4, 1, 428, 1
+	setmetatile 5, 1, 429, 1
+	return
+
+EventScript_TV_PinleafTownCS::
+	setmetatile 4, 1, 460, 1
+	setmetatile 5, 1, 461, 1
+	return
+
+EventScript_TV_PinleafTownDP::
+	setmetatile 4, 1, 444, 1
+	setmetatile 5, 1, 445, 1
 	return

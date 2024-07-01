@@ -1,5 +1,10 @@
 PinleafTown_House3_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_House3_OnTransition
 	.byte 0
+
+PinleafTown_House3_OnTransition:
+	setvar VAR_TEMP_B, 7
+	end
 
 PinleafTown_House3_Woman::
 	lockall

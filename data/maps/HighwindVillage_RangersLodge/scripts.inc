@@ -2,8 +2,13 @@
 .set LOCALID_MALE_RANGER, 8
 
 HighwindVillage_RangersLodge_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HighwindVillage_RangersLodge_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, HighwindVillage_RangersLodge_OnFrame
 	.byte 0
+
+HighwindVillage_RangersLodge_OnTransition:
+	setvar VAR_TEMP_B, 5
+	end
 
 HighwindVillage_RangersLodge_OnFrame::
 	map_script_2 VAR_RANGER_LODGE_STATE, 0, HighwindVillage_RangersLodge_RangerIntro
