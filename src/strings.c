@@ -1755,6 +1755,7 @@ const u8 gText_TrainerHill3F[] = _("3F");
 const u8 gText_TrainerHill4F[] = _("4F");
 const u8 gText_TenNews[] = _("TEN News");
 const u8 gText_PokeTalk[] = _("Poké Talk");
+const u8 gText_TrainerWatch[] = _("Trainer Watch");
 const u8 gText_CliffShow[] = _("Cliff Show");
 const u8 gText_DrowzeePodcast[] = _("Drowzee Podcast");
 const u8 gText_Continue[] = _("Continue");

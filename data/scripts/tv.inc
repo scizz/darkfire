@@ -101,8 +101,7 @@ TV_SelectAChannel::
 	switch VAR_RESULT
 	case 0, EventScript_TV_TryTenNews
 	case 1, EventScript_TV_TryPokeTalk
-	case 2, EventScript_TV_TryCliffShow
-	case 3, EventScript_TV_TryDrowzeePodcast
+	case 2, EventScript_TV_TryDrowzeePodcast
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
@@ -114,8 +113,7 @@ TV_SelectAChannelExpanded::
 	case 0, EventScript_TV_TryTenNews
 	case 1, EventScript_TV_TryPokeTalk
 	case 2, EventScript_TV_TryTrainerWatch
-	case 3, EventScript_TV_TryCliffShow
-	case 4, EventScript_TV_TryDrowzeePodcast
+	case 3, EventScript_TV_TryDrowzeePodcast
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
@@ -124,35 +122,35 @@ TV_PlayerPutDownTheTvRemote::
 	end
 
 EventScript_TV_TryTenNews::
-	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp4
-	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_TenNewsEp3
+	goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp4
+	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_TenNewsEp3
 	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_TenNewsEp2
 	goto EventScript_TV_TenNewsEp1
 	end
 
 EventScript_TV_TryPokeTalk::
-	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp4
-	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_PokeTalkEp3
+	goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp4
+	goto_if_set FLAG_BADGE02_GET, EventScript_TV_PokeTalkEp3
 	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
 	goto EventScript_TV_PokeTalkEp1
 	end
 
 EventScript_TV_TryTrainerWatch::
-	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
-	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
+	goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
+	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
 	goto EventScript_TV_TrainerWatchEp1
 	end
 
 EventScript_TV_TryCliffShow::
 	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_CliffShowEp3
 	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_CliffShowEp2
-	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_CliffShowEp1
-	goto EventScript_TV_CliffShowEp1
+	@goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_CliffShowEp1
+	@goto EventScript_TV_CliffShowEp1
 	end
 
 EventScript_TV_TryDrowzeePodcast::
-	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_DrowzeePodcastEp3
-	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_DrowzeePodcastEp2
+	goto_if_set FLAG_BADGE03_GET, EventScript_TV_DrowzeePodcastEp3
+	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_DrowzeePodcastEp2
 	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_DrowzeePodcastEp1
 	goto EventScript_TV_DrowzeePodcastEp1
 	end

@@ -1314,6 +1314,7 @@ extern const u8 gText_TrainerHill4F[];
 
 extern const u8 gText_TenNews[];
 extern const u8 gText_PokeTalk[];
+extern const u8 gText_TrainerWatch[];
 extern const u8 gText_CliffShow[];
 extern const u8 gText_DrowzeePodcast[];
 extern const u8 gText_Continue[];

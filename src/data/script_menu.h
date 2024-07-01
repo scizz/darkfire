@@ -304,7 +304,15 @@ static const struct MenuAction MultichoiceList_TvSelectAChannel[] =
 {
     {gText_TenNews},
     {gText_PokeTalk},
-    {gText_CliffShow},
+    {gText_DrowzeePodcast},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_TvSelectAChannelExpanded[] =
+{
+    {gText_TenNews},
+    {gText_PokeTalk},
+    {gText_TrainerWatch},
     {gText_DrowzeePodcast},
     {gText_Exit},
 };
@@ -824,7 +832,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_VIEWED_PAINTINGS]           = MULTICHOICE(MultichoiceList_ViewedPaintings),
     [MULTI_YESNOINFO]                  = MULTICHOICE(MultichoiceList_YesNoInfo),
     [MULTI_BATTLE_MODE]                = MULTICHOICE(MultichoiceList_BattleMode),
-    [MULTI_UNUSED_19]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_TV_SELECT_CHANNEL_EXPANDED] = MULTICHOICE(MultichoiceList_TvSelectAChannelExpanded),
     [MULTI_YESNOINFO_2]                = MULTICHOICE(MultichoiceList_YesNoInfo2),
     [MULTI_UNUSED_21]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
