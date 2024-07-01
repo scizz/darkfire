@@ -27,7 +27,7 @@
 #define MULTI_VIEWED_PAINTINGS             16
 #define MULTI_YESNOINFO                    17
 #define MULTI_BATTLE_MODE                  18
-#define MULTI_SELECT_CHANNEL_EXPANDED            19
+#define MULTI_TV_SELECT_CHANNEL_EXPANDED   19
 #define MULTI_YESNOINFO_2                  20
 #define MULTI_UNUSED_21                    21
 #define MULTI_UNUSED_22                    22
