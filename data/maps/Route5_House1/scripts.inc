@@ -1,5 +1,10 @@
 Route5_House1_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route5_House1_OnTransition
 	.byte 0
+
+Route5_House1_OnTransition:
+	setvar VAR_TEMP_B, 1
+	end
 
 Route5_House1_Man::
 	lock

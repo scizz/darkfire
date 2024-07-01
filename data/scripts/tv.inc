@@ -94,6 +94,7 @@ TV_Off::
 	end
 
 TV_SelectAChannel::
+	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, TV_SelectAChannelExpanded
 	message PleaseSelectAChannel
 	waitmessage
 	multichoice 0, 0, MULTI_TV_SELECT_CHANNEL, FALSE
@@ -105,35 +106,54 @@ TV_SelectAChannel::
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
+TV_SelectAChannelExpanded::
+	message PleaseSelectAChannel
+	waitmessage
+	multichoice 0, 0, MULTI_TV_SELECT_CHANNEL_EXPANDED, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TryTenNews
+	case 1, EventScript_TV_TryPokeTalk
+	case 2, EventScript_TV_TryTrainerWatch
+	case 3, EventScript_TV_TryCliffShow
+	case 4, EventScript_TV_TryDrowzeePodcast
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
 TV_PlayerPutDownTheTvRemote::
 	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
 	end
 
 EventScript_TV_TryTenNews::
-	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp3
-	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_TenNewsEp2
-	goto_if_set FLAG_BADGE01_GET, EventScript_TV_TenNewsEp1
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp4
+	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_TenNewsEp3
+	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_TenNewsEp2
 	goto EventScript_TV_TenNewsEp1
 	end
 
 EventScript_TV_TryPokeTalk::
-	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
-	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_PokeTalkEp2
-	goto_if_set FLAG_BADGE01_GET, EventScript_TV_PokeTalkEp1
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp4
+	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_PokeTalkEp3
+	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
 	goto EventScript_TV_PokeTalkEp1
+	end
+
+EventScript_TV_TryTrainerWatch::
+	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
+	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
+	goto EventScript_TV_TrainerWatchEp1
 	end
 
 EventScript_TV_TryCliffShow::
 	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_CliffShowEp3
-	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_CliffShowEp2
-	goto_if_set FLAG_BADGE01_GET, EventScript_TV_CliffShowEp1
+	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_CliffShowEp2
+	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_CliffShowEp1
 	goto EventScript_TV_CliffShowEp1
 	end
 
 EventScript_TV_TryDrowzeePodcast::
 	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_DrowzeePodcastEp3
-	@goto_if_set FLAG_BADGE02_GET, EventScript_TV_DrowzeePodcastEp2
-	goto_if_set FLAG_BADGE01_GET, EventScript_TV_DrowzeePodcastEp1
+	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_DrowzeePodcastEp2
+	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_DrowzeePodcastEp1
 	goto EventScript_TV_DrowzeePodcastEp1
 	end
 
@@ -199,6 +219,24 @@ EventScript_TV_PokeTalkEp1Pt2::
 	msgbox ISawASeviperSlitheringAround, MSGBOX_AUTOCLOSE
 	msgbox HahaVeryWiseIndeedThankYou, MSGBOX_AUTOCLOSE
 	goto TV_SelectAChannel
+	end
+
+EventScript_TV_TrainerWatchEp1::
+	call EventScript_TV_TrainerWatchSetScreen
+	special DrawWholeMapView
+	message WelcomeToTrainerWatch1
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TrainerWatchEp1Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TrainerWatchEp1Pt1::
+	msgbox AlthoughThereAreFewGenerationalPhenomenons, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannelExpanded
 	end
 
 EventScript_TV_CliffShowEp1::
@@ -288,6 +326,16 @@ EventScript_TV_PokeTalkSetScreen::
 	call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillagePT
 	call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityPT
 	call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownPT
+	return
+
+EventScript_TV_TrainerWatchSetScreen::
+	@call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownTW
+	@call_if_eq VAR_TEMP_B, 2, EventScript_TV_UnionCityTW
+	@call_if_eq VAR_TEMP_B, 3, EventScript_TV_AnheimTownTW
+	@call_if_eq VAR_TEMP_B, 4, EventScript_TV_LaveriaCityTW
+	@call_if_eq VAR_TEMP_B, 5, EventScript_TV_HighwindVillageTW
+	@call_if_eq VAR_TEMP_B, 6, EventScript_TV_NorthstarCityTW
+	@call_if_eq VAR_TEMP_B, 7, EventScript_TV_PinleafTownTW
 	return
 
 EventScript_TV_CliffShowSetScreen::
