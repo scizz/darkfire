@@ -148,7 +148,7 @@ static const u32 sStartMenuTiles[] = INCBIN_U32("graphics/heat_start_menu/bg.4bp
 static const u32 sStartMenuTilemap[] = INCBIN_U32("graphics/heat_start_menu/bg.bin.lz");
 static const u32 sStartMenuTilemapSafari[] = INCBIN_U32("graphics/heat_start_menu/bg_safari.bin.lz");
 static const u16 sStartMenuPalette[] = INCBIN_U16("graphics/heat_start_menu/bg.gbapal");
-static const u16 gStandardMenuPalette[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
+static const u16 gStandardMenuPalette2[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
 
 //--SPRITE-GFX--
 #define TAG_ICON_GFX 1234
@@ -730,7 +730,7 @@ static void HeatStartMenu_LoadBgGfx(void) {
   } else {
     LZDecompressWram(sStartMenuTilemapSafari, buf);
   }
-  LoadPalette(gStandardMenuPalette, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+  LoadPalette(gStandardMenuPalette2, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
   LoadPalette(sStartMenuPalette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
   ScheduleBgCopyTilemapToVram(0);
 }
