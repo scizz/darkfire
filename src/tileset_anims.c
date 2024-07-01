@@ -153,6 +153,7 @@ static void QueueAnimTiles_BattleFrontierOutsideWest_Flag(u16);
 static void QueueAnimTiles_BattleFrontierOutsideEast_Flag(u16);
 static void QueueAnimTiles_BattleTent_Tv_Ten(u16);
 static void QueueAnimTiles_BattleTent_Tv_Poke(u16);
+static void QueueAnimTiles_BattleTent_Tv_Trainer(u16);
 static void QueueAnimTiles_BattleTent_Tv_Drowzee(u16);
 static void QueueAnimTiles_BattleTent_Tv_Cliff(u16);
 //static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
@@ -1530,6 +1531,26 @@ const u16 *const gTilesetAnims_BattleTent_Tv_Poke[] = {
     gTilesetAnims_BattleTent_Tv_Poke_Frame7
 };
 
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/0.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/1.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame2[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/2.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame3[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/3.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame4[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/4.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame5[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/5.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame6[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/6.4bpp");
+const u16 gTilesetAnims_BattleTent_Tv_Trainer_Frame7[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/trainer/7.4bpp");
+
+const u16 *const gTilesetAnims_BattleTent_Tv_Trainer[] = {
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame0,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame1,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame2,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame3,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame4,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame5,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame6,
+    gTilesetAnims_BattleTent_Tv_Trainer_Frame7
+};
+
 const u16 gTilesetAnims_BattleTent_Tv_Drowzee_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/drowzee/0.4bpp");
 const u16 gTilesetAnims_BattleTent_Tv_Drowzee_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_tent/anim/drowzee/1.4bpp");
 
@@ -2096,6 +2117,7 @@ static void TilesetAnim_BattleTent(u16 timer)
     if (timer % 8 == 0) {
         QueueAnimTiles_BattleTent_Tv_Ten(timer / 8);
         QueueAnimTiles_BattleTent_Tv_Poke(timer / 8);
+        QueueAnimTiles_BattleTent_Tv_Trainer(timer / 8);
         QueueAnimTiles_BattleTent_Tv_Drowzee(timer / 8);
         QueueAnimTiles_BattleTent_Tv_Cliff(timer / 8);
     }
@@ -2678,6 +2700,12 @@ static void QueueAnimTiles_BattleTent_Tv_Poke(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattleTent_Tv_Poke);
     AppendTilesetAnimToBuffer(gTilesetAnims_BattleTent_Tv_Poke[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 152)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_BattleTent_Tv_Trainer(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattleTent_Tv_Trainer);
+    AppendTilesetAnimToBuffer(gTilesetAnims_BattleTent_Tv_Trainer[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 168)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_BattleTent_Tv_Drowzee(u16 timer)
