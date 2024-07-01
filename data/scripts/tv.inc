@@ -430,8 +430,73 @@ EventScript_TV_TrainerWatchEp1::
 	end
 
 EventScript_TV_TrainerWatchEp1Pt1::
-	msgbox AlthoughThereAreFewGenerationalPhenomenons, MSGBOX_AUTOCLOSE
-	goto TV_SelectAChannelExpanded
+	message AlthoughThereAreFewGenerationalPhenomenons
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TrainerWatchEp1Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TrainerWatchEp1Pt2::
+	msgbox ButJennyIsntTheOnlyTrainer, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_TrainerWatchEp2::
+	message WelcomeBackToTrainerWatch
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TrainerWatchEp2Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TrainerWatchEp2Pt1::
+	message FancyATreacherousHikeThrough
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TrainerWatchEp2Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TrainerWatchEp2Pt2::
+	msgbox OhTheClassicEnduranceBattle, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_TrainerWatchEp3::
+	message WelcomeBackToTrainerWatchRakazRosePlayer
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TrainerWatchEp3Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TrainerWatchEp3Pt1::
+	message NorthstarCityItIsThePlaceOfTheGrandTournament
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TrainerWatchEp3Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TrainerWatchEp3Pt2::
+	msgbox InLighterNewsPlayer, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
 	end
 
 @ Cliff Show
