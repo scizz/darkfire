@@ -122,6 +122,8 @@ TV_PlayerPutDownTheTvRemote::
 	end
 
 EventScript_TV_TryTenNews::
+	call EventScript_TV_TenNewsSetScreen
+	special DrawWholeMapView
 	goto_if_set FLAG_BADGE03_GET, EventScript_TV_TenNewsEp4
 	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_TenNewsEp3
 	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_TenNewsEp2
@@ -129,6 +131,8 @@ EventScript_TV_TryTenNews::
 	end
 
 EventScript_TV_TryPokeTalk::
+	call EventScript_TV_PokeTalkSetScreen
+	special DrawWholeMapView
 	goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp4
 	goto_if_set FLAG_BADGE02_GET, EventScript_TV_PokeTalkEp3
 	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
@@ -136,28 +140,34 @@ EventScript_TV_TryPokeTalk::
 	end
 
 EventScript_TV_TryTrainerWatch::
+	call EventScript_TV_TrainerWatchSetScreen
+	special DrawWholeMapView
 	goto_if_set FLAG_BADGE03_GET, EventScript_TV_PokeTalkEp3
 	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_PokeTalkEp2
 	goto EventScript_TV_TrainerWatchEp1
 	end
 
 EventScript_TV_TryCliffShow::
+	call EventScript_TV_CliffShowSetScreen
+	special DrawWholeMapView
 	@goto_if_set FLAG_BADGE03_GET, EventScript_TV_CliffShowEp3
 	@goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_CliffShowEp2
-	@goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_CliffShowEp1
-	@goto EventScript_TV_CliffShowEp1
+	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_CliffShowEp1
+	goto EventScript_TV_CliffShowEp1
 	end
 
 EventScript_TV_TryDrowzeePodcast::
+	call EventScript_TV_DrowzeePodcastSetScreen
+	special DrawWholeMapView
 	goto_if_set FLAG_BADGE03_GET, EventScript_TV_DrowzeePodcastEp3
 	goto_if_set FLAG_TAMAROK_TUNNELS_SUBO, EventScript_TV_DrowzeePodcastEp2
 	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, EventScript_TV_DrowzeePodcastEp1
 	goto EventScript_TV_DrowzeePodcastEp1
 	end
 
+@ TEN News
+
 EventScript_TV_TenNewsEp1::
-	call EventScript_TV_TenNewsSetScreen
-	special DrawWholeMapView
 	message TodayOnTenNewsShouldChildren
 	waitmessage
 	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
@@ -184,9 +194,90 @@ EventScript_TV_TenNewsEp1Pt2::
 	goto TV_SelectAChannel
 	end
 
+EventScript_TV_TenNewsEp2::
+	message TodayOnTenNewsBreakingNews
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp2Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp2Pt1::
+	message OfAllPlacesItWasAnAbandonedMuseum
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp2Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp2Pt2::
+	msgbox InOtherNewsGlobalWarming, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_TenNewsEp3::
+	message TodayOnTenNewsALoudExplosion
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp3Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp3Pt1::
+	message OurReporterWillBeLiveInLaveriaCity
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp3Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp3Pt2::
+	msgbox NextUpAPokemonTheftEpidemic, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+EventScript_TV_TenNewsEp4::
+	message TodayOnTenNewsTheSubo
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp4Pt1
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp4Pt1::
+	message TheSameGroupOfSuboThugs
+	waitmessage
+	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_TV_TenNewsEp4Pt2
+	case 1, TV_SelectAChannel
+	case 2, TV_PlayerPutDownTheTvRemote
+	msgbox PlayerPutDownTheTvRemote, MSGBOX_AUTOCLOSE
+	end
+
+EventScript_TV_TenNewsEp4Pt2::
+	msgbox InOtherNewsFarmondCity, MSGBOX_AUTOCLOSE
+	goto TV_SelectAChannel
+	end
+
+@ Poké Talk
+
 EventScript_TV_PokeTalkEp1::
-	call EventScript_TV_PokeTalkSetScreen
-	special DrawWholeMapView
 	message ThanksForTuningInToPokeTalk1
 	waitmessage
 	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
@@ -219,9 +310,9 @@ EventScript_TV_PokeTalkEp1Pt2::
 	goto TV_SelectAChannel
 	end
 
+@ Trainer Watch
+
 EventScript_TV_TrainerWatchEp1::
-	call EventScript_TV_TrainerWatchSetScreen
-	special DrawWholeMapView
 	message WelcomeToTrainerWatch1
 	waitmessage
 	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
@@ -237,9 +328,9 @@ EventScript_TV_TrainerWatchEp1Pt1::
 	goto TV_SelectAChannelExpanded
 	end
 
+@ Cliff Show
+
 EventScript_TV_CliffShowEp1::
-	call EventScript_TV_CliffShowSetScreen
-	special DrawWholeMapView
 	message WelcomeOneWelcomeAll
 	waitmessage
 	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
@@ -261,9 +352,9 @@ EventScript_TV_CliffShowEp1Pt1::
 	goto TV_SelectAChannel
 	end
 
+@ Drowzee Podcast
+
 EventScript_TV_DrowzeePodcastEp1::
-	call EventScript_TV_DrowzeePodcastSetScreen
-	special DrawWholeMapView
 	message YoureListeningToTheDrowzeePodcast1
 	waitmessage
 	multichoice 0, 0, MULTI_TV_GUIDE, FALSE
@@ -305,6 +396,8 @@ EventScript_TV_DrowzeePodcastEp1Pt2::
 	msgbox YoureListeningToTheDrowzeePodcast4, MSGBOX_AUTOCLOSE
 	goto TV_SelectAChannel
 	end
+
+@ Set Screens
 
 EventScript_TV_TenNewsSetScreen::
 	call_if_eq VAR_TEMP_B, 1, EventScript_TV_SunriseTownTN
