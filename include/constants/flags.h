@@ -1267,9 +1267,8 @@
 #define FLAG_CHANDRA_VILLAGE_VAR                                    0x4BD // Darkfire Flag
 #define FLAG_TAMAROK_TUNNELS_SUBO                                   0x4BE // Darkfire Flag
 #define FLAG_RECEIVED_TAMAROK_TUNNELS_MAGBY                         0x4BF // Darkfire Flag
-
-#define FLAG_HIDE_NORTHSTAR_CITY_SAILOR_NEW                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
+#define FLAG_HIDE_NORTHSTAR_CITY_SAILOR_NEW                         0x4C0 // 
+#define FLAG_NORTHSTAR_TOURNAMENT_COMPLETE                          0x4C1 // 
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag

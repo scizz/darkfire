@@ -14,15 +14,15 @@ NorthstarCity_OnFrame::
 	.2byte 0
 
 NorthstarCity_OnTransition:
-	call_if_unset FLAG_BADGE03_GET, NorthstarCity_HideSailors
-	call_if_set FLAG_BADGE03_GET, NorthstarCity_ShowSailor
+	call_if_unset FLAG_NORTHSTAR_TOURNAMENT_COMPLETE, NorthstarCity_HideSailors
+	call_if_set FLAG_NORTHSTAR_TOURNAMENT_COMPLETE, NorthstarCity_ShowSailor
 	end
 
 NorthstarCity_HideSailors::
 	removeobject 14
 	removeobject 27
 	removeobject 28
-	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_NEW
 	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
 	return
 
