@@ -22,11 +22,11 @@ Route10_Little_Girl::
 	msgbox Route10_Text_Little_Girl, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement 11, Common_Movement_WalkInPlaceSlowUp
+	applymovement 8, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	msgbox Route10_Text_Mother_To_Girl, MSGBOX_DEFAULT
 	closemessage
-	applymovement 11, Common_Movement_FaceDown
+	applymovement 8, Common_Movement_FaceDown
 	waitmovement 0
 	releaseall
 	end
