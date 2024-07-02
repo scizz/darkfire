@@ -33,6 +33,25 @@ NorthstarCity_ShowSailor::
 	return
 
 NorthstarCity_AfterTournament::
+	lockall
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_1, 52
+	goto_if_eq NorthstarCity_AfterTournamentCorrect
+	call TEST290
+	releaseall
+	end
+
+TEST290::
+	removeobject 14
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_NEW
+	clearflag FLAG_NORTHSTAR_SUBO_TAKEOVER
+	clearflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
+	addobject 27
+	addobject 28
+	setvar VAR_STORYLINE_STATE, 39
+	return
+
+NorthstarCity_AfterTournamentCorrect::
 	applymovement LOCALID_SAILOR_ONE, Common_Movement_FaceUp
 	waitmovement 0
 	emote LOCALID_SAILOR_ONE, 7
@@ -80,10 +99,14 @@ NorthstarCity_AfterTournament_EndRight::
 	end
 
 NorthstarCity_AfterTournament_EndHide::	
-	removeobject LOCALID_SAILOR_ONE
-	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE
+	removeobject 14
+	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_NEW
 	clearflag FLAG_NORTHSTAR_SUBO_TAKEOVER
+	clearflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_TWO
+	addobject 27
+	addobject 28
 	setvar VAR_STORYLINE_STATE, 39
+	releaseall
 	end
 
 NorthstarCity_Sign::

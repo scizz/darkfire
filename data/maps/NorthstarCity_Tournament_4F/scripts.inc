@@ -448,6 +448,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	waitmovement 0
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
+	setflag FLAG_BADGE03_GET
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_PlayerWins, MSGBOX_DEFAULT
@@ -698,7 +699,6 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	showface FS_RAKAZ, FSE_NORMAL, 0, 0
 	msgbox NorthstarCity_Tournament_4F_Text_UntilWeMeetAgain, MSGBOX_AUTOCLOSE
 	hideface 0
-	setflag FLAG_BADGE03_GET
 	fadescreen 1
 	call NorthstarCity_Tournament_4F_CameraPanRight
 	removeobject LOCALID_RECEPTIONIST

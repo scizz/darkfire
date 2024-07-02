@@ -8,15 +8,31 @@ NorthstarCity_Tournament_1F_MapScripts::
 
 NorthstarCity_Tournament_1F_OnTransition:
 	call_if_unset FLAG_NORTHSTAR_SUBO_TAKEOVER, NorthstarCity_Tournament_1F_HideSUBO
+	call_if_set FLAG_NORTHSTAR_SUBO_TAKEOVER, NorthstarCity_Tournament_1F_CheckVar
 	end
 
 NorthstarCity_Tournament_1F_HideSUBO::
+	call_if_le VAR_STORYLINE_STATE, 35, NorthstarCity_Tournament_1F_ResetTournament
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
 	setflag FLAG_ITEM_NORTHSTAR_CITY_TOXIC
 	end
+
+NorthstarCity_Tournament_1F_CheckVar::
+	call_if_le VAR_STORYLINE_STATE, 36, NorthstarCity_Tournament_1F_SetVar
+	return
+
+NorthstarCity_Tournament_1F_SetVar::
+	setvar VAR_STORYLINE_STATE, 37
+	return
+
+NorthstarCity_Tournament_1F_ResetTournament::
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_PSYCHIC
+	clearflag FLAG_NORTHSTAR_TOURNAMENT_RANGER
+	setvar VAR_STORYLINE_STATE, 28
+	return
 
 NorthstarCity_Tournament_1F_SUBOEnd::
 	lock
