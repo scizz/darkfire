@@ -6,14 +6,14 @@ PinleafTown_MapScripts::
 	.byte 0
 
 PinleafTown_OnFrame:
-	map_script_2 VAR_STORYLINE_STATE, 1, PinleafTown_TylerBattle
+	map_script_2 VAR_STORYLINE_STATE, 40, PinleafTown_TylerBattle
 	.2byte 0
 
 PinleafTown_OnTransition:
-	compare VAR_STORYLINE_STATE, 0
+	compare VAR_STORYLINE_STATE, 39
 	goto_if_eq PinleafTown_HideTyler
-	compare VAR_STORYLINE_STATE, 2
-	goto_if_ge PinleafTown_HideTyler
+	compare VAR_STORYLINE_STATE, 40
+	goto_if_eq PinleafTown_HideTyler
 	call PinleafTown_ShowTyler
 	end
 
@@ -69,7 +69,7 @@ PinleafTown_TylerBattle_End::
 	waitmovement 0
 	removeobject LOCALID_TYLER
 	setflag FLAG_HIDE_PINLEAF_TOWN_TYLER
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 41
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	release

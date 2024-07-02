@@ -220,7 +220,7 @@ NorthstarCity_Tournament_1F_SUBOEndRose::
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ROSE_1F
-	setvar VAR_STORYLINE_STATE, 10
+	setvar VAR_STORYLINE_STATE, 38
 	end
 
 NorthstarCity_Tournament_1F_Woman::

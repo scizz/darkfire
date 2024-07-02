@@ -178,10 +178,10 @@ NorthstarCity_TelescopeSea_SUBO_Main::
 	msgbox NorthstarCity_TelescopeSea_Text_FineFine, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_STORYLINE_STATE, 27
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
 	setfollowerwarppos DIR_WEST
-	clearflag FLAG_SYS_TELESCOPE_USE
+	@clearflag FLAG_SYS_TELESCOPE_USE
 	warpsilent MAP_NORTHSTAR_CITY_LIGHTHOUSE, 36, 4
 	waitstate
 	end

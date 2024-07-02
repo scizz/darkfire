@@ -11,15 +11,15 @@ NorthstarArena_MapScripts::
 	.byte 0
 
 NorthstarArena_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 2, NorthstarArena_EventStart
-	map_script_2 VAR_STORYLINE_STATE, 4, NorthstarArena_RoundTwo
-	map_script_2 VAR_STORYLINE_STATE, 6, NorthstarArena_RoundThree
+	map_script_2 VAR_STORYLINE_STATE, 30, NorthstarArena_EventStart
+	map_script_2 VAR_STORYLINE_STATE, 32, NorthstarArena_RoundTwo
+	map_script_2 VAR_STORYLINE_STATE, 34, NorthstarArena_RoundThree
 	.2byte 0
 
 NorthstarArena_OnWarp:
-	map_script_2 VAR_STORYLINE_STATE, 2, NorthstarArena_InitRoomObjects
-	map_script_2 VAR_STORYLINE_STATE, 4, NorthstarArena_InitRoomObjects
-	map_script_2 VAR_STORYLINE_STATE, 6, NorthstarArena_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 30, NorthstarArena_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 32, NorthstarArena_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 34, NorthstarArena_InitRoomObjects
 	.2byte 0
 
 NorthstarArena_InitRoomObjects::
@@ -58,7 +58,7 @@ NorthstarArena_PsychicBattle::
 	msgbox NorthstarArena_Text_IDidntGetAllTheWay, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_PSYCHIC_STEVE, PsychicSteve_Text_Defeated
 	delay 30
-	setvar VAR_STORYLINE_STATE, 3
+	setvar VAR_STORYLINE_STATE, 31
 	goto NorthstarArena_NextRound
 	end
 
@@ -77,7 +77,7 @@ NorthstarArena_RangerBattle::
 	msgbox NorthstarArena_Text_SoYoureTheNewTrainer, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_RANGER_MARTA, RangerMarta_Text_Defeated
 	delay 30
-	setvar VAR_STORYLINE_STATE, 3
+	setvar VAR_STORYLINE_STATE, 31
 	goto NorthstarArena_NextRound
 	end
 
@@ -95,7 +95,7 @@ NorthstarArena_BlackBeltBattle::
 	msgbox NorthstarArena_Text_WellMetTrainer, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_BLACK_BELT_DAWSON, BlackBeltDawson_Text_Defeated
 	delay 30
-	setvar VAR_STORYLINE_STATE, 5
+	setvar VAR_STORYLINE_STATE, 33
 	goto NorthstarArena_NextRound
 	end
 
@@ -113,7 +113,7 @@ NorthstarArena_OldManBattle::
 	msgbox NorthstarArena_Text_TheChildrenOfToday, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_OLD_MAN_ALFRED, OldManAlfred_Text_Defeated
 	delay 30
-	setvar VAR_STORYLINE_STATE, 5
+	setvar VAR_STORYLINE_STATE, 33
 	goto NorthstarArena_NextRound
 	end
 
@@ -131,7 +131,7 @@ NorthstarArena_SailorBattle::
 	msgbox NorthstarArena_Text_IfYouDontKnow, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_SAILOR_MIGUEL, SailorMiguel_Text_Defeated
 	delay 30
-	setvar VAR_STORYLINE_STATE, 7
+	setvar VAR_STORYLINE_STATE, 35
 	goto NorthstarArena_NextRound
 	end
 
@@ -149,7 +149,7 @@ NorthstarArena_AceTrainerBattle::
 	msgbox NorthstarArena_Text_YoYoureTheOne, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_ACE_TRAINER_FALTER, AceTrainerFalter_Text_Defeated
 	delay 30
-	setvar VAR_STORYLINE_STATE, 7
+	setvar VAR_STORYLINE_STATE, 35
 	goto NorthstarArena_NextRound
 	end
 

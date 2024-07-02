@@ -27,16 +27,16 @@ NorthstarCity_Tournament_4F_MapScripts::
 	.byte 0
 
 NorthstarCity_Tournament_4F_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Tournament_4F_EventStart
-	map_script_2 VAR_STORYLINE_STATE, 3, NorthstarCity_Tournament_4F_FirstRoundComplete
-	map_script_2 VAR_STORYLINE_STATE, 5, NorthstarCity_Tournament_4F_SecondRoundComplete
-	map_script_2 VAR_STORYLINE_STATE, 7, NorthstarCity_Tournament_4F_ThirdRoundComplete
+	map_script_2 VAR_STORYLINE_STATE, 29, NorthstarCity_Tournament_4F_EventStart
+	map_script_2 VAR_STORYLINE_STATE, 31, NorthstarCity_Tournament_4F_FirstRoundComplete
+	map_script_2 VAR_STORYLINE_STATE, 33, NorthstarCity_Tournament_4F_SecondRoundComplete
+	map_script_2 VAR_STORYLINE_STATE, 35, NorthstarCity_Tournament_4F_ThirdRoundComplete
 	.2byte 0
 
 NorthstarCity_Tournament_4F_OnWarp:
-	map_script_2 VAR_STORYLINE_STATE, 3, NorthstarCity_Tournament_4F_InitRoomObjects
-	map_script_2 VAR_STORYLINE_STATE, 5, NorthstarCity_Tournament_4F_InitRoomObjects
-	map_script_2 VAR_STORYLINE_STATE, 7, NorthstarCity_Tournament_4F_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 31, NorthstarCity_Tournament_4F_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 33, NorthstarCity_Tournament_4F_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 35, NorthstarCity_Tournament_4F_InitRoomObjects
 	.2byte 0
 
 
@@ -203,7 +203,7 @@ NorthstarCity_Tournament_DirectorMagic::
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_DirectorWorkYourMagic, MSGBOX_AUTOCLOSE
 	hideface 1
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 30
 	goto NorthstarCity_Tournament_4F_BattleWarp
 	end
 
@@ -377,7 +377,7 @@ NorthstarCity_Tournament_ShowBlackBelt::
 	hideface 1
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_BLACK_BELT
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
-	setvar VAR_STORYLINE_STATE, 4
+	setvar VAR_STORYLINE_STATE, 32
 	goto NorthstarCity_Tournament_4F_BattleWarp
 	end
 
@@ -393,7 +393,7 @@ NorthstarCity_Tournament_ShowOldMan::
 	hideface 1
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_OLD_MAN
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
-	setvar VAR_STORYLINE_STATE, 4
+	setvar VAR_STORYLINE_STATE, 32
 	goto NorthstarCity_Tournament_4F_BattleWarp
 	end
 
@@ -409,7 +409,7 @@ NorthstarCity_Tournament_ShowSailor::
 	hideface 1
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_SAILOR
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
-	setvar VAR_STORYLINE_STATE, 6
+	setvar VAR_STORYLINE_STATE, 34
 	goto NorthstarCity_Tournament_4F_BattleWarp
 	end
 
@@ -425,7 +425,7 @@ NorthstarCity_Tournament_ShowAceTrainer::
 	hideface 1
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_ACE_TRAINER
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
-	setvar VAR_STORYLINE_STATE, 6
+	setvar VAR_STORYLINE_STATE, 34
 	goto NorthstarCity_Tournament_4F_BattleWarp
 	end
 
@@ -739,7 +739,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_2F
 	clearflag FLAG_ITEM_NORTHSTAR_CITY_TOXIC
 	waitse
-	setvar VAR_STORYLINE_STATE, 8
+	setvar VAR_STORYLINE_STATE, 36
 	end
 
 WU2L:
