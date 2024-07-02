@@ -293,6 +293,8 @@ Route9_Snorlax_WakeUp_Yes::
 	fadescreen 1
 	delay 60
 	removeobject LOCALID_SNORLAX
+	removeobject 26
+	removeobject 27
 	setflag FLAG_ROUTE_9_SNORLAX
 	fadescreen 0
 	release
