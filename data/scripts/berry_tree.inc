@@ -119,10 +119,10 @@ BerryTree_EventScript_PickBerry::
 	waitmessage
 	waitfanfare
 	waitbuttonpress
+	hideitemdesc
 	message BerryTree_Text_PutAwayBerry
 	waitmessage
 	waitbuttonpress
-	hideitemdesc
 	release
 	end
 
@@ -227,8 +227,8 @@ BerryTree_Text_PickedTheBerry:
 	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_PutAwayBerry:
-	.string "{PLAYER} put away the {STR_VAR_1}\n"
-	.string "in the Bag's Berries Pocket.\p"
+	@.string "{PLAYER} put away the {STR_VAR_1}\n"
+	@.string "in the Bag's Berries Pocket.\p"
 	.string "The soil returned to its soft and\n"
 	.string "loamy state.$"
 
