@@ -23,6 +23,10 @@ PinleafTown_Inn_1F_Old_Lady::
 	msgbox PinleafTown_Inn_1F_Text_Old_Lady, MSGBOX_NPC
 	end
 
+PinleafTown_Inn_1F_Old_Man::
+	setvar VAR_STORYLINE_STATE, 40
+	end
+
 PinleafTown_Inn_1F_Text_Girl:
 	.string "{COLOR}{RED}The fresh air here in the countryside\n"
 	.string "is just something else.\p"

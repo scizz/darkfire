@@ -10,7 +10,7 @@ NorthstarCity_MapScripts::
 	.byte 0
 
 NorthstarCity_OnFrame::
-	map_script_2 VAR_STORYLINE_STATE, 10, NorthstarCity_AfterTournament
+	map_script_2 VAR_STORYLINE_STATE, 38, NorthstarCity_AfterTournament
 	.2byte 0
 
 NorthstarCity_OnTransition:
@@ -83,7 +83,7 @@ NorthstarCity_AfterTournament_EndHide::
 	removeobject LOCALID_SAILOR_ONE
 	setflag FLAG_HIDE_NORTHSTAR_CITY_SAILOR_ONE
 	clearflag FLAG_NORTHSTAR_SUBO_TAKEOVER
-	setvar VAR_STORYLINE_STATE, 2
+	setvar VAR_STORYLINE_STATE, 39
 	end
 
 NorthstarCity_Sign::

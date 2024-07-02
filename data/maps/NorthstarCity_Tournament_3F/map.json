@@ -168,7 +168,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "0",
+      "var_value": "28",
       "script": "NorthstarCity_Tournament_3F_Hide4FObjects"
     },
     {
@@ -177,7 +177,7 @@
       "y": 8,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "8",
+      "var_value": "36",
       "script": "NorthstarCity_Tournament_3F_SUBOBattle"
     },
     {
@@ -186,7 +186,7 @@
       "y": 8,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "8",
+      "var_value": "36",
       "script": "NorthstarCity_Tournament_3F_SUBOBattle"
     }
   ],

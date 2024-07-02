@@ -6,11 +6,11 @@ NorthstarCity_Lighthouse_MapScripts::
 	.byte 0
 
 NorthstarCity_Lighthouse_OnFrame:
-	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Lighthouse_TelescopeAfter
+	map_script_2 VAR_STORYLINE_STATE, 27, NorthstarCity_Lighthouse_TelescopeAfter
 	.2byte 0
 
 NorthstarCity_Lighthouse_OnWarp:
-	map_script_2 VAR_STORYLINE_STATE, 1, NorthstarCity_Lighthouse_InitRoomObjects
+	map_script_2 VAR_STORYLINE_STATE, 27, NorthstarCity_Lighthouse_InitRoomObjects
 	.2byte 0
 
 NorthstarCity_Lighthouse_InitRoomObjects::
@@ -36,7 +36,7 @@ NorthstarCity_Lighthouse_TelescopeAfter::
 	waitse
 	msgbox NorthstarCity_Lighthouse_Text_OhThisIs, MSGBOX_AUTOCLOSE
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
-	setvar VAR_STORYLINE_STATE, 3
+	setvar VAR_STORYLINE_STATE, 28
 	release
 	end
 
@@ -120,8 +120,8 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom::
 NorthstarCity_Lighthouse_Old_Man_UseTelescope::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	setflag FLAG_SYS_TELESCOPE_USE
-	special HealPlayerParty
+	@setflag FLAG_SYS_TELESCOPE_USE
+	@special HealPlayerParty
 	setfollowerwarppos DIR_NORTH
 	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 8
 	waitstate

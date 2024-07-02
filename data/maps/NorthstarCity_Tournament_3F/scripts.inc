@@ -39,7 +39,7 @@ NorthstarCity_Tournament_3F_Hide4FObjects::
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ACE_TRAINER
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SAILOR
 	setflag FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL
-	setvar VAR_STORYLINE_STATE, 1
+	setvar VAR_STORYLINE_STATE, 29
 	release
 	end
 
@@ -234,7 +234,7 @@ NorthstarCity_Tournament_3F_RakazDepart::
 	applymovement LOCALID_ROSE, WDL2FD
 	waitmovement 0
 	setobjectxyperm LOCALID_ROSE, 1, 10
-	setvar VAR_STORYLINE_STATE, 9
+	setvar VAR_STORYLINE_STATE, 37
 	release
 	end
 
