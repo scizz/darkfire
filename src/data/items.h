@@ -9935,4 +9935,40 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
     },
+
+    [ITEM_RUNNING_SHOES_MALE] =
+    {
+        .name = _("Running Shoes"),
+        .itemId = ITEM_RUNNING_SHOES_MALE,
+        .price = 0,
+        .description = sSheenySeedDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_RUNNING_SHOES_FEMALE] =
+    {
+        .name = _("Running Shoes"),
+        .itemId = ITEM_RUNNING_SHOES_FEMALE,
+        .price = 0,
+        .description = sSheenySeedDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_POKEDEX] =
+    {
+        .name = _("Pokédex"),
+        .itemId = ITEM_POKEDEX,
+        .price = 400,
+        .description = sSheenySeedDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
 };

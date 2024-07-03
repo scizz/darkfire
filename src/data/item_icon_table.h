@@ -806,6 +806,9 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_QUEST_BOOK] = {gItemIcon_QuestBook, gItemIconPalette_QuestBook},
     [ITEM_GLEAMING_SEED] = {gItemIcon_GleamingSeed, gItemIconPalette_GleamingSeed},
     [ITEM_SHEENY_SEED] = {gItemIcon_SheenySeed, gItemIconPalette_GleamingSeed},
+    [ITEM_RUNNING_SHOES_MALE] = {gItemIcon_RunningShoesMale, gItemIconPalette_RunningShoes},
+    [ITEM_RUNNING_SHOES_FEMALE] = {gItemIcon_RunningShoesFemale, gItemIconPalette_RunningShoes},
+    [ITEM_POKEDEX] = {gItemIcon_Pokedex, gItemIconPalette_Pokedex},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

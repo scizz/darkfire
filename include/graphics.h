@@ -8871,6 +8871,11 @@ extern const u32 gItemIconPalette_QuestBook[];
 extern const u32 gItemIcon_GleamingSeed[];
 extern const u32 gItemIcon_SheenySeed[];
 extern const u32 gItemIconPalette_GleamingSeed[];
+extern const u32 gItemIcon_RunningShoesMale[];
+extern const u32 gItemIcon_RunningShoesFemale[];
+extern const u32 gItemIcon_Pokedex[];
+extern const u32 gItemIconPalette_RunningShoes[];
+extern const u32 gItemIconPalette_Pokedex[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];

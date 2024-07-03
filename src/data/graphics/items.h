@@ -1937,3 +1937,10 @@ const u32 gItemIconPalette_QuestBook[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_GleamingSeed[] = INCBIN_U32("graphics/items/icons/gleaming_seed.4bpp.lz");
 const u32 gItemIcon_SheenySeed[] = INCBIN_U32("graphics/items/icons/sheeny_seed.4bpp.lz");
 const u32 gItemIconPalette_GleamingSeed[] = INCBIN_U32("graphics/items/icon_palettes/gleaming_seed.gbapal.lz");
+
+const u32 gItemIcon_RunningShoesMale[] = INCBIN_U32("graphics/items/icons/running_shoes_male.4bpp.lz");
+const u32 gItemIcon_RunningShoesFemale[] = INCBIN_U32("graphics/items/icons/running_shoes_female.4bpp.lz");
+const u32 gItemIconPalette_RunningShoes[] = INCBIN_U32("graphics/items/icon_palettes/running_shoes.gbapal.lz");
+
+const u32 gItemIcon_Pokedex[] = INCBIN_U32("graphics/items/icons/pokedex.4bpp.lz");
+const u32 gItemIconPalette_Pokedex[] = INCBIN_U32("graphics/items/icon_palettes/pokedex.gbapal.lz");

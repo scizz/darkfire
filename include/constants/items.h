@@ -933,7 +933,13 @@
 #define ITEM_GLEAMING_SEED 759
 #define ITEM_SHEENY_SEED 760
 
-#define ITEMS_COUNT 761
+// Misc Items
+#define ITEM_RUNNING_SHOES_MALE   761
+#define ITEM_RUNNING_SHOES_FEMALE 762
+#define ITEM_POKEDEX              763
+
+
+#define ITEMS_COUNT 764
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

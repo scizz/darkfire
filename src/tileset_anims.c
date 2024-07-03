@@ -1846,7 +1846,7 @@ void InitTilesetAnim_Sootopolis(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_Sootopolis;
+    sSecondaryTilesetAnimCallback = NULL;
 }
 
 void InitTilesetAnim_BattleFrontierOutsideWest(void)
