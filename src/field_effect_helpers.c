@@ -691,6 +691,142 @@ void UpdateLongGrassFieldEffect(struct Sprite *sprite)
     }
 }
 
+// HAY GRASS
+
+u32 FldEff_HayLongGrass(void)
+{
+    s16 x;
+    s16 y;
+    u8 spriteId;
+    struct Sprite *sprite;
+
+    x = gFieldEffectArguments[0];
+    y = gFieldEffectArguments[1];
+    SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_HAY_LONG_GRASS], x, y, 0);
+    if (spriteId != MAX_SPRITES)
+    {
+        sprite = &gSprites[spriteId];
+        sprite->coordOffsetEnabled = TRUE;
+        sprite->oam.priority = ElevationToPriority(gFieldEffectArguments[2]);
+        sprite->sElevation = gFieldEffectArguments[2];
+        sprite->sX = gFieldEffectArguments[0];
+        sprite->sY = gFieldEffectArguments[1];
+        sprite->sMapNum = gFieldEffectArguments[4]; // Also sLocalId
+        sprite->sMapGroup = gFieldEffectArguments[5];
+        sprite->sCurrentMap = gFieldEffectArguments[6];
+
+        if (gFieldEffectArguments[7])
+        {
+            SeekSpriteAnim(sprite, 6); // Skip to end of anim
+
+            // Check to see if follower is spawning in long grass and is facing east/west, away from long grass.
+            // If so, spawn a long grass sprite behind the follower to cover any part of the follower's sprite that is sticking past the grass it is currently standing on
+            if(gSaveBlock2Ptr->follower.inProgress &&
+               gFieldEffectArguments[4] >> 8 == gObjectEvents[gSaveBlock2Ptr->follower.objId].localId &&
+               MetatileBehavior_IsHayLongGrass(MapGridGetMetatileBehaviorAt(gObjectEvents[gSaveBlock2Ptr->follower.objId].currentCoords.x + (gObjectEvents[gSaveBlock2Ptr->follower.objId].facingDirection == DIR_WEST ? 1 : -1), gObjectEvents[gSaveBlock2Ptr->follower.objId].currentCoords.y)))
+            {
+                x = gObjectEvents[gSaveBlock2Ptr->follower.objId].currentCoords.x;
+                y = gObjectEvents[gSaveBlock2Ptr->follower.objId].currentCoords.y;
+                SetSpritePosToOffsetMapCoords(&x, &y, gObjectEvents[gSaveBlock2Ptr->follower.objId].facingDirection == DIR_WEST ? 24 : -8, 8);
+
+                spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_HAY_LONG_GRASS], x, y, 0);
+
+                if (spriteId != MAX_SPRITES)
+                {
+                    sprite = &gSprites[spriteId];
+                    sprite->coordOffsetEnabled = TRUE;
+                    sprite->oam.priority = ElevationToPriority(gFieldEffectArguments[2]);
+                    sprite->sElevation = gFieldEffectArguments[2];
+                    sprite->sX = gObjectEvents[gSaveBlock2Ptr->follower.objId].currentCoords.x + (gObjectEvents[gSaveBlock2Ptr->follower.objId].facingDirection == DIR_WEST ? 1 : -1);
+                    sprite->sY = gObjectEvents[gSaveBlock2Ptr->follower.objId].currentCoords.y;
+                    sprite->sMapNum = gFieldEffectArguments[4]; // Also sLocalId
+                    sprite->sMapGroup = gFieldEffectArguments[5];
+                    sprite->sCurrentMap = gFieldEffectArguments[6];
+
+                    SeekSpriteAnim(sprite, 6);
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+void UpdateHayLongGrassFieldEffect(struct Sprite *sprite)
+{
+    u8 mapNum;
+    u8 mapGroup;
+    u8 metatileBehavior;
+    u8 localId;
+    u8 objectEventId;
+    struct ObjectEvent *objectEvent;
+
+    mapNum = sprite->sCurrentMap >> 8;
+    mapGroup = sprite->sCurrentMap;
+    if (gCamera.active && (gSaveBlock1Ptr->location.mapNum != mapNum || gSaveBlock1Ptr->location.mapGroup != mapGroup))
+    {
+        sprite->sX -= gCamera.x;
+        sprite->sY -= gCamera.y;
+        sprite->sCurrentMap = ((u8)gSaveBlock1Ptr->location.mapNum << 8) | (u8)gSaveBlock1Ptr->location.mapGroup;
+    }
+    localId = sprite->sLocalId;
+    mapNum = sprite->sMapNum;
+    mapGroup = sprite->sMapGroup;
+    metatileBehavior = MapGridGetMetatileBehaviorAt(sprite->data[1], sprite->data[2]);
+    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId)
+     || !MetatileBehavior_IsHayLongGrass(metatileBehavior)
+     || (sprite->sObjectMoved && sprite->animEnded))
+    {
+        FieldEffectStop(sprite, FLDEFF_HAY_LONG_GRASS);
+    }
+    else
+    {
+        // Check if the object that triggered the effect has moved away
+        objectEvent = &gObjectEvents[objectEventId];
+        
+        // Check if the follower moved away.
+        // If the follower moved away east/west, leave the sprite there to cover any part of the follower sprite that sticks out past the grass sprite
+        if(gSaveBlock2Ptr->follower.inProgress && objectEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId])
+        {
+            switch(objectEvent->facingDirection)
+            {
+                case DIR_WEST:
+                    if (((objectEvent->currentCoords.x + 1 != sprite->data[1] && objectEvent->currentCoords.x != sprite->data[1])
+                      || objectEvent->currentCoords.y != sprite->data[2])
+                    && ((objectEvent->previousCoords.x + 1 != sprite->data[1] && objectEvent->previousCoords.x != sprite->data[1])
+                     || objectEvent->previousCoords.y != sprite->data[2]))
+                        sprite->sObjectMoved = TRUE;
+                     break;
+                case DIR_EAST:
+                    if (((objectEvent->currentCoords.x - 1 != sprite->data[1] && objectEvent->currentCoords.x != sprite->data[1])
+                      || objectEvent->currentCoords.y != sprite->data[2])
+                    && ((objectEvent->previousCoords.x - 1 != sprite->data[1] && objectEvent->previousCoords.x != sprite->data[1])
+                     || objectEvent->previousCoords.y != sprite->data[2]))
+                        sprite->sObjectMoved = TRUE;
+                     break;
+                default:
+                    if ((objectEvent->currentCoords.x != sprite->data[1]
+                      || objectEvent->currentCoords.y != sprite->data[2])
+                    && (objectEvent->previousCoords.x != sprite->data[1]
+                     || objectEvent->previousCoords.y != sprite->data[2]))
+                        sprite->sObjectMoved = TRUE;
+                     break;
+            }
+        }
+        else
+        {
+            if ((objectEvent->currentCoords.x != sprite->data[1]
+              || objectEvent->currentCoords.y != sprite->data[2])
+            && (objectEvent->previousCoords.x != sprite->data[1]
+             || objectEvent->previousCoords.y != sprite->data[2]))
+                sprite->sObjectMoved = TRUE;
+        }
+
+        UpdateObjectEventSpriteInvisibility(sprite, FALSE);
+        UpdateGrassFieldEffectSubpriority(sprite, sprite->sElevation, 0);
+    }
+}
+
 #undef sX
 #undef sY
 #undef sMapNum

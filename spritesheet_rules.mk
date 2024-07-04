@@ -2456,6 +2456,9 @@ $(FLDEFFGFXDIR)/ash_puff.4bpp: %.4bpp: %.png
 $(FLDEFFGFXDIR)/long_grass.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
+$(FLDEFFGFXDIR)/hay.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
 $(FLDEFFGFXDIR)/mountain_disguise.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 

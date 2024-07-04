@@ -369,6 +369,7 @@
 
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_Door               0x24E
+#define METATILE_MossdeepGym_LongGrass          0x265
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
 
 // gTileset_Mossdeep

@@ -6,7 +6,7 @@
 #define MB_TALL_GRASS 0x02
 #define MB_LONG_GRASS 0x03
 #define MB_UNUSED_04 0x04
-#define MB_UNUSED_05 0x05
+#define MB_HAY_LONG_GRASS 0x05
 #define MB_DEEP_SAND 0x06
 #define MB_SHORT_GRASS 0x07
 #define MB_CAVE 0x08

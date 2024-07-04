@@ -375,6 +375,7 @@ const u32 gFieldEffectObjectPic_JumpLongGrass[] = INCBIN_U32("graphics/field_eff
 const u32 gFieldEffectObjectPic_Unknown17[] = INCBIN_U32("graphics/field_effects/pics/unknown_17.4bpp");
 const u32 gFieldEffectObjectPic_UnusedGrass2[] = INCBIN_U32("graphics/field_effects/pics/unused_grass_2.4bpp");
 const u32 gFieldEffectObjectPic_LongGrass[] = INCBIN_U32("graphics/field_effects/pics/long_grass.4bpp");
+const u32 gFieldEffectObjectPic_HayLongGrass[] = INCBIN_U32("graphics/field_effects/pics/hay.4bpp");
 const u32 gFieldEffectObjectPic_TallGrass[] = INCBIN_U32("graphics/field_effects/pics/tall_grass.4bpp");
 const u32 gFieldEffectObjectPic_ForestTallGrass[] = INCBIN_U32("graphics/field_effects/pics/forest_tall_grass.4bpp");
 const u32 gFieldEffectObjectPic_ShortGrass[] = INCBIN_U32("graphics/field_effects/pics/short_grass.4bpp");

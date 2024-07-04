@@ -35,6 +35,7 @@ void UpdateJumpImpactEffect(struct Sprite *);
 void UpdateFootprintsTireTracksFieldEffect(struct Sprite *);
 void UpdateSplashFieldEffect(struct Sprite *);
 void UpdateLongGrassFieldEffect(struct Sprite *);
+void UpdateHayLongGrassFieldEffect(struct Sprite *);
 void UpdateSandPileFieldEffect(struct Sprite *);
 void UpdateDisguiseFieldEffect(struct Sprite *);
 void UpdateShortGrassFieldEffect(struct Sprite *);

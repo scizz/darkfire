@@ -725,6 +725,44 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_LongGrass = {
     .callback = UpdateLongGrassFieldEffect,
 };
 
+// HAY
+
+static const struct SpriteFrameImage sPicTable_HayLongGrass[] = {
+    overworld_frame(gFieldEffectObjectPic_HayLongGrass, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_HayLongGrass, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_HayLongGrass, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_HayLongGrass, 2, 2, 3),
+};
+
+static const union AnimCmd sAnim_HayLongGrass[] =
+{
+    ANIMCMD_FRAME(1, 3),
+    ANIMCMD_FRAME(2, 3),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_HayLongGrass[] =
+{
+    sAnim_HayLongGrass,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_HayLongGrass = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_HayLongGrass,
+    .images = sPicTable_HayLongGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateHayLongGrassFieldEffect,
+};
+
+// END HAY
+
 static const struct SpriteFrameImage sPicTable_JumpLongGrass[] = {
     overworld_frame(gFieldEffectObjectPic_JumpLongGrass, 2, 2, 0),
     overworld_frame(gFieldEffectObjectPic_JumpLongGrass, 2, 2, 1),
