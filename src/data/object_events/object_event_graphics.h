@@ -1549,3 +1549,6 @@ const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal"
 const u16 gObjectEventPaletteGrassPal[] = INCBIN_U16("graphics/object_events/palettes/grass_pal.gbapal");
 const u16 gObjectEventPaletteFirePal[] = INCBIN_U16("graphics/object_events/palettes/fire_pal.gbapal");
 const u16 gObjectEventPaletteWaterPal[] = INCBIN_U16("graphics/object_events/palettes/water_pal.gbapal");
+const u32 gObjectEventPic_Rancher[] = INCBIN_U32("graphics/object_events/pics/people/rancher.4bpp");
+const u32 gObjectEventPic_Cowgirl[] = INCBIN_U32("graphics/object_events/pics/people/cowgirl.4bpp");
+const u16 gObjectEventPal_Rancher[] = INCBIN_U16("graphics/object_events/palettes/rancher.gbapal");

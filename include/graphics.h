@@ -7287,6 +7287,7 @@ extern const u32 gTrainerPalette_SuboM[];
 extern const u32 gTrainerPalette_SuboF[];
 extern const u32 gTrainerPalette_DazRegular[];
 extern const u32 gTrainerPalette_Skier[];
+extern const u32 gTrainerPalette_Rancher[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
 

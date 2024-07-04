@@ -1014,6 +1014,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_GRASS_PAL               0xF88
 #define OBJ_EVENT_PAL_TAG_FIRE_PAL                0xF87
 #define OBJ_EVENT_PAL_TAG_WATER_PAL               0xF86
+//                                                0xF85 USED FOR FOREST + HAY GRASS FIELD EFFECT
+#define OBJ_EVENT_PAL_TAG_RANCHER                 0xF84
 
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
@@ -1051,6 +1053,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RangerBoard,           OBJ_EVENT_PAL_TAG_RANGER_BOARD},
     {gObjectEventPal_Rakaz,                 OBJ_EVENT_PAL_TAG_RAKAZ},
     {gObjectEventPal_Kojiro,                OBJ_EVENT_PAL_TAG_KOJIRO},
+    {gObjectEventPal_Rancher,               OBJ_EVENT_PAL_TAG_RANCHER},
     {gObjectEventPal_IceNest,               OBJ_EVENT_PAL_TAG_ICE_NEST},
     {gObjectEventPal_NoctowlShiny,          OBJ_EVENT_PAL_TAG_NOCTOWL_SHINY},
     {gObjectEventPal_PidgeyOW,              OBJ_EVENT_PAL_TAG_PIDGEY_OW},

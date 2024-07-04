@@ -78,7 +78,7 @@
       "flag": "FLAG_TEMP_7"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_COWGIRL",
       "x": 54,
       "y": 32,
       "elevation": 3,
@@ -143,7 +143,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
       "x": 49,
       "y": 50,
       "elevation": 3,
