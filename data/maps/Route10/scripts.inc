@@ -44,51 +44,79 @@ Route10_Father::
 	end
 
 Route10_SUBO_1::
-	msgbox Route10_Text_SUBO_1, MSGBOX_NPC
+	lock
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox Route10_Text_SUBO_1, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 Route10_SUBO_2::
 	lockall
 	faceplayer
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Route10_Text_SUBO_2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 16, Common_Movement_FaceLeft
+	hideface 1
+	applymovement 12, Common_Movement_FaceLeft
 	waitmovement 0
-	emote 16, 7
+	emote 12, 7
 	playse SE_PIN
 	waitse
-	applymovement 15, Common_Movement_FaceRight
-	applymovement 16, Common_Movement_WalkInPlaceSlowLeft
+	applymovement 11, Common_Movement_FaceRight
+	applymovement 12, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
+	speakername2 CommonName_Text_SuboGrunt
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox Route10_Text_SUBO_2_2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 15, Common_Movement_WalkInPlaceSlowRight
+	hideface 0
+	applymovement 11, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox Route10_Text_SUBO_2_3, MSGBOX_DEFAULT
 	closemessage
+	hideface 1
 	delay 30
-	applymovement 15, Common_Movement_FaceUp
-	applymovement 16, Common_Movement_FaceUp
+	applymovement 11, Common_Movement_FaceUp
+	applymovement 12, Common_Movement_FaceUp
 	waitmovement 0
-	emote 15, 7
-	emote 16, 3
+	emote 11, 7
+	emote 12, 3
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement 15, Common_Movement_WalkInPlaceSlowUp
-	applymovement 16, Common_Movement_WalkInPlaceSlowUp
+	applymovement 11, Common_Movement_WalkInPlaceSlowUp
+	applymovement 12, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 0, 0
 	msgbox Route10_Text_SUBO_2_4, MSGBOX_DEFAULT
 	closemessage
+	hideface 0
+	hideface 1
 	releaseall
 	end
 
 Route10_SUBO_3::
-	msgbox Route10_Text_SUBO_3, MSGBOX_NPC
+	lock
+	speakername CommonName_Text_SuboGrunt
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox Route10_Text_SUBO_3, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 Route10_SUBO_4::
-	msgbox Route10_Text_SUBO_4, MSGBOX_NPC
+	lock
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox Route10_Text_SUBO_4, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 Route10_EventScript_Carter::
@@ -208,7 +236,7 @@ Route10_Text_SUBO_2:
 	.string "{COLOR}{BLUE}Farmond City is ours!$"
 
 Route10_Text_SUBO_2_2:
-	.string "{COLOR}{BLUE}Hey!\p"
+	.string "{COLOR}{RED}Hey!\p"
 	.string "We don't call it Farmond City anymore!\n"
 	.string "The name's now Mayhem City!$"
 
@@ -216,17 +244,18 @@ Route10_Text_SUBO_2_3:
 	.string "{COLOR}{BLUE}Oh, right…$"
 
 Route10_Text_SUBO_2_4:
-	.string "Both Grunts: {COLOR}{BLUE}Mayhem City is ours!!$"
+	.string "{COLOR}{BLUE}Mayhem City is ours!!\n"
+	.string "{COLOR}{RED}Mayhem City is ours!!$"
 
 Route10_Text_SUBO_3:
-	.string "{COLOR}{BLUE}Keep your distance, punk.\p"
+	.string "{COLOR}{RED}Keep your distance, punk.\p"
 	.string "Only Trainers who mean business may\n"
 	.string "pass through here!$"
 
 Route10_Text_SUBO_4:
 	.string "{COLOR}{BLUE}Guard duty is sooo boring…\p"
 	.string "I wish I could be in Mayhem City right\n"
-	.string "now, smashing some stuff up!$"
+	.string "now, smashing stuff up!$"
 
 Route10_Text_Ranger:
 	.string "{COLOR}{RED}Oof! Trainer!\p"
