@@ -9045,7 +9045,7 @@
           "map": "MAP_PETALBURG_CITY",
           "base_label": "gPetalburgCity",
           "land_mons": {
-            "encounter_rate": 13,
+            "encounter_rate": 0,
             "mons": [
               {
                 "min_level": 5,

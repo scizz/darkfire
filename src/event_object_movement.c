@@ -9558,10 +9558,31 @@ static void SetObjectEventSpriteOamTableForLongGrass(struct ObjectEvent *objEven
     if (objEvent->disableCoveringGroundEffects)
         return;
 
-    if (!MetatileBehavior_IsLongGrass(objEvent->currentMetatileBehavior))
+    if (!MetatileBehavior_IsLongGrass(objEvent->currentMetatileBehavior)/* || !MetatileBehavior_IsHayLongGrass(objEvent->currentMetatileBehavior)*/)
         return;
 
-    if (!MetatileBehavior_IsLongGrass(objEvent->previousMetatileBehavior))
+    if (!MetatileBehavior_IsLongGrass(objEvent->previousMetatileBehavior)/* || !MetatileBehavior_IsHayLongGrass(objEvent->previousMetatileBehavior)*/)
+        return;
+
+    // If the follower is facing east/west, change the follower sprite's priority to have it hide behind the long grass sprite.
+    if(gSaveBlock2Ptr->follower.inProgress &&
+       objEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId] &&
+       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST))
+    {
+        sprite->oam.priority = 3;
+    }
+    else
+    {
+        sprite->subspriteTableNum = 4;
+
+    if (ElevationToPriority(objEvent->previousElevation) == 1)
+        sprite->subspriteTableNum = 5;
+    }
+}
+
+static void SetObjectEventSpriteOamTableForHayLongGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    if (objEvent->disableCoveringGroundEffects)
         return;
 
     if (!MetatileBehavior_IsHayLongGrass(objEvent->currentMetatileBehavior))
@@ -10113,6 +10134,7 @@ static void DoGroundEffects_OnSpawn(struct ObjectEvent *objEvent, struct Sprite 
         UpdateObjectEventElevationAndPriority(objEvent, sprite);
         GetAllGroundEffectFlags_OnSpawn(objEvent, &flags);
         SetObjectEventSpriteOamTableForLongGrass(objEvent, sprite);
+        SetObjectEventSpriteOamTableForHayLongGrass(objEvent, sprite);
         DoFlaggedGroundEffects(objEvent, sprite, flags);
         objEvent->triggerGroundEffectsOnMove = 0;
         objEvent->disableCoveringGroundEffects = 0;
@@ -10129,6 +10151,7 @@ static void DoGroundEffects_OnBeginStep(struct ObjectEvent *objEvent, struct Spr
         UpdateObjectEventElevationAndPriority(objEvent, sprite);
         GetAllGroundEffectFlags_OnBeginStep(objEvent, &flags);
         SetObjectEventSpriteOamTableForLongGrass(objEvent, sprite);
+        SetObjectEventSpriteOamTableForHayLongGrass(objEvent, sprite);
         filters_out_some_ground_effects(objEvent, &flags);
         DoFlaggedGroundEffects(objEvent, sprite, flags);
         objEvent->triggerGroundEffectsOnMove = 0;
@@ -10146,6 +10169,7 @@ static void DoGroundEffects_OnFinishStep(struct ObjectEvent *objEvent, struct Sp
         UpdateObjectEventElevationAndPriority(objEvent, sprite);
         GetAllGroundEffectFlags_OnFinishStep(objEvent, &flags);
         SetObjectEventSpriteOamTableForLongGrass(objEvent, sprite);
+        SetObjectEventSpriteOamTableForHayLongGrass(objEvent, sprite);
         FilterOutStepOnPuddleGroundEffectIfJumping(objEvent, &flags);
         DoFlaggedGroundEffects(objEvent, sprite, flags);
         objEvent->triggerGroundEffectsOnStop = 0;
