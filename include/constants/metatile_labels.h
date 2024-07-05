@@ -228,7 +228,7 @@
 #define METATILE_General_MuddySlope_Frame3     0x0EB
 #define METATILE_General_RedCaveIndent         0x195
 #define METATILE_General_RedCaveOpen           0x185
-#define METATILE_General_ReflectiveWater       0x0A6
+#define METATILE_General_ReflectiveWater       0x18E
 #define METATILE_General_RockWall_GrassBase    0x0B4
 #define METATILE_General_RockWall_RockBase     0x0B1
 #define METATILE_General_RockWall_SandBase     0x12D
