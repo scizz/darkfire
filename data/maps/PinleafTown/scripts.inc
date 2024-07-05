@@ -10,6 +10,7 @@ PinleafTown_OnFrame:
 	.2byte 0
 
 PinleafTown_OnTransition:
+	setrespawn HEAL_LOCATION_PINLEAF_TOWN
 	compare VAR_STORYLINE_STATE, 39
 	goto_if_eq PinleafTown_HideTyler
 	compare VAR_STORYLINE_STATE, 40

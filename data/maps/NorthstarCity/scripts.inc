@@ -14,6 +14,7 @@ NorthstarCity_OnFrame::
 	.2byte 0
 
 NorthstarCity_OnTransition:
+	setrespawn HEAL_LOCATION_NORTHSTAR_CITY
 	call_if_unset FLAG_NORTHSTAR_TOURNAMENT_COMPLETE, NorthstarCity_HideSailors
 	call_if_set FLAG_NORTHSTAR_TOURNAMENT_COMPLETE, NorthstarCity_ShowSailor
 	end
