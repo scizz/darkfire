@@ -698,7 +698,7 @@ Route10_Text_CarterDefeated:
 	.string "I caught nothing but a thrashing.$"
 
 Route10_Text_CarterPostBattle:
-	.string "I was too eager and lost a battle…\n"
+	.string "{COLOR}{BLUE}I was too eager and lost a battle…\n"
 	.string "Good things come to those who bait!$"
 
 Route10_Text_SarahIntro:
