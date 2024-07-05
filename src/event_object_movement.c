@@ -9567,7 +9567,7 @@ static void SetObjectEventSpriteOamTableForLongGrass(struct ObjectEvent *objEven
     // If the follower is facing east/west, change the follower sprite's priority to have it hide behind the long grass sprite.
     if(gSaveBlock2Ptr->follower.inProgress &&
        objEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId] &&
-       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST))
+       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST || objEvent->facingDirection == DIR_SOUTH || objEvent->facingDirection == DIR_NORTH))
     {
         sprite->oam.priority = 3;
     }
@@ -9594,7 +9594,7 @@ static void SetObjectEventSpriteOamTableForHayLongGrass(struct ObjectEvent *objE
     // If the follower is facing east/west, change the follower sprite's priority to have it hide behind the long grass sprite.
     if(gSaveBlock2Ptr->follower.inProgress &&
        objEvent == &gObjectEvents[gSaveBlock2Ptr->follower.objId] &&
-       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST))
+       (objEvent->facingDirection == DIR_EAST || objEvent->facingDirection == DIR_WEST || objEvent->facingDirection == DIR_SOUTH || objEvent->facingDirection == DIR_NORTH))
     {
         sprite->oam.priority = 3;
     }
