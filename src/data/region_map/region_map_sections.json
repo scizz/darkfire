@@ -239,6 +239,14 @@
       "y": 7,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_11",
+      "name": "Route 11",
+      "x": 7,
+      "y": 3,
+      "width": 1,
+      "height": 3
     }
   ]
 }
