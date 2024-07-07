@@ -226,9 +226,9 @@ PinleafTown_Text_Woman:
 	.string "won't be coming around here anymore…$"
 
 PinleafTown_Text_Man_1:
-	.string "{COLOR}{BLUE}I saw children climbing up the vines\n"
-	.string "on those logs.\p"
-	.string "I hope they didn't get hurt…$"
+	.string "{COLOR}{BLUE}Word of advice, Trainer.\p"
+	.string "Stay on guard in Pinleaf Town, because\n"
+	.string "there are Trainers looking to battle.$"
 
 PinleafTown_Text_Little_Girl:
 	.string "{COLOR}{RED}The countryside's pretty, but I really\n"
