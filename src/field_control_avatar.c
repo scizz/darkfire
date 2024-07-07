@@ -118,6 +118,11 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         }
     }
 
+    if (newKeys & START_BUTTON && FlagGet(FLAG_SYS_DEXNAV_SEARCH))
+    {
+        input->pressedStartButton = FALSE;
+    }
+
     if (forcedMove == FALSE)
     {
         if (tileTransitionState == T_TILE_CENTER && runningState == MOVING)
