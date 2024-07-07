@@ -128,6 +128,7 @@ void ResetDexNavSearch(void);
 bool8 TryFindHiddenPokemon(void);
 bool8 DexNavTryMakeShinyMon(void);
 void IncrementDexNavChain(void);
+void DexNavGuiInit(void (*callback)(void));
 
 //ewram
 extern u8 gCurrentDexNavChain;

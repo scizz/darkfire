@@ -9,6 +9,7 @@
 #include "bike.h"
 #include "coins.h"
 #include "data.h"
+#include "dexnav.h"
 #include "event_data.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
@@ -688,6 +689,11 @@ void ItemUseOutOfBattle_PowderJar(u8 taskId)
     {
         DisplayItemMessageOnField(taskId, gStringVar4, Task_CloseCantUseKeyItemMessage);
     }
+}
+
+void ItemUseOutOfBattle_DexNav(u8 taskId)
+{
+    Task_OpenDexNavFromStartMenu(taskId);
 }
 
 extern u8 QuestBookScript[];

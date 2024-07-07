@@ -2335,7 +2335,7 @@ static void DexNav_RunSetup(void)
     while (!DexNav_DoGfxSetup()) {}
 }
 
-static void DexNavGuiInit(MainCallback callback)
+void DexNavGuiInit(void (*callback)(void))
 {
     if ((sDexNavUiDataPtr = AllocZeroed(sizeof(struct DexNavGUI))) == NULL)
     {
