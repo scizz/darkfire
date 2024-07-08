@@ -359,6 +359,9 @@ PinleafTown_Text_WellPlayerYouCertainly:
 	.string "I will continue to get stronger…\p"
 	.string "I'm gonna need it if I'm going to\n"
 	.string "take down the SUBO!\p"
+	.string "Oh, also…\p"
+	.string "Go see the Flower Shop here, they'll\n"
+	.string "be sure to give you something good!\p"
 	.string "Take care and watch your back.\n"
 	.string "We will cross paths again soon!$"
 
