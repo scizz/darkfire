@@ -39,7 +39,7 @@ AnheimForest_OnLoad:
 	end
 
 AnheimForest_ClearDoor::
-	setmetatile 31, 45, 965, 1
+	setmetatile 31, 45, 862, 1
 	return
 
 AnheimForest_SUBO::
@@ -452,7 +452,8 @@ AnheimForest_Text_Sign_Route_4:
 	.string "{LEFT_ARROW} Route 4$"
 
 AnheimForest_Text_SUBO_Dots:
-	.string "{COLOR}{BLUE}…$"
+	.string "{COLOR}{BLUE}… … …\n"
+	.string "… … …$"
 
 AnheimForest_Text_WhereDidThatBeedrill:
 	.string "{COLOR}{BLUE}Where did that Beedrill go…$"
@@ -528,10 +529,10 @@ AnheimForest_Text_MotherLucySaved:
 AnheimForest_Text_MotherRareCandy:
 	.string "{COLOR}{RED}Give this to your Pokémon to toughen\n"
 	.string "them up!\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "What's your name, by the way?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "{PLAYER}?\n"
 	.string "That's a nice name!\p"
 	.string "Well, {PLAYER}, thank you for all of\n"
@@ -550,10 +551,10 @@ AnheimForest_Text_FatherLucySaved:
 AnheimForest_Text_FatherRareCandy:
 	.string "{COLOR}{BLUE}Give this to your Pokémon to toughen\n"
 	.string "them up!\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "What's your name, by the way?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "{PLAYER}?\n"
 	.string "That's a nice name!\p"
 	.string "Well, {PLAYER}, thank you for all of\n"
@@ -561,7 +562,7 @@ AnheimForest_Text_FatherRareCandy:
 
 AnheimForest_Text_Lucy:
 	.string "{COLOR}{RED}Hey…\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "I didn't need your help, you know.\n"
 	.string "I was handling just fine.$"
 

@@ -63,7 +63,7 @@ Route11_Gloom::
 
 Route11_Text_Sign:
 	.string "Route 11\n"
-	.string "{LEFT_ARROW} Pinleaf Town$"
+	.string "{RIGHT_ARROW} Pinleaf Town$"
 
 Route11_Text_Sign_Ernie:
 	.string "Ernie's House$"
@@ -72,8 +72,8 @@ Route11_Text_Boy:
 	.string "{COLOR}{BLUE}Me?\n"
 	.string "I'm not a Trainer. But I wish I was.\p"
 	.string "There are so many wild Pokémon out\n"
-	.string "there that it's dangerous to be out\l"
-	.string "here without one$"
+	.string "there, that it's dangerous to be out\l"
+	.string "here without one.$"
 
 Route11_Text_GreetingsTrainer:
 	.string "{COLOR}{RED}Greetings, Trainer!\p"

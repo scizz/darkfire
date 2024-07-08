@@ -1140,7 +1140,7 @@ Route11_Text_JasmineIntro::
 	.string "My bike thanks me for it!$"
 
 Route11_Text_JasmineDefeated::
-	.string "At least my bike is clean…"
+	.string "At least my bike is clean…$"
 
 Route11_Text_JasminePostBattle::
 	.string "{COLOR}{RED}Huff… Huff…\p"
