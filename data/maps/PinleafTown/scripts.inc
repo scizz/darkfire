@@ -12,9 +12,9 @@ PinleafTown_OnFrame:
 PinleafTown_OnTransition:
 	setrespawn HEAL_LOCATION_PINLEAF_TOWN
 	compare VAR_STORYLINE_STATE, 39
-	goto_if_eq PinleafTown_HideTyler
+	goto_if_le PinleafTown_HideTyler
 	compare VAR_STORYLINE_STATE, 40
-	goto_if_eq PinleafTown_HideTyler
+	goto_if_eq PinleafTown_ShowTyler
 	call PinleafTown_ShowTyler
 	end
 
@@ -342,8 +342,8 @@ PinleafTown_Text_WellWellLookWhoItIs:
 	.string "I couldn't quite see from afar…\p"
 	.string "But, there was a Scientist-looking guy\n"
 	.string "engineering a weird machine…\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "…\n"
 	.string "I'm blabbing on, aren't I?\l"
 	.string "I always do that! Ha!\p"

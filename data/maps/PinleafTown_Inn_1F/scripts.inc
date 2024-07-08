@@ -5,16 +5,12 @@ PinleafTown_Inn_1F_MapScripts::
 	.byte 0
 
 PinleafTown_Inn_1F_OnTransition:
-	call PinleafTown_Inn_1F_TryMoveOldMan
-	end
-
-PinleafTown_Inn_1F_TryMoveOldMan::
-	call_if_set FLAG_PINLEAF_TOWN_INN_USED, PinleafTown_Inn_1F_MoveOldMan
+	goto_if_set FLAG_PINLEAF_TOWN_INN_USED, PinleafTown_Inn_1F_MoveOldMan
 	end
 
 PinleafTown_Inn_1F_MoveOldMan::
-	setobjectxy LOCALID_OLD_MAN, 2, 3
-	return
+	setobjectxyperm LOCALID_OLD_MAN, 2, 3
+	end
 
 PinleafTown_Inn_1F_Girl::
 	msgbox PinleafTown_Inn_1F_Text_Girl, MSGBOX_NPC
@@ -37,6 +33,12 @@ PinleafTown_Inn_1F_Old_Man::
 	lock
 	faceplayer
 	goto_if_set FLAG_PINLEAF_TOWN_INN_USED, PinleafTown_Inn_1F_Old_Man_After
+	showmoneybox 0, 0
+	msgbox WelcomeToOurInn, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq PinleafTown_Inn_1F_Old_Man_Yes
+	compare VAR_RESULT, NO
+	call_if_eq PinleafTown_Inn_1F_Old_Man_Yes
 	applymovement LOCALID_OLD_MAN, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement LOCALID_OLD_MAN, Common_Movement_FaceDown
@@ -46,7 +48,14 @@ PinleafTown_Inn_1F_Old_Man::
 	release
 	end
 
-PinleafTown_Inn_1F_Old_Man_After
+PinleafTown_Inn_1F_Old_Man_Yes::
+	hidemoneybox
+	msgbox WaitIRecogniseYou, MSGBOX_AUTOCLOSE
+	return
+
+PinleafTown_Inn_1F_Old_Man_After::
+	msgbox FeelFreeToStay, MSGBOX_AUTOCLOSE
+	release
 	end
 
 PinleafTown_Inn_1F_Text_Girl:
@@ -82,3 +91,27 @@ PinleafTown_Inn_1F_Text_Old_Lady:
 	.string "petition to the Tenjo Government.\p"
 	.string "The petition prevented any\n"
 	.string "developments from going ahead.$"
+
+WelcomeToOurInn:
+	.string "Hello there, welcome to our Inn.\p"
+	.string "We've been housing dozens of people\n"
+	.string "who are fleeing from the nearby city\l"
+	.string "after it was taken over by SUBO.\p"
+	.string "The good news is I can find you a\n"
+	.string "place to stay, though!\p"
+	.string "It's ¥20 for an overnight stay, with\n"
+	.string "PC services.\p"
+	.string "Shall I prepare a room for you?$"
+
+WaitIRecogniseYou:
+	.string "Wait…\n"
+	.string "I recognize you! You're {PLAYER}!\p"
+	.string "You thwarted the SUBO scum, right?\n"
+	.string "Yes, yes you did!\l"
+	.string "You're a national hero!\p"
+	.string "Please, take a room free of charge.\n"
+	.string "I insist!$"
+
+FeelFreeToStay:
+	.string "Feel free to stay as long as you like,\n"
+	.string "{PLAYER}.$"
