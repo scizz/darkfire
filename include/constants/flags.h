@@ -1318,8 +1318,7 @@
 // Darkfire Trades
 #define FLAG_COMPLETE_TRADE_HOOTHOOT                                0x4EE // Highwind Village House 2
 #define FLAG_COMPLETE_TRADE_NIDORAN_F                               0x4EF // Union City House 2
-
-#define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
+#define FLAG_COMPLETE_TRADE_ARON                                    0x4F0 // Northstar City Apartments
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3

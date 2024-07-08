@@ -133,6 +133,72 @@ NorthstarCity_Apartments_Meowth::
 	release
 	end
 
+NorthstarCity_Apartments_TitanTradeSequence::
+	lock
+	faceplayer
+	goto_if_set FLAG_COMPLETE_TRADE_ARON, NorthstarCity_Apartments_TradeCompleted
+	setvar VAR_0x8008, INGAME_TRADE_ARON
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox NorthstarCity_Apartments_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, NorthstarCity_Apartments_DeclineTrade
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, NorthstarCity_Apartments_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, NorthstarCity_Apartments_NotRequestedMon 
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+	msgbox NorthstarCity_Apartments_TradeThanks, MSGBOX_DEFAULT
+	updatefollowerpokemongraphic
+	setflag FLAG_COMPLETE_TRADE_ARON
+	release
+	end
+ 
+NorthstarCity_Apartments_DeclineTrade::
+	msgbox NorthstarCity_Apartments_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+NorthstarCity_Apartments_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox NorthstarCity_Apartments_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+NorthstarCity_Apartments_TradeCompleted::
+	msgbox NorthstarCity_Apartments_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+NorthstarCity_Apartments_TradeCompleted_Text:
+	.string "{COLOR}{BLUE}Hey!\n"
+	.string "How's Titan doing?\p"
+	.string "Your Houndour is doing just fine.\n"
+	.string "Thanks again for trading with me!$"
+ 
+NorthstarCity_Apartments_Text_WillingToTradeIt:
+	.string "{COLOR}{BLUE}Check out this {STR_VAR_2}!\n"
+	.string "Oh, I can see that you want it!\p"
+	.string "I'll tell you what.\p"
+	.string "I might be willing to trade it for a\n"
+	.string "{STR_VAR_1}. How about it?$"
+ 
+NorthstarCity_Apartments_DeclineTrade_Text:
+	.string "{COLOR}{BLUE}Oh… Thats too bad.\n"
+	.string "Maybe next time…$"
+ 
+NorthstarCity_Apartments_WrongMon_Text:
+	.string "{COLOR}{BLUE}Huh? That is not a {STR_VAR_1}…\n"
+	.string "I cannot trade with you.$"
+ 
+NorthstarCity_Apartments_TradeThanks:
+	.string "{COLOR}{BLUE}Thanks!\n"
+	.string "Take good care of Titan!$"
+
 CommonName_Text_Meowth:
 	.string "Meowth$"
 

@@ -13,6 +13,7 @@
 #define INGAME_TRADE_MEOWTH    3
 #define INGAME_TRADE_NIDORAN_F 4
 #define INGAME_TRADE_HOOTHOOT  5
+#define INGAME_TRADE_ARON      6
 
 // Flag IDs for sending link data
 #define INITIATE_TRADE  1

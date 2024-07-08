@@ -59,6 +59,7 @@ UnionCity_House2_RiaTradeSequence::
 	special DoInGameTradeScene 
 	waitstate
 	msgbox UnionCity_House2_TradeThanks, MSGBOX_DEFAULT
+	updatefollowerpokemongraphic
 	setflag FLAG_COMPLETE_TRADE_NIDORAN_F
 	release
 	end

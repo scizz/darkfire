@@ -34,6 +34,7 @@ HighwindVillage_House2_HaroldTradeSequence::
 	special DoInGameTradeScene 
 	waitstate
 	msgbox HighwindVillage_House2_TradeThanks, MSGBOX_DEFAULT
+	updatefollowerpokemongraphic
 	setflag FLAG_COMPLETE_TRADE_HOOTHOOT
 	release
 	end
