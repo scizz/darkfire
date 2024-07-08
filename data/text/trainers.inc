@@ -142,6 +142,9 @@ CommonName_Text_RangerAlex:
 CommonName_Text_RangerMia:
 	.string "Ranger Mia$"
 
+CommonName_Text_Gloom:
+	.string "Gloom$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
@@ -1097,6 +1100,49 @@ PinleafTown_Text_CowgirlDefeated:
 PinleafTown_Text_CowgirlPostBattle:
 	.string "{COLOR}{RED}You're a strong Trainer!\n"
 	.string "Your mommy taught you good!$"
+
+Route11_Text_CedricIntro::
+	.string "{COLOR}{BLUE}It's a beautiful day in the\n"
+	.string "neighborhood, a beautiful day for a\l"
+	.string "neighbor.\p"
+	.string "Would you be mine?\n"
+	.string "Could you be mine?$"
+
+Route11_Text_CedricDefeated::
+	.string "A neighborly day in this beautywood.\n"
+	.string "A neighborly day for a beauty!$"
+
+Route11_Text_CedricPostBattle::
+	.string "{COLOR}{BLUE}I have always wanted to have a\n"
+	.string "neighbor just like you.\p"
+	.string "I've always wanted to live in a\n"
+	.string "neighborhood with you!$"
+
+Route11_Text_DaisyIntro::
+	.string "{COLOR}{RED}Oh my, a Trainer.\n"
+	.string "Allow me to treat you to a battle.$"
+
+Route11_Text_DaisyDefeated::
+	.string "You battle majesticly!$"
+
+Route11_Text_DaisyPostBattle::
+	.string "{COLOR}{RED}There's an inn south of here, at the\n"
+	.string "Crossroads.\p"
+	.string "It's so cozy there that I don't think\n"
+	.string "I'll go back home in Laveria City.$"
+
+Route11_Text_JasmineIntro::
+	.string "{COLOR}{RED}I'm so glad there's no mud here, just\n"
+	.string "grass and some dirt.\l"
+	.string "My bike thanks me for it!$"
+
+Route11_Text_JasmineDefeated::
+	.string "At least my bike is clean…"
+
+Route11_Text_JasminePostBattle::
+	.string "{COLOR}{RED}Huff… Huff…\p"
+	.string "I have to prepare for the coming\n"
+	.string "Triathlon! Out of the way!$"
 
 @ VANILLA TRAINERS
 

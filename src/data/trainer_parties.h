@@ -401,12 +401,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Leah[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Daisy[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_SHROOMISH,
+    .lvl = 24,
+    .species = SPECIES_BRELOOM,
     },
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 24,
     .species = SPECIES_ROSELIA,
     }
 };
@@ -4837,18 +4837,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Abigail1[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Jasmine[] = {
     {
-    .iv = 80,
-    .lvl = 14,
+    .iv = 100,
+    .lvl = 23,
+    .species = SPECIES_MAGNEMITE,
+    },
+    {
+    .iv = 100,
+    .lvl = 23,
     .species = SPECIES_MAGNEMITE,
     },
     {
     .iv = 80,
-    .lvl = 14,
-    .species = SPECIES_MAGNEMITE,
-    },
-    {
-    .iv = 0,
-    .lvl = 6,
+    .lvl = 24,
     .species = SPECIES_VOLTORB,
     }
 };
@@ -6184,7 +6184,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Diana1[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_Cedric[] = {
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 25,
     .species = SPECIES_WOBBUFFET,
     .moves = {MOVE_DESTINY_BOND, MOVE_SAFEGUARD, MOVE_COUNTER, MOVE_MIRROR_COAT}
     }

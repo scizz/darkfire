@@ -1274,8 +1274,8 @@
 #define FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_2                          0x4C4 // Darkfire Flag
 #define FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_3                          0x4C5 // Darkfire Flag
 #define FLAG_HIDE_PINLEAF_TOWN_SUBO                                 0x4C6 // Darkfire Flag
+#define FLAG_ROUTE_11_SAFEGUARD_GIVEN                               0x4C7 // Darkfire Flag
 
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
 #define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
 #define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
