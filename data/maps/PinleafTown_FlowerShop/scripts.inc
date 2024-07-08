@@ -20,10 +20,13 @@ PinleafTown_FlowerShop_Girl_Given::
 PinleafTown_FlowerShop_Shopkeeper::
 	goto_if_ge VAR_STORYLINE_STATE, 42, PinleafTown_FlowerShop_Next_Given
 	msgbox PinleafTown_FlowerShop_Text_Shopkeeper, MSGBOX_AUTOCLOSE
-	goto_if_eq VAR_STORYLINE_STATE, 41, PinleafTown_FlowerShop_NextVar
+	goto_if_eq VAR_STORYLINE_STATE, 41, PinleafTown_FlowerShop_Next
 	end
 
 PinleafTown_FlowerShop_Next::
+	playse SE_PIN
+	emote 1, 7
+	waitse
 	msgbox UnlessDotDotDot, MSGBOX_AUTOCLOSE
 	giveitem ITEM_WAILMER_PAIL, 1
 	setvar VAR_STORYLINE_STATE, 42
