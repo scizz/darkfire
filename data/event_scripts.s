@@ -1376,3 +1376,5 @@ Script_RemoveTint::
 	.include "data/maps/LaveriaCity_House3/scripts.inc"
 
 	.include "data/maps/LaveriaCity_House4/scripts.inc"
+
+	.include "data/maps/Route11_House1/scripts.inc"
