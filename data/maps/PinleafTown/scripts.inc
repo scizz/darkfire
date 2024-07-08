@@ -180,6 +180,21 @@ PinleafTown_Sudowoodo::
 	release
 	end
 
+PinleafTown_EventScript_Bambi::
+	trainerbattle_single TRAINER_DAPHNE, PinleafTown_Text_CowgirlIntro, PinleafTown_Text_CowgirlDefeated
+	msgbox PinleafTown_Text_CowgirlPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PinleafTown_EventScript_Ben::
+	trainerbattle_single TRAINER_BEN, PinleafTown_Text_RancherIntro, PinleafTown_Text_RancherDefeated
+	msgbox PinleafTown_Text_RancherPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PinleafTown_EventScript_James::
+	trainerbattle_single TRAINER_JAMES_1, PinleafTown_Text_BugCatcherIntro, PinleafTown_Text_BugCatcherDefeated
+	msgbox PinleafTown_Text_BugCatcherPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 WR3:
 	walk_right
 	walk_right

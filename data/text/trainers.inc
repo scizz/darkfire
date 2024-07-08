@@ -1058,6 +1058,46 @@ SuboThugRyan_Text_Defeated:
 	.string "Argh!\n"
 	.string "You're gonna regret this!$"
 
+PinleafTown_Text_BugCatcherIntro:
+	.string "{COLOR}{BLUE}I've got my hands full dealing with\n"
+	.string "all the bugs our crops attract.\p"
+	.string "And now I have to deal with a Trainer?\n"
+	.string "Fine!$"
+
+PinleafTown_Text_BugCatcherDefeated:
+	.string "That's it!\n"
+	.string "I'm exhausted…$"
+
+PinleafTown_Text_BugCatcherPostBattle:
+	.string "{COLOR}{BLUE}I'm working overtime to keep pests\n"
+	.string "away from the boss' farm!$"
+
+PinleafTown_Text_RancherIntro:
+	.string "{COLOR}{BLUE}Boss was loud an' clear when he said,\n"
+	.string "he don' want no intruders on his farm!\l"
+	.string "And you're intruding!$"
+
+PinleafTown_Text_RancherDefeated:
+	.string "Jeez, slow down!$"
+
+PinleafTown_Text_RancherPostBattle:
+	.string "{COLOR}{BLUE}My boss is harsh and don't pay\n"
+	.string "overtime.\p"
+	.string "I reckon I'd be better off on the road,\n"
+	.string "adventurin' like you!$"
+
+PinleafTown_Text_CowgirlIntro:
+	.string "{COLOR}{RED}Yeehaw!\n"
+	.string "Lookie what we got here! A rookie!$"
+
+PinleafTown_Text_CowgirlDefeated:
+	.string "Darn…\n"
+	.string "I couldn't ride that bull.$"
+
+PinleafTown_Text_CowgirlPostBattle:
+	.string "{COLOR}{RED}You're a strong Trainer!\n"
+	.string "Your mommy taught you good!$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513
