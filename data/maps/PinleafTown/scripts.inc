@@ -15,7 +15,8 @@ PinleafTown_OnTransition:
 	goto_if_le PinleafTown_HideTyler
 	compare VAR_STORYLINE_STATE, 40
 	goto_if_eq PinleafTown_ShowTyler
-	call PinleafTown_ShowTyler
+	goto_if_set FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1, PinleafTown_HideSubo
+	goto_if_set FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_2, PinleafTown_HideSubo
 	end
 
 PinleafTown_HideTyler::
@@ -27,6 +28,12 @@ PinleafTown_ShowTyler::
 	clearflag FLAG_HIDE_PINLEAF_TOWN_TYLER
 	addobject LOCALID_TYLER
 	return
+
+PinleafTown_HideSubo::
+	removeobject 20
+	removeobject 21
+	setflag FLAG_HIDE_PINLEAF_TOWN_SUBO
+	end
 
 PinleafTown_TylerBattle::
 	lock

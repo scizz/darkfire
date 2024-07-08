@@ -283,7 +283,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PinleafTown_SUBO_2",
-      "flag": "0"
+      "flag": "FLAG_HIDE_PINLEAF_TOWN_SUBO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -296,7 +296,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PinleafTown_SUBO_1",
-      "flag": "0"
+      "flag": "FLAG_HIDE_PINLEAF_TOWN_SUBO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SUDOWOODO_FOLLOWER",
