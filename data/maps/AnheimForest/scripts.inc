@@ -601,12 +601,13 @@ AnheimForest_Text_HowsItGoing:
 	.string "I think, though, it is something huge!\p"
 	.string "But I'm onto them, {PLAYER}!\n"
 	.string "Nothing will ever stop the truth!\p"
-	.string "I, Tyler The Great, will find out\n"
-	.string "exactly what is going on, and I will be\l"
-	.string "the one who exposes them all!$"
+	.string "I  will find out exactly what is\n"
+	.string "going on, and I will be the one who\l"
+	.string "exposes them all!$"
 
 AnheimForest_Text_DotDotDot:
-	.string "{COLOR}{BLUE}…$"
+	.string "{COLOR}{BLUE}… … …\n"
+	.string "… … …$"
 
 AnheimForest_Text_SayPlayer:
 	.string "{COLOR}{BLUE}Say, {PLAYER}…\p"
@@ -620,7 +621,7 @@ AnheimForest_Text_SayPlayer:
 AnheimForest_Text_ThatWasSomeBattle:
 	.string "{COLOR}{BLUE}That was some battle, {PLAYER}!\n"
 	.string "I definitely need to become stronger.\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "Anyway, I'm off to train in Route 5.\n"
 	.string "I'm gonna need a stronger team.\p"
 	.string "I heard there are some secrets there\n"
