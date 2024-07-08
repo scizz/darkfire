@@ -128,9 +128,8 @@ ChandraVillage_LabDone::
 	showface FS_PROF, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Text_GivePokedex, MSGBOX_AUTOCLOSE
 	hideface 1
-	playfanfare SE_DEX_SEARCH
-	msgbox ChandraVillage_Text_ReceivePokedex, MSGBOX_AUTOCLOSE
-	waitfanfare
+	giveitem ITEM_POKEDEX, 1
+	removeitem ITEM_POKEDEX, 1
 	speakername CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Text_PokedexDesc, MSGBOX_DEFAULT
@@ -467,10 +466,10 @@ ChandraVillage_Text_ExitNorth:
 	.string "{COLOR}{BLUE}Hey, kid!\p"
 	.string "What do you get when you mix a Pikachu\n"
 	.string "and a Haunter?\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "A Pikaboo!\n"
 	.string "HAHA.\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "What's that?\n"
 	.string "Haunter doesn't scare you?\p"
 	.string "OK, but leaving the village without\n"
@@ -480,22 +479,22 @@ ChandraVillage_Text_ExitNorth:
 ChandraVillage_Text_ExitNorthPokemon:
 	.string "{COLOR}{BLUE}Hey, kid!\p"
 	.string "Why did the Miltank cross the road?\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "To get to the udder side!\n"
 	.string "HAHA.\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "No, but seriously, you should find\n"
 	.string "Tyler before leaving the village.$"
 	
 ChandraVillage_Text_HowDidYouGetOn:
 	.string "How did you get on with the Rattata,\n"
 	.string "{PLAYER}?\p"
-	.string "…$"
+	.string "… … …$"
 
 ChandraVillage_Text_WowPlayer:
 	.string "Wow, {PLAYER}, I…\n"
 	.string "You… You tamed my Pokémon?\p"
-	.string "…\p"
+	.string "… … …\p"
 	.string "You even beat the pests using the\n"
 	.string "Pokémon?! I can't believe it!\p"
 	.string "Well, {PLAYER}, you have proved yourself\n"
@@ -522,7 +521,7 @@ ChandraVillage_Text_PokedexDesc:
 	.string "you've seen or caught.\p"
 	.string "It's a vital tool if you're serious\n"
 	.string "about becoming a good Trainer.\p"
-	.string "…\n"
+	.string "… … …\n"
 	.string "Oh, yes…\p"
 	.string "Tyler ran off somewhere in a hurry.\n"
 	.string "I think he's excited to have his first\l"
@@ -629,12 +628,12 @@ ChandraVillage_Joker_No:
 ChandraVillage_Joker_Joke:
 	.string "{COLOR}{BLUE}What did one Geodude say to the\n"
 	.string "other Geodude?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Let's rock!\n"
 	.string "HA.\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "All right. I'm sorry.\n"
 	.string "That was a bad one.\p"
 	.string "Please take this as a token of my\n"
@@ -667,7 +666,7 @@ ChandraVillage_Storyline_State_4_WontBeAlone:
 	.string "{PLAYER} is here to help, too!$"
 
 ChandraVillage_Storyline_State_4_WillYouHelp:
-	.string "…\p"
+	.string "… … …\p"
 	.string "{PLAYER}…\n"
 	.string "Will you help Tyler with the Rattata?$"
 
