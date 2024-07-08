@@ -1,10 +1,20 @@
+.set LOCALID_OLD_MAN, 4
+
 PinleafTown_Inn_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PinleafTown_Inn_1F_OnTransition
 	.byte 0
 
 PinleafTown_Inn_1F_OnTransition:
-	setrespawn HEAL_LOCATION_PINLEAF_TOWN
+	call PinleafTown_Inn_1F_TryMoveOldMan
 	end
+
+PinleafTown_Inn_1F_TryMoveOldMan::
+	call_if_set FLAG_PINLEAF_TOWN_INN_USED, PinleafTown_Inn_1F_MoveOldMan
+	end
+
+PinleafTown_Inn_1F_MoveOldMan::
+	setobjectxy LOCALID_OLD_MAN, 2, 3
+	return
 
 PinleafTown_Inn_1F_Girl::
 	msgbox PinleafTown_Inn_1F_Text_Girl, MSGBOX_NPC
@@ -24,7 +34,19 @@ PinleafTown_Inn_1F_Old_Lady::
 	end
 
 PinleafTown_Inn_1F_Old_Man::
+	lock
+	faceplayer
+	goto_if_set FLAG_PINLEAF_TOWN_INN_USED, PinleafTown_Inn_1F_Old_Man_After
+	applymovement LOCALID_OLD_MAN, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_OLD_MAN, Common_Movement_FaceDown
+	waitmovement 0
+	setflag FLAG_PINLEAF_TOWN_INN_USED
 	setvar VAR_STORYLINE_STATE, 40
+	release
+	end
+
+PinleafTown_Inn_1F_Old_Man_After
 	end
 
 PinleafTown_Inn_1F_Text_Girl:
