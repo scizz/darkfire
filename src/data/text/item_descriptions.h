@@ -3613,10 +3613,10 @@ static const u8 sWailmerPailDesc[] = _(
     "watering Berries\n"
     "and plants.");
 
-static const u8 sPokeRadarDesc[] = _(
+static const u8 sDexNavDesc[] = _(
     "A tool used to\n"
-    "search out Pokémon\n"
-    "hiding in grass.");
+    "search out\n"
+    "specific Pokémon.");
 
 static const u8 sPokeblockCaseDesc[] = _(
     "A case for holding\n"

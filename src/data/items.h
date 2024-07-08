@@ -9453,16 +9453,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_WailmerPail,
     },
 
-    [ITEM_POKE_RADAR] =
+    [ITEM_DEXNAV] =
     {
-        .name = _("Poké Radar"),
-        .itemId = ITEM_POKE_RADAR,
+        .name = _("DexNav"),
+        .itemId = ITEM_DEXNAV,
         .price = 0,
-        .description = sPokeRadarDesc,
+        .description = sDexNavDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_DexNav,
     },
 
     [ITEM_POKEBLOCK_CASE] =
