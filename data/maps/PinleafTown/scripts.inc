@@ -171,12 +171,107 @@ PinleafTown_Natu::
 	release
 	end
 
-PinleafTown_Sudowoodo::
+PinleafTown_Sudowoodo1::
 	lock
 	playmoncry SPECIES_SUDOWOODO, 0
 	speakername CommonName_Text_Sudowoodo
 	msgbox PinleafTown_Text_Sudowoodo, MSGBOX_AUTOCLOSE
 	waitmoncry
+	checkitem ITEM_WAILMER_PAIL
+	goto_if_eq VAR_RESULT, TRUE, PinleafTown_SudowoodoWater1
+	release
+	end
+
+PinleafTown_SudowoodoWater1::
+	msgbox UseTheWailmerPailOnSudowoodo, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq PinleafTown_SudowoodoWaterNo
+	closemessage
+	special DoWateringBerryTreeAnim
+	waitstate
+	message SudowoodoDislikesBeingSprayed
+	waitmessage
+	waitbuttonpress
+	setwildbattle SPECIES_SUDOWOODO, 20, ITEM_RAZZ_BERRY
+	dowildbattle
+	playmoncry SPECIES_SUDOWOODO, 1
+	waitmoncry
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 60
+	removeobject 22
+	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+PinleafTown_Sudowoodo2::
+	lock
+	playmoncry SPECIES_SUDOWOODO, 0
+	speakername CommonName_Text_Sudowoodo
+	msgbox PinleafTown_Text_Sudowoodo, MSGBOX_AUTOCLOSE
+	waitmoncry
+	checkitem ITEM_WAILMER_PAIL
+	goto_if_eq VAR_RESULT, TRUE, PinleafTown_SudowoodoWater2
+	release
+	end
+
+PinleafTown_SudowoodoWater2::
+	msgbox UseTheWailmerPailOnSudowoodo, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq PinleafTown_SudowoodoWaterNo
+	closemessage
+	special DoWateringBerryTreeAnim
+	waitstate
+	message SudowoodoDislikesBeingSprayed
+	waitmessage
+	waitbuttonpress
+	setwildbattle SPECIES_SUDOWOODO, 21, ITEM_ORAN_BERRY
+	dowildbattle
+	playmoncry SPECIES_SUDOWOODO, 1
+	waitmoncry
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 60
+	removeobject 23
+	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+PinleafTown_Sudowoodo3::
+	lock
+	playmoncry SPECIES_SUDOWOODO, 0
+	speakername CommonName_Text_Sudowoodo
+	msgbox PinleafTown_Text_Sudowoodo, MSGBOX_AUTOCLOSE
+	waitmoncry
+	checkitem ITEM_WAILMER_PAIL
+	goto_if_eq VAR_RESULT, TRUE, PinleafTown_SudowoodoWater3
+	release
+	end
+
+PinleafTown_SudowoodoWater3::
+	msgbox UseTheWailmerPailOnSudowoodo, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq PinleafTown_SudowoodoWaterNo
+	closemessage
+	special DoWateringBerryTreeAnim
+	waitstate
+	message SudowoodoDislikesBeingSprayed
+	waitmessage
+	waitbuttonpress
+	setwildbattle SPECIES_SUDOWOODO, 19, ITEM_SITRUS_BERRY
+	dowildbattle
+	playmoncry SPECIES_SUDOWOODO, 1
+	waitmoncry
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 60
+	removeobject 19
+	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+PinleafTown_SudowoodoWaterNo::
+	closemessage
 	release
 	end
 
@@ -310,13 +405,14 @@ PinleafTown_Text_Fat_Guy:
 	.string "I was trying to get to the Inn for\n"
 	.string "some food and a quick nap, but I could\l"
 	.string "not find a way past the darned things.\p"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Wait, it was you who dealt with them?!\n"
 	.string "Incredible!\p"
 	.string "Take this as a token of my thanks!$"
 
 PinleafTown_Text_Fat_Guy_Given:
-	.string "{COLOR}{BLUE}PP Ups, as the name suggests, raises\n"
+	.string "{COLOR}{BLUE}PP Up, as the name suggests, raises\n"
 	.string "the base PP of your Pokémon's move.\p"
 	.string "It also increases the Pokémon's\n"
 	.string "happiness a little!$"
@@ -385,3 +481,10 @@ PinleafTown_Text_Natu:
 
 PinleafTown_Text_Sudowoodo:
 	.string "Sudo, sudoo!$"
+
+UseTheWailmerPailOnSudowoodo:
+	.string "Use the Wailmer Pail on Sudowoodo?$"
+
+SudowoodoDislikesBeingSprayed:
+	.string "Sudowoodo dislikes being sprayed!\p"
+	.string "Sudowoodo attacked!$"
