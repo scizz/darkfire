@@ -75,7 +75,9 @@ AnheimForest_SUBO::
 	applymovement LOCALID_SUBO, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject LOCALID_SUBO
+	removeobject 38
 	setflag FLAG_HIDE_ANHEIM_FOREST_SUBO
+	setflag FLAG_HIDE_ANHEIM_FOREST_DOOR
 	closedoor 31, 45
 	waitdooranim
 	setvar VAR_STORYLINE_STATE, 13
