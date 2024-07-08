@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
       "width": 44,
-      "height": 30,
+      "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/Route3/border.bin",
