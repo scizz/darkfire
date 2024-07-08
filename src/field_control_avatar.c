@@ -99,10 +99,18 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
     {
         if (GetPlayerSpeed() != PLAYER_SPEED_FASTEST)
         {
-            if (newKeys & START_BUTTON)
+            if (newKeys & START_BUTTON && FlagGet(FLAG_SYS_TELESCOPE_USE)) {
+                    input->pressedStartButton = FALSE;
+            }
+            else if (newKeys & START_BUTTON) {
                 input->pressedStartButton = TRUE;
-            if (newKeys & SELECT_BUTTON)
+            }
+            if (newKeys & SELECT_BUTTON && FlagGet(FLAG_SYS_TELESCOPE_USE)) {
+                input->pressedSelectButton = FALSE;
+            }
+            else if (newKeys & SELECT_BUTTON) {
                 input->pressedSelectButton = TRUE;
+            }
             if (newKeys & A_BUTTON)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)

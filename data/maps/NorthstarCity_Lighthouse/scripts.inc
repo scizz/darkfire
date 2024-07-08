@@ -35,6 +35,7 @@ NorthstarCity_Lighthouse_TelescopeAfter::
 	playse SE_PIN
 	waitse
 	msgbox NorthstarCity_Lighthouse_Text_OhThisIs, MSGBOX_AUTOCLOSE
+	clearflag FLAG_SYS_TELESCOPE_USE
 	setflag FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE
 	setvar VAR_STORYLINE_STATE, 28
 	release
@@ -120,8 +121,8 @@ NorthstarCity_Lighthouse_Old_Man_MovePlayerBottom::
 NorthstarCity_Lighthouse_Old_Man_UseTelescope::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	@setflag FLAG_SYS_TELESCOPE_USE
-	@special HealPlayerParty
+	setflag FLAG_SYS_TELESCOPE_USE
+	special HealPlayerParty
 	setfollowerwarppos DIR_NORTH
 	warpsilent MAP_NORTHSTAR_CITY_TELESCOPE_SEA, 10, 8
 	waitstate
