@@ -5734,8 +5734,8 @@
     {
       "id": "LAYOUT_ROUTE11_HOUSE1",
       "name": "Route11_House1_Layout",
-      "width": 13,
-      "height": 13,
+      "width": 10,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/Route11_House1/border.bin",
