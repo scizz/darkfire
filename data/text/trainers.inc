@@ -145,6 +145,9 @@ CommonName_Text_RangerMia:
 CommonName_Text_Gloom:
 	.string "Gloom$"
 
+CommonName_Text_Ernie:
+	.string "Ernie$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
