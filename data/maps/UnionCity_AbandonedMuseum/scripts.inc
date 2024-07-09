@@ -99,11 +99,11 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_Grrat, MSGBOX_AUTOCLOSE
 	waitmoncry
 	applymovement LOCALID_RATTATA, JumpRightLeft
-	playse SE_PIN
+	playse SE_EFFECTIVE
 	waitse
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, JumpInPlace
-	playse SE_PIN
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
 	emote LOCALID_PRESIDENT, 2
@@ -141,15 +141,15 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_Grratata, MSGBOX_AUTOCLOSE
 	waitmoncry
 	applymovement LOCALID_RATTATA, JumpRightLeft
-	playse SE_PIN
+	playse SE_EFFECTIVE
 	waitse
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, JumpInPlace
-	playse SE_PIN
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, JumpInPlace
-	playse SE_PIN
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
 	emote LOCALID_PRESIDENT, 7
@@ -170,26 +170,23 @@ UnionCity_SUBO_Event_Main::
 	delay 10
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
 	delay 10
-	playse SE_PIN
+	playse SE_BALL_THROW
 	waitse
 	delay 10
 	removeobject LOCALID_RATTATA
 	clearflag FLAG_HIDE_ABANDONED_MUSEUM_POKE_BALL
 	addobject LOCALID_POKE_BALL
 	applymovement LOCALID_POKE_BALL, JumpInPlace
-	playse SE_PIN
-	waitse
 	waitmovement 0
+	playse SE_BALL_BOUNCE_2
 	applymovement LOCALID_POKE_BALL, JumpInPlace
-	playse SE_PIN
-	waitse
 	waitmovement 0
+	playse SE_BALL_BOUNCE_3
 	applymovement LOCALID_POKE_BALL, JumpInPlace
-	playse SE_PIN
-	waitse
 	waitmovement 0
+	playse SE_BALL_BOUNCE_3
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowRight
-	playse SE_PIN
+	playse SE_CLICK
 	removeobject LOCALID_POKE_BALL
 	waitse
 	waitmovement 0
@@ -503,7 +500,6 @@ PushBack:
 
 FFRX:
 	follower_face_right
-	emote_exclamation_mark
 	step_end
 
 WFRFU:
