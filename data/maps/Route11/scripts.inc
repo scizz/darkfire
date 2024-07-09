@@ -71,6 +71,7 @@ Route11_Ernie::
 	special ShakeCamera
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	delay 10
 	playse SE_PIN
 	emote OBJ_EVENT_ID_PLAYER, 8
 	waitse

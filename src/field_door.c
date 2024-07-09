@@ -254,6 +254,7 @@ static const u8 sDoorAnimPalettes_UnionCity[] = {9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_PinleafTown[] = {10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_AnheimForest[] = {11, 11, 11, 11};
 static const u8 sDoorAnimPalettes_Route9[] = {8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_Route11[] = {10, 10, 10, 10};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -276,7 +277,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Lilycove_Door_Wooden,                         DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LilycoveWooden, sDoorAnimPalettes_LilycoveWooden},
     {METATILE_Mossdeep_Door,                                DOOR_SOUND_SLIDING, 0, sDoorAnimTiles_Route9, sDoorAnimPalettes_Route9},
     {METATILE_Sootopolis_Door_PeakedRoof,                   DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_SootopolisPeakedRoof, sDoorAnimPalettes_SootopolisPeakedRoof},
-    {METATILE_Sootopolis_Door,                              DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Sootopolis, sDoorAnimPalettes_Sootopolis},
+    {METATILE_Sootopolis_Door,                              DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_PinleafTown, sDoorAnimPalettes_Route11},
     {METATILE_EverGrande_Door_PokemonLeague,                DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokemonLeague, sDoorAnimPalettes_PokemonLeague},
     {METATILE_Pacifidlog_Door,                              DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Pacifidlog, sDoorAnimPalettes_Pacifidlog},
     //{METATILE_PetalburgGym_Door,                            DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_PetalburgGym, sDoorAnimPalettes_PetalburgGym},
