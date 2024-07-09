@@ -742,6 +742,73 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	setvar VAR_STORYLINE_STATE, 36
 	end
 
+
+NorthstarCity_Tournament_4F_Tyrogue::
+	lockall
+	showmonpic SPECIES_TYROGUE, 10, 3
+	playmoncry SPECIES_TYROGUE, 0
+	waitmoncry
+	msgbox NorthstarCity_Tournament_4F_Text_PickTyrogue, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq NorthstarCity_Tournament_4F_PickTyrogue
+	goto NorthstarCity_Tournament_4F_HideMonPic
+	end
+
+NorthstarCity_Tournament_4F_PickTyrogue::
+	hidemonpic
+	setvar VAR_TEMP_1, SPECIES_TYROGUE
+	givemon SPECIES_TYROGUE, 22, ITEM_NONE
+	compare VAR_RESULT, 0
+	goto_if_eq NorthstarCity_Tournament_4F_SendTyrogueParty
+	compare VAR_RESULT, 1
+	goto_if_eq NorthstarCity_Tournament_4F_SendTyroguePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+NorthstarCity_Tournament_4F_SendTyrogueParty::
+	call NorthstarCity_Tournament_4F_ReceivedTyrogueFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq NorthstarCity_Tournament_4F_ReceivedTyrogue
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto NorthstarCity_Tournament_4F_ReceivedTyrogue
+	end
+
+NorthstarCity_Tournament_4F_SendTyroguePC::
+	call NorthstarCity_Tournament_4F_ReceivedTyrogueFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq NorthstarCity_Tournament_4F_TyrogueTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto NorthstarCity_Tournament_4F_TyrogueTransferredToPC
+	end
+
+NorthstarCity_Tournament_4F_TyrogueTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto NorthstarCity_Tournament_4F_ReceivedTyrogue
+	end
+
+NorthstarCity_Tournament_4F_ReceivedTyrogueFanfare::
+	bufferspeciesname 1, SPECIES_TYROGUE
+	playfanfare MUS_OBTAIN_ITEM
+	message NorthstarCity_Tournament_4F_Text_ObtainedTyrogue
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_TYROGUE
+	return
+
+NorthstarCity_Tournament_4F_ReceivedTyrogue::
+	removeobject 8
+	setflag FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL
+	releaseall
+	end
+
+NorthstarCity_Tournament_4F_HideMonPic::
+	hidemonpic
+	releaseall
+	end
+
 WU2L:
 	walk_up
 	walk_up
@@ -851,6 +918,13 @@ WR3U3R2U2:
 	walk_up
 	walk_up
 	step_end
+
+NorthstarCity_Tournament_4F_Text_PickTyrogue:
+	.string "The SUBO left behind a Tyrogue!\n"
+	.string "Take this Pokémon with you?$"
+
+NorthstarCity_Tournament_4F_Text_ObtainedTyrogue:
+	.string "{PLAYER} received a Tyrogue!$"
 
 NorthstarCity_Tournament_4F_Text_GreetingsIfYouveCome:
 	.string "{COLOR}{RED}Greetings!\p"

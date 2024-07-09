@@ -6828,12 +6828,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugArik1[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .species = SPECIES_SNUBBULL,
+    .species = SPECIES_TYROGUE,
     },
     {
     .iv = 0,
-    .lvl = 23,
-    .species = SPECIES_GRANBULL,
+    .lvl = 22,
+    .species = SPECIES_SNUBBULL,
     }
 };
 
@@ -6961,7 +6961,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugArik2[] = {
     {
     .iv = 50,
     .lvl = 22,
-    .species = SPECIES_SNUBBULL,
+    .species = SPECIES_TYROGUE,
     },
     {
     .iv = 50,
