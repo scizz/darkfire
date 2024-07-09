@@ -3,11 +3,23 @@
 
 Route11_House1_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route11_House1_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, Route11_House1_OnTransition
 	.byte 0
 
 Route11_House1_OnFrame:
 	map_script_2 VAR_ERNIE_STATE, 1, Route11_House1_ErnieEvent
 	.2byte 0
+
+Route11_House1_OnTransition:
+	goto_if_set FLAG_SYS_DEXNAV_GET, Route11_House1_MoveObjects
+	end
+
+Route11_House1_MoveObjects::
+	setobjectxyperm LOCALID_ERNIE, 8, 8
+	setobjectxyperm LOCALID_PIKATRON, 3, 4
+	setobjectmovementtype LOCALID_PIKATRON, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_PIKATRON, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
+	end
 
 Route11_House1_ErnieEvent::
 	lock
@@ -104,8 +116,6 @@ Route11_House1_ErnieObject::
 	msgbox ErnieWaitAMinuteYourePlayer, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_DEXNAV, 1
-	applymovement LOCALID_ERNIE, Common_Movement_WalkInPlaceSlowDown
-	waitmovement 0
 	speakername CommonName_Text_Ernie
 	showface FS_ERNIE, FSE_NORMAL, 1, 1
 	msgbox ErnieICouldntForTheLifeOfMe, MSGBOX_AUTOCLOSE
@@ -119,6 +129,17 @@ Route11_House1_ErnieObjectGiven::
 	speakername CommonName_Text_Ernie
 	showface FS_ERNIE, FSE_NORMAL, 1, 1
 	msgbox ErnieHeyPlayerIfYouNeedFurtherInstructions, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
+	end
+
+Route11_House1_Pikatron::
+	lock
+	faceplayer
+	playse SE_PIN @robot
+	speakername CommonName_Text_Pikatron
+	showface FS_PIKATRON, FSE_NORMAL, 1, 1
+	msgbox PikatronHelloTrainer, MSGBOX_AUTOCLOSE
 	hideface 1
 	release
 	end
@@ -219,3 +240,8 @@ ErnieHeyPlayerIfYouNeedFurtherInstructions:
 	.string "If you need further instructions on\n"
 	.string "how to use the DexNav++, check the\l"
 	.string "red manual over there on my desk.$"
+
+PikatronHelloTrainer:
+	.string "HELLO, TRAINER.\p"
+	.string "I MUST BATTLE YOU.\p"
+	.string "AFTER I CLEAN UP THIS MESS.$"
