@@ -2,7 +2,21 @@
 .set LOCALID_SUBO_2, 11 @ George
 
 Route5_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Route5_OnLoad
 	.byte 0
+
+Route5_OnLoad:
+	call_if_set FLAG_ROUTE_5_STONE_LIT, Route5_Stone1
+	call_if_set FLAG_ROUTE_5_STONE_2_LIT, Route5_Stone2
+	end
+
+Route5_Stone1::
+	setmetatile 38, 69, 562, 1
+	return
+
+Route5_Stone2::
+	setmetatile 17, 23, 562, 1
+	return
 
 Route5_SUBO::
 	lock
@@ -349,6 +363,79 @@ Route5_EventScript_Trev::
 	msgbox Route5_Text_TrevPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route5_EventScript_Stone1::
+	lock
+	goto_if_set FLAG_ROUTE_5_STONE_LIT, Route_EventScript_StoneRadiates
+	msgbox ItAppearsToBeAnAncientStoneTablet, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route5_EventScript_Stone1_Radiate
+	closemessage
+	release
+	end
+
+Route5_EventScript_Stone2::
+	lock
+	goto_if_set FLAG_ROUTE_5_STONE_2_LIT, Route_EventScript_StoneRadiates
+	msgbox ItAppearsToBeAnAncientStoneTablet, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route5_EventScript_Stone2_Radiate
+	closemessage
+	release
+	end
+
+Route5_EventScript_Stone1_Radiate::
+	msgbox YouGentlyPlaceYourHandOntoTheSurface, MSGBOX_AUTOCLOSE
+	setmetatile 38, 69, 561, 1
+	special DrawWholeMapView
+	playse SE_M_HEAL_BELL
+	waitse
+	delay 20
+	setmetatile 38, 69, 560, 1
+	special DrawWholeMapView
+	playse SE_M_HEAL_BELL
+	waitse
+	delay 20
+	setmetatile 38, 69, 561, 1
+	special DrawWholeMapView
+	playse SE_M_HEAL_BELL
+	waitse
+	delay 20
+	setmetatile 38, 69, 562, 1
+	special DrawWholeMapView
+	playse SE_M_MORNING_SUN
+	setflag FLAG_ROUTE_5_STONE_LIT
+	release
+	end
+
+Route5_EventScript_Stone2_Radiate::
+	msgbox YouGentlyPlaceYourHandOntoTheSurface, MSGBOX_AUTOCLOSE
+	setmetatile 17, 23, 561, 1
+	special DrawWholeMapView
+	playse SE_M_HEAL_BELL
+	waitse
+	delay 20
+	setmetatile 17, 23, 560, 1
+	special DrawWholeMapView
+	playse SE_M_HEAL_BELL
+	waitse
+	delay 20
+	setmetatile 17, 23, 561, 1
+	special DrawWholeMapView
+	playse SE_M_HEAL_BELL
+	waitse
+	delay 20
+	setmetatile 17, 23, 562, 1
+	special DrawWholeMapView
+	playse SE_M_MORNING_SUN
+	setflag FLAG_ROUTE_5_STONE_2_LIT
+	release
+	end
+
+Route_EventScript_StoneRadiates::
+	msgbox TheStoneTabletRadiates, MSGBOX_AUTOCLOSE
+	release
+	end
+
 WURFL:
 	walk_up
 	walk_right
@@ -541,3 +628,16 @@ Route5_Text_GrrGetTheHeckPaul:
 
 Route5_Text_IllShowYouPaul:
 	.string "{COLOR}{BLUE}I'll show you what a real battle is!$"
+
+ItAppearsToBeAnAncientStoneTablet:
+	.string "It appears to be an ancient stone\n"
+	.string "tablet…\p"
+	.string "Touch the tablet?$"
+
+TheStoneTabletRadiates:
+	.string "The stone tablet radiates a\n"
+	.string "mysterious energy…$"
+
+YouGentlyPlaceYourHandOntoTheSurface:
+	.string "You gently place your hand onto the\n"
+	.string "surface of the stone tablet…$"
