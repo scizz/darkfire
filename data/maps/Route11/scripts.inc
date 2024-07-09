@@ -61,6 +61,25 @@ Route11_Gloom::
 	release
 	end
 
+Route11_Ernie::
+	lock
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 0  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	playse SE_BANG
+	special ShakeCamera
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	playse SE_PIN
+	emote OBJ_EVENT_ID_PLAYER, 8
+	waitse
+	delay 30
+	msgbox WhatWasThat, MSGBOX_AUTOCLOSE
+	setvar VAR_ERNIE_STATE, 1
+	release
+	end
+
 Route11_Text_Sign:
 	.string "Route 11\n"
 	.string "{RIGHT_ARROW} Pinleaf Town$"
@@ -87,5 +106,10 @@ Route11_Text_BeSafeOutThere:
 Route11_Text_Gloom:
 	.string "Gloooom!$"
 
-Route11_Text_Sign_Demo::
+Route11_Text_Sign_Demo:
 	.string "End of demo.$"
+
+WhatWasThat:
+	.string "???\n"
+	.string "What was that?\p"
+	.string "It came from inside the house!$"
