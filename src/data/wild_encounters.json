@@ -11645,7 +11645,7 @@
           "map": "MAP_ROUTE11",
           "base_label": "gRoute11",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 10,
             "mons": [
               {
                 "min_level": 18,
