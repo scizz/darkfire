@@ -471,8 +471,8 @@ Route9_StarterDome_BackToEntranceNext::
 	case 1, Route9_StarterDome_GiveFireStone
 	case 2, Route9_StarterDome_GiveWaterStone
 	case 3, Route9_StarterDome_GiveLeafStone
-	case 4, Route9_StarterDome_GiveMoonStone
-	case 5, Route9_StarterDome_GiveSunStone
+	case 4, Route9_StarterDome_GiveDawnStone
+	case 5, Route9_StarterDome_GiveDuskStone
 	end
 
 Route9_StarterDome_GiveThunderStone::
@@ -503,16 +503,16 @@ Route9_StarterDome_GiveLeafStone::
 	goto Route9_StarterDome_EventEnd
 	end
 
-Route9_StarterDome_GiveMoonStone::
+Route9_StarterDome_GiveDawnStone::
 	hideface 0
-	giveitem ITEM_MOON_STONE, 1
+	giveitem ITEM_DAWN_STONE, 1
 	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
-Route9_StarterDome_GiveSunStone::
+Route9_StarterDome_GiveDuskStone::
 	hideface 0
-	giveitem ITEM_SUN_STONE, 1
+	giveitem ITEM_DUSK_STONE, 1
 	closemessage
 	goto Route9_StarterDome_EventEnd
 	end

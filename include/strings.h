@@ -1198,6 +1198,8 @@ extern const u8 gText_WaterStone[];
 extern const u8 gText_LeafStone[];
 extern const u8 gText_MoonStone[];
 extern const u8 gText_SunStone[];
+extern const u8 gText_DawnStone[];
+extern const u8 gText_DuskStone[];
 extern const u8 gText_LaveriaIsland[];
 extern const u8 gText_NorthstarCity[];
 extern const u8 gText_GlassDesk[];
@@ -1319,6 +1321,10 @@ extern const u8 gText_CliffShow[];
 extern const u8 gText_DrowzeePodcast[];
 extern const u8 gText_Continue[];
 extern const u8 gText_TVGuide[];
+extern const u8 gText_HowToUse[];
+extern const u8 gText_SearchMode[];
+extern const u8 gText_DetectorMode[];
+extern const u8 gText_Chaining[];
 
 // Cable Club multichoice text
 extern const u8 CableClub_Text_TradeUsingLinkCable[];

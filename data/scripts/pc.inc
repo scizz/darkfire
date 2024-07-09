@@ -7,6 +7,14 @@ EventScript_PC::
 	goto EventScript_PCMainMenu
 	end
 
+EventScript_PC_Other::
+	lockall
+	setvar VAR_0x8004, PC_LOCATION_OTHER
+	playse SE_PC_ON
+	msgbox Text_BootUpPC, MSGBOX_DEFAULT
+	goto EventScript_PCMainMenu
+	end
+
 EventScript_PCMainMenu::
 	message gText_WhichPCShouldBeAccessed
 	waitmessage

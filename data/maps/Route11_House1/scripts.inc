@@ -21,6 +21,26 @@ Route11_House1_MoveObjects::
 	setobjectmovementtype LOCALID_PIKATRON, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
 	end
 
+Route11_House1_SignEmail::
+	msgbox YouCheckOutWhatAppears, MSGBOX_SIGN
+	end
+
+Route11_House1_SignTheseAppear::
+	msgbox TheseAppearToBeSchematics, MSGBOX_SIGN
+	end
+
+Route11_House1_ATreatise::
+	msgbox ATreatiseToParallelUniverses, MSGBOX_SIGN
+	end
+
+Route11_House1_Chapter6::
+	msgbox Chapter6QuantumMechanics, MSGBOX_SIGN
+	end
+
+Route11_House1_Plaque::
+	msgbox PlaqueErnieLumeriaCity, MSGBOX_SIGN
+	end
+
 Route11_House1_ErnieEvent::
 	lock
 	applymovement LOCALID_ERNIE, Common_Movement_FaceDown
@@ -160,10 +180,59 @@ WR3U4L5D:
 	walk_down
 	step_end
 
+YouCheckOutWhatAppears:
+	.string "You check out what appears to be an\n"
+	.string "email Ernie has been writing…\p"
+	.string "“Hi, Sis. I hope you're well.\n"
+	.string "Has your condition worsened?\p"
+	.string "Is there anything you need?\n"
+	.string "Say the word and I'll drop by!”$"
+
+TheseAppearToBeSchematics:
+	.string "These appear to be schematics for a\n"
+	.string "robotic companion Ernie is building.\p"
+	.string "“B9 Archetype” is written on top.$"
+
+ATreatiseToParallelUniverses:
+	.string "A treatise to parallel universes…\n"
+	.string "Five quick ways to easily alter the\l"
+	.string "world timeline!\p"
+	.string "Disclaimer: Author is not liable if\n"
+	.string "you completely shatter the timeline.$"
+
+Chapter6QuantumMechanics:
+	.string "Chapter 6, Quantum Mechanics Observer\n"
+	.string "Effect: Observing quantum phenomena\l"
+	.string "changes the result of measurements!$"
+
+PlaqueErnieLumeriaCity:
+	.string "It's a plaque addressed to Ernie.\p"
+	.string "It's a computer science degree from\n"
+	.string "Lumeria City's university!$"
+
 ErnieOhMyGoodnessAVisitor:
 	.string "{COLOR}{BLUE}Oh, my goodness!\n"
 	.string "A visitor!\p"
 	.string "Please, come on in!$"
+
+HowToUseDexNavPlusPlus:
+	.string "DexNav++ User Manual\n"
+	.string "Select a chapter…$"
+
+DexNavManualHowToUse:
+	.string "You can only hunt specific Pokémon if they're encountered in that area$"
+
+DexNavManualSearchMode:
+	.string "To hunt a specific Pokémon, select it from the DexNav++ search menu.$"
+
+DexNavManualDetectorMode:
+	.string "If the Pokémon is hiding nearby, the DexNav++ will detect it$"
+
+DexNavManualChaining:
+	.string "and show its hiding place.\p"
+	.string "Hold A to walk at a slow speed toward the hiding Pokémon.\p"
+	.string "You must creep towards the Pokémon when you're close, or it will flee!\p"
+	.string "You can register a search for a specific Pokémon by opening the search menu and pressing R on the highlighted Pokémon.$"
 
 ErnieItsBeenAgesSinceAnyoneHasCome:
 	.string "{COLOR}{BLUE}It's been ages since anyone has come\n"

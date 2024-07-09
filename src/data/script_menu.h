@@ -89,6 +89,15 @@ static const struct MenuAction MultichoiceList_YesNoInfo2[] =
     {gText_Info2},
 };
 
+static const struct MenuAction MultichoiceList_DexNavManual[] =
+{
+    {gText_HowToUse},
+    {gText_SearchMode},
+    {gText_DetectorMode},
+    {gText_Chaining},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_ChallengeInfo[] =
 {
     {gText_Challenge},
@@ -251,8 +260,8 @@ static const struct MenuAction MultichoiceList_ChooseStone[] =
     {gText_FireStone},
     {gText_WaterStone},
     {gText_LeafStone},
-    {gText_MoonStone},
-    {gText_SunStone},
+    {gText_DawnStone},
+    {gText_DuskStone},
 };
 
 static const struct MenuAction MultichoiceList_LaveriaNorthstarSail[] =
@@ -834,7 +843,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BATTLE_MODE]                = MULTICHOICE(MultichoiceList_BattleMode),
     [MULTI_TV_SELECT_CHANNEL_EXPANDED] = MULTICHOICE(MultichoiceList_TvSelectAChannelExpanded),
     [MULTI_YESNOINFO_2]                = MULTICHOICE(MultichoiceList_YesNoInfo2),
-    [MULTI_UNUSED_21]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_DEXNAV_MANUAL]              = MULTICHOICE(MultichoiceList_DexNavManual),
     [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_CHALLENGEINFO]              = MULTICHOICE(MultichoiceList_ChallengeInfo),
     [MULTI_LEVEL_MODE]                 = MULTICHOICE(MultichoiceList_LevelMode),
