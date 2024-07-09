@@ -459,7 +459,7 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_AndNowThatsOut, MSGBOX_AUTOCLOSE
 	hideface 1
-	playse SE_PIN
+	playse SE_BANG
 	setvar VAR_0x8004, 1  @ vertical pan
 	setvar VAR_0x8005, 0  @ horizontal pan
 	setvar VAR_0x8006, 8  @ num shakes
