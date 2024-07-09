@@ -865,11 +865,12 @@
 #define OBJ_EVENT_GFX_TREECKO_OW                 858
 #define OBJ_EVENT_GFX_MUDKIP_OW                  859
 #define OBJ_EVENT_GFX_TORCHIC_OW                 860
-
 #define OBJ_EVENT_GFX_RANCHER                    861
 #define OBJ_EVENT_GFX_COWGIRL                    862
+#define OBJ_EVENT_GFX_ERNIE                      863
+#define OBJ_EVENT_GFX_PIKATRON                   864
 
-#define NUM_OBJ_EVENT_GFX                        863
+#define NUM_OBJ_EVENT_GFX                        865
 
 
 // These are dynamic object gfx ids.

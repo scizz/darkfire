@@ -4938,6 +4938,44 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cowgirl = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ernie = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ERNIE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = 10,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Ernie,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pikatron = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PIKATRON,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = 9,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Pikatron,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur = {0xFFFF, OBJ_EVENT_PAL_TAG_BULBASAUR, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, gObjectEventImageAnimTable_FollowingPokemon, gObjectEventPicTable_Bulbasaur, FollowerAffineTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ivysaur = {0xFFFF, OBJ_EVENT_PAL_TAG_IVYSAUR, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, gObjectEventImageAnimTable_FollowingPokemon, gObjectEventPicTable_Ivysaur, FollowerAffineTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur = {0xFFFF, OBJ_EVENT_PAL_TAG_VENUSAUR, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, gObjectEventImageAnimTable_FollowingPokemon, gObjectEventPicTable_Venusaur, FollowerAffineTable};

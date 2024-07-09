@@ -894,6 +894,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MudkipOW;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TorchicOW;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rancher;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cowgirl;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ernie;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pikatron;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1759,6 +1761,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TORCHIC_OW] =               &gObjectEventGraphicsInfo_TorchicOW,
     [OBJ_EVENT_GFX_RANCHER] =                  &gObjectEventGraphicsInfo_Rancher,
     [OBJ_EVENT_GFX_COWGIRL] =                  &gObjectEventGraphicsInfo_Cowgirl,
+    [OBJ_EVENT_GFX_ERNIE] =                    &gObjectEventGraphicsInfo_Ernie,
+    [OBJ_EVENT_GFX_PIKATRON] =                 &gObjectEventGraphicsInfo_Pikatron,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

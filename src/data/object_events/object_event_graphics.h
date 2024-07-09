@@ -1552,3 +1552,7 @@ const u16 gObjectEventPaletteWaterPal[] = INCBIN_U16("graphics/object_events/pal
 const u32 gObjectEventPic_Rancher[] = INCBIN_U32("graphics/object_events/pics/people/rancher.4bpp");
 const u32 gObjectEventPic_Cowgirl[] = INCBIN_U32("graphics/object_events/pics/people/cowgirl.4bpp");
 const u16 gObjectEventPal_Rancher[] = INCBIN_U16("graphics/object_events/palettes/rancher.gbapal");
+const u32 gObjectEventPic_Ernie[] = INCBIN_U32("graphics/object_events/pics/people/ernie.4bpp");
+const u16 gObjectEventPal_Ernie[] = INCBIN_U16("graphics/object_events/palettes/ernie.gbapal");
+const u32 gObjectEventPic_Pikatron[] = INCBIN_U32("graphics/object_events/pics/people/pikatron.4bpp");
+const u16 gObjectEventPal_Pikatron[] = INCBIN_U16("graphics/object_events/palettes/pikatron.gbapal");

@@ -148,6 +148,9 @@ CommonName_Text_Gloom:
 CommonName_Text_Ernie:
 	.string "Ernie$"
 
+CommonName_Text_Pikatron:
+	.string "P1KATR0N 5000$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
