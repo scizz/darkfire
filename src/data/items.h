@@ -9455,7 +9455,7 @@ const struct Item gItems[] =
 
     [ITEM_DEXNAV] =
     {
-        .name = _("DexNav"),
+        .name = _("DexNav++"),
         .itemId = ITEM_DEXNAV,
         .price = 0,
         .description = sDexNavDesc,
