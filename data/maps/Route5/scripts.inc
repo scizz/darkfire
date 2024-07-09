@@ -112,7 +112,7 @@ Route5_SUBO_Left::
 	applymovement LOCALID_SUBO_2, WFL
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, FLJSLFR
-	playse SE_PIN
+	playse SE_WALL_HIT
 	waitse
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkLeft
@@ -230,7 +230,7 @@ Route5_SUBO_Right::
 	applymovement LOCALID_SUBO_1, WFR
 	waitmovement 0
 	applymovement LOCALID_SUBO_2, FRJSRFL
-	playse SE_PIN
+	playse SE_WALL_HIT
 	waitse
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkRight
