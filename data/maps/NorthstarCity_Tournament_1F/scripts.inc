@@ -175,10 +175,13 @@ NorthstarCity_Tournament_1F_JigglypuffSleepNow::
 	fadedefaultbgm
 	fadescreen 1
 	removeobject LOCALID_JIGGLYPUFF
-	playse SE_PIN
+	playse SE_M_PERISH_SONG
 	delay 30
 	waitse
-	playse SE_PIN
+	playse SE_M_SNORE
+	delay 30
+	waitse
+	playse SE_M_SNORE
 	delay 30
 	waitse
 	addobject LOCALID_ROSE
