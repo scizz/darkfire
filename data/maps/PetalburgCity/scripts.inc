@@ -44,7 +44,8 @@ Follower_Debug::
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_SYS_DEXNAV_GET
+	setflag FLAG_SYS_POKENAV_GET
+	@setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	addobject 9
 	setfollower 9, 0x0
