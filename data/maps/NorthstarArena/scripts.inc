@@ -160,15 +160,15 @@ NorthstarArena_NextRound::
 	end
 
 NorthstarArena_Text_TheArenaHasBeenSet:
-	.string "{COLOR}{RED}Announcer: The arena has been set!\n"
+	.string "{COLOR}{RED}The arena has been set!\n"
 	.string "Trainers! Are you ready?!$"
 
 NorthstarArena_Text_TheArenaIsReady:
-	.string "{COLOR}{RED}Announcer: The arena is ready!\n"
+	.string "{COLOR}{RED}The arena is ready!\n"
 	.string "Trainers, are you?!$"
 
 NorthstarArena_Text_BraceYourselves:
-	.string "{COLOR}{RED}Announcer: Brace yourselves, everyone!\n"
+	.string "{COLOR}{RED}Brace yourselves, everyone!\n"
 	.string "The final round is here!\p"
 	.string "Trainers, ready yourselves!\n"
 	.string "Good luck to both of you!$"

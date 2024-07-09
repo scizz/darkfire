@@ -101,6 +101,19 @@ NorthstarCity_Tournament_3F_SUBOBattleNext::
 	msgbox NorthstarCity_Tournament_3F_Text_PlayerYourNameIsPlayer, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 3
+	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattleNextL
+	goto NorthstarCity_Tournament_3F_SUBOBattleNextR
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNextR::
+	applymovement LOCALID_SUBO, Common_Movement_WalkRightFast
+	waitmovement 0
+	goto NorthstarCity_Tournament_3F_SUBOBattleNextL
+	end
+
+NorthstarCity_Tournament_3F_SUBOBattleNextL::
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUpFast
 	applymovement LOCALID_SUBO, Common_Movement_WalkUpFast
 	waitmovement 0
@@ -161,6 +174,18 @@ NorthstarCity_Tournament_3F_SUBORoseBattle_Begin::
 	emote LOCALID_RAKAZ, 5
 	playse SE_PIN
 	waitse
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 4
+	goto_if_eq NorthstarCity_Tournament_3F_SUBORoseBattle_BeginLeft
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle_BeginNext
+
+NorthstarCity_Tournament_3F_SUBORoseBattle_BeginLeft::
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkLeft
+	waitmovement 0
+	goto NorthstarCity_Tournament_3F_SUBORoseBattle_BeginNext
+	end
+
+NorthstarCity_Tournament_3F_SUBORoseBattle_BeginNext::
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkUp
 	waitmovement 0
@@ -191,25 +216,8 @@ NorthstarCity_Tournament_3F_SUBORoseBattle_Begin::
 	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_HehYoureAnIdiot, MSGBOX_AUTOCLOSE
 	hideface 1
-	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 3
-	goto_if_eq NorthstarCity_Tournament_3F_SUBOBattleNextLeftRakaz
-	goto NorthstarCity_Tournament_3F_SUBOBattleNextRightRakaz
-	end
-
-NorthstarCity_Tournament_3F_SUBOBattleNextLeftRakaz::
-	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowLeft
+	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	goto NorthstarCity_Tournament_3F_RakazDepart
-	end
-
-NorthstarCity_Tournament_3F_SUBOBattleNextRightRakaz::
-	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowRight
-	waitmovement 0
-	goto NorthstarCity_Tournament_3F_RakazDepart
-	end
-
-NorthstarCity_Tournament_3F_RakazDepart::
 	speakername CommonName_Text_Rakaz
 	showface FS_RAKAZ, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_AndYouPlayer, MSGBOX_AUTOCLOSE
@@ -221,8 +229,12 @@ NorthstarCity_Tournament_3F_RakazDepart::
 	removeobject 3
 	removeobject 6
 	setflag FLAG_NORTHSTAR_TOURNAMENT_SUBO
-	applymovement LOCALID_ROSE, WLFU
-	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 4
+	call_if_eq MoveRoseRightFaceUp
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 3
+	call_if_eq MoveRoseLeftFaceUp
 	delay 60
 	fadescreen 0
 	applymovement LOCALID_ROSE, Common_Movement_WalkInPlaceSlowUp
@@ -231,12 +243,36 @@ NorthstarCity_Tournament_3F_RakazDepart::
 	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_3F_Text_PlayerIAmGoingToStay, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_ROSE, WDL2FD
-	waitmovement 0
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 4
+	call_if_eq MoveRoseRightFaceDown
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 3
+	call_if_eq MoveRoseLeftFaceDown
 	setobjectxyperm LOCALID_ROSE, 1, 10
 	setvar VAR_STORYLINE_STATE, 37
 	release
 	end
+
+MoveRoseRightFaceUp::
+	applymovement LOCALID_ROSE, WRFU
+	waitmovement 0
+	return
+
+MoveRoseLeftFaceUp::
+	applymovement LOCALID_ROSE, WLFU
+	waitmovement 0
+	return
+
+MoveRoseRightFaceDown::
+	applymovement LOCALID_ROSE, WDL3FD
+	waitmovement 0
+	return
+
+MoveRoseLeftFaceDown::
+	applymovement LOCALID_ROSE, WDL2FD
+	waitmovement 0
+	return
 
 NorthstarCity_Tournament_3F_Rose::
 	lock
@@ -317,6 +353,14 @@ WFL9D2:
 
 WDL2FD:
 	walk_down
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+WDL3FD:
+	walk_down
+	walk_left
 	walk_left
 	walk_left
 	face_down
@@ -419,7 +463,7 @@ NorthstarCity_Tournament_3F_Text_ICanHardlyBelieve:
 	.string "some real pain in your lives…$"
 
 NorthstarCity_Tournament_3F_Text_HowDidILose:
-	.string "{COLOR}{RED}Rose: H-how did I lose…$"
+	.string "{COLOR}{RED}H-how did I lose…$"
 
 NorthstarCity_Tournament_3F_Text_HehYoureAnIdiot:
 	.string "Heh…\n"

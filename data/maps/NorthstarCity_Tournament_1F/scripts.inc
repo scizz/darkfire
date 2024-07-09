@@ -87,7 +87,7 @@ NorthstarCity_Tournament_1F_SUBOEndDialogue::
 	delay 30
 	speakername SpeakerName_Text_QuestionMark
 	msgbox NorthstarCity_Tournament_1F_Text_Roger, MSGBOX_AUTOCLOSE
-	playse SE_PIN
+	playse SE_BALL_THROW
 	waitse
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 14
@@ -104,9 +104,6 @@ NorthstarCity_Tournament_1F_JigglypuffLeft::
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	emote OBJ_EVENT_ID_FOLLOWER, 7
-	playse SE_PIN
-	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
@@ -121,9 +118,6 @@ NorthstarCity_Tournament_1F_JigglypuffDown::
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	emote OBJ_EVENT_ID_FOLLOWER, 7
-	playse SE_PIN
-	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto NorthstarCity_Tournament_1F_JigglypuffSleep
@@ -133,7 +127,7 @@ NorthstarCity_Tournament_1F_JigglypuffSleep::
 	emote OBJ_EVENT_ID_PLAYER, 8
 	playse SE_PIN
 	waitse
-	emote LOCALID_SUBO, 1
+	emote LOCALID_SUBO, 0
 	playse SE_PIN
 	waitse
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowUp
@@ -171,19 +165,18 @@ NorthstarCity_Tournament_1F_JigglypuffSleepNow::
 	waitmoncry
 	playse SE_M_SING
 	waitse
-	savebgm MUS_DUMMY
-	fadedefaultbgm
 	fadescreen 1
+	fadeoutbgm 1
 	removeobject LOCALID_JIGGLYPUFF
 	playse SE_M_PERISH_SONG
 	delay 30
 	waitse
 	playse SE_M_SNORE
-	delay 30
 	waitse
+	delay 90
 	playse SE_M_SNORE
-	delay 30
 	waitse
+	delay 90
 	addobject LOCALID_ROSE
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 14
@@ -215,6 +208,7 @@ NorthstarCity_Tournament_1F_RoseLookRight::
 
 NorthstarCity_Tournament_1F_SUBOEndRose::
 	fadescreen 0
+	playbgm MUS_NORTHSTAR_TOURNAMENT, TRUE
 	speakername CommonName_Text_Rose
 	showface FS_ROSE, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_1F_Text_PlayerIFoundAJigglypuff, MSGBOX_AUTOCLOSE
@@ -342,8 +336,8 @@ NorthstarCity_Tournament_1F_Text_PlayerIFoundAJigglypuff:
 	.string "{COLOR}{RED}{PLAYER}?\p"
 	.string "I found a Jigglypuff upstairs.\n"
 	.string "It must have sang you to sleep.\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "The SUBO have escaped.\n"
 	.string "Who knows what their next move is…\p"
 	.string "I'm getting out of here.\n"
@@ -358,9 +352,9 @@ NorthstarCity_Tournament_1F_Text_AlsoIManaged:
 NorthstarCity_Tournament_1F_Text_TakeItEasy:
 	.string "{COLOR}{RED}You can use that to wake up sleeping\n"
 	.string "Pokémon, whether they are in battle,\l"
-	.string "or blocking your path.\p"
-	.string "…\n"
-	.string "…\p"
+	.string "or blocking a path, like in Route 9.\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Take it easy, okay?$"
 
 NorthstarCity_Tournament_1F_Text_Woman:

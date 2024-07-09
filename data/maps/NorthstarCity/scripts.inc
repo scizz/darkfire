@@ -623,12 +623,14 @@ NorthstarCity_Sailor_Yes::
 
 NorthstarCity_Player_Left::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkRight
 	waitmovement 0
 	goto NorthstarCity_Warp_To_Laveria
 	end
 
 NorthstarCity_Player_Bottom::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -774,8 +776,8 @@ Northstar_City_Text_WhatANiceSurprise:
 	.string "{COLOR}{BLUE}What a nice surprise!\p"
 	.string "It's your favorite Sailor, from\n"
 	.string "Laveria City!\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "I must say, I totally expected you to\n"
 	.string "become Northstar City Champion!\p"
 	.string "Especially after what ya did to Kojiro\n"

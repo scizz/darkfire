@@ -997,7 +997,7 @@ RangerMarta_Text_Defeated:
 	.string "Turn the cameras off!$"
 
 BlackBeltDawson_Text_Defeated:
-	.string "Urk… No amount of training had me\n."
+	.string "Urk… No amount of training had me\n"
 	.string "ready for that whoopin'…$"
 
 OldManAlfred_Text_Defeated:

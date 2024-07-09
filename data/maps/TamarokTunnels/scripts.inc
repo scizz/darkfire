@@ -196,7 +196,7 @@ TamarokTunnels_SUBO::
 	setmetatile 6, 10, 630, 1
 	setmetatile 8, 11, 630, 1
 	setmetatile 9, 12, 630, 1
-	playse SE_BANG
+	playse SE_M_EXPLOSION
 	special DrawWholeMapView
 	delay 5
 	setmetatile 7, 9, 763, 1
@@ -222,7 +222,6 @@ TamarokTunnels_SUBO::
 	setmetatile 8, 10, 630, 1
 	setmetatile 9, 10, 630, 1
 	special DrawWholeMapView
-	playse SE_PIN
 	setvar VAR_STORYLINE_STATE, 24
 	savebgm MUS_DUMMY
 	special RemoveCameraObject
