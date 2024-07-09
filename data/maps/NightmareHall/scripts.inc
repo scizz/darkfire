@@ -263,6 +263,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement 10, Common_Movement_FaceDown
+	applymovement 9, Common_Movement_FaceDown
 	waitmovement 0
 	emote OBJ_EVENT_ID_PLAYER, 7
 	playse SE_PIN
