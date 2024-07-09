@@ -7,33 +7,42 @@ NightmareHall_OnWarp:
 	.2byte 0
 
 NightmareHall_InitRoomObjects::
+	removeobject 5
+	setflag FLAG_TEMP_2
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
 
 NightmareHall_CutSceneTrigger::
-	applymovement OBJ_EVENT_ID_PLAYER, WR4
+	applymovement OBJ_EVENT_ID_PLAYER, WU2
 	waitmovement 0
-	applymovement 10, FaceLeftQuestionMark
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, WU2
+	waitmovement 0
+	applymovement 2, Common_Movement_FaceDown
 	playse SE_PIN
+	emote 2, 7
 	waitse
 	msgbox NightmareHall_Text_Hey, MSGBOX_AUTOCLOSE
-	applymovement 7, FaceLeftQuestionMark
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	playse SE_PIN
-	applymovement 1, FaceLeftQuestionMark
+	emote 1, 7
+	applymovement 7, Common_Movement_FaceDown
 	playse SE_PIN
-	applymovement 2, FaceLeftQuestionMark
+	emote 7, 7
+	applymovement 3, Common_Movement_FaceDown
 	playse SE_PIN
+	emote 3, 7
 	waitmovement 0
 	delay 30
-	applymovement 8, WalkDownFaceLeft
+	applymovement 8, Common_Movement_WalkDown
 	waitmovement 0
 	msgbox NightmareHall_Text_Relax, MSGBOX_AUTOCLOSE
 	delay 30
-	applymovement OBJ_EVENT_ID_PLAYER, StepLeftLocked
+	applymovement OBJ_EVENT_ID_PLAYER, StepDownLocked
 	waitmovement 0
 	delay 30
-	applymovement 8, Common_Movement_WalkInPlaceSlowLeft
+	applymovement 8, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox NightmareHall_Text_Coward, MSGBOX_AUTOCLOSE
 	delay 30
@@ -41,10 +50,12 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	delay 10
 	msgbox NightmareHall_Text_SeeThis, MSGBOX_AUTOCLOSE
-	applymovement 9, WalkDownFaceLeft
+	applymovement 9, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 9, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox NightmareHall_Text_DraculOne, MSGBOX_AUTOCLOSE
-	applymovement 8, Common_Movement_ExclamationMark
+	emote 8, 8
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -56,38 +67,38 @@ NightmareHall_CutSceneTrigger::
 	applymovement 9, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	msgbox NightmareHall_Text_Spectate, MSGBOX_AUTOCLOSE
-	applymovement 8, Common_Movement_FaceLeft
+	applymovement 8, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	delay 30
 	msgbox NightmareHall_Text_YesBossTwo, MSGBOX_AUTOCLOSE
 	delay 10
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRightSlow
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUpSlow
 	waitmovement 0
 	delay 30
-
 	applymovement 8, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement 2, Common_Movement_FaceUp
 	applymovement 1, Common_Movement_FaceUp
 	applymovement 7, Common_Movement_FaceRight
+	applymovement 3, Common_Movement_FaceLeft
 	applymovement 10, Common_Movement_FaceDown
 	applymovement 9, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement 7, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	msgbox NightmareHall_Text_Sandslash, MSGBOX_AUTOCLOSE
-	playmoncry SPECIES_SANDSLASH, 0
+	playmoncry SPECIES_FERALIGATR, 0
 	waitmoncry
 	applymovement 6, Common_Movement_WalkRightFaster
 	applymovement 4, Common_Movement_WalkLeftFaster
 	waitmovement 0
 	playse SE_M_BITE
 	waitse
-	applymovement 3, Common_Movement_ExclamationMark
+	emote 3, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -101,17 +112,17 @@ NightmareHall_CutSceneTrigger::
 	waitse
 	applymovement 6, StepLeftLocked
 	waitmovement 0
-	applymovement 2, Common_Movement_ExclamationMark
+	emote 2, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	playmoncry SPECIES_SANDSLASH, 1
+	playmoncry SPECIES_FERALIGATR, 1
 	waitmoncry
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -119,7 +130,7 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	msgbox NightmareHall_Text_Sandslash_Hurt, MSGBOX_AUTOCLOSE
 	delay 30
-	applymovement 3, Common_Movement_ExclamationMark
+	emote 3, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -133,14 +144,14 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	playse SE_M_EMBER
 	waitse
-	playmoncry SPECIES_SANDSLASH, 1
+	playmoncry SPECIES_FERALIGATR, 1
 	waitmoncry
 	delay 30
 	setobjectxy 6, 0, 0
 	hideobjectat 6, MAP_NIGHTMARE_HALL
 	playse SE_M_EMBER
 	waitse
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -156,7 +167,8 @@ NightmareHall_CutSceneTrigger::
 	playse SE_BALL_THROW
 	waitse
 	waitmovement 0
-	setobjectxy 5, 19, 5
+	clearflag FLAG_TEMP_2
+	addobject 5
 	setobjectxy 4, 0, 0
 	hideobjectat 4, MAP_NIGHTMARE_HALL
 	applymovement 5, BallBounce
@@ -183,14 +195,14 @@ NightmareHall_CutSceneTrigger::
 	applymovement 7, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	msgbox NightmareHall_Text_WhatDoWeDo, MSGBOX_AUTOCLOSE
-	applymovement 8, Common_Movement_ExclamationMark
+	emote 8, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
 	applymovement 8, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox NightmareHall_Text_YourProblem, MSGBOX_AUTOCLOSE
-	applymovement 7, Common_Movement_ExclamationMark
+	emote 7, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -198,19 +210,19 @@ NightmareHall_CutSceneTrigger::
 	waitmovement 0
 	msgbox NightmareHall_Text_YesSir, MSGBOX_AUTOCLOSE
 	delay 30
-	applymovement 8, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement 8, Common_Movement_WalkInPlaceSlowLeft
+	playse SE_PIN
+	emote 8, 7
+	waitse
+	applymovement 8, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox NightmareHall_Text_SeeThisKid, MSGBOX_AUTOCLOSE
 	applymovement 9, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	delay 10
 	msgbox NightmareHall_Text_DraculTwo, MSGBOX_AUTOCLOSE
-	applymovement 8, Common_Movement_ExclamationMark
+	emote 8, 8
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement 8, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	msgbox NightmareHall_Text_YesBoss, MSGBOX_AUTOCLOSE
@@ -227,35 +239,32 @@ NightmareHall_CutSceneTrigger::
 	waitse
 	playse SE_UNLOCK
 	waitse
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 7
+	playse SE_PIN
+	waitse
+	emote 2, 7
+	playse SE_PIN
+	waitse
+	emote 8, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
-	applymovement 2, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitse
-	waitmovement 0
-	applymovement 8, Common_Movement_FaceLeft
-	waitmovement 0
-	applymovement 8, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitse
-	waitmovement 0
-	applymovement 8, Common_Movement_WalkInPlaceSlowLeft
+	applymovement 8, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	msgbox NightmareHall_Text_GetTheKid, MSGBOX_AUTOCLOSE
 	playse SE_UNLOCK
 	waitse
 	playse SE_UNLOCK
 	waitse
-	applymovement 7, Common_Movement_FaceLeft
-	applymovement 2, Common_Movement_FaceLeft
+	applymovement 7, Common_Movement_FaceDown
+	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 1, Common_Movement_FaceLeft
+	applymovement 1, Common_Movement_FaceDown
+	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 10, Common_Movement_FaceLeft
+	applymovement 10, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	emote OBJ_EVENT_ID_PLAYER, 7
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -278,10 +287,8 @@ NightmareHall_CutSceneTrigger::
 	speakername SpeakerName_Text_QuestionMark
 	msgbox NightmareHall_Text_OpenDoor, MSGBOX_AUTOCLOSE
 	setvar VAR_TEMP_0, 1
-	applymovement OBJ_EVENT_ID_PLAYER, RunDownTwelve
-	waitmovement 0
-	call Script_RemoveTint
 	fadeinbgm 9
+	setflag FLAG_REMOVE_WARP_FADE
 	warpsilent MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_2F, 8, 6
 	waitstate
 	end
@@ -295,12 +302,12 @@ WR6:
 
 FaceLeftQuestionMark:
 	face_left
-	emote_exclamation_mark
 	step_end
 
-WalkDownFaceLeft:
-	walk_down
-	face_left
+StepDownLocked:
+	lock_facing_direction
+	walk_slow_down
+	unlock_facing_direction
 	step_end
 
 StepLeftLocked:
@@ -355,7 +362,7 @@ NightmareHall_Text_SeeThis:
 	.string "do not leave this place immediately…$"
 
 NightmareHall_Text_DraculOne:
-	.string "Dracul…$"
+	.string "Lucien…$"
 
 NightmareHall_Text_YesBoss:
 	.string "{COLOR}{BLUE}Yes, boss?$"
@@ -426,13 +433,13 @@ NightmareHall_Text_SeeThisKid:
 	.string "They've become weak and spineless.\p"
 	.string "Pokémon aren't friends, they're\n"
 	.string "merely our tools, our slaves…\p"
-	.string "My name is Dracul.\n"
+	.string "My name is Lucien.\n"
 	.string "You'll wish you never had met me.\p"
 	.string "I'll take your Pokémon and make them\n"
 	.string "fight to the death.$"
 
 NightmareHall_Text_DraculTwo:
-	.string "Dracul…$"
+	.string "Lucien…$"
 
 NightmareHall_Text_SeenTooMuch:
 	.string "The kid has seen too much.$"

@@ -45,8 +45,8 @@
 #define FLAG_FOLLOWER_IN_BUILDING    0x21 // Used for speeding up follower exiting a door
 #define FLAG_PREVENT_BATTLE_FLEE     0x22 // Prevent running from wild battles
 #define FLAG_FORCE_LOAD_OFFSCREEN_OBJEV    0x23 // Force load objects out of player view
+#define FLAG_REMOVE_WARP_FADE    0x24 // Remove warp fade
 
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
