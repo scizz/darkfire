@@ -39,12 +39,63 @@ NorthstarCity_Tournament_4F_OnWarp:
 	map_script_2 VAR_STORYLINE_STATE, 35, NorthstarCity_Tournament_4F_InitRoomObjects
 	.2byte 0
 
-
 NorthstarCity_Tournament_4F_InitRoomObjects::
+	call_if_eq VAR_STORYLINE_STATE 31, NorthstarCity_Tournament_4F_DrawFirstCrowd
+	call_if_eq VAR_STORYLINE_STATE 33, NorthstarCity_Tournament_4F_DrawSecondCrowd
+	call_if_eq VAR_STORYLINE_STATE 35, NorthstarCity_Tournament_4F_DrawThirdCrowd
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	showfollower
 	end
+
+NorthstarCity_Tournament_4F_DrawFirstCrowd::
+	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 23, 4, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_EXPERT_F, 24, 6, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_NINJA_BOY, 25, 9, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_2, 26, 10, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LITTLE_GIRL, 27, 12, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LASS, 28, 12, 2, 3, DIR_SOUTH
+	return
+
+NorthstarCity_Tournament_4F_DrawSecondCrowd::
+	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 23, 4, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_EXPERT_F, 24, 6, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_NINJA_BOY, 25, 9, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_2, 26, 10, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LITTLE_GIRL, 27, 12, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LASS, 28, 12, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 29, 5, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_MAN_5, 30, 7, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_GENTLEMAN, 31, 10, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_NINJA_BOY, 32, 11, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_2, 33, 5, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_BEAUTY, 34, 11, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_EXPERT_F, 35, 4, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_5, 36, 9, 2, 3, DIR_SOUTH
+	return
+
+NorthstarCity_Tournament_4F_DrawThirdCrowd::
+	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 23, 4, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_EXPERT_F, 24, 6, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_NINJA_BOY, 25, 9, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_2, 26, 10, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LITTLE_GIRL, 27, 12, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LASS, 28, 12, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 29, 5, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_MAN_5, 30, 7, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_GENTLEMAN, 31, 10, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_NINJA_BOY, 32, 11, 4, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_2, 33, 5, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_BEAUTY, 34, 11, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_EXPERT_F, 35, 4, 3, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_WOMAN_5, 36, 9, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 37, 4, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_LITTLE_BOY, 38, 6, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_YOUNGSTER, 39, 7, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 40, 8, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_SCHOOL_KID_M, 41, 11, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_MART_EMPLOYEE, 42, 12, 3, 3, DIR_SOUTH
+	return
 
 NorthstarCity_Tournament_4F_EventStart::
 	applymovement LOCALID_RECEPTIONIST, Common_Movement_FaceUp
@@ -623,14 +674,14 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	hideface 1
 	delay 10
 	applymovement LOCALID_SUBO_CROWD, Common_Movement_WalkInPlaceSlowRight
-	playse SE_PIN
+	playse SE_BALL_THROW
 	waitse
 	waitmovement 0
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_POKE_BALL
 	addobject 8
 	applymovement 8, JumpInPlace
 	waitmovement 0
-	playse SE_PIN
+	playse SE_BALL_BOUNCE_2
 	waitse
 	delay 5
 	applymovement LOCALID_RAKAZ, Common_Movement_WalkInPlaceSlowDown
@@ -933,8 +984,8 @@ NorthstarCity_Tournament_4F_Text_GreetingsIfYouveCome:
 	.string "The tickets have all sold out!\p"
 	.string "… Oh? You're here to participate?\n"
 	.string "What are your qualifications?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "It appears you are the victor of the\n"
 	.string "Laveria Tournament.\l"
 	.string "{PLAYER}, right?\p"
@@ -1032,8 +1083,8 @@ NorthstarCity_Tournament_4F_Text_YourOpponentAwaits:
 NorthstarCity_Tournament_4F_Text_AreWeLiveYet:
 	.string "{COLOR}{RED}…\n"
 	.string "Are we live yet?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "…\n"
 	.string "Oh, we're live?!$"
 
@@ -1084,7 +1135,7 @@ NorthstarCity_Tournament_4F_Text_OurThirdMatchSailor:
 	.string "against the rising star,\l"
 	.string "{PLAYER}!\p"
 	.string "Both our contestants have excellent\n"
-	.string "winning streaks, so hold on to your\l"
+	.string "winning streaks, so hold onto your\l"
 	.string "seats - this getting really serious.\p"
 	.string "Begin!$"
 
@@ -1121,8 +1172,8 @@ NorthstarCity_Tournament_4F_Text_What:
 NorthstarCity_Tournament_4F_Text_ComeAgainCentral:
 	.string "{COLOR}{RED}Come again, central? A group of --\n"
 	.string "…\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Oh, my…\n"
 	.string "Put on a commercial break!\p"
 	.string "What?! Not happening?!\n"

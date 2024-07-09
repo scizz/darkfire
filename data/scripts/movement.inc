@@ -136,6 +136,14 @@ Common_Movement_WalkDownFast:
 	walk_fast_down
 	step_end
 
+Common_Movement_WalkLeftFast:
+	walk_fast_left
+	step_end
+
+Common_Movement_WalkRightFast:
+	walk_fast_right
+	step_end
+
 Common_Movement_WalkRightSlow:
 	walk_slow_right
 	step_end
