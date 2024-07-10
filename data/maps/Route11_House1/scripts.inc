@@ -85,7 +85,7 @@ Route11_House1_ErnieObject::
 	msgbox PikatronHiWelcome, MSGBOX_AUTOCLOSE
 	waitse
 	hideface 0
-	playse SE_PIN @robot
+	playse SE_CARD
 	emote LOCALID_ERNIE, 1
 	waitse
 	applymovement LOCALID_ERNIE, Common_Movement_WalkInPlaceSlowDown
@@ -120,7 +120,7 @@ Route11_House1_ErnieObject::
 	showface FS_ERNIE, FSE_SHOCKED, 1, 1
 	msgbox ErnieOkayPikatron, MSGBOX_AUTOCLOSE
 	hideface 1
-	playse SE_PIN @robot
+	playse SE_CARD
 	waitse 
 	applymovement LOCALID_PIKATRON, WR3U4L5D
 	waitmovement 0
@@ -156,7 +156,7 @@ Route11_House1_ErnieObjectGiven::
 Route11_House1_Pikatron::
 	lock
 	faceplayer
-	playse SE_PIN @robot
+	playse SE_CARD
 	speakername CommonName_Text_Pikatron
 	showface FS_PIKATRON, FSE_NORMAL, 1, 1
 	msgbox PikatronHelloTrainer, MSGBOX_AUTOCLOSE
