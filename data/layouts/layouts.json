@@ -5344,7 +5344,7 @@
     {
       "id": "LAYOUT_MUDDY_UNDERPASS",
       "name": "MuddyUnderpass_Layout",
-      "width": 76,
+      "width": 77,
       "height": 15,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_RusturfTunnel",
