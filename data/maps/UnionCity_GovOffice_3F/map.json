@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "UnionCity_GovOffice_3F_PresidentDesk",
+      "script": "UnionCity_GovOffice_3F_PostSUBOMuseum",
       "flag": "FLAG_HIDE_UNION_CITY_GOV_OFFICE_3F_PRESIDENT"
     }
   ],

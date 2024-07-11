@@ -3,7 +3,7 @@ UnionCity_GovOffice_3F_MapScripts::
 	.byte 0
 
 UnionCity_GovOffice_3F_OnTransition:
-	call_if_unset FLAG_HIDE_ABANDONED_MUSEUM_SUBO, UnionCity_GovOffice_3F_HidePresident
+	goto_if_unset FLAG_HIDE_ABANDONED_MUSEUM_SUBO, UnionCity_GovOffice_3F_HidePresident
 	clearflag FLAG_HIDE_UNION_CITY_GOV_OFFICE_3F_PRESIDENT
 	addobject 3
 	end
@@ -11,7 +11,7 @@ UnionCity_GovOffice_3F_OnTransition:
 UnionCity_GovOffice_3F_HidePresident::
 	removeobject 3
 	setflag FLAG_HIDE_UNION_CITY_GOV_OFFICE_3F_PRESIDENT
-	return
+	end
 
 UnionCity_GovOffice_3F_PresidentDesk::
 	lock
