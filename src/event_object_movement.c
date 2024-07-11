@@ -11129,6 +11129,7 @@ u8 MovementAction_FollowingPokemon_FaceSouth_Step0(struct ObjectEvent *objectEve
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
     objectEvent->triggerGroundEffectsOnMove = FALSE;
     objectEvent->hasReflection = TRUE;
+    UpdateObjectEventElevationAndPriority(objectEvent, sprite);
     sprite->data[2]++;
     return FALSE;
 }
@@ -11142,6 +11143,7 @@ u8 MovementAction_FollowingPokemon_FaceNorth_Step0(struct ObjectEvent *objectEve
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
     objectEvent->triggerGroundEffectsOnMove = FALSE;
     objectEvent->hasReflection = TRUE;
+    UpdateObjectEventElevationAndPriority(objectEvent, sprite);
     sprite->data[2]++;
     return FALSE;
 }
@@ -11155,6 +11157,7 @@ u8 MovementAction_FollowingPokemon_FaceWest_Step0(struct ObjectEvent *objectEven
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
     objectEvent->triggerGroundEffectsOnMove = FALSE;
     objectEvent->hasReflection = TRUE;
+    UpdateObjectEventElevationAndPriority(objectEvent, sprite);
     sprite->data[2]++;
     return FALSE;
 }
@@ -11168,6 +11171,7 @@ u8 MovementAction_FollowingPokemon_FaceEast_Step0(struct ObjectEvent *objectEven
     MoveObjectEventToMapCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
     objectEvent->triggerGroundEffectsOnMove = FALSE;
     objectEvent->hasReflection = TRUE;
+    UpdateObjectEventElevationAndPriority(objectEvent, sprite);
     sprite->data[2]++;
     return FALSE;
 }
