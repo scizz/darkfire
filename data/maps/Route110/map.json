@@ -587,14 +587,6 @@
     },
     {
       "type": "hidden_item",
-      "x": 33,
-      "y": 45,
-      "elevation": 3,
-      "item": "ITEM_GREAT_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_GREAT_BALL"
-    },
-    {
-      "type": "hidden_item",
       "x": 4,
       "y": 35,
       "elevation": 3,
