@@ -49,7 +49,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 67,
-      "y": 56,
+      "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -62,7 +62,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 68,
-      "y": 60,
+      "y": 61,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -204,8 +204,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAREEP",
-      "x": 47,
-      "y": 38,
+      "x": 46,
+      "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
