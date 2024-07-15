@@ -1005,6 +1005,10 @@
 #define ITEM_B_USE_OTHER    2
 
 // Check if the item is one that can be used on a Pokemon.
-#define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX)
+#define ITEM_HAS_EFFECT(item) (((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX) \
+|| (item) == ITEM_KINGS_ROCK || (item) == ITEM_DRAGON_SCALE || (item) == ITEM_METAL_COAT \
+|| (item) == ITEM_UPGRADE || (item) == ITEM_DEEP_SEA_TOOTH || (item) == ITEM_DEEP_SEA_SCALE \
+|| (item) == ITEM_PROTECTOR || (item) == ITEM_DRAGON_SCALE || (item) == ITEM_ELECTIRIZER \
+|| (item) == ITEM_MAGMARIZER || (item) == ITEM_DUBIOUS_DISC || (item) == ITEM_REAPER_CLOTH)
 
 #endif  // GUARD_CONSTANTS_ITEMS_H
