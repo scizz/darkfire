@@ -146,7 +146,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLIWAG",
-      "x": 23,
+      "x": 25,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
