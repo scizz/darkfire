@@ -195,7 +195,7 @@ Route3_Text_Guitarist:
 
 Route3_Text_Girl:
 	.string "{COLOR}{RED}Anheim Forest is up ahead.\n"
-	.string "It's a forest full of Bug-type Pokémon!\p"
+	.string "It's full of Bug-type Pokémon!\p"
 	.string "I want to explore inside but I'm\n"
 	.string "too scared of bugs! Eww!$"
 
