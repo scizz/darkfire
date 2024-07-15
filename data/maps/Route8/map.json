@@ -246,6 +246,22 @@
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_8_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 39,
+      "y": 66,
+      "elevation": 0,
+      "item": "ITEM_SUPER_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_TM32"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 15,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_NUGGET"
     }
   ]
 }

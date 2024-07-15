@@ -444,6 +444,30 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route9_Sign_Dome"
+    },
+    {
+      "type": "hidden_item",
+      "x": 48,
+      "y": 69,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 83,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_FULL_HEAL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_POKE_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_POKE_BALL"
     }
   ]
 }

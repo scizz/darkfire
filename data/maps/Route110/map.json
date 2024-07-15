@@ -578,30 +578,6 @@
       "script": "Route110_EventScript_CyclingRoadResultsSign"
     },
     {
-      "type": "hidden_item",
-      "x": 35,
-      "y": 39,
-      "elevation": 3,
-      "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_REVIVE"
-    },
-    {
-      "type": "hidden_item",
-      "x": 4,
-      "y": 35,
-      "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_POKE_BALL"
-    },
-    {
-      "type": "hidden_item",
-      "x": 37,
-      "y": 67,
-      "elevation": 3,
-      "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_FULL_HEAL"
-    },
-    {
       "type": "sign",
       "x": 13,
       "y": 16,
