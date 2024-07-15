@@ -421,6 +421,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LaveriaCity_Sign_Route"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 48,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_ETHER"
     }
   ]
 }
