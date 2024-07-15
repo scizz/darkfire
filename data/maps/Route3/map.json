@@ -252,6 +252,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route3_LeftSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_POKE_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_2"
     }
   ]
 }
