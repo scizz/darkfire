@@ -5215,7 +5215,7 @@
       "id": "LAYOUT_ROCKFALL_CAVE_B1F",
       "name": "RockfallCave_B1F_Layout",
       "width": 46,
-      "height": 40,
+      "height": 46,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/RockfallCave_B1F/border.bin",
