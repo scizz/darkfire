@@ -124,6 +124,8 @@ Route11_House1_ErnieObject::
 	waitse 
 	applymovement LOCALID_PIKATRON, WR3U4L5D
 	waitmovement 0
+	setobjectnewmovementtype LOCALID_PIKATRON, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
+	release
 	applymovement LOCALID_ERNIE, Common_Movement_FaceDown
 	waitmovement 0
 	playse SE_PIN
@@ -142,7 +144,6 @@ Route11_House1_ErnieObject::
 	hideface 1
 	setflag FLAG_SYS_DEXNAV_GET
 	setvar VAR_ERNIE_STATE, 2
-	release
 	end
 
 Route11_House1_ErnieObjectGiven::

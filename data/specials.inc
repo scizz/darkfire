@@ -538,3 +538,4 @@ gSpecials::
 	def_special TrySpecialOverworldEvo
 	def_special ChooseItemFromBag
 	def_special Script_GetObjectFacingDirection
+	def_special SetObjectMovementType

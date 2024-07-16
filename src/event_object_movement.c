@@ -3045,6 +3045,18 @@ void ObjectEventTurn(struct ObjectEvent *objectEvent, u8 direction)
     }
 }
 
+void SetObjectMovementType(void)
+{
+    struct ObjectEvent *objectEvent = &gObjectEvents[GetObjectEventIdByLocalId(gSpecialVar_0x8005)];
+    u8 movementType = gSpecialVar_0x8006;
+    
+    objectEvent->movementType = movementType;
+    objectEvent->directionSequenceIndex = 0;
+    objectEvent->playerCopyableMovement = 0;
+    gSprites[objectEvent->spriteId].callback = sMovementTypeCallbacks[movementType];
+    gSprites[objectEvent->spriteId].data[1] = 0;
+}
+
 void ObjectEventTurnByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup, u8 direction)
 {
     u8 objectEventId;
