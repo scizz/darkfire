@@ -325,8 +325,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TORCHIC_OW",
-      "x": 12,
-      "y": 12,
+      "x": 4,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -338,7 +338,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHARMANDER_OW",
-      "x": 10,
+      "x": 9,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -351,8 +351,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL_OW",
-      "x": 8,
-      "y": 10,
+      "x": 12,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 0,
