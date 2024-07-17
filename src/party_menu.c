@@ -6805,7 +6805,7 @@ void IsSelectedMonEgg(void)
 
 void IsLastMonThatKnowsSurf(void)
 {
-    u16 move;
+    /*u16 move;
     u32 i, j;
 
     gSpecialVar_Result = FALSE;
@@ -6825,5 +6825,6 @@ void IsLastMonThatKnowsSurf(void)
         }
         if (AnyStorageMonWithMove(move) != TRUE)
             gSpecialVar_Result = TRUE;
-    }
+    }*/
+    gSpecialVar_Result = FALSE;
 }
