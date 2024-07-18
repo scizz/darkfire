@@ -736,9 +736,10 @@
 #define METATILE_Slateport_Door  0x2DC
 
 // gTileset_SootopolisGym
-#define METATILE_SootopolisGym_Ice_Broken   0x206
-#define METATILE_SootopolisGym_Ice_Cracked  0x20E
-#define METATILE_SootopolisGym_Stairs       0x207
+#define METATILE_SootopolisGym_Ice_Broken         0x206
+#define METATILE_SootopolisGym_Ice_Cracked        0x20E
+#define METATILE_SootopolisGym_MuddySlope_Frame0  0x3D6
+#define METATILE_SootopolisGym_Stairs             0x207
 
 // gTileset_Sootopolis
 #define METATILE_Sootopolis_Door             0x3E8
