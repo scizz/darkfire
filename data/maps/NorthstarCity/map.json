@@ -481,7 +481,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BURIED_ITEM_BALL",
-      "x": 54,
+      "x": 50,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
