@@ -7,9 +7,6 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": false,
-  "allow_escaping": true,
-  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -61,5 +58,8 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
     }
-  ]
+  ],
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true
 }
