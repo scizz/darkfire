@@ -13,7 +13,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 18,
+      "x": 14,
       "y": 47,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
@@ -26,7 +26,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 33,
+      "x": 29,
       "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -39,7 +39,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 35,
+      "x": 31,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -52,7 +52,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 32,
+      "x": 28,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -65,7 +65,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 35,
+      "x": 31,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -78,7 +78,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 33,
+      "x": 29,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -91,7 +91,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 36,
+      "x": 32,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -104,7 +104,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 40,
+      "x": 36,
       "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -117,7 +117,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 47,
+      "x": 43,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -130,7 +130,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 49,
+      "x": 45,
       "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -143,7 +143,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 53,
+      "x": 50,
       "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -156,7 +156,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 62,
+      "x": 58,
       "y": 41,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -169,7 +169,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 68,
+      "x": 65,
       "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -182,7 +182,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 70,
+      "x": 66,
       "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -195,7 +195,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 69,
+      "x": 65,
       "y": 54,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -208,7 +208,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 77,
+      "x": 73,
       "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -221,7 +221,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 74,
+      "x": 70,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -234,7 +234,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 83,
+      "x": 79,
       "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -247,7 +247,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "x": 74,
+      "x": 70,
       "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -260,7 +260,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 83,
+      "x": 79,
       "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -273,7 +273,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 83,
+      "x": 79,
       "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -286,7 +286,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 86,
+      "x": 82,
       "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -299,7 +299,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 83,
+      "x": 79,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
@@ -312,7 +312,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 91,
+      "x": 87,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_RIGHT_DOWN",
@@ -325,7 +325,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 92,
+      "x": 88,
       "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -338,7 +338,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
-      "x": 91,
+      "x": 87,
       "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -351,7 +351,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 97,
+      "x": 93,
       "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -364,7 +364,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
-      "x": 98,
+      "x": 94,
       "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -377,7 +377,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
-      "x": 102,
+      "x": 97,
       "y": 41,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -390,7 +390,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
-      "x": 102,
+      "x": 97,
       "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -403,7 +403,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
-      "x": 112,
+      "x": 108,
       "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -416,7 +416,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 96,
+      "x": 92,
       "y": 43,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -429,7 +429,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 107,
+      "x": 103,
       "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -442,7 +442,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 107,
+      "x": 103,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -455,7 +455,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
-      "x": 107,
+      "x": 103,
       "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -468,7 +468,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 107,
+      "x": 103,
       "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -494,7 +494,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LIGHTHOUSE_1",
-      "x": 110,
+      "x": 106,
       "y": 28,
       "elevation": -1,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -507,7 +507,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LIGHTHOUSE_2",
-      "x": 110,
+      "x": 106,
       "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -572,7 +572,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 87,
+      "x": 83,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_SEQUENCE_DOWN_UP_LEFT",
@@ -585,7 +585,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 95,
+      "x": 91,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_SEQUENCE_DOWN_UP_LEFT",
@@ -598,7 +598,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 103,
+      "x": 99,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_SEQUENCE_DOWN_UP_LEFT",
@@ -611,33 +611,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WALREIN",
-      "x": 24,
-      "y": 59,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPHEAL",
-      "x": 26,
-      "y": 58,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPHEAL",
-      "x": 27,
+      "x": 20,
       "y": 59,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -651,6 +625,19 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPHEAL",
       "x": 22,
+      "y": 58,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPHEAL",
+      "x": 23,
       "y": 59,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -660,6 +647,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPHEAL",
+      "x": 18,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TEALA",
+      "x": 64,
+      "y": 52,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NorthstarCity_Receptionist",
+      "flag": "FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TEALA",
@@ -673,73 +686,60 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NorthstarCity_Receptionist",
       "flag": "FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_TEALA",
-      "x": 72,
-      "y": 52,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NorthstarCity_Receptionist",
-      "flag": "FLAG_NORTHSTAR_LIGHTHOUSE_COMPLETE"
     }
   ],
   "warp_events": [
     {
-      "x": 25,
+      "x": 21,
       "y": 45,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 11,
+      "x": 7,
       "y": 47,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
       "dest_warp_id": "3"
     },
     {
-      "x": 11,
+      "x": 7,
       "y": 48,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
       "dest_warp_id": "4"
     },
     {
-      "x": 11,
+      "x": 7,
       "y": 49,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
       "dest_warp_id": "5"
     },
     {
-      "x": 41,
+      "x": 37,
       "y": 42,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
       "dest_warp_id": "1"
     },
     {
-      "x": 42,
+      "x": 38,
       "y": 42,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_APARTMENTS",
       "dest_warp_id": "2"
     },
     {
-      "x": 40,
+      "x": 36,
       "y": 10,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_HOUSE1",
       "dest_warp_id": "1"
     },
     {
-      "x": 51,
+      "x": 47,
       "y": 28,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_HOUSE2",
@@ -753,14 +753,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
+      "x": 35,
       "y": 28,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_TRAINER_SCHOOL",
       "dest_warp_id": "0"
     },
     {
-      "x": 60,
+      "x": 56,
       "y": 22,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_STORAGE_FACILITY",
@@ -781,28 +781,28 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 56,
+      "x": 52,
       "y": 29,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 83,
+      "x": 79,
       "y": 26,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_SHIPPING_CENTER",
       "dest_warp_id": "0"
     },
     {
-      "x": 110,
+      "x": 106,
       "y": 28,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_LIGHTHOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 96,
+      "x": 92,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_NORTHSTAR_CITY",
@@ -812,7 +812,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 103,
+      "x": 99,
       "y": 26,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -821,7 +821,7 @@
     },
     {
       "type": "trigger",
-      "x": 103,
+      "x": 99,
       "y": 27,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -830,7 +830,7 @@
     },
     {
       "type": "trigger",
-      "x": 103,
+      "x": 99,
       "y": 28,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -841,7 +841,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 14,
+      "x": 10,
       "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -849,7 +849,7 @@
     },
     {
       "type": "sign",
-      "x": 15,
+      "x": 11,
       "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -873,7 +873,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 26,
+      "x": 22,
       "y": 33,
       "elevation": 3,
       "item": "ITEM_ULTRA_BALL",
@@ -881,7 +881,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 69,
+      "x": 65,
       "y": 29,
       "elevation": 3,
       "item": "ITEM_FULL_HEAL",
@@ -889,7 +889,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 79,
+      "x": 75,
       "y": 28,
       "elevation": 3,
       "item": "ITEM_SNOWBALL",
