@@ -13,7 +13,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 19,
+      "x": 18,
       "y": 47,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
@@ -690,29 +690,29 @@
   ],
   "warp_events": [
     {
-      "x": 28,
+      "x": 25,
       "y": 45,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 7,
-      "y": 48,
+      "x": 11,
+      "y": 47,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
       "dest_warp_id": "3"
     },
     {
-      "x": 7,
-      "y": 49,
+      "x": 11,
+      "y": 48,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
       "dest_warp_id": "4"
     },
     {
-      "x": 7,
-      "y": 50,
+      "x": 11,
+      "y": 49,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_INTERLINK",
       "dest_warp_id": "5"
@@ -841,16 +841,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 13,
-      "y": 47,
+      "x": 14,
+      "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NorthstarCity_Sign"
     },
     {
       "type": "sign",
-      "x": 14,
-      "y": 47,
+      "x": 15,
+      "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NorthstarCity_Sign"

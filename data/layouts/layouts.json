@@ -4374,7 +4374,7 @@
     {
       "id": "LAYOUT_NORTHSTAR_CITY",
       "name": "NorthstarCity_Layout",
-      "width": 120,
+      "width": 116,
       "height": 61,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
