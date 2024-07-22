@@ -43,13 +43,14 @@ ChandraVillage_PlayerHouse_1F_MotherTalkedTo::
 ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 	lockall
 	faceplayer
-	speakername CommonName_Text_Mom
-	showface FS_MOM, FSE_NORMAL, 1, 1
+	speakername2 CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_PKMN_Menu, MSGBOX_AUTOCLOSE
-	hideface 1
+	hideface 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername CommonName_Text_Mom
+	speakername2 CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
@@ -59,13 +60,14 @@ ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	lockall
 	faceplayer
-	speakername CommonName_Text_Mom
-	showface FS_MOM, FSE_NORMAL, 1, 1
+	speakername2 CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One, MSGBOX_AUTOCLOSE
-	hideface 1
+	hideface 0
 	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
-	speakername CommonName_Text_Mom
+	speakername2 CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChandraVillage_PlayerHouse_1F_Mother_Rest
@@ -73,19 +75,20 @@ ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	end
 
 ChandraVillage_PlayerHouse_1F_Mother_Rest::
+	hideface 0
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
-	speakername CommonName_Text_Mom
-	showface FS_MOM, FSE_NORMAL, 1, 1
+	speakername2 CommonName_Text_Mom
+	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_1F_Text_Mother_Healed, MSGBOX_AUTOCLOSE
-	hideface 1
+	hideface 0
 	releaseall
 	end
 
 ChandraVillage_Playerhouse_1F_Mother_No::
-	showface FS_MOM, FSE_NORMAL, 1, 1
+	speakername2 CommonName_Text_Mom
 	msgbox ChandraVillage_PlayerHouse_1F_Text_Mother_No, MSGBOX_AUTOCLOSE
-	hideface 1
+	hideface 0
 	releaseall
 	end
 
@@ -176,7 +179,7 @@ ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One:
 	.string "How is your adventure going?$"
 
 ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest:
-	.string "How about a quick rest?$"
+	.string "{COLOR}{RED}How about a quick rest?$"
 
 ChandraVillage_PlayerHouse_1F_Text_Mother_Healed:
 	.string "{COLOR}{RED}Take care, honey!\n"
