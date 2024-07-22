@@ -247,6 +247,15 @@ static const struct BgTemplate sBgTemplates_ItemMenu[] =
         .priority = 2,
         .baseTile = 0,
     },
+    {
+        .bg = 3,
+        .charBaseIndex = 2,
+        .mapBaseIndex = 21,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 2,
+        .baseTile = 0,
+    },
 };
 
 static const struct ListMenuTemplate sItemListMenu =
@@ -263,7 +272,7 @@ static const struct ListMenuTemplate sItemListMenu =
     .upText_Y = 1,
     .cursorPal = 1,
     .fillValue = 0,
-    .cursorShadowPal = 3,
+    .cursorShadowPal = 2,
     .lettersSpacing = 0,
     .itemVerticalPadding = 0,
     .scrollMultiple = 0,
@@ -552,10 +561,10 @@ enum {
 };
 static const u8 sFontColorTable[][3] = {
                             // bgColor, textColor, shadowColor
-    [COLORID_NORMAL]      = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE,      TEXT_COLOR_LIGHT_GRAY},
-    [COLORID_POCKET_NAME] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE,      TEXT_COLOR_GREEN},
-    [COLORID_GRAY_CURSOR] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_GRAY, TEXT_COLOR_GREEN},
-    [COLORID_UNUSED]      = {TEXT_COLOR_DARK_GRAY,   TEXT_COLOR_WHITE,      TEXT_COLOR_LIGHT_GRAY},
+    [COLORID_NORMAL]      = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE,      TEXT_COLOR_DARK_GRAY},
+    [COLORID_POCKET_NAME] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE,      TEXT_COLOR_DARK_GRAY},
+    [COLORID_GRAY_CURSOR] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE,      TEXT_COLOR_DARK_GRAY},
+    [COLORID_UNUSED]      = {TEXT_COLOR_DARK_GRAY,   TEXT_COLOR_WHITE,      TEXT_COLOR_DARK_GRAY},
     [COLORID_TMHM_INFO]   = {TEXT_COLOR_TRANSPARENT, 15,  14}
 };
 
@@ -567,7 +576,7 @@ static const struct WindowTemplate sDefaultBagWindows[] =
         .tilemapTop = 2,
         .width = 15,
         .height = 16,
-        .paletteNum = 1,
+        .paletteNum = 15,
         .baseBlock = 0x27,
     },
     [WIN_DESCRIPTION] = {
@@ -576,7 +585,7 @@ static const struct WindowTemplate sDefaultBagWindows[] =
         .tilemapTop = 13,
         .width = 14,
         .height = 6,
-        .paletteNum = 1,
+        .paletteNum = 15,
         .baseBlock = 0x117,
     },
     [WIN_POCKET_NAME] = {
@@ -585,7 +594,7 @@ static const struct WindowTemplate sDefaultBagWindows[] =
         .tilemapTop = 1,
         .width = 8,
         .height = 2,
-        .paletteNum = 1,
+        .paletteNum = 15,
         .baseBlock = 0x1A1,
     },
     [WIN_TMHM_INFO_ICONS] = {
@@ -830,6 +839,7 @@ void VBlankCB_BagMenuRun(void)
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
+    ChangeBgY(3, 128, BG_COORD_SUB);
 }
 
 #define tListTaskId        data[0]
@@ -963,15 +973,19 @@ static void BagMenu_InitBGs(void)
 {
     ResetVramOamAndBgCntRegs();
     memset(gBagMenu->tilemapBuffer, 0, sizeof(gBagMenu->tilemapBuffer));
+    memset(gBagMenu->tilemapBuffer2, 0, sizeof(gBagMenu->tilemapBuffer2));
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sBgTemplates_ItemMenu, ARRAY_COUNT(sBgTemplates_ItemMenu));
     SetBgTilemapBuffer(2, gBagMenu->tilemapBuffer);
+    SetBgTilemapBuffer(3, gBagMenu->tilemapBuffer2);
     ResetAllBgsCoordinates();
     ScheduleBgCopyTilemapToVram(2);
+    ScheduleBgCopyTilemapToVram(3);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     ShowBg(0);
     ShowBg(1);
     ShowBg(2);
+    ShowBg(3);
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
 }
 
@@ -1003,11 +1017,24 @@ static bool8 LoadBagMenu_Graphics(void)
             LoadCompressedSpriteSheet(&gBagMaleSpriteSheet);
         else
             LoadCompressedSpriteSheet(&gBagFemaleSpriteSheet);
+        LoadPalette(gBagScrollBgPalette, 32, 32);
         gBagMenu->graphicsLoadState++;
         break;
     case 4:
         LoadCompressedSpritePalette(&gBagPaletteTable);
         gBagMenu->graphicsLoadState++;
+        break;
+    case 5:
+        ResetTempTileDataBuffers();
+        DecompressAndCopyTileDataToVram(3, gBagScroll_Gfx, 0, 0, 0);
+        gBagMenu->graphicsLoadState++;
+        break;
+    case 6:
+        if (FreeTempTileDataBuffersIfPossible() != TRUE)
+        {
+            LZDecompressWram(gBagScroll_GfxTileMap, gBagMenu->tilemapBuffer2);
+            gBagMenu->graphicsLoadState++;
+        }
         break;
     default:
         LoadListMenuSwapLineGfx();
