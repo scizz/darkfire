@@ -727,6 +727,7 @@ Common_EventScript_OutOfCenterPartyHeal::
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
+	updatefollowerpokemongraphic
 	fadescreen FADE_FROM_BLACK
 	return
 
