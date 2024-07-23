@@ -13992,9 +13992,9 @@
                 "species": "SPECIES_SKIPLOOM"
               },
               {
-                "min_level": 19,
-                "max_level": 19,
-                "species": "SPECIES_ODDISH"
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_LINOONE"
               },
               {
                 "min_level": 19,
