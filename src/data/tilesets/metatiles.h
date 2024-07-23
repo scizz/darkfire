@@ -246,3 +246,12 @@ const u16 gMetatileAttributes_Darkspace1[] = INCBIN_U16("data/tilesets/primary/d
 
 const u16 gMetatiles_Darkspace2[] = INCBIN_U16("data/tilesets/secondary/darkspace_2/metatiles.bin");
 const u16 gMetatileAttributes_Darkspace2[] = INCBIN_U16("data/tilesets/secondary/darkspace_2/metatile_attributes.bin");
+
+const u16 gMetatiles_InsideSSCoral[] = INCBIN_U16("data/tilesets/secondary/inside_sscoral/metatiles.bin");
+const u16 gMetatileAttributes_InsideSSCoral[] = INCBIN_U16("data/tilesets/secondary/inside_sscoral/metatile_attributes.bin");
+
+const u16 gMetatiles_OutsideSSCoral[] = INCBIN_U16("data/tilesets/secondary/outside_sscoral/metatiles.bin");
+const u16 gMetatileAttributes_OutsideSSCoral[] = INCBIN_U16("data/tilesets/secondary/outside_sscoral/metatile_attributes.bin");
+
+const u16 gMetatiles_AguavIsland[] = INCBIN_U16("data/tilesets/secondary/aguav_island/metatiles.bin");
+const u16 gMetatileAttributes_AguavIsland[] = INCBIN_U16("data/tilesets/secondary/aguav_island/metatile_attributes.bin");
