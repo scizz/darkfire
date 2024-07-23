@@ -9817,12 +9817,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tyler4[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Tyler5[] = {
     {
-    .iv = 70,
+    .iv = 50,
     .lvl = 26,
     .species = SPECIES_SWELLOW,
     },
     {
-    .iv = 70,
+    .iv = 50,
     .lvl = 26,
     .species = SPECIES_HOUNDOUR,
     },
@@ -9832,7 +9832,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tyler5[] = {
     .species = SPECIES_ESPEON,
     },
     {
-    .iv = 70,
+    .iv = 50,
     .lvl = 25,
     .species = SPECIES_SCYTHER,
     }
@@ -9854,12 +9854,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_Darcy[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Tyler6[] = {
     {
-    .iv = 70,
+    .iv = 50,
     .lvl = 26,
     .species = SPECIES_SWELLOW,
     },
     {
-    .iv = 70,
+    .iv = 50,
     .lvl = 26,
     .species = SPECIES_HOUNDOUR,
     },
@@ -9869,7 +9869,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tyler6[] = {
     .species = SPECIES_RAICHU,
     },
     {
-    .iv = 70,
+    .iv = 50,
     .lvl = 25,
     .species = SPECIES_SCYTHER,
     }
