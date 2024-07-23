@@ -968,3 +968,36 @@ const struct Tileset gTileset_Darkspace2 =
     .metatileAttributes = gMetatileAttributes_Darkspace2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_InsideSSCoral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_InsideSSCoral,
+    .palettes = gTilesetPalettes_InsideSSCoral,
+    .metatiles = gMetatiles_InsideSSCoral,
+    .metatileAttributes = gMetatileAttributes_InsideSSCoral,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_OutsideSSCoral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OutsideSSCoral,
+    .palettes = gTilesetPalettes_OutsideSSCoral,
+    .metatiles = gMetatiles_OutsideSSCoral,
+    .metatileAttributes = gMetatileAttributes_OutsideSSCoral,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_AguavIsland =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AguavIsland,
+    .palettes = gTilesetPalettes_AguavIsland,
+    .metatiles = gMetatiles_AguavIsland,
+    .metatileAttributes = gMetatileAttributes_AguavIsland,
+    .callback = NULL,
+};
