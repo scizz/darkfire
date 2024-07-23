@@ -510,6 +510,7 @@ const u8 gText_RibbonsVar1[] = _("Ribbons: {STR_VAR_1}");
 const u8 gText_EmptyString5[] = _("");
 const u8 gText_Events[] = _("Events"); // Unused
 const u8 gText_Switch[] = _("Switch");
+const u8 gText_ShowIVEV[] = _("IV/EV");
 const u8 gText_PkmnInfo[] = _("Pokémon Info");
 const u8 gText_PkmnSkills[] = _("Pokémon Skills");
 const u8 gText_BattleMoves[] = _("Battle Moves");

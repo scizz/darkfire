@@ -956,6 +956,7 @@ extern const u8 gText_ContestMoves[];
 extern const u8 gText_HMMovesCantBeForgotten2[];
 extern const u8 gText_Info[];
 extern const u8 gText_Switch[];
+extern const u8 gText_ShowIVEV[];
 extern const u8 gText_RentalPkmn[];
 extern const u8 gText_TypeSlash[];
 extern const u8 gText_HP4[];
