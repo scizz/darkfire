@@ -1129,7 +1129,7 @@ Route11_Text_DaisyIntro::
 	.string "Allow me to treat you to a battle.$"
 
 Route11_Text_DaisyDefeated::
-	.string "You battle majesticly!$"
+	.string "You battle majestically!$"
 
 Route11_Text_DaisyPostBattle::
 	.string "{COLOR}{RED}There's an inn south of here, at the\n"
