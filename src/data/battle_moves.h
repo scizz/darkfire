@@ -5317,7 +5317,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_LUSTER_PURGE] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
-        .power = 70,
+        .power = 95,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 5,
@@ -5333,7 +5333,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_MIST_BALL] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
-        .power = 70,
+        .power = 95,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 5,
