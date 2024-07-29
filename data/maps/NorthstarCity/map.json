@@ -445,7 +445,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 103,
+      "x": 104,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -458,7 +458,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
-      "x": 103,
+      "x": 104,
       "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -471,7 +471,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 103,
+      "x": 104,
       "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -815,7 +815,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 99,
+      "x": 100,
       "y": 26,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -824,7 +824,7 @@
     },
     {
       "type": "trigger",
-      "x": 99,
+      "x": 100,
       "y": 27,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
@@ -833,7 +833,7 @@
     },
     {
       "type": "trigger",
-      "x": 99,
+      "x": 100,
       "y": 28,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
