@@ -486,7 +486,7 @@ Route9_Text_HeyNoWay:
 
 Route9_Text_YoureTheOne:
 	.string "{COLOR}{BLUE}You're the one who beat Greendale\n"
-	.string "City's Champion!\p"
+	.string "Village's Champion!\p"
 	.string "It's an honor to meet you,\n"
 	.string "{PLAYER}!\p"
 	.string "My name is Daz.\p"

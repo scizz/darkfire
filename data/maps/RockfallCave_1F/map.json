@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -117,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZUBAT",
-      "x": 49,
-      "y": 10,
+      "x": 56,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -130,8 +133,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZUBAT",
-      "x": 29,
-      "y": 3,
+      "x": 25,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -279,8 +282,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": true,
-  "allow_running": true
+  ]
 }

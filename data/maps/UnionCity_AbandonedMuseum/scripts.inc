@@ -640,7 +640,7 @@ UnionCity_AbandonedMuseum_Text_UhHmh:
 UnionCity_AbandonedMuseum_Text_HmmNorthOfAnheim:
 	.string "{COLOR}{BLUE}Hmm… North of Anheim Forest…\p"
 	.string "In that case we will clear the bridge\n"
-	.string "of Spinirak that are blocking the way.$"
+	.string "of Spinarak that are blocking the way.$"
 
 UnionCity_AbandonedMuseum_Text_OhItSeemsWeHave:
 	.string "{COLOR}{BLUE}Oh…\n"

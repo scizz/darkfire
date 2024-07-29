@@ -441,7 +441,7 @@ WU3L3U3:
 
 AnheimForest_Text_Spinarak:
 	.string "Wild Spinarak are laying eggs!\n"
-	.string "Best not disturb them$"
+	.string "Best not disturb them…$"
 
 AnheimForest_Text_Sign:
 	.string "Anheim Forest\n"
