@@ -4475,7 +4475,7 @@
       "id": "LAYOUT_ROUTE9",
       "name": "Route9_Layout",
       "width": 66,
-      "height": 102,
+      "height": 111,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Route9/border.bin",
