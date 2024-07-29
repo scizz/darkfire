@@ -105,7 +105,7 @@ LaveriaCity_Interlink_Text_Hiker_Received:
 LaveriaCity_Text_Interlink_Woman:
 	.string "{COLOR}{RED}I dropped some items down into the\n"
 	.string "Steep Ravine…\p"
-	.string "I would abseil down there to retreive\n"
+	.string "I would abseil down there to retrieve\n"
 	.string "them, but the rope doesn't feel safe.\p"
 	.string "Oh, well…\p"
 	.string "I'll leave them for someone else to\n"
