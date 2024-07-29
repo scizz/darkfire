@@ -13,6 +13,7 @@
     "gMapGroup_IndoorHighwind",
     "gMapGroup_IndoorNorthstar",
     "gMapGroup_IndoorPinleaf",
+    "gMapGroup_IndoorLumeria",
     "gMapGroup_IndoorRoute3",
     "gMapGroup_IndoorRoute4",
     "gMapGroup_IndoorRoute5",
@@ -111,7 +112,9 @@
     "MuddyUnderpass",
     "Underwater",
     "DesertCaverns",
-    "DesertPass"
+    "DesertPass",
+    "SSCoral_Corridors_1F",
+    "SSCoral_Deck"
   ],
   "gMapGroup_DarkfireGrottos": [
     "Route4EastTreeGrotto"
@@ -219,6 +222,9 @@
     "PinleafTown_Inn_1F",
     "PinleafTown_Inn_2F",
     "PinleafTown_Mart"
+  ],
+  "gMapGroup_IndoorLumeria": [
+
   ],
   "gMapGroup_IndoorRoute3": [
     "Route3_House1"

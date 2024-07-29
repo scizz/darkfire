@@ -1379,3 +1379,7 @@ Script_RemoveTint::
 	.include "data/maps/LaveriaCity_House4/scripts.inc"
 
 	.include "data/maps/Route11_House1/scripts.inc"
+
+	.include "data/maps/SSCoral_Corridors_1F/scripts.inc"
+
+	.include "data/maps/SSCoral_Deck/scripts.inc"
