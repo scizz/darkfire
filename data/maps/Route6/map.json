@@ -520,6 +520,22 @@
       "elevation": 3,
       "item": "ITEM_GREAT_BALL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_6_GREAT_BALL"
+    },
+    {
+      "type": "sign",
+      "x": 69,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_AncientTabletSign"
+    },
+    {
+      "type": "sign",
+      "x": 70,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_AncientTabletSign"
     }
   ]
 }

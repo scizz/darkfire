@@ -7,6 +7,10 @@ Route6_Sign::
 	msgbox Route6_Text_Sign, MSGBOX_SIGN
 	end
 
+EventScript_AncientTabletSign::
+	msgbox AncientTabletSign, MSGBOX_SIGN
+	end
+
 Route6_LeftSign::
 	msgbox Route6_Text_LeftSign, MSGBOX_SIGN
 	end
@@ -199,6 +203,11 @@ WR2D:
 Route6_Text_LeftSign:
 	.string "Route 6\n"
 	.string "{LEFT_ARROW} Laveria City$"
+
+AncientTabletSign:
+	.string "The ancient tablet glows faintly,\n"
+	.string "inscribed with cryptic runes that\l"
+	.string "pulse with a mystical energy.$"
 
 Route6_Text_OkayOneTwoThree:
 	.string "{COLOR}{BLUE}Okay…\n"
