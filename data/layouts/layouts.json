@@ -5746,7 +5746,7 @@
       "name": "SSCoral_Corridors_1F_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_InsideSSCoral",
       "border_filepath": "data/layouts/SSCoral_Corridors_1F/border.bin",
       "blockdata_filepath": "data/layouts/SSCoral_Corridors_1F/map.bin"
