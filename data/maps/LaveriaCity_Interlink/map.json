@@ -166,6 +166,15 @@
       "var": "VAR_ROUTE_7_STATE",
       "var_value": "0",
       "script": "LaveriaCity_Route7_State"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE_7_STATE",
+      "var_value": "0",
+      "script": "LaveriaCity_Route7_State"
     }
   ],
   "bg_events": [

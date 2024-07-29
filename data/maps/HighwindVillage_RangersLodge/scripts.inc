@@ -184,9 +184,8 @@ HighwindVillage_RangersLodge_Text_SignCalendar:
 HighwindVillage_RangersLodge_Text_HeyThereYouMustBePlayer:
 	.string "{COLOR}{BLUE}Hey there!\n"
 	.string "You must be {PLAYER}, right?\p"
-	.string "I caught your battles in the Greendale\n"
-	.string "Village and Laveria City tournaments\l"
-	.string "on TV - seriously impressive stuff!\p"
+	.string "I heard about your tournament wins on\l"
+	.string "TV - seriously impressive stuff!\p"
 	.string "I'm Ranger Alex.$"
 
 HighwindVillage_RangersLodge_Text_OhAndThisHereIsRangerMia:

@@ -3723,7 +3723,7 @@ InLighterNewsPlayer:
 	.string "evil group out of the building that\l"
 	.string "was taken over during the tournament.\p"
 	.string "We owe {PLAYER} and Rose a massive\n"
-	.string "massive thanks at Trainer Watch.\p"
+	.string "thanks.\p"
 	.string "We hope this bold act sends out a\n"
 	.string "clear warning to the SUBO that,\l"
 	.string "together, we will not stand for their\l"
