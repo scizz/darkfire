@@ -1383,3 +1383,5 @@ Script_RemoveTint::
 	.include "data/maps/SSCoral_Corridors_1F/scripts.inc"
 
 	.include "data/maps/SSCoral_Deck/scripts.inc"
+
+	.include "data/maps/Port_Harbour/scripts.inc"

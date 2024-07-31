@@ -1,4 +1,5 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
@@ -13,6 +14,7 @@
     "gMapGroup_IndoorHighwind",
     "gMapGroup_IndoorNorthstar",
     "gMapGroup_IndoorPinleaf",
+    "gMapGroup_IndoorPort",
     "gMapGroup_IndoorLumeria",
     "gMapGroup_IndoorRoute3",
     "gMapGroup_IndoorRoute4",
@@ -222,6 +224,9 @@
     "PinleafTown_Inn_1F",
     "PinleafTown_Inn_2F",
     "PinleafTown_Mart"
+  ],
+  "gMapGroup_IndoorPort": [
+    "Port_Harbour"
   ],
   "gMapGroup_IndoorLumeria": [
 
