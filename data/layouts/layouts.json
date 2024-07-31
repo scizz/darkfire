@@ -5760,6 +5760,16 @@
       "secondary_tileset": "gTileset_OutsideSSCoral",
       "border_filepath": "data/layouts/SSCoral_Deck/border.bin",
       "blockdata_filepath": "data/layouts/SSCoral_Deck/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_HARBOUR",
+      "name": "Port_Harbour_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Port_Harbour/border.bin",
+      "blockdata_filepath": "data/layouts/Port_Harbour/map.bin"
     }
   ]
 }
