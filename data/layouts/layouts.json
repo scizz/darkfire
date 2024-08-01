@@ -5744,7 +5744,7 @@
     {
       "id": "LAYOUT_SSCORAL_CORRIDORS_1F",
       "name": "SSCoral_Corridors_1F_Layout",
-      "width": 37,
+      "width": 80,
       "height": 22,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_InsideSSCoral",
@@ -5764,10 +5764,10 @@
     {
       "id": "LAYOUT_PORT_HARBOUR",
       "name": "Port_Harbour_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 60,
+      "height": 39,
+      "primary_tileset": "gTileset_Port1",
+      "secondary_tileset": "gTileset_Port2",
       "border_filepath": "data/layouts/Port_Harbour/border.bin",
       "blockdata_filepath": "data/layouts/Port_Harbour/map.bin"
     }
