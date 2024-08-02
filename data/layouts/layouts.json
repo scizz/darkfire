@@ -5757,7 +5757,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_OutsideSSCoral",
+      "secondary_tileset": "gTileset_InsideSSCoral",
       "border_filepath": "data/layouts/SSCoral_Deck/border.bin",
       "blockdata_filepath": "data/layouts/SSCoral_Deck/map.bin"
     },
