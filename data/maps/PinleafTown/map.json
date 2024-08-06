@@ -143,7 +143,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 42,
       "y": 47,
       "elevation": 3,
@@ -403,7 +403,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
       "x": 47,
       "y": 51,
       "elevation": 0,
