@@ -14,4 +14,4 @@ gText_AccessedPlayersPC:: @ 82726C2
 	.string "Accessed Items PC.$"
 
 gText_AccessedLanettesPC:: @ 82726D4
-	.string "Accessed Pokémon PC.$"
+	.string "Accessed Ernie's PC.$"
