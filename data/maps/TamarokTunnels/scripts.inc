@@ -3,7 +3,21 @@
 .set LOCALID_SUBO_L, 8
 
 TamarokTunnels_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, TamarokTunnels_OnLoad
 	.byte 0
+
+TamarokTunnels_OnLoad:
+	call_if_set FLAG_TAMAROK_TUNNELS_SUBO, TamarokTunnels_BlockExit
+	end
+
+TamarokTunnels_BlockExit::
+	setmetatile 7, 9, 546, 1
+	setmetatile 8, 9, 546, 1
+	setmetatile 9, 9, 546, 1
+	setmetatile 7, 10, 563, 0
+	setmetatile 8, 10, 630, 1
+	setmetatile 9, 10, 630, 1
+	return
 
 TamarokTunnels_EventScript_Eli::
 	trainerbattle_single TRAINER_ELI, TamarokTunnels_Text_EliIntro, TamarokTunnels_Text_EliDefeated
