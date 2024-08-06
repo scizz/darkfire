@@ -869,8 +869,9 @@
 #define OBJ_EVENT_GFX_COWGIRL                    862
 #define OBJ_EVENT_GFX_ERNIE                      863
 #define OBJ_EVENT_GFX_PIKATRON                   864
+#define OBJ_EVENT_GFX_REGIGIGAS_STONE            865
 
-#define NUM_OBJ_EVENT_GFX                        865
+#define NUM_OBJ_EVENT_GFX                        866
 
 
 // These are dynamic object gfx ids.

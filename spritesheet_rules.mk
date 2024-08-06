@@ -2432,6 +2432,9 @@ $(OBJEVENTGFXDIR)/misc/pidgey.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/wingull.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/misc/regigigas_stone.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8
+
 $(FLDEFFGFXDIR)/arrow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 

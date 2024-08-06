@@ -2768,6 +2768,9 @@ static const struct SpriteFrameImage sPicTable_Pikatron[] = {
     overworld_frame(gObjectEventPic_Pikatron, 2, 4, 8),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_RegigigasStone[] = {
+    overworld_frame(gObjectEventPic_RegigigasStone, 8, 8, 0),
+};
 
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
