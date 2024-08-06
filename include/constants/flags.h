@@ -1067,7 +1067,7 @@
 #define FLAG_ITEM_ROUTE_6_FULL_HEAL                                 0x3F7 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_TIMER_BALL                                0x3F8 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_REPEL                                     0x3F9 // Darkfire Flag
-#define FLAG_ITEM_ROUTE_6_RARE_CANDY                                0x3FA // Darkfire Flag
+#define FLAG_ITEM_ROUTE_6_FULL_HEAL                                 0x3FA // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_REPEAT_BALL                               0x3FB // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_POTION_2                                  0x3FC // Darkfire Flag
 #define FLAG_ITEM_ROUTE_7_FULL_HEAL                                 0x3FD // Darkfire Flag

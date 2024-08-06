@@ -114,8 +114,8 @@ Route6_EventScript_ItemRepel::
 	finditem ITEM_REPEL
 	end
 
-Route6_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+Route6_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
 	end
 
 Route115_EventScript_ItemGreatBall:: @ 8290E51
