@@ -773,8 +773,8 @@ static const u8 sBalmMushroomDesc[] = _(
 
 static const u8 sPearlDesc[] = _(
     "A pretty pearl\n"
-    "that would sell at a\n"
-    "cheap price.");
+    "that Collectors pay\n"
+    "big for.");
 
 static const u8 sBigPearlDesc[] = _(
     "A lovely large pearl\n"
