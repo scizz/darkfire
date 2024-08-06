@@ -294,7 +294,7 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	waitmovement 0
 	speakername SpeakerName_Text_AceTrainer
 	msgbox GreendaleVillage_Text_ThatTrainerWasWeak, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_JONATHAN, GreendaleJonathan_Text_Defeated
+	trainerbattle_no_intro TRAINER_GREENDALE_JONATHAN, GreendaleJonathan_Text_Defeated
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	applymovement LOCALID_COOLTRAINER, WD6
 	waitmovement 0
