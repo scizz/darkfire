@@ -1001,3 +1001,14 @@ const struct Tileset gTileset_AguavIsland =
     .metatileAttributes = gMetatileAttributes_AguavIsland,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Rindo =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Rindo,
+    .palettes = gTilesetPalettes_Rindo,
+    .metatiles = gMetatiles_Rindo,
+    .metatileAttributes = gMetatileAttributes_Rindo,
+    .callback = NULL,
+};

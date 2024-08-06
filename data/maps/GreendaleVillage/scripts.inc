@@ -644,7 +644,6 @@ LFDWL:
 	lock_facing_direction
 	walk_slow_left
 	unlock_facing_direction
-	face_right
 	step_end
 	
 WDRFUD16FD:

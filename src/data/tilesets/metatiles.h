@@ -255,3 +255,6 @@ const u16 gMetatileAttributes_OutsideSSCoral[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_AguavIsland[] = INCBIN_U16("data/tilesets/secondary/aguav_island/metatiles.bin");
 const u16 gMetatileAttributes_AguavIsland[] = INCBIN_U16("data/tilesets/secondary/aguav_island/metatile_attributes.bin");
+
+const u16 gMetatiles_Rindo[] = INCBIN_U16("data/tilesets/secondary/rindo/metatiles.bin");
+const u16 gMetatileAttributes_Rindo[] = INCBIN_U16("data/tilesets/secondary/rindo/metatile_attributes.bin");
