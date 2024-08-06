@@ -1694,7 +1694,7 @@ Route9_StarterDome_Text_Fat_Guy:
 	.string "Pokémon are such amazing creatures.$"
 
 Route9_StarterDome_Text_Youngster:
-	.string "{COLOR}{BLUE}$I think I'm gonna go for a Water-type\n"
+	.string "{COLOR}{BLUE}I think I'm gonna go for a Water-type\n"
 	.string "Pokémon. Water-types are my thing!\p"
 	.string "I want to Surf the Tenjo seas with\n"
 	.string "one, some day…$"
