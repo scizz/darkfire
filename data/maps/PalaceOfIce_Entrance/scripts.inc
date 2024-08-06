@@ -24,3 +24,10 @@ PalaceOfIce_Entrance_EntranceRightSide::
 	closebraillemessage
 	releaseall
 	end
+
+PalaceOfIce_Entrance_RegigigasStone::
+	msgbox PalaceOfIce_Entrance_Text_RegigigasStone, MSGBOX_SIGN
+	end
+
+PalaceOfIce_Entrance_Text_RegigigasStone:
+	.string "A mysterious statue blocks the way…$"
