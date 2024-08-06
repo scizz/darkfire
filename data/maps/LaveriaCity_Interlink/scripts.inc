@@ -47,6 +47,7 @@ LaveriaCity_Interlink_Girl::
 LaveriaCity_Interlink_Aide::
 	lock
 	faceplayer
+	goto_if_set FLAG_PROF_AIDE_LAVERIA_DOWSING_MCHN, LaveriaCity_Interlink_AideGiveDowsingMachine_Given
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, ScriptGetPokedexInfo
 	copyvar VAR_0x8008, VAR_0x8005
@@ -81,6 +82,11 @@ LaveriaCity_Interlink_AideGiveDowsingMachine::
 	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_DOWSING_MACHINE, 1
+	setflag FLAG_PROF_AIDE_LAVERIA_DOWSING_MCHN
+	goto LaveriaCity_Interlink_AideGiveDowsingMachine_Given
+	end
+
+LaveriaCity_Interlink_AideGiveDowsingMachine_Given::
 	speakername CommonName_Text_Aide
 	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox LaveriaCity_Interlink_Text_Aide_TheDowsingMachine, MSGBOX_AUTOCLOSE

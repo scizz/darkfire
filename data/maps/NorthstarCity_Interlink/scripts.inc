@@ -12,6 +12,7 @@ NorthstarCity_Interlink_Sailor::
 NorthstarCity_Interlink_Aide::
 	lock
 	faceplayer
+	goto_if_set FLAG_PROF_AIDE_NORTHSTAR_EXP_SHARE, NorthstarCity_Interlink_AideGiveExpShare_Given
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, ScriptGetPokedexInfo
 	copyvar VAR_0x8008, VAR_0x8005
@@ -46,6 +47,11 @@ NorthstarCity_Interlink_AideGiveExpShare::
 	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_EXP_SHARE, 1
+	setflag FLAG_PROF_AIDE_NORTHSTAR_EXP_SHARE
+	goto NorthstarCity_Interlink_AideGiveExpShare_Given
+	end
+
+NorthstarCity_Interlink_AideGiveExpShare_Given::
 	speakername CommonName_Text_Aide
 	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Interlink_Text_Aide_TheExpShare, MSGBOX_AUTOCLOSE

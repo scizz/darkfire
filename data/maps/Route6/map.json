@@ -251,8 +251,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route6_EventScript_ItemRareCandy",
-      "flag": "FLAG_ITEM_ROUTE_6_RARE_CANDY"
+      "script": "Route6_EventScript_ItemPokeBall",
+      "flag": "FLAG_ITEM_ROUTE_6_POKE_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",

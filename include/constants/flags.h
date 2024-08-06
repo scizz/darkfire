@@ -339,9 +339,9 @@
 #define FLAG_RECEIVED_AURORA_TICKET          0x13A
 #define FLAG_RECEIVED_MYSTIC_TICKET          0x13B
 #define FLAG_RECEIVED_OLD_SEA_MAP            0x13C 
-#define FLAG_WONDER_CARD_UNUSED_1            0x13D // These Wonder Card flags are referenced but never set
-#define FLAG_WONDER_CARD_UNUSED_2            0x13E
-#define FLAG_WONDER_CARD_UNUSED_3            0x13F
+#define FLAG_PROF_AIDE_UNION_EVERSTONE       0x13D
+#define FLAG_PROF_AIDE_LAVERIA_DOWSING_MCHN  0x13E
+#define FLAG_PROF_AIDE_NORTHSTAR_EXP_SHARE   0x13F
 #define FLAG_WONDER_CARD_UNUSED_4            0x140
 #define FLAG_WONDER_CARD_UNUSED_5            0x141
 #define FLAG_WONDER_CARD_UNUSED_6            0x142
@@ -679,7 +679,7 @@
 #define FLAG_RECEIVED_PINLEAF_PP_UP         0x27A
 #define FLAG_RECEIVED_PINLEAF_HP_UP         0x27B
 #define FLAG_UNUSED_0x27C                   0x27C // Used in Anheim Town House 3
-#define FLAG_RECEIVED_PINLEAF_LUM_BERRY     0x27D
+#define FLAG_RECEIVED_PINLEAF_CHESTO_BERRY  0x27D
 #define FLAG_UNION_CITY_TM_BULK_UP          0x27E
 #define FLAG_ROUTE_3_QUEST_DELIVERED        0x27F
 #define FLAG_ROUTE_3_QUEST_STARTED          0x280
@@ -1067,7 +1067,7 @@
 #define FLAG_ITEM_ROUTE_6_FULL_HEAL                                 0x3F7 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_TIMER_BALL                                0x3F8 // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_REPEL                                     0x3F9 // Darkfire Flag
-#define FLAG_ITEM_ROUTE_6_RARE_CANDY                                0x3FA // Darkfire Flag
+#define FLAG_ITEM_ROUTE_6_POKE_BALL                                 0x3FA // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_REPEAT_BALL                               0x3FB // Darkfire Flag
 #define FLAG_ITEM_ROUTE_6_POTION_2                                  0x3FC // Darkfire Flag
 #define FLAG_ITEM_ROUTE_7_FULL_HEAL                                 0x3FD // Darkfire Flag
