@@ -292,6 +292,7 @@ static void ItemUseOnFieldCB_Rod(u8 taskId)
 
 void ItemUseOutOfBattle_Itemfinder(u8 var)
 {
+    LockPlayerFieldControls();
     IncrementGameStat(GAME_STAT_USED_ITEMFINDER);
     sItemUseOnFieldCB = ItemUseOnFieldCB_Itemfinder;
     SetUpItemUseOnFieldCallback(var);
