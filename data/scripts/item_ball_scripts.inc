@@ -114,8 +114,8 @@ Route6_EventScript_ItemRepel::
 	finditem ITEM_REPEL
 	end
 
-Route6_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
+Route6_EventScript_ItemPokeBall::
+	finditem ITEM_POKE_BALL
 	end
 
 Route115_EventScript_ItemGreatBall:: @ 8290E51
