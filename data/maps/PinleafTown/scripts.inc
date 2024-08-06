@@ -66,7 +66,6 @@ PinleafTown_TylerBattle_Eevee::
 	end
 
 PinleafTown_TylerBattle_End::
-	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Tyler
@@ -432,7 +431,11 @@ PinleafTown_Text_Old_Lady:
 	.string "and he is pretty strong.$"
 
 PinleafTown_Text_Son:
-	.string "{COLOR}{BLUE}Placeholder.$"
+	.string "{COLOR}{BLUE}My grandparents' farm, Longfield Farm,\n"
+	.string "has been around for generations.\p"
+	.string "This is where I learned to care for\n"
+	.string "Pokémon with the same love they showed\l"
+	.string "for their crops…$"
 
 PinleafTown_Text_WoahHeyNoWayPlayer:
 	.string "{COLOR}{BLUE}Woah! Hey! No way!\n"

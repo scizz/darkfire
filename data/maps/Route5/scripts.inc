@@ -151,9 +151,9 @@ Route5_SUBO_Left::
 	applymovement LOCALID_SUBO_2, WFU5
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	emote LOCALID_SUBO_1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername2 SpeakerName_Text_Paul
@@ -275,9 +275,9 @@ Route5_SUBO_Right::
 	applymovement LOCALID_SUBO_2, WFULU4
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_FaceUp
+	emote LOCALID_SUBO_1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername2 SpeakerName_Text_Paul

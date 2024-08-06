@@ -592,6 +592,8 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	removeobject LOCALID_SUBO_2
 	setflag FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV
 	setvar VAR_STORYLINE_STATE, 26
+	savebgm MUS_DUMMY
+	fadedefaultbgm
 	release
 	end
 

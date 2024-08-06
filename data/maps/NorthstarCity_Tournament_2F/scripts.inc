@@ -59,6 +59,16 @@ NorthstarCity_Tournament_2F_Skye::
 	msgbox NorthstarTournament2F_Text_SkyePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+NorthstarCity_Tournament_2F_Kecleon::
+	lock
+	faceplayer
+	playmoncry SPECIES_KECLEON, 0
+	speakername CommonName_Text_Kecleon
+	msgbox NorthstarCity_Tournament_2F_Text_Kecleon, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
 NorthstarCity_Tournament_2F_Text_Girl_1:
 	.string "{COLOR}{RED}It's thanks to the Northstar TV\n"
 	.string "Station's special attention to\l"
@@ -99,3 +109,6 @@ NorthstarCity_Tournament_2F_Text_SUBO:
 
 NorthstarCity_Tournament_2F_Text_SUBO_Given:
 	.string "{COLOR}{BLUE}Found that trash under the desk!$"
+
+NorthstarCity_Tournament_2F_Text_Kecleon:
+	.string "Kecleeeon!$"

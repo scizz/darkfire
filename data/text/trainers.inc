@@ -151,6 +151,12 @@ CommonName_Text_Ernie:
 CommonName_Text_Pikatron:
 	.string "P1KATR0N 5000$"
 
+CommonName_Text_Kecleon:
+	.string "Kecleon$"
+
+CommonName_Text_Vigoroth:
+	.string "Vigoroth$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
