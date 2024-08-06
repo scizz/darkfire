@@ -170,8 +170,8 @@ Route8_EventScript_ItemTM27::
 	finditem ITEM_TM27
 	end
 
-Route8_EventScript_ItemXAttack::
-	finditem ITEM_X_ATTACK
+Route8_EventScript_ItemIcyRock::
+	finditem ITEM_ICY_ROCK
 	end
 
 Route9_EventScript_ItemUltraBall::
@@ -402,8 +402,8 @@ SteepRavine_EventScript_ItemHPUP::
 	finditem ITEM_HP_UP
 	end
 
-MeteorFalls_B1F_2R_EventScript_ItemTM02:: @ 82911DF
-	finditem ITEM_TM02
+SteepRavine_EventScript_KingsRock::
+	finditem ITEM_KINGS_ROCK
 	end
 
 NewMauville_Inside_EventScript_ItemUltraBall:: @ 82911EC
