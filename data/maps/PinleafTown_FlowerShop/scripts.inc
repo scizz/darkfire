@@ -4,12 +4,12 @@ PinleafTown_FlowerShop_MapScripts::
 PinleafTown_FlowerShop_Girl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_PINLEAF_LUM_BERRY, PinleafTown_FlowerShop_Girl_Given
+	goto_if_set FLAG_RECEIVED_PINLEAF_CHESTO_BERRY, PinleafTown_FlowerShop_Girl_Given
 	msgbox PinleafTown_FlowerShop_Text_Girl, MSGBOX_DEFAULT
-	giveitem ITEM_LUM_BERRY, 1
+	giveitem ITEM_CHESTO_BERRY, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_PINLEAF_LUM_BERRY
+	setflag FLAG_RECEIVED_PINLEAF_CHESTO_BERRY
 	goto PinleafTown_FlowerShop_Girl_Given
 
 PinleafTown_FlowerShop_Girl_Given::
