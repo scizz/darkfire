@@ -5770,6 +5770,16 @@
       "secondary_tileset": "gTileset_Port2",
       "border_filepath": "data/layouts/Port_Harbour/border.bin",
       "blockdata_filepath": "data/layouts/Port_Harbour/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND",
+      "name": "HorizonIsland_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HorizonIsland/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIsland/map.bin"
     }
   ]
 }

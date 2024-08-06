@@ -3,6 +3,7 @@
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
+    "gMapGroup_DarkfireIslands",
     "gMapGroup_DarkfireGrottos",
     "gMapGroup_DarkfireSpecialAreas",
     "gMapGroup_IndoorChandra",
@@ -117,6 +118,9 @@
     "DesertPass",
     "SSCoral_Corridors_1F",
     "SSCoral_Deck"
+  ],
+  "gMapGroup_DarkfireIslands": [
+    "HorizonIsland"
   ],
   "gMapGroup_DarkfireGrottos": [
     "Route4EastTreeGrotto"
