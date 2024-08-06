@@ -694,6 +694,7 @@ void ItemUseOutOfBattle_PowderJar(u8 taskId)
 
 void ItemUseOutOfBattle_DexNav(u8 taskId)
 {
+    LoadPalette(GetOverworldTextboxPalettePtr(), 0xF0, 0x20);
     Task_OpenDexNavFromStartMenu(taskId);
 }
 
