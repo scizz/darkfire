@@ -281,6 +281,29 @@
     }
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 36,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 22,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_GREAT_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3"
+    },
+    {
+      "type": "hidden_item",
+      "x": 50,
+      "y": 31,
+      "elevation": 0,
+      "item": "ITEM_X_ATTACK",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_1"
+    }
   ]
 }

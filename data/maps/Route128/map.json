@@ -173,29 +173,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 49,
-      "y": 9,
-      "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_1"
-    },
-    {
-      "type": "hidden_item",
-      "x": 57,
-      "y": 21,
-      "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2"
-    },
-    {
-      "type": "hidden_item",
-      "x": 31,
-      "y": 33,
-      "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3"
-    }
+
   ]
 }
