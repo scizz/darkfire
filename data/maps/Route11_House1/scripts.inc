@@ -143,6 +143,7 @@ Route11_House1_ErnieObject::
 	msgbox ErnieICouldntForTheLifeOfMe, MSGBOX_AUTOCLOSE
 	hideface 1
 	setflag FLAG_SYS_DEXNAV_GET
+	setflag FLAG_SYS_PC_LANETTE
 	setvar VAR_ERNIE_STATE, 2
 	end
 
