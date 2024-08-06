@@ -59,9 +59,7 @@ UnionCity_BikeShop_Owner_Text_Quest:
 	.string "about that free Bicycle!$"
 
 UnionCity_Bikeshop_Owner_Text_Quest_Got_Balls:
-	.string "{COLOR}{BLUE}Hello!\n"
-	.string "…\p"
-	.string "What's that?\n"
+	.string "What's that?\p"
 	.string "You managed to get the Smoke Balls?\p"
 	.string "Far out! Thank you!\n"
 	.string "As promised, here ya go!$"
