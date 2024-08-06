@@ -20,6 +20,7 @@ UnionCity_Interlink_Grandma::
 UnionCity_Interlink_Aide::
 	lock
 	faceplayer
+	goto_if_set FLAG_PROF_AIDE_UNION_EVERSTONE, UnionCity_Interlink_AideGiveEverstone_Given
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, ScriptGetPokedexInfo
 	copyvar VAR_0x8008, VAR_0x8005
@@ -54,6 +55,11 @@ UnionCity_Interlink_AideGiveEverstone::
 	msgbox UnionCity_Interlink_Text_Aide_CongratulationsHeresYourReward, MSGBOX_AUTOCLOSE
 	hideface 1
 	giveitem ITEM_EVERSTONE, 1
+	setflag FLAG_PROF_AIDE_UNION_EVERSTONE
+	goto UnionCity_Interlink_AideGiveEverstone_Given
+	end
+
+UnionCity_Interlink_AideGiveEverstone_Given::
 	speakername CommonName_Text_Aide
 	showface FS_SCIENTIST, FSE_NORMAL, 1, 1
 	msgbox UnionCity_Interlink_Text_Aide_TheEverstonePrevents, MSGBOX_AUTOCLOSE
