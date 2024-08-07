@@ -180,6 +180,7 @@ NorthstarCity_SUBO_2::
 	end
 
 NorthstarCity_Old_Man_2::
+	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Old_Man_2_Badge
 	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq NorthstarCity_Old_Man_2_Male
@@ -188,6 +189,11 @@ NorthstarCity_Old_Man_2::
 
 NorthstarCity_Old_Man_2_Male::
 	msgbox NorthstarCity_Text_Old_Man_2_Male, MSGBOX_NPC
+	end
+
+NorthstarCity_Old_Man_2_Badge::
+	msgbox NorthstarCity_Text_Old_Man_2_Badge, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 NorthstarCity_Ace_Trainer::
@@ -891,6 +897,11 @@ NorthstarCity_Text_Old_Man_2_Male:
 	.string "me over earlier… The nerve of them!\p"
 	.string "Young man… Will you teach them a\n"
 	.string "lesson for me?$"
+
+NorthstarCity_Text_Old_Man_2_Badge:
+	.string "Thank you, Trainer!\p"
+	.string "Thanks for teaching the SUBO a lesson!\n"
+	.string "They definitely had it coming to them!$"
 
 NorthstarCity_Text_Ace_Trainer:
 	.string "{COLOR}{BLUE}Here for the tournament?\n"
