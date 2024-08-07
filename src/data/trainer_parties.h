@@ -9751,15 +9751,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AceTrainerFalter[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SailorMiguel[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Gill[] = {
     {
     .iv = 180,
     .lvl = 25,
-    .species = SPECIES_AZUMARILL,
+    .species = SPECIES_WARTORTLE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WITHDRAW, MOVE_BUBBLE_BEAM, MOVE_BITE}
     },{
     .iv = 180,
     .lvl = 26,
-    .species = SPECIES_GYARADOS,
+    .species = SPECIES_SEALEO,
+    .moves = {MOVE_BRINE, MOVE_POWDER_SNOW, MOVE_REST, MOVE_SNORE}
     }
 };
 

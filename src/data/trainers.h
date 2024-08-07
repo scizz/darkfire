@@ -8625,7 +8625,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GREENDALE_CHAMPION_ROSE] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_PIKE_QUEEN_LUCY,
         .trainerName = _("Rose"),
         .items = {},
@@ -8718,16 +8718,16 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_AceTrainerFalter),
     },
 
-    [TRAINER_SAILOR_MIGUEL] =
+    [TRAINER_GILL] =
     {
-        .trainerClass = TRAINER_CLASS_SAILOR,
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_SAILOR,
-        .trainerName = _("Miguel"),
+        .trainerPic = TRAINER_PIC_GILL,
+        .trainerName = _("Gill"),
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SailorMiguel),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_Gill),
     },
 
     [TRAINER_TYLER_1] =

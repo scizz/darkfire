@@ -728,7 +728,7 @@
 #define TRAINER_OLD_MAN_ALFRED              724 // Northstar Old Man
 #define TRAINER_BLACK_BELT_DAWSON           725 // Northstar Black Belt
 #define TRAINER_ACE_TRAINER_FALTER          726 // Northstar Ace Trainer
-#define TRAINER_SAILOR_MIGUEL               727 // Northstar Sailor
+#define TRAINER_GILL                        727 // Northstar Champion
 #define TRAINER_TYLER_1                     728 // Tyler Chandra Village 1
 #define TRAINER_TYLER_2                     729 // Tyler Chandra Village 2
 #define TRAINER_TYLER_3                     730 // Tyler Anheim Forest 1
