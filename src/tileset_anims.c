@@ -527,8 +527,6 @@ const u16 gTilesetAnims_GenericBuilding_Wood_Frame2[] = INCBIN_U16("data/tileset
 
 const u16 *const gTilesetAnims_GenericBuilding_Wood[] = {
     gTilesetAnims_GenericBuilding_Wood_Frame0,
-    gTilesetAnims_GenericBuilding_Wood_Frame1,
-    gTilesetAnims_GenericBuilding_Wood_Frame2,
     gTilesetAnims_GenericBuilding_Wood_Frame1
 };
 
