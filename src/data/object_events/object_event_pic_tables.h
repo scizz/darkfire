@@ -2772,6 +2772,19 @@ const struct SpriteFrameImage gObjectEventPicTable_RegigigasStone[] = {
     overworld_frame(gObjectEventPic_RegigigasStone, 8, 8, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_Gill[] = {
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Gill, 2, 4, 8),
+};
+
+
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 1),

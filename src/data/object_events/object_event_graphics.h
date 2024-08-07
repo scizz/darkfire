@@ -1558,3 +1558,5 @@ const u32 gObjectEventPic_Pikatron[] = INCBIN_U32("graphics/object_events/pics/p
 const u16 gObjectEventPal_Pikatron[] = INCBIN_U16("graphics/object_events/palettes/pikatron.gbapal");
 const u32 gObjectEventPic_RegigigasStone[] = INCBIN_U32("graphics/object_events/pics/misc/regigigas_stone.4bpp");
 const u16 gObjectEventPal_RegigigasStone[] = INCBIN_U16("graphics/object_events/palettes/regigigas_stone.gbapal");
+const u32 gObjectEventPic_Gill[] = INCBIN_U32("graphics/object_events/pics/people/gill.4bpp");
+const u16 gObjectEventPal_Gill[] = INCBIN_U16("graphics/object_events/palettes/gill.gbapal");

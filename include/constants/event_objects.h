@@ -870,8 +870,9 @@
 #define OBJ_EVENT_GFX_ERNIE                      863
 #define OBJ_EVENT_GFX_PIKATRON                   864
 #define OBJ_EVENT_GFX_REGIGIGAS_STONE            865
+#define OBJ_EVENT_GFX_GILL                       866
 
-#define NUM_OBJ_EVENT_GFX                        866
+#define NUM_OBJ_EVENT_GFX                        867
 
 
 // These are dynamic object gfx ids.
