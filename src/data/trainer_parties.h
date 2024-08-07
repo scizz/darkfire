@@ -9751,7 +9751,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AceTrainerFalter[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Gill[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Gill[] = {
     {
     .iv = 180,
     .lvl = 25,
