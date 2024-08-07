@@ -1084,14 +1084,14 @@ static const struct InGameTrade sIngameTrades[] =
         .requestedSpecies = SPECIES_ZIGZAGOON
     },
     {
-        .nickname = _("Hedwig"),
-        .species = SPECIES_HOOTHOOT,
-        .ivs = {7, 6, 7, 6, 5, 5},
+        .nickname = _("Leviathan"),
+        .species = SPECIES_MAGIKARP,
+        .ivs = {9, 9, 7, 6, 5, 20},
         .abilityNum = 0,
         .otId = 32284,
         .conditions = {5, 5, 5, 30, 5},
         .personality = 0x01,
-        .heldItem = ITEM_SHEENY_SEED,
+        .heldItem = ITEM_ORAN_BERRY,
         .mailNum = -1,
         .otName = _("Harold"),
         .otGender = MALE,

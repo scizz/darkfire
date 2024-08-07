@@ -17,8 +17,8 @@ HighwindVillage_House2_Old_Man::
 HighwindVillage_House2_HaroldTradeSequence::
 	lock
 	faceplayer
-	goto_if_set FLAG_COMPLETE_TRADE_HOOTHOOT, HighwindVillage_House2_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_HOOTHOOT
+	goto_if_set FLAG_COMPLETE_TRADE_MAGIKARP, HighwindVillage_House2_TradeCompleted
+	setvar VAR_0x8008, INGAME_TRADE_MAGIKARP
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
 	msgbox HighwindVillage_House2_Text_WillingToTradeIt, MSGBOX_YESNO
@@ -35,7 +35,7 @@ HighwindVillage_House2_HaroldTradeSequence::
 	waitstate
 	msgbox HighwindVillage_House2_TradeThanks, MSGBOX_DEFAULT
 	updatefollowerpokemongraphic
-	setflag FLAG_COMPLETE_TRADE_HOOTHOOT
+	setflag FLAG_COMPLETE_TRADE_MAGIKARP
 	release
 	end
  
@@ -57,7 +57,7 @@ HighwindVillage_House2_TradeCompleted::
  
 HighwindVillage_House2_TradeCompleted_Text:
 	.string "{COLOR}{BLUE}Hey!\n"
-	.string "How's Hedwig doing?\p"
+	.string "How's Leviathan doing?\p"
 	.string "Your Swinub is doing just fine.\n"
 	.string "Thanks again for trading with me!$"
  
@@ -78,7 +78,7 @@ HighwindVillage_House2_WrongMon_Text:
  
 HighwindVillage_House2_TradeThanks:
 	.string "{COLOR}{BLUE}Thanks!\n"
-	.string "Take good care of Hedwig!$"
+	.string "Take good care of Leviathan!$"
 
 HighwindVillage_House2_Text_Woman:
 	.string "{COLOR}{RED}I take care of Grandpa these days,\n"
