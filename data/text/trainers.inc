@@ -157,6 +157,9 @@ CommonName_Text_Kecleon:
 CommonName_Text_Vigoroth:
 	.string "Vigoroth$"
 
+CommonName_Text_Gill:
+	.string "Gill$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"
