@@ -390,6 +390,10 @@ static const union AnimCmd *const sAnims_Cowgirl[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_Gill[] ={
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_RubySapphireBrendan[] ={
     sAnim_GeneralFrame0,
 };
@@ -498,6 +502,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_SKIER] = sAnims_Skier,
     [TRAINER_PIC_RANCHER] = sAnims_Rancher,
     [TRAINER_PIC_COWGIRL] = sAnims_Cowgirl,
+    [TRAINER_PIC_GILL] = sAnims_Gill,
     [TRAINER_PIC_RS_BRENDAN] = sAnims_RubySapphireBrendan,
     [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
 };

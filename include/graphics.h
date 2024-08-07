@@ -7188,6 +7188,7 @@ extern const u32 gTrainerFrontPic_DazRegular[];
 extern const u32 gTrainerFrontPic_Skier[];
 extern const u32 gTrainerFrontPic_Rancher[];
 extern const u32 gTrainerFrontPic_Cowgirl[];
+extern const u32 gTrainerFrontPic_Gill[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
 
@@ -7288,6 +7289,7 @@ extern const u32 gTrainerPalette_SuboF[];
 extern const u32 gTrainerPalette_DazRegular[];
 extern const u32 gTrainerPalette_Skier[];
 extern const u32 gTrainerPalette_Rancher[];
+extern const u32 gTrainerPalette_Gill[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
 

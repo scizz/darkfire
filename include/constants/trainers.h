@@ -117,6 +117,7 @@
 #define TRAINER_PIC_SKIER                 97
 #define TRAINER_PIC_RANCHER               98
 #define TRAINER_PIC_COWGIRL               99
+#define TRAINER_PIC_GILL                  100
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

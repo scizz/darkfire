@@ -307,3 +307,6 @@ const u32 gTrainerPalette_Skier[] = INCBIN_U32("graphics/trainers/front_pics/ski
 const u32 gTrainerFrontPic_Rancher[] = INCBIN_U32("graphics/trainers/front_pics/rancher.4bpp.lz");
 const u32 gTrainerFrontPic_Cowgirl[] = INCBIN_U32("graphics/trainers/front_pics/cowgirl.4bpp.lz");
 const u32 gTrainerPalette_Rancher[] = INCBIN_U32("graphics/trainers/front_pics/rancher.gbapal.lz");
+
+const u32 gTrainerFrontPic_Gill[] = INCBIN_U32("graphics/trainers/front_pics/gill.4bpp.lz");
+const u32 gTrainerPalette_Gill[] = INCBIN_U32("graphics/trainers/front_pics/gill.gbapal.lz");
