@@ -129,7 +129,7 @@ NorthstarArena_SailorBattle::
 	waitmovement 0
 	speakername CommonName_Text_Sailor
 	msgbox NorthstarArena_Text_IfYouDontKnow, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_SAILOR_MIGUEL, SailorMiguel_Text_Defeated
+	trainerbattle_no_intro TRAINER_GILL, SailorMiguel_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 35
 	goto NorthstarArena_NextRound
@@ -147,7 +147,7 @@ NorthstarArena_AceTrainerBattle::
 	waitmovement 0
 	speakername CommonName_Text_AceTrainer
 	msgbox NorthstarArena_Text_YoYoureTheOne, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_ACE_TRAINER_FALTER, AceTrainerFalter_Text_Defeated
+	trainerbattle_no_intro TRAINER_GILL, AceTrainerFalter_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 35
 	goto NorthstarArena_NextRound

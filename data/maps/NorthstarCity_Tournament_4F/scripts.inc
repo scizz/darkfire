@@ -1122,7 +1122,7 @@ NorthstarCity_Tournament_4F_Text_ItWasThePressure:
 	.string "TV that made me lose. Don't get cocky.$"
 
 NorthstarCity_Tournament_4F_Text_OurThirdMatchAceTrainer:
-	.string "{COLOR}{RED}Our third match is Ace Trainer Falter\n"
+	.string "{COLOR}{RED}Our final match is Champion Gill\n"
 	.string "against the rising star,\l"
 	.string "{PLAYER}!\p"
 	.string "Both our contestants have excellent\n"
@@ -1131,7 +1131,7 @@ NorthstarCity_Tournament_4F_Text_OurThirdMatchAceTrainer:
 	.string "Begin!$"
 
 NorthstarCity_Tournament_4F_Text_OurThirdMatchSailor:
-	.string "{COLOR}{RED}Our third match is Sailor Miguel\n"
+	.string "{COLOR}{RED}Our final match is Champion Gill\n"
 	.string "against the rising star,\l"
 	.string "{PLAYER}!\p"
 	.string "Both our contestants have excellent\n"
