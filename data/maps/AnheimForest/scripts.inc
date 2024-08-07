@@ -26,6 +26,8 @@ AnheimForest_HideSpinarak::
 	removeobject 20
 	removeobject 21
 	removeobject 22
+	removeobject 39
+	removeobject 40
 	setflag FLAG_HIDE_ANHEIM_FOREST_SPINARAK
 	return
 
