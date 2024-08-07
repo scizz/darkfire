@@ -34,6 +34,10 @@ NorthstarCity_Tournament_1F_ResetTournament::
 	setvar VAR_STORYLINE_STATE, 28
 	return
 
+NorthstarCity_Tournament_1F_Sign::
+	msgbox NorthstarCity_Tournament_1F_Text_Sign, MSGBOX_SIGN
+	end
+
 NorthstarCity_Tournament_1F_SUBOEnd::
 	lock
 	special HealPlayerParty
@@ -300,6 +304,12 @@ WLU6:
 	walk_up
 	walk_up
 	step_end
+
+NorthstarCity_Tournament_1F_Text_Sign:
+	.string "1F. First Floor Lobby\p"
+	.string "2F. Second Floor Lobby\p"
+	.string "3F. Director's Room\p"
+	.string "4F. Battle Arena$"
 
 NorthstarCity_Tournament_1F_Text_HeyYouYouveCausedUs:
 	.string "{COLOR}{BLUE}Hey, you!\p"
