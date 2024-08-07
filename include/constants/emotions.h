@@ -45,6 +45,7 @@
 #define FS_SCIENTIST 17
 #define FS_ERNIE 18
 #define FS_PIKATRON 19
+#define FS_GILL 20
 
 //Special Face indices for genderized player/rival
 #define FS_PLAYER 0xFE

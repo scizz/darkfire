@@ -4120,6 +4120,11 @@ static const u16 sMugshotPal_Ernie[] = INCBIN_U16("graphics/mugshots/ernie/pal.g
 static const u32 sMugshotImg_PikatronNormal[] = INCBIN_U32("graphics/mugshots/pikatron/normal.4bpp.lz");
 static const u16 sMugshotPal_Pikatron[] = INCBIN_U16("graphics/mugshots/pikatron/pal.gbapal");
 
+// Gill
+static const u32 sMugshotImg_GillNormal[] = INCBIN_U32("graphics/mugshots/gill/normal.4bpp.lz");
+static const u32 sMugshotImg_GillAngry[] = INCBIN_U32("graphics/mugshots/gill/angry.4bpp.lz");
+static const u16 sMugshotPal_Gill[] = INCBIN_U16("graphics/mugshots/gill/pal.gbapal");
+
 static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] = 
 {
     [FS_PROF] = {
@@ -4197,6 +4202,10 @@ static const struct FaceSpritePalPair sFaceSpriteSheets[][FSE_COUNT] =
     },
     [FS_PIKATRON] = {
         [FSE_NORMAL]     = {sMugshotImg_PikatronNormal, sMugshotPal_Pikatron},
+    },
+    [FS_GILL] = {
+        [FSE_NORMAL]     = {sMugshotImg_GillNormal, sMugshotPal_Gill},
+        [FSE_ANGRY]      = {sMugshotImg_GillAngry, sMugshotPal_Gill},
     }
 };
 
