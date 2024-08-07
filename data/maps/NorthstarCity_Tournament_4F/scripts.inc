@@ -377,8 +377,11 @@ NorthstarTournament_4F_ThirdRoundCompleteSailor::
 	hideface 1
 	applymovement LOCALID_SAILOR_ARENA, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Sailor
+	speakername CommonName_Text_Gill
+	speakername CommonName_Text_Gill
+	showface FS_GILL, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_ISteeredThatBattle, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_SAILOR_ARENA, WR2UR9
 	waitmovement 0
 	removeobject LOCALID_SAILOR_ARENA
@@ -393,8 +396,10 @@ NorthstarTournament_4F_ThirdRoundCompleteAceTrainer::
 	hideface 1
 	applymovement LOCALID_ACE_TRAINER_ARENA, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_AceTrainer
-	msgbox NorthstarCity_Tournament_4F_Text_ItWasThePressure, MSGBOX_AUTOCLOSE
+	speakername CommonName_Text_Gill
+	showface FS_GILL, FSE_NORMAL, 1, 1
+	msgbox NorthstarCity_Tournament_4F_Text_ISteeredThatBattle, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_ACE_TRAINER_ARENA, WR2UR9
 	waitmovement 0
 	removeobject LOCALID_ACE_TRAINER_ARENA

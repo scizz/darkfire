@@ -1118,7 +1118,7 @@
       "height": 14,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_EliteFour",
-      "border_filepath": "data/layouts/EverGrandeCity_PhoebesRoom/border.bin",
+      "border_filepath": "data\u0000\u0000\u0000\u0000outs/EverGrandeCity_PhoebesRoom/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_PhoebesRoom/map.bin"
     },
     {

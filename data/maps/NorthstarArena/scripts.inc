@@ -127,8 +127,11 @@ NorthstarArena_SailorBattle::
 	waitse
 	applymovement LOCALID_SAILOR, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Sailor
+	speakername CommonName_Text_Gill
+	speakername CommonName_Text_Gill
+	showface FS_GILL, FSE_ANGRY, 1, 1
 	msgbox NorthstarArena_Text_IfYouDontKnow, MSGBOX_AUTOCLOSE
+	hideface 1
 	trainerbattle_no_intro TRAINER_GILL, SailorMiguel_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 35
@@ -145,9 +148,12 @@ NorthstarArena_AceTrainerBattle::
 	waitse
 	applymovement LOCALID_ACE_TRAINER, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_AceTrainer
-	msgbox NorthstarArena_Text_YoYoureTheOne, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_GILL, AceTrainerFalter_Text_Defeated
+	speakername CommonName_Text_Gill
+	speakername CommonName_Text_Gill
+	showface FS_GILL, FSE_ANGRY, 1, 1
+	msgbox NorthstarArena_Text_IfYouDontKnow, MSGBOX_AUTOCLOSE
+	hideface 1
+	trainerbattle_no_intro TRAINER_GILL, SailorMiguel_Text_Defeated
 	delay 30
 	setvar VAR_STORYLINE_STATE, 35
 	goto NorthstarArena_NextRound
