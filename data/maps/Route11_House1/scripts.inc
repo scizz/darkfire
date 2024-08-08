@@ -41,6 +41,14 @@ Route11_House1_Plaque::
 	msgbox PlaqueErnieLumeriaCity, MSGBOX_SIGN
 	end
 
+Route11_House1_Certificate::
+	msgbox CertificateErnieLumeriaCity, MSGBOX_SIGN
+	end
+
+Route11_House1_ComplicatedBooks::
+	msgbox Text_ComplicatedBooks, MSGBOX_SIGN
+	end	
+
 Route11_House1_ErnieEvent::
 	lock
 	applymovement LOCALID_ERNIE, Common_Movement_FaceDown
@@ -211,6 +219,15 @@ PlaqueErnieLumeriaCity:
 	.string "It's a plaque addressed to Ernie.\p"
 	.string "It's a computer science degree from\n"
 	.string "Lumeria City's university!$"
+
+CertificateErnieLumeriaCity:
+	.string "Certificate for Math Brilliance\p"
+	.string "{FONT_SMALL}Presented to Our Most Remarkable Mathlete,\n"
+	.string "Ernest Ware, Lumeria Junior High School$"
+
+Text_ComplicatedBooks:
+	.string "Complicated books are arranged neatly\n"
+	.string "and in alphabetical order…$"
 
 ErnieOhMyGoodnessAVisitor:
 	.string "{COLOR}{BLUE}Oh, my goodness!\n"
