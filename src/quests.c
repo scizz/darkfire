@@ -576,7 +576,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestName_2,
 	      gText_SideQuestDesc_2,
 	      gText_SideQuestDoneDesc_2,
-	      gText_SideQuestMap4,
+	      gText_SideQuestMap2,
 	      ITEM_SHEENY_SEED,
 	      ITEM,
 	      sSubQuests1,
