@@ -8,7 +8,12 @@ Route7_OnResume:
 	end
 
 Route7_OnLoad:
+	call_if_set FLAG_HIDDEN_ITEM_ROUTE_7_CHARCOAL, Route7_HideCharcoal
 	end
+
+Route7_HideCharcoal::
+	setmetatile 79, 44, 946, 0
+	return
 
 Route7_Sign::
 	msgbox Route7_Text_Sign, MSGBOX_SIGN
@@ -88,6 +93,17 @@ Route7_EventScript_Lawrence::
 Route7_EventScript_Edgar::
 	trainerbattle_single TRAINER_EDGAR, Route7_Text_EdgarIntro, Route7_Text_EdgarDefeated
 	msgbox Route7_Text_EdgarPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Charcoal::
+	giveitem ITEM_CHARCOAL, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	closemessage
+	removeobject 23
+	setflag FLAG_HIDDEN_ITEM_ROUTE_7_CHARCOAL
+	setmetatile 79, 44, 946, 0
+	special DrawWholeMapView
 	end
 
 Route7_Text_Sign:

@@ -192,8 +192,7 @@ NorthstarCity_Old_Man_2_Male::
 	end
 
 NorthstarCity_Old_Man_2_Badge::
-	msgbox NorthstarCity_Text_Old_Man_2_Badge, MSGBOX_AUTOCLOSE
-	releaseall
+	msgbox NorthstarCity_Text_Old_Man_2_Badge, MSGBOX_NPC
 	end
 
 NorthstarCity_Ace_Trainer::
