@@ -1950,8 +1950,8 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 //map
 const u8 gText_SideQuestMap1[] = _("Rockfall Cave");
 const u8 gText_SideQuestMap2[] = _("Snowdrift Forest");
-const u8 gText_SideQuestMap3[] = _("Route 10");
-const u8 gText_SideQuestMap4[] = _("Northstar City");
+const u8 gText_SideQuestMap3[] = _("???");
+const u8 gText_SideQuestMap4[] = _("???");
 const u8 gText_SideQuestMap5[] = _("???");
 const u8 gText_SideQuestMap6[] = _("???");
 const u8 gText_SideQuestMap7[] = _("???");
