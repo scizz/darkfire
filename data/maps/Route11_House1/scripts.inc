@@ -17,7 +17,7 @@ Route11_House1_OnTransition:
 Route11_House1_MoveObjects::
 	setobjectxyperm LOCALID_ERNIE, 8, 8
 	setobjectxyperm LOCALID_PIKATRON, 3, 4
-	setobjectmovementtype LOCALID_PIKATRON, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_ERNIE, MOVEMENT_TYPE_FACE_RIGHT
 	setobjectmovementtype LOCALID_PIKATRON, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
 	end
 
