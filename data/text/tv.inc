@@ -2996,6 +2996,18 @@ ContestLadyShow_Text_LostBadly::
 	.string "Uh… That's all the time we have today!\n"
 	.string "Thanks for tuning in!$"
 
+PokemonEvents:
+	.string "Various Pokémon events are scribbled\n"
+	.string "across the calendar…$"
+
+ShoppingList:
+	.string "It's a shopping list, with various\n"
+	.string "Potions and Poké Balls listed neatly.$"
+
+Refrigerator:
+	.string "The refrigerator whirrs gently,\n"
+	.string "preserving the goodies inside.$"
+
 @@@ DARKFIRE TV @@@
 
 @ General TV messages

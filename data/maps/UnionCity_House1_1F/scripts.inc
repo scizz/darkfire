@@ -18,6 +18,22 @@ UnionCity_House1_1F_OldLadyState::
 	setvar VAR_UNION_CITY_HOUSE_1_1F_OLD_LADY_STATE, 2
 	end
 
+PokemonEvents_Sign::
+	msgbox PokemonEvents, MSGBOX_SIGN
+	end
+
+TV_SwitchedOff::
+	msgbox TheTVIsSwitchedOff, MSGBOX_SIGN
+	end
+
+ShoppingList_Sign::
+	msgbox ShoppingList, MSGBOX_SIGN
+	end
+
+Refrigerator_Sign::
+	msgbox Refrigerator, MSGBOX_SIGN
+	end
+
 UnionCity_House1_1F_OldLady::
 	lock
 	faceplayer
