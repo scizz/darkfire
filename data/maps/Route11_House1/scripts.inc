@@ -236,22 +236,59 @@ ErnieOhMyGoodnessAVisitor:
 
 HowToUseDexNavPlusPlus:
 	.string "DexNav++ User Manual\n"
-	.string "Select a chapter…$"
+	.string "{FONT_SMALL}Table of Contents$"
 
 DexNavManualHowToUse:
-	.string "You can only hunt specific Pokémon if they're encountered in that area$"
+	.string "DexNav++ is a tool created to make\n"
+	.string "finding specific Pokémon easier.\p"
+	.string "The device comes with two modes:\n"
+	.string "Search Mode and Detector Mode.\p"
+	.string "Simply open your DexNav++ to view the\n"
+	.string "available Pokémon in your area.\p"
+	.string "Only Pokémon that you've already seen\n"
+	.string "will be available in Search Mode.$"
 
 DexNavManualSearchMode:
-	.string "To hunt a specific Pokémon, select it from the DexNav++ search menu.$"
+	.string "In Search Mode, simply highlight the\n"
+	.string "Pokémon you want to search, and press\l"
+	.string "the A Button to start a search for it.\p"
+	.sting "If you want to search for the same\n"
+	.string "Pokémon quickly, you can register them\l"
+	.string "as a quick-search by highlighting the\l"
+	.string "Pokémon and pressing the R Button.\p"
+	.string "Once registered, you can close your\n"
+	.string "DexNav++ and press the R Button again\l"
+	.string "to quick-search that Pokémon.\p"
+	.string "Remember, once your DexNav++ finds a\n"
+	.string "Pokémon that is hiding, you must hold\l"
+	.string "the A Button to creep, or it'll flee!$"
 
 DexNavManualDetectorMode:
-	.string "If the Pokémon is hiding nearby, the DexNav++ will detect it$"
+	.string "Detector Mode is currently disabled.\p"
+	.string "The mode can only be unlocked manually\n"
+	.string "by Ernie.\p"
+	.string "It is reserved only for the most elite\n"
+	.string "Trainers.$"
 
 DexNavManualChaining:
-	.string "and show its hiding place.\p"
-	.string "Hold A to walk at a slow speed toward the hiding Pokémon.\p"
-	.string "You must creep towards the Pokémon when you're close, or it will flee!\p"
-	.string "You can register a search for a specific Pokémon by opening the search menu and pressing R on the highlighted Pokémon.$"
+	.string "When your DexNav++ searches a Pokémon,\n"
+	.string "data on that Pokémon will appear in\l"
+	.string "the bottom of the screen.\p"
+	.string "The data may also include information\n"
+	.string "on its held item, ability, or moves.\p"
+	.string "In the bottom right of the screen, you\n"
+	.string "will see a number.\p"
+	.string "This number is your Chain Value.\p"
+	.string "Your Chain Value will increase by 1 if\n"
+	.string "you complete a search on a specific\l"
+	.string "Pokémon multiple times.\p"
+	.string "You can do this by either by capturing\n"
+	.string "or fainting the Pokémon.\p"
+	.string "Registering a Pokémon in Search Mode\n"
+	.string "will make Chaining easier.\p"
+	.string "The higher the chain value, the more\n"
+	.string "valuable the Pokémon you may discover,\l"
+	.string "with increased odds of it being shiny!$"
 
 ErnieItsBeenAgesSinceAnyoneHasCome:
 	.string "{COLOR}{BLUE}It's been ages since anyone has come\n"
