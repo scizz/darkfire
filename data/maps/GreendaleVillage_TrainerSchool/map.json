@@ -116,7 +116,7 @@
     {
       "type": "sign",
       "x": 3,
-      "y": 5,
+      "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -124,7 +124,7 @@
     {
       "type": "sign",
       "x": 4,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -132,7 +132,7 @@
     {
       "type": "sign",
       "x": 5,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -140,7 +140,7 @@
     {
       "type": "sign",
       "x": 6,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -148,7 +148,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
