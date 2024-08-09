@@ -59,4 +59,5 @@ gText_Birch_AreYouReady:: @ 82C8C7A
 	.string "I'll be looking forward to seeing you\n"
 	.string "later, {PLAYER}.\p"
 	.string "Don't forget to visit me in my Pokémon\n"
-	.string "Lab!$"
+	.string "Lab!\p"
+	.string "$"
