@@ -129,10 +129,9 @@ ChandraVillage_Lab_Pikachu_Caught::
 	delay 10
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
@@ -183,10 +182,9 @@ ChandraVillage_Lab_Eevee_Caught::
 	delay 10
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 0
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -218,15 +216,14 @@ ChandraVillage_Lab_Tyler_Pick_Eevee::
 	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Tyler
-	showface FS_TYLER, FSE_NORMAL, 1, 1
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Lab_Tyler_Text_GoPokeBall, MSGBOX_DEFAULT
 	closemessage
 	hideface 1
@@ -256,15 +253,14 @@ ChandraVillage_Lab_Tyler_Pick_Pikachu::
 	applymovement LOCALID_TYLER_LAB, WR6DR3U
 	applymovement OBJ_EVENT_ID_PLAYER, WR7DR3FU
 	waitmovement 0
-	applymovement LOCALID_TYLER_LAB, Common_Movement_ExclamationMark
+	emote LOCALID_TYLER_LAB, 3
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	delay 30
 	applymovement LOCALID_TYLER_LAB, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Tyler
-	showface FS_TYLER, FSE_NORMAL, 1, 1
+	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Lab_Tyler_Text_GoPokeBall, MSGBOX_DEFAULT
 	closemessage
 	hideface 1
@@ -647,9 +643,7 @@ ChandraVillage_Lab_Text_DoYouThink:
 	.string "Here, take one of these Poké Balls…$"
 
 ChandraVillage_Lab_Text_DontHoldInHand:
-	.string "{COLOR}{BLUE}No! Don't put it in your Bag!\n"
-	.string "Take it out and hold it in your hand.\p"
-	.string "We're going to catch these Pokémon\n"
+	.string "{COLOR}{BLUE}We're going to catch these Pokémon\n"
 	.string "and help get rid of this infestation!\p"
 	.string "Be careful, though, {PLAYER}…\n"
 	.string "I only have two Poké Balls left…\l"

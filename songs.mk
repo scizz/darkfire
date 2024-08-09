@@ -1312,7 +1312,7 @@ $(MID_SUBDIR)/mus_route_9_10.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V082
 
 $(MID_SUBDIR)/mus_dreamworld.s: %.s: %.mid
-	$(MID) $< $@ -E -G191 -V087
+	$(MID) $< $@ -E -G191 -V127
     
 $(MID_SUBDIR)/mus_northstar_tournament.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
@@ -1330,7 +1330,7 @@ $(MID_SUBDIR)/mus_laveria_city.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
 
 $(MID_SUBDIR)/mus_sunrise_town.s: %.s: %.mid
-	$(MID) $< $@ -E -G191 -V087
+	$(MID) $< $@ -E -G191 -V127
 
 $(MID_SUBDIR)/mus_union_city.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V067

@@ -272,13 +272,13 @@ ChandraVillage_Storyline_State_4::
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 42
 	goto_if_eq ChandraVillage_Storyline_State_4_Right
-	applymovement OBJ_EVENT_ID_PLAYER, WU2FL
+	applymovement OBJ_EVENT_ID_PLAYER, WU2L2
 	waitmovement 0
 	goto ChandraVillage_Storyline_State_4_Next
 	end
 
 ChandraVillage_Storyline_State_4_Right::
-	applymovement OBJ_EVENT_ID_PLAYER, WLU2FL
+	applymovement OBJ_EVENT_ID_PLAYER, WULUL2
 	waitmovement 0
 	goto ChandraVillage_Storyline_State_4_Next
 	end
@@ -316,8 +316,6 @@ ChandraVillage_Storyline_State_4_Next::
 	showface FS_TYLER, FSE_NORMAL, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_WontBeAlone, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_PROF, WDFR
-	waitmovement 0
 	applymovement LOCALID_TYLER_LAB, Common_Movement_FaceRight
 	waitmovement 0
 	delay 30
@@ -360,8 +358,6 @@ ChandraVillage_Storyline_State_4_Part_2::
 	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_WeWillHelp, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_PROF, WUFR
-	waitmovement 0
 	applymovement LOCALID_PROF, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername2 CommonName_Text_Prof
@@ -383,8 +379,6 @@ ChandraVillage_Storyline_State_4_Part_2::
 	showface FS_TYLER, FSE_ANGRY, 1, 1
 	msgbox ChandraVillage_Storyline_State_4_PlayerLetsShow, MSGBOX_AUTOCLOSE
 	hideface 1
-	applymovement LOCALID_PROF, WDFR
-	waitmovement 0
 	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_Storyline_State_4_FollowTyler, MSGBOX_AUTOCLOSE
@@ -462,6 +456,21 @@ WLU2FL:
 	face_left
 	step_end
 
+WULUL2:
+	walk_up
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
+WU2L2:
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
 ChandraVillage_Text_ExitNorth:
 	.string "{COLOR}{BLUE}Hey, kid!\p"
 	.string "What do you get when you mix a Pikachu\n"
@@ -479,9 +488,11 @@ ChandraVillage_Text_ExitNorth:
 ChandraVillage_Text_ExitNorthPokemon:
 	.string "{COLOR}{BLUE}Hey, kid!\p"
 	.string "Why did the Miltank cross the road?\p"
+	.string "… … …\n"
 	.string "… … …\p"
 	.string "To get to the udder side!\n"
 	.string "HAHA.\p"
+	.string "… … …\n"
 	.string "… … …\p"
 	.string "No, but seriously, you should find\n"
 	.string "Tyler before leaving the village.$"

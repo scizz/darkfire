@@ -188,11 +188,12 @@ Route1_PidgeyMain::
 	emote LOCALID_PIDGEY 7
 	playse SE_PIN
 	waitse
+	delay 30
 	speakername Speaker_Text_Pidgey
 	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_PIDGEY, FlyUp
-	playse SE_PIN
+	playse SE_M_JUMP_KICK
 	waitse
 	waitmovement 0
 	call Common_EventScript_GetPlayerPos
@@ -231,7 +232,7 @@ Route1_PidgeyFly_Right::
 
 Route1_PidgeyBattle::
 	applymovement LOCALID_PIDGEY, FlyDown
-	playse SE_PIN
+	playse SE_FALL
 	waitse
 	waitmovement 0
 	setflag FLAG_PREVENT_BATTLE_FLEE
@@ -727,7 +728,8 @@ Route1_PidgeyFinal_WayToGo:
 	.string "You handled that Pidgey really well!\p"
 	.string "I was a little worried it was going to\n"
 	.string "whip up a Sand Attack!\p"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Anyway, with that Pidgey dealt with,\n"
 	.string "I'm going to explore the town ahead.\p"
 	.string "There's a really nice hotel there and I\n"

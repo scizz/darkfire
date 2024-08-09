@@ -41,10 +41,9 @@ ChandraVillage_TylerHouse_2F_TylerIntro::
 ChandraVillage_TylerHouse_2F_Left:
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 1
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_Player, MSGBOX_DEFAULT
@@ -72,10 +71,9 @@ ChandraVillage_TylerHouse_2F_Left:
 ChandraVillage_TylerHouse_2F_Middle:
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 1
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_Player, MSGBOX_DEFAULT
@@ -103,10 +101,9 @@ ChandraVillage_TylerHouse_2F_Middle:
 ChandraVillage_TylerHouse_2F_Right:
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 1, Common_Movement_ExclamationMark
+	applymovement 1, 1
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	speakername CommonName_Text_Tyler
 	showface FS_TYLER, FSE_HAPPY, 1, 1
 	msgbox ChandraVillage_TylerHouse_2F_Text_Player, MSGBOX_DEFAULT
@@ -231,7 +228,8 @@ ChandraVillage_TylerHouse_2F_Text_HowsItGoing:
 	.string "{COLOR}{BLUE}How's it going, {PLAYER}?\p"
 	.string "Did Professor Hawthorne give you a\n"
 	.string "Pokémon, too?\lThat's awesome!\p"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Oh, yes. I almost forgot!\n"
 	.string "As promised, let's have that battle!\p"
 	.string "But I warn you, {PLAYER},\n"
