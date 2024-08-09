@@ -127,11 +127,23 @@ PinleafTown_Old_Man::
 	end
 
 PinleafTown_SUBO_1::
-	msgbox PinleafTown_Text_SUBO_1, MSGBOX_NPC
+	lock
+	faceplayer
+	speakername CommonName_Text_SuboGrunt
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox PinleafTown_Text_SUBO_1, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 PinleafTown_SUBO_2::
-	msgbox PinleafTown_Text_SUBO_2, MSGBOX_NPC
+	lock
+	faceplayer
+	speakername CommonName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox PinleafTown_Text_SUBO_2, MSGBOX_AUTOCLOSE
+	hideface 1
+	release
 	end
 
 PinleafTown_SUBO_3::

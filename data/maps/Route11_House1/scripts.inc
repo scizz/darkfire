@@ -252,7 +252,7 @@ DexNavManualSearchMode:
 	.string "In Search Mode, simply highlight the\n"
 	.string "Pokémon you want to search, and press\l"
 	.string "the A Button to start a search for it.\p"
-	.sting "If you want to search for the same\n"
+	.string "If you want to search for the same\n"
 	.string "Pokémon quickly, you can register them\l"
 	.string "as a quick-search by highlighting the\l"
 	.string "Pokémon and pressing the R Button.\p"
