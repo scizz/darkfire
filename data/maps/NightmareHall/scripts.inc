@@ -12,6 +12,10 @@ NightmareHall_InitRoomObjects::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
 
+NightmareHall_Sign::
+	msgbox NightmareHall_Text_Sign, MSGBOX_SIGN
+	end
+
 NightmareHall_CutSceneTrigger::
 	applymovement OBJ_EVENT_ID_PLAYER, WU2
 	waitmovement 0
@@ -96,7 +100,7 @@ NightmareHall_CutSceneTrigger::
 	applymovement 6, Common_Movement_WalkRightFaster
 	applymovement 4, Common_Movement_WalkLeftFaster
 	waitmovement 0
-	playse SE_M_BITE
+	playse SE_M_WATERFALL
 	waitse
 	emote 3, 7
 	playse SE_PIN
@@ -147,10 +151,12 @@ NightmareHall_CutSceneTrigger::
 	playmoncry SPECIES_FERALIGATR, 1
 	waitmoncry
 	delay 30
-	setobjectxy 6, 0, 0
-	hideobjectat 6, MAP_NIGHTMARE_HALL
 	playse SE_M_EMBER
+	applymovement 6, Common_Movement_JumpInPlaceRight
+	waitmovement 0
+	setobjectnewmovementtype 6, MOVEMENT_TYPE_INVISIBLE
 	waitse
+	release
 	emote 7, 7
 	playse SE_PIN
 	waitse
@@ -341,13 +347,20 @@ RunDownTwelve:
 	player_run_down
 	step_end
 
+NightmareHall_Text_Sign:
+	.string "…Behold the Darkspace…\p"
+	.string "…The total nothingness that precedes\n"
+	.string "the machinations of the Original One…\p"
+	.string "…That precedes the Universe…$"
+
 NightmareHall_Text_Hey:
 	.string "{COLOR}{RED}Hey!\n"
 	.string "Who's this kid?!$"
 
 NightmareHall_Text_Relax:
 	.string "{COLOR}{BLUE}Relax, grunt.\p"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Kid, come here.$"
 
 NightmareHall_Text_Coward:
@@ -376,7 +389,7 @@ NightmareHall_Text_YesBossTwo:
 
 NightmareHall_Text_Sandslash:
 	.string "{COLOR}{BLUE}Feraligatr!\n"
-	.string "Use Bite!$"
+	.string "Use Waterfall!$"
 
 NightmareHall_Text_Houndour:
 	.string "{COLOR}{BLUE}Houndoom!\n"

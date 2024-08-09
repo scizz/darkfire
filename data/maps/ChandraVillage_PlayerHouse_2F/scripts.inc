@@ -145,7 +145,9 @@ ChandraVillage_PlayerHouse_2F_Text_WakeUp:
 ChandraVillage_PlayerHouse_2F_Text_KnockingOnDoor:
 	.string "{COLOR}{RED}{PLAYER}?\p"
 	.string "I've been knocking on your door all\n"
-	.string "morning!\p…$"
+	.string "morning!\p"
+	.string "… … …\n"
+	.string "… … …$"
 
 ChandraVillage_PlayerHouse_2F_Text_YouLookFlustered:
 	.string "{COLOR}{RED}Oh, {PLAYER}, you look flustered…\n"
