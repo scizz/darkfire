@@ -174,6 +174,43 @@ Route11_House1_Pikatron::
 	release
 	end
 
+Route11_House1_DexNavManual::
+	message HowToUseDexNavPlusPlus
+	waitmessage
+	multichoice 21, 0, MULTI_DEXNAV_MANUAL, FALSE
+	switch VAR_RESULT
+	case 0, Route11_House1_DexNavManualHowToUse
+	case 1, Route11_House1_DexNavManualSearchMode
+	case 2, Route11_House1_DexNavManualDetectorMode
+	case 3, Route11_House1_DexNavManualChaining
+	case 4, Route11_House1_DexNavManualExit
+	case MULTI_B_PRESSED, Route11_House1_DexNavManualExit
+	end
+
+Route11_House1_DexNavManualHowToUse::
+	msgbox DexNavManualHowToUse, MSGBOX_SIGN
+	goto Route11_House1_DexNavManual
+	end
+
+Route11_House1_DexNavManualSearchMode::
+	msgbox DexNavManualSearchMode, MSGBOX_SIGN
+	goto Route11_House1_DexNavManual
+	end
+
+Route11_House1_DexNavManualDetectorMode::
+	msgbox DexNavManualDetectorMode, MSGBOX_SIGN
+	goto Route11_House1_DexNavManual
+	end
+
+Route11_House1_DexNavManualChaining::
+	msgbox DexNavManualChaining, MSGBOX_SIGN
+	goto Route11_House1_DexNavManual
+	end
+
+Route11_House1_DexNavManualExit::
+	closemessage
+	end
+
 WR3U4L5D:
 	walk_right
 	walk_right
@@ -253,7 +290,7 @@ DexNavManualSearchMode:
 	.string "Pokémon you want to search, and press\l"
 	.string "the A Button to start a search for it.\p"
 	.string "If you want to search for the same\n"
-	.string "Pokémon quickly, you can register them\l"
+	.string "Pokémon quickly, you can register it\l"
 	.string "as a quick-search by highlighting the\l"
 	.string "Pokémon and pressing the R Button.\p"
 	.string "Once registered, you can close your\n"
@@ -277,11 +314,11 @@ DexNavManualChaining:
 	.string "The data may also include information\n"
 	.string "on its held item, ability, or moves.\p"
 	.string "In the bottom right of the screen, you\n"
-	.string "will see a number.\p"
+	.string "will also see a number.\p"
 	.string "This number is your Chain Value.\p"
-	.string "Your Chain Value will increase by 1 if\n"
-	.string "you complete a search on a specific\l"
-	.string "Pokémon multiple times.\p"
+	.string "Your Chain Value will increase if you\n"
+	.string "complete a search on a specific\l"
+	.string "Pokémon multiple times in a row.\p"
 	.string "You can do this by either by capturing\n"
 	.string "or fainting the Pokémon.\p"
 	.string "Registering a Pokémon in Search Mode\n"
