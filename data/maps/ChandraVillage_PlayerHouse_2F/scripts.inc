@@ -164,5 +164,5 @@ ChandraVillage_PlayerHouse_2F_Text_TylerLooking:
 	.string "up and go and see him!$"
 
 ChandraVillage_PlayerHouse_2F_Text_ComeDownstairs:
-	.string "{COLOR}{RED}Mom: {PLAYER}!\n"
+	.string "{COLOR}{RED}{PLAYER}!\n"
 	.string "Come downstairs, honey!$"
