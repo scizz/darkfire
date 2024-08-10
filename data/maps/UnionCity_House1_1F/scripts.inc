@@ -157,6 +157,6 @@ UnionCity_House1_1F_AhMyCoffee:
 
 UnionCity_House1_1F_AlthoughPearlsCantBeSold:
 	.string "Although Pearls can't be sold in\n"
-	.string "Marts, collectors pay big for them.\p"
+	.string "Marts, Collectors pay big for them.\p"
 	.string "Be sure to keep any that you find\n"
 	.string "along your travels, my dear.$"

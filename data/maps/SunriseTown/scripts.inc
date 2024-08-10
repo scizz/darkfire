@@ -35,7 +35,7 @@ SunriseTown_Little_Boy_Before::
 	emote 6, 7
 	playse SE_PIN
 	waitse
-	msgbox SunriseTown_Little_Boy_Play, MSGBOX_NPC
+	msgbox SunriseTown_Little_Boy_Play, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement 7, RunRight8
@@ -63,9 +63,9 @@ SunriseTown_Little_Girl_Before::
 	emote 7, 7
 	playse SE_PIN
 	waitse
-	msgbox SunriseTown_Little_Girl_Play, MSGBOX_NPC
+	msgbox SunriseTown_Little_Girl_Play, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_1, 18
+	compare VAR_TEMP_1, 17
 	call_if_eq SunriseTown_Little_Girl_Before_MovePlayerFollowerDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -82,8 +82,8 @@ SunriseTown_Little_Girl_Before::
 	end
 
 SunriseTown_Little_Girl_Before_MovePlayerFollowerDown::
-	applymovement OBJ_EVENT_ID_PLAYER, WDF
-	applymovement OBJ_EVENT_ID_FOLLOWER, WDF
+	applymovement 7, WDF2
+	applymovement 6, WRDF2
 	waitmovement 0
 	return
 
@@ -148,7 +148,9 @@ SunriseTown_Cook_Talked_To::
 	msgbox SunriseTown_Fat_Guy_Run_Away, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, StepAside
 	applymovement OBJ_EVENT_ID_FOLLOWER, StepAsideFollower
+	playse SE_FLEE
 	applymovement 4, RunAway
+	waitse
 	waitmovement 0
 	removeobject 4
 	setflag FLAG_SUNRISE_TOWN_FAT_GUY
@@ -299,14 +301,14 @@ SunriseTown_Fat_Guy_Sleeping:
 SunriseTown_Fat_Guy_Awaken:
 	.string "{COLOR}{BLUE}…\n"
 	.string "Zzz…\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Huh?$"
 
 SunriseTown_Fat_Guy_Run_Away:
 	.string "{COLOR}{BLUE}What's that?\n"
 	.string "The food at the hotel is ready?!\p"
-	.string "Hold on - I'm coming!$"
+	.string "Hold on! I'm coming!$"
 
 SunriseTown_Krabby_Text1:
 	.string "Krab-krab!$"
@@ -317,7 +319,15 @@ SunriseTown_Krabby_Text2:
 SunriseTown_Krabby_Text3:
 	.string "Krib!$"
 
-WDF:
+WDF2:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_right
+	step_end
+
+WRDF2:
+	walk_fast_right
+	walk_fast_down
 	walk_fast_down
 	step_end
 

@@ -255,7 +255,10 @@ GreendaleVillage_Tournament_Battle_CoolTrainer::
 	waitse
 	applymovement LOCALID_HOST, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername CommonName_Text_Announcer
+	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox GreendaleVillage_Text_AndThatsTheEnd, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_NURSE1, Common_Movement_WalkDown
 	applymovement LOCALID_NURSE2, Common_Movement_WalkDown
 	waitmovement 0
@@ -356,7 +359,7 @@ GreendaleVillage_Tournament_Rose::
 	waitmovement 0
 	closedoor 30, 24
 	waitdooranim
-	applymovement OBJ_EVENT_ID_FOLLOWER, WDL2UFFR
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDL3UFFR
 	applymovement LOCALID_ROSE, WDL3
 	waitmovement 0
 	applymovement LOCALID_NURSE1, Common_Movement_FaceDown
@@ -378,7 +381,6 @@ GreendaleVillage_Tournament_Rose::
 	hideface 1
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, LFDWL
-	applymovement OBJ_EVENT_ID_FOLLOWER, LFDWL
 	waitmovement 0
 	goto GreendaleVillage_Tournament_Rose_Battle
 	end
@@ -625,8 +627,9 @@ WU2FD:
 	face_down
 	step_end
 
-WDL2UFFR:
+WDL3UFFR:
 	walk_down
+	walk_left
 	walk_left
 	walk_left
 	walk_up
@@ -642,8 +645,9 @@ WDL3:
 	
 LFDWL:
 	lock_facing_direction
-	walk_slow_left
+	walk_left
 	unlock_facing_direction
+	face_right
 	step_end
 	
 WDRFUD16FD:
@@ -798,8 +802,8 @@ GreendaleVillage_Text_AndWeHaveAWinner:
 	.string "{COLOR}{RED}And we have a winner!\p"
 	.string "Congratulations, er, what's your name\n"
 	.string "again?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "{PLAYER}!\n"
 	.string "Congratulations!\p"
 	.string "As the last Trainer standing, you will\n"
@@ -820,7 +824,8 @@ GreendaleVillage_Text_OkayPlayerAreYouReady:
 	.string "I summon Rose to the stage!$"
 
 GreendaleVillage_Text_Dots:
-	.string "{COLOR}{RED}…$"
+	.string "{COLOR}{RED}… … …\n"
+	.string "… … …$"
 
 GreendaleVillage_Text_OhItsYouAgain:
 	.string "{COLOR}{RED}Oh. It's you again.\n"
@@ -829,8 +834,8 @@ GreendaleVillage_Text_OhItsYouAgain:
 	.string "have my Pokémon with me, you know.\p"
 	.string "Whatever.\n"
 	.string "Let's get this over with.\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Move back?$"
 
 GreendaleVillage_Text_OkayYouBeatMe:
@@ -839,8 +844,8 @@ GreendaleVillage_Text_OkayYouBeatMe:
 	.string "{PLAYER}, right?\p"
 	.string "I'm Rose.\n"
 	.string "Nice to meet you.\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Well, I'll see you around.$"
 
 GreendaleVillage_Text_AndWeHaveANewChampion:

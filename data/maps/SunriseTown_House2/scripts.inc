@@ -17,7 +17,7 @@ SunriseTown_House2_Nerd::
 SunriseTown_House2_Text_Woman:
 	.string "{COLOR}{RED}The only possible way to tame a Pokémon\n"
 	.string "is to catch it using a Poké Ball.\p"
-	.string "A wild Pidgey attacked my son yesterday\n"
+	.string "A wild Pidgey attacked my son earlier\n"
 	.string "in Route 1 and he had to run because he\l"
 	.string "didn't have any Poké Balls to catch it.\p"
 	.string "I wonder if it's still lurking there…$"

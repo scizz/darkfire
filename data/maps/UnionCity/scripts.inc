@@ -334,6 +334,7 @@ UnionCity_EventScript_Rattata::
 	setrespawn HEAL_LOCATION_UNION_CITY
 	setflag FLAG_PREVENT_BATTLE_FLEE
 	playmoncry SPECIES_RATTATA, 0
+	speakername SpeakerName_Text_Rattata
 	msgbox ChandraVillage_Lab_Text_Rattata, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_RATTATA, 7, ITEM_NONE

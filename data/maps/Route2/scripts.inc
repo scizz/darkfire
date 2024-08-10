@@ -74,8 +74,8 @@ Route2_Text_North_Sign:
 	.string "{UP_ARROW} Union City$"
 
 Route2_Text_Boy:
-	.string "{COLOR}{BLUE}Did you know that 386 Pokémon can be\n"
-	.string "found and caught in the Tenjo region?$"
+	.string "{COLOR}{BLUE}Did you know that over 400 Pokémon\n"
+	.string "can be found in the Tenjo region?$"
 
 Route2_Text_Boy_Beginner:
 	.string "{COLOR}{BLUE}Tenjo is an exotic region that holds\n"

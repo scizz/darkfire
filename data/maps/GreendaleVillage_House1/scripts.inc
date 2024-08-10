@@ -5,7 +5,7 @@ GreendaleVillage_House1_Woman::
 	lockall
 	faceplayer
 	goto_if_set FLAG_ROUTE_3_QUEST_COMPLETED, GreendaleVillage_House1_Woman_Quest_Completed
-	msgbox GreendaleVillage_House1_Text_Woman_1, MSGBOX_DEFAULT
+	msgbox GreendaleVillage_House1_Text_Woman_1, MSGBOX_AUTOCLOSE
 	goto_if_set FLAG_ROUTE_3_QUEST_STARTED, GreendaleVillage_House1_Woman_Quest_Started
 	releaseall
 	end
@@ -17,26 +17,26 @@ GreendaleVillage_House1_Woman_Quest_Started::
 	checkitem ITEM_LETTER, 1
 	compare VAR_RESULT, 1
 	goto_if_ge GreendaleVillage_House1_Woman_Quest_Got_Letter
-	msgbox GreendaleVillage_House1_Text_Woman_3, MSGBOX_DEFAULT
+	msgbox GreendaleVillage_House1_Text_Woman_3, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
 GreendaleVillage_House1_Woman_Quest_Got_Letter::
-	msgbox GreendaleVillage_House1_Text_Woman_4, MSGBOX_DEFAULT
+	msgbox GreendaleVillage_House1_Text_Woman_4, MSGBOX_AUTOCLOSE
 	delay 30
-	msgbox Action_Letter_Handover, MSGBOX_DEFAULT
+	msgbox Action_Letter_Handover, MSGBOX_AUTOCLOSE
 	removeitem ITEM_LETTER, 1
 	delay 30
 	emote 1, 6
 	playse SE_PIN
 	waitse
-	msgbox GreendaleVillage_House1_Text_Woman_5, MSGBOX_DEFAULT
+	msgbox GreendaleVillage_House1_Text_Woman_5, MSGBOX_AUTOCLOSE
 	setflag FLAG_ROUTE_3_QUEST_COMPLETED
 	releaseall
 	end
 
 GreendaleVillage_House1_Woman_Quest_Completed::
-	msgbox GreendaleVillage_House1_Text_Woman_2, MSGBOX_DEFAULT
+	msgbox GreendaleVillage_House1_Text_Woman_2, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 

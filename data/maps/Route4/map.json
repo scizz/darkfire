@@ -165,8 +165,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
-      "x": 44,
-      "y": 21,
+      "x": 29,
+      "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -203,7 +203,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAREEP",
+      "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
       "x": 46,
       "y": 40,
       "elevation": 3,
@@ -438,8 +438,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGIKARP",
-      "x": 45,
-      "y": 14,
+      "x": 43,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -523,19 +523,6 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_111_ORAN_1",
-      "script": "BerryTreeScript",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 39,
-      "y": 68,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_111_ORAN_2",
       "script": "BerryTreeScript",
       "flag": "0"
@@ -555,7 +542,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 38,
+      "x": 39,
       "y": 68,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",

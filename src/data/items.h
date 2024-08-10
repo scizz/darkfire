@@ -7862,7 +7862,7 @@ const struct Item gItems[] =
     {
         .name = _("TM05"),
         .itemId = ITEM_TM05_ROAR,
-        .price = 0,
+        .price = 3000,
         .description = sTM05Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
@@ -7910,7 +7910,7 @@ const struct Item gItems[] =
     {
         .name = _("TM09"),
         .itemId = ITEM_TM09_BULLET_SEED,
-        .price = 0,
+        .price = 3000,
         .description = sTM09Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
@@ -8006,7 +8006,7 @@ const struct Item gItems[] =
     {
         .name = _("TM17"),
         .itemId = ITEM_TM17_PROTECT,
-        .price = 0,
+        .price = 3000,
         .description = sTM17Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
