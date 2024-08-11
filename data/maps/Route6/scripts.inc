@@ -147,33 +147,33 @@ Route6_Ranger_Yes::
 	showface FS_MALE_RANGER, FSE_NORMAL, 0, 0
 	msgbox Route6_Text_AreYouReadyFasten, MSGBOX_AUTOCLOSE
 	hideface 0
-	playse SE_PIN
+	playse SE_CLICK
 	waitse
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, LFDD
-	playse SE_PIN
+	playse SE_BALL_TRAY_ENTER
 	waitse
 	waitmovement 0
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	playse SE_PIN
+	playse SE_BALL_TRAY_ENTER
 	waitse
 	waitmovement 0
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	playse SE_PIN
+	playse SE_BALL_TRAY_ENTER
 	waitse
 	waitmovement 0
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	playse SE_PIN
+	playse SE_BALL_TRAY_ENTER
 	waitse
 	waitmovement 0
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	playse SE_PIN
+	playse SE_BALL_TRAY_ENTER
 	waitse
 	waitmovement 0
 	setflag FLAG_ROUTE_6_STEEP_RAVINE_CLEARED
