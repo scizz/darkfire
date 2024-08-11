@@ -63,7 +63,10 @@ AnheimForest_SUBO::
 	delay 30
 	applymovement LOCALID_SUBO, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_SuboGrunt
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox AnheimForest_Text_WhereDidThatBeedrill, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 30
 	applymovement LOCALID_SUBO, Common_Movement_FaceLeft
 	waitmovement 0

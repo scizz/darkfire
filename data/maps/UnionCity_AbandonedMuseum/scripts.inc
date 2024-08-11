@@ -57,21 +57,22 @@ UnionCity_SUBO_Event_Push::
 	applymovement LOCALID_SUBO_PUSH, WFD3R3D2
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, PushBack
-	playse SE_PIN
-	waitse
+	playse SE_NOT_EFFECTIVE
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_FOLLOWER, FFRX
+	emote 64, 7
+	waitse
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_FOLLOWER, WFRFU
 	waitmovement 0
 	applymovement LOCALID_SUBO_PUSH, Common_Movement_FaceDown
 	waitmovement 0
 	speakername SpeakerName_Text_SuboGrunt
-	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	showface FS_FEMALE_SUBO, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_WellWellWell, MSGBOX_AUTOCLOSE
 	hideface 1
+	delay 30
 	goto UnionCity_SUBO_Event_Main
 	end
 
@@ -99,8 +100,7 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_Grrat, MSGBOX_AUTOCLOSE
 	waitmoncry
 	applymovement LOCALID_RATTATA, JumpRightLeft
-	playse SE_EFFECTIVE
-	waitse
+	playse SE_NOT_EFFECTIVE
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, JumpInPlace
 	playse SE_LEDGE
@@ -141,8 +141,7 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_Grratata, MSGBOX_AUTOCLOSE
 	waitmoncry
 	applymovement LOCALID_RATTATA, JumpRightLeft
-	playse SE_EFFECTIVE
-	waitse
+	playse SE_NOT_EFFECTIVE
 	waitmovement 0
 	applymovement LOCALID_PRESIDENT, JumpInPlace
 	playse SE_LEDGE
@@ -208,7 +207,7 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_UhHmh, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 10
-	applymovement LOCALID_PRESIDENT, Common_Movement_WalkInPlaceSlowDown
+	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 SpeakerName_Text_QuestionMark
 	showface FS_ZAGAN, FSE_NORMAL, 0, 0
@@ -308,7 +307,7 @@ UnionCity_SUBO_Event_Main::
 	msgbox UnionCity_AbandonedMuseum_Text_WhatWasThat, MSGBOX_AUTOCLOSE
 	hideface 1
 	setvar VAR_STORYLINE_STATE, 14
-	warpsilent MAP_UNION_CITY_GOV_OFFICE_3F, 2, 2
+	warp MAP_UNION_CITY_GOV_OFFICE_3F, 2, 2
 	end
 
 UnionCity_AbandonedMuseum_Old_Man::
@@ -496,6 +495,7 @@ WFD3R3D2:
 
 PushBack:
 	jump_special_down
+	face_up
 	step_end
 
 FFRX:
@@ -527,10 +527,11 @@ WD3:
 	step_end
 
 JumpRightLeft:
-	jump_special_right
 	lock_facing_direction
-	jump_special_left
+	jump_right
+	jump_left
 	unlock_facing_direction
+	face_right
 	step_end
 
 JumpInPlace:
@@ -594,7 +595,7 @@ UnionCity_AbandonedMuseum_Text_RattataUseTackle:
 	.string "Use Tackle, now!$"
 
 UnionCity_AbandonedMuseum_Text_Grrat:
-	.string "{COLOR}{RED}Rattata: Grrat!$"
+	.string "{COLOR}{RED}Grrat!$"
 
 UnionCity_AbandonedMuseum_Text_Waahhh:
 	.string "Waahhh!\n"
@@ -602,7 +603,7 @@ UnionCity_AbandonedMuseum_Text_Waahhh:
 
 UnionCity_AbandonedMuseum_Text_IllTellYouWhat:
 	.string "{COLOR}{BLUE}I'll tell you what, Mr. President…\p"
-	.string "I'll make it stop when you give us\n"
+	.string "We'll make it stop when you give us\n"
 	.string "your classified research notes!$"
 
 UnionCity_AbandonedMuseum_Text_IReallyCant:
@@ -616,7 +617,7 @@ UnionCity_AbandonedMuseum_Text_TchRattata:
 	.string "Rattata, use Super Fang!$"
 
 UnionCity_AbandonedMuseum_Text_Grratata:
-	.string "{COLOR}{RED}Rattata: Grratata!!$"
+	.string "{COLOR}{RED}Grratata!!$"
 
 UnionCity_AbandonedMuseum_Text_WaahhhOkay:
 	.string "WAAHHH!\n"
@@ -638,7 +639,8 @@ UnionCity_AbandonedMuseum_Text_UhHmh:
 	.string "looking for…$"
 
 UnionCity_AbandonedMuseum_Text_HmmNorthOfAnheim:
-	.string "{COLOR}{BLUE}Hmm… North of Anheim Forest…\p"
+	.string "{COLOR}{BLUE}Hmm…\n"
+	.string "North of Anheim Forest…\p"
 	.string "In that case we will clear the bridge\n"
 	.string "of Spinarak that are blocking the way.$"
 
@@ -663,8 +665,8 @@ UnionCity_AbandonedMuseum_Text_InFactIveBeenWatching:
 	.string "could find us in here.$"
 
 UnionCity_AbandonedMuseum_Text_DotDotDot:
-	.string "{COLOR}{BLUE}…\n"
-	.string "…$"
+	.string "{COLOR}{BLUE}… … …\n"
+	.string "… … …$"
 
 UnionCity_AbandonedMuseum_Text_AnywayHereWeAre:
 	.string "{COLOR}{BLUE}Anyway, here we are.\n"

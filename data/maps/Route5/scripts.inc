@@ -161,6 +161,8 @@ Route5_SUBO_Left::
 	msgbox Route5_Text_HeyGeorgeWait, MSGBOX_AUTOCLOSE
 	hideface 0
 	delay 30
+	applymovement LOCALID_SUBO_1, Common_Movement_WalkRight
+	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername2 SpeakerName_Text_Paul
@@ -240,6 +242,10 @@ Route5_SUBO_Right::
 	waitse
 	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
+	speakername SpeakerName_Text_George
+	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1
+	msgbox Route5_Text_ThisOneIsStrongGeorge, MSGBOX_AUTOCLOSE
+	hideface 1
 	delay 10
 	applymovement LOCALID_SUBO_1, WFR
 	waitmovement 0
@@ -249,11 +255,6 @@ Route5_SUBO_Right::
 	waitmovement 0
 	applymovement LOCALID_SUBO_1, Common_Movement_WalkRight
 	waitmovement 0
-	speakername SpeakerName_Text_George
-	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1 
-	hideface 1
-	msgbox Route5_Text_ThisOneIsStrongGeorge, MSGBOX_AUTOCLOSE
-	hideface 1
 	delay 10
 	speakername2 SpeakerName_Text_Paul
 	showface FS_MALE_SUBO, FSE_NORMAL, 0, 0 
@@ -266,7 +267,10 @@ Route5_SUBO_Right::
 	msgbox Route5_Text_IllShowYouPaul, MSGBOX_AUTOCLOSE
 	hideface 0
 	trainerbattle_no_intro TRAINER_SUBO_THUG_PAUL, SuboThugPaul_Text_Defeated
-	applymovement LOCALID_SUBO_1, Common_Movement_WalkInPlaceSlowDown
+	emote LOCALID_SUBO_2, 7
+	playse SE_PIN
+	waitse
+	applymovement LOCALID_SUBO_2, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername SpeakerName_Text_George
 	showface FS_MALE_SUBO, FSE_NORMAL, 1, 1 
@@ -483,12 +487,12 @@ FRJSRFL:
 	step_end
 
 WFULU4:
-	walk_faster_up
-	walk_faster_left
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 SpeakerName_Text_George:
@@ -558,7 +562,7 @@ Route5_Text_YoureATrainer:
 	.string "tablets in this route?$"
 
 Route5_Text_DotDotDot:
-	.string "…$"
+	.string "…{PAUSE 60} …{PAUSE 60} …{PAUSE 60}$"
 
 Route5_Text_WhatsTheMatter:
 	.string "What's the matter, kid?\n"
