@@ -365,7 +365,7 @@ Route6_Text_AndrewDefeated:
 	.string "You startled me!$"
 
 Route6_Text_AndrewPostBattle:
-	.string "I heard that there is a rare Water-type\n"
+	.string "{COLOR}{BLUE}I heard that there is a rare Water-type\n"
 	.string "Pokémon in this river.\p"
 	.string "My friend thinks that it only appears at\n"
 	.string "certain times of the day.\p"
