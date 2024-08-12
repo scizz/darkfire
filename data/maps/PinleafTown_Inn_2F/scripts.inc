@@ -46,8 +46,8 @@ PinleafTown_Inn_2F_Text_Old_Man_TM_Rest:
 	.string "the bridge to the western farm!$"
 
 PinleafTown_Inn_2F_Text_Old_Man_Got_Lemonade:
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "What's that? You have some Lemonade?!\n"
 	.string "Would you give one to an Old Man?$"
 
