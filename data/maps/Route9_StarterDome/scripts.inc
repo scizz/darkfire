@@ -1648,7 +1648,7 @@ Route9_StarterDome_Text_Aide_Bed:
 
 Route9_StarterDome_Text_Aide_Bed_Given:
 	.string "{COLOR}{BLUE}If you need to heal your Pokémon,\n"
-	.string "just use these beds over here.\p"
+	.string "just use the beds over there.\p"
 	.string "You can also access our special PC if\n"
 	.string "you need to change your party.\p"
 	.string "It's the big machine by the entrance\n"
@@ -1813,8 +1813,8 @@ Route9_StarterDome_Text_DidYouPlayer:
 
 Route9_StarterDome_Text_AndWhoWouldYouBe:
 	.string "And who would you be?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Hold on a minute…\n"
 	.string "You must be Daz, from Lumeria City.\p"
 	.string "Aren't your parents running that\n"
