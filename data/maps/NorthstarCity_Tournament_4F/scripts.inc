@@ -487,7 +487,7 @@ NorthstarCity_Tournament_ShowAceTrainer::
 NorthstarCity_Tournament_4F_BattleWarp::
 	applymovement LOCALID_CAMERA_BOTTOM, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
-	playse SE_PIN
+	playse SE_ROTATING_GATE
 	waitse
 	delay 30
 	setfollowerwarppos DIR_EAST
