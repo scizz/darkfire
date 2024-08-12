@@ -7,10 +7,9 @@ LaveriaCity_Route7_State::
 	lock
 	applymovement LOCALID_HIKER, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement LOCALID_HIKER, Common_Movement_ExclamationMark
+	emote LOCALID_HIKER, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	applymovement LOCALID_HIKER, Common_Movement_WalkInPlaceSlowLeft
