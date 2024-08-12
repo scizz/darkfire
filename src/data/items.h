@@ -8006,7 +8006,7 @@ const struct Item gItems[] =
     {
         .name = _("TM17"),
         .itemId = ITEM_TM17_PROTECT,
-        .price = 3000,
+        .price = 0,
         .description = sTM17Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
