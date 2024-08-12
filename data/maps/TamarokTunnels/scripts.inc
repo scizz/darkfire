@@ -125,7 +125,7 @@ TamarokTunnels_SUBO::
 	waitmovement 0
 	applymovement LOCALID_SUBO_F, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
-	playse SE_PIN
+	playse SE_CLICK
 	waitse
 	waitmovement 0
 	applymovement LOCALID_SUBO_M, Common_Movement_FaceRight
@@ -456,8 +456,8 @@ TamarokTunnels_Text_WellItLooksLike:
 	.string "your obsession with us?\p"
 	.string "And, by the way, we knew you were\n"
 	.string "following us! You're no threat!\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Whatever, dude.\p"
 	.string "If you ain't here to join us then I'll\n"
 	.string "take pleasure in sending you home!$"
@@ -468,7 +468,7 @@ TamarokTunnels_Text_HahahaIGuessYou:
 
 TamarokTunnels_Text_HahaSoNaive:
 	.string "{COLOR}{BLUE}Haha…\n"
-	.string "So naïve…\p"
+	.string "So naive…\p"
 	.string "I only battled you to distract you\n"
 	.string "so my pal could set the explosives!$"
 

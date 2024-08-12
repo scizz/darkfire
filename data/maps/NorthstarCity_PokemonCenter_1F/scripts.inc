@@ -28,10 +28,9 @@ NorthstarCity_PokemonCenter_1F_Boy_Dig_TM::
 	closemessage
 	delay 10
 	faceplayer
-	applymovement 1, Common_Movement_ExclamationMark
+	emote 1, 7
 	playse SE_PIN
 	waitse
-	waitmovement 0
 	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_2, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Yes

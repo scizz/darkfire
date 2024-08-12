@@ -408,12 +408,11 @@ LaveriaCity_Kojiro_Battle::
 	special HealPlayerParty
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
-	speakername CommonName_Text_Kojiro
+	speakername SpeakerName_Text_QuestionMark
 	showface FS_KOJIRO, FSE_SAD, 1, 1
 	msgbox LaveriaCity_Text_IfYouAreHere, MSGBOX_AUTOCLOSE
 	hideface 1
 	delay 30
-	playbgm MUS_CHANDRA_VILLAGE, TRUE
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowLeft
 	waitmovement 0
 	speakername CommonName_Text_Kojiro
@@ -442,6 +441,8 @@ LaveriaCity_Kojiro_Battle_2::
 	trainerbattle_no_intro TRAINER_KOJIRO_2, Kojiro2_Text_Defeated
 	playfanfare MUS_OBTAIN_SYMBOL
 	special DoDomeConfetti
+	savebgm MUS_DUMMY
+	fadedefaultbgm
 	msgbox LaveriaCity_Text_PlayerDefeatedKojiro, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
@@ -463,8 +464,6 @@ LaveriaCity_Kojiro_Battle_2::
 	setvar VAR_ROUTE_7_STATE, 1
 	setvar VAR_STORYLINE_STATE, 23
 	fadescreen 0
-	savebgm MUS_DUMMY
-	fadedefaultbgm
 	release
 	end
 
@@ -758,17 +757,18 @@ LaveriaCity_Text_NoIHaveNoTime:
 	.string "Come back when you are stronger.$"
 
 LaveriaCity_Text_IfYouAreHere:
-	.string "If you are here for Laveria City's\n"
+	.string "{COLOR}{BLUE}If you are here for Laveria City's\n"
 	.string "Tournament, you're late, Trainer.\p"
-	.string "I became the Champion… Again.$"
+	.string "I, Kojiro, became the Champion…\n"
+	.string "Again.$"
 
 LaveriaCity_Text_WhatsThat:
-	.string "What's that?\p"
+	.string "{COLOR}{BLUE}What's that?\p"
 	.string "You really dare challenge me?\n"
 	.string "On my home turf?$"
 
 LaveriaCity_Text_DotDotNo:
-	.string "… … …\n"
+	.string "{COLOR}{BLUE}… … …\n"
 	.string "… … …\p"
 	.string "No, you aren't like the others…\n"
 	.string "Power emanates through you.\p"
@@ -785,8 +785,8 @@ LaveriaCity_Text_HmhNotToWorry:
 	.string "Not to worry… We press on.$"
 
 LaveriaCity_Text_DotDotYou:
-	.string "…\n"
-	.string "…\p"
+	.string "{COLOR}{BLUE}… … …\n"
+	.string "… … …\p"
 	.string "You are more than meets the eye.\n"
 	.string "A real Trainer, indeed.\p"
 	.string "But how will you do in a Single Battle?\n"
@@ -800,15 +800,15 @@ LaveriaCity_Text_PlayerDefeatedKojiro:
 	.string "{PLAYER} defeated Kojiro!$"
 
 LaveriaCity_Text_YouDidGood:
-	.string "You did good, Trainer.\p"
+	.string "{COLOR}{BLUE}You did good, Trainer.\p"
 	.string "I must ask, what is your name?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "{PLAYER}.\p"
 	.string "Well, {PLAYER}.\n"
 	.string "Please take this for your victory.$"
 
 LaveriaCity_Text_YouWillNeedThis:
-	.string "You will need this if you are to\n"
+	.string "{COLOR}{BLUE}You will need this if you are to\n"
 	.string "take on Mt. Tamarok, ahead.\p"
 	.string "Good luck, {PLAYER}…$"

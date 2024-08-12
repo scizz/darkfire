@@ -9659,15 +9659,15 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GreendaleChampionRose[] 
 
 static const struct TrainerMonItemCustomMoves sParty_Kojiro1[] = {
     {
-    .iv = 100,
+    .iv = 50,
     .lvl = 17,
     .species = SPECIES_GLACEON,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SUBSTITUTE, MOVE_WATER_PULSE, MOVE_ICY_WIND, MOVE_AURORA_VEIL}
     },
     {
-    .iv = 100,
-    .lvl = 18,
+    .iv = 50,
+    .lvl = 17,
     .species = SPECIES_FROSLASS,
     .heldItem = ITEM_ICY_ROCK,
     .moves = {MOVE_HAIL, MOVE_ICY_WIND, MOVE_DRAINING_KISS, MOVE_OMINOUS_WIND}
@@ -9676,12 +9676,12 @@ static const struct TrainerMonItemCustomMoves sParty_Kojiro1[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Kojiro2[] = {
     {
-    .iv = 100,
+    .iv = 50,
     .lvl = 18,
     .species = SPECIES_SKARMORY,
     },
     {
-    .iv = 100,
+    .iv = 50,
     .lvl = 20,
     .species = SPECIES_STARMIE,
     },

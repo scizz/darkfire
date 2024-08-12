@@ -45,7 +45,6 @@ HighwindVillage_Mart_Hiker::
 
 HighwindVillage_Mart_Vigoroth::
 	lock
-	faceplayer
 	playmoncry SPECIES_VIGOROTH, 0
 	speakername CommonName_Text_Vigoroth
 	msgbox HighwindVillage_Mart_Text_Vigoroth, MSGBOX_AUTOCLOSE
