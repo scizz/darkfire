@@ -421,14 +421,12 @@ NorthstarCity_Storyline_SUBO_BattleSetUp::
 	applymovement LOCALID_GOV, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceLeft
 	waitmovement 0
 	speakername2 CommonName_Text_GovOfficial
 	showface FS_OFFICIAL, FSE_NORMAL, 0, 0
 	msgbox Northstar_City_Text_TrainerPlease, MSGBOX_AUTOCLOSE
 	hideface 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceRight
 	waitmovement 0
 	emote LOCALID_SUBO_2, 3
 	playse SE_PIN
@@ -578,6 +576,8 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	applymovement LOCALID_SUBO_1, WL9
 	applymovement LOCALID_SUBO_2, WL9
 	waitmovement 0
+	savebgm MUS_DUMMY
+	fadedefaultbgm
 	emote LOCALID_GOV, 2
 	playse SE_PIN
 	waitse
@@ -597,8 +597,6 @@ NorthstarCity_Storyline_SUBO_ClearSUBO::
 	removeobject LOCALID_SUBO_2
 	setflag FLAG_HIDE_NORTHSTAR_CITY_SUBO_GOV
 	setvar VAR_STORYLINE_STATE, 26
-	savebgm MUS_DUMMY
-	fadedefaultbgm
 	release
 	end
 
@@ -1039,8 +1037,8 @@ Northstar_City_Text_ThereAreMore:
 Northstar_City_Text_ThankYou:
 	.string "Thank you for saving me, Trainer!\n"
 	.string "What is your name?\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "{PLAYER}?\n"
 	.string "The Laveria City Champion?!\p"
 	.string "Holy smokes… Talk about being in\n"
