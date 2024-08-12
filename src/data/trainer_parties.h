@@ -43,12 +43,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugReiss[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_SuboThugLei[] = {
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 22,
     .species = SPECIES_KOFFING,
     },
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 22,
     .species = SPECIES_HOUNDOUR,
     }
 };

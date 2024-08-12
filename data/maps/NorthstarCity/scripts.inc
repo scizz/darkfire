@@ -60,7 +60,7 @@ NorthstarCity_AfterTournamentCorrect::
 	waitse
 	msgbox NorthstarCity_Text_OhTrainer, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 68
+	compare VAR_TEMP_0, 64
 	goto_if_eq NorthstarCity_AfterTournament_Left
 	goto NorthstarCity_AfterTournament_Right
 	end

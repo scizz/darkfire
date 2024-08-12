@@ -89,7 +89,6 @@ NorthstarCity_Tournament_4F_DrawThirdCrowd::
 	createvobject OBJ_EVENT_GFX_BEAUTY, 34, 11, 3, 3, DIR_SOUTH
 	createvobject OBJ_EVENT_GFX_EXPERT_F, 35, 4, 3, 3, DIR_SOUTH
 	createvobject OBJ_EVENT_GFX_WOMAN_5, 36, 9, 2, 3, DIR_SOUTH
-	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 37, 4, 2, 3, DIR_SOUTH
 	createvobject OBJ_EVENT_GFX_LITTLE_BOY, 38, 6, 2, 3, DIR_SOUTH
 	createvobject OBJ_EVENT_GFX_YOUNGSTER, 39, 7, 2, 3, DIR_SOUTH
 	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 40, 8, 2, 3, DIR_SOUTH
@@ -756,7 +755,6 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	msgbox NorthstarCity_Tournament_4F_Text_UntilWeMeetAgain, MSGBOX_AUTOCLOSE
 	hideface 0
 	fadescreen 1
-	call NorthstarCity_Tournament_4F_CameraPanRight
 	removeobject LOCALID_RECEPTIONIST
 	removeobject LOCALID_SUBO_CROWD
 	removeobject LOCALID_SUBO_DOOR
@@ -773,7 +771,9 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	removeobject 3
 	setflag FLAG_NORTHSTAR_TOURNAMENT_ENTRANCE
 	setflag FLAG_NORTHSTAR_TOURNAMENT_REST
-	delay 60
+	delay 30
+	call NorthstarCity_Tournament_4F_CameraPanRight
+	delay 30
 	fadescreen 0
 	applymovement LOCALID_ROSE, WD4
 	waitmovement 0
@@ -934,9 +934,11 @@ WL9DL2FR:
 
 WLD3R2:
 	walk_left
+	walk_left
 	walk_down
 	walk_down
 	walk_down
+	walk_right
 	walk_right
 	walk_right
 	step_end

@@ -142,8 +142,8 @@ WU2S:
 NorthstarCity_Lighthouse_Text_TrainerAreYouOkay:
 	.string "Trainer? Are you okay?\n"
 	.string "Did you manage to track them?\p"
-	.string "…\n"
-	.string "…$"
+	.string "… … …\n"
+	.string "… … …$"
 
 NorthstarCity_Lighthouse_Text_OhThisIs:
 	.string "Oh, this is just terrible news!\n"
