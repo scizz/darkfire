@@ -873,8 +873,8 @@ NorthstarCity_Text_Fat_Man:
 NorthstarCity_Text_SUBO_2:
 	.string "{COLOR}{BLUE}Beep Beep…\p"
 	.string "Favorable spot, taken. Over.\p"
-	.string "…\n"
-	.string "…\p"
+	.string "… … …\n"
+	.string "… … …\p"
 	.string "Roger. I can see the target building\n"
 	.string "from here.\p"
 	.string "Standing by--$"
@@ -1089,7 +1089,7 @@ NorthstarCity_Text_GuitaristViktorIntro:
 	.string "{COLOR}{BLUE}I told my pops a million times,\n"
 	.string "working the docks ain't for me.\p"
 	.string "I'd rather earn credit by beating up\n"
-	.string "punks like you.\l"
+	.string "punks like you.\p"
 	.string "That's always enough to get by! Hah!$"
 
 NorthstarCity_Text_GuitaristViktorDefeated:

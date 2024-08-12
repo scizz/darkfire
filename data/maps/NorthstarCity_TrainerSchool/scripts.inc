@@ -44,7 +44,7 @@ NorthstarCity_TrainerSchool_Text_Psychic:
 	.string "the Ground-type Earthquake.$"
 
 NorthstarCity_TrainerSchool_Text_Little_Girl:
-	.string "{COLOR}{RED}This ball is ugly -- you can have it!$"
+	.string "{COLOR}{RED}This ball is ugly - you can have it!$"
 
 NorthstarCity_TrainerSchool_Text_Little_Girl_Given:
 	.string "{COLOR}{RED}Red is my favorite color, so Poké\n"
