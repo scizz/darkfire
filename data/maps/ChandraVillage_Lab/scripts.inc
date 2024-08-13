@@ -13,6 +13,7 @@ ChandraVillage_Lab_MapScripts::
 	.byte 0
 
 ChandraVillage_Lab_OnTransition:
+	setvar VAR_0x8004, 0
 	goto_if_set FLAG_SYS_POKEDEX_GET, ChandraVillage_Lab_ShowProf
 	setflag FLAG_PREVENT_BATTLE_FLEE
 	end
