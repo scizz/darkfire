@@ -1466,6 +1466,7 @@ static void Task_HeatStartMenu_SafariZone_HandleMainInput(u8 taskId) {
   } else if (JOY_NEW(B_BUTTON) && sHeatStartMenu->loadState == 0) {
     PlaySE(SE_SELECT);
     HeatStartMenu_ExitAndClearTilemap();  
+    LoadPalette(GetOverworldTextboxPalettePtr(), 0xF0, 0x20);
     DestroyTask(taskId);
   } else if (gMain.newKeys & DPAD_DOWN && sHeatStartMenu->loadState == 0) {
     HeatStartMenu_SafariZone_HandleInput_DPADDOWN();
