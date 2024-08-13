@@ -937,9 +937,10 @@
 #define ITEM_RUNNING_SHOES_MALE   761
 #define ITEM_RUNNING_SHOES_FEMALE 762
 #define ITEM_POKEDEX              763
+#define ITEM_NEEDLE               764
 
 
-#define ITEMS_COUNT 764
+#define ITEMS_COUNT 765
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

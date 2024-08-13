@@ -1944,3 +1944,6 @@ const u32 gItemIconPalette_RunningShoes[] = INCBIN_U32("graphics/items/icon_pale
 
 const u32 gItemIcon_Pokedex[] = INCBIN_U32("graphics/items/icons/pokedex.4bpp.lz");
 const u32 gItemIconPalette_Pokedex[] = INCBIN_U32("graphics/items/icon_palettes/pokedex.gbapal.lz");
+
+const u32 gItemIcon_Needle[] = INCBIN_U32("graphics/items/icons/needle.4bpp.lz");
+const u32 gItemIconPalette_Needle[] = INCBIN_U32("graphics/items/icon_palettes/needle.gbapal.lz");

@@ -1,5 +1,17 @@
 Route11_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route11_OnFrame
 	.byte 0
+
+Route11_OnFrame:
+	map_script_2 VAR_ERNIE_STATE, 2, Route11_EndOfBeta
+	.2byte 0
+
+Route11_EndOfBeta::
+	lock
+	msgbox Route11_Text_Sign_Demo, MSGBOX_AUTOCLOSE
+	setvar VAR_ERNIE_STATE, 3
+	release
+	end
 
 Route11_Sign::
 	msgbox Route11_Text_Sign, MSGBOX_SIGN
@@ -108,7 +120,15 @@ Route11_Text_Gloom:
 	.string "Gloooom!$"
 
 Route11_Text_Sign_Demo:
-	.string "End of demo.$"
+	.string "You have reached the end of Pokémon\n"
+	.string "Darkfire Beta 0.2.1…\p"
+	.string "Thank you, {PLAYER}, for\n"
+	.string "playing our game!\p"
+	.string "Rest assured, Beta 0.3.0 is already in\n"
+	.string "development, so stay tuned for more!\p"
+	.string "You can follow our progress on Discord:\n"
+	.string "discord.gg/3JSSNbw (case sensitive)\l"
+	.string "See you there! - Karl & Ray$"
 
 WhatWasThat:
 	.string "???\n"

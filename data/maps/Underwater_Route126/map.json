@@ -63,14 +63,6 @@
     },
     {
       "type": "hidden_item",
-      "x": 65,
-      "y": 60,
-      "elevation": 3,
-      "item": "ITEM_BIG_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_BIG_PEARL"
-    },
-    {
-      "type": "hidden_item",
       "x": 9,
       "y": 77,
       "elevation": 3,

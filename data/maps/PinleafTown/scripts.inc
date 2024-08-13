@@ -119,6 +119,7 @@ PinleafTown_Guitarist::
 	end
 
 PinleafTown_Man_2::
+	showface FS_GILL, FSE_NORMAL, 1, 1
 	msgbox PinleafTown_Text_Man_2, MSGBOX_NPC
 	end
 
@@ -399,9 +400,7 @@ PinleafTown_Text_SUBO_2:
 	.string "wanna turn ‘round and leave!$"
 
 PinleafTown_Text_SUBO_3:
-	.string "{COLOR}{BLUE}What is going on here?\p"
-	.string "How am I supposed to sneak around with\n"
-	.string "these weird things blocking the way?!$"
+	.string "{COLOR}{BLUE}is the game completed$"
 
 PinleafTown_Text_Maniac:
 	.string "Say…\n"

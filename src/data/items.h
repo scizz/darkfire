@@ -9971,4 +9971,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
     },
+
+    [ITEM_NEEDLE] =
+    {
+        .name = _("Needle"),
+        .itemId = ITEM_NEEDLE,
+        .price = 10000,
+        .description = sNeedleDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    }
 };

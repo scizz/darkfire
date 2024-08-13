@@ -809,6 +809,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_RUNNING_SHOES_MALE] = {gItemIcon_RunningShoesMale, gItemIconPalette_RunningShoes},
     [ITEM_RUNNING_SHOES_FEMALE] = {gItemIcon_RunningShoesFemale, gItemIconPalette_RunningShoes},
     [ITEM_POKEDEX] = {gItemIcon_Pokedex, gItemIconPalette_Pokedex},
+    [ITEM_NEEDLE] = {gItemIcon_Needle, gItemIconPalette_Needle},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
