@@ -25,6 +25,13 @@ PinleafTown_Inn_2F_Old_Man_Got_Lemonade::
 	end
 
 PinleafTown_Inn_2F_Old_Man_Got_Lemonade_Give::
+	chooseitem ITEMS_POCKET
+	goto_if_eq VAR_ITEM_ID, ITEM_LEMONADE, PinleafTown_Inn_2F_Old_Man_Got_Lemonade_Given
+	msgbox PinleafTown_Inn_2F_Old_Man_HuhThisIsNotLemonade, MSGBOX_AUTOCLOSE
+	release
+	end
+
+PinleafTown_Inn_2F_Old_Man_Got_Lemonade_Given::
 	msgbox PinleafTown_Inn_2F_Text_Old_Man_Got_Lemonade_Give, MSGBOX_DEFAULT
 	removeitem ITEM_LEMONADE, 1
 	delay 30
@@ -42,7 +49,7 @@ PinleafTown_Inn_2F_Old_Man_TM_Rest_Given::
 PinleafTown_Inn_2F_Text_Old_Man_TM_Rest:
 	.string "Argh!\n"
 	.string "I need Lemonade!\p"
-	.string "Those bloody rascals have blocked\n"
+	.string "Those darn rascals have blocked\n"
 	.string "the bridge to the western farm!$"
 
 PinleafTown_Inn_2F_Text_Old_Man_Got_Lemonade:
@@ -54,6 +61,11 @@ PinleafTown_Inn_2F_Text_Old_Man_Got_Lemonade:
 PinleafTown_Inn_2F_Text_Old_Man_Got_Lemonade_Denied:
 	.string "I need some of that sweet nectar!\n"
 	.string "You don't know the half of it!$"
+
+PinleafTown_Inn_2F_Old_Man_HuhThisIsNotLemonade:
+	.string "Hwha?\p"
+	.string "This is not Lemonade!\n"
+	.string "Quit playin' games!$"
 
 PinleafTown_Inn_2F_Text_Old_Man_Got_Lemonade_Give:
 	.string "You handed the Old Man some\n"

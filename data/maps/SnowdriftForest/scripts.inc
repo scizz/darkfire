@@ -93,7 +93,7 @@ SnowdriftForest_IceNest_OpenBag::
 
 SnowdriftForest_IceNest_PlantedSheenySeed::
 	msgbox SnowdriftForest_Text_PlayerPlantedTheSheenySeed, MSGBOX_DEFAULT
-	playse SE_PIN
+	playse SE_FU_ZAKU
 	waitse
 	closemessage
 	delay 30
@@ -127,9 +127,12 @@ SnowdriftForest_IceNest_PlantedSheenySeed::
 
 SnowdriftForest_IceNest_PlantedGleamingSeed::
 	msgbox SnowdriftForest_Text_PlayerPlantedTheGleamingSeed, MSGBOX_DEFAULT
-	playse SE_PIN
+	playse SE_FU_ZAKU
 	waitse
 	closemessage
+	delay 30
+	playse SE_M_MORNING_SUN
+	waitse
 	delay 30
 	goto_if_set FLAG_SNOWDRIFT_FOREST_SHINY_NOCTOWL, SnowdriftForest_IceNest_SpawnNoctowl
 	clearflag FLAG_SNOWDRIFT_FOREST_OWL
