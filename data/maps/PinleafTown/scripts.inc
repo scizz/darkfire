@@ -1,4 +1,4 @@
-.set LOCALID_TYLER, 2
+.set LOCALID_TYLER, 1
 
 PinleafTown_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PinleafTown_OnFrame
@@ -30,8 +30,8 @@ PinleafTown_ShowTyler::
 	return
 
 PinleafTown_HideSubo::
+	removeobject 19
 	removeobject 20
-	removeobject 21
 	setflag FLAG_HIDE_PINLEAF_TOWN_SUBO
 	end
 
@@ -216,7 +216,7 @@ PinleafTown_SudowoodoWater1::
 	waitmoncry
 	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
-	removeobject 22
+	removeobject 21
 	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
@@ -249,8 +249,8 @@ PinleafTown_SudowoodoWater2::
 	waitmoncry
 	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
-	removeobject 23
-	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1
+	removeobject 22
+	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_2
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
@@ -282,8 +282,8 @@ PinleafTown_SudowoodoWater3::
 	waitmoncry
 	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
-	removeobject 19
-	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_1
+	removeobject 18
+	setflag FLAG_HIDE_PINLEAF_TOWN_SUDOWOODO_3
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
