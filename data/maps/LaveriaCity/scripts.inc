@@ -147,7 +147,7 @@ LaveriaCity_NorthstarPlayerLeft::
 	end
 
 LaveriaCity_WarpToNorthstar::
-	warp MAP_NORTHSTAR_CITY, 96, 36
+	warp MAP_NORTHSTAR_CITY, 92, 36
 	waitstate
 	end
 
