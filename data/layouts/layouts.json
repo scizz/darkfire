@@ -5776,8 +5776,8 @@
       "name": "HorizonIsland_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_AguavIsland",
       "border_filepath": "data/layouts/HorizonIsland/border.bin",
       "blockdata_filepath": "data/layouts/HorizonIsland/map.bin"
     }
