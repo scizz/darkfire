@@ -119,7 +119,6 @@ PinleafTown_Guitarist::
 	end
 
 PinleafTown_Man_2::
-	showface FS_GILL, FSE_NORMAL, 1, 1
 	msgbox PinleafTown_Text_Man_2, MSGBOX_NPC
 	end
 
