@@ -31,7 +31,7 @@ GreendaleVillage_House1_Woman_Quest_Got_Letter::
 	playse SE_PIN
 	waitse
 	msgbox GreendaleVillage_House1_Text_Woman_5, MSGBOX_AUTOCLOSE
-	setflag FLAG_ROUTE_3_QUEST_COMPLETED
+	setflag FLAG_ROUTE_3_QUEST_DELIVERED
 	releaseall
 	end
 
