@@ -1011,7 +1011,7 @@ Northstar_City_Text_ThisIsSuch:
 
 Northstar_City_Text_NoWorries:
 	.string "No worries!\n"
-	.string "He won't beat me!$"
+	.string "I won't be beaten!$"
 
 Northstar_City_Text_SayGoodbye:
 	.string "Say goodbye to your Pokémon, kid!$"
