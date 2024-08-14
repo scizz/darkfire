@@ -1957,3 +1957,22 @@ const u16 gTilesetPalettes_Rindo[][16] =
 };
 
 const u32 gTilesetTiles_Rindo[] = INCBIN_U32("data/tilesets/secondary/rindo/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_PinapIslands[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pinap_islands/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_PinapIslands[] = INCBIN_U32("data/tilesets/primary/pinap_islands/tiles.4bpp.lz");
