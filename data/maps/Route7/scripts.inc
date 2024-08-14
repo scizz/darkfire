@@ -130,7 +130,7 @@ Route7_Text_Man:
 	.string "I know I am.$"
 
 Route7_Text_Hiker_Question:
-	.string "Oy lad, you must'a been climbing for a\n"
+	.string "Oy, you must'a been climbing for a\n"
 	.string "while.\p"
 	.string "Why don't you rest here by the fire\n"
 	.string "for a wee bit and listen to a story?$"
