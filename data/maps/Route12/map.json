@@ -7,15 +7,12 @@
   "requires_flash": false,
   "weather": "WEATHER_RAIN",
   "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_THYMESGROVE_CITY",
-      "offset": 9,
-      "direction": "right"
-    }
-  ],
+  "connections": 0,
   "object_events": [
 
   ],
@@ -27,8 +24,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
