@@ -261,3 +261,6 @@ const u16 gMetatileAttributes_Rindo[] = INCBIN_U16("data/tilesets/secondary/rind
 
 const u16 gMetatiles_PinapIslands[] = INCBIN_U16("data/tilesets/primary/pinap_islands/metatiles.bin");
 const u16 gMetatileAttributes_PinapIslands[] = INCBIN_U16("data/tilesets/primary/pinap_islands/metatile_attributes.bin");
+
+const u16 gMetatiles_PerlshawHills[] = INCBIN_U16("data/tilesets/secondary/perlshaw_hills/metatiles.bin");
+const u16 gMetatileAttributes_PerlshawHills[] = INCBIN_U16("data/tilesets/secondary/perlshaw_hills/metatile_attributes.bin");

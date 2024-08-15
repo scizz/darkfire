@@ -1976,3 +1976,22 @@ const u16 gTilesetPalettes_PinapIslands[][16] =
 };
 
 const u32 gTilesetTiles_PinapIslands[] = INCBIN_U32("data/tilesets/primary/pinap_islands/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_PerlshawHills[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/perlshaw_hills/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_PerlshawHills[] = INCBIN_U32("data/tilesets/secondary/perlshaw_hills/tiles.4bpp.lz");

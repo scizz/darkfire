@@ -5780,6 +5780,16 @@
       "secondary_tileset": "gTileset_AguavIsland",
       "border_filepath": "data/layouts/HorizonIsland/border.bin",
       "blockdata_filepath": "data/layouts/HorizonIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE22",
+      "name": "Route22_Layout",
+      "width": 127,
+      "height": 56,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PerlshawHills",
+      "border_filepath": "data/layouts/Route22/border.bin",
+      "blockdata_filepath": "data/layouts/Route22/map.bin"
     }
   ]
 }

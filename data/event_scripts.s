@@ -1387,3 +1387,5 @@ Script_RemoveTint::
 	.include "data/maps/Port_Harbour/scripts.inc"
 
 	.include "data/maps/HorizonIsland/scripts.inc"
+
+	.include "data/maps/Route22/scripts.inc"
