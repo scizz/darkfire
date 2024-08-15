@@ -1,4 +1,5 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
@@ -99,7 +100,8 @@
     "Route16",
     "Route17",
     "Route25",
-    "Route31"
+    "Route31",
+    "Route22"
   ],
   "gMapGroup_DarkfireDungeons": [
     "AnheimForest",

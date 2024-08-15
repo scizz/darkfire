@@ -1023,3 +1023,14 @@ const struct Tileset gTileset_PinapIslands =
     .metatileAttributes = gMetatileAttributes_PinapIslands,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PerlshawHills =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PerlshawHills,
+    .palettes = gTilesetPalettes_PerlshawHills,
+    .metatiles = gMetatiles_PerlshawHills,
+    .metatileAttributes = gMetatileAttributes_PerlshawHills,
+    .callback = NULL,
+};
