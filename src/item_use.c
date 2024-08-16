@@ -1044,6 +1044,7 @@ void ItemUseOutOfBattle_EscapeRope(u8 taskId)
 {
     if (CanUseDigOrEscapeRopeOnCurMap() == TRUE)
     {
+        LockPlayerFieldControls();
         sItemUseOnFieldCB = ItemUseOnFieldCB_EscapeRope;
         SetUpItemUseOnFieldCallback(taskId);
     }
