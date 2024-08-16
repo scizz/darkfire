@@ -22,6 +22,8 @@ AnheimTown_Mart_Pokemart:
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
 	.2byte ITEM_NONE
 	release
 	end
@@ -46,9 +48,10 @@ AnheimTown_Mart_Text_Old_Lady:
 AnheimTown_Mart_Text_Girl:
 	.string "{COLOR}{RED}When I shop, the world gets better,\n"
 	.string "and the world is better, but then it's\l"
-	.string "not, and I need to do it again, hehe.$"
+	.string "not, and I need to do it again!$"
 
 AnheimTown_Mart_Text_Boy:
-	.string "{COLOR}{BLUE}For battle, X Special is crucial.\p"
+	.string "{COLOR}{BLUE}In battle, X Sp. Atk or X Sp. Def is\n"
+	.string "crucial.\p"
 	.string "It jacks up the power of some moves\n"
 	.string "even though it's only for one battle.$"
