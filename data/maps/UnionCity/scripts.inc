@@ -534,7 +534,7 @@ UnionCity_Text_Guitarist:
 	.string "Take care, is all I'm saying…$"
 
 UnionCity_Text_Woman_1:
-	.string "{COLOR}{RED}There are no gyms in Tenjo.\p"
+	.string "{COLOR}{RED}There are no Gyms in Tenjo.\p"
 	.string "Instead, there are Pokémon Tournaments\n"
 	.string "where Trainers must defeat a number of\l"
 	.string "other challengers in quick succession.$"
