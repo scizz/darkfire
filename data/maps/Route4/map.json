@@ -126,8 +126,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 58,
-      "y": 16,
+      "x": 28,
+      "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -139,8 +139,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAREEP_OW",
-      "x": 50,
-      "y": 30,
+      "x": 47,
+      "y": 70,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -399,8 +399,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HOPPIP",
-      "x": 50,
-      "y": 15,
+      "x": 22,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -451,8 +451,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPEAROW",
-      "x": 43,
-      "y": 17,
+      "x": 88,
+      "y": 51,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
