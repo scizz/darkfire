@@ -1560,3 +1560,5 @@ const u32 gObjectEventPic_RegigigasStone[] = INCBIN_U32("graphics/object_events/
 const u16 gObjectEventPal_RegigigasStone[] = INCBIN_U16("graphics/object_events/palettes/regigigas_stone.gbapal");
 const u32 gObjectEventPic_Gill[] = INCBIN_U32("graphics/object_events/pics/people/gill.4bpp");
 const u16 gObjectEventPal_Gill[] = INCBIN_U16("graphics/object_events/palettes/gill.gbapal");
+const u32 gObjectEventPic_GrottoTree[] = INCBIN_U32("graphics/object_events/pics/misc/grotto_tree.4bpp");
+const u16 gObjectEventPal_GrottoTree[] = INCBIN_U16("graphics/object_events/palettes/grotto_tree.gbapal");

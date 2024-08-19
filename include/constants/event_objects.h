@@ -871,8 +871,9 @@
 #define OBJ_EVENT_GFX_PIKATRON                   864
 #define OBJ_EVENT_GFX_REGIGIGAS_STONE            865
 #define OBJ_EVENT_GFX_GILL                       866
+#define OBJ_EVENT_GFX_GROTTO_TREE                867
 
-#define NUM_OBJ_EVENT_GFX                        867
+#define NUM_OBJ_EVENT_GFX                        868
 
 
 // These are dynamic object gfx ids.
