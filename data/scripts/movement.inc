@@ -16,6 +16,18 @@ Common_Movement_Delay48: @ 827259A
 	delay_16
 	step_end
 
+Common_Movement_Delay144: @ 827259A
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	step_end
+
 Common_Movement_FacePlayer: @ 827259E
 	face_player
 	step_end

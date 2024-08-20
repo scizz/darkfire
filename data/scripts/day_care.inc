@@ -75,6 +75,7 @@ Route117_EventScript_CheckOnTwoMons::
 Route117_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	specialvar VAR_RESULT, GetDaycareState
