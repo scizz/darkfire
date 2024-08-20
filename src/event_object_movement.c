@@ -11517,7 +11517,7 @@ u8 MovementAction_FollowingPokemon_Shrink_Step1(struct ObjectEvent *objectEvent,
     {
         FreeSpriteOamMatrix(sprite);
         gObjectEvents[gPlayerAvatar.objectEventId].fixedPriority = FALSE;
-        UnlockPlayerFieldControls();
+        //UnlockPlayerFieldControls();
         objectEvent->invisible = TRUE;
         sprite->data[2]++;
     }
