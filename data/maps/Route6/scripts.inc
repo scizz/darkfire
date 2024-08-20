@@ -134,6 +134,8 @@ Route6_Ranger_Yes::
 	msgbox Route6_Text_AllRIghtNow, MSGBOX_AUTOCLOSE
 	hideface 0
 	applymovement LOCALID_RANGER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30

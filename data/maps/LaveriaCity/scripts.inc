@@ -127,6 +127,7 @@ LaveriaCity_SailToNorthstarCity::
 	end
 
 LaveriaCity_NorthstarPlayerTop::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30
@@ -138,6 +139,7 @@ LaveriaCity_NorthstarPlayerTop::
 	end
 
 LaveriaCity_NorthstarPlayerLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30
@@ -165,6 +167,7 @@ LaveriaCity_SailToLaveriaIsland::
 	end
 
 LaveriaCity_IslandPlayerTop::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30
@@ -176,6 +179,7 @@ LaveriaCity_IslandPlayerTop::
 	end
 
 LaveriaCity_IslandPlayerLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30
@@ -256,6 +260,7 @@ LaveriaCity_SailorTwo_CheckPlayerPos::
 	end
 
 LaveriaCity_SailorTwo_IslandPlayerRight::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30
@@ -273,6 +278,7 @@ LaveriaCity_SailorTwo_IslandPlayerRight::
 	end
 
 LaveriaCity_SailorTwo_IslandPlayerBottom::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
 	waitmovement 0
 	delay 30
