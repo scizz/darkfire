@@ -205,10 +205,7 @@ AnheimForest_LucyEventEnd::
 AnheimForest_Beedrill::
 	lockall
 	faceplayer
-	setobjectmovementtype 26, MOVEMENT_TYPE_FACE_LEFT
-	setobjectxyperm 26, 30, 59
-	removeobject 26
-	addobject 26
+	setobjectnewmovementtype 26, MOVEMENT_TYPE_FACE_LEFT
 	playmoncry SPECIES_BEEDRILL, 0
 	speakername CommonName_Text_Beedrill
 	msgbox AnheimForest_Text_Beedrill, MSGBOX_AUTOCLOSE
