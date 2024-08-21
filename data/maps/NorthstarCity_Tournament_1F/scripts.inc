@@ -40,7 +40,6 @@ NorthstarCity_Tournament_1F_Sign::
 
 NorthstarCity_Tournament_1F_SUBOEnd::
 	lock
-	special HealPlayerParty
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F

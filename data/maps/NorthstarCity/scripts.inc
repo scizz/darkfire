@@ -225,11 +225,16 @@ NorthstarCity_Sailor_1::
 	end
 
 NorthstarCity_Sailor_2::
-	lockall
+	lock
 	faceplayer
-	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Text_Sailor_2_Badge
-	msgbox NorthstarCity_Text_Sailor_2, MSGBOX_DEFAULT
-	releaseall
+	goto_if_set FLAG_BADGE03_GET, NorthstarCity_Sailor_2_Badge
+	msgbox NorthstarCity_Text_Sailor_2, MSGBOX_AUTOCLOSE
+	release
+	end
+
+NorthstarCity_Sailor_2_Badge::
+	msgbox NorthstarCity_Text_Sailor_2_Badge, MSGBOX_AUTOCLOSE
+	release
 	end
 
 NorthstarCity_Sailor_3::
