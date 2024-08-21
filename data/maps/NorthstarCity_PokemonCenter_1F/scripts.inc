@@ -22,10 +22,9 @@ NorthstarCity_PokemonCenter_1F_Maniac::
 	end
 
 NorthstarCity_PokemonCenter_1F_Boy_Dig_TM::
-	lockall
+	lock
 	goto_if_set FLAG_RECEIVED_DIG_TM, NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Given
-	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_1, MSGBOX_DEFAULT
-	closemessage
+	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_1, MSGBOX_AUTOCLOSE
 	delay 10
 	faceplayer
 	emote 1, 7
@@ -34,23 +33,24 @@ NorthstarCity_PokemonCenter_1F_Boy_Dig_TM::
 	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_2, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Yes
-	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_3, MSGBOX_DEFAULT
+	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_3, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_FaceUp
 	waitmovement 0
-	releaseall
+	release
 	end
 
 NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Yes::
 	goto_if_set FLAG_RECEIVED_DIG_TM, NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Given
-	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_4, MSGBOX_DEFAULT
+	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_4, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM28, 1
 	setflag FLAG_RECEIVED_DIG_TM
 	closemessage
 	goto NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Given
 
 NorthstarCity_PokemonCenter_1F_Boy_Dig_TM_Given::
-	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_Given, MSGBOX_DEFAULT
-	releaseall
+	faceplayer
+	msgbox Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_Given, MSGBOX_AUTOCLOSE
+	release
 	end
 
 Northstar_PokemonCenter_1F_Text_Boy_Dig_TM_1:
