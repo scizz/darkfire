@@ -411,7 +411,6 @@ LaveriaCity_Kojiro::
 	end
 
 LaveriaCity_Kojiro_Battle::
-	special HealPlayerParty
 	applymovement LOCALID_KOJIRO, Common_Movement_WalkInPlaceSlowRight
 	waitmovement 0
 	speakername SpeakerName_Text_QuestionMark
