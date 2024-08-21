@@ -286,7 +286,7 @@ NorthstarCity_PsychicTony::
 	trainerbattle_no_intro TRAINER_PSYCHIC_TONY, PsychicTony_Text_Defeated
 	msgbox NorthstarCity_Text_PsychicTony2, MSGBOX_AUTOCLOSE
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_0, 35
+	compare VAR_TEMP_0, 31
 	goto_if_eq NorthstarCity_PsychicTonyPlayerLeft
 	goto NorthstarCity_PsychicTonyPlayerBelow
 	end
