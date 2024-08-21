@@ -507,9 +507,9 @@ NorthstarCity_Tournament_4F_TournamentWin::
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_PlayerWins, MSGBOX_DEFAULT
-	hideface 1
 	waitfanfare
 	closemessage
+	hideface 1
 	speakername CommonName_Text_Announcer
 	showface FS_ANNOUNCER, FSE_NORMAL, 1, 1
 	msgbox NorthstarCity_Tournament_4F_Text_AndNowThatsOut, MSGBOX_AUTOCLOSE
