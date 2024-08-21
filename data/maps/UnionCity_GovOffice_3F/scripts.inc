@@ -21,6 +21,8 @@ UnionCity_GovOffice_3F_PresidentDesk::
 	end
 
 UnionCity_GovOffice_3F_PostSUBOMuseum::
+	lock
+	faceplayer
 	goto_if_set FLAG_TEMP_1, UnionCity_GovOffice_3F_Generic
 	setflag FLAG_TEMP_1
 	speakername2 CommonName_Text_President
