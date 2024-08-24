@@ -5046,7 +5046,7 @@
       "name": "NorthstarCity_Lighthouse_Layout",
       "width": 38,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/NorthstarCity_Lighthouse/border.bin",
       "blockdata_filepath": "data/layouts/NorthstarCity_Lighthouse/map.bin"
@@ -5774,10 +5774,10 @@
     {
       "id": "LAYOUT_HORIZON_ISLAND",
       "name": "HorizonIsland_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 120,
+      "height": 46,
       "primary_tileset": "gTileset_PinapIslands",
-      "secondary_tileset": "gTileset_AguavIsland",
+      "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/HorizonIsland/border.bin",
       "blockdata_filepath": "data/layouts/HorizonIsland/map.bin"
     },
