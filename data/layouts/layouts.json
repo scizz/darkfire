@@ -5790,6 +5790,86 @@
       "secondary_tileset": "gTileset_PerlshawHills",
       "border_filepath": "data/layouts/Route22/border.bin",
       "blockdata_filepath": "data/layouts/Route22/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND_SOUTH_COAST",
+      "name": "HorizonIslandSouthCoast_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/HorizonIslandSouthCoast/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIslandSouthCoast/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND_JUNGLE",
+      "name": "HorizonIslandJungle_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/HorizonIslandJungle/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIslandJungle/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND_COAST",
+      "name": "HorizonIslandCoast_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/HorizonIslandCoast/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIslandCoast/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND_NORTH_COAST",
+      "name": "HorizonIslandNorthCoast_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/HorizonIslandNorthCoast/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIslandNorthCoast/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND_JUNGLE_PEAK",
+      "name": "HorizonIslandJunglePeak_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/HorizonIslandJunglePeak/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIslandJunglePeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_PROBO_PEAK",
+      "name": "MtProboPeak_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/MtProboPeak/border.bin",
+      "blockdata_filepath": "data/layouts/MtProboPeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_PROBO_CAVE_1F",
+      "name": "MtProboCave_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/MtProboCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtProboCave_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_PROBO",
+      "name": "MtProbo_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/MtProbo/border.bin",
+      "blockdata_filepath": "data/layouts/MtProbo/map.bin"
     }
   ]
 }

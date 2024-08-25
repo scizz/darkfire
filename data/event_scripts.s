@@ -1389,3 +1389,19 @@ Script_RemoveTint::
 	.include "data/maps/HorizonIsland/scripts.inc"
 
 	.include "data/maps/Route22/scripts.inc"
+
+	.include "data/maps/HorizonIslandSouthCoast/scripts.inc"
+
+	.include "data/maps/HorizonIslandJungle/scripts.inc"
+
+	.include "data/maps/HorizonIslandCoast/scripts.inc"
+
+	.include "data/maps/HorizonIslandNorthCoast/scripts.inc"
+
+	.include "data/maps/HorizonIslandJunglePeak/scripts.inc"
+
+	.include "data/maps/MtProboPeak/scripts.inc"
+
+	.include "data/maps/MtProboCave_1F/scripts.inc"
+
+	.include "data/maps/MtProbo/scripts.inc"
