@@ -67,12 +67,12 @@
 #define MAP_SSCORAL_DECK           (14 | (1 << 8))
 
 // gMapGroup_DarkfireIslands
-#define MAP_HORIZON_ISLAND             (0 | (2 << 8))
-#define MAP_HORIZON_ISLAND_NORTH_COAST (1 | (2 << 8))
-#define MAP_HORIZON_ISLAND_SOUTH_COAST (2 | (2 << 8))
-#define MAP_HORIZON_ISLAND_JUNGLE      (3 | (2 << 8))
-#define MAP_HORIZON_ISLAND_JUNGLE_PEAK (4 | (2 << 8))
-#define MAP_HORIZON_ISLAND_COAST       (5 | (2 << 8))
+#define MAP_HORIZON_ISLAND                  (0 | (2 << 8))
+#define MAP_HORIZON_ISLAND_NORTH_COAST      (1 | (2 << 8))
+#define MAP_HORIZON_ISLAND_SOUTH_COAST      (2 | (2 << 8))
+#define MAP_HORIZON_ISLAND_JUNGLE           (3 | (2 << 8))
+#define MAP_HORIZON_ISLAND_JUNGLE_PEAK      (4 | (2 << 8))
+#define MAP_HORIZON_ISLAND_SOUTH_COAST_PEAK (5 | (2 << 8))
 
 // gMapGroup_DarkfireIslandDungeons
 #define MAP_MT_PROBO_PEAK    (0 | (3 << 8))
