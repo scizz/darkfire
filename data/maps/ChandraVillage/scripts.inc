@@ -594,7 +594,7 @@ ChandraVillage_Structure:
 
 ChandraVillage_Dusclops:
 	.string "It seems that its design was inspired\n"
-	.string "the Ghost-type Pokémon, Dusclops.\p"
+	.string "by the Ghost-type Pokémon, Dusclops.\p"
 	.string "Some people even say they have\n"
 	.string "heard strange noises inside.$"
 
