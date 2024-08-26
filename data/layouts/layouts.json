@@ -5794,8 +5794,8 @@
     {
       "id": "LAYOUT_HORIZON_ISLAND_SOUTH_COAST",
       "name": "HorizonIslandSouthCoast_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 120,
+      "height": 46,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/HorizonIslandSouthCoast/border.bin",
