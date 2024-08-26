@@ -125,7 +125,7 @@
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_COPY_PLAYER_CLOCKWISE",
       "movement_range_x": 13,
-      "movement_range_y": 3,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ChandraVillage_Lab_Rattata1",
