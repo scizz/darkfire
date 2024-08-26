@@ -19,6 +19,7 @@ bool8 SetUpFieldMove_Strength(void)
 {
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_PUSHABLE_BOULDER) == TRUE)
     {
+        LockPlayerFieldControls();
         gSpecialVar_Result = GetCursorSelectionMonId();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Strength;

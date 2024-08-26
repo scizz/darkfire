@@ -144,6 +144,8 @@ bool8 SetUpFieldMove_Cut(void)
     bool8 cutTiles[CUT_NORMAL_AREA];
     bool8 ret;
 
+    LockPlayerFieldControls();
+
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
     {
         // Standing in front of cuttable tree.

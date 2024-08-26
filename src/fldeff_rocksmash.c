@@ -125,6 +125,7 @@ bool8 SetUpFieldMove_RockSmash(void)
     // it is opened by using Rock Smash.
     if (ShouldDoBrailleRegirockEffect())
     {
+        LockPlayerFieldControls();
         gSpecialVar_Result = GetCursorSelectionMonId();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = SetUpPuzzleEffectRegirock;
@@ -132,6 +133,7 @@ bool8 SetUpFieldMove_RockSmash(void)
     }
     else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
     {
+        LockPlayerFieldControls();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_RockSmash;
         return TRUE;

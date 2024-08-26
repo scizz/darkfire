@@ -6,6 +6,7 @@
 #include "item_use.h"
 #include "overworld.h"
 #include "party_menu.h"
+#include "script.h"
 #include "sprite.h"
 #include "constants/field_effects.h"
 
@@ -18,6 +19,7 @@ bool8 SetUpFieldMove_Dig(void)
 {
     if (CanUseDigOrEscapeRopeOnCurMap() == TRUE)
     {
+        LockPlayerFieldControls();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Dig;
         return TRUE;

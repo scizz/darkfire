@@ -3849,6 +3849,7 @@ static bool8 SetUpFieldMove_Surf(void)
 {
     if (PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
     {
+        LockPlayerFieldControls();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Surf;
         return TRUE;

@@ -24,6 +24,7 @@ static void FailSweetScentEncounter(u8 taskId);
 
 bool8 SetUpFieldMove_SweetScent(void)
 {
+    LockPlayerFieldControls();
     gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
     gPostMenuFieldCallback = FieldCallback_SweetScent;
     return TRUE;

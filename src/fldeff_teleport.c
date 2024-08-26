@@ -3,6 +3,7 @@
 #include "field_player_avatar.h"
 #include "fldeff.h"
 #include "party_menu.h"
+#include "script.h"
 #include "overworld.h"
 #include "task.h"
 #include "constants/field_effects.h"
@@ -14,6 +15,7 @@ bool8 SetUpFieldMove_Teleport(void)
 {
     if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
     {
+        LockPlayerFieldControls();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Teleport;
         return TRUE;
