@@ -124,9 +124,9 @@
     "HorizonIsland",
     "HorizonIslandNorthCoast",
     "HorizonIslandSouthCoast",
+    "HorizonIslandSouthCoastPeak",
     "HorizonIslandJungle",
-    "HorizonIslandJunglePeak",
-    "HorizonIslandCoast"
+    "HorizonIslandJunglePeak"
   ],
   "gMapGroup_DarkfireIslandDungeons": [
     "MtProboPeak",

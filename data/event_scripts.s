@@ -1405,3 +1405,5 @@ Script_RemoveTint::
 	.include "data/maps/MtProboCave_1F/scripts.inc"
 
 	.include "data/maps/MtProbo/scripts.inc"
+
+	.include "data/maps/HorizonIslandSouthCoastPeak/scripts.inc"

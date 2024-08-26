@@ -5870,6 +5870,16 @@
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/MtProbo/border.bin",
       "blockdata_filepath": "data/layouts/MtProbo/map.bin"
+    },
+    {
+      "id": "LAYOUT_HORIZON_ISLAND_SOUTH_COAST_PEAK",
+      "name": "HorizonIslandSouthCoastPeak_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Port1",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/HorizonIslandSouthCoastPeak/border.bin",
+      "blockdata_filepath": "data/layouts/HorizonIslandSouthCoastPeak/map.bin"
     }
   ]
 }
