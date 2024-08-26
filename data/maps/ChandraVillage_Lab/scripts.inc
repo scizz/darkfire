@@ -644,7 +644,9 @@ ChandraVillage_Lab_Text_DoYouThink:
 	.string "Here, take one of these Poké Balls…$"
 
 ChandraVillage_Lab_Text_DontHoldInHand:
-	.string "{COLOR}{BLUE}We're going to catch these Pokémon\n"
+	.string "{COLOR}{BLUE}Hold that Poké Ball in your hand,\n"
+	.string "{PLAYER}!\p"
+	.string "We're going to catch these Pokémon\n"
 	.string "and help get rid of this infestation!\p"
 	.string "Be careful, though, {PLAYER}…\n"
 	.string "I only have two Poké Balls left…\l"
