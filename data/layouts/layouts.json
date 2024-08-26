@@ -4395,7 +4395,7 @@
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
       "width": 50,
-      "height": 33,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/Route1/border.bin",
