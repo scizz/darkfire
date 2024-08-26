@@ -170,7 +170,7 @@ Text_WantToStrength:
 	.string "Would you like to use Strength?$"
 
 Text_MonUsedStrength:
-	.string "{STR_VAR_1} used Strentgh!\p"
+	.string "{STR_VAR_1} used Strength!\p"
 	.string "{STR_VAR_1}'s Strength made it\n"
 	.string "possible to move boulders around!$"
 
