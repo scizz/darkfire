@@ -38,7 +38,7 @@ UnionCity_DepartmentStore_2F_Text_Chef:
 UnionCity_DepartmentStore_2F_Text_Woman:
 	.string "{COLOR}{RED}I'm seeking a birthday gift for my\n"
 	.string "husband…\p"
-	.string "But, what do you a get a man who\n"
+	.string "But, what do you get a man who\n"
 	.string "already has everything?\p"
 	.string "And by everything, I mean me, of\n"
 	.string "course! Hehe.$"
