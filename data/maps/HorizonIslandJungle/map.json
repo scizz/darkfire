@@ -13,7 +13,7 @@
     {
       "map": "MAP_HORIZON_ISLAND_SOUTH_COAST",
       "offset": 0,
-      "direction": "up"
+      "direction": "down"
     }
   ],
   "object_events": [
