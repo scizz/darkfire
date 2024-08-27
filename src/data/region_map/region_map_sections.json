@@ -255,6 +255,14 @@
       "y": 1,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MUDDY_UNDERPASS",
+      "name": "Muddy Underpass",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
     }
   ]
 }
