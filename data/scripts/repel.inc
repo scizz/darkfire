@@ -18,6 +18,8 @@ EventScript_RepelWoreOff::
 EventScript_RepelUseAnother:
 	lock
 	msgbox Text_UseAnotherRepel, MSGBOX_YESNO
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_RepelWoreOff_End
 .if I_REPEL_LURE_MENU == TRUE
 	callnative TryDrawRepelMenu
 	goto_if_eq VAR_RESULT, FALSE, EventScript_RepelWoreOff_Chose
@@ -97,10 +99,10 @@ EventScript_UsedLure:
 	end
 
 Text_RepelWoreOff:
-	.string "REPEL's effect wore off…$"
+	.string "Repel's effect wore off…$"
 
 Text_UseAnotherRepel::
-	.string "REPEL's effect wore off!\n"
+	.string "Repel's effect wore off!\n"
 	.string "Use another?$"
 
 Text_LureWoreOff:
