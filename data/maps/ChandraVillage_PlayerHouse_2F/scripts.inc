@@ -47,6 +47,20 @@ ChandraVillage_PlayerHouse_2F_Intro::
 	releaseall
 	end
 
+ChandraVillage_PlayerHouse_2F_NinjaBoy::
+	lock
+	goto_if_set FLAG_HIDDEN_ITEM_CHANDRA_VILLAGE_PLAYERS_HOUSE_2F_POTION, ChandraVillage_PlayerHouse_2F_NinjaBoyGiven
+	delay 10
+	giveitem ITEM_POTION, 1
+	setflag FLAG_HIDDEN_ITEM_CHANDRA_VILLAGE_PLAYERS_HOUSE_2F_POTION
+	release
+	end
+
+ChandraVillage_PlayerHouse_2F_NinjaBoyGiven::
+	msgbox ChandraVillage_PlayerHouse_2F_Text_Sign_Trash, MSGBOX_AUTOCLOSE
+	release
+	end
+
 ChandraVillage_PlayerHouse_2F_Storyline_State_1::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
