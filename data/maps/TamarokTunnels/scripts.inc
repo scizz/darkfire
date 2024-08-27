@@ -343,9 +343,7 @@ WFU2:
 	step_end
 
 LFDWFR:
-	lock_facing_direction
 	walk_fast_right
-	unlock_facing_direction
 	step_end
 
 WFL5U2FD:

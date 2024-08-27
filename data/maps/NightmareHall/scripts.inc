@@ -9,6 +9,7 @@ NightmareHall_OnWarp:
 NightmareHall_InitRoomObjects::
 	removeobject 5
 	setflag FLAG_TEMP_2
+	setflag FLAG_SYS_TELESCOPE_USE
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
 

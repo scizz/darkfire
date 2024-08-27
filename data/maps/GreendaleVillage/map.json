@@ -265,7 +265,7 @@
       "y": 30,
       "elevation": 0,
       "var": "VAR_STORYLINE_STATE",
-      "var_value": "4",
+      "var_value": "11",
       "script": "GreendaleVillage_Tournament"
     },
     {

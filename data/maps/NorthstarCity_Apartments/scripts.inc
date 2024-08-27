@@ -125,7 +125,6 @@ NorthstarCity_Apartments_SheenySeedCollector_CompleteTrade::
 
 NorthstarCity_Apartments_Meowth::
 	lock
-	pokemonfaceplayer 3
 	playmoncry SPECIES_MEOWTH, 0
 	speakername CommonName_Text_Meowth
 	msgbox NorthstarCity_Apartments_Text_Meowth, MSGBOX_AUTOCLOSE

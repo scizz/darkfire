@@ -156,7 +156,7 @@ Route7_Text_Hiker_Yes:
 	.string "barren, as you'd expect.\p"
 	.string "There's a temple of ice up there, an\n"
 	.string "amazing, ancient edifice, elaborate as\l"
-	.string "if built by a God.\p"
+	.string "if built by a god.\p"
 	.string "… … …\n"
 	.string "… … …\p"
 	.string "Ha!\n"
