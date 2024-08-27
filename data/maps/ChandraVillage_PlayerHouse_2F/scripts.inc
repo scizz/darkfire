@@ -43,6 +43,7 @@ ChandraVillage_PlayerHouse_2F_Intro::
 	speakername CommonName_Text_Mom
 	msgbox ChandraVillage_PlayerHouse_2F_Text_WakeUp, MSGBOX_AUTOCLOSE
 	setvar VAR_STORYLINE_STATE, 1
+	clearflag FLAG_SYS_TELESCOPE_USE
 	releaseall
 	end
 
