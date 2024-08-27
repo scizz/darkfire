@@ -349,7 +349,10 @@ Route9_DazBattle::
 	setflag FLAG_HIDE_DAZ_2_MUDKIP
 	applymovement LOCALID_DAZ_2, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
+	speakername CommonName_Text_Daz
+	showface FS_DAZ, FSE_HAPPY, 1, 1
 	msgbox Route9_Text_ILostButIllRememberThat, MSGBOX_AUTOCLOSE
+	hideface 1
 	applymovement LOCALID_DAZ_2, WD5
 	waitmovement 0
 	removeobject LOCALID_DAZ_2

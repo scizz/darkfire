@@ -6774,7 +6774,7 @@ const struct Trainer gTrainers[] = {
     {
         .trainerClass = TRAINER_CLASS_TRIATHLETE,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
+        .trainerPic = TRAINER_PIC_RUNNING_TRIATHLETE_M,
         .trainerName = _("Camron"),
         .items = {},
         .doubleBattle = FALSE,
