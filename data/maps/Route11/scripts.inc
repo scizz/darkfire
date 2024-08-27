@@ -1,16 +1,12 @@
 Route11_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route11_OnFrame
 	.byte 0
 
-Route11_OnFrame:
-	map_script_2 VAR_ERNIE_STATE, 2, Route11_EndOfBeta
-	.2byte 0
-
 Route11_EndOfBeta::
-	lock
-	msgbox Route11_Text_Sign_Demo, MSGBOX_AUTOCLOSE
-	setvar VAR_ERNIE_STATE, 3
-	release
+	msgbox Route11_Text_Sign_Demo, MSGBOX_SIGN
+	end
+
+Route11_YouShouldntBeHere::
+	msgbox Route11_Text_Sign_YouShouldntBeHere, MSGBOX_SIGN
 	end
 
 Route11_Sign::
@@ -124,11 +120,14 @@ Route11_Text_Sign_Demo:
 	.string "Darkfire Beta 0.2.1…\p"
 	.string "Thank you, {PLAYER}, for\n"
 	.string "playing our game!\p"
-	.string "Rest assured, Beta 0.3.0 is already in\n"
-	.string "development, so stay tuned for more!\p"
+	.string "Beta 0.3.0 is already in development.\p"
 	.string "You can follow our progress on Discord:\n"
 	.string "discord.gg/3JSSNbw (case sensitive)\l"
 	.string "See you there! - Karl & Ray$"
+
+Route11_Text_Sign_YouShouldntBeHere:
+	.string "Uhh…\p"
+	.string "You shouldn't be here!$"
 
 WhatWasThat:
 	.string "???\n"
