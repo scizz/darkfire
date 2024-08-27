@@ -343,7 +343,9 @@ WFU2:
 	step_end
 
 LFDWFR:
+	follower_face_right
 	walk_fast_right
+	follower_face_left
 	step_end
 
 WFL5U2FD:
