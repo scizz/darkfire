@@ -1256,9 +1256,10 @@ static void Task_HandleSave(u8 taskId) {
       break;
     case SAVE_SUCCESS:
     case SAVE_CANCELED: // Back to start menu
-      ClearDialogWindowAndFrameToTransparent(0, FALSE);
+      ClearDialogWindowAndFrameToTransparent(0, TRUE);
+      ScriptUnfreezeObjectEvents();  
+      UnlockPlayerFieldControls();
       DestroyTask(taskId);
-      HeatStartMenu_Init();
       break;
     case SAVE_ERROR:    // Close start menu
       ClearDialogWindowAndFrameToTransparent(0, TRUE);
