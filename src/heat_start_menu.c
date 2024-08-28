@@ -724,6 +724,7 @@ static void HeatStartMenu_SafariZone_CreateSprites(void) {
 
 static void HeatStartMenu_LoadBgGfx(void) {
   u8* buf = GetBgTilemapBuffer(0); 
+  LoadBgTilemap(0, 0, 0, 0);
   DecompressAndCopyTileDataToVram(0, sStartMenuTiles, 0, 0, 0);
   if (GetSafariZoneFlag() == FALSE) {
     LZDecompressWram(sStartMenuTilemap, buf);
@@ -1255,9 +1256,10 @@ static void Task_HandleSave(u8 taskId) {
       break;
     case SAVE_SUCCESS:
     case SAVE_CANCELED: // Back to start menu
-      ClearDialogWindowAndFrameToTransparent(0, FALSE);
+      ClearDialogWindowAndFrameToTransparent(0, TRUE);
+      ScriptUnfreezeObjectEvents();  
+      UnlockPlayerFieldControls();
       DestroyTask(taskId);
-      HeatStartMenu_Init();
       break;
     case SAVE_ERROR:    // Close start menu
       ClearDialogWindowAndFrameToTransparent(0, TRUE);
@@ -1372,7 +1374,7 @@ static void HeatStartMenu_HandleInput_DPADUP(void) {
 
 static void Task_HeatStartMenu_HandleMainInput(u8 taskId) {
   u32 index;
-  if (sHeatStartMenu->loadState == 0) {
+  if (sHeatStartMenu->loadState == 0 && !gPaletteFade.active) {
     index = IndexOfSpritePaletteTag(TAG_ICON_PAL);
     LoadPalette(sIconPal, OBJ_PLTT_ID(index), PLTT_SIZE_4BPP); 
   }
@@ -1450,7 +1452,7 @@ static void HeatStartMenu_SafariZone_HandleInput_DPADUP(void) {
 
 static void Task_HeatStartMenu_SafariZone_HandleMainInput(u8 taskId) {
   u32 index;
-  if (sHeatStartMenu->loadState == 0) {
+  if (sHeatStartMenu->loadState == 0 && !gPaletteFade.active) {
     index = IndexOfSpritePaletteTag(TAG_ICON_PAL);
     LoadPalette(sIconPal, OBJ_PLTT_ID(index), PLTT_SIZE_4BPP); 
   }
