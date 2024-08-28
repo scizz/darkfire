@@ -5046,7 +5046,7 @@
       "name": "NorthstarCity_Lighthouse_Layout",
       "width": 38,
       "height": 9,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/NorthstarCity_Lighthouse/border.bin",
       "blockdata_filepath": "data/layouts/NorthstarCity_Lighthouse/map.bin"
