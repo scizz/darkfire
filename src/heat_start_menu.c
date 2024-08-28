@@ -1452,7 +1452,7 @@ static void HeatStartMenu_SafariZone_HandleInput_DPADUP(void) {
 
 static void Task_HeatStartMenu_SafariZone_HandleMainInput(u8 taskId) {
   u32 index;
-  if (sHeatStartMenu->loadState == 0) {
+  if (sHeatStartMenu->loadState == 0 && !gPaletteFade.active) {
     index = IndexOfSpritePaletteTag(TAG_ICON_PAL);
     LoadPalette(sIconPal, OBJ_PLTT_ID(index), PLTT_SIZE_4BPP); 
   }
