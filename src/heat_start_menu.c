@@ -724,6 +724,7 @@ static void HeatStartMenu_SafariZone_CreateSprites(void) {
 
 static void HeatStartMenu_LoadBgGfx(void) {
   u8* buf = GetBgTilemapBuffer(0); 
+  LoadBgTilemap(0, 0, 0, 0);
   DecompressAndCopyTileDataToVram(0, sStartMenuTiles, 0, 0, 0);
   if (GetSafariZoneFlag() == FALSE) {
     LZDecompressWram(sStartMenuTilemap, buf);
