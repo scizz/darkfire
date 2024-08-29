@@ -8,10 +8,32 @@
 .set LOCALID_POKE_BALL, 17
 
 UnionCity_AbandonedMuseum_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, UnionCity_AbandonedMuseumOnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, UnionCity_AbandonedMuseumOnWarp
 	.byte 0
+
+UnionCity_AbandonedMuseumOnWarp:
+	map_script_2 VAR_ABANDONED_MUSEUM_STATE, 0 UnionCity_AbandonedMuseumInitRoomObjects
+	.2byte 0
+
+UnionCity_AbandonedMuseumOnFrame::
+	map_script_2 VAR_ABANDONED_MUSEUM_STATE, 0, UnionCity_AbandonedMuseumHide
+	.2byte 0
+
+UnionCity_AbandonedMuseumInitRoomObjects::
+	applymovement OBJ_EVENT_ID_FOLLOWER, SetInvisible
+	end
+
+UnionCity_AbandonedMuseumHide::
+	hidefollower
+	setflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_ABANDONED_MUSEUM_STATE, 1
+	end
 
 UnionCity_SUBO_Event::
 	lock
+	setvar VAR_ABANDONED_MUSEUM_STATE, 2
+	showfollower
 	removeobject LOCALID_POKE_BALL
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 33

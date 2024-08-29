@@ -171,7 +171,7 @@
 #define VAR_PETALBURG_WOODS_STATE            0x4098
 #define VAR_LILYCOVE_CONTEST_LOBBY_STATE     0x4099
 #define VAR_RUSTURF_TUNNEL_STATE             0x409A
-#define VAR_UNUSED_0x409B                    0x409B // Unused Var
+#define VAR_ABANDONED_MUSEUM_STATE           0x409B // Darkfire Var
 #define VAR_ELITE_4_STATE                    0x409C
 #define VAR_RANGER_LODGE_STATE               0x409D // Darkfire Var
 #define VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE    0x409E
