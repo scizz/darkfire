@@ -5874,10 +5874,10 @@
     {
       "id": "LAYOUT_HORIZON_ISLAND_SOUTH_COAST_PEAK",
       "name": "HorizonIslandSouthCoastPeak_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_Port1",
-      "secondary_tileset": "gTileset_Rindo",
+      "width": 24,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_UnionRoom",
       "border_filepath": "data/layouts/HorizonIslandSouthCoastPeak/border.bin",
       "blockdata_filepath": "data/layouts/HorizonIslandSouthCoastPeak/map.bin"
     }
