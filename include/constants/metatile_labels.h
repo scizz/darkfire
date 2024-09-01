@@ -27,6 +27,7 @@
 
 // gTileset_BattleFrontierOutsideEast
 #define METATILE_BattleFrontierOutsideEast_Door              0x3FC
+#define METATILE_BattleFrontierOutsideEast_Door_BattleArena  0x291
 #define METATILE_BattleFrontierOutsideEast_Door_BattleTower  0x329
 #define METATILE_BattleFrontierOutsideEast_Door_Sliding      0x396
 
