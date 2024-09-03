@@ -468,9 +468,8 @@ Route9_Text_Sign_Dome:
 	.string "{FONT_SMALL}Get your starter Pokémon here!$"
 
 Route9_Text_Boy:
-	.string "{COLOR}{BLUE}Elemental stones form throughout\n"
-	.string "the region, and they can evolve\l"
-	.string "certain Pokémon.\p"
+	.string "{COLOR}{BLUE}Elemental Stones form throughout the\n"
+	.string "region - they evolve certain Pokémon!\p"
 	.string "For example, Ice Stone is found in icy\n"
 	.string "places, and Fire Stone in hot places.\p"
 	.string "They are rare, though, so you'll have\n"
