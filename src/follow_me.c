@@ -648,7 +648,7 @@ bool8 FollowMe_IsCollisionExempt(struct ObjectEvent* obstacle, struct ObjectEven
     if (!gSaveBlock2Ptr->follower.inProgress)
         return FALSE;
 
-    if (obstacle == follower && collider == player)
+    if ((obstacle == follower && collider == player) || (obstacle == follower && follower->invisible))
         return TRUE;
 
     return FALSE;
