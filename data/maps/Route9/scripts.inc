@@ -49,6 +49,10 @@ Route9_Sign_Dome::
 	msgbox Route9_Text_Sign_Dome, MSGBOX_SIGN
 	end
 
+Route9_Boy::
+	msgbox Route9_Text_Boy, MSGBOX_NPC
+	end
+
 Route9_Old_Man::
 	lockall
 	faceplayer
@@ -462,6 +466,15 @@ Route9_Text_Sign:
 Route9_Text_Sign_Dome:
 	.string "Starter Dome\n"
 	.string "{FONT_SMALL}Get your starter Pokémon here!$"
+
+Route9_Text_Boy:
+	.string "{COLOR}{BLUE}Elemental stones form throughout\n"
+	.string "the region, and they can evolve\l"
+	.string "certain Pokémon.\p"
+	.string "For example, Ice Stone is found in icy\n"
+	.string "places, and Fire Stone in hot places.\p"
+	.string "They are rare, though, so you'll have\n"
+	.string "to look carefully, if you want one!$"
 
 Route9_Text_Old_Man:
 	.string "And there a brave Charizard stood…\p"
