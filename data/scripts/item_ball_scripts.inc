@@ -511,7 +511,7 @@ MtPyre_6F_EventScript_ItemTM30:: @ 8291331
 	end
 
 MtPyre_Exterior_EventScript_ItemMaxPotion:: @ 829133E
-	finditem ITEM_MAX_POTION
+	finditem ITEM_ABILITY_PATCH
 	end
 
 MtPyre_Exterior_EventScript_ItemTM48:: @ 829134B
