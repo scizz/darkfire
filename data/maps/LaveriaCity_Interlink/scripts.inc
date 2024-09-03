@@ -39,6 +39,10 @@ LaveriaCity_Interlink_Woman::
 	msgbox LaveriaCity_Text_Interlink_Woman, MSGBOX_NPC
 	end
 
+LaveriaCity_Interlink_Little_Boy::
+	msgbox LaveriaCity_Text_Interlink_Little_Boy, MSGBOX_NPC
+	end
+
 LaveriaCity_Interlink_Girl::
 	msgbox LaveriaCity_Text_Interlink_Girl, MSGBOX_NPC
 	end
@@ -115,6 +119,17 @@ LaveriaCity_Text_Interlink_Woman:
 	.string "Oh, well…\p"
 	.string "I'll leave them for someone else to\n"
 	.string "discover…$"
+
+LaveriaCity_Text_Interlink_Little_Boy:
+	.string "{COLOR}{BLUE}I know everything about Eevee!\p"
+	.string "Ice Stone evolves Eevee to Glaceon.\n"
+	.string "Fire Stone evolves it to Flareon.\p"
+	.string "Leaf Stone turns it into Leafeon,\n"
+	.string "and Water Stone makes Vaporeon.\p"
+	.string "Thunder Stone? Jolteon!\n"
+	.string "And Moon Stone will get you Umbreon.\p"
+	.string "But, Dawn Stone turns Eevee into my\n"
+	.string "favorite Pokémon ever, Espeon!$"
 
 LaveriaCity_Text_Interlink_Girl:
 	.string "{COLOR}{RED}The Pokémon in Route 9 aren't all\n"
