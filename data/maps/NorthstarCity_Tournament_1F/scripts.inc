@@ -40,7 +40,16 @@ NorthstarCity_Tournament_1F_Sign::
 
 NorthstarCity_Tournament_1F_SUBOEnd::
 	lock
+	call Common_EventScript_GetPlayerPos
+	compare VAR_TEMP_0, 14
+	call_if_eq NorthstarCity_Tournament_FollowerLeftCheck
+	compare VAR_TEMP_0, 15
+	call_if_eq NorthstarCity_Tournament_FollowerRightCheck
+	end
+
+NorthstarCity_Tournament_1F_SUBOEndContinue::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_FollowerFaceDown
 	waitmovement 0
 	clearflag FLAG_NORTHSTAR_TOURNAMENT_SUBO_1F
 	addobject LOCALID_SUBO
@@ -48,6 +57,59 @@ NorthstarCity_Tournament_1F_SUBOEnd::
 	compare VAR_TEMP_0, 14
 	goto_if_eq NorthstarCity_Tournament_1F_Left
 	goto NorthstarCity_Tournament_1F_Down
+	end
+
+NorthstarCity_Tournament_FollowerLeftCheck::
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_NORTH
+	goto_if_eq VAR_RESULT, DIR_NORTH, NorthstarCity_Tournament_FollowerLeftCheck_FacingNorth
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_EAST
+	goto_if_eq VAR_RESULT, DIR_EAST, NorthstarCity_Tournament_FollowerLeftCheck_FacingEast
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
+	end
+
+NorthstarCity_Tournament_FollowerRightCheck::
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_NORTH
+	goto_if_eq VAR_RESULT, DIR_NORTH, NorthstarCity_Tournament_FollowerRightCheck_FacingNorth
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_EAST
+	goto_if_eq VAR_RESULT, DIR_EAST, NorthstarCity_Tournament_FollowerRightCheck_FacingEast
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_WEST
+	goto_if_eq VAR_RESULT, DIR_WEST, NorthstarCity_Tournament_FollowerRightCheck_FacingWest
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
+	end
+
+NorthstarCity_Tournament_FollowerLeftCheck_FacingNorth::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WRU
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
+	end
+
+NorthstarCity_Tournament_FollowerRightCheck_FacingNorth::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WLU2R
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
+	end
+
+NorthstarCity_Tournament_FollowerLeftCheck_FacingEast::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDR2U
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
+	end
+
+NorthstarCity_Tournament_FollowerRightCheck_FacingEast::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WUR
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
+	end
+
+NorthstarCity_Tournament_FollowerRightCheck_FacingWest::
+	applymovement OBJ_EVENT_ID_FOLLOWER, WDL2U2R
+	waitmovement 0
+	goto NorthstarCity_Tournament_1F_SUBOEndContinue
 	end
 
 NorthstarCity_Tournament_1F_Left::
@@ -293,6 +355,29 @@ NorthstarCity_Tournament_1F_Little_Girl::
 	msgbox NorthstarCity_Tournament_1F_Text_Little_Girl, MSGBOX_AUTOCLOSE
 	release
 	end
+
+WLU2R:
+	walk_left
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+WDR2U:
+	walk_down
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+WDL2U2R:
+	walk_down
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_right
+	step_end
 
 WLU6:
 	walk_left
