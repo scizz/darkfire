@@ -34,6 +34,18 @@ UnionCity_SUBO_Event::
 	lock
 	setvar VAR_ABANDONED_MUSEUM_STATE, 2
 	showfollower
+	playse SE_LEDGE
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_JumpInPlaceDown
+	waitmovement 0
+	waitse
+	playse SE_PIN
+	emote 64, 1
+	waitse
+	playfirstmoncry
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox YourPokemonPoppedOut, MSGBOX_AUTOCLOSE
+	waitmoncry
 	removeobject LOCALID_POKE_BALL
 	call Common_EventScript_GetPlayerPos
 	compare VAR_TEMP_0, 33
@@ -43,6 +55,8 @@ UnionCity_SUBO_Event::
 
 UnionCity_SUBO_Event_Left::
 	applymovement LOCALID_NERD, WFU5
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	speakername SpeakerName_Text_RandomNerd
 	msgbox UnionCity_AbandonedMuseum_Text_GetOut, MSGBOX_AUTOCLOSE
@@ -88,7 +102,12 @@ UnionCity_SUBO_Event_Push::
 	waitse
 	applymovement OBJ_EVENT_ID_FOLLOWER, WFRFU
 	waitmovement 0
-	applymovement LOCALID_SUBO_PUSH, Common_Movement_FaceDown
+	bufferlivemonnickname 0
+	playfirstmoncry
+	showborderlesspic 20, 7
+	msgbox PokemonGrr, MSGBOX_AUTOCLOSE
+	hidemonpic
+	applymovement LOCALID_SUBO_PUSH, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	speakername SpeakerName_Text_SuboGrunt
 	showface FS_FEMALE_SUBO, FSE_NORMAL, 1, 1
@@ -566,6 +585,13 @@ WU3:
 	walk_up
 	walk_up
 	step_end
+
+YourPokemonPoppedOut:
+	.string "Your Pokémon wants to play!\p"
+	.string "Probably not the best time…$"
+
+PokemonGrr:
+	.string "Grrr!$"
 
 UnionCity_AbandonedMuseum_Text_Old_Man:
 	.string "This museum was recently abandoned.\p"
