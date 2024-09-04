@@ -5846,7 +5846,7 @@
       "name": "MtProboPeak_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_PinapIslands",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/MtProboPeak/border.bin",
       "blockdata_filepath": "data/layouts/MtProboPeak/map.bin"
