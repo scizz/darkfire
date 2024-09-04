@@ -5864,7 +5864,7 @@
     {
       "id": "LAYOUT_MT_PROBO",
       "name": "MtProbo_Layout",
-      "width": 60,
+      "width": 64,
       "height": 62,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_Rindo",
