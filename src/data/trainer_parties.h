@@ -9662,7 +9662,7 @@ static const struct TrainerMonItemCustomMoves sParty_Kojiro1[] = {
     .iv = 50,
     .lvl = 17,
     .species = SPECIES_GLACEON,
-    .heldItem = ITEM_SITRUS_BERRY,
+    .heldItem = ITEM_NONE,
     .moves = {MOVE_SUBSTITUTE, MOVE_WATER_PULSE, MOVE_ICY_WIND, MOVE_AURORA_VEIL}
     },
     {
