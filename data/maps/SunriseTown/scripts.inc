@@ -355,12 +355,12 @@ RunRight9:
 	step_end
 
 StepAside:
-	walk_fast_left
+	walk_fast_down
 	face_right
 	step_end
 
 StepAsideFollower:
-	walk_fast_left
+	walk_fast_down
 	follower_face_right
 	step_end
 

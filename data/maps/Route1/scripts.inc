@@ -189,9 +189,11 @@ Route1_PidgeyMain::
 	playse SE_PIN
 	waitse
 	delay 30
+	playmoncry SPECIES_PIDGEY, 0
 	speakername Speaker_Text_Pidgey
 	msgbox Route1_PidgeyIntro_Pidgey, MSGBOX_DEFAULT
 	closemessage
+	waitmoncry
 	applymovement LOCALID_PIDGEY, FlyUp
 	playse SE_M_JUMP_KICK
 	waitse

@@ -11,8 +11,15 @@ UnionCity_OnFrame:
 	.2byte 0
 
 UnionCity_OnTransition:
+	call_if_eq VAR_ABANDONED_MUSEUM_STATE, 1, UnionCity_ClearMapPopUpFlag
 	clearflag FLAG_PREVENT_BATTLE_FLEE
 	end
+
+UnionCity_ClearMapPopUpFlag::
+	setvar VAR_ABANDONED_MUSEUM_STATE, 0
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	special ShowMapNamePopup
+	return
 
 UnionCity_TylerPresidentIntro::
 	lock
@@ -303,7 +310,7 @@ UnionCity_Coin_Case::
 	lock
 	faceplayer
 	goto_if_set FLAG_UNION_CITY_COIN_CASE, UnionCity_Coin_Case_Received
-	goto_if_set FLAG_UNION_CITY_SUBO_DEFEATED, UnionCity_SUBO_Defeated
+	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, UnionCity_SUBO_Defeated
 	msgbox UnionCity_Text_Coin_Case, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq UnionCity_Gambler_Yes

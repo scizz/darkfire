@@ -15,6 +15,8 @@ UnionCity_GovOffice_3F_HidePresident::
 
 UnionCity_GovOffice_3F_PresidentDesk::
 	lock
+	applymovement 3, Common_Movement_FaceLeft
+	waitmovement 0
 	goto_if_set FLAG_HIDE_ABANDONED_MUSEUM_SUBO, UnionCity_GovOffice_3F_PostSUBOMuseum
 	msgbox UnionCity_GovOffice_3F_Text_ThereIsNotASpeckOfDust, MSGBOX_AUTOCLOSE
 	release

@@ -276,17 +276,17 @@ UnionCity_SUBO_Event_Main::
 	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_InFactIveBeenWatching, MSGBOX_AUTOCLOSE
 	hideface 0
-	delay 10
+	delay 30
 	speakername2 SpeakerName_Text_QuestionMark
 	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_DotDotDot, MSGBOX_AUTOCLOSE
 	hideface 0
-	delay 10
+	delay 30
 	speakername2 SpeakerName_Text_QuestionMark
 	showface FS_ZAGAN, FSE_NORMAL, 0, 0
 	msgbox UnionCity_AbandonedMuseum_Text_AnywayHereWeAre, MSGBOX_AUTOCLOSE
 	hideface 0
-	delay 10
+	delay 30
 	applymovement LOCALID_SUBO_L, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -328,6 +328,7 @@ UnionCity_SUBO_Event_Main::
 	showface FS_PRESIDENT, FSE_NORMAL, 1, 1
 	msgbox UnionCity_AbandonedMuseum_Text_WhatWasThat, MSGBOX_AUTOCLOSE
 	hideface 1
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_STORYLINE_STATE, 14
 	warp MAP_UNION_CITY_GOV_OFFICE_3F, 2, 2
 	end
@@ -719,12 +720,12 @@ UnionCity_AbandonedMuseum_Text_AnywayHereWeAre:
 	.string "All throughout history, the weak have\n"
 	.string "always perished, and only the strong\l"
 	.string "have survived.\p"
-	.string "The lion eats the deer.\p"
-	.string "The deer eats the bird.\p"
+	.string "The lion eats the lizard.\p"
+	.string "The lizard eats the bird.\p"
 	.string "The bird eats the worm.\p"
 	.string "Tenjo politicians like to refer to\n"
-	.string "themselves as “roaring lions”,\l"
-	.string "yet we devour lions.\p"
+	.string "themselves as “roaring lions”, yet we\l"
+	.string "devour lions.\p"
 	.string "We will control the minds of the people\n"
 	.string "and use them all as our tools!$"
 

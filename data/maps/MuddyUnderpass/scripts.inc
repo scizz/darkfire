@@ -14,6 +14,6 @@ MuddyUnderpass_SetVar::
 
 WarpToMuseum2::
 	setfollowerwarppos DIR_NORTH
-	warpsilent MAP_UNION_CITY_ABANDONED_MUSEUM, 15, 13
+	warp MAP_UNION_CITY_ABANDONED_MUSEUM, 15, 13
 	waitstate
 	end
