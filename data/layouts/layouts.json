@@ -5854,8 +5854,8 @@
     {
       "id": "LAYOUT_MT_PROBO_CAVE_1F",
       "name": "MtProboCave_1F_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 50,
+      "height": 70,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/MtProboCave_1F/border.bin",
