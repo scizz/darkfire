@@ -18,6 +18,22 @@ Route4_Sign::
 	msgbox Route4_Sign_Text, MSGBOX_SIGN
 	end
 
+Route4_Vine::
+	lock
+	msgbox Route4_Text_AStrangeVine, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Route4_Vine_Enter
+	closemessage
+	release
+	end
+
+Route4_Vine_Enter::
+	msgbox Route4_Text_PlayerClimbedTheVine, MSGBOX_AUTOCLOSE
+	delay 10
+	warp MAP_ROUTE4EAST_TREE_GROTTO, 6, 13
+	waitstate
+	end
+
 Route4_Sign_Daycare::
 	msgbox Route4_Sign_Daycare_Text, MSGBOX_SIGN
 	end
@@ -76,6 +92,13 @@ Route4_Given::
 Route4_Sign_Text:
 	.string "Welcome to the Route 4 Farmlands!\n"
 	.string "{LEFT_ARROW} Greendale Village$"
+
+Route4_Text_AStrangeVine:
+	.string "A strange vine hangs from the tree…\n"
+	.string "Would you like to climb it?$"
+
+Route4_Text_PlayerClimbedTheVine:
+	.string "{PLAYER} climbed the vine…$"
 
 Route4_Sign_Daycare_Text:
 	.string "Route 4\n"

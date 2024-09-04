@@ -160,6 +160,9 @@ CommonName_Text_Vigoroth:
 CommonName_Text_Gill:
 	.string "Gill$"
 
+CommonName_Text_Igglybuff:
+	.string "Igglybuff$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

@@ -21,6 +21,16 @@ LaveriaCity_House3_Woman_Given::
 	release
 	end
 
+LaveriaCity_House3_Igglybuff::
+	lock
+	pokemonfaceplayer 2
+	playmoncry SPECIES_IGGLYBUFF, 0
+	speakername CommonName_Text_Igglybuff
+	msgbox LaveriaCity_House3_Text_Igglybuff, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
 LaveriaCity_House3_Woman_Text_Snowball:
 	.string "{COLOR}{RED}Life in a snowy city means one thing…\n"
 	.string "Epic snowball fights!\p"
@@ -31,3 +41,6 @@ LaveriaCity_House3_Woman_Text_Snowball_Given:
 	.string "or Pokémon.\p"
 	.string "And playing together only makes our\n"
 	.string "bonds stronger!$"
+
+LaveriaCity_House3_Text_Igglybuff:
+	.string "Iggly!$"

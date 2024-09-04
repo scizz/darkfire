@@ -1276,7 +1276,7 @@ $(MID_SUBDIR)/mus_abandoned_museum.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V107
 
 $(MID_SUBDIR)/mus_anheim_forest.s: %.s: %.mid
-	$(MID) $< $@ -E -G191 -V097
+	$(MID) $< $@ -E -G191 -V127
 
 $(MID_SUBDIR)/mus_cave.s: %.s: %.mid
 	$(MID) $< $@ -E -G191 -V127
