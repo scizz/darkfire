@@ -44,7 +44,9 @@ UnionCity_SUBO_Event::
 	playfirstmoncry
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	showborderlesspic 20, 7
 	msgbox YourPokemonPoppedOut, MSGBOX_AUTOCLOSE
+	hidemonpic
 	waitmoncry
 	removeobject LOCALID_POKE_BALL
 	call Common_EventScript_GetPlayerPos
