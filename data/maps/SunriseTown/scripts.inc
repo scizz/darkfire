@@ -137,6 +137,8 @@ SunriseTown_Fat_Guy::
 	end
 
 SunriseTown_Cook_Talked_To::
+	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	waitmovement 0
 	msgbox SunriseTown_Fat_Guy_Awaken, MSGBOX_NPC
 	applymovement 4, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
@@ -147,7 +149,7 @@ SunriseTown_Cook_Talked_To::
 	waitmovement 0
 	msgbox SunriseTown_Fat_Guy_Run_Away, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, StepAside
-	applymovement OBJ_EVENT_ID_FOLLOWER, StepAsideFollower
+	@applymovement OBJ_EVENT_ID_FOLLOWER, StepAsideFollower
 	playse SE_FLEE
 	applymovement 4, RunAway
 	waitse
@@ -355,12 +357,12 @@ RunRight9:
 	step_end
 
 StepAside:
-	walk_fast_down
+	walk_fast_left
 	face_right
 	step_end
 
 StepAsideFollower:
-	walk_fast_down
+	walk_fast_left
 	follower_face_right
 	step_end
 
