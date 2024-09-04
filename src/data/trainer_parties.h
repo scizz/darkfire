@@ -9677,7 +9677,7 @@ static const struct TrainerMonItemCustomMoves sParty_Kojiro1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Kojiro2[] = {
     {
     .iv = 50,
-    .lvl = 18,
+    .lvl = 17,
     .species = SPECIES_SKARMORY,
     },
     {
