@@ -507,5 +507,5 @@ UseTheWailmerPailOnSudowoodo:
 	.string "Use the Wailmer Pail on Sudowoodo?$"
 
 SudowoodoDislikesBeingSprayed:
-	.string "Sudowoodo dislikes being sprayed!\p"
+	.string "Sudowoodo disliked being sprayed!\p"
 	.string "Sudowoodo attacked!$"
