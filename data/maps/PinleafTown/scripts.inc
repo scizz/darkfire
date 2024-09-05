@@ -56,16 +56,17 @@ PinleafTown_TylerBattle::
 	msgbox PinleafTown_Text_WellWellLookWhoItIs, MSGBOX_AUTOCLOSE
 	hideface 1
 	goto_if_set FLAG_TAKEN_PIKACHU, PinleafTown_TylerBattle_Eevee
-	trainerbattle_no_intro TRAINER_TYLER_6, Tyler3_Text_Defeated
+	trainerbattle_no_intro_no_whiteout TRAINER_TYLER_6, Tyler3_Text_Defeated
 	goto PinleafTown_TylerBattle_End
 	end
 
 PinleafTown_TylerBattle_Eevee::
-	trainerbattle_no_intro TRAINER_TYLER_5, Tyler3_Text_Defeated
+	trainerbattle_no_intro_no_whiteout TRAINER_TYLER_5, Tyler3_Text_Defeated
 	goto PinleafTown_TylerBattle_End
 	end
 
 PinleafTown_TylerBattle_End::
+	special HealPlayerParty
 	applymovement LOCALID_TYLER, Common_Movement_WalkInPlaceSlowUp
 	waitmovement 0
 	speakername CommonName_Text_Tyler
