@@ -487,7 +487,7 @@ PinleafTown_Text_WellWellLookWhoItIs:
 
 PinleafTown_Text_WellPlayerYouCertainly:
 	.string "{COLOR}{BLUE}Well, {PLAYER}!\n"
-	.string "You certainly know how to battle.\p"
+	.string "That was a great battle!\p"
 	.string "I will continue to get stronger…\p"
 	.string "I'm gonna need it if I'm going to\n"
 	.string "take down the SUBO!\p"
