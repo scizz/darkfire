@@ -140,13 +140,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 28,
-      "y": 5,
-      "elevation": 3,
-      "item": "ITEM_ELIXIR",
-      "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_B2F_ELIXIR"
-    }
+
   ]
 }
