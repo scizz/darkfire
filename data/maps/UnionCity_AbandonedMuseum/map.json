@@ -596,6 +596,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "UnionCity_AbandonedMuseum_ReconstructedAerodactylExhibit"
+    },
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_MOON_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY"
     }
   ]
 }
