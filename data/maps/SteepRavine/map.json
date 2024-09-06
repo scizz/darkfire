@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 29,
+      "x": 30,
       "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -120,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MARILL",
-      "x": 19,
-      "y": 10,
+      "x": 31,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
