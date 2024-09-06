@@ -463,6 +463,10 @@ Route9_StarterDome_BackToEntranceNext::
 	speakername2 CommonName_Text_Prof
 	showface FS_PROF, FSE_NORMAL, 0, 0
 	msgbox Route9_StarterDome_Text_OhPlayerIAlmostForgot, MSGBOX_AUTOCLOSE
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveStones::
 	message Route9_StarterDome_Text_WhichEvolutionaryStone
 	waitmessage
 	multichoice 21, 0, MULTI_CHOOSE_STONE, TRUE
@@ -476,6 +480,13 @@ Route9_StarterDome_BackToEntranceNext::
 	end
 
 Route9_StarterDome_GiveThunderStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheThunderStone, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_StarterDome_GiveThunderStoneToPlayer
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveThunderStoneToPlayer::
 	hideface 0
 	giveitem ITEM_THUNDER_STONE, 1
 	closemessage
@@ -483,6 +494,13 @@ Route9_StarterDome_GiveThunderStone::
 	end
 
 Route9_StarterDome_GiveFireStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheFireStone, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_StarterDome_GiveFireStoneToPlayer
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveFireStoneToPlayer::
 	hideface 0
 	giveitem ITEM_FIRE_STONE, 1
 	closemessage
@@ -490,6 +508,13 @@ Route9_StarterDome_GiveFireStone::
 	end
 
 Route9_StarterDome_GiveWaterStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheWaterStone, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_StarterDome_GiveWaterStoneToPlayer
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveWaterStoneToPlayer::
 	hideface 0
 	giveitem ITEM_WATER_STONE, 1
 	closemessage
@@ -497,6 +522,13 @@ Route9_StarterDome_GiveWaterStone::
 	end
 
 Route9_StarterDome_GiveLeafStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheLeafStone, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_StarterDome_GiveLeafStoneToPlayer
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveLeafStoneToPlayer::
 	hideface 0
 	giveitem ITEM_LEAF_STONE, 1
 	closemessage
@@ -504,6 +536,13 @@ Route9_StarterDome_GiveLeafStone::
 	end
 
 Route9_StarterDome_GiveDawnStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheDawnStone, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_StarterDome_GiveDawnStoneToPlayer
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveDawnStoneToPlayer::
 	hideface 0
 	giveitem ITEM_DAWN_STONE, 1
 	closemessage
@@ -511,6 +550,13 @@ Route9_StarterDome_GiveDawnStone::
 	end
 
 Route9_StarterDome_GiveDuskStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheDuskStone, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route9_StarterDome_GiveDuskStoneToPlayer
+	goto Route9_StarterDome_GiveStones
+	end
+
+Route9_StarterDome_GiveDuskStoneToPlayer::
 	hideface 0
 	giveitem ITEM_DUSK_STONE, 1
 	closemessage
@@ -1948,3 +1994,27 @@ Route9_StarterDome_Text_PreventLeave:
 	.string "Wait!\p"
 	.string "You should pick a Pokémon before\n"
 	.string "leaving…$"
+
+Route9_StarterDome_Text_WouldYouLikeTheThunderStone:
+	.string "Are you sure you want the\n"
+	.string "Thunderstone?$"
+
+Route9_StarterDome_Text_WouldYouLikeTheFireStone:
+	.string "Are you sure you want the\n"
+	.string "Fire Stone?$"
+
+Route9_StarterDome_Text_WouldYouLikeTheWaterStone:
+	.string "Are you sure you want the\n"
+	.string "Water Stone?$"
+
+Route9_StarterDome_Text_WouldYouLikeTheLeafStone:
+	.string "Are you sure you want the\n"
+	.string "Leaf Stone?$"
+
+Route9_StarterDome_Text_WouldYouLikeTheDawnStone:
+	.string "Are you sure you want the\n"
+	.string "Dawn Stone?$"
+
+Route9_StarterDome_Text_WouldYouLikeTheDuskStone:
+	.string "Are you sure you want the\n"
+	.string "Dusk Stone?$"

@@ -94,7 +94,7 @@ Route9_StarterDome::
 	msgbox Route9_Text_HeyNoWay, MSGBOX_AUTOCLOSE
 	hideface 1
 	call Common_EventScript_GetPlayerPos
-	compare VAR_TEMP_1, 46
+	compare VAR_TEMP_1, 55
 	goto_if_eq Route9_StarterDome_Top
 	goto Route9_StarterDome_Bottom
 	end
@@ -210,7 +210,7 @@ Route9_StarterDome_DazIntro::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	compare VAR_TEMP_1, 46
+	compare VAR_TEMP_1, 55
 	goto_if_eq Route9_StarterDome_EnterTop
 	goto Route9_StarterDome_EnterBottom
 	end
