@@ -138,14 +138,6 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 42,
-      "y": 10,
-      "elevation": 3,
-      "item": "ITEM_KEY_TO_ROOM_1",
-      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY"
-    },
-    {
-      "type": "hidden_item",
       "x": 20,
       "y": 5,
       "elevation": 3,
