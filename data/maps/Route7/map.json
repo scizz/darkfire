@@ -437,6 +437,14 @@
       "elevation": 0,
       "item": "ITEM_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_PROTEIN"
+    },
+    {
+      "type": "hidden_item",
+      "x": 79,
+      "y": 44,
+      "elevation": -1,
+      "item": "ITEM_POKE_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_7_CHARCOAL"
     }
   ]
 }
