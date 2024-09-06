@@ -674,6 +674,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "AnheimForest_Sign_Town"
+    },
+    {
+      "type": "hidden_item",
+      "x": 72,
+      "y": 25,
+      "elevation": 0,
+      "item": "ITEM_LEAF_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL"
     }
   ]
 }
