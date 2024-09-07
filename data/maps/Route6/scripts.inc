@@ -135,8 +135,8 @@ Route6_Ranger_Yes::
 	hideface 0
 	applymovement LOCALID_RANGER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, DelayDelay
 	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, WR2D
@@ -190,6 +190,11 @@ Route6_Ranger_No::
 	waitmovement 0
 	release
 	end
+
+DelayDelay:
+	delay_16
+	delay_16
+	step_end
 
 LFDD:
 	lock_facing_direction
