@@ -3110,6 +3110,7 @@ static void SurfFieldEffect_FieldMovePose(struct Task *task)
 static void SurfFieldEffect_ShowMon(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
+    LockPlayerFieldControls();
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
