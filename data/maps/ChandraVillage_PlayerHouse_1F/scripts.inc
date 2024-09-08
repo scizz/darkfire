@@ -47,8 +47,7 @@ ChandraVillage_PlayerHouse_1F_Mother_PKMN_Menu::
 	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_PKMN_Menu, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
-	waitmovement 0
+	delay 20
 	speakername2 CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest, MSGBOX_YESNO
@@ -64,8 +63,7 @@ ChandraVillage_PlayerHouse_1F_Mother_Badge_One::
 	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_Badge_One, MSGBOX_AUTOCLOSE
 	hideface 0
-	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceSlowDown
-	waitmovement 0
+	delay 20
 	speakername2 CommonName_Text_Mom
 	showface FS_MOM, FSE_NORMAL, 0, 0
 	msgbox ChandraVillage_PlayerHouse_Text_1F_Mother_HowAboutAQuickRest, MSGBOX_YESNO
