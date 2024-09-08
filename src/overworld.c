@@ -4511,5 +4511,6 @@ void FollowerIntoPokeball(void)
         LockPlayerFieldControls();
         ObjectEventForceSetHeldMovement(&gObjectEvents[gSaveBlock2Ptr->follower.objId], MOVEMENT_ACTION_FOLLOWING_POKEMON_SHRINK);
         gSpecialVar_Unused_0x8014 = 1;
+        gSaveBlock2Ptr->follower.delayedState = 0;
     }
 }

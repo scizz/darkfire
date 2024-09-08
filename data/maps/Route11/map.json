@@ -177,16 +177,16 @@
     },
     {
       "type": "sign",
-      "x": 19,
-      "y": 55,
+      "x": 25,
+      "y": 57,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route11_Sign_Demo"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 55,
+      "x": 24,
+      "y": 57,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route11_Sign_Demo"

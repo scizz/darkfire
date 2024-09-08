@@ -294,7 +294,7 @@
       "x": 22,
       "y": 6,
       "elevation": 0,
-      "item": "ITEM_GREAT_BALL",
+      "item": "ITEM_ABILITY_PATCH",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3"
     },
     {

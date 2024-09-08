@@ -1213,6 +1213,7 @@ void FollowMe_WarpSetEnd(void)
     follower = &gObjectEvents[GetFollowerMapObjId()];
 
     gSaveBlock2Ptr->follower.warpEnd = 1;
+    gSaveBlock2Ptr->follower.delayedState = 0;
     PlayerLogCoordinates(player);
 
     toY = gSaveBlock2Ptr->follower.comeOutDoorStairs == 1 ? (player->currentCoords.y - 1) : player->currentCoords.y;

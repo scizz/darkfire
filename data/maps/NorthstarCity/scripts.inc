@@ -280,8 +280,8 @@ NorthstarCity_PsychicTony::
 	lock
 	faceplayer
 	goto_if_not_defeated TRAINER_GUITARIST_VIKTOR, NorthstarCity_PsychicTonyNotDefeated
-	goto_if_not_defeated TRAINER_GUITARIST_VIKTOR, NorthstarCity_PsychicTonyNotDefeated
-	goto_if_not_defeated TRAINER_GUITARIST_VIKTOR, NorthstarCity_PsychicTonyNotDefeated
+	goto_if_not_defeated TRAINER_GUITARIST_MARCUS, NorthstarCity_PsychicTonyNotDefeated
+	goto_if_not_defeated TRAINER_PSYCHIC_BLAKE, NorthstarCity_PsychicTonyNotDefeated
 	msgbox NorthstarCity_Text_PsychicTony1, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_PSYCHIC_TONY, PsychicTony_Text_Defeated
 	msgbox NorthstarCity_Text_PsychicTony2, MSGBOX_AUTOCLOSE

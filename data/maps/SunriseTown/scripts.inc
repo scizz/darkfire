@@ -138,8 +138,9 @@ SunriseTown_Fat_Guy::
 
 SunriseTown_Cook_Talked_To::
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
-	msgbox SunriseTown_Fat_Guy_Awaken, MSGBOX_NPC
+	msgbox SunriseTown_Fat_Guy_Awaken, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_WalkInPlaceSlowDown
 	waitmovement 0
 	emote 4, 7

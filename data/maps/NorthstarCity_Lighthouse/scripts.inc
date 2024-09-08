@@ -14,9 +14,11 @@ NorthstarCity_Lighthouse_OnWarp:
 	.2byte 0
 
 NorthstarCity_Lighthouse_InitRoomObjects::
+	updatefollowerpokemongraphic
 	showfollower
 	setobjectxy LOCALID_OLD_MAN, 36, 5
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_EAST
 	turnobject LOCALID_OLD_MAN, DIR_NORTH
 	end
 

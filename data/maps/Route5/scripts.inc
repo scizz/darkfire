@@ -508,8 +508,8 @@ Route5_Text_Sign:
 Route5_Text_Myth:
 	.string "The one destin'd to awaken the\n"
 	.string "sleeping Pokémon, heareth this…\p"
-	.string "Who is't can navigateth termagant\n"
-	.string "wat'rfalls liketh halcyon staircases.$"
+	.string "Thee mus't navigateth wat'rfalls\n"
+	.string "liketh halcyon staircases.$"
 
 Route5_Text_Myth_2:
 	.string "Oh, bird of mine own soul, flyeth\n"

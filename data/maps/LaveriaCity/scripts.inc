@@ -127,8 +127,8 @@ LaveriaCity_SailToNorthstarCity::
 	end
 
 LaveriaCity_NorthstarPlayerTop::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
@@ -139,8 +139,8 @@ LaveriaCity_NorthstarPlayerTop::
 	end
 
 LaveriaCity_NorthstarPlayerLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
@@ -167,8 +167,8 @@ LaveriaCity_SailToLaveriaIsland::
 	end
 
 LaveriaCity_IslandPlayerTop::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
@@ -179,8 +179,8 @@ LaveriaCity_IslandPlayerTop::
 	end
 
 LaveriaCity_IslandPlayerLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
@@ -260,8 +260,8 @@ LaveriaCity_SailorTwo_CheckPlayerPos::
 	end
 
 LaveriaCity_SailorTwo_IslandPlayerRight::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	delay 30
 	applymovement LOCALID_SAILOR_2, WDR
@@ -278,8 +278,8 @@ LaveriaCity_SailorTwo_IslandPlayerRight::
 	end
 
 LaveriaCity_SailorTwo_IslandPlayerBottom::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	delay 30
 	applymovement LOCALID_SAILOR_2, WRD

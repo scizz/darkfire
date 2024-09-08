@@ -36,7 +36,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
+      "flag": "FLAG_BADGE01_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
@@ -49,7 +49,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
+      "flag": "FLAG_BADGE01_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
@@ -62,7 +62,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
+      "flag": "FLAG_BADGE01_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
@@ -101,7 +101,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
+      "flag": "FLAG_BADGE01_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
@@ -114,7 +114,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
+      "flag": "FLAG_BADGE01_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
@@ -127,7 +127,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GREENDALE_VILLAGE_ROSE"
+      "flag": "FLAG_BADGE01_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LUCY",

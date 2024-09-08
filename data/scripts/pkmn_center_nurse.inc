@@ -33,8 +33,8 @@ EventScript_PkmnCenterNurse_IllTakeYourPkmn2::
 	return
 
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay144
 	applymovement OBJ_EVENT_ID_FOLLOWER, Common_Movement_ShrinkPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
 	waitmovement 0
 	call_if_eq VAR_UNUSED_0x8014, 1, EventScript_FollowerIntoPokeballDelay
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterLeft

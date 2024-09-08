@@ -41,8 +41,6 @@ HighwindVillage_Daz::
 	delay 10
 	applymovement LOCALID_DAZ, Common_Movement_FaceLeft
 	delay 20
-	applymovement LOCALID_DAZ, Common_Movement_FaceUp
-	delay 20
 	applymovement LOCALID_DAZ, Common_Movement_FaceRight
 	delay 20
 	applymovement LOCALID_DAZ, Common_Movement_WalkInPlaceSlowDown
