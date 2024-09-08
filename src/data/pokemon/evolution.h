@@ -118,7 +118,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_EEVEE]                 = {{EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_JOLTEON},
                                        {EVO_ITEM, ITEM_WATER_STONE, SPECIES_VAPOREON},
                                        {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON},
-                                       {EVO_ITEM, ITEM_DAWN_STONE, SPECIES_ESPEON},
+                                       {EVO_ITEM, ITEM_SUN_STONE, SPECIES_ESPEON},
                                        {EVO_ITEM, ITEM_MOON_STONE, SPECIES_UMBREON},
                                     #if P_GEN_4_POKEMON == TRUE
                                        {EVO_SPECIFIC_MAP, MAP_PETALBURG_WOODS, SPECIES_LEAFEON},

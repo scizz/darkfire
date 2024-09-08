@@ -128,7 +128,7 @@ LaveriaCity_Text_Interlink_Little_Boy:
 	.string "and Water Stone makes Vaporeon.\p"
 	.string "Thunder Stone? Jolteon!\n"
 	.string "And Moon Stone will get you Umbreon.\p"
-	.string "But, Dawn Stone turns Eevee into my\n"
+	.string "But, Sun Stone turns Eevee into my\n"
 	.string "favorite Pokémon ever, Espeon!$"
 
 LaveriaCity_Text_Interlink_Girl:

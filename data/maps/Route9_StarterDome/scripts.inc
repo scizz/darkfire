@@ -475,8 +475,8 @@ Route9_StarterDome_GiveStones::
 	case 1, Route9_StarterDome_GiveFireStone
 	case 2, Route9_StarterDome_GiveWaterStone
 	case 3, Route9_StarterDome_GiveLeafStone
-	case 4, Route9_StarterDome_GiveDawnStone
-	case 5, Route9_StarterDome_GiveDuskStone
+	case 4, Route9_StarterDome_GiveSunStone
+	case 5, Route9_StarterDome_GiveMoonStone
 	end
 
 Route9_StarterDome_GiveThunderStone::
@@ -535,30 +535,30 @@ Route9_StarterDome_GiveLeafStoneToPlayer::
 	goto Route9_StarterDome_EventEnd
 	end
 
-Route9_StarterDome_GiveDawnStone::
-	msgbox Route9_StarterDome_Text_WouldYouLikeTheDawnStone, MSGBOX_YESNO
+Route9_StarterDome_GiveSunStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheSunStone, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
-	goto_if_eq Route9_StarterDome_GiveDawnStoneToPlayer
+	goto_if_eq Route9_StarterDome_GiveSunStoneToPlayer
 	goto Route9_StarterDome_GiveStones
 	end
 
-Route9_StarterDome_GiveDawnStoneToPlayer::
+Route9_StarterDome_GiveSunStoneToPlayer::
 	hideface 0
-	giveitem ITEM_DAWN_STONE, 1
+	giveitem ITEM_SUN_STONE, 1
 	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
 
-Route9_StarterDome_GiveDuskStone::
-	msgbox Route9_StarterDome_Text_WouldYouLikeTheDuskStone, MSGBOX_YESNO
+Route9_StarterDome_GiveMoonStone::
+	msgbox Route9_StarterDome_Text_WouldYouLikeTheMoonStone, MSGBOX_YESNO
 	compare VAR_RESULT, TRUE
-	goto_if_eq Route9_StarterDome_GiveDuskStoneToPlayer
+	goto_if_eq Route9_StarterDome_GiveMoonStoneToPlayer
 	goto Route9_StarterDome_GiveStones
 	end
 
-Route9_StarterDome_GiveDuskStoneToPlayer::
+Route9_StarterDome_GiveMoonStoneToPlayer::
 	hideface 0
-	giveitem ITEM_DUSK_STONE, 1
+	giveitem ITEM_MOON_STONE, 1
 	closemessage
 	goto Route9_StarterDome_EventEnd
 	end
@@ -1890,30 +1890,6 @@ Route9_StarterDome_Text_WhichEvolutionaryStone:
 	.string "Which evolutionary stone would you\n"
 	.string "like, {PLAYER}?$"
 
-Route9_StarterDome_Text_ThunderStone:
-	.string "Are you sure you want to take the\n"
-	.string "ThunderStone?$"
-
-Route9_StarterDome_Text_WaterStone:
-	.string "Are you sure you want to take the\n"
-	.string "Water Stone?$"
-
-Route9_StarterDome_Text_FireStone:
-	.string "Are you sure you want to take the\n"
-	.string "Fire Stone?$"
-
-Route9_StarterDome_Text_LeafStone:
-	.string "Are you sure you want to take the\n"
-	.string "Leaf Stone?$"
-
-Route9_StarterDome_Text_MoonStone:
-	.string "Are you sure you want to take the\n"
-	.string "Moon Stone?$"
-
-Route9_StarterDome_Text_SunStone:
-	.string "Are you sure you want to take the\n"
-	.string "Sun Stone?$"
-
 Route9_StarterDome_Text_ExcellentIAmCertain:
 	.string "Excellent! I am certain that will help\n"
 	.string "you on your journey.\p"
@@ -2011,10 +1987,10 @@ Route9_StarterDome_Text_WouldYouLikeTheLeafStone:
 	.string "Are you sure you want the\n"
 	.string "Leaf Stone?$"
 
-Route9_StarterDome_Text_WouldYouLikeTheDawnStone:
+Route9_StarterDome_Text_WouldYouLikeTheSunStone:
 	.string "Are you sure you want the\n"
-	.string "Dawn Stone?$"
+	.string "Sun Stone?$"
 
-Route9_StarterDome_Text_WouldYouLikeTheDuskStone:
+Route9_StarterDome_Text_WouldYouLikeTheMoonStone:
 	.string "Are you sure you want the\n"
-	.string "Dusk Stone?$"
+	.string "Moon Stone?$"
