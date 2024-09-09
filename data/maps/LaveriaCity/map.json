@@ -120,7 +120,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 12,
+      "x": 9,
       "y": 30,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
