@@ -132,7 +132,9 @@
     "MtProboPeak",
     "MtProboCave_1F",
     "MtProbo",
-    "MtProboCave_2F"
+    "MtProboCave_2F",
+    "MtProboTemple",
+    "MtProboEntrance"
   ],
   "gMapGroup_DarkfireGrottos": [
     "Route4EastTreeGrotto"

@@ -1410,3 +1410,9 @@ Script_RemoveTint::
 
 	.include "data/maps/MtProboCave_2F/scripts.inc"
 	.include "data/maps/MtProboCave_2F/text.inc"
+
+	.include "data/maps/MtProboTemple/scripts.inc"
+	.include "data/maps/MtProboTemple/text.inc"
+
+	.include "data/maps/MtProboEntrance/scripts.inc"
+	.include "data/maps/MtProboEntrance/text.inc"

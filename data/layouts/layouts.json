@@ -5854,8 +5854,8 @@
     {
       "id": "LAYOUT_MT_PROBO_CAVE_1F",
       "name": "MtProboCave_1F_Layout",
-      "width": 62,
-      "height": 118,
+      "width": 64,
+      "height": 53,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/MtProboCave_1F/border.bin",
@@ -5890,6 +5890,26 @@
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/MtProboCave_2F/border.bin",
       "blockdata_filepath": "data/layouts/MtProboCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_PROBO_TEMPLE",
+      "name": "MtProboTemple_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/MtProboTemple/border.bin",
+      "blockdata_filepath": "data/layouts/MtProboTemple/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_PROBO_ENTRANCE",
+      "name": "MtProboEntrance_Layout",
+      "width": 38,
+      "height": 25,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/MtProboEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/MtProboEntrance/map.bin"
     }
   ]
 }

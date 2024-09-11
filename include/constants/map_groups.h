@@ -75,10 +75,12 @@
 #define MAP_HORIZON_ISLAND_JUNGLE_PEAK      (5 | (2 << 8))
 
 // gMapGroup_DarkfireIslandDungeons
-#define MAP_MT_PROBO_PEAK    (0 | (3 << 8))
-#define MAP_MT_PROBO_CAVE_1F (1 | (3 << 8))
-#define MAP_MT_PROBO         (2 | (3 << 8))
-#define MAP_MT_PROBO_CAVE_2F (3 | (3 << 8))
+#define MAP_MT_PROBO_PEAK     (0 | (3 << 8))
+#define MAP_MT_PROBO_CAVE_1F  (1 | (3 << 8))
+#define MAP_MT_PROBO          (2 | (3 << 8))
+#define MAP_MT_PROBO_CAVE_2F  (3 | (3 << 8))
+#define MAP_MT_PROBO_TEMPLE   (4 | (3 << 8))
+#define MAP_MT_PROBO_ENTRANCE (5 | (3 << 8))
 
 // gMapGroup_DarkfireGrottos
 #define MAP_ROUTE4EAST_TREE_GROTTO (0 | (4 << 8))
