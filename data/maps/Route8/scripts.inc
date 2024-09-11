@@ -1,13 +1,13 @@
 Route8_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, Route8_OnLoad
 	map_script MAP_SCRIPT_ON_RESUME, Route8_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, Route8_OnLoad
 	.byte
-
-Route8_OnLoad:
-	end
 
 Route8_OnResume:
 	setstepcallback STEP_CB_ASH
+	end
+
+Route8_OnLoad:
 	end
 
 Route8_Sign::

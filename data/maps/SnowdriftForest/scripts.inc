@@ -3,17 +3,8 @@
 .set LOCALID_NOCTOWL, 14
 
 SnowdriftForest_MapScripts::
-	map_script MAP_SCRIPT_ON_RESUME, SnowdriftForest_OnResume
-	map_script MAP_SCRIPT_ON_LOAD, SnowdriftForest_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, SnowdriftForest_OnTransition
 	.byte
-
-SnowdriftForest_OnResume:
-	setstepcallback STEP_CB_ASH
-	end
-
-SnowdriftForest_OnLoad:
-	end
 
 SnowdriftForest_OnTransition:
 	setflag FLAG_SNOWDRIFT_FOREST_OWL
