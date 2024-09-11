@@ -5880,6 +5880,16 @@
       "secondary_tileset": "gTileset_UnionRoom",
       "border_filepath": "data/layouts/HorizonIslandSouthCoastPeak/border.bin",
       "blockdata_filepath": "data/layouts/HorizonIslandSouthCoastPeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_PROBO_CAVE_2F",
+      "name": "MtProboCave_2F_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Rindo",
+      "border_filepath": "data/layouts/MtProboCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/MtProboCave_2F/map.bin"
     }
   ]
 }

@@ -131,7 +131,8 @@
   "gMapGroup_DarkfireIslandDungeons": [
     "MtProboPeak",
     "MtProboCave_1F",
-    "MtProbo"
+    "MtProbo",
+    "MtProboCave_2F"
   ],
   "gMapGroup_DarkfireGrottos": [
     "Route4EastTreeGrotto"
