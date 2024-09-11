@@ -562,6 +562,19 @@ const u8 *const gItemEffectTable[] =
     [ITEM_CHIPPED_POT - ITEM_POTION]      = gItemEffect_EvoItem,
     [ITEM_GALARICA_CUFF - ITEM_POTION]    = gItemEffect_EvoItem,
     [ITEM_GALARICA_WREATH - ITEM_POTION]  = gItemEffect_EvoItem,
+    [ITEM_KINGS_ROCK - ITEM_POTION]       = gItemEffect_EvoItem,
+    [ITEM_DRAGON_SCALE - ITEM_POTION]     = gItemEffect_EvoItem,
+    [ITEM_METAL_COAT - ITEM_POTION]       = gItemEffect_EvoItem,
+    [ITEM_UPGRADE - ITEM_POTION]          = gItemEffect_EvoItem,
+    [ITEM_DEEP_SEA_TOOTH - ITEM_POTION]   = gItemEffect_EvoItem,
+    [ITEM_DEEP_SEA_SCALE - ITEM_POTION]   = gItemEffect_EvoItem,
+    [ITEM_PROTECTOR - ITEM_POTION]        = gItemEffect_EvoItem,
+    [ITEM_ELECTIRIZER - ITEM_POTION]      = gItemEffect_EvoItem,
+    [ITEM_MAGMARIZER - ITEM_POTION]       = gItemEffect_EvoItem,
+    [ITEM_DUBIOUS_DISC - ITEM_POTION]     = gItemEffect_EvoItem,
+    [ITEM_REAPER_CLOTH - ITEM_POTION]     = gItemEffect_EvoItem,
+
+    
 
     // Berries
     [ITEM_CHERI_BERRY - ITEM_POTION]      = gItemEffect_CheriBerry,
