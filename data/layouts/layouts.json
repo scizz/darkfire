@@ -5910,6 +5910,16 @@
       "secondary_tileset": "gTileset_Rindo",
       "border_filepath": "data/layouts/MtProboEntrance/border.bin",
       "blockdata_filepath": "data/layouts/MtProboEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCCA_ISLAND_PORT",
+      "name": "OccaIslandPort_Layout",
+      "width": 70,
+      "height": 70,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/OccaIslandPort/border.bin",
+      "blockdata_filepath": "data/layouts/OccaIslandPort/map.bin"
     }
   ]
 }

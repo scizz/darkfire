@@ -1416,3 +1416,6 @@ Script_RemoveTint::
 
 	.include "data/maps/MtProboEntrance/scripts.inc"
 	.include "data/maps/MtProboEntrance/text.inc"
+
+	.include "data/maps/OccaIslandPort/scripts.inc"
+	.include "data/maps/OccaIslandPort/text.inc"
