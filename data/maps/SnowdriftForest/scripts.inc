@@ -6,7 +6,7 @@ SnowdriftForest_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SnowdriftForest_OnResume
 	map_script MAP_SCRIPT_ON_LOAD, SnowdriftForest_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, SnowdriftForest_OnTransition
-	.byte
+	.byte 0
 
 SnowdriftForest_OnResume:
 	setstepcallback STEP_CB_ASH

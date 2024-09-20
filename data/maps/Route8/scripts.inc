@@ -1,7 +1,7 @@
 Route8_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route8_OnResume
 	map_script MAP_SCRIPT_ON_LOAD, Route8_OnLoad
-	.byte
+	.byte 0
 
 Route8_OnResume:
 	setstepcallback STEP_CB_ASH
