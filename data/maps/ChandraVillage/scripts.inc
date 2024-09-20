@@ -148,7 +148,7 @@ ChandraVillage_LabDone::
 	setflag FLAG_HIDE_CHANDRA_VILLAGE_LAB_PROF
 	setflag FLAG_SYS_POKEDEX_GET
 	addobject 64
-	setfollower 64, 0x0
+	setfollower 64, 0x100
 	updatefollowerpokemongraphic
 	hidefollower
 	setvar VAR_STORYLINE_STATE, 8

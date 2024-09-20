@@ -55,4 +55,7 @@ bool8 PlayerHasFollower(void);
 void Task_DoDoorWarp(u8 taskId);
 bool8 IsPlayerOnFoot(void);
 
+const u8 *GetFollowerScript(void);
+void ReassignFollowerScriptPointers(void);
+
 #endif //GUARD_FOLLOW_ME_H 

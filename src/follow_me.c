@@ -1,6 +1,7 @@
 #include "global.h"
 #include "follow_me.h"
 #include "event_object_movement.h"
+#include "event_scripts.h"
 #include "field_door.h"
 #include "field_effect.h"
 #include "field_effect_helpers.h"
@@ -1264,6 +1265,11 @@ void CreateFollowerAvatar(void)
     gObjectEvents[gSaveBlock2Ptr->follower.objId].invisible = TRUE;
 }
 
+const u8 *GetFollowerScript(void)
+{
+    return EventScript_Follower;
+}
+
 static void TurnNPCIntoFollower(u8 localId, u16 followerFlags)
 {
     struct ObjectEvent* follower;
@@ -1285,10 +1291,9 @@ static void TurnNPCIntoFollower(u8 localId, u16 followerFlags)
             follower->movementType = MOVEMENT_TYPE_NONE; //Doesn't get to move on its own anymore
             gSprites[follower->spriteId].callback = MovementType_None; //MovementType_None
             SetObjEventTemplateMovementType(localId, 0);
+            
             if (followerFlags & FOLLOWER_FLAG_CUSTOM_FOLLOW_SCRIPT)
-                script = (const u8 *)ReadWord(0);
-            else
-                script = GetObjectEventScriptPointerByObjectEventId(eventObjId);
+                script = GetFollowerScript();
             
             flag = GetObjectEventTemplateByLocalIdAndMap(follower->localId, follower->mapNum, follower->mapGroup)->flagId;
             gSaveBlock2Ptr->follower.inProgress = TRUE;
@@ -1306,6 +1311,17 @@ static void TurnNPCIntoFollower(u8 localId, u16 followerFlags)
             if (!(gSaveBlock2Ptr->follower.flags & FOLLOWER_FLAG_CAN_BIKE) //Follower can't bike
             &&  TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_BIKE)) //Player on bike
                 SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT); //Dismmount Bike
+        }
+    }
+}
+
+void ReassignFollowerScriptPointers(void)
+{
+    if (gSaveBlock2Ptr->follower.inProgress)
+    {
+        if (gSaveBlock2Ptr->follower.flags & FOLLOWER_FLAG_CUSTOM_FOLLOW_SCRIPT)
+        {
+            gSaveBlock2Ptr->follower.script = GetFollowerScript();
         }
     }
 }

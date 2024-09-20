@@ -1,5 +1,7 @@
 #include "global.h"
 #include "main.h"
+#include "event_scripts.h"
+#include "follow_me.h"
 #include "gpu_regs.h"
 #include "m4a.h"
 #include "load_save.h"
