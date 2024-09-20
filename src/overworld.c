@@ -23,6 +23,7 @@
 #include "field_weather.h"
 #include "fieldmap.h"
 #include "fldeff.h"
+#include "follow_me.h"
 #include "gpu_regs.h"
 #include "heal_location.h"
 #include "io_reg.h"
@@ -2413,6 +2414,8 @@ static void FieldCB_FadeTryShowMapPopup(void)
 void CB2_ContinueSavedGame(void)
 {
     u8 trainerHillMapId;
+
+    ReassignFollowerScriptPointers();
 
     FieldClearVBlankHBlankCallbacks();
     StopMapMusic();
