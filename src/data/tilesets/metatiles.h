@@ -264,3 +264,9 @@ const u16 gMetatileAttributes_PinapIslands[] = INCBIN_U16("data/tilesets/primary
 
 const u16 gMetatiles_PerlshawHills[] = INCBIN_U16("data/tilesets/secondary/perlshaw_hills/metatiles.bin");
 const u16 gMetatileAttributes_PerlshawHills[] = INCBIN_U16("data/tilesets/secondary/perlshaw_hills/metatile_attributes.bin");
+
+const u16 gMetatiles_OccaIslandPort[] = INCBIN_U16("data/tilesets/secondary/occa_island_port/metatiles.bin");
+const u16 gMetatileAttributes_OccaIslandPort[] = INCBIN_U16("data/tilesets/secondary/occa_island_port/metatile_attributes.bin");
+
+const u16 gMetatiles_TribalCave[] = INCBIN_U16("data/tilesets/secondary/tribal_cave/metatiles.bin");
+const u16 gMetatileAttributes_TribalCave[] = INCBIN_U16("data/tilesets/secondary/tribal_cave/metatile_attributes.bin");

@@ -1995,3 +1995,41 @@ const u16 gTilesetPalettes_PerlshawHills[][16] =
 };
 
 const u32 gTilesetTiles_PerlshawHills[] = INCBIN_U32("data/tilesets/secondary/perlshaw_hills/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_OccaIslandPort[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/occa_island_port/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_OccaIslandPort[] = INCBIN_U32("data/tilesets/secondary/occa_island_port/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_TribalCave[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/tribal_cave/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_TribalCave[] = INCBIN_U32("data/tilesets/secondary/tribal_cave/tiles.4bpp.lz");

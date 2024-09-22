@@ -1034,3 +1034,25 @@ const struct Tileset gTileset_PerlshawHills =
     .metatileAttributes = gMetatileAttributes_PerlshawHills,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OccaIslandPort =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OccaIslandPort,
+    .palettes = gTilesetPalettes_OccaIslandPort,
+    .metatiles = gMetatiles_OccaIslandPort,
+    .metatileAttributes = gMetatileAttributes_OccaIslandPort,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_TribalCave =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_TribalCave,
+    .palettes = gTilesetPalettes_TribalCave,
+    .metatiles = gMetatiles_TribalCave,
+    .metatileAttributes = gMetatileAttributes_TribalCave,
+    .callback = NULL,
+};
