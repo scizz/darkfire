@@ -5915,7 +5915,7 @@
       "id": "LAYOUT_OCCA_ISLAND_PORT",
       "name": "OccaIslandPort_Layout",
       "width": 70,
-      "height": 70,
+      "height": 56,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_OccaIslandPort",
       "border_filepath": "data/layouts/OccaIslandPort/border.bin",
