@@ -5920,6 +5920,16 @@
       "secondary_tileset": "gTileset_OccaIslandPort",
       "border_filepath": "data/layouts/OccaIslandPort/border.bin",
       "blockdata_filepath": "data/layouts/OccaIslandPort/map.bin"
+    },
+    {
+      "id": "LAYOUT_CROSSROADS",
+      "name": "Crossroads_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Crossroads",
+      "border_filepath": "data/layouts/Crossroads/border.bin",
+      "blockdata_filepath": "data/layouts/Crossroads/map.bin"
     }
   ]
 }

@@ -1056,3 +1056,14 @@ const struct Tileset gTileset_TribalCave =
     .metatileAttributes = gMetatileAttributes_TribalCave,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Crossroads =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Crossroads,
+    .palettes = gTilesetPalettes_Crossroads,
+    .metatiles = gMetatiles_Crossroads,
+    .metatileAttributes = gMetatileAttributes_Crossroads,
+    .callback = NULL,
+};

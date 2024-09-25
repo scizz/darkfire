@@ -2033,3 +2033,22 @@ const u16 gTilesetPalettes_TribalCave[][16] =
 };
 
 const u32 gTilesetTiles_TribalCave[] = INCBIN_U32("data/tilesets/secondary/tribal_cave/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Crossroads[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crossroads/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Crossroads[] = INCBIN_U32("data/tilesets/secondary/crossroads/tiles.4bpp.lz");
