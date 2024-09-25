@@ -270,3 +270,6 @@ const u16 gMetatileAttributes_OccaIslandPort[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_TribalCave[] = INCBIN_U16("data/tilesets/secondary/tribal_cave/metatiles.bin");
 const u16 gMetatileAttributes_TribalCave[] = INCBIN_U16("data/tilesets/secondary/tribal_cave/metatile_attributes.bin");
+
+const u16 gMetatiles_Crossroads[] = INCBIN_U16("data/tilesets/secondary/crossroads/metatiles.bin");
+const u16 gMetatileAttributes_Crossroads[] = INCBIN_U16("data/tilesets/secondary/crossroads/metatile_attributes.bin");

@@ -1419,3 +1419,5 @@ Script_RemoveTint::
 
 	.include "data/maps/OccaIslandPort/scripts.inc"
 	.include "data/maps/OccaIslandPort/text.inc"
+
+	.include "data/maps/Crossroads/scripts.inc"
