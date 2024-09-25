@@ -101,7 +101,7 @@ ChandraVillage_TylerHouse_2F_Middle:
 ChandraVillage_TylerHouse_2F_Right:
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 1, 1
+	emote 1, 1
 	playse SE_PIN
 	waitse
 	speakername CommonName_Text_Tyler
