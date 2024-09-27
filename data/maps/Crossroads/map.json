@@ -3,13 +3,22 @@
   "name": "Crossroads",
   "layout": "LAYOUT_CROSSROADS",
   "music": "MUS_ROUTE_3_4",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_CROSSROADS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_ROUTE11",
+      "offset": 8,
+      "direction": "up"
+    }
+  ],
   "object_events": [
 
   ],
@@ -21,8 +30,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }

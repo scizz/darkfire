@@ -17,6 +17,11 @@
       "map": "MAP_PINLEAF_TOWN",
       "offset": -18,
       "direction": "right"
+    },
+    {
+      "map": "MAP_CROSSROADS",
+      "offset": -8,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -144,6 +149,13 @@
       "y": 15,
       "elevation": 3,
       "dest_map": "MAP_ROUTE11_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 71,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE11",
       "dest_warp_id": "0"
     }
   ],
