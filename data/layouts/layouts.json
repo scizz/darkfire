@@ -5504,10 +5504,10 @@
     {
       "id": "LAYOUT_ROUTE12",
       "name": "Route12_Layout",
-      "width": 92,
-      "height": 52,
+      "width": 95,
+      "height": 50,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/Route12/border.bin",
       "blockdata_filepath": "data/layouts/Route12/map.bin"
     },
@@ -5582,14 +5582,14 @@
       "blockdata_filepath": "data/layouts/TwilightVillage/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE14",
-      "name": "Route14_Layout",
-      "width": 95,
-      "height": 50,
+      "id": "LAYOUT_ROUTE19",
+      "name": "Route19_Layout",
+      "width": 92,
+      "height": 52,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
-      "border_filepath": "data/layouts/Route14/border.bin",
-      "blockdata_filepath": "data/layouts/Route14/map.bin"
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/Route19/border.bin",
+      "blockdata_filepath": "data/layouts/Route19/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE15",
@@ -5930,6 +5930,36 @@
       "secondary_tileset": "gTileset_Crossroads",
       "border_filepath": "data/layouts/Crossroads/border.bin",
       "blockdata_filepath": "data/layouts/Crossroads/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE14",
+      "name": "Route14_Layout",
+      "width": 62,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/Route14/border.bin",
+      "blockdata_filepath": "data/layouts/Route14/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE20",
+      "name": "Route20_Layout",
+      "width": 90,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/Route20/border.bin",
+      "blockdata_filepath": "data/layouts/Route20/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE21",
+      "name": "Route21_Layout",
+      "width": 144,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SeaRoute",
+      "border_filepath": "data/layouts/Route21/border.bin",
+      "blockdata_filepath": "data/layouts/Route21/map.bin"
     }
   ]
 }
