@@ -246,7 +246,8 @@
 #define MAPSEC_SNOWDRIFT_FOREST             0xF3
 #define MAPSEC_ROUTE_31                     0xF4
 #define MAPSEC_MUDDY_UNDERPASS              0xF5
-#define MAPSEC_NONE                         0xF6
+#define MAPSEC_CROSSROADS                   0xF6
+#define MAPSEC_NONE                         0xF7
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
