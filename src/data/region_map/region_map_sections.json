@@ -249,6 +249,14 @@
       "height": 3
     },
     {
+      "map_section": "MAPSEC_ROUTE_12",
+      "name": "Route 12",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
       "map_section": "MAPSEC_WATERWAY_CITY",
       "name": "Waterway City",
       "x": 0,
@@ -267,6 +275,102 @@
     {
       "map_section": "MAPSEC_CROSSROADS",
       "name": "Crossroads",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_MAYHEM_CITY",
+      "name": "Mayhem City",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_MOONSPRING_CITY",
+      "name": "Moonspring City",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ZORYA_VILLAGE",
+      "name": "Zorya Village",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_DRIFTSTREAM_TOWN",
+      "name": "Driftstream Town",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_MIRANIA_TOWN",
+      "name": "Mirania Town",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_THYMESGROVE_CITY",
+      "name": "Thymesgrove City",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_TWILIGHT_VILLAGE",
+      "name": "Twilight Village",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_PORT_BALINA",
+      "name": "Port Balina",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_WEST_DISTRICT",
+      "name": "West District",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_BATTLE_DISTRICT",
+      "name": "Battle District",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_PORT",
+      "name": "Port",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_OUTSKIRTS",
+      "name": "Outskirts",
       "x": 0,
       "y": 0,
       "width": 0,
