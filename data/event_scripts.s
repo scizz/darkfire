@@ -1422,8 +1422,12 @@ Script_RemoveTint::
 
 	.include "data/maps/Crossroads/scripts.inc"
 
-	.include "data/maps/Route14/scripts.inc"
-
 	.include "data/maps/Route20/scripts.inc"
 
 	.include "data/maps/Route21/scripts.inc"
+
+	.include "data/maps/Route26/scripts.inc"
+
+	.include "data/maps/Route14/scripts.inc"
+
+	.include "data/maps/Route18/scripts.inc"
