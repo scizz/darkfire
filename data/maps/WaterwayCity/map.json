@@ -74,7 +74,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORTHSTAR_BOAT",
-      "x": 19,
+      "x": 20,
       "y": 87,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -191,7 +191,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 17,
+      "x": 18,
       "y": 85,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
