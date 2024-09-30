@@ -279,3 +279,6 @@ const u16 gMetatileAttributes_SeaRoute[] = INCBIN_U16("data/tilesets/secondary/s
 
 const u16 gMetatiles_WindyRoute[] = INCBIN_U16("data/tilesets/secondary/windy_route/metatiles.bin");
 const u16 gMetatileAttributes_WindyRoute[] = INCBIN_U16("data/tilesets/secondary/windy_route/metatile_attributes.bin");
+
+const u16 gMetatiles_MtTwilight[] = INCBIN_U16("data/tilesets/secondary/mt_twilight/metatiles.bin");
+const u16 gMetatileAttributes_MtTwilight[] = INCBIN_U16("data/tilesets/secondary/mt_twilight/metatile_attributes.bin");

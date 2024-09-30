@@ -2090,3 +2090,22 @@ const u16 gTilesetPalettes_WindyRoute[][16] =
 };
 
 const u32 gTilesetTiles_WindyRoute[] = INCBIN_U32("data/tilesets/secondary/windy_route/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_MtTwilight[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_twilight/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_MtTwilight[] = INCBIN_U32("data/tilesets/secondary/mt_twilight/tiles.4bpp.lz");
