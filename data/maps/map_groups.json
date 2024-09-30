@@ -1,4 +1,5 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
@@ -107,6 +108,7 @@
     "Route22",
     "Route25",
     "Route26",
+    "Route27",
     "Route31"
   ],
   "gMapGroup_DarkfireDungeons": [

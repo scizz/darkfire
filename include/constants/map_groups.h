@@ -54,6 +54,7 @@
 #define MAP_ROUTE25           (45 | (0 << 8))
 #define MAP_ROUTE26           (46 | (0 << 8))
 #define MAP_ROUTE31           (47 | (0 << 8))
+#define MAP_ROUTE27           (48 | (0 << 8))
 
 // gMapGroup_DarkfireDungeons
 #define MAP_ANHEIM_FOREST          (0 | (1 << 8))
