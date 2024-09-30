@@ -132,3 +132,7 @@ WaterwayCity_Mart_Employee_3::
 WaterwayCity_Mart_Employee_4::
 	msgbox WaterwayCity_Text_Mart_Employee_4, MSGBOX_NPC
 	end
+
+WaterwayCity_Mart_Employee_5::
+	msgbox WaterwayCity_Text_Mart_Employee_5, MSGBOX_NPC
+	end
