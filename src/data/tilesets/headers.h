@@ -1078,3 +1078,14 @@ const struct Tileset gTileset_SeaRoute =
     .metatileAttributes = gMetatileAttributes_SeaRoute,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_WindyRoute =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_WindyRoute,
+    .palettes = gTilesetPalettes_WindyRoute,
+    .metatiles = gMetatiles_WindyRoute,
+    .metatileAttributes = gMetatileAttributes_WindyRoute,
+    .callback = NULL,
+};
