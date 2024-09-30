@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_CROSSROADS",
+      "offset": 34,
+      "direction": "up"
+    }
+  ],
   "object_events": [
 
   ],

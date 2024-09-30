@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE22",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_CROSSROADS",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
