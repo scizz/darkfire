@@ -1435,3 +1435,5 @@ Script_RemoveTint::
 	.include "data/maps/Route27/scripts.inc"
 
 	.include "data/maps/Route23/scripts.inc"
+
+	.include "data/maps/Route24/scripts.inc"

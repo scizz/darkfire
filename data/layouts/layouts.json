@@ -6000,6 +6000,16 @@
       "secondary_tileset": "gTileset_LilycoveMuseum",
       "border_filepath": "data/layouts/Route23/border.bin",
       "blockdata_filepath": "data/layouts/Route23/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE24",
+      "name": "Route24_Layout",
+      "width": 76,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/Route24/border.bin",
+      "blockdata_filepath": "data/layouts/Route24/map.bin"
     }
   ]
 }
