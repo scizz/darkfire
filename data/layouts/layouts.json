@@ -6020,6 +6020,16 @@
       "secondary_tileset": "gTileset_WindyRoute",
       "border_filepath": "data/layouts/Route28/border.bin",
       "blockdata_filepath": "data/layouts/Route28/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE29",
+      "name": "Route29_Layout",
+      "width": 122,
+      "height": 60,
+      "primary_tileset": "gTileset_Volcano",
+      "secondary_tileset": "gTileset_MtTwilight",
+      "border_filepath": "data/layouts/Route29/border.bin",
+      "blockdata_filepath": "data/layouts/Route29/map.bin"
     }
   ]
 }
