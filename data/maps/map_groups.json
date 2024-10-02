@@ -1,4 +1,5 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_DarkfireMain",
     "gMapGroup_DarkfireDungeons",
@@ -32,6 +33,7 @@
     "gMapGroup_IndoorRoute5",
     "gMapGroup_IndoorRoute9",
     "gMapGroup_IndoorRoute11",
+    "gMapGroup_IndoorRoute15",
     "gMapGroup_IndoorAnheimForest",
     "gMapGroup_DarkfireMapInterlinks",
     "gMapGroup_TownsAndRoutes",
@@ -326,6 +328,11 @@
   ],
   "gMapGroup_IndoorRoute11": [
     "Route11_House1"
+  ],
+  "gMapGroup_IndoorRoute15": [
+    "Route15_Tent1",
+    "Route15_Tent2",
+    "Route15_TribalCave"
   ],
   "gMapGroup_IndoorAnheimForest": [
     "AnheimForest_House1"

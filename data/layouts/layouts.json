@@ -6150,6 +6150,36 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/WaterwayCity_PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/WaterwayCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE15_TENT1",
+      "name": "Route15_Tent1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/Route15_Tent1/border.bin",
+      "blockdata_filepath": "data/layouts/Route15_Tent1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE15_TENT2",
+      "name": "Route15_Tent2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/Route15_Tent2/border.bin",
+      "blockdata_filepath": "data/layouts/Route15_Tent2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE15_TRIBAL_CAVE",
+      "name": "Route15_TribalCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TribalCave",
+      "border_filepath": "data/layouts/Route15_TribalCave/border.bin",
+      "blockdata_filepath": "data/layouts/Route15_TribalCave/map.bin"
     }
   ]
 }

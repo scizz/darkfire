@@ -1465,3 +1465,9 @@ Script_RemoveTint::
 	.include "data/maps/WaterwayCity_House8/scripts.inc"
 
 	.include "data/maps/WaterwayCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/Route15_Tent1/scripts.inc"
+
+	.include "data/maps/Route15_Tent2/scripts.inc"
+
+	.include "data/maps/Route15_TribalCave/scripts.inc"
