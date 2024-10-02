@@ -6030,6 +6030,126 @@
       "secondary_tileset": "gTileset_MtTwilight",
       "border_filepath": "data/layouts/Route29/border.bin",
       "blockdata_filepath": "data/layouts/Route29/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE1",
+      "name": "WaterwayCity_House1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_PORT_HOUSE1",
+      "name": "WaterwayCity_PortHouse1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_PortHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_PortHouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_PORT_HOUSE2",
+      "name": "WaterwayCity_PortHouse2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_PortHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_PortHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_PORT_HOUSE3",
+      "name": "WaterwayCity_PortHouse3_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_PortHouse3/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_PortHouse3/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE2",
+      "name": "WaterwayCity_House2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE3",
+      "name": "WaterwayCity_House3_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE4",
+      "name": "WaterwayCity_House4_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House4/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE5",
+      "name": "WaterwayCity_House5_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House5/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House5/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE6",
+      "name": "WaterwayCity_House6_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House6/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House6/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE7",
+      "name": "WaterwayCity_House7_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House7/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House7/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_HOUSE8",
+      "name": "WaterwayCity_House8_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTent",
+      "border_filepath": "data/layouts/WaterwayCity_House8/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_House8/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERWAY_CITY_POKEMON_CENTER_1F",
+      "name": "WaterwayCity_PokemonCenter_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/WaterwayCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/WaterwayCity_PokemonCenter_1F/map.bin"
     }
   ]
 }

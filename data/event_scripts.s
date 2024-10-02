@@ -1441,3 +1441,27 @@ Script_RemoveTint::
 	.include "data/maps/Route28/scripts.inc"
 
 	.include "data/maps/Route29/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House1/scripts.inc"
+
+	.include "data/maps/WaterwayCity_PortHouse1/scripts.inc"
+
+	.include "data/maps/WaterwayCity_PortHouse2/scripts.inc"
+
+	.include "data/maps/WaterwayCity_PortHouse3/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House2/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House3/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House4/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House5/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House6/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House7/scripts.inc"
+
+	.include "data/maps/WaterwayCity_House8/scripts.inc"
+
+	.include "data/maps/WaterwayCity_PokemonCenter_1F/scripts.inc"
