@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -119,8 +122,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }
