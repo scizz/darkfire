@@ -6176,7 +6176,7 @@
       "name": "Route15_TribalCave_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_TribalCave",
       "border_filepath": "data/layouts/Route15_TribalCave/border.bin",
       "blockdata_filepath": "data/layouts/Route15_TribalCave/map.bin"
