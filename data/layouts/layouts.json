@@ -6034,8 +6034,8 @@
     {
       "id": "LAYOUT_WATERWAY_CITY_HOUSE1",
       "name": "WaterwayCity_House1_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 10,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/WaterwayCity_House1/border.bin",
@@ -6074,8 +6074,8 @@
     {
       "id": "LAYOUT_WATERWAY_CITY_HOUSE2",
       "name": "WaterwayCity_House2_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 10,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/WaterwayCity_House2/border.bin",
