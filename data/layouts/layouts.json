@@ -6044,8 +6044,8 @@
     {
       "id": "LAYOUT_WATERWAY_CITY_PORT_HOUSE1",
       "name": "WaterwayCity_PortHouse1_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 10,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/WaterwayCity_PortHouse1/border.bin",
@@ -6054,8 +6054,8 @@
     {
       "id": "LAYOUT_WATERWAY_CITY_PORT_HOUSE2",
       "name": "WaterwayCity_PortHouse2_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 10,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/WaterwayCity_PortHouse2/border.bin",
@@ -6064,8 +6064,8 @@
     {
       "id": "LAYOUT_WATERWAY_CITY_PORT_HOUSE3",
       "name": "WaterwayCity_PortHouse3_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 11,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleTent",
       "border_filepath": "data/layouts/WaterwayCity_PortHouse3/border.bin",
