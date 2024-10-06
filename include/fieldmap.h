@@ -3,13 +3,11 @@
 
 #define NUM_TILES_IN_PRIMARY 512
 #define NUM_TILES_TOTAL 1024
-#define NUM_METATILES_IN_PRIMARY 2048
-#define NUM_METATILES_TOTAL 4096
+#define NUM_METATILES_IN_PRIMARY 512
+#define NUM_METATILES_TOTAL 1024
 #define NUM_PALS_IN_PRIMARY 6
 #define NUM_PALS_TOTAL 13
 #define MAX_MAP_DATA_SIZE 10240
-
-#define MAX_ELEVATION_LEVEL 7 // Old Was 15
 
 // Map coordinates are offset by 7 when using the map
 // buffer because it needs to load sufficient border
