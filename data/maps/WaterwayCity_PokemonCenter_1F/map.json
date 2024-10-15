@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_WATERWAY_CITY",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_WATERWAY_CITY",
+      "dest_warp_id": "3"
+    }
   ],
   "coord_events": [
 
