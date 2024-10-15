@@ -1277,7 +1277,7 @@
 #define FLAG_ROUTE_11_SAFEGUARD_GIVEN                               0x4C7 // Darkfire Flag
 #define FLAG_ROUTE_5_STONE_LIT                                      0x4C8 // Darkfire Flag
 #define FLAG_ROUTE_5_STONE_2_LIT                                    0x4C9 // Darkfire Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
+#define FLAG_GIVEN_WATERWAY_CITY_SITRUS_BERRY                       0x4CA // Darkfire Flag
 
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
