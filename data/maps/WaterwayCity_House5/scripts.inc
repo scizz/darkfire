@@ -8,7 +8,7 @@ WaterwayCity_House5_MrSurf::
 	compare VAR_RESULT, 1
 	goto_if_ge WaterwayCity_House5_MrSurf_Given
 	msgbox WaterwayCity_House5_Text_MrSurf, MSGBOX_AUTOCLOSE
-	giveitem ITEM_HM03_SURF
+	giveitem ITEM_HM03_SURF, 1
 	goto WaterwayCity_House5_MrSurf_Given
 	end
 
