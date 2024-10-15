@@ -160,7 +160,7 @@ WaterwayCity_Text_BlackBelt:
 	.string "sharpened my skills!$"
 
 WaterwayCity_Text_Cameraman:
-	.string "Outta the way, kiddo!\p"
+	.string "{COLOR}{BLUE}Outta the way, kiddo!\n"
 	.string "You're ruinin' my amazing shot!$"
 
 WaterwayCity_Text_Cook:

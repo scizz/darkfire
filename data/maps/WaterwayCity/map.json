@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE12",
       "offset": 8,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE13",
+      "offset": 1,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -347,8 +352,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 24,
-      "y": 48,
+      "x": 15,
+      "y": 45,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
@@ -373,7 +378,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
-      "x": 16,
+      "x": 17,
       "y": 46,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -464,9 +469,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
-      "x": 24,
-      "y": 38,
-      "elevation": 0,
+      "x": 29,
+      "y": 40,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -477,9 +482,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 26,
-      "y": 38,
-      "elevation": 0,
+      "x": 31,
+      "y": 40,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -685,8 +690,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RHYHORN",
-      "x": 23,
-      "y": 48,
+      "x": 14,
+      "y": 45,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -834,11 +839,11 @@
     },
     {
       "type": "sign",
-      "x": 3,
-      "y": 54,
+      "x": 23,
+      "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "SlateportCity_EventScript_NameRatersHouseSign"
     },
     {
       "type": "sign",
