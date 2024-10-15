@@ -40,7 +40,7 @@ WaterwayCity_House5_Text_MrSurf:
 	.string "I'll give you my HM so you can Surf\n"
 	.string "the waves too!$"
 
-WaterwayCity_House5_MrSurf_Given:
+WaterwayCity_House5_Text_MrSurfGiven:
 	.string "{COLOR}{BLUE}Teach Surf to a strong Water-type\n"
 	.string "Pokémon, and you'll be gliding across\l"
 	.string "water in no time.\p"

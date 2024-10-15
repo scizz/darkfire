@@ -1,6 +1,14 @@
 WaterwayCity_MapScripts::
 	.byte 0
 
+WaterwayCity_Sign::
+	msgbox WaterwayCity_Text_Sign, MSGBOX_SIGN
+	end
+
+WaterwayCity_Sign_MrSurfsHouse::
+	msgbox WaterwayCity_Sign_Text_MrSurfsHouse, MSGBOX_SIGN
+	end
+
 WaterwayCity_PokeFan_F_1::
 	msgbox WaterwayCity_Text_PokeFan_F_1, MSGBOX_NPC
 	end
@@ -136,6 +144,13 @@ WaterwayCity_Mart_Employee_4::
 WaterwayCity_Mart_Employee_5::
 	msgbox WaterwayCity_Text_Mart_Employee_5, MSGBOX_NPC
 	end
+
+WaterwayCity_Text_Sign:
+	.string "Waterway City\n"
+	.string "{FONT_SMALL}“Where Streams Flow and Legends Grow!”$"
+
+WaterwayCity_Sign_Text_MrSurfsHouse:
+	.string "Mr. Surf's House$"
 
 WaterwayCity_Text_BlackBelt:
 	.string "I'm used to training on solid ground,\n"

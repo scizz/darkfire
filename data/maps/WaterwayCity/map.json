@@ -713,8 +713,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 33,
-      "y": 20,
+      "x": 6,
+      "y": 57,
       "elevation": 0,
       "dest_map": "MAP_WATERWAY_CITY_HOUSE2",
       "dest_warp_id": "0"
@@ -762,8 +762,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 57,
+      "x": 33,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_WATERWAY_CITY_HOUSE8",
       "dest_warp_id": "0"
@@ -814,7 +814,7 @@
       "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "WaterwayCity_Sign"
     },
     {
       "type": "sign",
@@ -830,7 +830,7 @@
       "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "WaterwayCity_Sign_MrSurfsHouse"
     },
     {
       "type": "sign",
