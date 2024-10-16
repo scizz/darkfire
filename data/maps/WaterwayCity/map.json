@@ -740,8 +740,8 @@
       "x": 25,
       "y": 17,
       "elevation": 0,
-      "dest_map": "MAP_WATERWAY_CITY",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_COLOSSUS_TEMPLE_1F",
+      "dest_warp_id": "2"
     },
     {
       "x": 6,
