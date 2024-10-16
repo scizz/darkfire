@@ -145,6 +145,21 @@ WaterwayCity_Mart_Employee_5::
 	msgbox WaterwayCity_Text_Mart_Employee_5, MSGBOX_NPC
 	end
 
+WaterwayCity_Hiker::
+	lock
+	faceplayer
+	goto_if_set FLAG_GIVEN_WATERWAY_CITY_ESCAPE_ROPE, WaterwayCity_Hiker_Given
+	msgbox WaterwayCity_Text_Hiker, MSGBOX_AUTOCLOSE
+	giveitem ITEM_ESCAPE_ROPE, 1
+	setflag FLAG_GIVEN_WATERWAY_CITY_ESCAPE_ROPE
+	goto WaterwayCity_Hiker_Given
+	end
+
+WaterwayCity_Hiker_Given::
+	msgbox WaterwayCity_Text_Hiker_Given, MSGBOX_AUTOCLOSE
+	release
+	end
+
 WaterwayCity_Text_Sign:
 	.string "Waterway City\n"
 	.string "{FONT_SMALL}“Where Streams Flow and Legends Grow!”$"
@@ -354,3 +369,12 @@ WaterwayCity_Text_Youngster:
 	.string "You want it?\p"
 	.string "Too bad, I ain't movin'!\n"
 	.string "Hahaha!$"
+
+WaterwayCity_Text_Hiker:
+	.string "You're going on a long journey, huh?\p"
+	.string "Take this Escape Rope.\p"
+	.string "It'll help you get out of tough spots\n"
+	.string "when you need a quick exit.$"
+
+WaterwayCity_Text_Hiker_Given:
+	.string "Good luck on your journey, kiddo.$"
