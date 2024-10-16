@@ -5,6 +5,14 @@ WaterwayCity_Sign::
 	msgbox WaterwayCity_Text_Sign, MSGBOX_SIGN
 	end
 
+WaterwayCity_Sign_ColossusTemple::
+	msgbox WaterwayCity_Text_ColossusTemple, MSGBOX_SIGN
+	end
+
+WaterwayCity_Sign_Market::
+	msgbox WaterwayCity_Text_WaterwayCityMarket, MSGBOX_SIGN
+	end
+
 WaterwayCity_Sign_MrSurfsHouse::
 	msgbox WaterwayCity_Sign_Text_MrSurfsHouse, MSGBOX_SIGN
 	end
@@ -129,22 +137,6 @@ WaterwayCity_Girl_2_2::
 	msgbox WaterwayCity_Text_Girl_2_2, MSGBOX_NPC
 	end
 
-WaterwayCity_Mart_Employee_2::
-	msgbox WaterwayCity_Text_Mart_Employee_2, MSGBOX_NPC
-	end
-
-WaterwayCity_Mart_Employee_3::
-	msgbox WaterwayCity_Text_Mart_Employee_3, MSGBOX_NPC
-	end
-
-WaterwayCity_Mart_Employee_4::
-	msgbox WaterwayCity_Text_Mart_Employee_4, MSGBOX_NPC
-	end
-
-WaterwayCity_Mart_Employee_5::
-	msgbox WaterwayCity_Text_Mart_Employee_5, MSGBOX_NPC
-	end
-
 WaterwayCity_Hiker::
 	lock
 	faceplayer
@@ -163,6 +155,12 @@ WaterwayCity_Hiker_Given::
 WaterwayCity_Text_Sign:
 	.string "Waterway City\n"
 	.string "{FONT_SMALL}“Where Streams Flow and Legends Grow!”$"
+
+WaterwayCity_Text_ColossusTemple:
+	.string "Colossus Temple$"
+
+WaterwayCity_Text_WaterwayCityMarket:
+	.string "Waterway City Market$"
 
 WaterwayCity_Sign_Text_MrSurfsHouse:
 	.string "Mr. Surf's House$"
@@ -266,14 +264,6 @@ WaterwayCity_Text_Mart_Employee_1:
 	.string "{COLOR}{BLUE}We stock supplies here, but if you\n"
 	.string "want to buy anything, you'll have to\l"
 	.string "go down to the docks.$"
-
-WaterwayCity_Text_Mart_Employee_2:
-
-WaterwayCity_Text_Mart_Employee_3:
-
-WaterwayCity_Text_Mart_Employee_4:
-
-WaterwayCity_Text_Mart_Employee_5:
 
 WaterwayCity_Text_Old_Man:
 	.string "You might think living in this city is\n"

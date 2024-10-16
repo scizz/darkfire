@@ -1,11 +1,11 @@
 WaterwayCity_House7_MapScripts::
 	.byte 0
 
-WaterwayCity_House7_Text_Woman::
+WaterwayCity_House7_Woman::
 	msgbox WaterwayCity_House7_Text_Woman, MSGBOX_NPC
 	end
 
-WaterwayCity_House7_Text_LittleGirl::
+WaterwayCity_House7_LittleGirl::
 	msgbox WaterwayCity_House7_Text_LittleGirl, MSGBOX_NPC
 	end
 
