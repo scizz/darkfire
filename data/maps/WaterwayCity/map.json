@@ -158,7 +158,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 31,
-      "y": 82,
+      "y": 81,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
