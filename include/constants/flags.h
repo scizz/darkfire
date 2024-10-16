@@ -1281,8 +1281,8 @@
 #define FLAG_GIVEN_WATERWAY_CITY_DIVE_BALL                          0x4CB // Darkfire Flag
 #define FLAG_GIVEN_WATERWAY_CITY_REVIVE                             0x4CC // Darkfire Flag
 #define FLAG_GIVEN_WATERWAY_CITY_ESCAPE_ROPE                        0x4CD // Darkfire Flag
+#define FLAG_GIVEN_WATERWAY_CITY_GOOD_ROD                           0x4CE // Darkfire Flag
 
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
