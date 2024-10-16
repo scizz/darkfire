@@ -16,7 +16,7 @@ WaterwayCity_PortHouse1_Fisherman_Given::
 	release
 	end
 
-WaterwayCity_Text_Fisherman:
+WaterwayCity_Porthouse1_Text_Fisherman:
 	.string "{COLOR}{BLUE}Ahoy there!\p"
 	.string "You've got the look of someone who's\n"
 	.string "eager to explore the waters.\p"
@@ -32,7 +32,7 @@ WaterwayCity_Text_Fisherman:
 	.string "And don't forget, some of the best\n"
 	.string "catches are right off the shore!$"
 
-WaterwayCity_House7_Text_FishermanGiven:
+WaterwayCity_Porthouse1_Text_FishermanGiven:
 	.string "{COLOR}{BLUE}Keep your line steady and your heart\n"
 	.string "calm, and you'll be out reelin' in\l"
 	.string "something amazing soon enough!$"
