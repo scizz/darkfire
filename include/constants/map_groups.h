@@ -76,6 +76,7 @@
 #define MAP_DESERT_PASS            (12 | (1 << 8))
 #define MAP_SSCORAL_CORRIDORS_1F   (13 | (1 << 8))
 #define MAP_SSCORAL_DECK           (14 | (1 << 8))
+#define MAP_COLOSSUS_TEMPLE_1F     (15 | (1 << 8))
 
 // gMapGroup_DarkfireIslands
 #define MAP_HORIZON_ISLAND                  (0 | (2 << 8))

@@ -6180,6 +6180,16 @@
       "secondary_tileset": "gTileset_TribalCave",
       "border_filepath": "data/layouts/Route15_TribalCave/border.bin",
       "blockdata_filepath": "data/layouts/Route15_TribalCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_COLOSSUS_TEMPLE_1F",
+      "name": "ColossusTemple_1F_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ColossusTemple",
+      "border_filepath": "data/layouts/ColossusTemple_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ColossusTemple_1F/map.bin"
     }
   ]
 }
