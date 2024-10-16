@@ -285,3 +285,6 @@ const u16 gMetatileAttributes_MtTwilight[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_PinapSeaNorth[] = INCBIN_U16("data/tilesets/secondary/pinap_sea_north/metatiles.bin");
 const u16 gMetatileAttributes_PinapSeaNorth[] = INCBIN_U16("data/tilesets/secondary/pinap_sea_north/metatile_attributes.bin");
+
+const u16 gMetatiles_ColossusTemple[] = INCBIN_U16("data/tilesets/secondary/colossus_temple/metatiles.bin");
+const u16 gMetatileAttributes_ColossusTemple[] = INCBIN_U16("data/tilesets/secondary/colossus_temple/metatile_attributes.bin");

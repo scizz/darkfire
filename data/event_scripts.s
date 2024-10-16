@@ -1471,3 +1471,5 @@ Script_RemoveTint::
 	.include "data/maps/Route15_Tent2/scripts.inc"
 
 	.include "data/maps/Route15_TribalCave/scripts.inc"
+
+	.include "data/maps/ColossusTemple_1F/scripts.inc"
