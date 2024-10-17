@@ -163,6 +163,18 @@ CommonName_Text_Gill:
 CommonName_Text_Igglybuff:
 	.string "Igglybuff$"
 
+CommonName_Text_Wartortle:
+	.string "Wartortle$"
+
+CommonName_Text_Licki:
+	.string "Licki$"
+
+CommonName_Text_Rhy:
+	.string "Rhy$"
+
+CommonName_Text_Poliwag:
+	.string "Poliwag$"
+
 Route2_Text_JoeyIntro:
 	.string "{COLOR}{BLUE}Heyo, Trainer!\p"
 	.string "Our eyes met, and that means it's time\n"

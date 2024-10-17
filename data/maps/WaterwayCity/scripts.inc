@@ -152,6 +152,43 @@ WaterwayCity_Hiker_Given::
 	release
 	end
 
+WaterwayCity_Wartortle::
+	lock
+	playmoncry SPECIES_WARTORTLE, 0
+	speakername CommonName_Text_Wartortle
+	msgbox WaterwayCity_Text_Wartortle, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+WaterwayCity_Licki::
+	lock
+	playmoncry SPECIES_LICKITUNG, 0
+	speakername CommonName_Text_Licki
+	msgbox WaterwayCity_Text_Licki, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+WaterwayCity_Rhy::
+	lock
+	playmoncry SPECIES_RHYHORN, 0
+	speakername CommonName_Text_Rhy
+	msgbox WaterwayCity_Text_Rhy, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
+WaterwayCity_Poliwag::
+	lock
+	pokemonfaceplayer 54
+	playmoncry SPECIES_POLIWAG, 0
+	speakername CommonName_Text_Poliwag
+	msgbox WaterwayCity_Text_Poliwag, MSGBOX_AUTOCLOSE
+	waitmoncry
+	release
+	end
+
 WaterwayCity_Text_Sign:
 	.string "Waterway City\n"
 	.string "{FONT_SMALL}“Where Streams Flow and Legends Grow!”$"
@@ -368,3 +405,15 @@ WaterwayCity_Text_Hiker:
 
 WaterwayCity_Text_Hiker_Given:
 	.string "Good luck on your journey, kiddo.$"
+
+WaterwayCity_Text_Wartortle:
+	.string "Warrrtortle!$"
+
+WaterwayCity_Text_Licki:
+	.string "Gluggggg$"
+
+WaterwayCity_Text_Rhy:
+	.string "Rhhgrrr!$"
+
+WaterwayCity_Text_Poliwag:
+	.string "Polii!$"
