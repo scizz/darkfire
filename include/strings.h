@@ -1203,6 +1203,8 @@ extern const u8 gText_DawnStone[];
 extern const u8 gText_DuskStone[];
 extern const u8 gText_LaveriaIsland[];
 extern const u8 gText_NorthstarCity[];
+extern const u8 gText_LaveriaCity[];
+extern const u8 gText_WaterwayCity[];
 extern const u8 gText_GlassDesk[];
 extern const u8 gText_TreeckoDollAndPrice[];
 extern const u8 gText_TorchicDollAndPrice[];
