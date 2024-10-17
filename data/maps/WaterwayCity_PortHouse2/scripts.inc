@@ -21,7 +21,7 @@ WaterwayCity_PortHouse2_Text_Sailor:
 	.string "Aetheris.\p"
 	.string "They say no map shows its true\n"
 	.string "location, and only a few sailors have\l"
-	.string "returned with tales of oddd markings\l"
+	.string "returned with tales of weird markings\l"
 	.string "in the sand.$"
 
 WaterwayCity_PortHouse2_Text_Man:
