@@ -138,10 +138,10 @@ WaterwayCity_Girl_2_2::
 	end
 
 WaterwayCity_Hiker::
-	lockall
+	lock
 	faceplayer
 	goto_if_set FLAG_GIVEN_WATERWAY_CITY_ESCAPE_ROPE, WaterwayCity_Hiker_Given
-	msgbox WaterwayCity_Text_Hiker, MSGBOX_AUTOCLOSE
+	msgbox WaterwayCity_Text_Hiker, MSGBOX_DEFAULT
 	giveitem ITEM_ESCAPE_ROPE, 1
 	setflag FLAG_GIVEN_WATERWAY_CITY_ESCAPE_ROPE
 	goto WaterwayCity_Hiker_Given
@@ -149,7 +149,7 @@ WaterwayCity_Hiker::
 
 WaterwayCity_Hiker_Given::
 	msgbox WaterwayCity_Text_Hiker_Given, MSGBOX_AUTOCLOSE
-	releaseall
+	release
 	end
 
 WaterwayCity_Text_Sign:
