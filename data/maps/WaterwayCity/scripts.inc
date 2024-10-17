@@ -410,7 +410,7 @@ WaterwayCity_Text_Wartortle:
 	.string "Warrrtortle!$"
 
 WaterwayCity_Text_Licki:
-	.string "Gluggggg$"
+	.string "Gluggggg…$"
 
 WaterwayCity_Text_Rhy:
 	.string "Rhhgrrr!$"

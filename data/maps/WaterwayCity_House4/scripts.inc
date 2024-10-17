@@ -18,7 +18,7 @@ WaterwayCity_House4_Text_LittleBoy:
 	.string "him…$"
 
 WaterwayCity_House4_Text_Woman:
-	.string "{COLOR}{RED}Being married to a fisherman?\n"
+	.string "{COLOR}{RED}Being married to a Fisherman?\n"
 	.string "Well, it's definitely an adventure!\p"
 	.string "My husband is out on the water from\n"
 	.string "dawn till dusk, always chasing after\l"
