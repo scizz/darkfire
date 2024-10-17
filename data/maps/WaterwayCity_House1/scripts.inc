@@ -16,7 +16,7 @@ WaterwayCity_House1_Text_Maniac:
 	.string "It's a natural paradise for them.\p"
 	.string "Oh, and if you're into history, don't\n"
 	.string "miss the Colossus Temple!\l"
-	.string "It's ancient and full of mysteries."
+	.string "It's ancient and full of mysteries.\p"
 	.string "No one knows what's hidden inside, but\n"
 	.string "I've got a theory!\p"
 	.string "Some say the streams are connected to\n"
