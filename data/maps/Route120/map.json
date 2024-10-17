@@ -286,19 +286,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 9,
-      "y": 60,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_LEFT_AND_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route120_EventScript_Chip",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 16,
       "y": 6,

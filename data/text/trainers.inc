@@ -1131,48 +1131,121 @@ PinleafTown_Text_CowgirlPostBattle:
 	.string "{COLOR}{RED}You're a strong Trainer!\n"
 	.string "Your mommy taught you good!$"
 
-Route11_Text_CedricIntro::
+Route11_Text_CedricIntro:
 	.string "{COLOR}{BLUE}It's a beautiful day in the\n"
 	.string "neighborhood, a beautiful day for a\l"
 	.string "neighbor.\p"
 	.string "Would you be mine?\n"
 	.string "Could you be mine?$"
 
-Route11_Text_CedricDefeated::
+Route11_Text_CedricDefeated:
 	.string "A neighborly day in this beautywood.\n"
 	.string "A neighborly day for a beauty!$"
 
-Route11_Text_CedricPostBattle::
+Route11_Text_CedricPostBattle:
 	.string "{COLOR}{BLUE}I have always wanted to have a\n"
 	.string "neighbor just like you.\p"
 	.string "I've always wanted to live in a\n"
 	.string "neighborhood with you!$"
 
-Route11_Text_DaisyIntro::
+Route11_Text_DaisyIntro:
 	.string "{COLOR}{RED}Oh my, a Trainer.\n"
 	.string "Allow me to treat you to a battle.$"
 
-Route11_Text_DaisyDefeated::
+Route11_Text_DaisyDefeated:
 	.string "You battle majestically!$"
 
-Route11_Text_DaisyPostBattle::
+Route11_Text_DaisyPostBattle:
 	.string "{COLOR}{RED}There's an inn south of here, at the\n"
 	.string "Crossroads.\p"
 	.string "It's so cozy there that I don't think\n"
 	.string "I'll go back home in Laveria City.$"
 
-Route11_Text_JasmineIntro::
+Route11_Text_JasmineIntro:
 	.string "{COLOR}{RED}I'm so glad there's no mud here, just\n"
 	.string "grass and some dirt.\l"
 	.string "My bike thanks me for it!$"
 
-Route11_Text_JasmineDefeated::
+Route11_Text_JasmineDefeated:
 	.string "At least my bike is clean…$"
 
-Route11_Text_JasminePostBattle::
+Route11_Text_JasminePostBattle:
 	.string "{COLOR}{RED}Huff… Huff…\p"
 	.string "I have to prepare for the coming\n"
 	.string "Triathlon! Out of the way!$"
+
+Route12_Text_MarcelIntro:
+	.string "{COLOR}{BLUE}Hard work and strategy are everything\n"
+	.string "in battle.\p"
+	.string "Don't expect to win if you're not\n"
+	.string "prepared!$"
+
+Route12_Text_MarcelDefeated:
+	.string "Hmph…\n"
+	.string "I underestimated you.$"
+
+Route12_Text_MarcelPostBattle:
+	.string "{COLOR}{BLUE}You've got skills, but there's always\n"
+	.string "room for improvement.\p"
+	.string "Stay sharp out there!$"
+
+Route12_Text_ChipIntro:
+	.string "{COLOR}{BLUE}Ancient ruins hide many mysteries,\n"
+	.string "just like my Pokémon!\p"
+	.string "You won't solve this puzzle easily!"
+
+Route12_Text_ChipDefeated:
+	.string "Urk…\n"
+	.string "There are no mysteries here…$"
+
+Route12_Text_ChipPostBattle:
+	.string "{COLOR}{BLUE}There's always more to learn from the\n"
+	.string "past…\p"
+	.string "And from battles!\p"
+	.string "I'll be back with a new discovery\n"
+	.string "soon!$"
+
+Route12_Text_WendyIntro:
+	.string "{COLOR}{RED}I train my Pokémon like I train myself…\n"
+	.string "Pushing to the limit!\p"
+	.string "Let's see if you can keep up!$"
+
+Route12_Text_WendyDefeated:
+	.string "No way…\n"
+	.string "I've got to push harder.$"
+
+Route12_Text_WendyPostBattle:
+	.string "{COLOR}{RED}Okay, I'll admit you're strong, but\n"
+	.string "don't get complacent.\p"
+	.string "Real strength is earned over time.$"
+
+Route12_Text_JessicaIntro:
+	.string "{COLOR}{RED}Battles are a test of grace as well as\n"
+	.string "strength…\p"
+	.string "…and I never lose in either!\n"
+	.string "Care to try?$"
+
+Route12_Text_JessicaDefeated:
+	.string "How… unflattering.$"
+
+Route12_Text_JessicaPostBattle:
+	.string "{COLOR}{RED}Well, I suppose you earned this one,\n"
+	.string "but you still have a lot to learn\l"
+	.string "about elegance in battle!$"
+
+Route12_Text_CaleIntro:
+	.string "{COLOR}{BLUE}People think Bug Pokémon are weak, but\n"
+	.string "they don't know their true power!\p"
+	.string "I'll show you their potential!$"
+
+Route12_Text_CaleDefeated:
+	.string "My bugs…\n"
+	.string "Crushed!$"
+
+Route12_Text_CalePostBattle:
+	.string "{COLOR}{BLUE}Just you wait!\p"
+	.string "Bug Pokémon have a secret strength.\n"
+	.string "You'll see their potential someday!$"
 
 @ VANILLA TRAINERS
 
@@ -3886,20 +3959,6 @@ Route120_Text_JenniferPostBattle: @ 829EB6E
 	.string "The special abilities of POKéMON\n"
 	.string "will make battle styles change.$"
 
-Route120_Text_ChipIntro: @ 829EBAF
-	.string "Who might you be?\p"
-	.string "Are you perhaps searching for ancient\n"
-	.string "ruins that are rumored to possibly\l"
-	.string "exist according to legend?$"
-
-Route120_Text_ChipDefeat: @ 829EC25
-	.string "What a disgraceful setback…$"
-
-Route120_Text_ChipPostBattle: @ 829EC41
-	.string "That giant rock… I would like to\n"
-	.string "believe it may indeed contain ancient\l"
-	.string "ruins. But I see no entrance.$"
-
 Route120_Text_ClarissaIntro: @ 829ECA6
 	.string "Why am I carrying this parasol?\p"
 	.string "I'll tell you if you can win against me.$"
@@ -4029,18 +4088,6 @@ Route121_Text_TammyPostBattle: @ 829F3C6
 	.string "There is a mysterious power\l"
 	.string "at work there…$"
 
-Route121_Text_JessicaIntro: @ 829F612
-	.string "Stop! Have a good look at my precious\n"
-	.string "POKéMON!$"
-
-Route121_Text_JessicaDefeat: @ 829F641
-	.string "Oh, how dare you!\n"
-	.string "Don't take it so seriously!$"
-
-Route121_Text_JessicaPostBattle: @ 829F66F
-	.string "Maybe I'll go catch more POKéMON at\n"
-	.string "the SAFARI.$"
-
 Route121_Text_JessicaRegister: @ 829F69F
 	.string "I took it easy on you this time!\n"
 	.string "It won't be that way the next time!$"
@@ -4089,22 +4136,6 @@ Route121_Text_CristinPostRematch: @ 829F8D0
 	.string "Snivel…\l"
 	.string "I can't believe this is happening…$"
 
-Route121_Text_CaleIntro: @ 829F91A
-	.string "Can't you see that I have all this\n"
-	.string "stuff with me?\p"
-	.string "Despite that, you still insist that\n"
-	.string "we battle?$"
-
-Route121_Text_CaleDefeat: @ 829F97B
-	.string "Of course I lost!\n"
-	.string "I'm holding stuff in both hands!$"
-
-Route121_Text_CalePostBattle: @ 829F9AE
-	.string "I bought too much stuff at\n"
-	.string "the LILYCOVE DEPT. STORE.\p"
-	.string "It's up the road from here.\n"
-	.string "I wish I had a BAG like yours.$"
-
 Route121_Text_MylesIntro: @ 829FA1E
 	.string "There's nothing I love more than\n"
 	.string "checking out other people's POKéMON!$"
@@ -4127,29 +4158,6 @@ Route121_Text_PatDefeat: @ 829FAD8
 Route121_Text_PatPostBattle: @ 829FAEA
 	.string "I raise every POKéMON with the same\n"
 	.string "love and care--I don't pick favorites.$"
-
-Route121_Text_MarcelIntro: @ 829FB35
-	.string "My POKéMON have never tasted defeat!\n"
-	.string "On their next win, I'm entering them\l"
-	.string "in CONTESTS.$"
-
-Route121_Text_MarcelDefeat: @ 829FB8C
-	.string "Oh, now what happened here?$"
-
-Route121_Text_MarcelPostBattle: @ 829FBA8
-	.string "I may have to train my gang some more\n"
-	.string "before entering any CONTEST.$"
-
-Route123_Text_WendyIntro: @ 829FBEB
-	.string "Want to determine how strong you are?\n"
-	.string "I'll be the test!$"
-
-Route123_Text_WendyDefeat: @ 829FC23
-	.string "You passed with flying colors!$"
-
-Route123_Text_WendyPostBattle: @ 829FC42
-	.string "To best even me…\n"
-	.string "Your strength is marvelous!$"
 
 Route123_Text_BraxtonIntro: @ 829FC6F
 	.string "You seem to have a big collection\n"
