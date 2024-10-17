@@ -15,7 +15,7 @@ WaterwayCity_Porthouse3_SailorThree::
 	multichoicedefault 21, 6, MULTI_WATERWAY_CITY_SAIL, 2, FALSE
 	switch VAR_RESULT
 	case 0, WaterwayCity_ChooseNorthstarCity
-	case 1, WaterwayCity_ChooseWaterwayCity
+	case 1, WaterwayCity_ChooseLaveriaCity
 	case 2, WaterwayCity_CancelSailSelect
 	case MULTI_B_PRESSED, WaterwayCity_CancelSailSelect
 	end
@@ -63,7 +63,7 @@ WaterwayCity_PortHouse3_Text_SailorTwo:
 	.string "sail, there's never a dull moment.$"
 
 WaterwayCity_Porthouse3_Text_AhoyMatey:
-	.string "{COLOR}{BLUE}Ahoy, matey!\p"
+	.string "{COLOR}{BLUE}{PLAYER}!\p"
 	.string "It's your favorite Sailor from Laveria\n"
 	.string "and Northstar!$"
 	.string "If you're looking to revisit some\n"
