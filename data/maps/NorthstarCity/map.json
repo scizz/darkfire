@@ -7,6 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -761,7 +764,7 @@
     },
     {
       "x": 56,
-      "y": 22,
+      "y": 21,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_STORAGE_FACILITY",
       "dest_warp_id": "0"
@@ -781,7 +784,7 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 52,
+      "x": 51,
       "y": 29,
       "elevation": 3,
       "dest_map": "MAP_NORTHSTAR_CITY_MART",
@@ -895,8 +898,5 @@
       "item": "ITEM_SNOWBALL",
       "flag": "FLAG_HIDDEN_ITEM_NORTHSTAR_CITY_SNOWBALL"
     }
-  ],
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true
+  ]
 }

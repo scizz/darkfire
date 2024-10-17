@@ -9,6 +9,34 @@ WaterwayCity_PortHouse3_SailorTwo::
 	msgbox WaterwayCity_PortHouse3_Text_SailorTwo, MSGBOX_NPC
 	end
 
+WaterwayCity_Porthouse3_SailorThree::
+	message WaterwayCity_Porthouse3_Text_AhoyMatey
+	waitmessage
+	multichoicedefault 21, 6, MULTI_WATERWAY_CITY_SAIL, 2, FALSE
+	switch VAR_RESULT
+	case 0, WaterwayCity_ChooseNorthstarCity
+	case 1, WaterwayCity_ChooseWaterwayCity
+	case 2, WaterwayCity_CancelSailSelect
+	case MULTI_B_PRESSED, WaterwayCity_CancelSailSelect
+	end
+
+WaterwayCity_ChooseNorthstarCity::
+	msgbox WaterwayCity_Text_RighteoThisWayNorthstar, MSGBOX_AUTOCLOSE
+	warp MAP_NORTHSTAR_CITY, 92, 36
+	waitstate
+	end
+
+WaterwayCity_ChooseLaveriaCity::
+	msgbox WaterwayCity_Text_RighteoThisWayLaveria, MSGBOX_AUTOCLOSE
+	warp MAP_LAVERIA_CITY, 39, 43
+	waitstate
+	end
+
+WaterwayCity_CancelSailSelect::
+	msgbox LaveriaCity_Text_JustLetMeKnow, MSGBOX_AUTOCLOSE
+	release
+	end
+
 WaterwayCity_PortHouse3_Fisherman::
 	msgbox WaterwayCity_PortHouse3_Text_Fisherman, MSGBOX_NPC
 	end
@@ -33,6 +61,23 @@ WaterwayCity_PortHouse3_Text_SailorTwo:
 	.string "we're always repairing something!\p"
 	.string "Whether it's a broken rudder or a torn\n"
 	.string "sail, there's never a dull moment.$"
+
+WaterwayCity_Porthouse3_Text_AhoyMatey:
+	.string "{COLOR}{BLUE}Ahoy, matey!\p"
+	.string "It's your favorite Sailor from Laveria\n"
+	.string "and Northstar!$"
+	.string "If you're looking to revisit some\n"
+	.string "places we've been before, I can get\l"
+	.string "you there in no time!\p"
+	.string "Where would you like to sail to?$"
+
+WaterwayCity_Text_RighteoThisWayNorthstar:
+	.string "{COLOR}{BLUE}Righteo!\n"
+	.string "This way to Northstar City!$"
+
+WaterwayCity_Text_RighteoThisWayLaveria:
+	.string "{COLOR}{BLUE}Righteo!\n"
+	.string "This way to Laveria City!$"
 
 WaterwayCity_PortHouse3_Text_Fisherman:
 	.string "{COLOR}{BLUE}Caught a huge Magikarp yesterday,\n"
