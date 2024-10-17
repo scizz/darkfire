@@ -65,7 +65,7 @@ WaterwayCity_PortHouse3_Text_SailorTwo:
 WaterwayCity_Porthouse3_Text_AhoyMatey:
 	.string "{COLOR}{BLUE}{PLAYER}!\p"
 	.string "It's your favorite Sailor from Laveria\n"
-	.string "and Northstar!$"
+	.string "and Northstar!"
 	.string "If you're looking to revisit some\n"
 	.string "places we've been before, I can get\l"
 	.string "you there in no time!\p"
