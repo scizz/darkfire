@@ -58,11 +58,6 @@ Route115_EventScript_RematchTimothy:: @ 81F29D9
 	msgbox Route115_Text_TimothyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route115_EventScript_Koichi:: @ 81F29F0
-	trainerbattle_single TRAINER_KOICHIS, Route115_Text_KoichiIntro, Route115_Text_KoichiDefeat
-	msgbox Route115_Text_KoichiPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route115_EventScript_Nob:: @ 81F2A07
 	trainerbattle_single TRAINER_NOB_1, Route115_Text_NobIntro, Route115_Text_NobDefeat, Route115_EventScript_RegisterNob
 	specialvar VAR_RESULT, ShouldTryRematchBattle

@@ -45,15 +45,6 @@ Route125_EventScript_Sharon:: @ 81F67E9
 	msgbox Route125_Text_SharonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route125_EventScript_Ernest:: @ 81F6800
-	trainerbattle_single TRAINER_ERNEST_1, Route125_Text_ErnestIntro, Route125_Text_ErnestDefeat, Route125_EventScript_RegisterErnest
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq Route125_EventScript_RematchErnest
-	msgbox Route125_Text_ErnestPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
 Route125_EventScript_RegisterErnest:: @ 81F682C
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0

@@ -147,13 +147,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 28,
-      "y": 6,
-      "elevation": 3,
-      "item": "ITEM_EVERSTONE",
-      "flag": "FLAG_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_1"
-    }
+
   ]
 }

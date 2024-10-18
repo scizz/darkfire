@@ -54,15 +54,6 @@ Route123_EventScript_Violet:: @ 81F61F3
 	msgbox Route123_Text_VioletPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route123_EventScript_Cameron:: @ 81F620A
-	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq Route123_EventScript_RematchCameron
-	msgbox Route123_Text_CameronPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
 Route123_EventScript_RegisterCameron:: @ 81F6236
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0

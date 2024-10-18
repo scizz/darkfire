@@ -389,11 +389,6 @@ Route119_EventScript_Hideo:: @ 81F4930
 	msgbox Route119_Text_HideoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route119_EventScript_Chris:: @ 81F4947
-	trainerbattle_single TRAINER_CHRIS, Route119_Text_ChrisIntro, Route119_Text_ChrisDefeat
-	msgbox Route119_Text_ChrisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route119_EventScript_Fabian:: @ 81F495E
 	trainerbattle_single TRAINER_FABIAN, Route119_Text_FabianIntro, Route119_Text_FabianDefeat
 	msgbox Route119_Text_FabianPostBattle, MSGBOX_AUTOCLOSE

@@ -1247,6 +1247,202 @@ Route12_Text_CalePostBattle:
 	.string "Bug Pokémon have a secret strength.\n"
 	.string "You'll see their potential someday!$"
 
+Route13_Text_SpencerIntro:
+	.string "{COLOR}{BLUE}I've been swimming since I could walk!\p"
+	.string "The sea's my home, and I love battling\n"
+	.string "on the open water.\p"
+	.string "Think you can keep up with me?\n"
+	.string "Let's dive into a battle and find out!$"
+
+Route13_Text_SpencerDefeat:
+	.string "Wow!\n"
+	.string "You've got real strength in you!$"
+
+Route13_Text_SpencerPostBattle:
+	.string "{COLOR}{BLUE}You've got skills both in and out of\n"
+	.string "the water.\p"
+	.string "Keep that up, and you'll make waves no\n"
+	.string "matter where you go!$"
+
+Route13_Text_RolandIntro:
+	.string "{COLOR}{BLUE}I've been out here all day, training\n"
+	.string "my Pokémon in the cool water.\p"
+	.string "It's refreshing, but there's a tough\n"
+	.string "route up ahead.\p"
+	.string "They say the desert is brutal.\n"
+	.string "It's nothing like the sea.\p"
+	.string "Let's see if you're strong enough to\n"
+	.string "handle it!$"
+
+Route13_Text_RolandDefeat:
+	.string "Looks like I'm all washed up!$"
+
+Route13_Text_RolandPostBattle:
+	.string "{COLOR}{BLUE}You've got what it takes!\p"
+	.string "If you can handle a fight in water,\n"
+	.string "you might just survive the desert.\p"
+	.string "Just remember, it's a lot hotter than\n"
+	.string "this cool ocean!$"
+
+Route13_Text_ChadIntro:
+	.string "{COLOR}{BLUE}The highway they built over the water\n"
+	.string "truly is a technological miracle.\l"
+	.string "But it disturbs my training!$"
+
+Route13_Text_ChadDefeat:
+	.string "Augh!\n"
+	.string "I lost this one…$"
+
+Route13_Text_ChadPostBattle:
+	.string "{COLOR}{BLUE}There's much less boats around now\n"
+	.string "that they built the highway.$"
+
+Route13_Text_GraceIntro:
+	.string "{COLOR}{RED}Isn't the sea beautiful?\p"
+	.string "I could spend all day swimming with my\n"
+	.string "Pokémon.\p"
+	.string "The way they glide through the water…\n"
+	.string "It's like poetry in motion.\p"
+	.string "But I bet your team's pretty graceful,\n"
+	.string "too.\p"
+	.string "Let's battle and find out!$"
+
+Route13_Text_GraceDefeat:
+	.string "Whoa…\n"
+	.string "You're like a tidal wave!$"
+
+Route13_Text_GracePostBattle:
+	.string "{COLOR}{RED}Your Pokémon move with such strength.\p"
+	.string "Maybe you've spent a lot of time\n"
+	.string "training by the water, too?\p"
+	.string "Either way, you're ready for anything!$"
+
+Route13_Text_JennyIntro:
+	.string "{COLOR}{RED}This sea route is my favorite place to\n"
+	.string "train!\p"
+	.string "You've got the breeze, the waves, and\n"
+	.string "plenty of Trainers to battle.\p"
+	.string "Let's see if you've got what it takes!$"
+
+Route13_Text_JennyDefeat:
+	.string "I wasn't expecting you to be this\n"
+	.string "strong!$"
+
+Route13_Text_JennyPostBattle:
+	.string "{COLOR}{RED}With a battle like that, you're more\n"
+	.string "than ready for the desert ahead.\p"
+	.string "The desert might be tough, but if you\n"
+	.string "can handle the sea, you can take on\l"
+	.string "anything!$"
+
+Route13_Text_ReliIntro:
+	.string "{COLOR}{RED}We'll work together as siblings to\n"
+	.string "take you on!$"
+
+Route13_Text_ReliDefeat:
+	.string "We couldn't win even though we worked\n"
+	.string "together…$"
+
+Route13_Text_ReliPostBattle:
+	.string "{COLOR}{RED}My brother's got the energy, but I'm\n"
+	.string "the one who plans the strategy.\p"
+	.string "Guess we'll have to work even harder\n"
+	.string "next time!$"
+
+Route13_Text_ReliNotEnoughMons:
+	.string "{COLOR}{RED}You don't have two Pokémon?\n"
+	.string "We can't enjoy a battle, then.$"
+
+Route13_Text_IanIntro:
+	.string "{COLOR}{BLUE}I'm doing my best together with my\n"
+	.string "sis!$"
+
+Route13_Text_IanDefeat:
+	.string "I did my best with my sis, but we\n"
+	.string "still couldn't win…$"
+
+Route13_Text_IanPostBattle:
+	.string "{COLOR}{BLUE}I guess I still have a lot to learn.\p"
+	.string "Sis always says I rush into battles\n"
+	.string "too fast…\p"
+	.string "But hey, we'll get stronger together!$"
+
+Route13_Text_IanNotEnoughMons:
+	.string "{COLOR}{BLUE}If you have two Pokémon,\n"
+	.string "we'll take you on!$"
+
+Route13_Text_ChrisIntro:
+	.string "{COLOR}{BLUE}Bleh!\p"
+	.string "I can't catch anything with this Black\n"
+	.string "Belt over there scaring the fish away!\p"
+	.string "I'm done with fishing.\n"
+	.string "It's time to battle!$"
+
+Route13_Text_ChrisDefeat:
+	.string "Bleh!$"
+
+Route13_Text_ChrisPostBattle:
+	.string "{COLOR}{BLUE}Maybe I should pick a different spot\n"
+	.string "for fishing.\p"
+	.string "But I got so tired getting here that\n"
+	.string "I can't seem to move…$"
+
+Route13_Text_DaisukeIntro:
+	.string "Hi-YAAAAH!\p"
+	.string "Ough…\p"
+	.string "I've been trying to use the Rock Smash\n"
+	.string "technique on this rock, but it just\l"
+	.string "refuses to break!\p"
+	.string "Help me train some more.$"
+
+Route13_Text_DaisukeDefeat:
+	.string "You're really good!$"
+
+Route13_Text_DaisukePostBattle:
+	.string "I heard they're giving away the HM\n"
+	.string "Rock Smash to the winner of Moonspring\l"
+	.string "City's tournament.\p"
+	.string "Oh, how I wish I had that HM so I\n"
+	.string "could smash rocks…$"
+
+Route13_Text_CameronIntro:
+	.string "{COLOR}{BLUE}My Pokémon and I have trained our\n"
+	.string "minds to predict every move.\p"
+	.string "Let's see if you can break through our\n"
+	.string "psychic power.$"
+
+Route13_Text_CameronDefeat:
+	.string "Impossible…\n"
+	.string "I didn't foresee this outcome.$"
+
+Route13_Text_CameronPostBattle:
+	.string "{COLOR}{BLUE}It seems you possess an unpredictable\n"
+	.string "spirit… Something even my psychic\l"
+	.string "powers couldn't read.\p"
+	.string "Your path is clouded in mystery, but\n"
+	.string "I sense great potential within you.$"
+
+Route13_Text_ErnestIntro:
+	.string "{COLOR}{BLUE}Ahoy there!\p"
+	.string "I've sailed across the toughest seas\n"
+	.string "and battled in the roughest waters.\p"
+	.string "My Pokémon's strength?\p"
+	.string "Well, let's just say it's leagues\n"
+	.string "above what you've faced before.\p"
+	.string "Hope you're ready for a real storm!$"
+
+Route13_Text_ErnestDefeat:
+	.string "What?!\n"
+	.string "Even my Machoke couldn't sink you?!$"
+
+Route13_Text_ErnestPostBattle:
+	.string "{COLOR}{BLUE}Well, color me impressed!\p"
+	.string "You've got some serious guts to take\n"
+	.string "down my Machoke like that.\p"
+	.string "Not many Trainers can stand tall after\n"
+	.string "a battle with me…\l"
+	.string "Consider this your badge of honor!$"
+
 @ VANILLA TRAINERS
 
 Route102_Text_CalvinIntro: @ 8294513
@@ -2483,18 +2679,6 @@ Route111_Text_TravisPostBattle: @ 8298DF1
 	.string "When I see a TRAINER with a lot of pep,\n"
 	.string "I can't help looking.$"
 
-Route111_Text_DaisukeIntro: @ 8298EE6
-	.string "To train myself, I challenge all\n"
-	.string "whom I meet!$"
-
-Route111_Text_DaisukeDefeat: @ 8298F14
-	.string "Uncle! I give up!$"
-
-Route111_Text_DaisukePostBattle: @ 8298F26
-	.string "All I can do is keep training until\n"
-	.string "I can defeat strong TRAINERS such\l"
-	.string "as yourself.$"
-
 Route111_Text_WiltonIntro: @ 8298F79
 	.string "Show me how much you've toughened\n"
 	.string "your POKéMON.$"
@@ -3084,19 +3268,6 @@ Route115_Text_TimothyPostRematch: @ 829B385
 	.string "All it takes is effort!\p"
 	.string "I lost because I haven't put in enough\n"
 	.string "effort!$"
-
-Route115_Text_KoichiIntro: @ 829B3CC
-	.string "You!\p"
-	.string "My MACHOP!\p"
-	.string "Demand a battle!$"
-
-Route115_Text_KoichiDefeat: @ 829B3ED
-	.string "Ouch, ouch, ouch!$"
-
-Route115_Text_KoichiPostBattle: @ 829B3FF
-	.string "My MACHOP crew!\p"
-	.string "So long as they seek power, I will\n"
-	.string "grow strong with them!$"
 
 Route115_Text_NobIntro: @ 829B449
 	.string "My strongest skill is busting bricks\n"
@@ -3819,21 +3990,6 @@ Route119_Text_HideoPostBattle: @ 829E2A3
 	.string "There is no deep, hidden meaning\n"
 	.string "to that.$"
 
-Route119_Text_ChrisIntro: @ 829E30D
-	.string "You spoke to me…\n"
-	.string "So you want to challenge me!\p"
-	.string "Sure! I'll try out the POKéMON I caught\n"
-	.string "while SURFING!$"
-
-Route119_Text_ChrisDefeat: @ 829E372
-	.string "I don't have a clue about what it\n"
-	.string "takes to win.$"
-
-Route119_Text_ChrisPostBattle: @ 829E3A2
-	.string "Go for a SURF on my POKéMON…\p"
-	.string "Then fish off its back…\p"
-	.string "It's an indescribably luxuriant moment!$"
-
 Route119_Text_FabianIntro: @ 829E3FF
 	.string "Hit me with a power chord!\n"
 	.string "Victory is mine!\l"
@@ -4184,18 +4340,6 @@ Route123_Text_VioletPostBattle: @ 829FD7B
 	.string "The BERRY MASTER's garden is filled\n"
 	.string "with uplifting fragrances.$"
 
-Route123_Text_CameronIntro: @ 829FDBA
-	.string "Being a psychic is about willpower.\p"
-	.string "I've willed myself not to lose to\n"
-	.string "anyone. That makes me strong!$"
-
-Route123_Text_CameronDefeat: @ 829FE1E
-	.string "I feel sad…$"
-
-Route123_Text_CameronPostBattle: @ 829FE2A
-	.string "Being a psychic is about willpower.\n"
-	.string "I thought I wouldn't lose to you…$"
-
 Route123_Text_CameronRegister: @ 829FE70
 	.string "I sense it!\n"
 	.string "You and I shall battle again!\l"
@@ -4389,47 +4533,6 @@ Route123_Text_KayleyPostBattle: @ 82A096E
 	.string "Using accessories effectively is\n"
 	.string "the secret behind fashion appeal.$"
 
-Route124_Text_SpencerIntro: @ 82A09B1
-	.string "Hey, are you lost at sea?\p"
-	.string "If you can beat my POKéMON,\n"
-	.string "I can serve as your pilot.$"
-
-Route124_Text_SpencerDefeat: @ 82A0A02
-	.string "I lost my bearings in battle!$"
-
-Route124_Text_SpencerPostBattle: @ 82A0A20
-	.string "Many people lose their bearings at sea.\p"
-	.string "If you're that sort, you should refer\n"
-	.string "to the POKéNAV's MAP.$"
-
-Route124_Text_RolandIntro: @ 82A0A84
-	.string "Hm! You're riding a POKéMON instead\n"
-	.string "of swimming yourself…\p"
-	.string "I am envious!$"
-
-Route124_Text_RolandDefeat: @ 82A0ACC
-	.string "Oh!\n"
-	.string "I can't…$"
-
-Route124_Text_RolandPostBattle: @ 82A0AD9
-	.string "I'm getting chilled…\n"
-	.string "I've been in the water too long…\p"
-	.string "I wish I could ride a POKéMON like you…$"
-
-Route124_Text_JennyIntro: @ 82A0B37
-	.string "If you just float in the sea like\n"
-	.string "this, POKéMON come around to play.$"
-
-Route124_Text_JennyDefeat: @ 82A0B7C
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
-
-Route124_Text_JennyPostBattle: @ 82A0B9A
-	.string "While swimming, I noticed that some\n"
-	.string "POKéMON attack, and some just watch.\p"
-	.string "I guess POKéMON have personalities\n"
-	.string "of their own.$"
-
 Route124_Text_JennyRegister: @ 82A0C14
 	.string "It's only on a whim, but maybe I'll get\n"
 	.string "you to register me in your POKéNAV.$"
@@ -4445,33 +4548,6 @@ Route124_Text_JennyRematchDefeat: @ 82A0CA0
 Route124_Text_JennyPostRematch: @ 82A0CBE
 	.string "This has nothing to do with anything,\n"
 	.string "but maybe I'll visit the TRICK HOUSE.$"
-
-Route124_Text_GraceIntro: @ 82A0D0A
-	.string "I'm growing bored of swimming…\n"
-	.string "How about a battle?$"
-
-Route124_Text_GraceDefeat: @ 82A0D3D
-	.string "I had no idea that you were\n"
-	.string "this strong!$"
-
-Route124_Text_GracePostBattle: @ 82A0D66
-	.string "All the effort you put in must have\n"
-	.string "made you this strong.$"
-
-Route124_Text_ChadIntro: @ 82A0DA0
-	.string "Fufufufu… I dive deep underwater\n"
-	.string "to go deep under cover.\l"
-	.string "Plumbing the depths is where I excel!$"
-
-Route124_Text_ChadDefeat: @ 82A0DFF
-	.string "Glub, glub, glub…\n"
-	.string "I'm sinking…$"
-
-Route124_Text_ChadPostBattle: @ 82A0E1E
-	.string "I have it on good authority that\n"
-	.string "there's a DIVE spot around here.\p"
-	.string "It gives me the urge to go deep\n"
-	.string "again…$"
 
 Route124_Text_LilaIntro: @ 82A0E87
 	.string "LILA: Sigh…\p"
@@ -4623,20 +4699,6 @@ Route125_Text_SharonDefeat: @ 82A16C5
 Route125_Text_SharonPostBattle: @ 82A16CE
 	.string "Your power… You're the real deal.\n"
 	.string "I'm amazed!$"
-
-Route125_Text_ErnestIntro: @ 82A16FC
-	.string "Ahoy! I'm a buff, tough SAILOR!\n"
-	.string "I've braved the world's seas!$"
-
-Route125_Text_ErnestDefeat: @ 82A173A
-	.string "Gwrroooar!\n"
-	.string "I couldn't win!$"
-
-Route125_Text_ErnestPostBattle: @ 82A1755
-	.string "The tide ebbs and flows inside the\n"
-	.string "SHOAL CAVE.\p"
-	.string "By the way, it's about six hours from\n"
-	.string "high tide to low tide. Did you know?$"
 
 Route125_Text_ErnestRegister: @ 82A17CF
 	.string "Register me in your POKéNAV,\n"
@@ -5207,41 +5269,6 @@ Route131_Text_KaraDefeat: @ 82A378A
 Route131_Text_KaraPostBattle: @ 82A379F
 	.string "Maybe it's not my bathing suit that\n"
 	.string "makes men look. It must be my beauty!$"
-
-Route131_Text_ReliIntro: @ 82A37E9
-	.string "RELI: We'll work together as siblings\n"
-	.string "to take you on!$"
-
-Route131_Text_ReliDefeat: @ 82A381F
-	.string "RELI: We couldn't win even though we\n"
-	.string "worked together…$"
-
-Route131_Text_ReliPostBattle: @ 82A3855
-	.string "RELI: The people of PACIFIDLOG are\n"
-	.string "together with the sea and POKéMON from\l"
-	.string "the time they are born.$"
-
-Route131_Text_ReliNotEnoughMons: @ 82A38B7
-	.string "RELI: You don't have two POKéMON?\n"
-	.string "We can't enjoy a battle, then.$"
-
-Route131_Text_IanIntro: @ 82A38F8
-	.string "IAN: I'm doing my best together with\n"
-	.string "my sis!$"
-
-Route131_Text_IanDefeat: @ 82A3925
-	.string "IAN: I did my best with my sis,\n"
-	.string "but we still couldn't win…$"
-
-Route131_Text_IanPostBattle: @ 82A3960
-	.string "IAN: You know how PACIFIDLOG is\n"
-	.string "a floating town?\p"
-	.string "So, wherever there is the sea,\n"
-	.string "that's a part of PACIFIDLOG!$"
-
-Route131_Text_IanNotEnoughMons: @ 82A39CD
-	.string "IAN: If you have two POKéMON,\n"
-	.string "we'll take you on!$"
 
 Route131_Text_TaliaIntro: @ 82A39FE
 	.string "If you can beat me, I'll give you some\n"
