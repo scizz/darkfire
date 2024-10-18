@@ -55,7 +55,7 @@ Route13_EventScript_Daisuke::
 	end
 
 Route13_EventScript_Cameron::
-	trainerbattle_single TRAINER_CAMERON, Route13_Text_CameronIntro, Route13_Text_CameronDefeat
+	trainerbattle_single TRAINER_CAMERON_1, Route13_Text_CameronIntro, Route13_Text_CameronDefeat
 	msgbox Route13_Text_CameronPostBattle, MSGBOX_AUTOCLOSE
 	end
 
