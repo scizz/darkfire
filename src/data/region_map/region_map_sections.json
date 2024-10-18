@@ -257,6 +257,70 @@
       "height": 0
     },
     {
+      "map_section": "MAPSEC_ROUTE_13",
+      "name": "Route 13",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_14",
+      "name": "Route 14",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_15",
+      "name": "Route 15",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_16",
+      "name": "Route 16",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_17",
+      "name": "Route 17",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_18",
+      "name": "Route 18",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_19",
+      "name": "Route 19",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_20",
+      "name": "Route 20",
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    {
       "map_section": "MAPSEC_WATERWAY_CITY",
       "name": "Waterway City",
       "x": 0,
