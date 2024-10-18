@@ -1,6 +1,10 @@
 Route12_MapScripts::
 	.byte 0
 
+Route12_Sign::
+	msgbox Route12_Text_Sign, MSGBOX_SIGN
+	end
+
 Route12_EventScript_Marcel:: @ACE TRAINER
 	trainerbattle_single TRAINER_MARCEL, Route12_Text_MarcelIntro, Route12_Text_MarcelDefeated
 	msgbox Route12_Text_MarcelPostBattle, MSGBOX_AUTOCLOSE
@@ -17,7 +21,7 @@ Route12_EventScript_Wendy:: @ ACE TRAINER
 	end
 
 Route12_EventScript_Jessica:: @ BEAUTY
-	trainerbattle_single TRAINER_JESSICA, Route12_Text_JessicaIntro, Route12_Text_JessicaDefeated
+	trainerbattle_single TRAINER_JESSICA_1, Route12_Text_JessicaIntro, Route12_Text_JessicaDefeated
 	msgbox Route12_Text_JessicaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -33,6 +37,10 @@ Route12_Woman_2::
 Route12_Fisherman::
 	msgbox Route12_Text_Fisherman, MSGBOX_NPC
 	end
+
+Route12_Text_Sign:
+	.string "Route 12\n"
+	.string "Waterway City {RIGHT_ARROW}$"
 
 Route12_Text_Woman_2:
 	.string "{COLOR}{RED}Sometimes I come here just to listen\n"

@@ -44,11 +44,6 @@ Route123_EventScript_BerryMastersHouseSign:: @ 81F61BC
 	msgbox Route123_Text_BerryMastersHouse, MSGBOX_SIGN
 	end
 
-Route123_EventScript_Wendy:: @ 81F61C5
-	trainerbattle_single TRAINER_WENDY, Route123_Text_WendyIntro, Route123_Text_WendyDefeat
-	msgbox Route123_Text_WendyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route123_EventScript_Braxton:: @ 81F61DC
 	trainerbattle_single TRAINER_BRAXTON, Route123_Text_BraxtonIntro, Route123_Text_BraxtonDefeat
 	msgbox Route123_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE

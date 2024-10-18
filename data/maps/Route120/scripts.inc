@@ -342,11 +342,6 @@ Route120_EventScript_Jennifer:: @ 81F58E0
 	msgbox Route120_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route120_EventScript_Chip:: @ 81F58F7
-	trainerbattle_single TRAINER_CHIP, Route120_Text_ChipIntro, Route120_Text_ChipDefeat
-	msgbox Route120_Text_ChipPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route120_EventScript_Clarissa:: @ 81F590E
 	trainerbattle_single TRAINER_CLARISSA, Route120_Text_ClarissaIntro, Route120_Text_ClarissaDefeat
 	msgbox Route120_Text_ClarissaPostBattle, MSGBOX_AUTOCLOSE

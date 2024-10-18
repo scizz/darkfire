@@ -1192,7 +1192,7 @@ Route12_Text_MarcelPostBattle:
 Route12_Text_ChipIntro:
 	.string "{COLOR}{BLUE}Ancient ruins hide many mysteries,\n"
 	.string "just like my Pokémon!\p"
-	.string "You won't solve this puzzle easily!"
+	.string "You won't solve this puzzle easily!$"
 
 Route12_Text_ChipDefeated:
 	.string "Urk…\n"
@@ -1222,11 +1222,11 @@ Route12_Text_WendyPostBattle:
 Route12_Text_JessicaIntro:
 	.string "{COLOR}{RED}Battles are a test of grace as well as\n"
 	.string "strength…\p"
-	.string "…and I never lose in either!\n"
+	.string "But I never lose in either!\n"
 	.string "Care to try?$"
 
 Route12_Text_JessicaDefeated:
-	.string "How… unflattering.$"
+	.string "How unflattering…$"
 
 Route12_Text_JessicaPostBattle:
 	.string "{COLOR}{RED}Well, I suppose you earned this one,\n"

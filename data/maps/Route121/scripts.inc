@@ -101,15 +101,6 @@ Route121_EventScript_Tammy:: @ 81F5EED
 	msgbox Route121_Text_TammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route121_EventScript_Jessica:: @ 81F5F3A
-	trainerbattle_single TRAINER_JESSICA_1, Route121_Text_JessicaIntro, Route121_Text_JessicaDefeat, Route121_EventScript_RegisterJessica
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq Route121_EventScript_RematchJessica
-	msgbox Route121_Text_JessicaPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
 Route121_EventScript_RegisterJessica:: @ 81F5F66
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
@@ -123,11 +114,6 @@ Route121_EventScript_RematchJessica:: @ 81F5F85
 	msgbox Route121_Text_JessicaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route121_EventScript_Cale:: @ 81F5F9C
-	trainerbattle_single TRAINER_CALE, Route121_Text_CaleIntro, Route121_Text_CaleDefeat
-	msgbox Route121_Text_CalePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route121_EventScript_Myles:: @ 81F5FB3
 	trainerbattle_single TRAINER_MYLES, Route121_Text_MylesIntro, Route121_Text_MylesDefeat
 	msgbox Route121_Text_MylesPostBattle, MSGBOX_AUTOCLOSE
@@ -136,11 +122,6 @@ Route121_EventScript_Myles:: @ 81F5FB3
 Route121_EventScript_Pat:: @ 81F5FCA
 	trainerbattle_single TRAINER_PAT, Route121_Text_PatIntro, Route121_Text_PatDefeat
 	msgbox Route121_Text_PatPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route121_EventScript_Marcel:: @ 81F5FE1
-	trainerbattle_single TRAINER_MARCEL, Route121_Text_MarcelIntro, Route121_Text_MarcelDefeat
-	msgbox Route121_Text_MarcelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Cristin:: @ 81F5FF8
