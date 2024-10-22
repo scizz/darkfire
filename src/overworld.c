@@ -2447,6 +2447,20 @@ void CB2_ContinueSavedGame(void)
     ScriptContext_Init();
     UnlockPlayerFieldControls();
     InitMatchCallCounters();
+
+    // Check if the player has a Beta 2.1 .sav and hasn't been warped yet
+    if ((VarGet(VAR_STORYLINE_STATE) >= 1) && !FlagGet(FLAG_WARPED_TO_CHANDRA))
+    {
+        // Set the warp destination to MAP_CHANDRA_VILLAGE
+        SetWarpDestination(MAP_GROUP(CHANDRA_VILLAGE), MAP_NUM(CHANDRA_VILLAGE), -1, 24, 28);
+        WarpIntoMap();
+        SetMainCallback2(CB2_LoadMap);
+        
+        FlagSet(FLAG_WARPED_TO_CHANDRA);
+        
+        return;
+    }
+
     if (UseContinueGameWarp() == TRUE)
     {
         ClearContinueGameWarpStatus();
