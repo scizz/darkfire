@@ -872,8 +872,10 @@
 #define OBJ_EVENT_GFX_REGIGIGAS_STONE            865
 #define OBJ_EVENT_GFX_GILL                       866
 #define OBJ_EVENT_GFX_GROTTO_TREE                867
+#define OBJ_EVENT_GFX_CUBONE_SKULL_NORMAL        868
+#define OBJ_EVENT_GFX_CUBONE_SKULL_SANDY         869
 
-#define NUM_OBJ_EVENT_GFX                        868
+#define NUM_OBJ_EVENT_GFX                        870
 
 
 // These are dynamic object gfx ids.

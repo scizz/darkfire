@@ -899,6 +899,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pikatron;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RegigigasStone;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gill;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GrottoTree;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuboneSkullNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuboneSkullSandy;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1769,6 +1771,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_REGIGIGAS_STONE] =          &gObjectEventGraphicsInfo_RegigigasStone,
     [OBJ_EVENT_GFX_GILL] =                     &gObjectEventGraphicsInfo_Gill,
     [OBJ_EVENT_GFX_GROTTO_TREE] =              &gObjectEventGraphicsInfo_GrottoTree,
+    [OBJ_EVENT_GFX_CUBONE_SKULL_NORMAL] =      &gObjectEventGraphicsInfo_CuboneSkullNormal,
+    [OBJ_EVENT_GFX_CUBONE_SKULL_SANDY] =       &gObjectEventGraphicsInfo_CuboneSkullSandy,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
