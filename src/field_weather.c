@@ -452,6 +452,7 @@ static void FadeInScreenWithWeather(void)
         break;
     case WEATHER_FOG_HORIZONTAL:
     case WEATHER_SNOW:
+    case WEATHER_SANDSTORM:
         if (FadeInScreen_FogHorizontal() == FALSE)
         {
             Weather_SetBlendCoeffs(8, 13); // Indoor shadows
@@ -468,7 +469,6 @@ static void FadeInScreenWithWeather(void)
             gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
         }
         break;
-    case WEATHER_SANDSTORM:
     case WEATHER_FOG_DIAGONAL:
     case WEATHER_UNDERWATER:
     default:
