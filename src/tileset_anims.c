@@ -35,7 +35,7 @@ static void TilesetAnim_Pacifidlog(u16);
 static void TilesetAnim_Sootopolis(u16);
 static void TilesetAnim_BattleFrontierOutsideWest(u16);
 static void TilesetAnim_Underwater(u16);
-static void TilesetAnim_SootopolisGym(u16);
+//static void TilesetAnim_SootopolisGym(u16);
 static void TilesetAnim_Cave(u16);
 static void TilesetAnim_EliteFour(u16);
 //static void TilesetAnim_MauvilleGym(u16);
@@ -1865,7 +1865,7 @@ void InitTilesetAnim_SootopolisGym(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 240;
-    sSecondaryTilesetAnimCallback = TilesetAnim_SootopolisGym;
+    sSecondaryTilesetAnimCallback = NULL;
 }
 
 void InitTilesetAnim_Cave(void)
@@ -2394,11 +2394,11 @@ static void QueueAnimTiles_Slateport_SmallRockBottom(u16 timer)
         QueueAnimTiles_MauvilleGym_ElectricGates(timer / 2);
 }*/
 
-static void TilesetAnim_SootopolisGym(u16 timer)
+/*static void TilesetAnim_SootopolisGym(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_SootopolisGym_Waterfalls(timer / 8);
-}
+}*/
 
 static void TilesetAnim_EliteFour(u16 timer)
 {
