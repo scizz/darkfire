@@ -299,6 +299,7 @@ void UpdateShadowFieldEffect(struct Sprite *sprite)
          || objectEvent->inSandPile
          || MetatileBehavior_IsPokeGrass(objectEvent->currentMetatileBehavior)
          || MetatileBehavior_IsDoor(objectEvent->currentMetatileBehavior)
+         || MetatileBehavior_IsDeepSand(objectEvent->currentMetatileBehavior)
          || MetatileBehavior_IsSurfableWaterOrUnderwater(objectEvent->currentMetatileBehavior))
         {
             FieldEffectStop(sprite, FLDEFF_SHADOW);

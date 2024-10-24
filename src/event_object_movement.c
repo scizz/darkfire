@@ -9310,6 +9310,9 @@ static void GetGroundEffectFlags_SandHeap(struct ObjectEvent *objEvent, u32 *fla
     }
     else
     {
+        objEvent->triggerGroundEffectsOnStop = TRUE;
+        objEvent->hasShadow = TRUE;
+        StartFieldEffectForObjectEvent(FLDEFF_SHADOW, objEvent);
         objEvent->inSandPile = FALSE;
     }
 }
