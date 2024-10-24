@@ -9310,9 +9310,6 @@ static void GetGroundEffectFlags_SandHeap(struct ObjectEvent *objEvent, u32 *fla
     }
     else
     {
-        objEvent->triggerGroundEffectsOnStop = TRUE;
-        objEvent->hasShadow = TRUE;
-        StartFieldEffectForObjectEvent(FLDEFF_SHADOW, objEvent);
         objEvent->inSandPile = FALSE;
     }
 }
@@ -9453,6 +9450,7 @@ static const MetatileFunc sDisallowedMetatiles[] = {
     MetatileBehavior_IsForestTallGrass,
     MetatileBehavior_IsLongGrass,
     MetatileBehavior_IsHayLongGrass,
+    MetatileBehavior_IsDeepSand,
 };
 
 static bool8 IsShadowAllowedInId(struct ObjectEvent *objEvent) {
