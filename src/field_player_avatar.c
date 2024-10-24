@@ -1819,6 +1819,10 @@ static void Task_WaitStopSurfing(u8 taskId)
         UnlockPlayerFieldControls();
         DestroySprite(&gSprites[playerObjEvent->fieldEffectSpriteId]);
         playerObjEvent->triggerGroundEffectsOnMove = TRUE;
+        playerObjEvent->triggerGroundEffectsOnStop = TRUE;
+        playerObjEvent->landingJump = TRUE;
+        playerObjEvent->hasShadow = TRUE;
+        StartFieldEffectForObjectEvent(FLDEFF_SHADOW, playerObjEvent);
         DestroyTask(taskId);
     }
 }
