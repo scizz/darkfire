@@ -4782,6 +4782,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ClamperlSign = {TA
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lab = {TAG_NONE, OBJ_EVENT_PAL_TAG_LAB, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_Lab, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SnorlaxSleeping = {TAG_NONE, OBJ_EVENT_PAL_TAG_SNORLAX_SLEEPING, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_L, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, gObjectEventPicTable_SnorlaxSleeping, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerBoard = {TAG_NONE, OBJ_EVENT_PAL_TAG_RANGER_BOARD, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, gObjectEventPicTable_RangerBoard, gDummySpriteAffineAnimTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tent = {TAG_NONE, OBJ_EVENT_PAL_TAG_TENT, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_Tent, gDummySpriteAffineAnimTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TentTribe = {TAG_NONE, OBJ_EVENT_PAL_TAG_TENT_TRIBE, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 10, SHADOW_SIZE_XL, TRUE, TRUE, TRACKS_NONE, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Standard, gObjectEventPicTable_TentTribe, gDummySpriteAffineAnimTable};
+
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kojiro = {
     .tileTag = TAG_NONE,

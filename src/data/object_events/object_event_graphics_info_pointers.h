@@ -901,6 +901,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gill;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GrottoTree;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuboneSkullNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuboneSkullSandy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tent;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TentTribe;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1773,6 +1775,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GROTTO_TREE] =              &gObjectEventGraphicsInfo_GrottoTree,
     [OBJ_EVENT_GFX_CUBONE_SKULL_NORMAL] =      &gObjectEventGraphicsInfo_CuboneSkullNormal,
     [OBJ_EVENT_GFX_CUBONE_SKULL_SANDY] =       &gObjectEventGraphicsInfo_CuboneSkullSandy,
+    [OBJ_EVENT_GFX_TENT] =                     &gObjectEventGraphicsInfo_Tent,
+    [OBJ_EVENT_GFX_TENT_TRIBE] =               &gObjectEventGraphicsInfo_TentTribe,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

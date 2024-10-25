@@ -2796,6 +2796,14 @@ const struct SpriteFrameImage gObjectEventPicTable_CuboneSkullSandy[] = {
     overworld_frame(gObjectEventPic_CuboneSkullSandy, 2, 2, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Tent[] = {
+    overworld_frame(gObjectEventPic_Tent, 8, 8, 0),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_TentTribe[] = {
+    overworld_frame(gObjectEventPic_TentTribe, 8, 8, 0),
+};
+
 
 const struct SpriteFrameImage gObjectEventPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 0),

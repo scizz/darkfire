@@ -1565,3 +1565,7 @@ const u16 gObjectEventPal_GrottoTree[] = INCBIN_U16("graphics/object_events/pale
 const u32 gObjectEventPic_CuboneSkullNormal[] = INCBIN_U32("graphics/object_events/pics/misc/cubone_skull_normal.4bpp");
 const u32 gObjectEventPic_CuboneSkullSandy[] = INCBIN_U32("graphics/object_events/pics/misc/cubone_skull_sandy.4bpp");
 const u16 gObjectEventPal_CuboneSkull[] = INCBIN_U16("graphics/object_events/palettes/cubone_skull.gbapal");
+const u32 gObjectEventPic_Tent[] = INCBIN_U32("graphics/object_events/pics/misc/tent.4bpp");
+const u32 gObjectEventPic_TentTribe[] = INCBIN_U32("graphics/object_events/pics/misc/tent_tribe.4bpp");
+const u16 gObjectEventPal_Tent[] = INCBIN_U16("graphics/object_events/palettes/tent.gbapal");
+const u16 gObjectEventPal_TentTribe[] = INCBIN_U16("graphics/object_events/palettes/tent_tribe.gbapal");
