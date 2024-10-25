@@ -340,7 +340,8 @@
   "gMapGroup_DarkfireMapInterlinks": [
     "LaveriaCity_Interlink",
     "UnionCity_Interlink",
-    "NorthstarCity_Interlink"
+    "NorthstarCity_Interlink",
+    "Route13_Interlink"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

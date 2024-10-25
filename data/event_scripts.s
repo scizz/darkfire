@@ -1473,3 +1473,5 @@ Script_RemoveTint::
 	.include "data/maps/Route15_TribalCave/scripts.inc"
 
 	.include "data/maps/ColossusTemple_1F/scripts.inc"
+
+	.include "data/maps/Route13_Interlink/scripts.inc"

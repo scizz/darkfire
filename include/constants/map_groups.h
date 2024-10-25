@@ -266,6 +266,7 @@
 #define MAP_LAVERIA_CITY_INTERLINK   (0 | (34 << 8))
 #define MAP_UNION_CITY_INTERLINK     (1 | (34 << 8))
 #define MAP_NORTHSTAR_CITY_INTERLINK (2 | (34 << 8))
+#define MAP_ROUTE13_INTERLINK        (3 | (34 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (35 << 8))

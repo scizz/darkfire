@@ -449,15 +449,15 @@
       "x": 18,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE13_INTERLINK",
+      "dest_warp_id": "2"
     },
     {
       "x": 19,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE13_INTERLINK",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

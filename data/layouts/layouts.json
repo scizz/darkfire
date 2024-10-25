@@ -6190,6 +6190,16 @@
       "secondary_tileset": "gTileset_ColossusTemple",
       "border_filepath": "data/layouts/ColossusTemple_1F/border.bin",
       "blockdata_filepath": "data/layouts/ColossusTemple_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE13_INTERLINK",
+      "name": "Route13_Interlink_Layout",
+      "width": 10,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Route13_Interlink/border.bin",
+      "blockdata_filepath": "data/layouts/Route13_Interlink/map.bin"
     }
   ]
 }
