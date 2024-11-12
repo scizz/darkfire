@@ -150,7 +150,8 @@
     "HorizonIslandSouthCoastPeak",
     "HorizonIslandJungle",
     "HorizonIslandJunglePeak",
-    "OccaIslandPort"
+    "OccaIslandPort",
+    "OccaIslandNorth"
   ],
   "gMapGroup_DarkfireIslandDungeons": [
     "MtProboPeak",

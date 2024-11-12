@@ -1475,3 +1475,6 @@ Script_RemoveTint::
 	.include "data/maps/ColossusTemple_1F/scripts.inc"
 
 	.include "data/maps/Route13_Interlink/scripts.inc"
+
+	.include "data/maps/OccaIslandNorth/scripts.inc"
+	.include "data/maps/OccaIslandNorth/text.inc"

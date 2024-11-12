@@ -6200,6 +6200,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Route13_Interlink/border.bin",
       "blockdata_filepath": "data/layouts/Route13_Interlink/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCCA_ISLAND_NORTH",
+      "name": "OccaIslandNorth_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_AguavIsland",
+      "border_filepath": "data/layouts/OccaIslandNorth/border.bin",
+      "blockdata_filepath": "data/layouts/OccaIslandNorth/map.bin"
     }
   ]
 }
