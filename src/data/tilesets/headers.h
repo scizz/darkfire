@@ -1122,3 +1122,25 @@ const struct Tileset gTileset_ColossusTemple =
     .metatileAttributes = gMetatileAttributes_ColossusTemple,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_NorthSea =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_NorthSea,
+    .palettes = gTilesetPalettes_NorthSea,
+    .metatiles = gMetatiles_NorthSea,
+    .metatileAttributes = gMetatileAttributes_NorthSea,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_DesertPeak =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DesertPeak,
+    .palettes = gTilesetPalettes_DesertPeak,
+    .metatiles = gMetatiles_DesertPeak,
+    .metatileAttributes = gMetatileAttributes_DesertPeak,
+    .callback = NULL,
+};
