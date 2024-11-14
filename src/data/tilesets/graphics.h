@@ -2147,3 +2147,41 @@ const u16 gTilesetPalettes_ColossusTemple[][16] =
 };
 
 const u32 gTilesetTiles_ColossusTemple[] = INCBIN_U32("data/tilesets/secondary/colossus_temple/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_NorthSea[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/north_sea/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_NorthSea[] = INCBIN_U32("data/tilesets/secondary/north_sea/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_DesertPeak[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_peak/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_DesertPeak[] = INCBIN_U32("data/tilesets/secondary/desert_peak/tiles.4bpp.lz");
