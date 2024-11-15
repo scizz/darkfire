@@ -108,6 +108,7 @@
 #define MAP_CHARRED_PATH    (5 | (5 << 8))
 #define MAP_THUNDER_CREST   (6 | (5 << 8))
 #define MAP_NORTHSTAR_ARENA (7 | (5 << 8))
+#define MAP_DESERT_PEAK     (8 | (5 << 8))
 
 // gMapGroup_IndoorChandra
 #define MAP_CHANDRA_VILLAGE_PLAYER_HOUSE_1F (0 | (6 << 8))

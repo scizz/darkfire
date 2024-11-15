@@ -1478,3 +1478,6 @@ Script_RemoveTint::
 
 	.include "data/maps/OccaIslandNorth/scripts.inc"
 	.include "data/maps/OccaIslandNorth/text.inc"
+
+	.include "data/maps/DesertPeak/scripts.inc"
+	.include "data/maps/DesertPeak/text.inc"
