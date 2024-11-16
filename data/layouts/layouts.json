@@ -6214,8 +6214,8 @@
     {
       "id": "LAYOUT_DESERT_PEAK",
       "name": "DesertPeak_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 30,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DesertPeak",
       "border_filepath": "data/layouts/DesertPeak/border.bin",
