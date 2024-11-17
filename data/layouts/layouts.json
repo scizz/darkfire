@@ -6205,9 +6205,9 @@
       "id": "LAYOUT_OCCA_ISLAND_NORTH",
       "name": "OccaIslandNorth_Layout",
       "width": 40,
-      "height": 40,
+      "height": 56,
       "primary_tileset": "gTileset_PinapIslands",
-      "secondary_tileset": "gTileset_AguavIsland",
+      "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/OccaIslandNorth/border.bin",
       "blockdata_filepath": "data/layouts/OccaIslandNorth/map.bin"
     },

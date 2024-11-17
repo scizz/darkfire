@@ -9,7 +9,13 @@
   "map_type": "MAP_TYPE_NONE",
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_OCCA_ISLAND_NORTH",
+      "offset": 11,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
