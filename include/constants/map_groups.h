@@ -87,6 +87,7 @@
 #define MAP_HORIZON_ISLAND_JUNGLE_PEAK      (5 | (2 << 8))
 #define MAP_OCCA_ISLAND_PORT                (6 | (2 << 8))
 #define MAP_OCCA_ISLAND_NORTH               (7 | (2 << 8))
+#define MAP_ROUTE35                         (8 | (2 << 8))
 
 // gMapGroup_DarkfireIslandDungeons
 #define MAP_MT_PROBO_PEAK     (0 | (3 << 8))

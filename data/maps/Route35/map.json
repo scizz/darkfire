@@ -1,7 +1,7 @@
 {
-  "id": "MAP_OCCA_ISLAND_NORTH",
-  "name": "OccaIslandNorth",
-  "layout": "LAYOUT_OCCA_ISLAND_NORTH",
+  "id": "MAP_ROUTE35",
+  "name": "Route35",
+  "layout": "LAYOUT_ROUTE35",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -11,14 +11,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_OCCA_ISLAND_PORT",
-      "offset": 9,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_ROUTE35",
+      "map": "MAP_OCCA_ISLAND_NORTH",
       "offset": 0,
-      "direction": "down"
+      "direction": "up"
     }
   ],
   "object_events": [

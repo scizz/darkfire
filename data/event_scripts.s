@@ -1481,3 +1481,6 @@ Script_RemoveTint::
 
 	.include "data/maps/DesertPeak/scripts.inc"
 	.include "data/maps/DesertPeak/text.inc"
+
+	.include "data/maps/Route35/scripts.inc"
+	.include "data/maps/Route35/text.inc"

@@ -6205,7 +6205,7 @@
       "id": "LAYOUT_OCCA_ISLAND_NORTH",
       "name": "OccaIslandNorth_Layout",
       "width": 40,
-      "height": 56,
+      "height": 60,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/OccaIslandNorth/border.bin",
@@ -6220,6 +6220,16 @@
       "secondary_tileset": "gTileset_DesertPeak",
       "border_filepath": "data/layouts/DesertPeak/border.bin",
       "blockdata_filepath": "data/layouts/DesertPeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE35",
+      "name": "Route35_Layout",
+      "width": 40,
+      "height": 80,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route35/border.bin",
+      "blockdata_filepath": "data/layouts/Route35/map.bin"
     }
   ]
 }
