@@ -12,7 +12,7 @@
   "connections": [
     {
       "map": "MAP_OCCA_ISLAND_NORTH",
-      "offset": -9,
+      "offset": 10,
       "direction": "left"
     }
   ],
