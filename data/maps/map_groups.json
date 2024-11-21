@@ -152,7 +152,11 @@
     "HorizonIslandJunglePeak",
     "OccaIslandPort",
     "OccaIslandNorth",
-    "Route35"
+    "Route35",
+    "Route36",
+    "BonanzaCape",
+    "Route37",
+    "ShiningTreeTown"
   ],
   "gMapGroup_DarkfireIslandDungeons": [
     "MtProboPeak",

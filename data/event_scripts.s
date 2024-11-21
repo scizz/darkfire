@@ -1484,3 +1484,15 @@ Script_RemoveTint::
 
 	.include "data/maps/Route35/scripts.inc"
 	.include "data/maps/Route35/text.inc"
+
+	.include "data/maps/Route36/scripts.inc"
+	.include "data/maps/Route36/text.inc"
+
+	.include "data/maps/BonanzaCape/scripts.inc"
+	.include "data/maps/BonanzaCape/text.inc"
+
+	.include "data/maps/Route37/scripts.inc"
+	.include "data/maps/Route37/text.inc"
+
+	.include "data/maps/ShiningTreeTown/scripts.inc"
+	.include "data/maps/ShiningTreeTown/text.inc"

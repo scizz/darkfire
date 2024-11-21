@@ -6230,6 +6230,46 @@
       "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/Route35/border.bin",
       "blockdata_filepath": "data/layouts/Route35/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE36",
+      "name": "Route36_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route36/border.bin",
+      "blockdata_filepath": "data/layouts/Route36/map.bin"
+    },
+    {
+      "id": "LAYOUT_BONANZA_CAPE",
+      "name": "BonanzaCape_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/BonanzaCape/border.bin",
+      "blockdata_filepath": "data/layouts/BonanzaCape/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE37",
+      "name": "Route37_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route37/border.bin",
+      "blockdata_filepath": "data/layouts/Route37/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHINING_TREE_TOWN",
+      "name": "ShiningTreeTown_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/ShiningTreeTown/border.bin",
+      "blockdata_filepath": "data/layouts/ShiningTreeTown/map.bin"
     }
   ]
 }
