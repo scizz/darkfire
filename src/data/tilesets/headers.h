@@ -1144,3 +1144,14 @@ const struct Tileset gTileset_DesertPeak =
     .metatileAttributes = gMetatileAttributes_DesertPeak,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ShuckleIsland =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ShuckleIsland,
+    .palettes = gTilesetPalettes_ShuckleIsland,
+    .metatiles = gMetatiles_ShuckleIsland,
+    .metatileAttributes = gMetatileAttributes_ShuckleIsland,
+    .callback = NULL,
+};
