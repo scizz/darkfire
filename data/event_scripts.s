@@ -1496,3 +1496,15 @@ Script_RemoveTint::
 
 	.include "data/maps/ShiningTreeTown/scripts.inc"
 	.include "data/maps/ShiningTreeTown/text.inc"
+
+	.include "data/maps/Route38/scripts.inc"
+	.include "data/maps/Route38/text.inc"
+
+	.include "data/maps/Route39/scripts.inc"
+	.include "data/maps/Route39/text.inc"
+
+	.include "data/maps/Route40/scripts.inc"
+	.include "data/maps/Route40/text.inc"
+
+	.include "data/maps/ShuckleIsland/scripts.inc"
+	.include "data/maps/ShuckleIsland/text.inc"

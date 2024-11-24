@@ -6270,6 +6270,46 @@
       "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/ShiningTreeTown/border.bin",
       "blockdata_filepath": "data/layouts/ShiningTreeTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE38",
+      "name": "Route38_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route38/border.bin",
+      "blockdata_filepath": "data/layouts/Route38/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE39",
+      "name": "Route39_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route39/border.bin",
+      "blockdata_filepath": "data/layouts/Route39/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE40",
+      "name": "Route40_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route40/border.bin",
+      "blockdata_filepath": "data/layouts/Route40/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHUCKLE_ISLAND",
+      "name": "ShuckleIsland_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_AguavIsland",
+      "border_filepath": "data/layouts/ShuckleIsland/border.bin",
+      "blockdata_filepath": "data/layouts/ShuckleIsland/map.bin"
     }
   ]
 }
