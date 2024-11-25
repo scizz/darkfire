@@ -9,7 +9,28 @@
   "map_type": "MAP_TYPE_NONE",
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_SHUCKLE_ISLAND",
+      "offset": 30,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE39",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_SHUCKLE_ISLAND",
+      "offset": 30,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE41",
+      "offset": -60,
+      "direction": "right"
+    }
+  ],
   "object_events": [
 
   ],

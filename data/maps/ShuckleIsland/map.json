@@ -9,7 +9,33 @@
   "map_type": "MAP_TYPE_NONE",
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_ROUTE40",
+      "offset": -30,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE40",
+      "offset": -30,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE39",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE42",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE41",
+      "offset": -90,
+      "direction": "right"
+    }
+  ],
   "object_events": [
 
   ],
