@@ -1508,3 +1508,9 @@ Script_RemoveTint::
 
 	.include "data/maps/ShuckleIsland/scripts.inc"
 	.include "data/maps/ShuckleIsland/text.inc"
+
+	.include "data/maps/Route41/scripts.inc"
+	.include "data/maps/Route41/text.inc"
+
+	.include "data/maps/Route42/scripts.inc"
+	.include "data/maps/Route42/text.inc"

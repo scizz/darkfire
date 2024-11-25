@@ -5255,7 +5255,7 @@
       "id": "LAYOUT_PALACE_OF_ICE_ENTRANCE",
       "name": "PalaceOfIce_Entrance_Layout",
       "width": 19,
-      "height": 24,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/PalaceOfIce_Entrance/border.bin",
@@ -6274,8 +6274,8 @@
     {
       "id": "LAYOUT_ROUTE38",
       "name": "Route38_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 60,
+      "height": 120,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/Route38/border.bin",
@@ -6284,8 +6284,8 @@
     {
       "id": "LAYOUT_ROUTE39",
       "name": "Route39_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 30,
+      "height": 90,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/Route39/border.bin",
@@ -6294,8 +6294,8 @@
     {
       "id": "LAYOUT_ROUTE40",
       "name": "Route40_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 60,
+      "height": 30,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_NorthSea",
       "border_filepath": "data/layouts/Route40/border.bin",
@@ -6304,12 +6304,32 @@
     {
       "id": "LAYOUT_SHUCKLE_ISLAND",
       "name": "ShuckleIsland_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 30,
+      "height": 30,
       "primary_tileset": "gTileset_PinapIslands",
       "secondary_tileset": "gTileset_ShuckleIsland",
       "border_filepath": "data/layouts/ShuckleIsland/border.bin",
       "blockdata_filepath": "data/layouts/ShuckleIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE41",
+      "name": "Route41_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route41/border.bin",
+      "blockdata_filepath": "data/layouts/Route41/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE42",
+      "name": "Route42_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_NorthSea",
+      "border_filepath": "data/layouts/Route42/border.bin",
+      "blockdata_filepath": "data/layouts/Route42/map.bin"
     }
   ]
 }
