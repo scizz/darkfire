@@ -6287,7 +6287,7 @@
       "width": 30,
       "height": 90,
       "primary_tileset": "gTileset_PinapIslands",
-      "secondary_tileset": "gTileset_NorthSea",
+      "secondary_tileset": "gTileset_ShuckleIsland",
       "border_filepath": "data/layouts/Route39/border.bin",
       "blockdata_filepath": "data/layouts/Route39/map.bin"
     },
@@ -6297,7 +6297,7 @@
       "width": 60,
       "height": 30,
       "primary_tileset": "gTileset_PinapIslands",
-      "secondary_tileset": "gTileset_NorthSea",
+      "secondary_tileset": "gTileset_ShuckleIsland",
       "border_filepath": "data/layouts/Route40/border.bin",
       "blockdata_filepath": "data/layouts/Route40/map.bin"
     },
