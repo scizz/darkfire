@@ -6327,7 +6327,7 @@
       "width": 60,
       "height": 90,
       "primary_tileset": "gTileset_PinapIslands",
-      "secondary_tileset": "gTileset_NorthSea",
+      "secondary_tileset": "gTileset_ShuckleIsland",
       "border_filepath": "data/layouts/Route42/border.bin",
       "blockdata_filepath": "data/layouts/Route42/map.bin"
     }
