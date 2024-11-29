@@ -41,11 +41,18 @@ SafariZone_EventScript_OutOfBalls::
 
 EventScript_PokeBlockFeeder::
 	lockall
+	callnative TestGivePokeblock
 	special GetPokeblockFeederInFront
 	goto_if_ne VAR_RESULT, 0xFFFF, SafariZone_EventScript_PokeblockPresent
 	msgbox SafariZone_Text_PlacePokeblockOnFeeder, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, SafariZone_EventScript_ChoosePokeblock
 	releaseall
+	end
+
+EventScript_PokeBlockEffectFaded::
+	lock
+	msgbox Text_PokeBlockEffectFaded, MSGBOX_SIGN
+	release
 	end
 
 SafariZone_EventScript_ChoosePokeblock::
@@ -289,3 +296,6 @@ SafariZone_Northeast_Text_Girl:
 	.string "I can't seem to catch anything!\p"
 	.string "I'll end up wasting the admission\n"
 	.string "price if I don't catch something!$"
+
+Text_PokeBlockEffectFaded:
+	.string "The {POKEBLOCK}'s effect faded…$"
