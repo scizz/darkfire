@@ -21,7 +21,7 @@ struct PokeblockFeeder
     /*0x08*/ struct Pokeblock pokeblock;
 };
 
-#define NUM_POKEBLOCK_FEEDERS 10
+#define NUM_POKEBLOCK_FEEDERS 30
 
 extern const u8 SafariZone_EventScript_TimesUp[];
 extern const u8 SafariZone_EventScript_RetirePrompt[];
@@ -202,26 +202,8 @@ struct Pokeblock *SafariZoneGetActivePokeblock(void)
 
 void SafariZoneActivatePokeblockFeeder(u8 pkblId)
 {
-    s16 x, y;
-    u8 i;
-
-    for (i = 0; i < NUM_POKEBLOCK_FEEDERS; i++)
-    {
-        // Find free entry in sPokeblockFeeders
-        if (sPokeblockFeeders[i].mapNum == 0
-         && sPokeblockFeeders[i].x == 0
-         && sPokeblockFeeders[i].y == 0)
-        {
-            // Initialize Pokeblock feeder
-            GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
-            sPokeblockFeeders[i].mapNum = gSaveBlock1Ptr->location.mapNum;
-            sPokeblockFeeders[i].pokeblock = gSaveBlock1Ptr->pokeblocks[pkblId];
-            sPokeblockFeeders[i].stepCounter = 100;
-            sPokeblockFeeders[i].x = x;
-            sPokeblockFeeders[i].y = y;
-            break;
-        }
-    }
+    VarSet(VAR_POKEBLOCK_STEP_COUNT, 500);
+    gSaveBlock1Ptr->routePokeblock = gSaveBlock1Ptr->pokeblocks[pkblId];
 }
 
 static void DecrementFeederStepCounters(void)

@@ -27,6 +27,7 @@
 
 extern const u8 EventScript_RepelWoreOff[];
 extern const u8 EventScript_LureWoreOff[];
+extern const u8 EventScript_PokeBlockEffectFaded[];
 
 #define MAX_ENCOUNTER_RATE 2880
 
@@ -384,10 +385,36 @@ static u8 PickWildMonNature(void)
 {
     u8 i;
     u8 j;
-    struct Pokeblock *safariPokeblock;
     u8 natures[NUM_NATURES];
 
-    if (GetSafariZoneFlag() == TRUE && Random() % 100 < 80)
+    if (VarGet(VAR_POKEBLOCK_STEP_COUNT) > 0/* && Random() % 100 < 80*/)
+    {
+        for (i = 0; i < NUM_NATURES; i++)
+            natures[i] = i;
+
+        for (i = 0; i < NUM_NATURES - 1; i++)
+        {
+            for (j = i + 1; j < NUM_NATURES; j++)
+            {
+                if (Random() & 1)
+                {
+                    u8 temp;
+                    SWAP(natures[i], natures[j], temp);
+                }
+            }
+        }
+
+        for (i = 0; i < NUM_NATURES; i++)
+        {
+            if (PokeblockGetGain(natures[i], &gSaveBlock1Ptr->routePokeblock) > 0)
+            {
+                DebugPrintf("%d", natures[i]);
+                return natures[i];
+            }
+        }
+    }
+
+    /*if (GetSafariZoneFlag() == TRUE && Random() % 100 < 80)
     {
         safariPokeblock = SafariZoneGetActivePokeblock();
         if (safariPokeblock != NULL)
@@ -411,7 +438,8 @@ static u8 PickWildMonNature(void)
                     return natures[i];
             }
         }
-    }
+    }*/
+
     // check synchronize for a pokemon with the same ability
     if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG)
         && GetMonAbility(&gPlayerParty[0]) == ABILITY_SYNCHRONIZE
@@ -976,6 +1004,29 @@ bool8 UpdateRepelCounter(void)
             }
         }
 
+    }
+    return FALSE;
+}
+
+bool8 UpdatePokeblockCounter(void)
+{
+    u16 steps = VarGet(VAR_POKEBLOCK_STEP_COUNT);
+
+    if (InBattlePike() || InBattlePyramid())
+        return FALSE;
+    if (InUnionRoom() == TRUE)
+        return FALSE;
+
+    if (steps != 0)
+    {
+        steps--;
+        VarSet(VAR_POKEBLOCK_STEP_COUNT, steps);
+        if (steps == 0)
+        {
+            DebugPrintf("%s", "Pokeblock effect wore off.");
+            ScriptContext_SetupScript(EventScript_PokeBlockEffectFaded);
+            return TRUE;
+        }
     }
     return FALSE;
 }
