@@ -1,0 +1,27 @@
+#ifndef GUARD_POKEPULSE_H
+#define GUARD_POKEPULSE_H
+
+struct PokePulse
+{
+    u8 bg1TilemapBuffer[BG_SCREEN_SIZE];
+    u8 bg2TilemapBuffer[BG_SCREEN_SIZE];
+    MainCallback exitCallback;
+    MainCallback newScreenCallback;
+    u8 graphicsLoadState;
+    u8 iconSpriteIds[5];
+    u8 selectionIdx;
+    u8 selectionBoxSpriteId;
+    u8 inputTaskId;
+};
+
+struct PokePulseApplicaton {
+    const u8 *name;
+    const u8 *desc;
+    const struct SpriteTemplate *iconTemplate;
+    MainCallback openCallback;
+};
+
+void CB2_StartPokePulseFromField(void);
+void GoToPokePulse(MainCallback cb);
+
+#endif // GUARD_POKEPULSE_H

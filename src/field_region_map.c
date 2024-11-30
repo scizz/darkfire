@@ -193,9 +193,9 @@ static void FieldUpdateRegionMap(void)
             if (!gPaletteFade.active)
             {
                 FreeRegionMapIconResources();
-                //SetMainCallback2(sFieldRegionMapHandler->callback);
+                SetMainCallback2(sFieldRegionMapHandler->callback);
                 //SetMainCallback2(CB2_BagMenuFromStartMenu);
-                SetMainCallback2(CB2_ReturnToFieldContinueScript);
+                // SetMainCallback2(CB2_ReturnToFieldContinueScript);
                 TRY_FREE_AND_SET_NULL(sFieldRegionMapHandler);
                 FreeAllWindowBuffers();
             }
