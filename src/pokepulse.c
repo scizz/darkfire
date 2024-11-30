@@ -356,6 +356,7 @@ static void PokePulse_FreeResources(void)
         struct Sprite *iconSprite = &gSprites[sPokePulse.iconSpriteIds[i]];
         DestroySpriteAndFreeResources(iconSprite);
     }
+    DestroySpriteAndFreeResources(&gSprites[sPokePulse.selectionBoxSpriteId]);
     FreeAllWindowBuffers();
 }
 
