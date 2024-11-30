@@ -379,6 +379,17 @@ static void PokePulse_CreateIcons(void)
     sPokePulse.selectionBoxSpriteId = CreateSprite(&sSelectionCircleSpriteTemplate, x, y, 0);
 }
 
+static void PokePulse_FreeResources(void)
+{
+    u32 i;
+    for (i = 0; i < 5; ++i)
+    {
+        struct Sprite *iconSprite = &gSprites[sPokePulse.iconSpriteIds[i]];
+        DestroySpriteAndFreeResources(iconSprite);
+    }
+    FreeAllWindowBuffers();
+}
+
 #define tState data[0]
 
 static void Task_ClosePokePulse(u8 taskId)
@@ -404,7 +415,7 @@ static void Task_ClosePokePulse(u8 taskId)
         else
             SetMainCallback2(sPokePulse.exitCallback);
         
-        FreeAllWindowBuffers();
+        PokePulse_FreeResources();
         DestroyTask(taskId);
         break;
     }
