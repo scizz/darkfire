@@ -1300,7 +1300,7 @@ static void DoCleanUpAndStartSafariZoneRetire(void) {
 static void HeatStartMenu_OpenMenu(void) {
   switch (menuSelected) {
     case MENU_POKETCH:
-      DoCleanUpAndChangeCallback(CB2_InitPokeNav);
+      DoCleanUpAndChangeCallback(CB2_StartPokePulseFromField);
       break;
     case MENU_POKEDEX:
       DoCleanUpAndChangeCallback(CB2_OpenPokedex);
@@ -1312,8 +1312,7 @@ static void HeatStartMenu_OpenMenu(void) {
       DoCleanUpAndChangeCallback(CB2_BagMenuFromStartMenu);
       break;
     case MENU_TRAINER_CARD:
-      // DoCleanUpAndOpenTrainerCard();
-      DoCleanUpAndChangeCallback(CB2_StartPokePulseFromField);
+      DoCleanUpAndOpenTrainerCard();
       break;
     case MENU_OPTIONS:
       DoCleanUpAndChangeCallback(CB2_InitOptionMenu);

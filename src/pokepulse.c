@@ -34,27 +34,9 @@ static const struct BgTemplate sBgTemplates_PokePulse[] =
         .baseTile = 0,
     },
     {
-        .bg = 1,
-        .charBaseIndex = 1,
-        .mapBaseIndex = 14,
-        .screenSize = 0,
-        .paletteMode = 0,
-        .priority = 1,
-        .baseTile = 0,
-    },
-    {
         .bg = 2,
         .charBaseIndex = 3,
         .mapBaseIndex = 23,
-        .screenSize = 0,
-        .paletteMode = 0,
-        .priority = 2,
-        .baseTile = 0,
-    },
-    {
-        .bg = 3,
-        .charBaseIndex = 3,
-        .mapBaseIndex = 31,
         .screenSize = 0,
         .paletteMode = 0,
         .priority = 2,
@@ -549,7 +531,7 @@ static bool8 SetupPokePulse(void)
     return TRUE;
 }
 
-void CB2_PokePulse(void)
+static void CB2_PokePulse(void)
 {
     while (SetupPokePulse() != TRUE)
     {}
