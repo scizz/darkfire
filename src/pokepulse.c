@@ -95,7 +95,7 @@ static const struct WindowTemplate sPokePulseWindowTemplates[] =
         .tilemapTop = 17,
         .width = 24,
         .height = 2,
-        .paletteNum = 1,
+        .paletteNum = 14,
         .baseBlock = 162
     }
 };
@@ -108,6 +108,9 @@ static EWRAM_DATA struct PokePulse sPokePulse;
 static const u32 sPokepulseTilemap[] = INCBIN_U32("graphics/pokepulse/pokepulse.bin.lz");
 static const u32 sPokepulseTiles[] = INCBIN_U32("graphics/pokepulse/pokepulse.4bpp.lz");
 static const u16 sPokepulsePalette[] = INCBIN_U16("graphics/pokepulse/pokepulse.gbapal");
+
+static const u16 sPokepulseMessageBoxPal[] = INCBIN_U16("graphics/pokepulse/message.gbapal");
+static const u32 sPokepulseMessageBoxGfx[] = INCBIN_U32("graphics/pokepulse/message.4bpp");
 
 static const u32 sPokepulseIconsGfx[] = INCBIN_U32("graphics/pokepulse/icons.4bpp.lz");
 static const u16 sPokepulseIconsPal[] = INCBIN_U16("graphics/pokepulse/icons.gbapal");
@@ -243,18 +246,14 @@ void CB2_StartPokePulseFromField(void)
 static void PokePulse_InitBgs(void)
 {
     ResetVramOamAndBgCntRegs();
-    memset(sPokePulse.bg1TilemapBuffer, 0, sizeof(sPokePulse.bg1TilemapBuffer));
     memset(sPokePulse.bg2TilemapBuffer, 0, sizeof(sPokePulse.bg2TilemapBuffer));
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sBgTemplates_PokePulse, ARRAY_COUNT(sBgTemplates_PokePulse));
-    SetBgTilemapBuffer(1, sPokePulse.bg1TilemapBuffer);
     SetBgTilemapBuffer(2, sPokePulse.bg2TilemapBuffer);
     ResetAllBgsCoordinates();
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     ShowBg(0);
-    ShowBg(1);
     ShowBg(2);
-    ShowBg(3);
 }
 
 static bool8 LoadPokePulseGraphics(void)
@@ -274,37 +273,20 @@ static bool8 LoadPokePulseGraphics(void)
         }
         break;
     case 2:
-        LoadPalette(sPokepulsePalette, 0, 0x20);
+        LoadPalette(sPokepulsePalette, 0, 0x40);
         sPokePulse.graphicsLoadState++;
         break;
     case 3:
-        ResetTempTileDataBuffers();
-        DecompressAndCopyTileDataToVram(1, gPokenavMessageBox_Gfx, 0, 0, 0);
-        sPokePulse.graphicsLoadState++;
-        break;
-    case 4:
-        if (FreeTempTileDataBuffersIfPossible() != TRUE)
-        {
-            LZDecompressWram(gPokenavMessageBox_Tilemap, sPokePulse.bg1TilemapBuffer);
-            sPokePulse.graphicsLoadState++;
-        }
-        break;
-    case 5:
-        LoadPalette(gPokenavMessageBox_Pal, 0x10, 0x20);
-        sPokePulse.graphicsLoadState++;
-        break;
-    case 6:
         LoadSpritePalette(sSpritePalette_PokePulseIcons);
         LoadCompressedSpriteSheet(sSpriteSheet_PokePulseIcons);
         sPokePulse.graphicsLoadState++;
         break;
-    case 7:
+    case 4:
         LoadSpritePalette(sSpritePalette_PokePulseCircle);
         LoadCompressedSpriteSheet(sSpriteSheet_PokePulseCircle);
         sPokePulse.graphicsLoadState++;
         break;
     default:
-        CopyBgTilemapBufferToVram(1);
         CopyBgTilemapBufferToVram(2);
         sPokePulse.graphicsLoadState = 0;
         return TRUE;
@@ -340,9 +322,14 @@ static void PokePulse_InitWindows(void)
     FillWindowPixelBuffer(PULSE_WIN_APP_NAMES2, PIXEL_FILL(0));
     CopyWindowToVram(PULSE_WIN_APP_NAMES2, COPYWIN_FULL);
 
+    LoadBgTiles(GetWindowAttribute(PULSE_WIN_DESCBOX, WINDOW_BG), sPokepulseMessageBoxGfx, 0x120, 210);
+    LoadPalette(sPokepulseMessageBoxPal, 0x10 * 14, 32);
+
     PutWindowTilemap(PULSE_WIN_DESCBOX);
     FillWindowPixelBuffer(PULSE_WIN_DESCBOX, PIXEL_FILL(6));
     CopyWindowToVram(PULSE_WIN_DESCBOX, COPYWIN_FULL);
+
+    DrawStdFrameWithCustomTileAndPalette(PULSE_WIN_DESCBOX, TRUE, 210, 14);
 }
 
 static void PrintPokePulseDescription(const u8 *str)

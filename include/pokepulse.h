@@ -3,7 +3,6 @@
 
 struct PokePulse
 {
-    u8 bg1TilemapBuffer[BG_SCREEN_SIZE];
     u8 bg2TilemapBuffer[BG_SCREEN_SIZE];
     MainCallback exitCallback;
     MainCallback newScreenCallback;
