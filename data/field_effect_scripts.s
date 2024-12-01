@@ -1,3 +1,4 @@
+#include "constants/item_config.h"
 	.include "asm/macros.inc"
 	.include "constants/constants.inc"
 
@@ -78,6 +79,9 @@ gFieldEffectScriptPointers::
     .4byte gFieldEffectScript_CaveDust                  @ FLDEFF_CAVE_DUST
 	.4byte gFieldEffectScript_ForestTallGrass           @ FLDEFF_FOREST_TALL_GRASS
 	.4byte gFieldEffectScript_HayLongGrass              @ FLDEFF_HAY_LONG_GRASS
+	.4byte gFldEffScript_UseVsSeeker                    @ FLDEFF_USE_VS_SEEKER
+	.4byte gFldEffScript_XIcon                          @ FLDEFF_X_ICON
+	.4byte gFldEffScript_DoubleExclMarkIcon             @ FLDEFF_DOUBLE_EXCL_MARK_ICON
     
 gFieldEffectScript_ExclamationMarkIcon1::
 	field_eff_callnative FldEff_ExclamationMarkIcon
@@ -372,4 +376,16 @@ gFieldEffectScript_ForestTallGrass::
 
 gFieldEffectScript_HayLongGrass::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_HayLongGrass
+	field_eff_end
+
+gFldEffScript_UseVsSeeker::
+	field_eff_callnative FldEff_UseVsSeeker
+	field_eff_end
+
+gFldEffScript_XIcon::
+	field_eff_callnative FldEff_XIcon
+	field_eff_end
+
+gFldEffScript_DoubleExclMarkIcon::
+	field_eff_callnative FldEff_DoubleExclMarkIcon
 	field_eff_end

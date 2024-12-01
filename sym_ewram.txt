@@ -154,3 +154,5 @@
 	.include "src/ui_main_menu.o"
 	.include "src/heat_start_menu.o"
 	.include "src/pokepulse.o"
+	.include "src/vs_seeker.o"
+
