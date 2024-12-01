@@ -54,6 +54,7 @@
 #include "rtc.h"
 #include "event_object_movement.h"
 #include "gba/isagbprint.h"
+#include "pokepulse.h"
 
 /* CALLBACKS */
 static void SpriteCB_IconPoketch(struct Sprite* sprite);
@@ -1305,7 +1306,7 @@ static void DoCleanUpAndStartSafariZoneRetire(void) {
 static void HeatStartMenu_OpenMenu(void) {
   switch (menuSelected) {
     case MENU_POKETCH:
-      DoCleanUpAndChangeCallback(CB2_InitPokeNav);
+      DoCleanUpAndChangeCallback(CB2_StartPokePulseFromField);
       break;
     case MENU_POKEDEX:
       DoCleanUpAndChangeCallback(CB2_OpenPokedex);

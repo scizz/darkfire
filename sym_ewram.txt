@@ -151,5 +151,6 @@
 	.include "src/debug.o"
 	.include "src/dexnav.o"
 	.include "src/quests.o"
-                  .include "src/ui_main_menu.o"
-                  .include "src/heat_start_menu.o"
+	.include "src/ui_main_menu.o"
+	.include "src/heat_start_menu.o"
+	.include "src/pokepulse.o"
