@@ -258,7 +258,7 @@ static const struct SpriteTemplate sPokepulseIconSpriteTemplate =
     .callback = SpriteCallbackDummy,
 };
 
-static const u8 sText_Map[] = _("Map");
+static const u8 sText_Map[] = _("World Map");
 static const u8 sText_Seeker[] = _("VS. Seeker");
 static const u8 sText_Quests[] = _("Quests");
 static const u8 sText_Ribbons[] = _("Ribbons");
