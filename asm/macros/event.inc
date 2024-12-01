@@ -1828,9 +1828,10 @@
 	questmenu QUEST_MENU_SET_ACTIVE, \quest
 	questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
     bufferstring 1 gText_QuestActive
-	playfanfare MUS_LEVEL_UP 
-	msgbox gText_QuestAnnounce, MSGBOX_SIGN
-	waitfanfare
+	@ playfanfare MUS_LEVEL_UP 
+	@ msgbox gText_QuestAnnounce, MSGBOX_SIGN
+	@ waitfanfare
+	callnative ShowQuestStatePopup
 	.endm
 
     @ Completes the specified quest.
@@ -1840,9 +1841,10 @@
 	questmenu QUEST_MENU_COMPLETE_QUEST, \quest
 	questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
     bufferstring 1 gText_QuestComplete
-	playfanfare MUS_LEVEL_UP 
-	msgbox gText_QuestAnnounce, MSGBOX_SIGN
-	waitfanfare
+	@ playfanfare MUS_LEVEL_UP 
+	@ msgbox gText_QuestAnnounce, MSGBOX_SIGN
+	@ waitfanfare
+	callnative ShowQuestStatePopup
 	.endm
 
 .macro goto_if_quest_inactive quest:req, dest:req

@@ -64,6 +64,7 @@ static void task_free_buf_after_copying_tile_data_to_vram(u8 taskId);
 
 static EWRAM_DATA u8 sStartMenuWindowId = 0;
 static EWRAM_DATA u8 sMapNamePopupWindowId = 0;
+static EWRAM_DATA u8 sQuestPopupWindowId = 0;
 static EWRAM_DATA struct Menu sMenu = {0};
 static EWRAM_DATA u16 sTileNum = 0;
 static EWRAM_DATA u8 sPaletteNum = 0;
@@ -166,6 +167,7 @@ void InitStandardTextBoxWindows(void)
     InitWindows(sStandardTextBox_WindowTemplates);
     sStartMenuWindowId = WINDOW_NONE;
     sMapNamePopupWindowId = WINDOW_NONE;
+    sQuestPopupWindowId = WINDOW_NONE;
 }
 
 void FreeAllOverworldWindowBuffers(void)
@@ -578,6 +580,27 @@ void RemoveMapNamePopUpWindow(void)
     {
         RemoveWindow(sMapNamePopupWindowId);
         sMapNamePopupWindowId = WINDOW_NONE;
+    }
+}
+
+u8 AddQuestStatePopUpWindow(void)
+{
+    if (sQuestPopupWindowId == WINDOW_NONE)
+        sQuestPopupWindowId = AddWindowParameterized(0, 4, 0, 22, 3, 15, 0x107);
+    return sQuestPopupWindowId;
+}
+
+u8 GetQuestStatePopUpWindowId(void)
+{
+    return sQuestPopupWindowId;
+}
+
+void RemoveQuestStatePopUpWindow(void)
+{
+    if (sQuestPopupWindowId != WINDOW_NONE)
+    {
+        RemoveWindow(sQuestPopupWindowId);
+        sQuestPopupWindowId = WINDOW_NONE;
     }
 }
 

@@ -43,6 +43,7 @@
 #include "palette.h"
 #include "play_time.h"
 #include "pokemon.h"
+#include "quests.h"
 #include "random.h"
 #include "roamer.h"
 #include "rotating_gate.h"
@@ -2136,6 +2137,7 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
         {
             LockPlayerFieldControls();
             HideMapNamePopUpWindow();
+            HideQuestPopUpWindow();
         }
         else
         {

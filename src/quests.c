@@ -5,6 +5,7 @@
 #include "decompress.h"
 #include "gpu_regs.h"
 #include "graphics.h"
+#include "international_string_util.h"
 #include "item.h"
 #include "item_icon.h"
 #include "item_menu.h"
@@ -2809,4 +2810,82 @@ void QuestMenu_ResetMenuSaveData(void)
 	       sizeof(gSaveBlock2Ptr->questData));
 	memset(&gSaveBlock2Ptr->subQuests, 0,
 	       sizeof(gSaveBlock2Ptr->subQuests));
+}
+
+// Quest state popups
+
+static const u8 sQuestPopupWindowGfx[] = INCBIN_U8("graphics/map_popup/wood.4bpp");
+static const u16 sQuestPopupWindowPal[] = INCBIN_U16("graphics/map_popup/wood.gbapal");
+
+static EWRAM_DATA u8 sQuestPopupTaskId = TASK_NONE;
+
+static void Task_ShowQuestStatePopup(u8 taskId);
+
+void ShowQuestStatePopup(void)
+{
+	CreateTask(Task_ShowQuestStatePopup, 0x80);
+}
+
+static const u8 sText_QuestHeader[] = _("Quest {STR_VAR_2}");
+
+static void QuestStatePopup_PrintInfo(u8 windowId)
+{
+	u32 x;
+	u8 colors[3] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY };
+	StringExpandPlaceholders(gStringVar4, sText_QuestHeader);
+	x = GetStringCenterAlignXOffset(FONT_SMALL, gStringVar4, 176);
+	AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 0, colors, 0, gStringVar4);
+
+	StringExpandPlaceholders(gStringVar4, gText_StrVar1);
+	x = GetStringCenterAlignXOffset(FONT_SMALL, gStringVar4, 176);
+	AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 12, colors, 0, gStringVar4);
+}
+
+static void Task_ShowQuestStatePopup(u8 taskId)
+{
+	u8 popupWindowId;
+	s16 *data = gTasks[taskId].data;
+
+	switch (data[0])
+	{
+	case 0:
+		SetGpuReg(REG_OFFSET_BG0VOFS, 40);
+		data[0]++;
+		break;
+	case 1:
+		popupWindowId = AddQuestStatePopUpWindow();
+		LoadUserWindowBorderGfx(popupWindowId, 0x214, 0xE0);
+		DrawStdWindowFrame(popupWindowId, TRUE);
+		FillWindowPixelBuffer(popupWindowId, PIXEL_FILL(1));
+		QuestStatePopup_PrintInfo(popupWindowId);
+		// LoadPalette(sQuestPopupWindowPal, 0xE0, 32);
+		// BlitBitmapToWindow(popupWindowId, sQuestPopupWindowGfx, 0, 0, 128, 32);
+		PutWindowTilemap(popupWindowId);
+		data[1] = 40;
+		data[2] = 0;
+		data[0]++;
+		break;
+	case 2:
+		if (data[1] < 0) data[0]++;
+		else SetGpuReg(REG_OFFSET_BG0VOFS, --data[1]);
+		break;
+	case 3:
+		if (data[2]++ > 120) data[0]++;
+		break;
+	case 4:
+		if (data[1] > 40) data[0]++;
+		else SetGpuReg(REG_OFFSET_BG0VOFS, ++data[1]);
+		break;
+	default:
+		HideQuestPopUpWindow();
+		DestroyTask(taskId);
+		break;
+	}
+}
+
+void HideQuestPopUpWindow(void)
+{
+	SetGpuReg_ForcedBlank(REG_OFFSET_BG0VOFS, 0);
+	ClearStdWindowAndFrame(GetQuestStatePopUpWindowId(), TRUE);
+	RemoveQuestStatePopUpWindow();
 }
