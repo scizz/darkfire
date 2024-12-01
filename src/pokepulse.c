@@ -198,11 +198,11 @@ const struct SpriteTemplate sSelectionCircleSpriteTemplate =
     .callback = SpriteCallbackDummy,
 };
 
-static const u8 sText_Map[] = _("Map");
-static const u8 sText_Seeker[] = _("Seeker");
-static const u8 sText_Quests[] = _("Quests");
-static const u8 sText_Ribbons[] = _("Ribbons");
-static const u8 sText_Condition[] = _("Condition");
+static const u8 sText_Map[] = _("{FONT_SMALL}World Map");
+static const u8 sText_Seeker[] = _("{FONT_SMALL}Vs.Seeker");
+static const u8 sText_Quests[] = _("{FONT_SMALL}Quests");
+static const u8 sText_Ribbons[] = _("{FONT_SMALL}Ribbons");
+static const u8 sText_Condition[] = _("{FONT_SMALL}Condition");
 
 static void CB2_OpenTownMapFromPokePulse(void);
 static void CB2_OpenQuestMenuFromPokePulse(void);
