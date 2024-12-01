@@ -586,7 +586,7 @@ void RemoveMapNamePopUpWindow(void)
 u8 AddQuestStatePopUpWindow(void)
 {
     if (sQuestPopupWindowId == WINDOW_NONE)
-        sQuestPopupWindowId = AddWindowParameterized(0, 4, 0, 22, 3, 15, 0x107);
+        sQuestPopupWindowId = AddWindowParameterized(0, 4, 0, 22, 4, 14, 0x107);
     return sQuestPopupWindowId;
 }
 

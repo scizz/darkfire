@@ -1831,6 +1831,7 @@
 	@ playfanfare MUS_LEVEL_UP 
 	@ msgbox gText_QuestAnnounce, MSGBOX_SIGN
 	@ waitfanfare
+	playse MUS_LEVEL_UP
 	callnative ShowQuestStatePopup
 	.endm
 
@@ -1844,6 +1845,7 @@
 	@ playfanfare MUS_LEVEL_UP 
 	@ msgbox gText_QuestAnnounce, MSGBOX_SIGN
 	@ waitfanfare
+	playse MUS_LEVEL_UP
 	callnative ShowQuestStatePopup
 	.endm
 

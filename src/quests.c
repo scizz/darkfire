@@ -2814,10 +2814,8 @@ void QuestMenu_ResetMenuSaveData(void)
 
 // Quest state popups
 
-static const u8 sQuestPopupWindowGfx[] = INCBIN_U8("graphics/map_popup/wood.4bpp");
-static const u16 sQuestPopupWindowPal[] = INCBIN_U16("graphics/map_popup/wood.gbapal");
-
-static EWRAM_DATA u8 sQuestPopupTaskId = TASK_NONE;
+static const u8 sQuestPopupWindowGfx[] = INCBIN_U8("graphics/quest_menu/popup.4bpp");
+static const u16 sQuestPopupWindowPal[] = INCBIN_U16("graphics/quest_menu/popup.gbapal");
 
 static void Task_ShowQuestStatePopup(u8 taskId);
 
@@ -2826,19 +2824,22 @@ void ShowQuestStatePopup(void)
 	CreateTask(Task_ShowQuestStatePopup, 0x80);
 }
 
-static const u8 sText_QuestHeader[] = _("Quest {STR_VAR_2}");
+static const u8 sText_QuestHeader[] = _("Quest {STR_VAR_2}!");
+static const u8 sText_QuestName[] = _("'{STR_VAR_1}'");
 
 static void QuestStatePopup_PrintInfo(u8 windowId)
 {
 	u32 x;
-	u8 colors[3] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY };
+	u8 headerColors[3] = { TEXT_COLOR_TRANSPARENT, TEXT_DYNAMIC_COLOR_5, TEXT_COLOR_LIGHT_BLUE };
+	u8 questNameColors[3] = { TEXT_COLOR_TRANSPARENT, TEXT_DYNAMIC_COLOR_4, TEXT_COLOR_LIGHT_BLUE };
+
 	StringExpandPlaceholders(gStringVar4, sText_QuestHeader);
 	x = GetStringCenterAlignXOffset(FONT_SMALL, gStringVar4, 176);
-	AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 0, colors, 0, gStringVar4);
+	AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 2, headerColors, 0, gStringVar4);
 
-	StringExpandPlaceholders(gStringVar4, gText_StrVar1);
+	StringExpandPlaceholders(gStringVar4, sText_QuestName);
 	x = GetStringCenterAlignXOffset(FONT_SMALL, gStringVar4, 176);
-	AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 12, colors, 0, gStringVar4);
+	AddTextPrinterParameterized3(windowId, FONT_SMALL, x, 12, questNameColors, 0, gStringVar4);
 }
 
 static void Task_ShowQuestStatePopup(u8 taskId)
@@ -2854,13 +2855,14 @@ static void Task_ShowQuestStatePopup(u8 taskId)
 		break;
 	case 1:
 		popupWindowId = AddQuestStatePopUpWindow();
-		LoadUserWindowBorderGfx(popupWindowId, 0x214, 0xE0);
-		DrawStdWindowFrame(popupWindowId, TRUE);
-		FillWindowPixelBuffer(popupWindowId, PIXEL_FILL(1));
+		// LoadUserWindowBorderGfx(popupWindowId, 0x214, 0xE0);
+		// DrawStdWindowFrame(popupWindowId, TRUE);
+		FillWindowPixelBuffer(popupWindowId, PIXEL_FILL(0));
+		LoadPalette(sQuestPopupWindowPal, 0xE0, 32);
+		BlitBitmapToWindow(popupWindowId, sQuestPopupWindowGfx, 0, 0, 176, 32);
 		QuestStatePopup_PrintInfo(popupWindowId);
-		// LoadPalette(sQuestPopupWindowPal, 0xE0, 32);
-		// BlitBitmapToWindow(popupWindowId, sQuestPopupWindowGfx, 0, 0, 128, 32);
 		PutWindowTilemap(popupWindowId);
+		CopyWindowToVram(popupWindowId, COPYWIN_FULL);
 		data[1] = 40;
 		data[2] = 0;
 		data[0]++;
