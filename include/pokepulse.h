@@ -11,6 +11,7 @@ struct PokePulse
     u8 selectionIdx;
     u8 selectionBoxSpriteId;
     u8 inputTaskId;
+    u8 pokepulseIconSpriteId;
 };
 
 struct PokePulseApplicaton {

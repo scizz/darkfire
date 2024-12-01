@@ -94,29 +94,48 @@ static const u16 sPokepulsePalette[] = INCBIN_U16("graphics/pokepulse/pokepulse.
 static const u16 sPokepulseMessageBoxPal[] = INCBIN_U16("graphics/pokepulse/message.gbapal");
 static const u32 sPokepulseMessageBoxGfx[] = INCBIN_U32("graphics/pokepulse/message.4bpp");
 
-static const u32 sPokepulseIconsGfx[] = INCBIN_U32("graphics/pokepulse/icons.4bpp.lz");
-static const u16 sPokepulseIconsPal[] = INCBIN_U16("graphics/pokepulse/icons.gbapal");
+static const u32 sPokepulseAppIconsGfx[] = INCBIN_U32("graphics/pokepulse/icons.4bpp.lz");
+static const u16 sPokepulseAppIconsPal[] = INCBIN_U16("graphics/pokepulse/icons.gbapal");
 
 static const u32 sPokepulseCircleGfx[] = INCBIN_U32("graphics/pokepulse/selection_box.4bpp.lz");
 static const u16 sPokepulseCirclePal[] = INCBIN_U16("graphics/pokepulse/selection_box.gbapal");
 
-#define TAG_ICON_GFX 1234
-#define TAG_ICON_PAL 0x4654
+static const u32 sPokepulseIconGfx[] = INCBIN_U32("graphics/pokepulse/pokepulse_icon.4bpp.lz");
+static const u16 sPokepulseIconPal[] = INCBIN_U16("graphics/pokepulse/pokepulse_icon.gbapal");
 
-#define TAG_CIRCLE_GFX 12345
+#define TAG_APP_ICON_GFX 0x1000
+#define TAG_APP_ICON_PAL 0x4654
+
+#define TAG_CIRCLE_GFX 0x1001
 #define TAG_CIRCLE_PAL 0x4655
 
-static const struct SpritePalette sSpritePalette_PokePulseIcons[] =
+#define TAG_ICON_GFX 0x1002
+#define TAG_ICON_PAL 0x4656
+
+static const struct SpritePalette sSpritePalette_PokePulseAppIcons[] =
 {
-    { sPokepulseIconsPal, TAG_ICON_PAL },
+    { sPokepulseAppIconsPal, TAG_APP_ICON_PAL },
     { NULL }
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_PokePulseIcons[] = 
+static const struct CompressedSpriteSheet sSpriteSheet_PokePulseAppIcons[] = 
 {
-    { sPokepulseIconsGfx, 32 * 320 / 2 , TAG_ICON_GFX },
+    { sPokepulseAppIconsGfx, 32 * 320 / 2 , TAG_APP_ICON_GFX },
     { NULL }
 };
+
+static const struct SpritePalette sSpritePalette_PokePulseIcon[] =
+{
+    { sPokepulseIconPal, TAG_ICON_PAL },
+    { NULL }
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_PokePulseIcon[] = 
+{
+    { sPokepulseIconGfx, 32 * 256 / 2 , TAG_ICON_GFX },
+    { NULL }
+};
+
 
 static const struct SpritePalette sSpritePalette_PokePulseCircle[] =
 {
@@ -130,7 +149,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_PokePulseCircle[] =
     { NULL }
 };
 
-static const struct OamData sPokePulseIcon_Oam = {
+static const struct OamData sPokePulseAppIcon_Oam = {
     .y = 0,
     .affineMode = ST_OAM_AFFINE_DOUBLE,
     .objMode = 0,
@@ -158,6 +177,20 @@ static const struct OamData sPokePulseCircle_Oam = {
     .paletteNum = 1,
 };
 
+static const struct OamData sPokePulseIcon_Oam = {
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .objMode = 0,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x32),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x32),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 2,
+};
+
 #define POKEPULSE_APP_SPRITE(name, x) \
 static const union AnimCmd gAnimCmd_##name##_Selected[] = { \
     ANIMCMD_FRAME(x * 16, 0), \
@@ -172,9 +205,9 @@ static const union AnimCmd *const gIcon##name##Anim[] = {\
     gAnimCmd_##name##_NotSelected,\
 };\
 static const struct SpriteTemplate gSpriteIcon##name = { \
-    .tileTag = TAG_ICON_GFX, \
-    .paletteTag = TAG_ICON_PAL, \
-    .oam = &sPokePulseIcon_Oam, \
+    .tileTag = TAG_APP_ICON_GFX, \
+    .paletteTag = TAG_APP_ICON_PAL, \
+    .oam = &sPokePulseAppIcon_Oam, \
     .anims = gIcon##name##Anim, \
     .images = NULL, \
     .affineAnims = gDummySpriteAffineAnimTable, \
@@ -187,7 +220,7 @@ POKEPULSE_APP_SPRITE(Quests, 2)
 POKEPULSE_APP_SPRITE(Ribbons, 3)
 POKEPULSE_APP_SPRITE(Seeker, 4)
 
-const struct SpriteTemplate sSelectionCircleSpriteTemplate =
+static const struct SpriteTemplate sSelectionCircleSpriteTemplate =
 {
     .tileTag = TAG_CIRCLE_GFX,
     .paletteTag = TAG_CIRCLE_PAL,
@@ -198,8 +231,35 @@ const struct SpriteTemplate sSelectionCircleSpriteTemplate =
     .callback = SpriteCallbackDummy,
 };
 
+static const union AnimCmd gAnimCmd_PokepulseIcon_Rotate[] = {
+    ANIMCMD_FRAME(16 * 0, 10),
+    ANIMCMD_FRAME(16 * 1, 10),
+    ANIMCMD_FRAME(16 * 2, 10),
+    ANIMCMD_FRAME(16 * 3, 10),
+    ANIMCMD_FRAME(16 * 4, 10),
+    ANIMCMD_FRAME(16 * 5, 10),
+    ANIMCMD_FRAME(16 * 6, 10),
+    ANIMCMD_FRAME(16 * 7, 10),
+    ANIMCMD_JUMP(0),
+    ANIMCMD_END
+};
+static const union AnimCmd *const gAnims_PokepulseIcon_Anim[] = {
+    gAnimCmd_PokepulseIcon_Rotate
+};
+
+static const struct SpriteTemplate sPokepulseIconSpriteTemplate =
+{
+    .tileTag = TAG_ICON_GFX,
+    .paletteTag = TAG_ICON_PAL,
+    .oam = &sPokePulseIcon_Oam,
+    .anims = gAnims_PokepulseIcon_Anim,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
 static const u8 sText_Map[] = _("Map");
-static const u8 sText_Seeker[] = _("Seeker");
+static const u8 sText_Seeker[] = _("VS. Seeker");
 static const u8 sText_Quests[] = _("Quests");
 static const u8 sText_Ribbons[] = _("Ribbons");
 static const u8 sText_Condition[] = _("Condition");
@@ -259,13 +319,18 @@ static bool8 LoadPokePulseGraphics(void)
         sPokePulse.graphicsLoadState++;
         break;
     case 3:
-        LoadSpritePalette(sSpritePalette_PokePulseIcons);
-        LoadCompressedSpriteSheet(sSpriteSheet_PokePulseIcons);
+        LoadSpritePalette(sSpritePalette_PokePulseAppIcons);
+        LoadCompressedSpriteSheet(sSpriteSheet_PokePulseAppIcons);
         sPokePulse.graphicsLoadState++;
         break;
     case 4:
         LoadSpritePalette(sSpritePalette_PokePulseCircle);
         LoadCompressedSpriteSheet(sSpriteSheet_PokePulseCircle);
+        sPokePulse.graphicsLoadState++;
+        break;
+    case 5:
+        LoadSpritePalette(sSpritePalette_PokePulseIcon);
+        LoadCompressedSpriteSheet(sSpriteSheet_PokePulseIcon);
         sPokePulse.graphicsLoadState++;
         break;
     default:
@@ -324,8 +389,8 @@ static void PrintPokePulseDescription(const u8 *str)
 static void PokePulse_PrintAppName(u8 i)
 {
     const u8 *str = sApplications[i].name;
-    u32 x = 54 * (i % 4) + GetStringCenterAlignXOffset(FONT_NORMAL, str, 48);
-    AddTextPrinterParameterized3(i / 4, FONT_NORMAL, x, 0, sPokePulseAppNameTextColors, 0, str);
+    u32 x = 54 * (i % 4) + GetStringCenterAlignXOffset(FONT_SMALL, str, 50);
+    AddTextPrinterParameterized3(i / 4, FONT_SMALL, x, 0, sPokePulseAppNameTextColors, 0, str);
 }
 
 static void PokePulse_CreateIcons(void)
@@ -346,6 +411,9 @@ static void PokePulse_CreateIcons(void)
     x = 40 + 54 * (sPokePulse.selectionIdx % 4);
     y = 48 + 48 * (sPokePulse.selectionIdx / 4);
     sPokePulse.selectionBoxSpriteId = CreateSprite(&sSelectionCircleSpriteTemplate, x, y, 0);
+
+    sPokePulse.pokepulseIconSpriteId = CreateSprite(&sPokepulseIconSpriteTemplate, 218, 14, 0);
+    StartSpriteAnim(&gSprites[sPokePulse.pokepulseIconSpriteId], 0);
 }
 
 static void PokePulse_FreeResources(void)
@@ -357,6 +425,7 @@ static void PokePulse_FreeResources(void)
         DestroySpriteAndFreeResources(iconSprite);
     }
     DestroySpriteAndFreeResources(&gSprites[sPokePulse.selectionBoxSpriteId]);
+    DestroySpriteAndFreeResources(&gSprites[sPokePulse.pokepulseIconSpriteId]);
     FreeAllWindowBuffers();
 }
 
