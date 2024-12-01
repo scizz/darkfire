@@ -349,6 +349,7 @@ SECTIONS {
         src/dexnav.o(.text);
         src/quests.o(.text);
         src/ui_main_menu.o(.text);
+        src/pokepulse.o(.text);
     } =0
 
     script_data :
@@ -719,6 +720,7 @@ SECTIONS {
         src/dexnav.o(.rodata);
         src/quests.o(.rodata);
         src/ui_main_menu.o(.rodata);
+        src/pokepulse.o(.rodata);
     } =0
 
     song_data :
