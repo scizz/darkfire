@@ -5580,3 +5580,15 @@ Route134_Text_HudsonPostBattle: @ 82A4AD8
 	.string "Our boat drifted out to sea.\p"
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
+
+VSSeeker_Text_BatteryNotChargedNeedXSteps::
+	.string "The Vs.Seeker battery needs charging.\n"
+	.string "No. of steps required: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
+
+VSSeeker_Text_NoTrainersWithinRange::
+	.string "There are no Trainers within range\n"
+	.string "who can battle…{PAUSE_UNTIL_PRESS}$"
+
+VSSeeker_Text_TrainersNotReady::
+	.string "The other Trainers don't appear\n"
+	.string "to be ready for battle…{PAUSE_UNTIL_PRESS}$"

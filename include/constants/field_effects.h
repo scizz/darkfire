@@ -75,6 +75,9 @@
 #define FLDEFF_CAVE_DUST                 70
 #define FLDEFF_FOREST_TALL_GRASS         71
 #define FLDEFF_HAY_LONG_GRASS            72
+#define FLDEFF_USE_VS_SEEKER             73
+#define FLDEFF_X_ICON                    74
+#define FLDEFF_DOUBLE_EXCL_MARK_ICON     75
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1
