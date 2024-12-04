@@ -8,7 +8,7 @@ struct PokePulse
     MainCallback newScreenCallback;
     u8 graphicsLoadState;
     u8 iconSpriteIds[5];
-    u8 selectionIdx;
+    u8 selection;
     u8 selectionBoxSpriteId;
     u8 inputTaskId;
     u8 pokepulseIconSpriteId;
