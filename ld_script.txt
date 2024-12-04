@@ -350,6 +350,7 @@ SECTIONS {
         src/quests.o(.text);
         src/ui_main_menu.o(.text);
         src/pokepulse.o(.text);
+        src/vs_seeker.o(.text);
     } =0
 
     script_data :
@@ -721,6 +722,7 @@ SECTIONS {
         src/quests.o(.rodata);
         src/ui_main_menu.o(.rodata);
         src/pokepulse.o(.rodata);
+        src/vs_seeker.o(.rodata);
     } =0
 
     song_data :
