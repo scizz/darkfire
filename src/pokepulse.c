@@ -3,6 +3,7 @@
 #include "main.h"
 #include "menu.h"
 #include "sprite.h"
+#include "event_data.h"
 #include "pokepulse.h"
 #include "palette.h"
 #include "scanline_effect.h"
@@ -261,6 +262,8 @@ static const struct SpriteTemplate sPokepulseIconSpriteTemplate =
     .callback = SpriteCallbackDummy,
 };
 
+static const u8 sText_QuestionMarks[] = _("???");
+static const u8 sText_Locked[] = _("Locked.");
 static const u8 sText_Map[] = _("World Map");
 static const u8 sText_Seeker[] = _("VS. Seeker");
 static const u8 sText_Quests[] = _("Quests");
@@ -276,14 +279,23 @@ static void PokePulse_MoveSelection(s8 delta, bool8 vertical);
 static const u8 sText_QuestMenu[] = _("Check your current quests.");
 static const u8 sText_VSSeeker[] = _("Arrange a rematch with Trainers.");
 
-static const struct PokePulseApplicaton sApplications[POKEPULSE_APP_COUNT] = 
+#define ALWAYS_UNLOCKED 0xFFFF
+
+static const struct PokePulseApplication sApplications[POKEPULSE_APP_COUNT] = 
 {
-    { sText_Map, gText_CheckMapOfHoenn, &gSpriteIconMap, CB2_OpenTownMapFromPokePulse },
-    { sText_Quests, sText_QuestMenu, &gSpriteIconQuests, CB2_OpenQuestMenuFromPokePulse },
-    { sText_Seeker, sText_VSSeeker, &gSpriteIconSeeker, NULL },
-    { sText_Ribbons, gText_CheckObtainedRibbons, &gSpriteIconRibbons, NULL },
-    { sText_Condition, gText_CheckPokemonInDetail, &gSpriteIconCondition, NULL },
+    { sText_Map, gText_CheckMapOfHoenn, &gSpriteIconMap, ALWAYS_UNLOCKED, CB2_OpenTownMapFromPokePulse },
+    { sText_Quests, sText_QuestMenu, &gSpriteIconQuests, ALWAYS_UNLOCKED, CB2_OpenQuestMenuFromPokePulse },
+    { sText_Seeker, sText_VSSeeker, &gSpriteIconSeeker, ALWAYS_UNLOCKED, NULL },
+    { sText_Ribbons, gText_CheckObtainedRibbons, &gSpriteIconRibbons, ALWAYS_UNLOCKED, NULL },
+    { sText_Condition, gText_CheckPokemonInDetail, &gSpriteIconCondition, ALWAYS_UNLOCKED, NULL },
 };
+
+static bool8 PokePulse_IsApplicationUnlocked(u8 i)
+{
+    u16 flag = sApplications[i].flag;
+    if (flag == ALWAYS_UNLOCKED || FlagGet(flag) == TRUE) return TRUE;
+    return FALSE;
+}
 
 void CB2_StartPokePulseFromField(void)
 {
@@ -384,8 +396,9 @@ static void PokePulse_InitWindows(void)
     DrawStdFrameWithCustomTileAndPalette(PULSE_WIN_DESCBOX, TRUE, 210, 14);
 }
 
-static void PrintPokePulseDescription(const u8 *str)
+static void PrintPokePulseDescription(u8 i)
 {
+    const u8 *str = PokePulse_IsApplicationUnlocked(i) ? sApplications[i].desc : sText_Locked;
     u32 width = GetStringWidth(FONT_NORMAL, str, -1);
     FillWindowPixelBuffer(PULSE_WIN_DESCBOX, PIXEL_FILL(6));
     AddTextPrinterParameterized3(PULSE_WIN_DESCBOX, FONT_NORMAL, (192 - width) / 2, 1, sPokePulseDescTextColors, 0, str);
@@ -393,7 +406,7 @@ static void PrintPokePulseDescription(const u8 *str)
 
 static void PokePulse_PrintAppName(u8 i)
 {
-    const u8 *str = sApplications[i].name;
+    const u8 *str = PokePulse_IsApplicationUnlocked(i) ? sApplications[i].name : sText_QuestionMarks;
     u32 x = 54 * (i % 4) + GetStringCenterAlignXOffset(FONT_SMALL, str, 50);
     AddTextPrinterParameterized3(i / 4, FONT_SMALL, x, 0, sPokePulseAppNameTextColors, 0, str);
 }
@@ -410,7 +423,10 @@ static void PokePulse_CreateIcons(void)
         sPokePulse.iconSpriteIds[i] = CreateSprite(iconTemplate, x, y, 0);
         PokePulse_PrintAppName(i);
 
-        StartSpriteAnim(&gSprites[sPokePulse.iconSpriteIds[i]], i == sPokePulse.selection ? 0 : 1);
+        if (PokePulse_IsApplicationUnlocked(i))
+            StartSpriteAnim(&gSprites[sPokePulse.iconSpriteIds[i]], i == sPokePulse.selection ? 0 : 1);
+        else
+            StartSpriteAnim(&gSprites[sPokePulse.iconSpriteIds[i]], 1);
     }
 
     x = 40 + 54 * (sPokePulse.selection % 4);
@@ -487,10 +503,13 @@ static void Task_PokePulseHandleInput(u8 taskId)
     }
     else if (gMain.newKeys & A_BUTTON)
     {
-        sPokePulse.newScreenCallback = sApplications[sPokePulse.selection].openCallback;
-        gTasks[taskId].tState = 0;
-        gTasks[taskId].func = Task_ClosePokePulse;
-        PlaySE(SE_SELECT);
+        if (PokePulse_IsApplicationUnlocked(sPokePulse.selection))
+        {
+            sPokePulse.newScreenCallback = sApplications[sPokePulse.selection].openCallback;
+            gTasks[taskId].tState = 0;
+            gTasks[taskId].func = Task_ClosePokePulse;
+            PlaySE(SE_SELECT);
+        }
     }
     else if (gMain.newKeys & B_BUTTON)
     {
@@ -532,12 +551,12 @@ static void PokePulse_MoveSelection(s8 delta, bool8 vertical)
         selectionBoxSprite->x = 40 + 54 * (sPokePulse.selection % 4);
         selectionBoxSprite->y = 48 + 48 * (sPokePulse.selection / 4);
 
-        PrintPokePulseDescription(sApplications[sPokePulse.selection].desc);
+        PrintPokePulseDescription(sPokePulse.selection);
 
         for (i = 0; i < POKEPULSE_APP_COUNT; ++i)
         {
             u8 spriteId = sPokePulse.iconSpriteIds[i];
-            StartSpriteAnim(&gSprites[spriteId], i == sPokePulse.selection ? 0 : 1);
+            if (PokePulse_IsApplicationUnlocked(i)) StartSpriteAnim(&gSprites[spriteId], i == sPokePulse.selection ? 0 : 1);
         }
     }
 }
@@ -590,7 +609,7 @@ static bool8 SetupPokePulse(void)
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
             PokePulse_InitWindows();
-            PrintPokePulseDescription(sApplications[sPokePulse.selection].desc);
+            PrintPokePulseDescription(sPokePulse.selection);
             gMain.state++;
         }
         break;

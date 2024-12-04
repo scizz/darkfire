@@ -14,10 +14,12 @@ struct PokePulse
     u8 pokepulseIconSpriteId;
 };
 
-struct PokePulseApplicaton {
+struct PokePulseApplication 
+{
     const u8 *name;
     const u8 *desc;
     const struct SpriteTemplate *iconTemplate;
+    u16 flag;
     MainCallback openCallback;
 };
 
