@@ -284,8 +284,8 @@ static const u8 sText_VSSeeker[] = _("Arrange a rematch with Trainers.");
 static const struct PokePulseApplication sApplications[POKEPULSE_APP_COUNT] = 
 {
     { sText_Map, gText_CheckMapOfHoenn, &gSpriteIconMap, ALWAYS_UNLOCKED, CB2_OpenTownMapFromPokePulse },
-    { sText_Quests, sText_QuestMenu, &gSpriteIconQuests, ALWAYS_UNLOCKED, CB2_OpenQuestMenuFromPokePulse },
-    { sText_Seeker, sText_VSSeeker, &gSpriteIconSeeker, ALWAYS_UNLOCKED, NULL },
+    { sText_Quests, sText_QuestMenu, &gSpriteIconQuests, FLAG_PPULSE_QUESTS_UNLOCKED, CB2_OpenQuestMenuFromPokePulse },
+    { sText_Seeker, sText_VSSeeker, &gSpriteIconSeeker, FLAG_PPULSE_SEEKER_UNLOCKED, NULL },
     { sText_Ribbons, gText_CheckObtainedRibbons, &gSpriteIconRibbons, ALWAYS_UNLOCKED, NULL },
     { sText_Condition, gText_CheckPokemonInDetail, &gSpriteIconCondition, ALWAYS_UNLOCKED, NULL },
 };
