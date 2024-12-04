@@ -120,7 +120,7 @@ static const struct SpritePalette sSpritePalette_PokePulseAppIcons[] =
 
 static const struct CompressedSpriteSheet sSpriteSheet_PokePulseAppIcons[] = 
 {
-    { sPokepulseAppIconsGfx, 32 * 320 / 2 , TAG_APP_ICON_GFX },
+    { sPokepulseAppIconsGfx, 32 * 512 / 2 , TAG_APP_ICON_GFX },
     { NULL }
 };
 
@@ -197,7 +197,7 @@ static const union AnimCmd gAnimCmd_##name##_Selected[] = { \
     ANIMCMD_JUMP(0), \
 }; \
 static const union AnimCmd gAnimCmd_##name##_NotSelected[] = { \
-    ANIMCMD_FRAME((5 + x) * 16, 0), \
+    ANIMCMD_FRAME((8 + x) * 16, 0), \
     ANIMCMD_JUMP(0), \
 }; \
 static const union AnimCmd *const gIcon##name##Anim[] = {\
