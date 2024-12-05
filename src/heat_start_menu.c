@@ -75,8 +75,8 @@ static void HeatStartMenu_LoadSprites(void);
 static void HeatStartMenu_CreateSprites(void);
 static void HeatStartMenu_LoadBgGfx(void);
 static void HeatStartMenu_ShowTimeWindow(void);
-static void HeatStartMenu_UpdateClockDisplay(void);
 static void HeatStartMenu_UpdateMenuName(void);
+static u8 HeatStartMenu_CreateMenuNameWindow(void);
 
 /* ENUMs */
 enum
@@ -123,6 +123,9 @@ static const u32 sStartMenuTilemapSafari[] = INCBIN_U32("graphics/heat_start_men
 static const u16 sStartMenuPalette[] = INCBIN_U16("graphics/heat_start_menu/bg.gbapal");
 static const u16 gStandardMenuPalette2[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
 
+static const u16 sPokepulseMessageBoxPal[] = INCBIN_U16("graphics/pokepulse/message.gbapal");
+static const u32 sPokepulseMessageBoxGfx[] = INCBIN_U32("graphics/pokepulse/message.4bpp");
+
 //--SPRITE-GFX--
 #define TAG_ICON_GFX 1234
 #define TAG_ICON_PAL 0x4654
@@ -148,7 +151,7 @@ static const struct WindowTemplate sWindowTemplate_StartClock =
     .tilemapTop = 1,
     .width = 10, // If you want to shorten the dates to Sat., Sun., etc., change this to 9
     .height = 2,
-    .paletteNum = 15,
+    .paletteNum = 14,
     .baseBlock = 0x30
 };
 
@@ -159,7 +162,7 @@ static const struct WindowTemplate sWindowTemplate_MenuName =
     .tilemapTop = 14,
     .width = 8,
     .height = 2,
-    .paletteNum = 15,
+    .paletteNum = 14,
     .baseBlock = 0x30 + (12 * 2)
 };
 
@@ -675,7 +678,7 @@ void HeatStartMenu_Init(void)
     HeatStartMenu_ShowTimeWindow();
     if (GetSafariZoneFlag() == TRUE)
         ShowSafariBallsWindow();
-    sHeatStartMenu->sMenuNameWindowId = AddWindow(&sWindowTemplate_MenuName);
+    sHeatStartMenu->sMenuNameWindowId = HeatStartMenu_CreateMenuNameWindow();
     HeatStartMenu_UpdateMenuName();
     CreateTask(Task_HeatStartMenu_Loop, 0);
 }
@@ -726,9 +729,15 @@ static void HeatStartMenu_LoadBgGfx(void)
     //   LZDecompressWram(sStartMenuTilemapSafari, buf);
     // }
     LoadPalette(gStandardMenuPalette2, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
-    LoadPalette(sStartMenuPalette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+    // LoadPalette(sStartMenuPalette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+
+    LoadBgTiles(0, sPokepulseMessageBoxGfx, 0x120, 0x223);
+    LoadPalette(sPokepulseMessageBoxPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+
     ScheduleBgCopyTilemapToVram(0);
 }
+
+static const u8 sPokePulseDescTextColors[]  = { TEXT_COLOR_GREEN, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GREEN };
 
 static void HeatStartMenu_ShowTimeWindow(void)
 {
@@ -737,9 +746,8 @@ static void HeatStartMenu_ShowTimeWindow(void)
     RtcCalcLocalTime();
     // print window
     sHeatStartMenu->sStartClockWindowId = AddWindow(&sWindowTemplate_StartClock);
-    FillWindowPixelBuffer(sHeatStartMenu->sStartClockWindowId, PIXEL_FILL(TEXT_COLOR_WHITE));
     PutWindowTilemap(sHeatStartMenu->sStartClockWindowId);
-    FlagSet(FLAG_TEMP_5);
+    CopyWindowToVram(sHeatStartMenu->sStartClockWindowId, COPYWIN_FULL);
 
     analogHour = (gLocalTime.hours >= 13 && gLocalTime.hours <= 24) ? gLocalTime.hours - 12 : gLocalTime.hours;
 
@@ -754,47 +762,21 @@ static void HeatStartMenu_ShowTimeWindow(void)
     else
         StringExpandPlaceholders(gStringVar4, gText_CurrentTimeAM);
 
-    AddTextPrinterParameterized(sHeatStartMenu->sStartClockWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL);
-    CopyWindowToVram(sHeatStartMenu->sStartClockWindowId, COPYWIN_GFX);
+    DrawStdFrameWithCustomTileAndPalette(sHeatStartMenu->sStartClockWindowId, FALSE, 0x223, 14);
+    FillWindowPixelBuffer(sHeatStartMenu->sStartClockWindowId, PIXEL_FILL(6));
+    AddTextPrinterParameterized3(sHeatStartMenu->sStartClockWindowId, FONT_NORMAL, 0, 1, sPokePulseDescTextColors, 0, gStringVar4);
 }
 
-static void HeatStartMenu_UpdateClockDisplay(void)
+static u8 HeatStartMenu_CreateMenuNameWindow(void)
 {
-    u8 analogHour;
+    u8 windowId = AddWindow(&sWindowTemplate_MenuName);
 
-    if (!FlagGet(FLAG_TEMP_5))
-        return;
-    RtcCalcLocalTime();
-    analogHour = (gLocalTime.hours >= 13 && gLocalTime.hours <= 24) ? gLocalTime.hours - 12 : gLocalTime.hours;
+    PutWindowTilemap(windowId);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
 
-    StringCopy(gStringVar3, gDayNameStringsTable[(gLocalTime.days % 7)]);
-    ConvertIntToDecimalStringN(gStringVar1, gLocalTime.hours, STR_CONV_MODE_LEADING_ZEROS, 2);
-    ConvertIntToDecimalStringN(gStringVar2, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
-    ConvertIntToDecimalStringN(gStringVar1, analogHour, STR_CONV_MODE_LEADING_ZEROS, 2);
-    if (gLocalTime.hours == 0)
-        ConvertIntToDecimalStringN(gStringVar1, 12, STR_CONV_MODE_LEADING_ZEROS, 2);
-    if (gLocalTime.hours == 12)
-        ConvertIntToDecimalStringN(gStringVar1, 12, STR_CONV_MODE_LEADING_ZEROS, 2);
+    DrawStdFrameWithCustomTileAndPalette(windowId, FALSE, 0x223, 14);
 
-    if (gLocalTime.seconds % 2)
-    {
-        StringExpandPlaceholders(gStringVar4, gText_CurrentTime);
-        if (gLocalTime.hours >= 12 && gLocalTime.hours <= 24)
-            StringExpandPlaceholders(gStringVar4, gText_CurrentTimePM);
-        else
-            StringExpandPlaceholders(gStringVar4, gText_CurrentTimeAM);
-    }
-    else
-    {
-        StringExpandPlaceholders(gStringVar4, gText_CurrentTimeOff);
-        if (gLocalTime.hours >= 12 && gLocalTime.hours <= 24)
-            StringExpandPlaceholders(gStringVar4, gText_CurrentTimePMOff);
-        else
-            StringExpandPlaceholders(gStringVar4, gText_CurrentTimeAMOff);
-    }
-
-    AddTextPrinterParameterized(sHeatStartMenu->sStartClockWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL);
-    CopyWindowToVram(sHeatStartMenu->sStartClockWindowId, COPYWIN_GFX);
+    return windowId;
 }
 
 static void HeatStartMenu_UpdateMenuName(void)
@@ -802,10 +784,10 @@ static void HeatStartMenu_UpdateMenuName(void)
     const u8 *str = sHeatStartMenuActions[sCurrentStartMenuActions[sMenuCursorPos]].name;
     u32 x = GetStringCenterAlignXOffset(FONT_NORMAL, str, 64);
 
-    FillWindowPixelBuffer(sHeatStartMenu->sMenuNameWindowId, PIXEL_FILL(TEXT_COLOR_WHITE));
-    PutWindowTilemap(sHeatStartMenu->sMenuNameWindowId);
-    AddTextPrinterParameterized(sHeatStartMenu->sMenuNameWindowId, 1, str, x, 0, 0xFF, NULL);
-    CopyWindowToVram(sHeatStartMenu->sMenuNameWindowId, COPYWIN_GFX);
+    FillWindowPixelBuffer(sHeatStartMenu->sMenuNameWindowId, PIXEL_FILL(6));
+    AddTextPrinterParameterized3(sHeatStartMenu->sMenuNameWindowId, FONT_NORMAL, x, 0, sPokePulseDescTextColors, 0, str);
+    // AddTextPrinterParameterized(sHeatStartMenu->sMenuNameWindowId, 1, str, x, 0, 0xFF, NULL);
+    // CopyWindowToVram(sHeatStartMenu->sMenuNameWindowId, COPYWIN_GFX);
 }
 
 static void HeatStartMenu_FreeResources(void)
