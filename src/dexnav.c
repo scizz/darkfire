@@ -33,6 +33,7 @@
 #include "pokemon.h"
 #include "pokemon_icon.h"
 #include "pokemon_summary_screen.h"
+#include "quests.h"
 #include "random.h"
 #include "region_map.h"
 #include "scanline_effect.h"
@@ -976,6 +977,7 @@ bool8 TryStartDexnavSearch(void)
         return FALSE;
     
     HideMapNamePopUpWindow();
+    HideQuestPopUpWindow();
     ChangeBgY_ScreenOff(0, 0, 0);
     taskId = CreateTask(Task_InitDexNavSearch, 0);
     gTasks[taskId].tSpecies = val & MASK_SPECIES;
@@ -2630,6 +2632,7 @@ bool8 TryFindHiddenPokemon(void)
         gTasks[taskId].tEnvironment = sDexNavSearchDataPtr->environment;
         gTasks[taskId].tRevealed = FALSE;
         HideMapNamePopUpWindow();
+        HideQuestPopUpWindow();
         ChangeBgY_ScreenOff(0, 0, 0);
         return FALSE;   //we dont actually want to enable the script context or the game will freeze
     }
