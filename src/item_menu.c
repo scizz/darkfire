@@ -37,6 +37,7 @@
 #include "player_pc.h"
 #include "pokemon.h"
 #include "pokemon_summary_screen.h"
+#include "quests.h"
 #include "scanline_effect.h"
 #include "script.h"
 #include "shop.h"
@@ -2332,6 +2333,7 @@ bool8 UseRegisteredKeyItemOnField(void)
     if (InUnionRoom() == TRUE || InBattlePyramid() || InBattlePike() || InMultiPartnerRoom() == TRUE)
         return FALSE;
     HideMapNamePopUpWindow();
+    HideQuestPopUpWindow();
     ChangeBgY_ScreenOff(0, 0, BG_COORD_SET);
     i = CountRegisteredItems();
     // Show key item wheel
