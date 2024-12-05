@@ -2814,8 +2814,8 @@ void QuestMenu_ResetMenuSaveData(void)
 
 // Quest state popups
 
-static const u8 sQuestPopupWindowGfx[] = INCBIN_U8("graphics/quest_menu/popup.4bpp");
-static const u16 sQuestPopupWindowPal[] = INCBIN_U16("graphics/quest_menu/popup.gbapal");
+static const u8 sQuestPopupWindowGfx[] = INCBIN_U8("graphics/quest_menu/wood.4bpp");
+static const u16 sQuestPopupWindowPal[] = INCBIN_U16("graphics/quest_menu/wood.gbapal");
 
 static void Task_ShowQuestStatePopup(u8 taskId);
 
