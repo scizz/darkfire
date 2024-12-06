@@ -311,6 +311,7 @@ static void PokePulse_InitBgs(void)
     SetBgTilemapBuffer(2, sPokePulse.bg2TilemapBuffer);
     ResetAllBgsCoordinates();
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
+    SetGpuReg(REG_OFFSET_BLDCNT, 0);
     ShowBg(0);
     ShowBg(2);
 }
