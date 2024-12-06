@@ -452,7 +452,6 @@ static const u8 gText_Bag[] = _("Bag");
 static const u8 gText_Trainer[] = _("Trainer");
 static const u8 gText_Save[] = _("Save");
 static const u8 gText_Options[] = _("Options");
-static const u8 gText_Retire[] = _("Retire");
 
 static bool8 StartMenuPokedexCallback(void)
 {
