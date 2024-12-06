@@ -151,7 +151,7 @@ static const struct WindowTemplate sWindowTemplate_StartClock =
     .tilemapTop = 1,
     .width = 10, // If you want to shorten the dates to Sat., Sun., etc., change this to 9
     .height = 2,
-    .paletteNum = 14,
+    .paletteNum = 15,
     .baseBlock = 0x30
 };
 
@@ -762,9 +762,16 @@ static void HeatStartMenu_ShowTimeWindow(void)
     else
         StringExpandPlaceholders(gStringVar4, gText_CurrentTimeAM);
 
-    DrawStdFrameWithCustomTileAndPalette(sHeatStartMenu->sStartClockWindowId, FALSE, 0x223, 14);
-    FillWindowPixelBuffer(sHeatStartMenu->sStartClockWindowId, PIXEL_FILL(6));
-    AddTextPrinterParameterized3(sHeatStartMenu->sStartClockWindowId, FONT_NORMAL, 0, 1, sPokePulseDescTextColors, 0, gStringVar4);
+    // DrawStdFrameWithCustomTileAndPalette(sHeatStartMenu->sStartClockWindowId, FALSE, 0x223, 14);
+    FillWindowPixelBuffer(sHeatStartMenu->sStartClockWindowId, PIXEL_FILL(0));
+    AddTextPrinterParameterized2(sHeatStartMenu->sStartClockWindowId, FONT_NORMAL, gStringVar4, 0, NULL, TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT);
+
+    SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR);
+    SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ);
+    SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(8, 88));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(8, 24));
+    SetGpuReg(REG_OFFSET_BLDCNT, GetGpuReg(REG_OFFSET_BLDCNT) | BLDCNT_TGT1_BG1 | BLDCNT_TGT1_BG2 | BLDCNT_TGT1_BG3 | BLDCNT_TGT1_OBJ | BLDCNT_TGT1_BD | BLDCNT_EFFECT_DARKEN);
+    SetGpuReg(REG_OFFSET_BLDY, 7);
 }
 
 static u8 HeatStartMenu_CreateMenuNameWindow(void)
@@ -819,6 +826,9 @@ static void HeatStartMenu_FreeResources(void)
 
     ScriptUnfreezeObjectEvents();
     UnlockPlayerFieldControls();
+
+    SetGpuReg(REG_OFFSET_WIN0H, 0);
+    SetGpuReg(REG_OFFSET_WIN0V, 0);
 }
 
 static void HeatStartMenu_MoveSelection(s8 delta)
