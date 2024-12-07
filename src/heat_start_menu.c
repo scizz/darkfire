@@ -193,7 +193,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_Icon[] =
 static const struct OamData gOamIcon = 
 {
     .y = 0,
-    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .affineMode = ST_OAM_AFFINE_NORMAL,
     .objMode = 0,
     .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(32x32),
