@@ -923,7 +923,8 @@ static bool8 Task_HeatStartMenu_HandleMainInput(void)
         {
             HeatStartMenu_FreeResources();
         }
-        return FALSE;
+        ScriptUnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
     }
 
     return FALSE;
@@ -1292,9 +1293,8 @@ static void Task_HandleSave(u8 taskId) {
 
 static bool8 StartMenuSaveCallback(void) 
 {
-    if (gPaletteFade.active) 
-        return FALSE;
-
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
     LoadUserWindowBorderGfx(sSaveInfoWindowId, 0x214, 0xE0);
     InitSave();
     CreateTask(Task_HandleSave, 0x80);

@@ -568,12 +568,19 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
 
 static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
+    if (!IsOverworldLinkActive())
+    {
+        FreezeObjectEvents();
+        PlayerFreeze();
+        StopPlayerAvatar();
+    }
+
+    LockPlayerFieldControls();
+
     if (HeatStartMenu_LoadStartMenu() == FALSE)
     {
        return FALSE;
     }
-
-    // HeatStartMenu_Init();
 
     ReturnToFieldOpenStartMenu();
     return TRUE;
