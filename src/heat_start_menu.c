@@ -1,6 +1,6 @@
+#include "global.h"
 #include "option_menu.h"
 #include "heat_start_menu.h"
-#include "global.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
@@ -100,6 +100,11 @@ struct HeatStartMenu
     u8 sMenuNameWindowId;
     u8 sSafariBallsWindowId;
     u8 iconSpriteIds[MENU_ACTION_COUNT];
+    u8 currentStartMenuActions[MENU_ACTION_COUNT];
+    u8 startMenuLoadStep;
+    u8 numStartMenuActions;
+    u8 menuCursorPos;
+    bool8 (*menuCallback)(void);
 };
 
 struct HeatStartMenuAction
@@ -110,11 +115,7 @@ struct HeatStartMenuAction
     bool8 fade;
 };
 
-static EWRAM_DATA struct HeatStartMenu *sHeatStartMenu = NULL;
-static EWRAM_DATA u8 sMenuCursorPos = 0;
-static EWRAM_DATA u8 sCurrentStartMenuActions[MENU_ACTION_COUNT] = { 0 };
-static EWRAM_DATA u8 sNumStartMenuActions = 0;
-static EWRAM_DATA bool8 (*sMenuCallback)(void) = 0;
+static EWRAM_DATA struct HeatStartMenu sHeatStartMenu;
 
 // --BG-GFX--
 static const u32 sStartMenuTiles[] = INCBIN_U32("graphics/heat_start_menu/bg.4bpp.lz");
@@ -192,7 +193,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_Icon[] =
 static const struct OamData gOamIcon = 
 {
     .y = 0,
-    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .affineMode = ST_OAM_AFFINE_NORMAL,
     .objMode = 0,
     .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(32x32),
@@ -590,13 +591,13 @@ static const u8 gText_CurrentTimePMOff[] = _("  {STR_VAR_3} {CLEAR_TO 51}{STR_VA
 
 static void ShowSafariBallsWindow(void)
 {
-    sHeatStartMenu->sSafariBallsWindowId = AddWindow(&sWindowTemplate_SafariBalls);
-    FillWindowPixelBuffer(sHeatStartMenu->sSafariBallsWindowId, PIXEL_FILL(TEXT_COLOR_WHITE));
-    PutWindowTilemap(sHeatStartMenu->sSafariBallsWindowId);
+    sHeatStartMenu.sSafariBallsWindowId = AddWindow(&sWindowTemplate_SafariBalls);
+    FillWindowPixelBuffer(sHeatStartMenu.sSafariBallsWindowId, PIXEL_FILL(TEXT_COLOR_WHITE));
+    PutWindowTilemap(sHeatStartMenu.sSafariBallsWindowId);
     ConvertIntToDecimalStringN(gStringVar1, gNumSafariBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
     StringExpandPlaceholders(gStringVar4, gText_SafariBallStock);
-    AddTextPrinterParameterized(sHeatStartMenu->sSafariBallsWindowId, FONT_NARROW, gStringVar4, 0, 1, TEXT_SKIP_DRAW, NULL);
-    CopyWindowToVram(sHeatStartMenu->sSafariBallsWindowId, COPYWIN_GFX);
+    AddTextPrinterParameterized(sHeatStartMenu.sSafariBallsWindowId, FONT_NARROW, gStringVar4, 0, 1, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(sHeatStartMenu.sSafariBallsWindowId, COPYWIN_GFX);
 }
 
 static void BuildNormalStartMenu(void)
@@ -624,21 +625,23 @@ static void BuildNormalStartMenu(void)
 
 static void AddHeatStartMenuAction(u8 action)
 {
-    sCurrentStartMenuActions[sNumStartMenuActions] = action;
-    ++sNumStartMenuActions;
+    sHeatStartMenu.currentStartMenuActions[sHeatStartMenu.numStartMenuActions] = action;
+    ++sHeatStartMenu.numStartMenuActions;
 }
 
-static void Task_HeatStartMenu_Loop(u8 taskId)
+static void Task_HeatStartMenu_LoadStartMenu(u8 taskId);
+
+void Task_HeatStartMenu_Loop(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     switch (data[0])
     {
     case 0:
-        sMenuCallback = Task_HeatStartMenu_HandleMainInput;
+        sHeatStartMenu.menuCallback = Task_HeatStartMenu_HandleMainInput;
         data[0]++;
         break;
     case 1:
-        if (sMenuCallback() == TRUE)
+        if (sHeatStartMenu.menuCallback() == TRUE)
             DestroyTask(taskId);
         break;
     }
@@ -655,31 +658,69 @@ void HeatStartMenu_Init(void)
 
     LockPlayerFieldControls();
 
-    if (sHeatStartMenu == NULL)
+    sHeatStartMenu.startMenuLoadStep = 0;
+    sHeatStartMenu.savedCallback = CB2_ReturnToFieldWithOpenMenu;
+
+    SetTaskFuncWithFollowupFunc(CreateTask(Task_HeatStartMenu_LoadStartMenu, 0), Task_HeatStartMenu_LoadStartMenu, Task_HeatStartMenu_Loop);
+}
+
+static void HeatStartMenu_QuickInit(void)
+{
+    if (!IsOverworldLinkActive())
     {
-        sHeatStartMenu = AllocZeroed(sizeof(struct HeatStartMenu));
+        FreezeObjectEvents();
+        PlayerFreeze();
+        StopPlayerAvatar();
     }
 
-    if (sHeatStartMenu == NULL)
-    {
-        SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
-        return;
-    }
+    LockPlayerFieldControls();
 
-    sHeatStartMenu->savedCallback = CB2_ReturnToFieldWithOpenMenu;
-    sHeatStartMenu->sStartClockWindowId = 0;
+    sHeatStartMenu.startMenuLoadStep = 0;
+    sHeatStartMenu.savedCallback = CB2_ReturnToFieldWithOpenMenu;
 
-    BuildNormalStartMenu();
+    while (!HeatStartMenu_LoadStartMenu())
+        ;
 
-    HeatStartMenu_LoadSprites();
-    HeatStartMenu_CreateSprites();
-    HeatStartMenu_LoadBgGfx();
-    HeatStartMenu_ShowTimeWindow();
-    if (GetSafariZoneFlag() == TRUE)
-        ShowSafariBallsWindow();
-    sHeatStartMenu->sMenuNameWindowId = HeatStartMenu_CreateMenuNameWindow();
-    HeatStartMenu_UpdateMenuName();
     CreateTask(Task_HeatStartMenu_Loop, 0);
+}
+
+bool8 HeatStartMenu_LoadStartMenu(void)
+{
+    switch (sHeatStartMenu.startMenuLoadStep)
+    {
+    case 0:
+        BuildNormalStartMenu();
+        sHeatStartMenu.startMenuLoadStep++;
+        break;
+    case 1:
+        HeatStartMenu_LoadSprites();
+        HeatStartMenu_CreateSprites();
+        sHeatStartMenu.startMenuLoadStep++;
+        break;
+    case 2:
+        HeatStartMenu_LoadBgGfx();
+        sHeatStartMenu.startMenuLoadStep++;
+        break;
+    case 3:
+        HeatStartMenu_ShowTimeWindow();
+        if (GetSafariZoneFlag() == TRUE)
+            ShowSafariBallsWindow();
+        sHeatStartMenu.sMenuNameWindowId = HeatStartMenu_CreateMenuNameWindow();
+        HeatStartMenu_UpdateMenuName();
+        sHeatStartMenu.startMenuLoadStep++;
+        break;
+    case 4:
+        sHeatStartMenu.startMenuLoadStep = 0;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static void Task_HeatStartMenu_LoadStartMenu(u8 taskId)
+{
+    if (HeatStartMenu_LoadStartMenu() == TRUE)
+        SwitchTaskToFollowupFunc(taskId);
 }
 
 static void HeatStartMenu_LoadSprites(void)
@@ -702,18 +743,18 @@ static void HeatStartMenu_CreateSprites(void)
     u8 action;
     u32 i, spacing, start;
 
-    spacing = (240 - ((sNumStartMenuActions - 1) * 24)) / (sNumStartMenuActions * 2);
-    start = (240 - ((sNumStartMenuActions - 1) * (24 + spacing))) / 2;
+    spacing = (240 - ((sHeatStartMenu.numStartMenuActions - 1) * 24)) / (sHeatStartMenu.numStartMenuActions * 2);
+    start = (240 - ((sHeatStartMenu.numStartMenuActions - 1) * (24 + spacing))) / 2;
 
-    for (i = 0; i < sNumStartMenuActions; ++i)
+    for (i = 0; i < sHeatStartMenu.numStartMenuActions; ++i)
     {
-        action = sCurrentStartMenuActions[i];
-        sHeatStartMenu->iconSpriteIds[action] = CreateSprite(sHeatStartMenuActions[action].iconTemplate, start + (24 + spacing) * i, 144, 0);
+        action = sHeatStartMenu.currentStartMenuActions[i];
+        sHeatStartMenu.iconSpriteIds[action] = CreateSprite(sHeatStartMenuActions[action].iconTemplate, start + (24 + spacing) * i, 144, 0);
         
-        if (sMenuCursorPos == i)
-            HeatStartMenu_SetIconAnimation(sHeatStartMenu->iconSpriteIds[action], TRUE);
+        if (sHeatStartMenu.menuCursorPos == i)
+            HeatStartMenu_SetIconAnimation(sHeatStartMenu.iconSpriteIds[action], TRUE);
         else
-            HeatStartMenu_SetIconAnimation(sHeatStartMenu->iconSpriteIds[action], FALSE);
+            HeatStartMenu_SetIconAnimation(sHeatStartMenu.iconSpriteIds[action], FALSE);
     }
 }
 
@@ -744,9 +785,9 @@ static void HeatStartMenu_ShowTimeWindow(void)
 
     RtcCalcLocalTime();
     // print window
-    sHeatStartMenu->sStartClockWindowId = AddWindow(&sWindowTemplate_StartClock);
-    PutWindowTilemap(sHeatStartMenu->sStartClockWindowId);
-    CopyWindowToVram(sHeatStartMenu->sStartClockWindowId, COPYWIN_FULL);
+    sHeatStartMenu.sStartClockWindowId = AddWindow(&sWindowTemplate_StartClock);
+    PutWindowTilemap(sHeatStartMenu.sStartClockWindowId);
+    CopyWindowToVram(sHeatStartMenu.sStartClockWindowId, COPYWIN_FULL);
 
     analogHour = (gLocalTime.hours >= 13 && gLocalTime.hours <= 24) ? gLocalTime.hours - 12 : gLocalTime.hours;
 
@@ -761,9 +802,9 @@ static void HeatStartMenu_ShowTimeWindow(void)
     else
         StringExpandPlaceholders(gStringVar4, gText_CurrentTimeAM);
 
-    // DrawStdFrameWithCustomTileAndPalette(sHeatStartMenu->sStartClockWindowId, FALSE, 0x223, 14);
-    FillWindowPixelBuffer(sHeatStartMenu->sStartClockWindowId, PIXEL_FILL(0));
-    AddTextPrinterParameterized2(sHeatStartMenu->sStartClockWindowId, FONT_NORMAL, gStringVar4, 0, NULL, TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT);
+    // DrawStdFrameWithCustomTileAndPalette(sHeatStartMenu.sStartClockWindowId, FALSE, 0x223, 14);
+    FillWindowPixelBuffer(sHeatStartMenu.sStartClockWindowId, PIXEL_FILL(0));
+    AddTextPrinterParameterized2(sHeatStartMenu.sStartClockWindowId, FONT_NORMAL, gStringVar4, 0, NULL, TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT);
 
     SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR);
     SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ);
@@ -787,13 +828,13 @@ static u8 HeatStartMenu_CreateMenuNameWindow(void)
 
 static void HeatStartMenu_UpdateMenuName(void)
 {
-    const u8 *str = sHeatStartMenuActions[sCurrentStartMenuActions[sMenuCursorPos]].name;
+    const u8 *str = sHeatStartMenuActions[sHeatStartMenu.currentStartMenuActions[sHeatStartMenu.menuCursorPos]].name;
     u32 x = GetStringCenterAlignXOffset(FONT_NORMAL, str, 64);
 
-    FillWindowPixelBuffer(sHeatStartMenu->sMenuNameWindowId, PIXEL_FILL(6));
-    AddTextPrinterParameterized3(sHeatStartMenu->sMenuNameWindowId, FONT_NORMAL, x, 0, sPokePulseDescTextColors, 0, str);
-    // AddTextPrinterParameterized(sHeatStartMenu->sMenuNameWindowId, 1, str, x, 0, 0xFF, NULL);
-    // CopyWindowToVram(sHeatStartMenu->sMenuNameWindowId, COPYWIN_GFX);
+    FillWindowPixelBuffer(sHeatStartMenu.sMenuNameWindowId, PIXEL_FILL(6));
+    AddTextPrinterParameterized3(sHeatStartMenu.sMenuNameWindowId, FONT_NORMAL, x, 0, sPokePulseDescTextColors, 0, str);
+    // AddTextPrinterParameterized(sHeatStartMenu.sMenuNameWindowId, 1, str, x, 0, 0xFF, NULL);
+    // CopyWindowToVram(sHeatStartMenu.sMenuNameWindowId, COPYWIN_GFX);
 }
 
 static void HeatStartMenu_FreeResources(void)
@@ -801,30 +842,22 @@ static void HeatStartMenu_FreeResources(void)
     u32 i;
     u8 *buf = GetBgTilemapBuffer(0);
 
-    ClearStdWindowAndFrame(sHeatStartMenu->sStartClockWindowId, TRUE);
-    ClearStdWindowAndFrame(sHeatStartMenu->sMenuNameWindowId, TRUE);
-    RemoveWindow(sHeatStartMenu->sStartClockWindowId);
-    RemoveWindow(sHeatStartMenu->sMenuNameWindowId);
+    ClearStdWindowAndFrame(sHeatStartMenu.sStartClockWindowId, TRUE);
+    ClearStdWindowAndFrame(sHeatStartMenu.sMenuNameWindowId, TRUE);
+    RemoveWindow(sHeatStartMenu.sStartClockWindowId);
+    RemoveWindow(sHeatStartMenu.sMenuNameWindowId);
 
     memset(buf, 0, BG_SCREEN_SIZE);
     ScheduleBgCopyTilemapToVram(0);
 
-    for (i = 0; i < sNumStartMenuActions; ++i)
+    for (i = 0; i < sHeatStartMenu.numStartMenuActions; ++i)
     {
-        DestroySpriteAndFreeResources(&gSprites[sHeatStartMenu->iconSpriteIds[sCurrentStartMenuActions[i]]]);
+        DestroySpriteAndFreeResources(&gSprites[sHeatStartMenu.iconSpriteIds[sHeatStartMenu.currentStartMenuActions[i]]]);
     }
 
-    sNumStartMenuActions = 0;
+    sHeatStartMenu.numStartMenuActions = 0;
 
-    if (sHeatStartMenu != NULL)
-    {
-        FreeSpriteTilesByTag(TAG_ICON_GFX);
-        Free(sHeatStartMenu);
-        sHeatStartMenu = NULL;
-    }
-
-    ScriptUnfreezeObjectEvents();
-    UnlockPlayerFieldControls();
+    FreeSpriteTilesByTag(TAG_ICON_GFX);
 
     SetGpuReg(REG_OFFSET_WIN0H, 0);
     SetGpuReg(REG_OFFSET_WIN0V, 0);
@@ -832,17 +865,17 @@ static void HeatStartMenu_FreeResources(void)
 
 static void HeatStartMenu_MoveSelection(s8 delta)
 {
-    s8 newPos = sMenuCursorPos + delta;
-    if (newPos >= sNumStartMenuActions) newPos = 0;
-    else if (newPos < 0) newPos = sNumStartMenuActions - 1;
+    s8 newPos = sHeatStartMenu.menuCursorPos + delta;
+    if (newPos >= sHeatStartMenu.numStartMenuActions) newPos = 0;
+    else if (newPos < 0) newPos = sHeatStartMenu.numStartMenuActions - 1;
 
-    if (newPos != sMenuCursorPos)
+    if (newPos != sHeatStartMenu.menuCursorPos)
     {
         u32 i;
-        sMenuCursorPos = newPos;
+        sHeatStartMenu.menuCursorPos = newPos;
 
-        for (i = 0; i < sNumStartMenuActions; ++i)
-            HeatStartMenu_SetIconAnimation(sHeatStartMenu->iconSpriteIds[sCurrentStartMenuActions[i]], newPos == i);
+        for (i = 0; i < sHeatStartMenu.numStartMenuActions; ++i)
+            HeatStartMenu_SetIconAnimation(sHeatStartMenu.iconSpriteIds[sHeatStartMenu.currentStartMenuActions[i]], newPos == i);
 
         HeatStartMenu_UpdateMenuName();
     }
@@ -859,27 +892,29 @@ static void Task_HeatStartMenu_EraseAfterFade(u8 taskId)
 
 static bool8 Task_HeatStartMenu_HandleMainInput(void)
 {
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON | START_BUTTON))
     {
         PlaySE(SE_SELECT);
         HeatStartMenu_FreeResources();
+        ScriptUnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
         return TRUE;
     }
-    else if (gMain.newKeys & DPAD_LEFT)
+    else if (JOY_NEW(DPAD_LEFT))
     {
         PlaySE(SE_SELECT);
         HeatStartMenu_MoveSelection(-1);
     }
-    else if (gMain.newKeys & DPAD_RIGHT)
+    else if (JOY_NEW(DPAD_RIGHT))
     {
         PlaySE(SE_SELECT);
         HeatStartMenu_MoveSelection(1);
     }
-    else if (gMain.newKeys & A_BUTTON)
+    else if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
-        sMenuCallback = sHeatStartMenuActions[sCurrentStartMenuActions[sMenuCursorPos]].action;
-        if (sHeatStartMenuActions[sCurrentStartMenuActions[sMenuCursorPos]].fade)
+        sHeatStartMenu.menuCallback = sHeatStartMenuActions[sHeatStartMenu.currentStartMenuActions[sHeatStartMenu.menuCursorPos]].action;
+        if (sHeatStartMenuActions[sHeatStartMenu.currentStartMenuActions[sHeatStartMenu.menuCursorPos]].fade)
         {
             FadeScreen(FADE_TO_BLACK, 0);
             CreateTask(Task_HeatStartMenu_EraseAfterFade, 0);
@@ -888,7 +923,8 @@ static bool8 Task_HeatStartMenu_HandleMainInput(void)
         {
             HeatStartMenu_FreeResources();
         }
-        return FALSE;
+        ScriptUnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
     }
 
     return FALSE;
@@ -1106,9 +1142,10 @@ static u8 SaveFileExistsCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveSavingMessageCallback(void) {
-  ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
-  return SAVE_IN_PROGRESS;
+static u8 SaveSavingMessageCallback(void) 
+{
+    ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
+    return SAVE_IN_PROGRESS;
 }
 
 static u8 SaveConfirmInputCallback(void)
@@ -1142,14 +1179,16 @@ static u8 SaveConfirmInputCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveYesNoCallback(void) {
+static u8 SaveYesNoCallback(void) 
+{
     DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
     sSaveDialogCallback = SaveConfirmInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
 
-static void ShowSaveInfoWindow(void) {
+static void ShowSaveInfoWindow(void) 
+{
     struct WindowTemplate saveInfoWindow = sSaveInfoWindowTemplate;
     u8 gender;
     u8 color;
@@ -1213,15 +1252,16 @@ static void ShowSaveInfoWindow(void) {
     CopyWindowToVram(sSaveInfoWindowId, COPYWIN_GFX);
 }
 
-static u8 SaveConfirmSaveCallback(void) {
-  ShowSaveInfoWindow();
+static u8 SaveConfirmSaveCallback(void) 
+{
+    ShowSaveInfoWindow();
 
-  if (InBattlePyramid()) {
-    ShowSaveMessage(gText_BattlePyramidConfirmRest, SaveYesNoCallback);
-  } else {
-    ShowSaveMessage(gText_ConfirmSave, SaveYesNoCallback);
-  }
-  return SAVE_IN_PROGRESS;
+    if (InBattlePyramid()) 
+        ShowSaveMessage(gText_BattlePyramidConfirmRest, SaveYesNoCallback);
+    else 
+        ShowSaveMessage(gText_ConfirmSave, SaveYesNoCallback);
+
+    return SAVE_IN_PROGRESS;
 }
 
 static void InitSave(void)
@@ -1231,27 +1271,30 @@ static void InitSave(void)
 }
 
 static void Task_HandleSave(u8 taskId) {
-  switch (RunSaveCallback()) {
+    switch (RunSaveCallback()) 
+    {
     case SAVE_IN_PROGRESS:
-      break;
+        break;
     case SAVE_CANCELED: // Back to start menu
-      ClearDialogWindowAndFrameToTransparent(0, FALSE);
-      HeatStartMenu_Init();
-      DestroyTask(taskId);
-      break;
+        ClearDialogWindowAndFrameToTransparent(0, FALSE);
+        HeatStartMenu_QuickInit();
+        DestroyTask(taskId);
+        break;
     case SAVE_SUCCESS:
     case SAVE_ERROR:    // Close start menu
-      ClearDialogWindowAndFrameToTransparent(0, TRUE);
-      SoftResetInBattlePyramid();
-      DestroyTask(taskId);
-      break;
-  }
+        ClearDialogWindowAndFrameToTransparent(0, TRUE);
+        SoftResetInBattlePyramid();
+        ScriptUnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
+        DestroyTask(taskId);
+        break;
+    }
 }
 
 static bool8 StartMenuSaveCallback(void) 
 {
-    if (gPaletteFade.active) return FALSE;
-
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
     LoadUserWindowBorderGfx(sSaveInfoWindowId, 0x214, 0xE0);
     InitSave();
     CreateTask(Task_HandleSave, 0x80);

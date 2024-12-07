@@ -17,6 +17,7 @@
 #include "frontier_pass.h"
 #include "frontier_util.h"
 #include "gpu_regs.h"
+#include "heat_start_menu.h"
 #include "international_string_util.h"
 #include "item_menu.h"
 #include "link.h"
@@ -565,16 +566,21 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
     SetTaskFuncWithFollowupFunc(taskId, StartMenuTask, followupFunc);
 }
 
-#include "heat_start_menu.h"
-
 static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
-    //if (InitStartMenuStep() == FALSE)
-    //{
-    //    return FALSE;
-    //}
+    if (!IsOverworldLinkActive())
+    {
+        FreezeObjectEvents();
+        PlayerFreeze();
+        StopPlayerAvatar();
+    }
 
-    HeatStartMenu_Init();
+    LockPlayerFieldControls();
+
+    if (HeatStartMenu_LoadStartMenu() == FALSE)
+    {
+       return FALSE;
+    }
 
     ReturnToFieldOpenStartMenu();
     return TRUE;
