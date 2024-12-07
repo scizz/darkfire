@@ -630,11 +630,29 @@ static void HeatStartMenu_CreateSprites(void)
     }
 }
 
+static EWRAM_DATA bool8 sShowSpritesInWindow = FALSE;
+
+static void HBlank_HeatStartMenu(void)
+{
+    u8 vcount = REG_VCOUNT;
+
+    if (vcount > 128)
+        REG_WINOUT |= WINOUT_WIN01_OBJ;
+    else
+        REG_WINOUT &= ~WINOUT_WIN01_OBJ;
+}
+
 static void HeatStartMenu_LoadBgGfx(void)
 {
     LoadPalette(GetOverworldTextboxPalettePtr(), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
     LoadBgTiles(0, sMenuNameBoxGfx, 0x120, 0x223);
     LoadPalette(sMenuNameBoxPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+
+    if (GetFlashLevel() != 0)
+    {
+        EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
+        SetHBlankCallback(HBlank_HeatStartMenu);
+    }
 }
 
 static const u8 *const gDayNameStringsTable[] =
@@ -673,12 +691,15 @@ static void HeatStartMenu_ShowTimeWindow(void)
     FillWindowPixelBuffer(sHeatStartMenu.sStartClockWindowId, PIXEL_FILL(0));
     AddTextPrinterParameterized2(sHeatStartMenu.sStartClockWindowId, FONT_NORMAL, gStringVar4, 0, NULL, TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT);
 
-    SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR);
-    SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ);
-    SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(8, 88));
-    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(8, 24));
-    SetGpuReg(REG_OFFSET_BLDCNT, GetGpuReg(REG_OFFSET_BLDCNT) | BLDCNT_TGT1_BG1 | BLDCNT_TGT1_BG2 | BLDCNT_TGT1_BG3 | BLDCNT_TGT1_OBJ | BLDCNT_TGT1_BD | BLDCNT_EFFECT_DARKEN);
-    SetGpuReg(REG_OFFSET_BLDY, 7);
+    if (GetFlashLevel() == 0)
+    {
+        SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ);
+        SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(8, 88));
+        SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(8, 24));
+        SetGpuReg(REG_OFFSET_BLDCNT, GetGpuReg(REG_OFFSET_BLDCNT) | BLDCNT_TGT1_BG1 | BLDCNT_TGT1_BG2 | BLDCNT_TGT1_BG3 | BLDCNT_TGT1_OBJ | BLDCNT_TGT1_BD | BLDCNT_EFFECT_DARKEN);
+        SetGpuReg(REG_OFFSET_BLDY, 7);
+    }
 }
 
 static u8 HeatStartMenu_CreateMenuNameWindow(void)
@@ -705,15 +726,11 @@ static void HeatStartMenu_UpdateMenuName(void)
 static void HeatStartMenu_FreeResources(void)
 {
     u32 i;
-    u8 *buf = GetBgTilemapBuffer(0);
 
     ClearStdWindowAndFrame(sHeatStartMenu.sStartClockWindowId, TRUE);
     ClearStdWindowAndFrame(sHeatStartMenu.sMenuNameWindowId, TRUE);
     RemoveWindow(sHeatStartMenu.sStartClockWindowId);
     RemoveWindow(sHeatStartMenu.sMenuNameWindowId);
-
-    memset(buf, 0, BG_SCREEN_SIZE);
-    ScheduleBgCopyTilemapToVram(0);
 
     for (i = 0; i < sHeatStartMenu.numStartMenuActions; ++i)
     {
@@ -724,8 +741,14 @@ static void HeatStartMenu_FreeResources(void)
 
     FreeSpriteTilesByTag(TAG_ICON_GFX);
 
-    SetGpuReg(REG_OFFSET_WIN0H, 0);
-    SetGpuReg(REG_OFFSET_WIN0V, 0);
+    if (GetFlashLevel() == 0)
+    {
+        SetGpuReg(REG_OFFSET_WIN0H, 0);
+        SetGpuReg(REG_OFFSET_WIN0V, 0);
+    }
+
+    if (GetFlashLevel() != 0)
+        SetHBlankCallback(NULL);
 }
 
 static void HeatStartMenu_MoveSelection(s8 delta)
