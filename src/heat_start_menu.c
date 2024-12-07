@@ -649,7 +649,6 @@ void Task_HeatStartMenu_Loop(u8 taskId)
 
 void HeatStartMenu_Init(void)
 {
-    u8 taskId;
     if (!IsOverworldLinkActive())
     {
         FreezeObjectEvents();
@@ -663,6 +662,26 @@ void HeatStartMenu_Init(void)
     sHeatStartMenu.savedCallback = CB2_ReturnToFieldWithOpenMenu;
 
     SetTaskFuncWithFollowupFunc(CreateTask(Task_HeatStartMenu_LoadStartMenu, 0), Task_HeatStartMenu_LoadStartMenu, Task_HeatStartMenu_Loop);
+}
+
+static void HeatStartMenu_QuickInit(void)
+{
+    if (!IsOverworldLinkActive())
+    {
+        FreezeObjectEvents();
+        PlayerFreeze();
+        StopPlayerAvatar();
+    }
+
+    LockPlayerFieldControls();
+
+    sHeatStartMenu.startMenuLoadStep = 0;
+    sHeatStartMenu.savedCallback = CB2_ReturnToFieldWithOpenMenu;
+
+    while (!HeatStartMenu_LoadStartMenu())
+        ;
+
+    CreateTask(Task_HeatStartMenu_Loop, 0);
 }
 
 bool8 HeatStartMenu_LoadStartMenu(void)
@@ -840,9 +859,6 @@ static void HeatStartMenu_FreeResources(void)
 
     FreeSpriteTilesByTag(TAG_ICON_GFX);
 
-    ScriptUnfreezeObjectEvents();
-    UnlockPlayerFieldControls();
-
     SetGpuReg(REG_OFFSET_WIN0H, 0);
     SetGpuReg(REG_OFFSET_WIN0V, 0);
 }
@@ -876,23 +892,25 @@ static void Task_HeatStartMenu_EraseAfterFade(u8 taskId)
 
 static bool8 Task_HeatStartMenu_HandleMainInput(void)
 {
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON | START_BUTTON))
     {
         PlaySE(SE_SELECT);
         HeatStartMenu_FreeResources();
+        ScriptUnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
         return TRUE;
     }
-    else if (gMain.newKeys & DPAD_LEFT)
+    else if (JOY_NEW(DPAD_LEFT))
     {
         PlaySE(SE_SELECT);
         HeatStartMenu_MoveSelection(-1);
     }
-    else if (gMain.newKeys & DPAD_RIGHT)
+    else if (JOY_NEW(DPAD_RIGHT))
     {
         PlaySE(SE_SELECT);
         HeatStartMenu_MoveSelection(1);
     }
-    else if (gMain.newKeys & A_BUTTON)
+    else if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
         sHeatStartMenu.menuCallback = sHeatStartMenuActions[sHeatStartMenu.currentStartMenuActions[sHeatStartMenu.menuCursorPos]].action;
@@ -1123,9 +1141,10 @@ static u8 SaveFileExistsCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveSavingMessageCallback(void) {
-  ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
-  return SAVE_IN_PROGRESS;
+static u8 SaveSavingMessageCallback(void) 
+{
+    ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
+    return SAVE_IN_PROGRESS;
 }
 
 static u8 SaveConfirmInputCallback(void)
@@ -1159,14 +1178,16 @@ static u8 SaveConfirmInputCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveYesNoCallback(void) {
+static u8 SaveYesNoCallback(void) 
+{
     DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
     sSaveDialogCallback = SaveConfirmInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
 
-static void ShowSaveInfoWindow(void) {
+static void ShowSaveInfoWindow(void) 
+{
     struct WindowTemplate saveInfoWindow = sSaveInfoWindowTemplate;
     u8 gender;
     u8 color;
@@ -1230,15 +1251,16 @@ static void ShowSaveInfoWindow(void) {
     CopyWindowToVram(sSaveInfoWindowId, COPYWIN_GFX);
 }
 
-static u8 SaveConfirmSaveCallback(void) {
-  ShowSaveInfoWindow();
+static u8 SaveConfirmSaveCallback(void) 
+{
+    ShowSaveInfoWindow();
 
-  if (InBattlePyramid()) {
-    ShowSaveMessage(gText_BattlePyramidConfirmRest, SaveYesNoCallback);
-  } else {
-    ShowSaveMessage(gText_ConfirmSave, SaveYesNoCallback);
-  }
-  return SAVE_IN_PROGRESS;
+    if (InBattlePyramid()) 
+        ShowSaveMessage(gText_BattlePyramidConfirmRest, SaveYesNoCallback);
+    else 
+        ShowSaveMessage(gText_ConfirmSave, SaveYesNoCallback);
+
+    return SAVE_IN_PROGRESS;
 }
 
 static void InitSave(void)
@@ -1248,26 +1270,30 @@ static void InitSave(void)
 }
 
 static void Task_HandleSave(u8 taskId) {
-  switch (RunSaveCallback()) {
+    switch (RunSaveCallback()) 
+    {
     case SAVE_IN_PROGRESS:
-      break;
+        break;
     case SAVE_CANCELED: // Back to start menu
-      ClearDialogWindowAndFrameToTransparent(0, FALSE);
-      HeatStartMenu_Init();
-      DestroyTask(taskId);
-      break;
+        ClearDialogWindowAndFrameToTransparent(0, FALSE);
+        HeatStartMenu_QuickInit();
+        DestroyTask(taskId);
+        break;
     case SAVE_SUCCESS:
     case SAVE_ERROR:    // Close start menu
-      ClearDialogWindowAndFrameToTransparent(0, TRUE);
-      SoftResetInBattlePyramid();
-      DestroyTask(taskId);
-      break;
-  }
+        ClearDialogWindowAndFrameToTransparent(0, TRUE);
+        SoftResetInBattlePyramid();
+        ScriptUnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
+        DestroyTask(taskId);
+        break;
+    }
 }
 
 static bool8 StartMenuSaveCallback(void) 
 {
-    if (gPaletteFade.active) return FALSE;
+    if (gPaletteFade.active) 
+        return FALSE;
 
     LoadUserWindowBorderGfx(sSaveInfoWindowId, 0x214, 0xE0);
     InitSave();
