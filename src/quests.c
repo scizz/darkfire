@@ -2814,6 +2814,8 @@ void QuestMenu_ResetMenuSaveData(void)
 
 // Quest state popups
 
+static EWRAM_DATA u8 sPopupTaskId = 0;
+
 static const u8 sQuestPopupWindowGfx[] = INCBIN_U8("graphics/quest_menu/wood.4bpp");
 static const u16 sQuestPopupWindowPal[] = INCBIN_U16("graphics/quest_menu/wood.gbapal");
 
@@ -2821,7 +2823,19 @@ static void Task_ShowQuestStatePopup(u8 taskId);
 
 void ShowQuestStatePopup(void)
 {
-	CreateTask(Task_ShowQuestStatePopup, 0x80);
+	if (!FuncIsActiveTask(Task_ShowQuestStatePopup))
+	{
+		sPopupTaskId = CreateTask(Task_ShowQuestStatePopup, 90);
+		SetGpuReg(REG_OFFSET_BG0VOFS, 40);
+		gTasks[sPopupTaskId].data[0] = 6;
+		gTasks[sPopupTaskId].data[2] = 40;
+	}
+	else
+	{
+		if (gTasks[sPopupTaskId].data[0] != 2)
+			gTasks[sPopupTaskId].data[0] = 2;
+		gTasks[sPopupTaskId].data[3] = 1;
+	}
 }
 
 static const u8 sText_QuestHeader[] = _("Quest {STR_VAR_2}!");
@@ -2845,49 +2859,78 @@ static void QuestStatePopup_PrintInfo(u8 windowId)
 static void Task_ShowQuestStatePopup(u8 taskId)
 {
 	u8 popupWindowId;
-	s16 *data = gTasks[taskId].data;
+    struct Task *task = &gTasks[taskId];
 
-	switch (data[0])
-	{
-	case 0:
-		SetGpuReg(REG_OFFSET_BG0VOFS, 40);
-		data[0]++;
-		break;
-	case 1:
-		popupWindowId = AddQuestStatePopUpWindow();
-		// LoadUserWindowBorderGfx(popupWindowId, 0x214, 0xE0);
-		// DrawStdWindowFrame(popupWindowId, TRUE);
-		FillWindowPixelBuffer(popupWindowId, PIXEL_FILL(0));
-		LoadPalette(sQuestPopupWindowPal, 0xE0, 32);
-		BlitBitmapToWindow(popupWindowId, sQuestPopupWindowGfx, 0, 0, 176, 32);
-		QuestStatePopup_PrintInfo(popupWindowId);
-		PutWindowTilemap(popupWindowId);
-		CopyWindowToVram(popupWindowId, COPYWIN_FULL);
-		data[1] = 40;
-		data[2] = 0;
-		data[0]++;
-		break;
-	case 2:
-		if (data[1] < 0) data[0]++;
-		else SetGpuReg(REG_OFFSET_BG0VOFS, --data[1]);
-		break;
-	case 3:
-		if (data[2]++ > 120) data[0]++;
-		break;
-	case 4:
-		if (data[1] > 40) data[0]++;
-		else SetGpuReg(REG_OFFSET_BG0VOFS, ++data[1]);
-		break;
-	default:
-		HideQuestPopUpWindow();
-		DestroyTask(taskId);
-		break;
-	}
+    switch (task->data[0])
+    {
+    case 6:
+        task->data[4]++;
+        if (task->data[4] > 30)
+        {
+            task->data[0] = 0;
+            task->data[4] = 0;
+			popupWindowId = AddQuestStatePopUpWindow();
+			FillWindowPixelBuffer(popupWindowId, PIXEL_FILL(0));
+			LoadPalette(sQuestPopupWindowPal, 0xE0, 32);
+			BlitBitmapToWindow(popupWindowId, sQuestPopupWindowGfx, 0, 0, 176, 32);
+			QuestStatePopup_PrintInfo(popupWindowId);
+			PutWindowTilemap(popupWindowId);
+			CopyWindowToVram(popupWindowId, COPYWIN_FULL);
+        }
+        break;
+    case 0:
+        task->data[2] -= 2;
+        if (task->data[2] <= 0)
+        {
+            task->data[2] = 0;
+            task->data[0] = 1;
+            gTasks[sPopupTaskId].data[1] = 0;
+        }
+        break;
+    case 1:
+        task->data[1]++;
+        if (task->data[1] > 120)
+        {
+            task->data[1] = 0;
+            task->data[0] = 2;
+        }
+        break;
+    case 2:
+        task->data[2] += 2;
+        if (task->data[2] > 39)
+        {
+            task->data[2] = 40;
+            if (task->data[3])
+            {
+                task->data[0] = 6;
+                task->data[4] = 0;
+                task->data[3] = 0;
+            }
+            else
+            {
+                task->data[0] = 4;
+                return;
+            }
+        }
+        break;
+    case 4:
+        ClearStdWindowAndFrame(GetQuestStatePopUpWindowId(), TRUE);
+        task->data[0] = 5;
+        break;
+    case 5:
+        HideQuestPopUpWindow();
+        return;
+    }
+    SetGpuReg(REG_OFFSET_BG0VOFS, task->data[2]);
 }
 
 void HideQuestPopUpWindow(void)
 {
-	SetGpuReg_ForcedBlank(REG_OFFSET_BG0VOFS, 0);
-	ClearStdWindowAndFrame(GetQuestStatePopUpWindowId(), TRUE);
-	RemoveQuestStatePopUpWindow();
+	if (FuncIsActiveTask(Task_ShowQuestStatePopup))
+    {
+		ClearStdWindowAndFrame(GetQuestStatePopUpWindowId(), TRUE);
+		RemoveQuestStatePopUpWindow();
+		SetGpuReg_ForcedBlank(REG_OFFSET_BG0VOFS, 0);
+		DestroyTask(sPopupTaskId);
+	}
 }
