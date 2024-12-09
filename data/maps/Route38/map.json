@@ -24,6 +24,11 @@
       "map": "MAP_ROUTE39",
       "offset": 30,
       "direction": "right"
+    },
+    {
+      "map": "MAP_LANSAT_ISLAND",
+      "offset": 60,
+      "direction": "down"
     }
   ],
   "object_events": [

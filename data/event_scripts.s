@@ -1524,3 +1524,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/LansatIsland/scripts.inc"
 	.include "data/maps/LansatIsland/text.inc"
+
+	.include "data/maps/Route43/scripts.inc"
+	.include "data/maps/Route43/text.inc"

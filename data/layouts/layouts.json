@@ -6340,6 +6340,16 @@
       "secondary_tileset": "gTileset_AguavIsland",
       "border_filepath": "data/layouts/LansatIsland/border.bin",
       "blockdata_filepath": "data/layouts/LansatIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE43",
+      "name": "Route43_Layout",
+      "width": 60,
+      "height": 120,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_AguavIsland",
+      "border_filepath": "data/layouts/Route43/border.bin",
+      "blockdata_filepath": "data/layouts/Route43/map.bin"
     }
   ]
 }
