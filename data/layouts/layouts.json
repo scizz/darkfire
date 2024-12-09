@@ -6330,6 +6330,16 @@
       "secondary_tileset": "gTileset_ShuckleIsland",
       "border_filepath": "data/layouts/Route42/border.bin",
       "blockdata_filepath": "data/layouts/Route42/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANSAT_ISLAND",
+      "name": "LansatIsland_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_PinapIslands",
+      "secondary_tileset": "gTileset_AguavIsland",
+      "border_filepath": "data/layouts/LansatIsland/border.bin",
+      "blockdata_filepath": "data/layouts/LansatIsland/map.bin"
     }
   ]
 }

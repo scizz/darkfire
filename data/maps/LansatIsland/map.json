@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE38",
-  "name": "Route38",
-  "layout": "LAYOUT_ROUTE38",
+  "id": "MAP_LANSAT_ISLAND",
+  "name": "LansatIsland",
+  "layout": "LAYOUT_LANSAT_ISLAND",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -11,18 +11,18 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_OCCA_ISLAND_PORT",
-      "offset": -36,
+      "map": "MAP_ROUTE39",
+      "offset": 0,
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE40",
-      "offset": 0,
-      "direction": "right"
+      "map": "MAP_ROUTE38",
+      "offset": -60,
+      "direction": "up"
     },
     {
-      "map": "MAP_ROUTE39",
-      "offset": 30,
+      "map": "MAP_ROUTE42",
+      "offset": -60,
       "direction": "right"
     }
   ],
@@ -37,8 +37,5 @@
   ],
   "bg_events": [
 
-  ],
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false
+  ]
 }

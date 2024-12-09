@@ -98,6 +98,7 @@
 #define MAP_SHUCKLE_ISLAND                  (16 | (2 << 8))
 #define MAP_ROUTE41                         (17 | (2 << 8))
 #define MAP_ROUTE42                         (18 | (2 << 8))
+#define MAP_LANSAT_ISLAND                   (19 | (2 << 8))
 
 // gMapGroup_DarkfireIslandDungeons
 #define MAP_MT_PROBO_PEAK     (0 | (3 << 8))
